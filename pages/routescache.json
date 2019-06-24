@@ -26,6 +26,32 @@
         "pod_path": "/content/amp-dev/documentation/components/reference/amp-access-laterpay@zh-CN.md.html"
       }
     },
+    "/ar/documentation/components/amp-access@pt-BR.md.html": {
+      "options": {},
+      "value": {
+        "hashed": "24cb4ecba67b29386b90d387b7b523458b10625830c6e8860dc15dff58f5ea15",
+        "kind": "doc",
+        "meta": {
+          "collection_path": "/content/amp-dev/documentation/components/reference",
+          "locale": "ar",
+          "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@pt-BR.md.html"
+        },
+        "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@pt-BR.md.html"
+      }
+    },
+    "/ar/documentation/components/amp-access@zh-CN.md.html": {
+      "options": {},
+      "value": {
+        "hashed": "76c947b390d3865cef703547ed157e34a40cc704b9f7a94e9e9e10a075f10649",
+        "kind": "doc",
+        "meta": {
+          "collection_path": "/content/amp-dev/documentation/components/reference",
+          "locale": "ar",
+          "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@zh-CN.md.html"
+        },
+        "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@zh-CN.md.html"
+      }
+    },
     "/documentation/components/amp-access-laterpay@pt-BR.md.html": {
       "options": {},
       "value": {
@@ -50,6 +76,32 @@
           "pod_path": "/content/amp-dev/documentation/components/reference/amp-access-laterpay@zh-CN.md.html"
         },
         "pod_path": "/content/amp-dev/documentation/components/reference/amp-access-laterpay@zh-CN.md.html"
+      }
+    },
+    "/documentation/components/amp-access@pt-BR.md.html": {
+      "options": {},
+      "value": {
+        "hashed": "24cb4ecba67b29386b90d387b7b523458b10625830c6e8860dc15dff58f5ea15",
+        "kind": "doc",
+        "meta": {
+          "collection_path": "/content/amp-dev/documentation/components/reference",
+          "locale": "en",
+          "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@pt-BR.md.html"
+        },
+        "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@pt-BR.md.html"
+      }
+    },
+    "/documentation/components/amp-access@zh-CN.md.html": {
+      "options": {},
+      "value": {
+        "hashed": "76c947b390d3865cef703547ed157e34a40cc704b9f7a94e9e9e10a075f10649",
+        "kind": "doc",
+        "meta": {
+          "collection_path": "/content/amp-dev/documentation/components/reference",
+          "locale": "en",
+          "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@zh-CN.md.html"
+        },
+        "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@zh-CN.md.html"
       }
     },
     "/es/documentation/components/amp-access-laterpay@pt-BR.md.html": {
@@ -78,6 +130,32 @@
         "pod_path": "/content/amp-dev/documentation/components/reference/amp-access-laterpay@zh-CN.md.html"
       }
     },
+    "/es/documentation/components/amp-access@pt-BR.md.html": {
+      "options": {},
+      "value": {
+        "hashed": "24cb4ecba67b29386b90d387b7b523458b10625830c6e8860dc15dff58f5ea15",
+        "kind": "doc",
+        "meta": {
+          "collection_path": "/content/amp-dev/documentation/components/reference",
+          "locale": "es",
+          "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@pt-BR.md.html"
+        },
+        "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@pt-BR.md.html"
+      }
+    },
+    "/es/documentation/components/amp-access@zh-CN.md.html": {
+      "options": {},
+      "value": {
+        "hashed": "76c947b390d3865cef703547ed157e34a40cc704b9f7a94e9e9e10a075f10649",
+        "kind": "doc",
+        "meta": {
+          "collection_path": "/content/amp-dev/documentation/components/reference",
+          "locale": "es",
+          "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@zh-CN.md.html"
+        },
+        "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@zh-CN.md.html"
+      }
+    },
     "/fr/documentation/components/amp-access-laterpay@pt-BR.md.html": {
       "options": {},
       "value": {
@@ -102,6 +180,32 @@
           "pod_path": "/content/amp-dev/documentation/components/reference/amp-access-laterpay@zh-CN.md.html"
         },
         "pod_path": "/content/amp-dev/documentation/components/reference/amp-access-laterpay@zh-CN.md.html"
+      }
+    },
+    "/fr/documentation/components/amp-access@pt-BR.md.html": {
+      "options": {},
+      "value": {
+        "hashed": "24cb4ecba67b29386b90d387b7b523458b10625830c6e8860dc15dff58f5ea15",
+        "kind": "doc",
+        "meta": {
+          "collection_path": "/content/amp-dev/documentation/components/reference",
+          "locale": "fr",
+          "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@pt-BR.md.html"
+        },
+        "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@pt-BR.md.html"
+      }
+    },
+    "/fr/documentation/components/amp-access@zh-CN.md.html": {
+      "options": {},
+      "value": {
+        "hashed": "76c947b390d3865cef703547ed157e34a40cc704b9f7a94e9e9e10a075f10649",
+        "kind": "doc",
+        "meta": {
+          "collection_path": "/content/amp-dev/documentation/components/reference",
+          "locale": "fr",
+          "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@zh-CN.md.html"
+        },
+        "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@zh-CN.md.html"
       }
     },
     "/id/documentation/components/amp-access-laterpay@pt-BR.md.html": {
@@ -130,6 +234,32 @@
         "pod_path": "/content/amp-dev/documentation/components/reference/amp-access-laterpay@zh-CN.md.html"
       }
     },
+    "/id/documentation/components/amp-access@pt-BR.md.html": {
+      "options": {},
+      "value": {
+        "hashed": "24cb4ecba67b29386b90d387b7b523458b10625830c6e8860dc15dff58f5ea15",
+        "kind": "doc",
+        "meta": {
+          "collection_path": "/content/amp-dev/documentation/components/reference",
+          "locale": "id",
+          "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@pt-BR.md.html"
+        },
+        "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@pt-BR.md.html"
+      }
+    },
+    "/id/documentation/components/amp-access@zh-CN.md.html": {
+      "options": {},
+      "value": {
+        "hashed": "76c947b390d3865cef703547ed157e34a40cc704b9f7a94e9e9e10a075f10649",
+        "kind": "doc",
+        "meta": {
+          "collection_path": "/content/amp-dev/documentation/components/reference",
+          "locale": "id",
+          "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@zh-CN.md.html"
+        },
+        "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@zh-CN.md.html"
+      }
+    },
     "/it/documentation/components/amp-access-laterpay@pt-BR.md.html": {
       "options": {},
       "value": {
@@ -154,6 +284,32 @@
           "pod_path": "/content/amp-dev/documentation/components/reference/amp-access-laterpay@zh-CN.md.html"
         },
         "pod_path": "/content/amp-dev/documentation/components/reference/amp-access-laterpay@zh-CN.md.html"
+      }
+    },
+    "/it/documentation/components/amp-access@pt-BR.md.html": {
+      "options": {},
+      "value": {
+        "hashed": "24cb4ecba67b29386b90d387b7b523458b10625830c6e8860dc15dff58f5ea15",
+        "kind": "doc",
+        "meta": {
+          "collection_path": "/content/amp-dev/documentation/components/reference",
+          "locale": "it",
+          "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@pt-BR.md.html"
+        },
+        "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@pt-BR.md.html"
+      }
+    },
+    "/it/documentation/components/amp-access@zh-CN.md.html": {
+      "options": {},
+      "value": {
+        "hashed": "76c947b390d3865cef703547ed157e34a40cc704b9f7a94e9e9e10a075f10649",
+        "kind": "doc",
+        "meta": {
+          "collection_path": "/content/amp-dev/documentation/components/reference",
+          "locale": "it",
+          "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@zh-CN.md.html"
+        },
+        "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@zh-CN.md.html"
       }
     },
     "/ja/documentation/components/amp-access-laterpay@pt-BR.md.html": {
@@ -182,6 +338,32 @@
         "pod_path": "/content/amp-dev/documentation/components/reference/amp-access-laterpay@zh-CN.md.html"
       }
     },
+    "/ja/documentation/components/amp-access@pt-BR.md.html": {
+      "options": {},
+      "value": {
+        "hashed": "24cb4ecba67b29386b90d387b7b523458b10625830c6e8860dc15dff58f5ea15",
+        "kind": "doc",
+        "meta": {
+          "collection_path": "/content/amp-dev/documentation/components/reference",
+          "locale": "ja",
+          "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@pt-BR.md.html"
+        },
+        "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@pt-BR.md.html"
+      }
+    },
+    "/ja/documentation/components/amp-access@zh-CN.md.html": {
+      "options": {},
+      "value": {
+        "hashed": "76c947b390d3865cef703547ed157e34a40cc704b9f7a94e9e9e10a075f10649",
+        "kind": "doc",
+        "meta": {
+          "collection_path": "/content/amp-dev/documentation/components/reference",
+          "locale": "ja",
+          "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@zh-CN.md.html"
+        },
+        "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@zh-CN.md.html"
+      }
+    },
     "/ko/documentation/components/amp-access-laterpay@pt-BR.md.html": {
       "options": {},
       "value": {
@@ -206,6 +388,32 @@
           "pod_path": "/content/amp-dev/documentation/components/reference/amp-access-laterpay@zh-CN.md.html"
         },
         "pod_path": "/content/amp-dev/documentation/components/reference/amp-access-laterpay@zh-CN.md.html"
+      }
+    },
+    "/ko/documentation/components/amp-access@pt-BR.md.html": {
+      "options": {},
+      "value": {
+        "hashed": "24cb4ecba67b29386b90d387b7b523458b10625830c6e8860dc15dff58f5ea15",
+        "kind": "doc",
+        "meta": {
+          "collection_path": "/content/amp-dev/documentation/components/reference",
+          "locale": "ko",
+          "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@pt-BR.md.html"
+        },
+        "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@pt-BR.md.html"
+      }
+    },
+    "/ko/documentation/components/amp-access@zh-CN.md.html": {
+      "options": {},
+      "value": {
+        "hashed": "76c947b390d3865cef703547ed157e34a40cc704b9f7a94e9e9e10a075f10649",
+        "kind": "doc",
+        "meta": {
+          "collection_path": "/content/amp-dev/documentation/components/reference",
+          "locale": "ko",
+          "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@zh-CN.md.html"
+        },
+        "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@zh-CN.md.html"
       }
     },
     "/pt_br/documentation/components/amp-access-laterpay@pt-BR.md.html": {
@@ -234,6 +442,32 @@
         "pod_path": "/content/amp-dev/documentation/components/reference/amp-access-laterpay@zh-CN.md.html"
       }
     },
+    "/pt_br/documentation/components/amp-access@pt-BR.md.html": {
+      "options": {},
+      "value": {
+        "hashed": "24cb4ecba67b29386b90d387b7b523458b10625830c6e8860dc15dff58f5ea15",
+        "kind": "doc",
+        "meta": {
+          "collection_path": "/content/amp-dev/documentation/components/reference",
+          "locale": "pt_BR",
+          "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@pt-BR.md.html"
+        },
+        "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@pt-BR.md.html"
+      }
+    },
+    "/pt_br/documentation/components/amp-access@zh-CN.md.html": {
+      "options": {},
+      "value": {
+        "hashed": "76c947b390d3865cef703547ed157e34a40cc704b9f7a94e9e9e10a075f10649",
+        "kind": "doc",
+        "meta": {
+          "collection_path": "/content/amp-dev/documentation/components/reference",
+          "locale": "pt_BR",
+          "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@zh-CN.md.html"
+        },
+        "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@zh-CN.md.html"
+      }
+    },
     "/ru/documentation/components/amp-access-laterpay@pt-BR.md.html": {
       "options": {},
       "value": {
@@ -258,6 +492,32 @@
           "pod_path": "/content/amp-dev/documentation/components/reference/amp-access-laterpay@zh-CN.md.html"
         },
         "pod_path": "/content/amp-dev/documentation/components/reference/amp-access-laterpay@zh-CN.md.html"
+      }
+    },
+    "/ru/documentation/components/amp-access@pt-BR.md.html": {
+      "options": {},
+      "value": {
+        "hashed": "24cb4ecba67b29386b90d387b7b523458b10625830c6e8860dc15dff58f5ea15",
+        "kind": "doc",
+        "meta": {
+          "collection_path": "/content/amp-dev/documentation/components/reference",
+          "locale": "ru",
+          "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@pt-BR.md.html"
+        },
+        "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@pt-BR.md.html"
+      }
+    },
+    "/ru/documentation/components/amp-access@zh-CN.md.html": {
+      "options": {},
+      "value": {
+        "hashed": "76c947b390d3865cef703547ed157e34a40cc704b9f7a94e9e9e10a075f10649",
+        "kind": "doc",
+        "meta": {
+          "collection_path": "/content/amp-dev/documentation/components/reference",
+          "locale": "ru",
+          "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@zh-CN.md.html"
+        },
+        "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@zh-CN.md.html"
       }
     },
     "/sitemap_grow.xml": {
@@ -300,6 +560,32 @@
         "pod_path": "/content/amp-dev/documentation/components/reference/amp-access-laterpay@zh-CN.md.html"
       }
     },
+    "/tr/documentation/components/amp-access@pt-BR.md.html": {
+      "options": {},
+      "value": {
+        "hashed": "24cb4ecba67b29386b90d387b7b523458b10625830c6e8860dc15dff58f5ea15",
+        "kind": "doc",
+        "meta": {
+          "collection_path": "/content/amp-dev/documentation/components/reference",
+          "locale": "tr",
+          "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@pt-BR.md.html"
+        },
+        "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@pt-BR.md.html"
+      }
+    },
+    "/tr/documentation/components/amp-access@zh-CN.md.html": {
+      "options": {},
+      "value": {
+        "hashed": "76c947b390d3865cef703547ed157e34a40cc704b9f7a94e9e9e10a075f10649",
+        "kind": "doc",
+        "meta": {
+          "collection_path": "/content/amp-dev/documentation/components/reference",
+          "locale": "tr",
+          "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@zh-CN.md.html"
+        },
+        "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@zh-CN.md.html"
+      }
+    },
     "/zh_cn/documentation/components/amp-access-laterpay@pt-BR.md.html": {
       "options": {},
       "value": {
@@ -324,6 +610,32 @@
           "pod_path": "/content/amp-dev/documentation/components/reference/amp-access-laterpay@zh-CN.md.html"
         },
         "pod_path": "/content/amp-dev/documentation/components/reference/amp-access-laterpay@zh-CN.md.html"
+      }
+    },
+    "/zh_cn/documentation/components/amp-access@pt-BR.md.html": {
+      "options": {},
+      "value": {
+        "hashed": "24cb4ecba67b29386b90d387b7b523458b10625830c6e8860dc15dff58f5ea15",
+        "kind": "doc",
+        "meta": {
+          "collection_path": "/content/amp-dev/documentation/components/reference",
+          "locale": "zh_CN",
+          "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@pt-BR.md.html"
+        },
+        "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@pt-BR.md.html"
+      }
+    },
+    "/zh_cn/documentation/components/amp-access@zh-CN.md.html": {
+      "options": {},
+      "value": {
+        "hashed": "76c947b390d3865cef703547ed157e34a40cc704b9f7a94e9e9e10a075f10649",
+        "kind": "doc",
+        "meta": {
+          "collection_path": "/content/amp-dev/documentation/components/reference",
+          "locale": "zh_CN",
+          "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@zh-CN.md.html"
+        },
+        "pod_path": "/content/amp-dev/documentation/components/reference/amp-access@zh-CN.md.html"
       }
     }
   },
