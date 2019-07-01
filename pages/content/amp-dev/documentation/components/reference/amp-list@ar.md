@@ -190,7 +190,7 @@ amp-list div[role="list"] {
 في العديد من الحالات، قد نحتاج إلى `<amp-list>` لتغيير الحجم حسب تفاعل المستخدِم. ومن أمثلة هذا ما يلي: عندما يحتوي `<amp-list>` على المكوِّن amp-accordion الذي قد ينقر المستخدِم عليه أو عندما يغير محتوى `<amp-list>` حجمه بسبب فئات CSS مرتبطة أو عندما يتغير عدد العناصر داخل `<amp-list>` بسبب سمة `[src]` مرتبطة. يتعامل الإجراء `changeToLayoutContainer` مع هذا عن طريق تغيير amp list إلى `layout="CONTAINER"` عند تشغيل هذا الإجراء. انظر المثال التالي:
 
 ```html
-{% raw %}  <button on="list.changeToLayoutContainer()">Show Grid</button>
+{% raw %}<button on="list.changeToLayoutContainer()">Show Grid</button>
   <amp-list id="list"
     width="396" height="80" layout="responsive"
     src="/test/manual/amp-list-data.json?RANDOM">
@@ -327,7 +327,7 @@ amp-list div[role="list"] {
 #####مثال:
 
 ```html
-<amp-list load-more="auto" src="https://www.load.more.example.com/" width="400" height="800">
+<amp-list load-more="manual" src="https://www.load.more.example.com/" width="400" height="800">
 ...
   <amp-list-load-more load-more-button>
     <button>See More</button> /* My custom see more button */
