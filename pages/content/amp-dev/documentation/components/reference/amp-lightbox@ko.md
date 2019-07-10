@@ -1,11 +1,11 @@
 ---
-$category@: 레이아웃
-형식:
-- 웹사이트
-- 광고
-티저:
-
-##  텍스트: 전체 표시 영역 '라이트박스' 모달에 요소를 표시합니다.
+$category@: layout
+formats:
+- websites
+- ads
+teaser:
+  text: 전체 표시 영역 '라이트박스' 모달에 요소를 표시합니다.
+---
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---

@@ -1,11 +1,11 @@
 ---
-$category@: 동적 콘텐츠
-형식:
-  - 웹사이트
-  - 이메일
-  - 스토리
-티저:
-  텍스트: 동적으로 데이터를 다운로드하고 템플릿을 사용하여 목록 항목을 생성합니다.
+$category@: dynamic-content
+formats:
+  - websites
+  - email
+  - stories
+teaser:
+  text:  동적으로 데이터를 다운로드하고 템플릿을 사용하여 목록 항목을 생성합니다.
 ---
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->

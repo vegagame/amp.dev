@@ -1,10 +1,9 @@
 ---
-$category@: 광고 애널리틱스
-형식:
-- 웹사이트
-티저:
-
-텍스트: 공유 추적 기능을 개발 중입니다.
+$category@: ads-analytics
+formats:
+  - websites
+teaser:
+  text: 공유 추적 기능을 개발 중입니다.
 ---
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
