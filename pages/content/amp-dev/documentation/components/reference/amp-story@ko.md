@@ -1,10 +1,11 @@
 ---
-$category@: 프레젠테이션
-형식:
-- 웹사이트
-티저:
-
-##  텍스트: 풍부한 시각적 스토리텔링 형식입니다.
+$category@: presentation
+formats:
+  - websites
+  - stories
+teaser:
+  text: 풍부한 시각적 스토리텔링 형식입니다.
+---
 
 <!--
        Copyright 2017 The AMP HTML Authors. All Rights Reserved.
