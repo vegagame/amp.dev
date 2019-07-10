@@ -34,7 +34,6 @@ teaser:
 </tr>
 </table>
 
-[جدول المحتويات]
 
 ##لماذا AddThis؟
 

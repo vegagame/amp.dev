@@ -1,25 +1,25 @@
 ---
 $category@: media
 formats:
-  - websites
+- websites
 teaser:
   text: Muestra modelos en 3D en formato GL Transmission Format (gITF).
 ---
 
 <!--
-Copyright 2018 The AMP HTML Authors. Todos los derechos reservados.
+       Copyright 2018 The AMP HTML Authors. Todos los derechos reservados.
 
-Con licencia Apache, versión 2.0 (en adelante, la "Licencia").
-Este archivo solo se puede utilizar según lo estipulado en la Licencia.
-Se puede obtener una copia de la Licencia en la siguiente página:
+       Con licencia Apache, versión 2.0 (en adelante, la "Licencia").
+       Este archivo solo se puede utilizar según lo estipulado en la Licencia.
+       Se puede obtener una copia de la Licencia en la siguiente página:
 
-  http://www.apache.org/licenses/LICENSE-2.0
+       http://www.apache.org/licenses/LICENSE-2.0
 
-A menos que lo exija la legislación aplicable o se acuerde por escrito, el software
-distribuido bajo la Licencia se proporciona "TAL CUAL", SIN NINGÚN
-TIPO DE GARANTÍA NI DE CONDICIÓN, ni expresa ni implícita.
-En la Licencia se puede consultar la información relativa a las limitaciones y a los permisos aplicables a cada idioma.
--->
+       A menos que lo exija la legislación aplicable o se acuerde por escrito, el software
+       distribuido bajo la Licencia se proporciona "TAL CUAL", SIN NINGÚN
+       TIPO DE GARANTÍA NI DE CONDICIÓN, ni expresa ni implícita.
+       En la Licencia se puede consultar la información relativa a las limitaciones y a los permisos aplicables a cada idioma.
+  -->
 
 #amp-3d-gltf
 
@@ -55,8 +55,7 @@ El componente `amp-3d-gltf` muestra modelos en 3D que están en formato gITF.
     height="240"
     alpha="true"
     antialiasing="true"
-    src="path/to/model.glb">
-</amp-3d-gltf>
+    src="path/to/model.glb"></amp-3d-gltf>
 ```
 
 ###Limitaciones
@@ -64,6 +63,7 @@ El componente `amp-3d-gltf` muestra modelos en 3D que están en formato gITF.
 Actualmente, solo funciona con glTF 2.0.
 
 Funciones no admitidas:
+
 - cámaras insertadas
 - animación
 
@@ -74,36 +74,36 @@ Funciones no admitidas:
 ##Atributos
 
 <table>
-<tr>
-<td width="40%"><strong>src [obligatorio]</strong></td>
-<td>Atributo obligatorio que especifica la URL del archivo gltf.</td>
-</tr>
-<tr>
-<td width="40%"><strong>alpha [opcional]</strong></td>
-<td>Atributo booleano que especifica si el espacio libre del canvas es transparente. De forma predeterminada, el espacio libre se rellena con color negro.
-El valor predeterminado es <code>false</code>.</td>
-</tr>
-<tr>
-<td width="40%"><strong>antialiasing [opcional]</strong></td>
-<td>Atributo booleano que especifica si se debe activar el antialiasing (suavizado). El valor predeterminado es <code>false</code>.</td>
-</tr>
-<tr>
-<td width="40%"><strong>clearColor [opcional]</strong></td>
-<td>Cadena que debe contener un color CSS válido que se utilizará para rellenar el espacio libre del canvas.</td>
-</tr>
-<tr>
-<td width="40%"><strong>maxPixelRatio [opcional]</strong></td>
-<td>Valor numérico que especifica el límite superior de la opción de renderizado pixelRatio. El valor predeterminado es <code>window.devicePixelRatio</code>.</td>
-</tr>
-<tr>
-<td width="40%"><strong>autoRotate [opcional]</strong></td>
-<td>Atributo booleano que especifica si la cámara gira automáticamente alrededor del centro del modelo. El valor predeterminado es <code>false</code>.</td>
-</tr>
-<tr>
-<td width="40%"><strong>enableZoom [opcional]</strong></td>
-<td>Atributo booleano que especifica si se activa el zoom. El valor predeterminado es <code>true</code>.</td>
-</tr>
-</table>
+  <tr>
+    <td width="40%"><strong>src [obligatorio]</strong></td>
+    <td>Atributo obligatorio que especifica la URL del archivo gltf.</td>
+  </tr>
+  <tr>
+    <td width="40%"><strong>alpha [opcional]</strong></td>
+    <td>Atributo booleano que especifica si el espacio libre del canvas es transparente. De forma predeterminada, el espacio libre se rellena con color negro.
+        El valor predeterminado es <code>false</code>.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>antialiasing [opcional]</strong></td>
+      <td>Atributo booleano que especifica si se debe activar el antialiasing (suavizado). El valor predeterminado es <code>false</code>.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>clearColor [opcional]</strong></td>
+      <td>Cadena que debe contener un color CSS válido que se utilizará para rellenar el espacio libre del canvas.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>maxPixelRatio [opcional]</strong></td>
+      <td>Valor numérico que especifica el límite superior de la opción de renderizado pixelRatio. El valor predeterminado es <code>window.devicePixelRatio</code>.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>autoRotate [opcional]</strong></td>
+      <td>Atributo booleano que especifica si la cámara gira automáticamente alrededor del centro del modelo. El valor predeterminado es <code>false</code>.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>enableZoom [opcional]</strong></td>
+      <td>Atributo booleano que especifica si se activa el zoom. El valor predeterminado es <code>true</code>.</td>
+    </tr>
+  </table>
 
 ##Acciones
 
@@ -115,9 +115,9 @@ El valor predeterminado es <code>false</code>.</td>
         <li>x/y/z: número del 0 al 1. Utiliza de forma predeterminada el valor anterior de la rotación del modelo.</li>
         <li>min/max: ángulo en radianes, define el intervalo objetivo. El valor predeterminado es 0 / pi * 2.</li>
       </ul>
-    Por ejemplo, <code>setModelRotation(x=0.5, xMin=0, xMax=3.14)</code> cambiará el valor del componente de rotación <code>x</code> a <code>1.57</code>.</td>
-  </tr>
-</table>
+      Por ejemplo, <code>setModelRotation(x=0.5, xMin=0, xMax=3.14)</code> cambiará el valor del componente de rotación <code>x</code> a <code>1.57</code>.</td>
+    </tr>
+  </table>
 
 ##Validación
 

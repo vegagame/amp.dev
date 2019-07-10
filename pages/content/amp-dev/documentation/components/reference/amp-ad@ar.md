@@ -12,7 +12,6 @@ teaser:
 
 #<a name="amp-ad"></a> `amp-ad` / `amp-embed`
 
-[جدول المحتويات]
 
 [tip type="note"]
 من المحتمل أن تتطور مواصفات `amp-ad`/`amp-embed` بشكل ملحوظ بمرور الوقت. وتم تصميم الأسلوب الحالي لتشغيل شكل الإعلان مبدئيًا لتتمكن من عرض الإعلان.
@@ -140,7 +139,8 @@ http://www.apache.org/licenses/LICENSE-2.0
 ##عرض إعلانات الفيديو
 
 هناك 3 طرق لتحقيق الربح من الفيديوهات في AMP من خلال إعلانات الفيديو:
-1. - تتيح AMP أصلاً عمل عدد من مشغلات الفيديو، مثل BrightCove وDailyMotion وغيرهما والتي يمكنها تحقيق الربح من الإعلانات. للحصول على القائمة الكاملة، راجع مكونات [الوسائط](https://www.ampproject.org/docs/reference/components#media).
+
+1. تتيح AMP أصلاً عمل عدد من مشغلات الفيديو، مثل BrightCove وDailyMotion وغيرهما والتي يمكنها تحقيق الربح من الإعلانات. للحصول على القائمة الكاملة، راجع مكونات [الوسائط](https://www.ampproject.org/docs/reference/components#media).
 
 2. استخدِم المكوِّن [amp-ima-video](https://www.ampproject.org/docs/reference/components/amp-ima-video.html) الذي يأتي مع أداة تطوير البرامج لإعلانات الوسائط التفاعلية المضمّنة ومشغل فيديو HTML5.
 3. إذا كنت تستخدم مشغل فيديو غير متوافق في AMP، يمكنك عرض مشغلك المخصص باستخدام [amp-iframe](https://ampbyexample.com/components/amp-iframe/).
