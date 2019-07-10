@@ -1,4 +1,12 @@
-
+---
+$category@: layout
+teaser:
+  text: >-
+    The amp-layout` component allows you to apply aspect-ratio based responsive
+    layouts to any element. The `amp-layout` component works similarly to the
+    layout.
+$title: amp-layout
+---
 <!--© Авторы HTML с технологией AMP, 2016. Все права защищены.
 
        Лицензия Apache версии 2.0 (далее "Лицензия");
