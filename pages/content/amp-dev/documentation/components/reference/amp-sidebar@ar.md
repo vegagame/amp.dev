@@ -5,8 +5,9 @@ formats:
   - email
 teaser:
   text: >-
-    Provides a way to display meta content intended for temporary access such as
-    navigation, links, buttons, menus.
+    Provides a way to display meta content intended for temporary access such as navigation, links, buttons, menus.
+toc: true
+$title: amp-sidebar
 ---
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
@@ -22,7 +23,7 @@ teaser:
 راجِع الترخيص للاطّلاع على اللغة المحددة التي تحكم الأذونات والقيود بموجب الترخيص.
 -->
 
-#<a name="amp-sidebar"></a> `amp-sidebar`
+# amp-sidebar
 
 [جدول المحتويات]
 
@@ -70,7 +71,7 @@ teaser:
 
 *مثال:*
 
-في المثال التالي، نستخدم `amp-sidebar` لتضمين عناصر التنقل. ومع ذلك، يتم تعيين العنصر الثاني والرابع وNav Item 2 وNav Item 4 لمعرّف عنصر على الصفحة. وباستخدام السمة [`on`](../../spec/amp-actions-and-events.md)، يمكننا التمرير بسلاسة إلى العنصر باستخدام معرّف العنصر و`scrollTo`.
+في المثال التالي، نستخدم `amp-sidebar` لتضمين عناصر التنقل. ومع ذلك، يتم تعيين العنصر الثاني والرابع وNav Item 2 وNav Item 4 لمعرّف عنصر على الصفحة. وباستخدام السمة [`on`](https://github.com/ampproject/amphtml/blob/master/extensions/amp-sidebar/../../spec/amp-actions-and-events.md)، يمكننا التمرير بسلاسة إلى العنصر باستخدام معرّف العنصر و`scrollTo`.
 
 ```html
 <amp-sidebar id="sidebar1" layout="nodisplay" side="right">
@@ -87,7 +88,7 @@ teaser:
 
 ###فتح الشريط الجانبي وإغلاقه
 
-للتبديل أو فتح الشريط الجانبي أو إغلاقه عند النقر على العنصر، اضبط سمة الإجراء [`on`](../../spec/amp-actions-and-events.md) على العنصر وحدّد أحد أساليب الإجراءات التالية:
+للتبديل أو فتح الشريط الجانبي أو إغلاقه عند النقر على العنصر، اضبط سمة الإجراء [`on`](https://github.com/ampproject/amphtml/blob/master/extensions/amp-sidebar/../../spec/amp-actions-and-events.md) على العنصر وحدّد أحد أساليب الإجراءات التالية:
 
 <table>
   <tr>
@@ -234,29 +235,29 @@ teaser:
 ```html
 ...
 <body>
-    <amp-story standalone>
-      <amp-sidebar id="sidebar1" layout="nodisplay">
-        <ul>
-          <li><a href="https://www.ampproject.org"> External Link </a></li>
-          <li>Nav item 2</li>
-          <li>Nav item 3</li>
-        </ul>
-      </amp-sidebar>
-      <amp-story-page id="cover">
-        <amp-story-grid-layer template="fill">
-          <h1>Hello World</h1>
-          <p>This is the cover page of this story.</p>
-        </amp-story-grid-layer>
-      </amp-story-page>
-      ...
-  </body>
+  <amp-story standalone>
+  <amp-sidebar id="sidebar1" layout="nodisplay">
+    <ul>
+      <li><a href="https://www.ampproject.org"> External Link </a></li>
+      <li>Nav item 2</li>
+      <li>Nav item 3</li>
+    </ul>
+  </amp-sidebar>
+  <amp-story-page id="cover">
+    <amp-story-grid-layer template="fill">
+      <h1>Hello World</h1>
+      <p>This is the cover page of this story.</p>
+    </amp-story-grid-layer>
+  </amp-story-page>
+  ...
+</body>
 ```
 
 ##السمات
 
 #####side
 
-تشير إلى جانب الصفحة الذي يجب فتح الشريط الجانبي منه، إما `left` أو `right`.  في حال عدم تحديد `side`، سيتم اكتساب قيمة `side` من السمة `dir` للعلامة `body` (`ltr` =&gt; `left` و`rtl` =&gt; `right`). وفي حال عدم توفر `dir`، يتم ضبط `side` تلقائيًا على `left`.
+تشير إلى جانب الصفحة الذي يجب فتح الشريط الجانبي منه، إما `left` أو `right`.  في حال عدم تحديد `side`، سيتم اكتساب قيمة `side` من السمة `dir` للعلامة `body` (`ltr` => `left` و`rtl` => `right`). وفي حال عدم توفر `dir`، يتم ضبط `side` تلقائيًا على `left`.
 
 #####layout<a name="layout"></a>
 
