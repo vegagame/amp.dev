@@ -1,4 +1,3 @@
-
 ---
 $category@: ads-analytics
 formats:
@@ -12,13 +11,13 @@ teaser:
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
        Copyright 2015 The AMP HTML Authors. Tutti i diritti riservati.
-       
+
        Rilasciato ai sensi della Licenza Apache, versione 2.0 (la "Licenza");
      è possibile utilizzare questo file esclusivamente in conformità con la Licenza.
      Una copia della Licenza è disponibile all'indirizzo
-     
+
      http://www.apache.org/licenses/LICENSE-2.0
-     
+
      Se non diversamente imposto dalla legge vigente o concordato per iscritto,
      il software rilasciato ai sensi della Licenza viene distribuito "COSÌ COM'È",
      SENZA GARANZIE O CONDIZIONI DI ALCUN TIPO, esplicite o implicite.
@@ -26,9 +25,7 @@ teaser:
      specifiche della lingua previste dalla Licenza.
 -->
 
-#<a name="amp-pixel"></a> `amp-pixel`
-
-[TOC]
+# amp-pixel
 
 <table>
   <tr>
@@ -54,9 +51,9 @@ In questo esempio di base, `amp-pixel` effettua una semplice richiesta GET all'U
 ```html
 <amp-pixel src="https://foo.com/tracker/foo"
     layout="nodisplay"></amp-pixel>
-  ```
-  
-  [tip type="note"]
+```
+
+[tip type="note"]
 mentre elabori gli URL AMP nell'intestazione del referrer delle richieste di analisi dei dati, rimuovi o ignora il parametro `usqp`. Google utilizza questo parametro per attivare gli esperimenti per la cache AMP di Google.
 [/tip]
 
@@ -74,8 +71,8 @@ Simile all'attributo `referrerpolicy` di `<img>`, tuttavia l'unico valore ammess
 <amp-pixel src="https://foo.com/tracker/foo"
     layout="nodisplay"
     referrerpolicy="no-referrer"></amp-pixel>
-  ```
-  
+```
+
 #####allow-ssr-img (facoltativo)
 
 Questo attributo, utilizzato nelle creatività AMP4ADS, indica che, come parte della
@@ -98,8 +95,8 @@ Nel seguente esempio, potrebbe essere effettuata una richiesta a `https://foo.co
 ```html
 <amp-pixel src="https://foo.com/pixel?RANDOM"
     layout="nodisplay"></amp-pixel>
-  ```
-  
+```
+
 ##Stili
 
 Non modificare lo stile di `amp-pixel`.

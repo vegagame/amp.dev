@@ -495,7 +495,7 @@ HTML5 验证仅根据页面上的信息提供反馈，例如某个值是否与�
   {
     "verifyErrors": [
       {"name": "email", "message": "That email is already taken."},
-    {"name": "zip", "message": "The city and zip do not match."}
+      {"name": "zip", "message": "The city and zip do not match."}
   ]
 }
 ```

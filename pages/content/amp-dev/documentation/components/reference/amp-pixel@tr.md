@@ -1,4 +1,3 @@
-
 ---
 $category@: ads-analytics
 formats:
@@ -12,19 +11,18 @@ teaser:
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
        Copyright 2015 The AMP HTML Authors. Tüm Hakları Saklıdır.
-       
+
        Apache Lisansı, Sürüm 2.0 ("Lisans") ile lisanslıdır; bu dosyayı Lisans koşulları dışında kullanamazsınız.
        Lisansın bir kopyasını şu adresten edinebilirsiniz:
-       
+
        http://www.apache.org/licenses/LICENSE-2.0
-       
+
        Geçerli yasa tarafından gerekli görülmediği veya yazılı olarak bir sözleşme yapılmadığı sürece, Lisanslı olarak dağıtılan yazılım açıkça veya zımni olarak HİÇBİR GARANTİ VEYA KOŞUL SUNULMADAN "OLDUĞU GİBİ" dağıtılır.
        Lisans kapsamında belirli bir dilde sağlanan izinleri ve uygulanan kısıtlamaları öğrenmek için söz konusu dille ilgili Lisans'a bakın.
   -->
 
-#<a name="amp-pixel"></a> `amp-pixel`
+# amp-pixel
 
-[İçindekiler]
 
 <table>
   <tr>
@@ -50,8 +48,8 @@ Bu temel örnekte `amp-pixel`, belirtilen URL'ye basit bir GET isteği gönderir
 ```html
 <amp-pixel src="https://foo.com/tracker/foo"
     layout="nodisplay"></amp-pixel>
-  ```
-  
+```
+
   [tip type="note"]
 Analiz isteklerinin yönlendirme üstbilgisindeki AMP URL'leri işlenirken `usqp` parametresini çıkarın veya yoksayın. Bu parametre, Google tarafından Google AMP Önbelleği denemelerinin tetiklenmesi amacıyla kullanılır.
 [/tip]
@@ -70,8 +68,8 @@ Bu özellik, `<img>` öğesindeki `referrerpolicy` özelliğine benzer ancak yal
 <amp-pixel src="https://foo.com/tracker/foo"
     layout="nodisplay"
     referrerpolicy="no-referrer"></amp-pixel>
-  ```
-  
+```
+
 #####allow-ssr-img (isteğe bağlı)
 
 AMP4ADS reklam öğelerinde kullanılan bu özellik, doğrulama sonrası dönüşümün parçası olarak, bir img öğesinin doğrudan amp-pixel öğesine yerleştirilmesiyle ping komutunun AMP çalışma zamanı getirme/yürütme işlemine paralel olarak gönderilmesine olanak tanınabileceğini belirtir.
@@ -91,8 +89,8 @@ Aşağıdaki örnekte, `https://foo.com/pixel?0.8390278471201` gibi bir istekte 
 ```html
 <amp-pixel src="https://foo.com/pixel?RANDOM"
     layout="nodisplay"></amp-pixel>
-  ```
-  
+```
+
 ##Stil
 
 `amp-pixel` şekillendirilmemelidir.

@@ -1,7 +1,7 @@
 ---
 $category@: ads-analytics
-형식:
-- 웹사이트
+formats:
+- websites
 티저:
 
 ##  텍스트: 원격으로 제공되는 구성 파일을 사용하여 AMP 페이지에 동적으로 광고를 삽입합니다.

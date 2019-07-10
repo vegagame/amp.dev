@@ -1,9 +1,9 @@
 ---
 $category@: dynamic-content
-형식:
-- 웹사이트
-- 이메일
-- 광고
+formats:
+- websites
+- email
+- ads
 티저:
 
 ##  텍스트: 사용자 작업 또는 데이터 변경에 따라 데이터 결합 및 JS와 같은 단순한 식을 통해 요소의 변경을 허용합니다.

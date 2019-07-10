@@ -1,4 +1,3 @@
-
 ---
 $category@: ads-analytics
 formats:
@@ -12,13 +11,13 @@ teaser:
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
        Copyright 2015 The AMP HTML Authors. All Rights Reserved.
-       
+
        Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
-     
+
      http://www.apache.org/licenses/LICENSE-2.0
-     
+
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS-IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -26,9 +25,8 @@ teaser:
      limitations under the License.
 -->
 
-#<a name="amp-pixel"></a>`amp-pixel`
+# amp-pixel
 
-[TOC]
 
 <table>
   <tr>
@@ -54,8 +52,8 @@ teaser:
 ```html
 <amp-pixel src="https://foo.com/tracker/foo"
     layout="nodisplay"></amp-pixel>
-  ```
-  
+```
+
   [tip type="note"]
 アナリティクス リクエストのリファラー ヘッダー内の AMP URL を処理する際は、`usqp` パラメータを削除するか無視します。このパラメータは、Google が Google AMP キャッシュのテストをトリガーする際に使用されます。
 [/tip]
@@ -74,8 +72,8 @@ teaser:
 <amp-pixel src="https://foo.com/tracker/foo"
     layout="nodisplay"
     referrerpolicy="no-referrer"></amp-pixel>
-  ```
-  
+```
+
 #####allow-ssr-img（省略可）
 
 AMP4ADS クリエイティブ内で使用されるこの属性は、検証後の変換の一環として、img 要素を amp-pixel 要素内に直接配置し、AMP ランタイム フェッチ / 実行と並行して ping を送信できるようにします。つまり、URL 内のマクロは展開されません。src 内にマクロが存在しない場合に限り、この属性を使用するようにしてください。
@@ -93,8 +91,8 @@ AMP4ADS クリエイティブ内で使用されるこの属性は、検証後の
 ```html
 <amp-pixel src="https://foo.com/pixel?RANDOM"
     layout="nodisplay"></amp-pixel>
-  ```
-  
+```
+
 ##スタイル設定
 
 `amp-pixel` にはスタイルを設定しないでください。

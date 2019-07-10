@@ -1,7 +1,7 @@
 ---
-$category@: 소셜
-형식:
-- 웹사이트
+$category@: social
+formats:
+- websites
 티저:
   텍스트: AddThis 웹사이트 도구 삽입을 표시합니다.
 ---

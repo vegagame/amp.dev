@@ -1,4 +1,3 @@
-
 ---
 $category@: ads-analytics
 formats:
@@ -11,17 +10,16 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!--- 版权所有 2015 The AMP HTML Authors。保留所有权利。
-       
+
        根据 Apache 许可 2.0 版（以下简称“许可”）授权用户使用；您只有在遵循该许可的情况下才可使用本文件。您可以通过以下网址获得该许可的副本：
-       
+
        http://www.apache.org/licenses/LICENSE-2.0
-       
+
        除非适用法律要求或已达成书面协议，否则按照该许可分发的软件均“按原样”分发，不提供任何类型的担保或条件（无论明示或暗示）。有关该许可规定的具体语言管辖权限和限制，请参阅该许可。
   -->
 
-#<a name="amp-pixel"></a>`amp-pixel`
+# amp-pixel
 
-[TOC]
 
 <table>
   <tr>
@@ -47,9 +45,9 @@ teaser:
 ```html
 <amp-pixel src="https://foo.com/tracker/foo"
     layout="nodisplay"></amp-pixel>
-  ```
-  
-  [tip type="ll callout('注意：</b><a class="type_note"]
+```
+
+[tip type="note"]
 在处理分析请求的引荐来源网址标头中包含的 AMP 网址时，请剔除或忽略 `usqp` 参数。该参数供 Google 用于触发针对 Google AMP 缓存的实验。
 [/tip]
 
@@ -67,8 +65,8 @@ teaser:
 <amp-pixel src="https://foo.com/tracker/foo"
     layout="nodisplay"
     referrerpolicy="no-referrer"></amp-pixel>
-  ```
-  
+```
+
 #####allow-ssr-img（可选）
 
 AMP4ADS 广告素材中使用的此属性表示：作为验证后转换的一部分，img 元素可以直接放置在 amp-pixel 元素内，从而允许 ping 与 AMP runtime 获取/执行并行发送。请注意，这意味着网址中的所有宏都不会展开，因此请仅在它们不在 src 中出现时才使用此属性。
@@ -86,8 +84,8 @@ AMP4ADS 广告素材中使用的此属性表示：作为验证后转换的一部
 ```html
 <amp-pixel src="https://foo.com/pixel?RANDOM"
     layout="nodisplay"></amp-pixel>
-  ```
-  
+```
+
 ##样式设置
 
 不应设置 `amp-pixel` 的样式。

@@ -1,10 +1,10 @@
 ---
-$category@: 미디어
-형식:
-- 웹사이트
-- 이메일
-- 광고
-- 스토리
+$category@: media
+formats:
+- websites
+- email
+- ads
+- stories
 티저:
 ##  텍스트: HTML5 이미지 태그를 대체합니다.
 ---

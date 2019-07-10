@@ -1,4 +1,3 @@
-
 ---
 $category@: ads-analytics
 formats:
@@ -12,13 +11,13 @@ teaser:
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
        Copyright 2015 The AMP HTML Authors. All Rights Reserved.
-       
+
        Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
-     
+
      http://www.apache.org/licenses/LICENSE-2.0
-     
+
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS-IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -26,9 +25,8 @@ teaser:
      limitations under the License.
 -->
 
-#<a name="amp-pixel"></a> `amp-pixel`
+# amp-pixel
 
-[TOC]
 
 <table>
   <tr>
@@ -54,9 +52,9 @@ Dalam contoh dasar ini, `amp-pixel` mengeluarkan permintaan GET sederhana ke URL
 ```html
 <amp-pixel src="https://foo.com/tracker/foo"
     layout="nodisplay"></amp-pixel>
-  ```
-  
-  [tip type="ll callout('Catatan:</b> <a class="type_note"]Saat memproses URL AMP di header perujuk permintaan analisis, hapus atau abaikan parameter `usqp`. Parameter ini digunakan oleh Google untuk memicu eksperimen Cache AMP Google.
+```
+
+  [tip type="note"]Saat memproses URL AMP di header perujuk permintaan analisis, hapus atau abaikan parameter `usqp`. Parameter ini digunakan oleh Google untuk memicu eksperimen Cache AMP Google.
   [/tip]
 
 ##Atribut
@@ -73,8 +71,8 @@ Atribut ini mirip dengan atribut `referrerpolicy` pada `<img>`, tetapi hanya men
 <amp-pixel src="https://foo.com/tracker/foo"
     layout="nodisplay"
     referrerpolicy="no-referrer"></amp-pixel>
-  ```
-  
+```
+
 #####allow-ssr-img (opsional)
 
 Atribut ini, yang digunakan dalam materi iklan AMP4ADS, menunjukkan bahwa sebagai bagian dari transformasi pasca-validasi, elemen img dapat ditempatkan langsung dalam elemen amp-pixel yang memungkinkan ping dikirim bersamaan dengan pengambilan/eksekusi AMP runtime.
@@ -94,8 +92,8 @@ Pada contoh berikut, permintaan dapat dibuat untuk sesuatu seperti `https://foo.
 ```html
 <amp-pixel src="https://foo.com/pixel?RANDOM"
     layout="nodisplay"></amp-pixel>
-  ```
-  
+```
+
 ##Penataan gaya
 
 `amp-pixel` tidak boleh diberi gaya.

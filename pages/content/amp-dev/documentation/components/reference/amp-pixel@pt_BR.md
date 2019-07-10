@@ -1,4 +1,3 @@
-
 ---
 $category@: ads-analytics
 formats:
@@ -12,19 +11,18 @@ teaser:
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
        Copyright 2015 The AMP HTML Authors. Todos os direitos reservados.
-       
+
        Licenciado sob a Licença Apache, Versão 2.0 (a "Licença"). O uso deste arquivo só é permitido em conformidade com a Licença.
        Uma cópia da Licença está disponível em
-       
+
        http://www.apache.org/licenses/LICENSE-2.0
-       
+
        A menos que exigido pela legislação aplicável ou acordado por escrito, o software fornecido de acordo com a Licença é distribuído "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIAS OU CONDIÇÕES DE QUALQUER TIPO, expressas ou implícitas.
        Consulte a Licença para ver informações sobre permissões e limitações para o idioma específico.
   -->
 
-#<a name="amp-pixel"></a> `amp-pixel`
+# amp-pixel
 
-[TOC]
 
 <table>
   <tr>
@@ -50,9 +48,9 @@ Neste exemplo básico, o `amp-pixel` emite uma solicitação GET simples para o 
 ```html
 <amp-pixel src="https://foo.com/tracker/foo"
     layout="nodisplay"></amp-pixel>
-  ```
-  
-  [tip type="note"]
+```
+
+[tip type="note"]
 ao processar URLs de AMP no cabeçalho do referenciador das solicitações de análise, remova ou ignore o parâmetro `usqp`. Esse parâmetro é usado pelo Google para acionar experimentos para o Google AMP Cache.
 [/tip]
 
@@ -70,8 +68,8 @@ Este atributo é semelhante ao atributo `referrerpolicy` em `<img>`. No entanto,
 <amp-pixel src="https://foo.com/tracker/foo"
     layout="nodisplay"
     referrerpolicy="no-referrer"></amp-pixel>
-  ```
-  
+```
+
 #####allow-ssr-img (opcional)
 
 Este atributo usado em anúncios AMP4ADS indica que, como parte da transformação de pós-validação, um elemento img pode ser colocado diretamente no elemento amp-pixel, permitindo que o ping seja enviado em paralelo com a busca/execução do ambiente de tempo de execução de AMP.
@@ -91,8 +89,8 @@ No exemplo a seguir, uma solicitação pode ser feita para algo como `https://fo
 ```html
 <amp-pixel src="https://foo.com/pixel?RANDOM"
     layout="nodisplay"></amp-pixel>
-  ```
-  
+```
+
 ##Estilo
 
 `amp-pixel` não deve ser estilizado.

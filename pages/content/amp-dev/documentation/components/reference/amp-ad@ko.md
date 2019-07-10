@@ -1,7 +1,7 @@
 ---
-$category@: 광고-애널리틱스
-형식:
-- 웹사이트
+$category@: ads-analytics
+formats:
+- websites
 티저:
  텍스트: 광고를 표시하는 컨테이너입니다.
 ---

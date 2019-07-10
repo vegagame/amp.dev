@@ -1,30 +1,28 @@
-
 ---
-$category@: 광고 애널리틱스
-형식:
-- 웹사이트
-- 광고
-- 스토리
+$category@: ads-analytics
+formats:
+  - websites
+  - ads
+  - stories
 티저:
 
 ##  텍스트: 페이지 조회수를 계산하는 추적 픽셀입니다.
-
+---
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
        Copyright 2015 The AMP HTML Authors. All Rights Reserved
-       
+
        Apache 라이선스 버전 2.0(이하 '라이선스')에 따라 사용이 허가되었으므로, 라이선스를 준수하지 않는 경우 이 파일을 사용할 수 없습니다.
        라이선스의 사본은 다음에서 가져올 수 있습니다.
-       
+
        http://www.apache.org/licenses/LICENSE-2.0
-       
+
        해당 법률에 따라 요구되거나 서면으로 동의한 경우를 제외하고, 라이선스에 따라 배포된 소프트웨어는 어떠한 종류의 명시적 또는 묵시적 보증 또는 조건도 없이 '있는 그대로' 배포됩니다.
        라이선스의 허가 및 제한사항에 관한 구체적인 문구는 라이선스를 참조하시기 바랍니다.
   -->
 
-#<a name="amp-pixel"></a> `amp-pixel`
+# amp-pixel
 
-[TOC]
 
 <table>
   <tr>
@@ -50,8 +48,8 @@ $category@: 광고 애널리틱스
 ```html
 <amp-pixel src="https://foo.com/tracker/foo"
     layout="nodisplay"></amp-pixel>
-  ```
-  
+```
+
   [tip type="note"]
 애널리틱스 요청의 리퍼러 헤더에서 AMP URL을 처리할 때 `usqp` 매개변수를 제외하거나 무시하세요. 이 매개변수는 Google이 Google AMP 캐시에 대한 실험을 트리거하는 데 사용됩니다.
 [/tip]
@@ -70,8 +68,8 @@ $category@: 광고 애널리틱스
 <amp-pixel src="https://foo.com/tracker/foo"
     layout="nodisplay"
     referrerpolicy="no-referrer"></amp-pixel>
-  ```
-  
+```
+
 #####allow-ssr-img(선택사항)
 
 이 속성을 AMP4ADS 광고 소재에 사용하면 사후 유효성 검사 변환의 일부로 img 요소를 amp-pixel 요소에 직접 둘 수 있으므로, AMP 런타임 가져오기/실행과 동시에 ping을 전송할 수 있습니다.
@@ -91,8 +89,8 @@ $category@: 광고 애널리틱스
 ```html
 <amp-pixel src="https://foo.com/pixel?RANDOM"
     layout="nodisplay"></amp-pixel>
-  ```
-  
+```
+
 ##스타일 지정
 
 `amp-pixel`의 스타일은 지정되지 않아야 합니다.

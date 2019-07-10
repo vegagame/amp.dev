@@ -1,9 +1,9 @@
 ---
 $category@: ads-analytics
-형식:
-- 웹사이트
-- 이메일
-- 광고
+formats:
+- websites
+- email
+- ads
 티저:
  텍스트: AMP 문서에서 애널리틱스 데이터를 캡처합니다.
 ---

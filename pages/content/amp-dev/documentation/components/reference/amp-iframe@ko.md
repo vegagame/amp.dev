@@ -1,7 +1,8 @@
 ---
-## $category@: 레이아웃 형식:
-##- 웹사이트
-##티저:
+$category@: layout
+formats:
+- websites
+티저:
 
 ##  텍스트: iframe을 표시합니다.
 ---

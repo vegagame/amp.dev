@@ -1,9 +1,9 @@
 ---
-$category@: 레이아웃
-형식:
-- 웹사이트
-- 이메일
-- 광고
+$category@: layout
+formats:
+- websites
+- email
+- ads
 티저:
 
   text: 가로축을 따라 여러 개의 유사한 콘텐츠를 표시합니다.

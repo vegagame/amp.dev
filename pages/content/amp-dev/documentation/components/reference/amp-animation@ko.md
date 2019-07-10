@@ -1,8 +1,8 @@
 ---
 $category@: presentation
-형식:
-- 웹사이트
-- 광고
+formats:
+- websites
+- ads
 티저:
 
 ##  텍스트: 애니메이션을 정의하고 표시합니다.

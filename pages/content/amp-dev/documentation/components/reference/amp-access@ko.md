@@ -1,6 +1,7 @@
 ---
-$category@: 동적 콘텐츠
-형식:
+$category@: dynamic-content
+formats:
+- websites
 - 웹사이트
 티저:
 

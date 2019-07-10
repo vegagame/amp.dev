@@ -22,9 +22,8 @@ teaser:
        Consultez la Licence correspondant à la langue spécifique qui régit les autorisations et limitations applicables.
   -->
 
-#<a name="amp-pixel"></a> `amp-pixel`
+# amp-pixel
 
-[TOC]
 
 <table>
   <tr>
@@ -50,9 +49,9 @@ Dans cet exemple de base, le composant `amp-pixel` envoie une requête GET simpl
 ```html
 <amp-pixel src="https://foo.com/tracker/foo"
     layout="nodisplay"></amp-pixel>
-  ```
+```
 
-  [tip type="note"]
+[tip type="note"]
 Lors du traitement des URL AMP dans l'en-tête de page de provenance des requêtes d'analyse, supprimez ou ignorez le paramètre `usqp`. Ce paramètre est utilisé par Google pour déclencher des tests pour Google AMP Cache.
 [/tip]
 
@@ -70,7 +69,7 @@ Cet attribut est semblable à l'attribut `referrerpolicy` sur la balise `<img>`.
 <amp-pixel src="https://foo.com/tracker/foo"
     layout="nodisplay"
     referrerpolicy="no-referrer"></amp-pixel>
-  ```
+```
 
 #####allow-ssr-img (facultatif)
 
@@ -91,7 +90,7 @@ Dans l'exemple suivant, une requête peut être envoyée à une adresse semblabl
 ```html
 <amp-pixel src="https://foo.com/pixel?RANDOM"
     layout="nodisplay"></amp-pixel>
-  ```
+```
 
 ##Application d'un style
 

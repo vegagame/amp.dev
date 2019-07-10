@@ -1,7 +1,7 @@
 ---
-$category@: 미디어
-형식:
-- 웹사이트
+$category@: media
+formats:
+- websites
 티저:
 ---
 

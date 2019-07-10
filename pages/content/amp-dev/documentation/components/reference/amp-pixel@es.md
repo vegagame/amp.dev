@@ -1,4 +1,3 @@
-
 ---
 $category@: ads-analytics
 formats:
@@ -12,13 +11,13 @@ teaser:
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
        Copyright 2015 The AMP HTML Authors. Todos los derechos reservados.
-       
+
        Con licencia Apache, versión 2.0 (en adelante, la "Licencia").
        Este archivo solo se puede utilizar según lo estipulado en la Licencia.
        Se puede obtener una copia de la Licencia en la siguiente página:
-       
+
        http://www.apache.org/licenses/LICENSE-2.0
-       
+
        A menos que lo exija la legislación aplicable o se acuerde por escrito, el software
        distribuido bajo la Licencia se proporciona "TAL CUAL", SIN NINGÚN
        TIPO DE GARANTÍA NI DE CONDICIÓN, ni expresa ni implícita.
@@ -26,9 +25,8 @@ teaser:
        y a los permisos aplicables a cada idioma.
   -->
 
-#<a name="amp-pixel"></a> `amp-pixel`
+# amp-pixel
 
-[TOC]
 
 <table>
   <tr>
@@ -54,9 +52,9 @@ En este ejemplo básico, `amp-pixel` envía una solicitud GET simple a la URL es
 ```html
 <amp-pixel src="https://foo.com/tracker/foo"
     layout="nodisplay"></amp-pixel>
-  ```
-  
-  [tip type="note"]
+```
+
+[tip type="note"]
 Al procesar URL de AMP en el encabezado de URL referente de las solicitudes de analíticas, elimina o ignora el parámetro `usqp`. Google utiliza este parámetro para activar experimentos de Google AMP Cache.
 [/tip]
 
@@ -74,8 +72,8 @@ Es similar al atributo `referrerpolicy` de `<img>`, pero el único valor aceptad
 <amp-pixel src="https://foo.com/tracker/foo"
     layout="nodisplay"
     referrerpolicy="no-referrer"></amp-pixel>
-  ```
-  
+```
+
 #####allow-ssr-img (opcional)
 
 Este atributo se utiliza en las creatividades AMP4ADS, e indica que, como parte de la transformación posterior a la validación, puede insertarse un elemento img dentro del elemento amp-pixel. Esto permite que se envíe el ping en paralelo a la ejecución o recuperación del tiempo de ejecución de AMP.
@@ -95,8 +93,8 @@ En el siguiente ejemplo, se puede hacer una solicitud a algo similar a `https://
 ```html
 <amp-pixel src="https://foo.com/pixel?RANDOM"
     layout="nodisplay"></amp-pixel>
-  ```
-  
+```
+
 ##Estilo
 
 No se debe aplicar ningún estilo a `amp-pixel`.
