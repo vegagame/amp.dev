@@ -1,9 +1,9 @@
 ---
-$category@: 동적 콘텐츠
-형식:
-- 웹사이트
-- 이메일
-- 광고
+$category@: dynamic-content
+formats:
+- websites
+- email
+- ads
 티저:
 
 ##  텍스트: Mustache.js 템플릿의 렌더링을 허용합니다.

@@ -1,12 +1,12 @@
 ---
-$category@: 미디어
-형식:
-- 웹사이트
-- 광고
+$category@: media
+formats:
+- websites
+- ads
 티저:
 
 ##  텍스트: YouTube 동영상을 표시합니다.
-
+---
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
        Copyright 2015 The AMP HTML Authors. All Rights Reserved.

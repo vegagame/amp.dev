@@ -1,13 +1,13 @@
 ---
-$category@: 미디어
-형식:
-- 웹사이트
-- 광고
-- 스토리
+$category@: media
+formats:
+- websites
+- ads
+- stories
 티저:
 
 ##  텍스트: HTML5 동영상 태그를 대체합니다.
-
+---
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
        Copyright 2015 The AMP HTML Authors. All Rights Reserved.
