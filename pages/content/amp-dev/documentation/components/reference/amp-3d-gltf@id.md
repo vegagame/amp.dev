@@ -1,25 +1,25 @@
 ---
 $category@: media
 formats:
-  - websites
+- websites
 teaser:
   text: Displays GL Transmission Format (gITF) 3D models.
 ---
 
 <!--
-Copyright 2018 The AMP HTML Authors. All Rights Reserved.
+       Copyright 2018 The AMP HTML Authors. All Rights Reserved.
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS-IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
 -->
 
 #amp-3d-gltf
@@ -29,7 +29,7 @@ Menampilkan model 3D GL Transmission Format (gITF).
 <table>
   <tr>
     <td width="40%"><strong>Skrip yang Diperlukan</strong></td>
-    <td><code>&lt;script async custom-element="amp-3d-gltf" src="https://cdn.ampproject.org/v0/amp-3d-gltf-0.1.js"&gt;&lt;/script&gt;</code></td>
+    <td><code>&lt;script async custom-element="amp-3d-gltf" src="https://cdn.ampproject.org/v0/amp-3d-gltf-0.1.js"&gt;&lt;/script&gt;</code&gt;</td>
   </tr>
   <tr>
     <td class="col-fourty"><strong><a href="https://www.ampproject.org/docs/guides/responsive/control_layout.html">Tata Letak yang Didukung</a></strong></td>
@@ -56,15 +56,14 @@ Komponen `amp-3d-gltf` menampilkan model 3D dalam format gITF.
     height="240"
     alpha="true"
     antialiasing="true"
-    src="path/to/model.glb">
-</amp-3d-gltf>
+    src="path/to/model.glb"></amp-3d-gltf>
 ```
 
 ###Batasan
 
 Saat ini, hanya berfungsi dengan glTF 2.0.
-
 Fitur yang tidak didukung:
+
 - kamera tersemat
 - animasi
 
@@ -82,29 +81,29 @@ Fitur yang tidak didukung:
   <tr>
     <td width="40%"><strong>alpha [opsional]</strong></td>
     <td>Atribut Boolean yang menentukan apakah ruang kosong pada kanvas terlihat transparan atau tidak. Secara default, ruang kosong diisi warna hitam.
-      Nilai defaultnya adalah <code>false</code>.</td>
-  </tr>
-  <tr>
-    <td width="40%"><strong>antialiasing [opsional]</strong></td>
-    <td>Atribut Boolean yang menentukan apakah antialiasing diaktifkan atau tidak. Nilai defaultnya adalah <code>false</code>.</td>
-  </tr>
-  <tr>
-    <td width="40%"><strong>clearColor [opsional]</strong></td>
-    <td>String yang harus berisi warna CSS yang valid, yang akan digunakan untuk mengisi ruang kosong pada kanvas.</td>
-  </tr>
-  <tr>
-    <td width="40%"><strong>maxPixelRatio [opsional]</strong></td>
-    <td>Nilai numerik yang menentukan batas atas untuk opsi render pixelRatio. Nilai defaultnya adalah <code>window.devicePixelRatio</code>.</td>
-  </tr>
-  <tr>
-    <td width="40%"><strong>autoRotate [opsional]</strong></td>
-    <td>Atribut Boolean yang menentukan apakah kamera akan otomatis diputar di sekitar pusat model atau tidak. Nilai defaultnya adalah <code>false</code>.</td>
-  </tr>
-  <tr>
-    <td width="40%"><strong>enableZoom [opsional]</strong></td>
-    <td>Atribut Boolean yang menentukan apakah zoom akan diaktifkan atau tidak. Nilai default adalah <code>true</code>.</td>
-  </tr>
-</table>
+        Nilai defaultnya adalah <code>false</code>.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>antialiasing [opsional]</strong></td>
+      <td>Atribut Boolean yang menentukan apakah antialiasing diaktifkan atau tidak. Nilai defaultnya adalah <code>false</code>.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>clearColor [opsional]</strong></td>
+      <td>String yang harus berisi warna CSS yang valid, yang akan digunakan untuk mengisi ruang kosong pada kanvas.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>maxPixelRatio [opsional]</strong></td>
+      <td>Nilai numerik yang menentukan batas atas untuk opsi render pixelRatio. Nilai defaultnya adalah <code>window.devicePixelRatio</code>.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>autoRotate [opsional]</strong></td>
+      <td>Atribut Boolean yang menentukan apakah kamera akan otomatis diputar di sekitar pusat model atau tidak. Nilai defaultnya adalah <code>false</code>.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>enableZoom [opsional]</strong></td>
+      <td>Atribut Boolean yang menentukan apakah zoom akan diaktifkan atau tidak. Nilai default adalah <code>true</code>.</td>
+    </tr>
+  </table>
 
 ##Tindakan
 
@@ -117,8 +116,8 @@ Fitur yang tidak didukung:
         <li>min/max - sudut dalam radian, didefaultkan ke 0/pi * 2, menentukan rentang target</li>
       </ul>
       misalnya <code>setModelRotation(x=0.5, xMin=0, xMax=3.14)</code> akan mengubah komponen <code>x</code> rotasi menjadi <code>1.57</code>.</td>
-  </tr>
-</table>
+    </tr>
+  </table>
 
 ##Validasi
 

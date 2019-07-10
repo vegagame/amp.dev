@@ -8,30 +8,30 @@ teaser:
 
 <!--版权所有 2018 The AMP HTML Authors。保留所有权利。
 
-根据 Apache 许可 2.0 版（以下简称“许可”）授权用户使用；您只有在遵循该许可的情况下才可使用本文件。您可以通过以下网址获得该许可的副本：
+       根据 Apache 许可 2.0 版（以下简称“许可”）授权用户使用；您只有在遵循该许可的情况下才可使用本文件。您可以通过以下网址获得该许可的副本：
 
-  http://www.apache.org/licenses/LICENSE-2.0
+       http://www.apache.org/licenses/LICENSE-2.0
 
-除非适用法律要求或已达成书面协议，否则按照该许可分发的软件均“按原样”分发，不提供任何类型的担保或条件（无论明示或暗示）。有关该许可规定的具体语言管辖权限和限制，请参阅该许可。
--->
+       除非适用法律要求或已达成书面协议，否则按照该许可分发的软件均“按原样”分发，不提供任何类型的担保或条件（无论明示或暗示）。有关该许可规定的具体语言管辖权限和限制，请参阅该许可。
+  -->
 
 #amp-3d-gltf
 
 显示 GL 传输格式 (gITF) 的 3D 模型。
 
 <table>
-<tr>
-<td width="40%"><strong>必需的脚本</strong></td>
-<td><code>&lt;script async custom-element="amp-3d-gltf" src="https://cdn.ampproject.org/v0/amp-3d-gltf-0.1.js"&gt;&lt;/script&gt;</code></td>
-</tr>
-<tr>
-<td class="col-fourty"><strong><a href="https://www.ampproject.org/docs/guides/responsive/control_layout.html">支持的布局</a></strong></td>
-<td>fill、fixed、fixed-height、flex-item、responsive</td>
-</tr>
-<tr>
-<td><strong>示例</strong></td>
-<td>请参阅 AMP By Example 的 <a href="https://ampbyexample.com/components/amp-3d-gltf/">amp-3d-gltf 示例</a>。</td>
-</tr>
+  <tr>
+    <td width="40%"><strong>必需的脚本</strong></td>
+    <td><code>&lt;script async custom-element="amp-3d-gltf" src="https://cdn.ampproject.org/v0/amp-3d-gltf-0.1.js"&gt;&lt;/script&gt;</code></td>
+  </tr>
+  <tr>
+    <td class="col-fourty"><strong><a href="https://www.ampproject.org/docs/guides/responsive/control_layout.html">支持的布局</a></strong></td>
+    <td>fill、fixed、fixed-height、flex-item、responsive</td>
+  </tr>
+  <tr>
+    <td><strong>示例</strong></td>
+    <td>请参阅 AMP By Example 的 <a href="https://ampbyexample.com/components/amp-3d-gltf/">amp-3d-gltf 示例</a>。</td>
+  </tr>
 </table>
 
 ##用法
@@ -49,8 +49,7 @@ teaser:
     height="240"
     alpha="true"
     antialiasing="true"
-    src="path/to/model.glb">
-</amp-3d-gltf>
+    src="path/to/model.glb"></amp-3d-gltf>
 ```
 
 ###限制
@@ -58,6 +57,7 @@ teaser:
 目前，此组件仅适用于 glTF 2.0。
 
 不支持的功能：
+
 - 嵌入式摄像头
 - 动画
 

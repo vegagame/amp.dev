@@ -7,16 +7,16 @@ teaser:
 ---
 
 <!--
-Copyright 2018 The AMP HTML Authors. Todos os direitos reservados.
+       Copyright 2018 The AMP HTML Authors. Todos os direitos reservados.
 
-Licenciado sob a Licença Apache, Versão 2.0 (a "Licença"). O uso deste arquivo só é permitido em conformidade com a Licença.
-Uma cópia da Licença está disponível em
+       Licenciado sob a Licença Apache, Versão 2.0 (a "Licença"). O uso deste arquivo só é permitido em conformidade com a Licença.
+       Uma cópia da Licença está disponível em
 
-  http://www.apache.org/licenses/LICENSE-2.0
+       http://www.apache.org/licenses/LICENSE-2.0
 
-A menos que exigido pela legislação aplicável ou acordado por escrito, o software fornecido de acordo com a Licença é distribuído "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIAS OU CONDIÇÕES DE QUALQUER TIPO, expressas ou implícitas.
-Consulte a Licença para ver informações sobre permissões e limitações para o idioma específico.
--->
+       A menos que exigido pela legislação aplicável ou acordado por escrito, o software fornecido de acordo com a Licença é distribuído "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIAS OU CONDIÇÕES DE QUALQUER TIPO, expressas ou implícitas.
+       Consulte a Licença para ver informações sobre permissões e limitações para o idioma específico.
+  -->
 
 #amp-3d-gltf
 
@@ -52,8 +52,7 @@ O componente `amp-3d-gltf` exibe modelos 3D que estão no formato gITF.
     height="240"
     alpha="true"
     antialiasing="true"
-    src="path/to/model.glb">
-</amp-3d-gltf>
+    src="path/to/model.glb"></amp-3d-gltf>
 ```
 
 ###Limitações
@@ -61,6 +60,7 @@ O componente `amp-3d-gltf` exibe modelos 3D que estão no formato gITF.
 Atualmente, só funciona com o glTF 2.0.
 
 Recursos não compatíveis:
+
 - Câmeras incorporadas
 - Animação
 
@@ -78,29 +78,29 @@ O `amp-3d-gltf` faz uma solicitação `fetch` a partir da origem `https://<rando
   <tr>
     <td width="40%"><strong>alpha [opcional]</strong></td>
     <td>Um atributo booleano que especifica se o espaço livre na tela é transparente. Por padrão, o espaço livre é preenchido com a cor preta.
-      O valor padrão é <code>false</code>.</td>
-  </tr>
-  <tr>
-    <td width="40%"><strong>antialiasing [opcional]</strong></td>
-    <td>Um atributo booleano que especifica se o anti-aliasing é ativado ou não. O valor padrão é <code>false</code>.</td>
-  </tr>
-  <tr>
-    <td width="40%"><strong>clearColor [opcional]</strong></td>
-    <td>Uma string que precisa conter uma cor CSS válida, que será usada para preencher o espaço livre na tela.</td>
-  </tr>
-  <tr>
-    <td width="40%"><strong>maxPixelRatio [opcional]</strong></td>
-    <td>Um valor numérico que especifica o limite superior para a opção de renderização pixelRatio. O padrão é <code>window.devicePixelRatio</code>.</td>
-  </tr>
-  <tr>
-    <td width="40%"><strong>autoRotate [opcional]</strong></td>
-    <td>Um atributo booleano que especifica se a câmera deve girar automaticamente ao redor do centro do modelo ou não. O valor padrão é <code>false</code>.</td>
-  </tr>
-  <tr>
-    <td width="40%"><strong>enableZoom [opcional]</strong></td>
-    <td>Um atributo booleano que especifica se o zoom deve ser ativado ou não. O valor padrão é <code>true</code>.</td>
-  </tr>
-</table>
+        O valor padrão é <code>false</code>.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>antialiasing [opcional]</strong></td>
+      <td>Um atributo booleano que especifica se o anti-aliasing é ativado ou não. O valor padrão é <code>false</code>.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>clearColor [opcional]</strong></td>
+      <td>Uma string que precisa conter uma cor CSS válida, que será usada para preencher o espaço livre na tela.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>maxPixelRatio [opcional]</strong></td>
+      <td>Um valor numérico que especifica o limite superior para a opção de renderização pixelRatio. O padrão é <code>window.devicePixelRatio</code>.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>autoRotate [opcional]</strong></td>
+      <td>Um atributo booleano que especifica se a câmera deve girar automaticamente ao redor do centro do modelo ou não. O valor padrão é <code>false</code>.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>enableZoom [opcional]</strong></td>
+      <td>Um atributo booleano que especifica se o zoom deve ser ativado ou não. O valor padrão é <code>true</code>.</td>
+    </tr>
+  </table>
 
 ##Ações
 
@@ -112,9 +112,9 @@ O `amp-3d-gltf` faz uma solicitação `fetch` a partir da origem `https://<rando
         <li>x/y/z: número 0..1, o padrão é o valor anterior da rotação do modelo.</li>
         <li>min/max: ângulo em radianos, o padrão é 0 / pi * 2, define o intervalo desejado.</li>
       </ul>
-    Por exemplo, <code>setModelRotation(x=0.5, xMin=0, xMax=3.14)</code> altera o componente <code>x</code> da rotação para <code>1.57</code>.</td>
-  </tr>
-</table>
+      Por exemplo, <code>setModelRotation(x=0.5, xMin=0, xMax=3.14)</code> altera o componente <code>x</code> da rotação para <code>1.57</code>.</td>
+    </tr>
+  </table>
 
 ##Validação
 

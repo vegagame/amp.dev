@@ -7,16 +7,16 @@ teaser:
 ---
 
 <!--
-Copyright 2018 The AMP HTML Authors. Tüm Hakları Saklıdır.
+       Copyright 2018 The AMP HTML Authors. Tüm Hakları Saklıdır.
 
-Apache Lisansı, Sürüm 2.0 ("Lisans") ile lisanslıdır; bu dosyayı Lisans koşulları dışında kullanamazsınız.
-Lisansın bir kopyasını şu adresten edinebilirsiniz:
+       Apache Lisansı, Sürüm 2.0 ("Lisans") ile lisanslıdır; bu dosyayı Lisans koşulları dışında kullanamazsınız.
+       Lisansın bir kopyasını şu adresten edinebilirsiniz:
 
-  http://www.apache.org/licenses/LICENSE-2.0
+       http://www.apache.org/licenses/LICENSE-2.0
 
-Geçerli yasa tarafından gerekli görülmediği veya yazılı olarak bir sözleşme yapılmadığı sürece, Lisanslı olarak dağıtılan yazılım açıkça veya zımni olarak HİÇBİR GARANTİ VEYA KOŞUL SUNULMADAN "OLDUĞU GİBİ" dağıtılır.
-Lisans kapsamında belirli bir dilde sağlanan izinleri ve uygulanan kısıtlamaları öğrenmek için söz konusu dille ilgili Lisans'a bakın.
--->
+       Geçerli yasa tarafından gerekli görülmediği veya yazılı olarak bir sözleşme yapılmadığı sürece, Lisanslı olarak dağıtılan yazılım açıkça veya zımni olarak HİÇBİR GARANTİ VEYA KOŞUL SUNULMADAN "OLDUĞU GİBİ" dağıtılır.
+       Lisans kapsamında belirli bir dilde sağlanan izinleri ve uygulanan kısıtlamaları öğrenmek için söz konusu dille ilgili Lisans'a bakın.
+  -->
 
 #amp-3d-gltf
 
@@ -52,8 +52,7 @@ GL İletim Biçimi (gITF) 3D modellerini görüntüler.
     height="240"
     alpha="true"
     antialiasing="true"
-    src="path/to/model.glb">
-</amp-3d-gltf>
+    src="path/to/model.glb"></amp-3d-gltf>
 ```
 
 ###Sınırlamalar
@@ -61,6 +60,7 @@ GL İletim Biçimi (gITF) 3D modellerini görüntüler.
 Şu anda yalnızca glTF 2.0 ile çalışmaktadır.
 
 Desteklenmeyen özellikler:
+
 - yerleşik kameralar
 - animasyon
 
@@ -78,29 +78,29 @@ Desteklenmeyen özellikler:
   <tr>
     <td width="40%"><strong>alpha [isteğe bağlı]</strong></td>
     <td>Zemindeki boş alanın şeffaf olup olmayacağını belirten bir Boole özelliği. Varsayılan olarak boş alan siyah renkle doldurulur.
-      Varsayılan değer <code>false</code> (yanlış) değeridir.</td>
-  </tr>
-  <tr>
-    <td width="40%"><strong>antialiasing [isteğe bağlı]</strong></td>
-    <td>Düzeltmenin açılıp açılmayacağını belirten bir Boole özelliği. Varsayılan değer <code>false</code> (yanlış) değeridir.</td>
-  </tr>
-  <tr>
-    <td width="40%"><strong>clearColor [isteğe bağlı]</strong></td>
-    <td>Zemindeki boş alanı doldurmak için kullanılacak geçerli CSS rengini içermesi gereken bir dize.</td>
-  </tr>
-  <tr>
-    <td width="40%"><strong>maxPixelRatio [isteğe bağlı]</strong></td>
-    <td>pixelRatio oluşturma seçeneğinin üst sınırını belirten bir sayısal değer. Varsayılan değer <code>window.devicePixelRatio</code>'dur.</td>
-  </tr>
-  <tr>
-    <td width="40%"><strong>autoRotate [isteğe bağlı]</strong></td>
-    <td>Kameranın modelin merkezi çevresinde otomatik olarak döndürülüp döndürülmeyeceğini belirten bir Boole özelliğidir. Varsayılan değer <code>false</code> (yanlış) değeridir.</td>
-  </tr>
-  <tr>
-    <td width="40%"><strong>enableZoom [isteğe bağlı]</strong></td>
-    <td>Yakınlaştırmanın açılıp açılmayacağını belirten bir Boole özelliğidir. Varsayılan değer, <code>true</code> (doğru) değeridir.</td>
-  </tr>
-</table>
+        Varsayılan değer <code>false</code> (yanlış) değeridir.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>antialiasing [isteğe bağlı]</strong></td>
+      <td>Düzeltmenin açılıp açılmayacağını belirten bir Boole özelliği. Varsayılan değer <code>false</code> (yanlış) değeridir.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>clearColor [isteğe bağlı]</strong></td>
+      <td>Zemindeki boş alanı doldurmak için kullanılacak geçerli CSS rengini içermesi gereken bir dize.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>maxPixelRatio [isteğe bağlı]</strong></td>
+      <td>pixelRatio oluşturma seçeneğinin üst sınırını belirten bir sayısal değer. Varsayılan değer <code>window.devicePixelRatio</code>'dur.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>autoRotate [isteğe bağlı]</strong></td>
+      <td>Kameranın modelin merkezi çevresinde otomatik olarak döndürülüp döndürülmeyeceğini belirten bir Boole özelliğidir. Varsayılan değer <code>false</code> (yanlış) değeridir.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>enableZoom [isteğe bağlı]</strong></td>
+      <td>Yakınlaştırmanın açılıp açılmayacağını belirten bir Boole özelliğidir. Varsayılan değer, <code>true</code> (doğru) değeridir.</td>
+    </tr>
+  </table>
 
 ##İşlemler
 
@@ -112,9 +112,9 @@ Desteklenmeyen özellikler:
         <li>x/y/z - sayı 0..1, varsayılan olarak model döndürmesinin önceki değerine ayarlanır.</li>
         <li>min/max - radyan cinsinden açı, varsayılan olarak 0 / pi * 2'dir; hedef aralığı tanımlar</li>
       </ul>
-    örneğin, <code>setModelRotation(x=0.5, xMin=0, xMax=3.14)</code>, döndürmenin <code>x</code> bileşenini <code>1.57</code> değerine ayarlar.</td>
-  </tr>
-</table>
+      örneğin, <code>setModelRotation(x=0.5, xMin=0, xMax=3.14)</code>, döndürmenin <code>x</code> bileşenini <code>1.57</code> değerine ayarlar.</td>
+    </tr>
+  </table>
 
 ##Doğrulama
 

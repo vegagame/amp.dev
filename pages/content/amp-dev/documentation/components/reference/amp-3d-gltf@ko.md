@@ -3,44 +3,44 @@ $category@: 미디어
 형식:
 - 웹사이트
 티저:
-
 ---
 
-##  텍스트: GL 전송 양식(gITF) 3D 모델을 표시합니다.
 
 <!--
-Copyright 2018 The AMP HTML Authors. All Rights Reserved.
+## 텍스트: GL 전송 양식(gITF) 3D 모델을 표시합니다.
 
-Apache 라이선스 버전 2.0(이하 '라이선스')에 따라 사용이 허가되었으므로,
-라이선스를 준수하지 않는 경우 이 파일을 사용할 수 없습니다.
-해당 라이선스의 사본은 다음에서 가져올 수 있습니다.
+       Copyright 2018 The AMP HTML Authors. All Rights Reserved.
 
-  http://www.apache.org/licenses/LICENSE-2.0
+       Apache 라이선스 버전 2.0(이하 '라이선스')에 따라 사용이 허가되었으므로,
+       라이선스를 준수하지 않는 경우 이 파일을 사용할 수 없습니다.
+       해당 라이선스의 사본은 다음에서 가져올 수 있습니다.
 
-적용 가능한 법률에서 요구하거나 서면으로 동의하지 않은 경우
-라이선스에 따라 배포된 소프트웨어는 어떠한 종류의 명시적
-또는 묵시적 보증 또는 조건 없이 '있는 그대로' 배포됩니다.
-라이선스의 허가 및 제한사항에 관한 구체적인 문구는 라이선스를
-참조하시기 바랍니다.
--->
+       http://www.apache.org/licenses/LICENSE-2.0
+
+       적용 가능한 법률에서 요구하거나 서면으로 동의하지 않은 경우
+       라이선스에 따라 배포된 소프트웨어는 어떠한 종류의 명시적
+       또는 묵시적 보증 또는 조건 없이 '있는 그대로' 배포됩니다.
+       라이선스의 허가 및 제한사항에 관한 구체적인 문구는 라이선스를
+       참조하시기 바랍니다.
+  -->
 
 #amp-3d-gltf
 
 GL 전송 양식(gITF) 3D 모델을 표시합니다.
 
 <table>
-<tr>
-<td width="40%"><strong>필수 스크립트</strong></td>
-<td><code>&lt;script async custom-element="amp-3d-gltf" src="https://cdn.ampproject.org/v0/amp-3d-gltf-0.1.js"&gt;&lt;/script&gt;</code></td>
-</tr>
-<tr>
-<td class="col-fourty"><strong><a href="https://www.ampproject.org/docs/guides/responsive/control_layout.html">지원되는 레이아웃</a></strong></td>
-<td>fill, fixed, fixed-height, flex-item, responsive</td>
-</tr>
-<tr>
-<td><strong>예</strong></td>
-<td>AMP By Example의 <a href="https://ampbyexample.com/components/amp-3d-gltf/">amp-3d-gltf 예</a>를 참조하세요.</td>
-</tr>
+  <tr>
+    <td width="40%"><strong>필수 스크립트</strong></td>
+    <td><code>&lt;script async custom-element="amp-3d-gltf" src="https://cdn.ampproject.org/v0/amp-3d-gltf-0.1.js"&gt;&lt;/script&gt;</code></td>
+  </tr>
+  <tr>
+    <td class="col-fourty"><strong><a href="https://www.ampproject.org/docs/guides/responsive/control_layout.html">지원되는 레이아웃</a></strong></td>
+    <td>fill, fixed, fixed-height, flex-item, responsive</td>
+  </tr>
+  <tr>
+    <td><strong>예</strong></td>
+    <td>AMP By Example의 <a href="https://ampbyexample.com/components/amp-3d-gltf/">amp-3d-gltf 예</a>를 참조하세요.</td>
+  </tr>
 </table>
 
 ##사용
@@ -53,13 +53,12 @@ GL 전송 양식(gITF) 3D 모델을 표시합니다.
 
 ```html
 <amp-3d-gltf
-    layout="responsive"
-    width="320"
-    height="240"
-    alpha="true"
-    antialiasing="true"
-    src="path/to/model.glb">
-</amp-3d-gltf>
+  layout="responsive"
+  width="320"
+  height="240"
+  alpha="true"
+  antialiasing="true"
+  src="path/to/model.glb"></amp-3d-gltf>
 ```
 
 ###제한사항
@@ -67,6 +66,7 @@ GL 전송 양식(gITF) 3D 모델을 표시합니다.
 현재 glTF 2.0에서만 작동합니다.
 
 지원되지 않는 기능:
+
 - 내장 카메라
 - 애니메이션
 
@@ -84,29 +84,29 @@ GL 전송 양식(gITF) 3D 모델을 표시합니다.
   <tr>
     <td width="40%"><strong>alpha [선택사항]</strong></td>
     <td>캔버스의 빈 공간이 투명한지 여부를 지정하는 부울 속성입니다. 기본적으로 빈 공간은 검정색으로 채워집니다.
-      기본값은 <code>false</code>입니다.</td>
-  </tr>
-  <tr>
-    <td width="40%"><strong>antialiasing [선택사항]</strong></td>
-    <td>안티 앨리어싱을 사용 설정할지 여부를 지정하는 부울 속성입니다. 기본값은 <code>false</code>입니다.</td>
-  </tr>
-  <tr>
-    <td width="40%"><strong>clearColor [선택사항]</strong></td>
-    <td>유효한 CSS 색상을 포함해야 하는 문자열로, 캔버스의 빈 공간을 채우는 데 사용됩니다.</td>
-  </tr>
-  <tr>
-    <td width="40%"><strong>maxPixelRatio [선택사항]</strong></td>
-    <td>pixelRatio 렌더링 옵션의 상한을 지정하는 숫자 값입니다. 기본값은 <code>window.devicePixelRatio</code>입니다.</td>
-  </tr>
-  <tr>
-    <td width="40%"><strong>autoRotate [선택사항]</strong></td>
-    <td>모델의 중심 주위로 카메라를 자동으로 회전할지 여부를 지정하는 부울 속성입니다. 기본값은 <code>false</code>입니다.</td>
-  </tr>
-  <tr>
-    <td width="40%"><strong>enableZoom [선택사항]</strong></td>
-    <td>확대/축소를 사용 설정할지 여부를 지정하는 부울 속성입니다. 기본값은 <code>true</code>입니다.</td>
-  </tr>
-</table>
+        기본값은 <code>false</code>입니다.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>antialiasing [선택사항]</strong></td>
+      <td>안티 앨리어싱을 사용 설정할지 여부를 지정하는 부울 속성입니다. 기본값은 <code>false</code>입니다.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>clearColor [선택사항]</strong></td>
+      <td>유효한 CSS 색상을 포함해야 하는 문자열로, 캔버스의 빈 공간을 채우는 데 사용됩니다.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>maxPixelRatio [선택사항]</strong></td>
+      <td>pixelRatio 렌더링 옵션의 상한을 지정하는 숫자 값입니다. 기본값은 <code>window.devicePixelRatio</code>입니다.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>autoRotate [선택사항]</strong></td>
+      <td>모델의 중심 주위로 카메라를 자동으로 회전할지 여부를 지정하는 부울 속성입니다. 기본값은 <code>false</code>입니다.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>enableZoom [선택사항]</strong></td>
+      <td>확대/축소를 사용 설정할지 여부를 지정하는 부울 속성입니다. 기본값은 <code>true</code>입니다.</td>
+    </tr>
+  </table>
 
 ##작업
 
@@ -118,9 +118,9 @@ GL 전송 양식(gITF) 3D 모델을 표시합니다.
         <li>x/y/z: 숫자 0..1로, 기본값은 모델 회전의 이전 값입니다.</li>
         <li>min/max: 각도(라디안)로, 기본값은 0 / pi * 2이며, 대상 범위를 정의합니다.</li>
       </ul>
-    예를 들어 <code>setModelRotation(x=0.5, xMin=0, xMax=3.14)</code>는 회전의 <code>x</code> 구성요소를 <code>1.57</code>로 변경합니다.</td>
-  </tr>
-</table>
+      예를 들어 <code>setModelRotation(x=0.5, xMin=0, xMax=3.14)</code> 는 회전의 <code>x</code> 구성요소를 <code>1.57</code>로 변경합니다.</td>
+    </tr>
+  </table>
 
 ##유효성 검사
 

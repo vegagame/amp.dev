@@ -1,41 +1,41 @@
 ---
 $category@: media
 formats:
-  - websites
+- websites
 teaser:
   text: Afficher les modèles 3D au format glTF (GL Transmission Format).
 ---
 
 <!--
-Copyright 2018 The AMP HTML Authors. Tous droits réservés.
+       Copyright 2018 The AMP HTML Authors. Tous droits réservés.
 
-Autorisation sous licence Apache, version 2.0 (la "Licence") ;
-n'utilisez ce fichier que dans le cadre de la Licence.
-Vous pouvez obtenir une copie de la Licence à l'adresse suivante :
+       Autorisation sous licence Apache, version 2.0 (la "Licence") ;
+       n'utilisez ce fichier que dans le cadre de la Licence.
+       Vous pouvez obtenir une copie de la Licence à l'adresse suivante :
 
-  http://www.apache.org/licenses/LICENSE-2.0
+       http://www.apache.org/licenses/LICENSE-2.0
 
-Sauf dispositions légales applicables ou accord écrit préalable, le logiciel distribué dans le cadre de la Licence est fourni "EN L'ÉTAT", À L'EXCLUSION DE TOUTE GARANTIE OU CONDITION DE QUELQUE NATURE QUE CE SOIT, expresse ou implicite.
-Consultez la Licence correspondant à la langue spécifique qui régit les autorisations et limitations applicables.
--->
+       Sauf dispositions légales applicables ou accord écrit préalable, le logiciel distribué dans le cadre de la Licence est fourni "EN L'ÉTAT", À L'EXCLUSION DE TOUTE GARANTIE OU CONDITION DE QUELQUE NATURE QUE CE SOIT, expresse ou implicite.
+       Consultez la Licence correspondant à la langue spécifique qui régit les autorisations et limitations applicables.
+  -->
 
 #amp-3d-gltf
 
 Ce composant affiche les modèles 3D au format glTF (GL Transmission Format).
 
 <table>
-<tr>
-<td width="40%"><strong>Script requis</strong></td>
-<td><code>&lt;script async custom-element="amp-3d-gltf" src="https://cdn.ampproject.org/v0/amp-3d-gltf-0.1.js"&gt;&lt;/script&gt;</code></td>
-</tr>
-<tr>
-<td class="col-fourty"><strong><a href="https://www.ampproject.org/docs/guides/responsive/control_layout.html">Mises en page compatibles</a></strong></td>
-<td>fill, fixed, fixed-height, flex-item, responsive</td>
-</tr>
-<tr>
-<td><strong>Exemples</strong></td>
-<td>Consultez l'<a href="https://ampbyexample.com/components/amp-3d-gltf/">exemple de composant amp-3d-gltf</a> sur AMP By Example.</td>
-</tr>
+  <tr>
+    <td width="40%"><strong>Script requis</strong></td>
+    <td><code>&lt;script async custom-element="amp-3d-gltf" src="https://cdn.ampproject.org/v0/amp-3d-gltf-0.1.js"&gt;&lt;/script&gt;</code></td>
+  </tr>
+  <tr>
+    <td class="col-fourty"><strong><a href="https://www.ampproject.org/docs/guides/responsive/control_layout.html">Mises en page compatibles</a></strong></td>
+    <td>fill, fixed, fixed-height, flex-item, responsive</td>
+  </tr>
+  <tr>
+    <td><strong>Exemples</strong></td>
+    <td>Consultez l'<a href="https://ampbyexample.com/components/amp-3d-gltf/">exemple de composant amp-3d-gltf</a> sur AMP By Example.</td>
+  </tr>
 </table>
 
 ##Utilisation
@@ -53,8 +53,7 @@ Le composant `amp-3d-gltf` affiche les modèles 3D qui sont au format glTF.
     height="240"
     alpha="true"
     antialiasing="true"
-    src="path/to/model.glb">
-</amp-3d-gltf>
+    src="path/to/model.glb"></amp-3d-gltf>
 ```
 
 ###Limitations
@@ -62,6 +61,7 @@ Le composant `amp-3d-gltf` affiche les modèles 3D qui sont au format glTF.
 Actuellement, ce composant fonctionne uniquement avec le format glTF 2.0.
 
 Fonctionnalités non compatibles :
+
 - Caméras intégrées
 - Animation
 
@@ -72,50 +72,50 @@ Fonctionnalités non compatibles :
 ##Attributs
 
 <table>
-<tr>
-<td width="40%"><strong>src [obligatoire]</strong></td>
-<td>Attribut obligatoire qui indique l'URL du fichier gltf.</td>
-</tr>
-<tr>
-<td width="40%"><strong>alpha [facultatif]</strong></td>
-<td>Attribut booléen qui indique si l'espace disponible sur le canevas est transparent ou opaque. Par défaut, l'espace disponible est noir.
-La valeur par défaut est <code>false</code>.</td>
-</tr>
-<tr>
-<td width="40%"><strong>antialiasing [facultatif]</strong></td>
-<td>Attribut booléen qui indique si l'anticrénelage doit être activé ou désactivé. La valeur par défaut est <code>false</code>.</td>
-</tr>
-<tr>
-<td width="40%"><strong>clearColor [facultatif]</strong></td>
-<td>Chaîne qui doit contenir une couleur CSS valide. Cette couleur sera utilisée pour remplir l'espace disponible sur le canevas.</td>
-</tr>
-<tr>
-<td width="40%"><strong>maxPixelRatio [facultatif]</strong></td>
-<td>Valeur numérique qui indique la limite supérieure de l'option de rendu pixelRatio. La valeur par défaut est <code>window.devicePixelRatio</code>.</td>
-</tr>
-<tr>
-<td width="40%"><strong>autoRotate [facultatif]</strong></td>
-<td>Attribut booléen qui indique si la caméra doit pivoter automatiquement ou non autour du centre du modèle. La valeur par défaut est <code>false</code>.</td>
-</tr>
-<tr>
-<td width="40%"><strong>enableZoom [facultatif]</strong></td>
-<td>Attribut booléen qui indique si le zoom doit être activé ou désactivé. La valeur par défaut est <code>true</code>.</td>
-</tr>
-</table>
+  <tr>
+    <td width="40%"><strong>src [obligatoire]</strong></td>
+    <td>Attribut obligatoire qui indique l'URL du fichier gltf.</td>
+  </tr>
+  <tr>
+    <td width="40%"><strong>alpha [facultatif]</strong></td>
+    <td>Attribut booléen qui indique si l'espace disponible sur le canevas est transparent ou opaque. Par défaut, l'espace disponible est noir.
+        La valeur par défaut est <code>false</code>.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>antialiasing [facultatif]</strong></td>
+      <td>Attribut booléen qui indique si l'anticrénelage doit être activé ou désactivé. La valeur par défaut est <code>false</code>.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>clearColor [facultatif]</strong></td>
+      <td>Chaîne qui doit contenir une couleur CSS valide. Cette couleur sera utilisée pour remplir l'espace disponible sur le canevas.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>maxPixelRatio [facultatif]</strong></td>
+      <td>Valeur numérique qui indique la limite supérieure de l'option de rendu pixelRatio. La valeur par défaut est <code>window.devicePixelRatio</code>.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>autoRotate [facultatif]</strong></td>
+      <td>Attribut booléen qui indique si la caméra doit pivoter automatiquement ou non autour du centre du modèle. La valeur par défaut est <code>false</code>.</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>enableZoom [facultatif]</strong></td>
+      <td>Attribut booléen qui indique si le zoom doit être activé ou désactivé. La valeur par défaut est <code>true</code>.</td>
+    </tr>
+  </table>
 
 ##Actions
 
 <table>
-<tr>
-<td width="40%"><strong>setModelRotation(x, y, z, xMin, xMax, yMin, yMax, zMin, zMax)</strong></td>
-<td>Définit la rotation du modèle ; l'ordre de rotation est ZYX
-<ul>
-<li>x/y/z - nombre 0..1, défini par défaut sur la valeur précédente de rotation du modèle.</li>
-<li>min/max - angle en radians, défini par défaut sur 0 / pi * 2 ; définit la plage cible.</li>
-</ul>
-Par exemple, <code>setModelRotation(x=0.5, xMin=0, xMax=3.14)<c/ode> change le composant de rotation <code>x</code> en <code>1.57</code>.</td>
-</tr>
-</table>
+  <tr>
+    <td width="40%"><strong>setModelRotation(x, y, z, xMin, xMax, yMin, yMax, zMin, zMax)</strong></td>
+    <td>Définit la rotation du modèle ; l'ordre de rotation est ZYX
+      <ul>
+        <li>x/y/z - nombre 0..1, défini par défaut sur la valeur précédente de rotation du modèle.</li>
+        <li>min/max - angle en radians, défini par défaut sur 0 / pi * 2 ; définit la plage cible.</li>
+      </ul>
+      Par exemple, <code>setModelRotation(x=0.5, xMin=0, xMax=3.14)</code> change le composant de rotation <code>x</code> en <code>1.57</code>.</td>
+    </tr>
+  </table>
 
 ##Validation
 
