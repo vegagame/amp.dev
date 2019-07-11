@@ -6,15 +6,23 @@ teaser:
   text: 分享跟踪功能正在开发中。
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
-<!--- 版权所有 2016 The AMP HTML Authors。保留所有权利。
+<!---
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       根据 Apache 许可 2.0 版（以下简称“许可”）授权使用；您只有在遵循此许可的情况下才能使用该文件。您可以通过以下网址获得该许可的副本：
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-       除非适用法律要求或已达成书面协议，否则按照该许可分发的软件均“按原样”分发，不提供任何类型的担保或条件（无论明示或暗示）。有关该许可下特定的语言管辖权限和限制，请参阅该许可。
-  -->
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 
 #amp-social-share
 
@@ -56,16 +64,16 @@ teaser:
 
 **示例：传递参数**
 
-当您需要将参数传递给分享端点时，可以指定要附加到分享端点的 `data-param-<attribute>`。
-
+当您需要将参数传递给分享端点时，可以指定要附加到分享端点的 `data-param-
+<attribute>`。
 ```html
 <amp-social-share type="linkedin" width="60" height="44"
-          data-param-text="Hello world"
-          data-param-url="https://example.com/">
+  data-param-text="Hello world"
+  data-param-url="https://example.com/">
 </amp-social-share>
 ```
 
-      Linkedin 是预配置的提供商之一，因此您无需提供 `data-share-endpoint` 属性。
+LinkedIn 是预配置的提供商之一，因此您无需提供 `data-share-endpoint` 属性。
 
 ##属性
 

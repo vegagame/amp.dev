@@ -7,7 +7,10 @@ teaser:
   text: Represents a control that presents a menu of options and lets the user choose from it.
 ---
 
-<!--Copyright 2016 The AMP HTML Authors. All Rights Reserved.
+
+<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+<!---
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
        Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
