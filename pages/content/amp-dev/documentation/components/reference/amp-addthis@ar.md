@@ -6,7 +6,6 @@ teaser:
   text: Displays AddThis’ customizable social share buttons.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
 حقوق الطبع والنشر 2018 لصالح "مؤلفو رمز HTML لصفحات AMP". جميع الحقوق محفوظة.
 
@@ -24,14 +23,14 @@ teaser:
 يعمل المكّوِن على تضمين أدوات [AddThis](https://www.addthis.com) للمواقع الإلكترونية.
 
 <table>
-<tr>
-<td width="40%"><strong>النص البرمجي المطلوب</strong></td>
-<td><code>&lt;script async custom-element="amp-addthis" src="https://cdn.ampproject.org/v0/amp-addthis-0.1.js"&gt;&lt;/script&gt;</code></td>
-</tr>
-<tr>
-<td class="col-fourty"><strong><a href="https://www.ampproject.org/docs/guides/responsive/control_layout.html">التنسيقات المعتمدة</a></strong></td>
-<td>fill وfixed وfixed-height وflex-item وnodisplay وresponsive</td>
-</tr>
+  <tr>
+    <td width="40%"><strong>النص البرمجي المطلوب</strong></td>
+    <td><code>&lt;script async custom-element="amp-addthis" src="https://cdn.ampproject.org/v0/amp-addthis-0.1.js"&gt;&lt;/script&gt;</code></td>
+  </tr>
+  <tr>
+    <td class="col-fourty"><strong><a href="https://www.ampproject.org/docs/guides/responsive/control_layout.html">التنسيقات المعتمدة</a></strong></td>
+    <td>fill وfixed وfixed-height وflex-item وnodisplay وresponsive</td>
+  </tr>
 </table>
 
 
