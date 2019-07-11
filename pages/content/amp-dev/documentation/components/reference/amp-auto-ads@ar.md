@@ -10,18 +10,22 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-حقوق الطبع والنشر 2017 لصالح "مؤلفو رمز HTML لصفحات AMP". جميع الحقوق محفوظة.
+Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 
-تم الترخيص بموجب ترخيص Apache، الإصدار 2.0 (المشار إليه لاحقًا باسم "الترخيص")؛ ولا يحق لك استخدام هذا الملف إلا بما يتوافق مع الترخيص.
-ويمكنك الحصول على نسخة من الترخيص على الصفحة
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-ما لم يكن مطلوبًا بموجب القانون الساري أو تمت الموافقة عليه كتابةً، يتم توزيع البرنامج الذي يتم توزيعه بموجب الترخيص "كما هو"، وبدون أية ضمانات أو شروط من أي نوع، سواء كانت صريحة أو ضمنية.
-راجِع الترخيص للاطّلاع على اللغة المحددة التي تحكم الأذونات والقيود بموجب الترخيص.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 
-#amp-auto-ads
+# amp-auto-ads
 
 يعمل هذا المكّوِن ديناميكيًا على إدخال الإعلانات في صفحة AMP باستخدام ملف تهيئة يتم عرضه عن بُعد.
 
@@ -53,7 +57,7 @@ teaser:
 
 [جدول المحتويات]
 
-##السلوك
+## السلوك
 
 يحاول المكوِّن `amp-auto-ads` إدراج إعلانات إضافية مع الالتزام بمجموعة من القيود التي تحددها شبكة الإعلانات، وذلك مع أخذ عدد المواضع الصالحة (المتوفرة في التهيئة) بالحسبان. تعمل هذه القيود على ما يلي:
 
@@ -72,12 +76,12 @@ teaser:
 </amp-auto-ads>
 ```
 
-##شبكات الإعلانات المتوافقة
+## شبكات الإعلانات المتوافقة
 
 * [AdSense](../../ads/google/adsense.md)
 * [DoubleClick (تجريبية)](../../ads/google/doubleclick.md)
 
-##السمات
+## السمات
 
 <table>
   <tr>
@@ -94,11 +98,11 @@ teaser:
   </tr>
 </table>
 
-##مواصفات التهيئة
+## مواصفات التهيئة
 
 تحدد التهيئة المكان الذي يمكن للمكّوِن `<amp-auto-ads>` وضع الإعلانات فيه على الصفحة. ويتم جلب التهيئة من شبكة إعلانات خارجية على عنوان URL المحدد في `ad-network-config.js`. يجب أن تكون التهيئة كائن JSON متسلسل يطابق تعريف [`ConfigObj`](#configobj) الموضح أدناه.
 
-###مثال على التهيئة
+### مثال على التهيئة
 
 يحدد المثال التالي وجوب وضع الإعلان مباشرة بعد جميع عناصر `<P class='paragraph'>` الواقعة في الخاصية `<DIV id='domId'>` الثالثة من الصفحة. يجب أن يكون الإعلان الذي يتم وضعه في أي من هذه المواضع من النوع BANNER وأن يكون له هامش علوي قدره 4 بكسل وهامش سفلي قدره 10 بكسل.
 
@@ -125,9 +129,9 @@ teaser:
 }
 ```
 
-###تعريف الكائنات
+### تعريف الكائنات
 
-####ConfigObj
+#### ConfigObj
 
 الحقول المراد تحديدها في كائن التهيئة:
 
@@ -162,7 +166,7 @@ teaser:
   </tr>
 </table>
 
-####PlacementObj
+#### PlacementObj
 
 الحقول المراد تحديدها في كائن التهيئة `placements`:
 
@@ -207,7 +211,7 @@ teaser:
   </tr>
 </table>
 
-####AnchorObj
+#### AnchorObj
 
 الحقول المراد تحديدها في كائن التهيئة `anchor`:
 
@@ -248,7 +252,7 @@ teaser:
 </table>
 
 
-####PlacementStyleObj
+#### PlacementStyleObj
 
 الحقول المراد تحديدها في كائن التهيئة `style`:
 
@@ -273,7 +277,7 @@ teaser:
 </table>
 
 
-####RelativePositionEnum
+#### RelativePositionEnum
 
 قيم ENUM للحقل `pos` في كائن التهيئة `placements`:
 
@@ -306,7 +310,7 @@ teaser:
 </table>
 
 
-####PlacementTypeEnum
+#### PlacementTypeEnum
 
 قيم ENUM للحقل `type` في كائن التهيئة `placements`:
 
@@ -324,7 +328,7 @@ teaser:
 </table>
 
 
-####AdConstraintsObj
+#### AdConstraintsObj
 
 الحقول المراد تحديدها في كائن التهيئة `adConstraints`:
 
@@ -364,7 +368,7 @@ teaser:
   </tr>
 </table>
 
-####SubsequentMinSpacingObj
+#### SubsequentMinSpacingObj
 
 الحقول المراد تحديدها في كائن التهيئة `subsequentMinSpacing`. يمكن استخدام إدخالات `subsequentMinSpacing` لتغيير المساحات المطلوبة بين الإعلانات الإضافية بناء على عدد الإعلانات الحالي في الصفحة. فكِّر في السيناريو التالي كمثال:
 
@@ -411,6 +415,6 @@ teaser:
   </tr>
 </table>
 
-##التحقق
+## التحقق
 
 اطِّلع على [قواعد amp-auto-ads](https://github.com/ampproject/amphtml/blob/master/extensions/amp-auto-ads/validator-amp-auto-ads.protoascii) في مواصفات مدقق AMP.

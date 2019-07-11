@@ -9,22 +9,22 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
+Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS-IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 
-#amp-animation
+# amp-animation
 
 Menentukan dan menjalankan animasi.
 
@@ -44,15 +44,15 @@ Menentukan dan menjalankan animasi.
 </table>
 
 
-##Ringkasan
+## Ringkasan
 
 Animasi AMP mengandalkan [Web Animations API](https://www.w3.org/TR/web-animations/) untuk menentukan dan menjalankan animasi di dokumen AMP.
 
-##Format
+## Format
 
 Elemen `amp-animation` menentukan animasi seperti struktur JSON.
 
-###Spesifikasi animasi level teratas
+### Spesifikasi animasi level teratas
 
 Objek level teratas menentukan keseluruhan proses animasi yang terdiri dari sembarang jumlah komponen animasi yang ditetapkan sebagai array `animations` :
 ```html
@@ -75,11 +75,11 @@ Objek level teratas menentukan keseluruhan proses animasi yang terdiri dari semb
 </amp-animation>
 ```
 
-###Penempatan dalam DOM
+### Penempatan dalam DOM
 
 `<amp-animation>` hanya boleh ditempatkan sebagai turunan langsung dari elemen `<body>` jika `trigger="visibility"`. Jika `trigger` tidak ditetapkan dan pemutaran animasi dikontrol secara terprogram melalui tindakannya, elemen ini dapat ditempatkan di mana saja dalam DOM.
 
-###Komponen animasi
+### Komponen animasi
 
 Setiap komponen animasi adalah [efek keyframe](https://www.w3.org/TR/web-animations/#dom-keyframeeffect-keyframeeffect) dan terdiri dari:
 
@@ -100,23 +100,23 @@ Setiap komponen animasi adalah [efek keyframe](https://www.w3.org/TR/web-animati
 }
 ```
 
-###Kondisi
+### Kondisi
 
 Kondisi dapat menentukan apakah komponen animasi ini disertakan dalam animasi final atau tidak.
 
-####Kueri media
+#### Kueri media
 
 Kueri media dapat ditentukan menggunakan properti `media`. Properti ini dapat berisi ekspresi apa pun yang diizinkan untuk [Window.matchMedia](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia) API dan sesuai dengan aturan CSS `@media`.
 
 Jika ada nilai yang ditentukan untuk sebuah komponen animasi, komponen animasi tersebut hanya akan disertakan jika kueri media cocok dengan lingkungan saat ini.
 
-####Kondisi dukungan
+#### Kondisi dukungan
 
 Kondisi dukungan dapat ditentukan menggunakan properti `supports`. Properti ini dapat berisi ekspresi apa pun yang diizinkan untuk [CSS.supports](https://developer.mozilla.org/en-US/docs/Web/API/CSS/supports) API dan sesuai dengan aturan CSS `@supports`.
 
 Jika ada nilai yang ditentukan untuk sebuah komponen animasi, komponen animasi tersebut hanya akan disertakan jika kondisi dukungan cocok dengan lingkungan saat ini.
 
-###Pernyataan `switch` animasi
+### Pernyataan `switch` animasi
 
 Dalam beberapa kasus, Anda dapat menggabungkan beberapa [animasi bersyarat](#conditions) dengan sebuah default opsional ke dalam satu animasi. Hal ini dapat dilakukan menggunakan pernyataan animasi `switch` dalam format:
 
@@ -163,7 +163,7 @@ Misalnya, animasi ini menjalankan animasi jalur gerak jika didukung dan melakuka
 }
 ```
 
-###Variabel
+### Variabel
 
 Komponen animasi dapat mendeklarasikan variabel CSS yang akan digunakan untuk nilai pengaturan waktu dan keyframe melalui ekspresi `var()`. Ekspresi `var()` dievaluasi menggunakan konteks target saat ini. Variabel CSS yang ditentukan dalam komponen animasi disebarkan ke animasi bertingkat, diterapkan ke target animasi, sehingga mengganti variabel CSS yang digunakan dalam animasi final.
 
@@ -196,7 +196,7 @@ Dalam contoh ini:
 
 Untuk informasi lebih lanjut tentang `var()`, lihat [bagian `var()` dan `calc()`](#var-and-calc-expressions).
 
-###Properti pengaturan waktu
+### Properti pengaturan waktu
 
 Komponen animasi dan animasi level teratas dapat berisi properti pengaturan waktu. Properti ini dijelaskan secara terperinci dalam spesifikasi Animasi Web
 [AnimationEffectTimingProperties](https://www.w3.org/TR/web-animations/#dictdef-animationeffecttimingproperties). Kumpulan properti yang diizinkan di sini meliputi:
@@ -275,7 +275,7 @@ Contoh properti pengaturan waktu di JSON:
 
 Komponen animasi mewarisi properti pengaturan waktu yang ditentukan untuk animasi level teratas.
 
-###Subtarget
+### Subtarget
 
 Di mana pun `selector` dapat ditentukan, `subtargets: []` juga dapat ditentukan. Subtarget dapat menggantikan properti pengaturan waktu atau variabel yang ditentukan dalam animasi untuk subtarget tertentu yang ditunjukkan melalui indeks atau selektor CSS.
 
@@ -302,7 +302,7 @@ Dalam contoh ini, secara default semua target yang cocok dengan ".target" memili
 
 Perlu diperhatikan bahwa beberapa subtarget dapat mencocokkan satu elemen target.
 
-###Keyframe
+### Keyframe
 
 Keyframe dapat ditentukan dengan berbagai cara yang dijelaskan di [bagian keyframe](https://www.w3.org/TR/web-animations/#processing-a-keyframes-argument) pada spesifikasi Animasi Web atau sebagai string yang merujuk ke nama `@keyframes` di CSS.
 
@@ -370,7 +370,7 @@ Untuk format keyframe lainnya, lihat [spesifikasi Animasi Web](https://www.w3.or
 
 Nilai properti menerima semua nilai CSS yang valid, termasuk `calc()`, `var()`, dan ekspresi CSS lainnya.
 
-####Keyframe dari CSS
+#### Keyframe dari CSS
 
 Cara lain untuk menentukan keyframe ada dalam stylesheet dokumen (tag `<style>`) sebagai aturan CSS `@keyframes`. Misalnya:
 ```html
@@ -401,7 +401,7 @@ Sebagian besar `@keyframes` CSS setara dengan penempatan definisi keyframe secar
 - Platform yang tidak mendukung `calc()` dan `var()` tidak akan dapat memanfaatkan polyfill `amp-animation` jika keyframe ditentukan dalam CSS. Oleh karena itu, direkomendasikan untuk selalu menyertakan nilai fallback dalam CSS.
 - Ekstensi CSS seperti [`width()`, `height()`, `num()`, `rand()`, `index()`, dan `length()`](#css-extensions) tidak dapat digunakan dalam CSS.
 
-####Properti yang diizinkan untuk keyframe
+#### Properti yang diizinkan untuk keyframe
 
 Tidak semua properti CSS dapat digunakan dalam keyframe. Hanya properti CSS yang dapat dioptimalkan dan dianimasikan dengan cepat oleh browser modern yang diizinkan. Daftar ini akan bertambah dengan semakin banyaknya properti yang dikonfirmasi untuk memberikan performa yang baik. Saat ini daftar ini berisi:
 - [`opacity`](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)
@@ -411,7 +411,7 @@ Tidak semua properti CSS dapat digunakan dalam keyframe. Hanya properti CSS yang
 
 Perlu diperhatikan bahwa penggunaan properti CSS yang diberi prefiks oleh vendor tidak diperlukan dan tidak diizinkan.
 
-###Bentuk singkat konfigurasi animasi
+### Bentuk singkat konfigurasi animasi
 
 Jika animasi hanya melibatkan satu elemen, dan satu efek keyframe sudah memadai, konfigurasi dapat disederhanakan menjadi satu komponen animasi ini saja. Misalnya:
 ```html
@@ -447,7 +447,7 @@ Jika animasi terdiri dari daftar komponen, tetapi tidak memiliki animasi level t
   </amp-animation>
 ```
 
-###Komposisi animasi
+### Komposisi animasi
 
 Animasi dapat merujuk animasi lain sehingga menggabungkan beberapa deklarasi `amp-animation` menjadi satu animasi final. Merujuk animasi dari animasi lain secara umum sama dengan nesting (penyarangan). Alasan mengapa seseorang ingin membagi animasi menjadi beberapa elemen berbeda adalah agar dapat menggunakan kembali animasi yang sama dari beberapa tempat, atau agar setiap deklarasi animasi menjadi lebih kecil dan lebih mudah dikelola.
 
@@ -501,7 +501,7 @@ Di sini, entah ".target-class" cocok dengan satu elemen, beberapa elemen, atau t
 
 Variabel dan properti pengaturan waktu yang ditentukan dalam animasi caller juga diteruskan ke animasi yang disertakan.
 
-###Ekspresi `var()` dan `calc()`
+### Ekspresi `var()` dan `calc()`
 
 `amp-animation` memungkinkan penggunaan ekspresi `var()` dan `calc()` untuk nilai pengaturan waktu dan keyframe.
 
@@ -539,11 +539,11 @@ Baik `var()` maupun `calc()` di-polyfill pada platform yang tidak mendukungnya s
 
 Komponen animasi dapat menentukan variabelnya sendiri sebagai kolom `--var-name`. Variabel ini disebarkan ke dalam animasi bersarang dan menggantikan variabel elemen target yang ditentukan melalui stylesheet (tag `<style>`). Ekspresi `var()` mula-mula mencoba mengetahui nilai variabel yang ditentukan dalam animasi dan kemudian mengkueri gaya target.
 
-###Ekstensi CSS
+### Ekstensi CSS
 
 `amp-animation` menyediakan beberapa ekstensi CSS untuk keperluan animasi umum: `rand()`, `num()`, `width()`, dan `height()`. Fungsi ini dapat digunakan di mana pun nilai CSS dapat digunakan dalam `amp-animation`, termasuk nilai pengaturan waktu dan keyframe.
 
-####Ekstensi `index()` CSS
+#### Ekstensi `index()` CSS
 
 Fungsi `index()` menampilkan indeks elemen target saat ini dalam efek animasi. Hal ini paling relevan jika beberapa target dianimasikan dengan efek yang sama menggunakan properti `selector`. Target pertama yang cocok dengan selektor akan memiliki indeks `0`, target kedua memiliki indeks `1`, dan seterusnya.
 
@@ -555,7 +555,7 @@ Di antara hal-hal lainnya, properti ini dapat dikombinasikan dengan ekspresi `ca
   }
 ```
 
-####Ekstensi `length()` CSS
+#### Ekstensi `length()` CSS
 
 Fungsi `length()` menampilkan jumlah elemen target dalam efek animasi. Hal ini paling relevan jika dikombinasikan dengan `index()`:
 
@@ -566,7 +566,7 @@ Fungsi `length()` menampilkan jumlah elemen target dalam efek animasi. Hal ini p
   }
 ```
 
-####Ekstensi `rand()` CSS
+#### Ekstensi `rand()` CSS
 
 Fungsi `rand()` menampilkan nilai CSS acak. Bentuknya ada dua.
 
@@ -584,7 +584,7 @@ Bentuk kedua memiliki dua argumen dan menampilkan nilai acak antara kedua argume
   }
 ```
 
-####Ekstensi `width()` dan `height()` CSS
+#### Ekstensi `width()` dan `height()` CSS
 
 Ekstensi `width()` dan `height()` menampilkan lebar/tinggi elemen animasi atau elemen yang ditentukan oleh selektor. Nilai ditampilkan dalam satuan piksel, misalnya `100px`.
 
@@ -603,7 +603,7 @@ Fungsi ini dapat dikombinasikan dengan `calc()`, `var()` dan ekspresi CSS lainny
   }
 ```
 
-####Ekspresi `num()` CSS
+#### Ekspresi `num()` CSS
 
 Fungsi `num()` menampilkan representasi angka dari sebuah nilai CSS. Misalnya:
 
@@ -618,7 +618,7 @@ Sebagai contoh, ekspresi berikut menghitung penundaan dalam detik yang sebanding
   }
 ```
 
-###Animasi SVG
+### Animasi SVG
 
 SVG sangat canggih dan kami sangat merekomendasikannya untuk animasi!
 
@@ -628,11 +628,11 @@ Animasi SVG didukung melalui properti CSS yang sama seperti yang dijelaskan dala
 * Meskipun `transform` CSS di-polyfill untuk IE/Edge, sayangnya `transform-origin` tidak dapat di-polyfill. Jadi, jika kompatibilitas dengan IE/Edge menjadi pertimbangan penting, sebaiknya gunakan hanya `transform-origin` default.
 * Saat ini, sebagian besar browser mengalami masalah dalam menafsirkan `transform-origin` CSS dengan benar. Lihat masalah untuk [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=740300), [Safari](https://bugs.webkit.org/show_bug.cgi?id=174285) dan [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=1379340). Sebagian besar kebingungan ini akan terselesaikan setelah [`transform-box` CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-box) diimplementasikan. Meskipun `transform-origin` itu penting, sebaiknya sertakan juga `transform-box` CSS yang diinginkan untuk kompatibilitas di masa mendatang.
 
-##Memicu animasi
+## Memicu animasi
 
 Animasi dapat dipicu melalui atribut `trigger` atau tindakan `on`.
 
-###Atribut `trigger`
+### Atribut `trigger`
 
 Saat ini, `visibility` adalah satu-satunya nilai yang tersedia untuk atribut `trigger`. `visibility` dipicu saat dokumen atau sematan sumber terlihat (di viewport).
 
@@ -644,7 +644,7 @@ Misalnya:
   </amp-animation>
 ```
 
-###Memicu melalui tindakan `on`
+### Memicu melalui tindakan `on`
 
 Misalnya:
 
@@ -655,7 +655,7 @@ Misalnya:
 <button on="tap:anim1.start">Animate</button>
 ```
 
-##Tindakan `on`
+## Tindakan `on`
 
 Elemen `amp-animation` mengekspor tindakan berikut:
 

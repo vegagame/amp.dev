@@ -7,18 +7,22 @@ teaser:
 ---
 
 <!---
-حقوق الطبع والنشر 2018 لصالح "مؤلفو رمز HTML لصفحات AMP". جميع الحقوق محفوظة.
+Copyright 2018 The AMP HTML Authors. All Rights Reserved.
 
-تم الترخيص بموجب ترخيص Apache، الإصدار 2.0 (المشار إليه لاحقًا باسم "الترخيص")؛ ولا يحق لك استخدام هذا الملف إلا بما يتوافق مع الترخيص.
-ويمكنك الحصول على نسخة من الترخيص على الصفحة
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-ما لم يكن مطلوبًا بموجب القانون الساري أو تمت الموافقة عليه كتابةً، يتم توزيع البرنامج الذي يتم توزيعه بموجب الترخيص "كما هو"، وبدون أية ضمانات أو شروط من أي نوع، سواء كانت صريحة أو ضمنية.
-راجِع الترخيص للاطّلاع على اللغة المحددة التي تحكم الأذونات والقيود بموجب الترخيص.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 
-#amp-addthis
+# amp-addthis
 
 يعمل المكّوِن على تضمين أدوات [AddThis](https://www.addthis.com) للمواقع الإلكترونية.
 
@@ -34,15 +38,15 @@ teaser:
 </table>
 
 
-##لماذا AddThis؟
+## لماذا AddThis؟
 
 يوفّر المكوِّن `amp-addthis` أزرارًا جميلة وبسيطة للمشاركة. يمكنك أن تسهِّل على زوار موقعك الإلكتروني مشاركة المحتوى مع أكثر من 200 قناة اجتماعية، منها Messenger وWhatsApp وFacebook وTwitter وPinterest وغيرها الكثير.
 
 يحوذ AddThis على ثقة أكثر من 15 مليون موقع إلكتروني يستخدمها ما يزيد عن 2 مليار مستخدم فريد في مشاركة المحتوى حول العالم وبأكثر من ستين لغة.
 
-##أزرار المشاركة
+## أزرار المشاركة
 
-###العائمة
+### العائمة
 
 أزرار يمكن وضعها على جوانب الصفحة أو أعلاها أو أسفلها، وتتبع القارئ أثناء تمرير الصفحة. وهي طريقة رائعة لحث المستخدِم على مشاركة المحتوى بدون مضايقته.
 
@@ -63,7 +67,7 @@ teaser:
 </amp-addthis>
 ```
 
-###المضمّنة
+### المضمّنة
 
 يمكن دمج أزرار المشاركة في المحتوى للحصول على تجربة مشاركة سلسة.
 
@@ -83,7 +87,7 @@ teaser:
 </amp-addthis>
 ```
 
-##السمات
+## السمات
 
 <table>
   <tr>
@@ -120,7 +124,7 @@ teaser:
   </tr>
 </table>
 
-##وثائق التنفيذ
+## وثائق التنفيذ
 
 1. إذا لم يسبق لك إنشاء حساب على AddThis، ستحتاج إلى إنشاء حساب على الموقع [https://www.addthis.com/register](https://www.addthis.com/register). لن تتحمل أي تكلفة مقابل إنشاء الحساب وسيتيح لك الوصول إلى مجموعتنا الكاملة من أدوات المواقع الإلكترونية وأيضًا تقاريرنا التحليلية العميقة للحصول على فهم أفضل للزيارات الواردة إلى موقعك من الشبكات الاجتماعية.
 2. انتقِل إلى [لوحة البيانات](https://addthis.com/dashboard) وخصِص "أزرار المشاركة" (لا تتيح صفحات AMP حاليًا إلا عمل "أزرار المشاركة العائمة" و"المضّمنة").
@@ -132,11 +136,11 @@ teaser:
 شاهِد [فيديو YouTube](https://www.youtube.com/watch?v=BSkuAB4er2o) لمعرفة التعليمات خطوة بخطوة:
 <amp-youtube width="480" height="270" data-videoid="BSkuAB4er2o" layout="responsive"></amp-youtube>
 
-##التحقق
+## التحقق
 
 اطّلِع على [قواعد amp-addthis](https://github.com/ampproject/amphtml/blob/master/extensions/amp-addthis/validator-amp-addthis.protoascii) في مواصفات مدقق AMP.
 
-##الخصوصية
+## الخصوصية
 
 [http://www.addthis.com/privacy/privacy-policy/](http://www.addthis.com/privacy/privacy-policy/)
 
@@ -154,6 +158,6 @@ teaser:
 
 سيتم التعامل مع "بيانات AddThis" على أنها معلومات شخصية بالقدر التي ينص عليه القانون المعمول به. وفقًا لبنود خدمة AddThis، مطلوب من الناشرين الحصول على جميع موافقات المستخدِم وتفويضاته، وتقديم أي إشعارات مطلوبة لتوفير "بيانات AddThis" التي تم جمعها من المستخدِمين إلى Oracle.
 
-##الدعم
+## الدعم
 
 إذا كانت لديك أي أسئلة أو كنت بحاجة إلى أي مساعدة في تنفيذ AddThis على صفحات AMP، يُرجى الاتصال بفريق الدعم الرائع لدينا من خلال إرسال تذكرة [هنا](https://www.addthis.com/support/) أو عن طريق إرسال رسالة إلكترونية إلى [help@addthis.com](mailto%3ahelp@addthis.com).

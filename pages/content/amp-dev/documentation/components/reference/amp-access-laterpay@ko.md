@@ -2,29 +2,27 @@
 $category@: dynamic-content
 formats:
   - websites
-티저:
+teaser:
+  text: 게시자가 LaterPay 소액결제 플랫폼과 손쉽게 통합할 수 있습니다.
 ---
-
-##  텍스트: 게시자가 LaterPay 소액결제 플랫폼과 손쉽게 통합할 수 있습니다.
-
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2017 The AMP HTML Authors. All Rights Reserved.
+Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 
-       Apache 라이선스 버전 2.0(이하 '라이선스')에 따라 사용이 허가되었으므로,
-       라이선스를 준수하지 않는 경우 이 파일을 사용할 수 없습니다.
-       해당 라이선스의 사본은 다음에서 가져올 수 있습니다.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       적용 가능한 법률에서 요구하거나 서면으로 동의하지 않은 경우
-       라이선스에 따라 배포된 소프트웨어는 어떠한 종류의 명시적
-       또는 묵시적 보증 또는 조건 없이 '있는 그대로' 배포됩니다.
-       라이선스의 허가 및 제한사항에 관한 구체적인 문구는 라이선스를
-       참조하시기 바랍니다.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-#amp-access-laterpay
+# amp-access-laterpay
 
 게시자가 [LaterPay](https://www.laterpay.net) 소액결제 플랫폼과 손쉽게 통합할 수 있습니다. `amp-access-laterpay`는 [AMP 액세스](https://www.ampproject.org/docs/reference/components/amp-access)를 기반으로 하며 AMP 액세스가 필요합니다.
 
@@ -50,9 +48,8 @@ formats:
   </tr>
 </table>
 
-[TOC]
 
-##동작
+## 동작
 
 [LaterPay](https://laterpay.net)는 사용자가 클릭 두 번으로 모든 온라인 콘텐츠를 구매하고, 사전 등록, 개인 데이터 또는 결제 없이 즉시 액세스할 수 있는 소액결제 플랫폼입니다. 사용자는 구매 금액이 웹사이트 전체에서 총 5달러 또는 5유로에 도달한 경우에만 금액을 지불합니다. 콘텐츠 제공업체는 개별 상품 또는 고정 요금이나 제한된 시간만큼 콘텐츠에 액세스할 수 있는 시간 패스를 판매할 수 있습니다.
 
@@ -74,7 +71,7 @@ AMP 액세스와 함께 사용하려는 자체 페이월 서비스가 있고 동
 
 또한 이 구성요소는 [액세스 콘텐츠 마크업](https://www.ampproject.org/docs/reference/components/amp-access#access-content-markup)을 사용해 콘텐츠를 표시하고 숨깁니다.
 
-##구성
+## 구성
 
 구성은 AMP 액세스와 비슷하지만 승인, 핑백, 로그인 링크가 필요하지 않습니다.
 
@@ -88,7 +85,6 @@ AMP 액세스와 함께 사용하려는 자체 페이월 서비스가 있고 동
       }
     }
 </script>
-
 ```
 
 `laterpay` 구성 개체에 다음 값을 설정할 수 있습니다.
@@ -146,7 +142,7 @@ AMP 액세스와 함께 사용하려는 자체 페이월 서비스가 있고 동
         </tr>
       </table>
 
-##액세스 콘텐츠 마크업 사용 및 구매 목록 표시
+## 액세스 콘텐츠 마크업 사용 및 구매 목록 표시
 
 액세스 콘텐츠 마크업은 AMP 액세스와 동일한 방식으로 사용되어야 합니다.
 
@@ -169,7 +165,7 @@ ID `amp-access-laterpay-dialog`가 포함된 요소는 사용자가 기사 액�
 
 ```
 
-##스타일 지정
+## 스타일 지정
 
 여러 클래스가 생성된 마크업의 일부 요소에 적용됩니다. 클래스가 없는 요소는 CSS 요소 선택기를 통해 명확히 참조될 수 있습니다.
 
@@ -213,7 +209,7 @@ ID `amp-access-laterpay-dialog`가 포함된 요소는 사용자가 기사 액�
 
 ```
 
-##현지화
+## 현지화
 
 구매 옵션의 대화상자에 표시된 텍스트는 게시자가 LaterPay 커넥터 UI에 정의합니다.
 
@@ -274,13 +270,13 @@ ID `amp-access-laterpay-dialog`가 포함된 요소는 사용자가 기사 액�
   </tr>
 </table>
 
-##애널리틱스
+## 애널리틱스
 
 `amp-access-laterpay`는 `amp-access` 기반이므로 `amp-access`에서 보낸 모든 [애널리틱스 이벤트](https://www.ampproject.org/docs/reference/components/amp-access#integration-with-amp-analytics)를 지원합니다.
 
 [https://ampexample.laterpay.net/](https://ampexample.laterpay.net/)의 예는 모두 실제 작동 방식에 관한 더 완전한 예를 보려는 경우 이러한 애널리틱스 이벤트를 보내도록 구성되어 있습니다.
 
-##AMP 액세스와 함께 AMP 액세스 LaterPay 사용
+## AMP 액세스와 함께 AMP 액세스 LaterPay 사용
 
 기존 구독 시스템이 있고 개별 기사 판매에만 LaterPay를 사용하려는 경우 AMP 액세스와 AMP 액세스 LaterPay를 함께 사용하여 동일한 페이지에 두 가지 판매 방법을 동시에 사용할 수 있습니다.
 
@@ -339,13 +335,13 @@ LaterPay 및 기존 페이월 통합과 함께 사용하는 경우 필수 구성
 
 [https://ampexample.laterpay.net/dual-amp-access.html](https://ampexample.laterpay.net/dual-amp-access.html)에서 더 완전한 예를 참조하세요.
 
-##관련 문서
+## 관련 문서
 
 * [AMP 액세스](https://www.ampproject.org/docs/reference/components/amp-access)
 * [LaterPay](https://www.laterpay.net)
 * [LaterPay: 소액결제 작동 원리](https://docs.laterpay.net/how_we_do_micropayments/)
 * [LaterPay 커넥터](https://connectormwi.laterpay.net/docs/index.html): AMP 액세스 LaterPay와 비슷하지만 AMP가 아닌 페이지를 위한 것입니다.
 
-##확인
+## 확인
 
 AMP 유효성 검사기 사양의 [amp-access-laterpay 규칙](https://github.com/ampproject/amphtml/blob/master/extensions/amp-access-laterpay/validator-amp-access-laterpay.protoascii)을 참조하세요.

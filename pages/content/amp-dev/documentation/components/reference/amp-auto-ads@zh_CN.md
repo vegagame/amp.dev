@@ -7,16 +7,23 @@ teaser:
 ---
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
-<!--- 版权所有 2017 The AMP HTML Authors。保留所有权利。
+<!---
+Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 
-       根据 Apache 许可 2.0 版（以下简称“许可”）授权用户使用；您只有在遵循该许可的情况下才可使用本文件。您可以通过以下网址获得该许可的副本：
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       除非适用法律要求或已达成书面协议，否则按照该许可分发的软件均“按原样”分发，不提供任何类型的担保或条件（无论明示或暗示）。有关该许可规定的具体语言管辖权限和限制，请参阅该许可。
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-#amp-auto-ads
+# amp-auto-ads
 
 通过使用远程提供的配置文件，向 AMP 网页中动态投放广告
 
@@ -45,7 +52,7 @@ teaser:
   </table>
 
 
-##行为
+## 行为
 
 在获得足够多的有效展示位置（在配置中提供）后，`amp-auto-ads` 会尝试植入更多广告，同时遵守相应广告联盟指定的一系列限制。这些限制会限制以下内容：
 
@@ -64,12 +71,12 @@ teaser:
   </amp-auto-ads>
 ```
 
-##支持的广告联盟
+## 支持的广告联盟
 
 * [AdSense](../../ads/google/adsense.md)
 * [DoubleClick（实验性）](../../ads/google/doubleclick.md)
 
-##属性
+## 属性
 
 <table>
   <tr>
@@ -86,11 +93,11 @@ teaser:
   </tr>
 </table>
 
-##配置规范
+## 配置规范
 
 该配置定义 `<amp-auto-ads>` 可以在网页上的哪些位置放置广告。该配置可从位于 `ad-network-config.js` 中定义的网址中的第三方广告联盟获取。该配置应该是序列化 JSON 对象，与下文所述的 [`ConfigObj`](#configobj) 定义相符。
 
-###配置示例
+### 配置示例
 
 下面的示例指定广告应紧跟着放在网页上第三个 `<DIV id='domId'>` 中的所有 `<P class='paragraph'>` 元素的后面。在以上任意位置展示的广告的类型应该是 BANNER，上外边距为 4 像素，下外边距为 10 像素。
 
@@ -117,9 +124,9 @@ teaser:
 }
 ```
 
-###对象定义
+### 对象定义
 
-####ConfigObj
+#### ConfigObj
 
 要在配置对象中指定的字段：
 
@@ -154,7 +161,7 @@ teaser:
   </tr>
 </table>
 
-####PlacementObj
+#### PlacementObj
 
 要在 `placements` 配置对象中指定的字段：
 
@@ -199,7 +206,7 @@ teaser:
   </tr>
 </table>
 
-####AnchorObj
+#### AnchorObj
 
 要在 `anchor` 配置对象中指定的字段：
 
@@ -239,7 +246,7 @@ teaser:
   </tr>
 </table>
 
-####PlacementStyleObj
+#### PlacementStyleObj
 
 要在 `style` 配置对象中指定的字段：
 
@@ -263,7 +270,7 @@ teaser:
   </tr>
 </table>
 
-####RelativePositionEnum
+#### RelativePositionEnum
 
 `placements` 配置对象中 `pos` 字段的枚举值：
 
@@ -295,7 +302,7 @@ teaser:
   </tr>
 </table>
 
-####PlacementTypeEnum
+#### PlacementTypeEnum
 
 `placements` 配置对象中 `type` 字段的枚举值：
 
@@ -312,7 +319,7 @@ teaser:
   </tr>
 </table>
 
-####AdConstraintsObj
+#### AdConstraintsObj
 
 要在 `adConstraints` 配置对象中指定的字段：
 
@@ -352,7 +359,7 @@ teaser:
       </tr>
     </table>
 
-####SubsequentMinSpacingObj
+#### SubsequentMinSpacingObj
 
 要在 `subsequentMinSpacing` 配置对象中指定的字段。`subsequentMinSpacing` 条目可用于根据网页上已有广告的数量更改任何其他广告之间所需的间距。例如，请考虑以下情形：
 
@@ -399,6 +406,6 @@ teaser:
       </tr>
     </table>
 
-##验证
+## 验证
 
 请参阅 AMP 验证工具规范中的 [amp-auto-ads 规则](https://github.com/ampproject/amphtml/blob/master/extensions/amp-auto-ads/validator-amp-auto-ads.protoascii)。

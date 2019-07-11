@@ -6,12 +6,11 @@ teaser:
   text: A container to display an ad.
 ---
 
-#amp-ad / amp-embed
+# amp-ad / amp-embed
 
 هذا العنصر عبارة عن حاوية لعرض الإعلان. `amp-embed` هو اسم مستعار للعنصر `amp-ad`، ويستمد كل وظائفه ولكن باسم علامة مختلف. استخدِم `amp-embed` عندما تريد أن تكون أكثر دقة من حيث الدلالة. لا تتيح مستندات AMP سوى الإعلانات/التضمينات التي يتم عرضها عبر HTTPS.
 
-#<a name="amp-ad"></a> `amp-ad` / `amp-embed`
-
+# `amp-ad` / `amp-embed`
 
 [tip type="note"]
 من المحتمل أن تتطور مواصفات `amp-ad`/`amp-embed` بشكل ملحوظ بمرور الوقت. وتم تصميم الأسلوب الحالي لتشغيل شكل الإعلان مبدئيًا لتتمكن من عرض الإعلان.
@@ -19,15 +18,19 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-حقوق الطبع والنشر 2015 لصالح "مؤلفو رمز HTML لصفحات AMP". جميع الحقوق محفوظة.
+Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 
-تم الترخيص بموجب ترخيص Apache، الإصدار 2.0 (المشار إليه لاحقًا باسم "الترخيص")؛ ولا يحق لك استخدام هذا الملف إلا بما يتوافق مع الترخيص.
-ويمكنك الحصول على نسخة من الترخيص على الصفحة
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-ما لم يكن مطلوبًا بموجب القانون الساري أو تمت الموافقة عليه كتابةً، يتم توزيع البرنامج الذي يتم توزيعه بموجب الترخيص "كما هو"، وبدون أية ضمانات أو شروط من أي نوع، سواء كانت صريحة أو ضمنية.
-راجِع الترخيص للاطّلاع على اللغة المحددة التي تحكم الأذونات والقيود بموجب الترخيص.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 
 <table>
@@ -49,13 +52,13 @@ http://www.apache.org/licenses/LICENSE-2.0
   </tr>
 </table>
 
-##السلوك
+## السلوك
 
 يتم تحميل الإعلانات مثل جميع الموارد الأخرى في مستندات AMP، مع عنصر مخصص خاص يُسمى `<amp-ad>`. لا يُسمح بتشغيل جافا سكريبت مقدم من شبكة إعلانات في مستند AMP. وبدلاً من ذلك، يحمّل وقت تشغيل AMP إطار iframe من أصل مختلف (من خلال وضع حماية إطارات iframe) مثل مستند AMP، ويعمل على تنفيذ جافا سكريبت المقدمة من شبكة الإعلانات داخل وضع حماية إطارات iframe هذا.
 
 يتطلب العنصر `<amp-ad>` تحديد قيم العرض والارتفاع وفق [قاعدة](https://www.ampproject.org/docs/design/amp-html-layout#%28tl;dr%29-summary-of-layout-requirements-&amp;-behaviors) نوع التنسيق التابع له. ويتطلب أيضًا الوسيطة `type` التي تحدد شبكة الإعلانات التي يتم عرضها. يتم تلقائيًا تمرير جميع سمات `data-*` الموجودة على العلامة كوسيطات إلى الترميز الذي يعرض الإعلان في النهاية. وتختلف سمات `data-` المطلوبة حسب نوع الشبكة المعين كما يجب توثيقها باستخدام الشبكة.
 
-####مثال: عرض بعض الإعلانات
+#### مثال: عرض بعض الإعلانات
 
 <!--embedded example - displays in ampproject.org -->
 
@@ -69,7 +72,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 </amp-iframe>
 </div>
 
-##السمات
+## السمات
 
 <table>
   <tr>
@@ -111,7 +114,7 @@ http://www.apache.org/licenses/LICENSE-2.0
   </tr>
 </table>
 
-##العنصر النائب
+## العنصر النائب
 
 يتيح `amp-ad` اختياريًا عنصرًا ثانويًا من خلال السمة `placeholder`. إذا كانت شبكة الإعلانات متوافقة، سيتم عرض هذا العنصر إلى أن يتوفر الإعلان للعرض. يمكنك معرفة المزيد من المعلومات في [العناصر النائبة والعناصر الاحتياطية](https://www.ampproject.org/docs/guides/responsive/placeholders).
 
@@ -122,7 +125,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 </amp-ad>
 ```
 
-##عدم توفر أي إعلان
+## عدم توفر أي إعلان
 
 في حال عدم توفر أي إعلان للخانة، تحاول AMP تصغير العنصر `amp-ad` (أي تعيينه على `display: none`). تحدد AMP إمكانية إجراء هذه العملية بدون التأثير على موضع تمرير المستخدِم. إذا كان الإعلان في إطار العرض الحالي، لن يتم تصغير الإعلان لأنه يؤثر على موضع تمرير المستخدِم ولكن إذا كان الإعلان خارج إطار العرض الحالي، سيتم تصغيره.
 
@@ -136,7 +139,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 </amp-ad>
 ```
 
-##عرض إعلانات الفيديو
+## عرض إعلانات الفيديو
 
 هناك 3 طرق لتحقيق الربح من الفيديوهات في AMP من خلال إعلانات الفيديو:
 
@@ -149,7 +152,7 @@ http://www.apache.org/licenses/LICENSE-2.0
     * تأكد من وجود ملصق إذا تم تحميل المشغل في إطار العرض الأول. [يمكنك معرفة التفاصيل](https://www.ampproject.org/docs/reference/components/amp-iframe#iframe-with-placeholder).
     * يجب عرض الفيديو والملصق عبر HTTPS.</li>
 
-##تشغيل الإعلانات من نطاق خاص
+## تشغيل الإعلانات من نطاق خاص
 
 تتيح AMP تحميل إطار iframe للتشغيل المبدئي الذي يستخدَم لتحميل الإعلانات من نطاق خاص مثل نطاقك.
 
@@ -161,7 +164,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 
 السمة `content` للعلامة الوصفية هي عنوان URL الكامل لنسختك من ملف remote.html على خادم الويب لديك. ويجب أن يستخدم عنوان URL هذا مخطط "https". لا يمكن استضافة العنوان على الأصل نفسه الذي عليه ملفات AMP. إذا استضفت مثلاً ملفات AMP على `www.example.com`، يجب ألا يكون عنوان URL هذا على النطاق `www.example.com` ولكن النطاق `something-else.example.com` مقبول. يمكنك مراجعة ["سياسة أصل إطارات Iframe"](../../spec/amp-iframe-origin-policy.md) للحصول على مزيد من التفاصيل عن الأصول المسموح بها لإطارات iframe.
 
-###الأمان
+### الأمان
 
 **تحقق من صحة البيانات الواردة** قبل تمريرها إلى الوظيفة `draw3p` للتأكد من تنفيذ إطار iframe المهام المتوقعة منه فقط. ويكون هذا صحيحًا لا سيما مع شبكات الإعلانات التي تسمح بإدخال جافا سكريبت مخصص.
 
@@ -174,7 +177,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 
 يمكن تنفيذ الأصول باستخدام الوسيطة الثالثة لوظيفة `draw3p` ويجب أيضًا أن يتم ذلك باستخدام التوجيه [allow-from](https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options) للحصول على إتاحة كاملة لعمل المتصفح.
 
-###تحسين تهيئة الإعلانات الواردة
+### تحسين تهيئة الإعلانات الواردة
 
 هذا العمل اختياري تمامًا: نسعى أحيانًا إلى تحسين طلب الإعلان قبل إرساله إلى خادم الإعلانات.
 
@@ -195,16 +198,16 @@ draw3p(function(config, done) {
 }, ['allowed-ad-type'], ['your-domain.com']);
 ```
 
-##التصميم
+## التصميم
 
 لا يجوز أن تحتوي عناصر `<amp-ad>` نفسها على حاويات بها المجموعة CSS `position: fixed` ولا يجوز وضعها في هذه الحاويات (باستثناء `amp-lightbox`).
 ويرجع هذا إلى التأثيرات التي تلحق بتجربة المستخدِم نتيجة الإعلانات المركبة على الصفحة بأكملها. قد يتم النظر مستقبلاً في السماح بأشكال إعلانات مشابهة داخل حاويات AMP التي يتم التحكم فيها والتي تحافظ على بعض ثوابت تجربة المستخدِم.
 
-##التحقق
+## التحقق
 
 اطِّلع على [قواعد amp-ad](https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/validator-amp-ad.protoascii) في مواصفات مدقق AMP.
 
-##شبكات الإعلانات المتوافقة
+## شبكات الإعلانات المتوافقة
 
 * [A8](../../ads/a8.md)
 * [A9](../../ads/a9.md)
@@ -386,7 +389,7 @@ draw3p(function(config, done) {
 * [Zedo](../../ads/zedo.md)
 * [Zucks](../../ads/zucks.md)
 
-##أنواع التضمينات المتوافقة
+## أنواع التضمينات المتوافقة
 
 * [24smi](../../ads/24smi.md)
 * [AJA](../../ads/aja.md)

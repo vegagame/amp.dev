@@ -8,22 +8,22 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2017 The AMP HTML Authors. All Rights Reserved.
+Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 
-       Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS-IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 
-#amp-auto-ads
+# amp-auto-ads
 
 リモートで提供される設定ファイルを使用して、AMP ページに広告を動的に挿入します。
 
@@ -53,7 +53,7 @@ teaser:
 
 
 
-##動作
+## 動作
 
 `amp-auto-ads` は、十分な数の有効なプレースメントが設定で指定されている場合、広告ネットワークで指定された一連の制約を遵守しながら、追加の広告を挿入しようとします。こうした制約により、以下が制限されます。
 
@@ -72,12 +72,12 @@ teaser:
   </amp-auto-ads>
 ```
 
-##サポートされている広告ネットワーク
+## サポートされている広告ネットワーク
 
 * [AdSense](../../ads/google/adsense.md)
 * [DoubleClick（試験運用版）](../../ads/google/doubleclick.md)
 
-##属性
+## 属性
 
 <table>
   <tr>
@@ -94,11 +94,11 @@ teaser:
   </tr>
 </table>
 
-##設定の仕様
+## 設定の仕様
 
 設定では、`<amp-auto-ads>` によって広告を配置できるページ上の場所を定義します。設定は、`ad-network-config.js` で定義されている URL の第三者広告ネットワークから取得されます。また、下記の [`ConfigObj`](#configobj) の定義と一致する、シリアル化された JSON オブジェクトである必要があります。
 
-###設定の例
+### 設定の例
 
 以下の例では、ページの 3 番目の `<DIV id='domId'>` 内にあるすべての `<P class='paragraph'>` 要素の直後に広告を配置する必要があることが示されています。これらの位置のいずれかに配置された広告には、タイプ: BANNER、上の余白: 4 ピクセル、下の余白: 10 ピクセルを指定します。
 
@@ -125,9 +125,9 @@ teaser:
 }
 ```
 
-###オブジェクトの定義
+### オブジェクトの定義
 
-####ConfigObj
+#### ConfigObj
 
 設定オブジェクトで指定するフィールドは次のとおりです。
 
@@ -160,7 +160,7 @@ teaser:
 </tr>
 </table>
 
-####PlacementObj
+#### PlacementObj
 
 `placements` 設定オブジェクトで指定するフィールドは次のとおりです。
 
@@ -204,7 +204,7 @@ teaser:
 </tr>
 </table>
 
-####AnchorObj
+#### AnchorObj
 
 `anchor` 設定オブジェクトで指定するフィールドは次のとおりです。
 
@@ -244,7 +244,7 @@ teaser:
   </tr>
 </table>
 
-####PlacementStyleObj
+#### PlacementStyleObj
 
 `style` 設定オブジェクトで指定するフィールドは次のとおりです。
 
@@ -268,7 +268,7 @@ teaser:
   </tr>
 </table>
 
-####RelativePositionEnum
+#### RelativePositionEnum
 
 `placements` 設定オブジェクトの `pos` フィールド用の ENUM 値は次のとおりです。
 
@@ -300,7 +300,7 @@ teaser:
   </tr>
 </table>
 
-####PlacementTypeEnum
+#### PlacementTypeEnum
 
 `placements` 設定オブジェクトの `type` フィールド用の ENUM 値は次のとおりです。
 
@@ -317,7 +317,7 @@ teaser:
   </tr>
 </table>
 
-####AdConstraintsObj
+#### AdConstraintsObj
 
 `adConstraints` 設定オブジェクトで指定するフィールドは次のとおりです。
 
@@ -350,7 +350,7 @@ teaser:
 </tr>
 </table>
 
-####SubsequentMinSpacingObj
+#### SubsequentMinSpacingObj
 
 `subsequentMinSpacing` 設定オブジェクトで指定するフィールド。`subsequentMinSpacing` のエントリを使用すると、追加の広告間に必要な間隔を、ページ上の既存の広告数に基づいて変更できます。例として、次のシナリオについて考えてみましょう。
 
@@ -389,6 +389,6 @@ teaser:
 </tr>
 </table>
 
-##検証
+## 検証
 
 AMP 検証ツールの仕様で [amp-auto-ads のルール](https://github.com/ampproject/amphtml/blob/master/extensions/amp-auto-ads/validator-amp-auto-ads.protoascii)をご確認ください。

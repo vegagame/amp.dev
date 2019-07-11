@@ -8,18 +8,22 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2018 The AMP HTML Authors. Todos os direitos reservados.
+Copyright 2018 The AMP HTML Authors. All Rights Reserved.
 
-       Licenciado sob a Licença Apache, Versão 2.0 (a "Licença"). O uso deste arquivo só é permitido em conformidade com a Licença.
-       Uma cópia da Licença está disponível em
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       A menos que exigido pela legislação aplicável ou acordado por escrito, o software fornecido de acordo com a Licença é distribuído "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIAS OU CONDIÇÕES DE QUALQUER TIPO, expressas ou implícitas.
-       Consulte a Licença para ver informações sobre permissões e limitações para o idioma específico.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-#amp-addthis
+# amp-addthis
 
 Exibe uma incorporação das ferramentas do site do [AddThis](https://www.addthis.com).
 
@@ -35,15 +39,15 @@ Exibe uma incorporação das ferramentas do site do [AddThis](https://www.addthi
 </table>
 
 
-##Por que o AddThis?
+## Por que o AddThis?
 
 O componente `amp-addthis` oferece botões de compartilhamento simples e bonitos. Faça com que os visitantes do seu site compartilhem conteúdo com facilidade em mais de 200 redes sociais, incluindo Messenger, WhatsApp, Facebook, Twitter, Pinterest e muitas outras.
 
 O AddThis é usado por mais de 15 milhões de sites, com mais de dois bilhões de usuários únicos, que compartilham conteúdo no mundo todo, em mais de 60 idiomas.
 
-##Botões de compartilhamento
+## Botões de compartilhamento
 
-###Flutuantes
+### Flutuantes
 
 Colocados nas laterais, na parte superior ou inferior da página, seguindo o leitor à medida que ele rola a página. Uma ótima maneira de promover o compartilhamento sem ficar muito "na cara".
 
@@ -64,7 +68,7 @@ Exemplo:
 </amp-addthis>
 ```
 
-###In-line
+### In-line
 
 Integre botões de compartilhamento ao seu conteúdo para ter uma experiência de compartilhamento ideal.
 
@@ -84,7 +88,7 @@ Exemplo:
 </amp-addthis>
 ```
 
-##Atributos
+## Atributos
 
 <table>
   <tr>
@@ -121,7 +125,7 @@ Exemplo:
     </tr>
   </table>
 
-##Documentação de implementação
+## Documentação de implementação
 
 1. Você precisará criar uma conta do AddThis em [https://www.addthis.com/register](https://www.addthis.com/register), caso ainda não tenha feito isso. A criação de uma conta do AddThis é totalmente gratuita e permite que você acesse nosso conjunto completo de ferramentas de sites, bem como nossos relatórios de análise detalhados para entender melhor o tráfego social do seu site.
 1. Acesse [seu painel](https://addthis.com/dashboard) e personalize seus botões de compartilhamento. No momento, as páginas AMP são compatíveis apenas com botões de compartilhamento flutuantes e in-line.
@@ -133,11 +137,11 @@ Pronto! Você verá os botões de compartilhamento aparecendo na sua página.
 Confira nosso [vídeo do YouTube](https://www.youtube.com/watch?v=BSkuAB4er2o) para ver instruções passo a passo:
 <amp-youtube width="480" height="270" data-videoid="BSkuAB4er2o" layout="responsive"></amp-youtube>
 
-##Validação
+## Validação
 
 Consulte as [regras do amp-addthis](https://github.com/ampproject/amphtml/blob/master/extensions/amp-addthis/validator-amp-addthis.protoascii) (em inglês) nas especificações do validador de AMP.
 
-##Privacidade
+## Privacidade
 
 [http://www.addthis.com/privacy/privacy-policy/](http://www.addthis.com/privacy/privacy-policy/)
 
@@ -155,6 +159,6 @@ Os Dados do AddThis podem consistir nos seguintes itens:
 
 Os Dados do AddThis serão tratados como informações pessoais na medida exigida pela legislação aplicável. Os editores são obrigados, de acordo com os Termos de Serviço do AddThis, a receber do usuário final todos os consentimentos e autorizações necessários e a dar todos os avisos necessários para o fornecimento dos Dados do AddThis coletados de usuários finais para a Oracle.
 
-##Suporte
+## Suporte
 
 Caso você tenha alguma dúvida ou precise de ajuda para implementar o AddThis em AMP, entre em contato com nossa equipe de suporte enviando um tíquete [aqui](https://www.addthis.com/support/) ou enviando um e-mail para [help@addthis.com](mailto%3ahelp@addthis.com).

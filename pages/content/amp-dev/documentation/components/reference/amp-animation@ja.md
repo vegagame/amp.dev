@@ -9,22 +9,22 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
+Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS-IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 
-#amp-animation
+# amp-animation
 
 アニメーションを定義して表示します。
 
@@ -44,15 +44,15 @@ teaser:
 </table>
 
 
-##概要
+## 概要
 
 AMP アニメーションは、[Web Animations API](https://www.w3.org/TR/web-animations/) を使用して、AMP ドキュメントのアニメーションを定義、表示します。
 
-##フォーマット
+## フォーマット
 
 `amp-animation` 要素は、アニメーションを JSON 構造として定義します。
 
-###トップレベル アニメーション仕様
+### トップレベル アニメーション仕様
 
 トップレベル オブジェクトは、`animations` 配列として定義される任意の数のアニメーション コンポーネントで構成される全体的なアニメーション プロセスを定義します。
 ```html
@@ -75,11 +75,11 @@ AMP アニメーションは、[Web Animations API](https://www.w3.org/TR/web-an
 </amp-animation>
 ```
 
-###DOM 内の配置
+### DOM 内の配置
 
 `<amp-animation>` は、`trigger="visibility"` の場合、必ず `<body>` 要素の直接の子として配置する必要があります。`trigger` を指定しておらず、アクションを通じてプログラムでアニメーションの再生を制御している場合は、DOM 内の任意の場所に配置することができます。
 
-###アニメーション コンポーネント
+### アニメーション コンポーネント
 
 各アニメーション コンポーネントは、[キーフレーム効果](https://www.w3.org/TR/web-animations/#dom-keyframeeffect-keyframeeffect)であり、以下の要素で構成されます。
 
@@ -100,23 +100,23 @@ AMP アニメーションは、[Web Animations API](https://www.w3.org/TR/web-an
 }
 ```
 
-###条件
+### 条件
 
 条件を使用することで、各アニメーション コンポーネントを最終アニメーションに含めるかどうかを指定できます。
 
-####メディアクエリ
+#### メディアクエリ
 
 メディアクエリは、`media` プロパティを使用して指定できます。このプロパティは、[Window.matchMedia](https://developer.mozilla.org/ja/docs/Web/API/Window/matchMedia) API で使用できる任意の式を格納することができ、`@media` CSS ルールに対応します。
 
 アニメーション コンポーネントに対して値を指定した場合、メディアクエリが現在の環境に合致する場合に限り、そのアニメーション コンポーネントが含まれるようになります。
 
-####サポート条件
+#### サポート条件
 
 サポート条件は、`supports` プロパティを使用して指定できます。このプロパティは、[CSS.supports](https://developer.mozilla.org/ja/docs/Web/API/CSS/supports) API で使用できる任意の式を格納することができ、`@supports` CSS ルールに対応します。
 
 アニメーション コンポーネントに対して値を指定した場合、サポート条件が現在の環境に合致する場合に限り、そのアニメーション コンポーネントが含まれるようになります。
 
-###アニメーション `switch` ステートメント
+### アニメーション `switch` ステートメント
 
 場合によっては、複数の[条件付きアニメーション](#conditions)とデフォルト（省略可）を組み合わせて 1 つのアニメーションにすると便利です。これには、下記のフォーマットの `switch` アニメーション ステートメントを使用します。
 
@@ -163,7 +163,7 @@ AMP アニメーションは、[Web Animations API](https://www.w3.org/TR/web-an
 }
 ```
 
-###変数
+### 変数
 
 アニメーション コンポーネントは、`var()` 式を通じて、タイミングとキーフレームの値に使用する CSS 変数を宣言できます。`var()` 式は、現在のターゲット コンテキストを使用して評価されます。アニメーション コンポーネント内で指定されている CSS 変数は、ネスト アニメーションに反映され、アニメーション ターゲットに適用されます。これにより、最終アニメーション内で使用されている CSS 変数をオーバーライドします。
 
@@ -196,7 +196,7 @@ AMP アニメーションは、[Web Animations API](https://www.w3.org/TR/web-an
 
 `var()` の詳細については、[`var()` と `calc()` のセクション](#var-and-calc-expressions)をご覧ください。
 
-###タイミング プロパティ
+### タイミング プロパティ
 
 トップレベル アニメーションとアニメーション コンポーネントは、タイミング プロパティを格納することができます。このプロパティについては、Web Animations 仕様の [AnimationEffectTimingProperties](https://www.w3.org/TR/web-animations/#dictdef-animationeffecttimingproperties) で詳細に定義されています。使用できる各プロパティは次のとおりです。
 
@@ -274,7 +274,7 @@ JSON 構造のタイミング プロパティの例:
 
 アニメーション コンポーネントは、トップレベル アニメーションに対して指定されているタイミング プロパティを継承します。
 
-###サブターゲット
+### サブターゲット
 
 `selector` を指定できる場所であれば、`subtargets: []` も指定できます。サブターゲットを使用すると、インデックスまたは CSS セレクタ経由で指定したサブターゲットを対象に、タイミング プロパティやアニメーション内で定義されている変数をオーバーライドすることができます。
 
@@ -301,7 +301,7 @@ JSON 構造のタイミング プロパティの例:
 
 なお、複数のサブターゲットが 1 つのターゲット要素に合致することも可能です。
 
-###キーフレーム
+### キーフレーム
 
 キーフレームは、Web Animations 仕様の [keyframes セクション](https://www.w3.org/TR/web-animations/#processing-a-keyframes-argument)で説明されているさまざまな方法で指定することができます。また、CSS 内で `@keyframes` 名を参照する文字列として指定することもできます。
 
@@ -369,7 +369,7 @@ array 形式の場合、「easing」を含めることもできます。
 
 プロパティ値には、`calc()` や `var()` などの CSS 式を含め、有効な CSS 値を指定できます。
 
-####CSS に基づくキーフレーム
+#### CSS に基づくキーフレーム
 
 キーフレームを指定するもう 1 つの方法は、ドキュメントのスタイルシート（`<style>` タグ）内で、`@keyframes` CSS ルールを使用する方法です。たとえば、次のようになります。
 ```html
@@ -400,7 +400,7 @@ CSS `@keyframes` は、[Web Animations 仕様](https://www.w3.org/TR/web-animati
 - CSS 内でキーフレームを指定した場合、`calc()` や `var()` をサポートしていないプラットフォームでは、`amp-animation` ポリフィルを使用できません。そのため、常に CSS 内にフォールバック値を含めることをおすすめします。
 - [`width()` や、`height()`、`num()`、`rand()`、`index()`、`length()`](#css-extensions) などの CSS 拡張機能を CSS 内で使用することはできません。
 
-####キーフレーム向けホワイトリストに登録されたプロパティ
+#### キーフレーム向けホワイトリストに登録されたプロパティ
 
 必ずしもすべての CSS プロパティをキーフレームで使用できるわけではありません。最新のブラウザですぐに最適化とアニメーション化を行うことができる CSS プロパティだけが、ホワイトリストに登録されています。優れたパフォーマンスを発揮することが確認されたプロパティが増えると、このリストも拡張されます。現在リストに登録されているプロパティは以下のとおりです。
 - [`opacity`](https://developer.mozilla.org/ja/docs/Web/CSS/opacity)
@@ -410,7 +410,7 @@ CSS `@keyframes` は、[Web Animations 仕様](https://www.w3.org/TR/web-animati
 
 なお、ベンダー プレフィックス CSS プロパティは必須ではなく、使用も許可されていません。
 
-###アニメーション設定の簡略形式
+### アニメーション設定の簡略形式
 
 アニメーションに含まれる要素が 1 つだけであり、1 つのキーフレーム効果だけで十分である場合、アニメーション設定をこのアニメーション コンポーネントだけに縮小することができます。たとえば、次のようになります。
 ```html
@@ -446,7 +446,7 @@ CSS `@keyframes` は、[Web Animations 仕様](https://www.w3.org/TR/web-animati
 </amp-animation>
 ```
 
-###アニメーションの構成
+### アニメーションの構成
 
 アニメーションは他のアニメーションを参照することで、複数の `amp-animation` 宣言を単一の最終アニメーションに結合することができます。他のアニメーションからアニメーションを参照する方法は、ネストとほとんど同じです。アニメーションを異なる要素に分割するメリットとしては、同じアニメーションを複数の場所から再利用できる点や、各アニメーション宣言を小型化して管理しやすくできる点などがあります。
 
@@ -500,7 +500,7 @@ CSS `@keyframes` は、[Web Animations 仕様](https://www.w3.org/TR/web-animati
 
 呼び出し元アニメーション内で指定されている変数とタイミング プロパティは、パーツ側アニメーションにも渡されます。
 
-###`var()` 式と `calc()` 式
+### `var()` 式と `calc()` 式
 
 `amp-animation` では、タイミングやキーフレームの値に `var()` 式や `calc()` 式を使用できます。
 
@@ -538,11 +538,11 @@ CSS `@keyframes` は、[Web Animations 仕様](https://www.w3.org/TR/web-animati
 
 アニメーション コンポーネントは、それぞれ独自の変数を `--var-name` フィールドとして指定できます。この変数はネスト アニメーションに反映され、スタイルシート（`<style>` タグ）を通じて指定されているターゲット要素の変数をオーバーライドします。`var()` 式は、変数値を解決する際、まずアニメーション内で指定されていないか確認し、その次にターゲット スタイルをクエリします。
 
-###CSS 拡張機能
+### CSS 拡張機能
 
 `amp-animation` は、一般的なアニメーションに必要とされる CSS 拡張機能（`rand()`、`num()`、`width()`、`height()` など）をサポートしています。各関数は、タイミングやキーフレームの値など、`amp-animation` 内で CSS 値を使用できる場所であればどこででも使用できます。
 
-####CSS `index()` 拡張機能
+#### CSS `index()` 拡張機能
 
 `index()` 関数は、アニメーション効果内の現在のターゲット要素のインデックスを返します。`selector` プロパティを使用して複数のターゲットを同じ効果でアニメーション化する場合に最適です。セレクタによって合致した 1 番目のターゲットはインデックス `0` に、2 番目のターゲットはインデックス `1` になり、以降も順に続いていきます。
 
@@ -554,7 +554,7 @@ CSS `@keyframes` は、[Web Animations 仕様](https://www.w3.org/TR/web-animati
   }
 ```
 
-####CSS `length()` 拡張機能
+#### CSS `length()` 拡張機能
 
 `length()` 関数は、アニメーション効果内のターゲット要素の数を返します。この関数は、`index()` と組み合わせて使用すると最も効果的です。
 
@@ -565,7 +565,7 @@ CSS `@keyframes` は、[Web Animations 仕様](https://www.w3.org/TR/web-animati
   }
 ```
 
-####CSS `rand()` 拡張機能
+#### CSS `rand()` 拡張機能
 
 `rand()` 関数はランダムな CSS 値を返します。2 つの形式があります。
 
@@ -583,7 +583,7 @@ CSS `@keyframes` は、[Web Animations 仕様](https://www.w3.org/TR/web-animati
   }
 ```
 
-####CSS `width()` / `height()` 拡張機能
+#### CSS `width()` / `height()` 拡張機能
 
 `width()` 拡張機能と `height()` 拡張機能は、アニメーション要素や、セレクタによって指定された要素の幅と高さを返します。戻り値はピクセル単位です（例: `100px`）。
 
@@ -602,7 +602,7 @@ CSS `@keyframes` は、[Web Animations 仕様](https://www.w3.org/TR/web-animati
   }
 ```
 
-####CSS `num()` 拡張機能
+#### CSS `num()` 拡張機能
 
 `num()` 関数は、CSS 値の数値表現を返します。たとえば、次のようになります。
 
@@ -617,7 +617,7 @@ CSS `@keyframes` は、[Web Animations 仕様](https://www.w3.org/TR/web-animati
   }
 ```
 
-###SVG アニメーション
+### SVG アニメーション
 
 アニメーションには SVG を使用することをおすすめします。
 
@@ -627,11 +627,11 @@ SVG アニメーションは、[キーフレーム向けホワイトリストに
 * `transform` CSS は IE / Edge 向けにポリフィルされますが、`transform-origin` をポリフィルすることはできません。そのため、IE / Edge との互換性が必要な場合は、デフォルトの `transform-origin` だけを使用することをおすすめします。
 * ほとんどのブラウザは、`transform-origin` CSS を正しく解釈することができません。[Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=740300)、[Safari](https://bugs.webkit.org/show_bug.cgi?id=174285)、[Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=1379340) に関する問題をご覧ください。ほとんどの場合、[CSS `transform-box`](https://developer.mozilla.org/ja/docs/Web/CSS/transform-box) を実装することで、この問題を解決できます。`transform-origin` が重要な場合は、今後の互換性のために `transform-box` CSS も組み込んでおくことをおすすめします。
 
-##アニメーションをトリガーする
+## アニメーションをトリガーする
 
 アニメーションは、`trigger` 属性または `on` アクションでトリガーできます。
 
-###`trigger` 属性
+### `trigger` 属性
 
 現在のところ、`trigger` 属性で使用できる値は、`visibility` に限られています。`visibility` は、基盤のドキュメントや埋め込みがビューポート内で表示されているときにトリガーされます。
 
@@ -643,7 +643,7 @@ SVG アニメーションは、[キーフレーム向けホワイトリストに
   </amp-animation>
 ```
 
-###`on` アクションを通じてトリガーする
+### `on` アクションを通じてトリガーする
 
 たとえば、次のようになります。
 
@@ -654,7 +654,7 @@ SVG アニメーションは、[キーフレーム向けホワイトリストに
 <button on="tap:anim1.start">Animate</button>
 ```
 
-##`on` アクション
+## `on` アクション
 
 `amp-animation` 要素は、以下のアクションをエクスポートします。
 

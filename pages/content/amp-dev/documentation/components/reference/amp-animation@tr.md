@@ -9,18 +9,22 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Telif Hakkı 2016 The AMP HTML Authors. Tüm Hakları Saklıdır.
+Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Apache Lisansı, Sürüm 2.0 ("Lisans") ile lisanslıdır; bu dosyayı Lisans koşulları dışında kullanamazsınız.
-       Lisansın bir kopyasını şu adresten edinebilirsiniz:
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       Geçerli yasa tarafından gerekli görülmediği veya yazılı olarak bir sözleşme yapılmadığı sürece, Lisanslı olarak dağıtılan yazılım açıkça veya zımni olarak HİÇBİR GARANTİ VEYA KOŞUL SUNULMADAN "OLDUĞU GİBİ" dağıtılır.
-       Lisans kapsamında belirli bir dilde sağlanan izinleri ve uygulanan kısıtlamaları öğrenmek için söz konusu dille ilgili Lisans'a bakın.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-#amp-animation
+# amp-animation
 
 Animasyonları tanımlar ve çalıştırır.
 
@@ -41,15 +45,15 @@ Animasyonları tanımlar ve çalıştırır.
 
 
 
-##Genel Bakış
+## Genel Bakış
 
 AMP Animasyonları, AMP dokümanlarındaki animasyonları tanımlamak ve çalıştırmak için [Web Animasyonları API'sini](https://www.w3.org/TR/web-animations/) kullanır.
 
-##Biçim
+## Biçim
 
 Bir `amp-animation` öğesi, böyle bir animasyonu JSON yapısı olarak tanımlar.
 
-###Üst düzey animasyon spesifikasyonu
+### Üst düzey animasyon spesifikasyonu
 
 Üst düzey nesne, bir `animations` dizisi olarak tanımlanmış rastgele sayıda animasyon bileşeninden oluşan genel animasyon sürecini tanımlar:
 ```html
@@ -72,11 +76,11 @@ Bir `amp-animation` öğesi, böyle bir animasyonu JSON yapısı olarak tanımla
 </amp-animation>
 ```
 
-###DOM'da yerleşim
+### DOM'da yerleşim
 
 `<amp-animation>` öğesinin, `<body>` öğesinin doğrudan alt öğesi olarak yerleştirilmesine yalnızca `trigger="visibility"` değeri kullanılırsa izin verilir. `trigger` belirtilmediyse ve animasyonun oynatılması, işlemleri aracılığıyla programlı olarak kontrol ediliyorsa DOM'da herhangi bir yere yerleştirilebilir.
 
-###Animasyon bileşeni
+### Animasyon bileşeni
 
 Her animasyon bileşeni bir [animasyon karesi efektidir](https://www.w3.org/TR/web-animations/#dom-keyframeeffect-keyframeeffect) ve şunlardan oluşur:
 
@@ -97,23 +101,23 @@ Her animasyon bileşeni bir [animasyon karesi efektidir](https://www.w3.org/TR/w
 }
 ```
 
-###Koşullar
+### Koşullar
 
 Koşullar, bu animasyon bileşeninin nihai animasyona dahil edilip edilmeyeceğini belirtebilir.
 
-####Medya sorgusu
+#### Medya sorgusu
 
 Medya sorgusu, `media` özelliği kullanılarak belirtilebilir. Bu özellik, [Window.matchMedia](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia) API'si için izin verilen herhangi bir ifadeyi içerebilir ve `@media` CSS kuralına karşılık gelir.
 
 Bir animasyon bileşeni için değer belirtilirse animasyon bileşeni, yalnızca medya sorgusunun geçerli ortamla eşleşmesi durumunda dahil edilir.
 
-####Destek koşulu
+#### Destek koşulu
 
 Destek koşulu, `supports` özelliği kullanılarak belirtilebilir. Bu özellik, [CSS.supports](https://developer.mozilla.org/en-US/docs/Web/API/CSS/supports) API'si için izin verilen herhangi bir ifadeyi içerebilir ve `@supports` CSS kuralına karşılık gelir.
 
 Bir animasyon bileşeni için değer belirtilirse animasyon bileşeni, yalnızca destek koşulunun geçerli ortamla eşleşmesi durumunda dahil edilir.
 
-###Animasyon `switch` deyimi
+### Animasyon `switch` deyimi
 
 Bazı durumlarda, birden çok [koşullu animasyonu](#conditions) isteğe bağlı bir varsayılan değerle tek bir animasyonda birleştirmek kullanışlı olur. Bu işlem, `switch` animasyon deyiminin şu biçimde kullanılmasıyla yapılabilir:
 
@@ -160,7 +164,7 @@ Bazı durumlarda, birden çok [koşullu animasyonu](#conditions) isteğe bağlı
 }
 ```
 
-###Değişkenler
+### Değişkenler
 
 Bir animasyon bileşeni, zamanlama ve animasyon karelerinin değerleri için kullanılacak CSS değişkenlerini `var()` ifadeleriyle bildirebilir. `var()` ifadeleri, geçerli hedef bağlamı kullanılarak değerlendirilir. Animasyon bileşenlerinde belirtilen CSS değişkenleri, iç içe yerleştirilmiş animasyonlara yayılır, animasyon hedeflerine uygulanır ve böylece, nihai animasyonlarda kullanılan CSS değişkenlerini geçersiz kılar.
 
@@ -193,7 +197,7 @@ Bu örnekte:
 
 `var()` hakkında daha fazla bilgi için [`var()` ve `calc()` bölümüne](#var-and-calc-expressions) bakın.
 
-###Zamanlama özellikleri
+### Zamanlama özellikleri
 
 Üst düzey animasyon ve animasyon bileşenleri, zamanlama özellikleri içerebilir. Bu özellikler, Web Animasyonu spesifikasyonunun [AnimasyonEffectTimingProperties](https://www.w3.org/TR/web-animations/#dictdef-animationeffecttimingproperties) bölümünde ayrıntılı olarak tanımlanmıştır. Burada izin verilen özellik grubu şunları içerir:
 
@@ -271,7 +275,7 @@ JSON'daki zamanlama özelliklerine bir örnek:
 
 Animasyon bileşenleri, üst düzey animasyon için belirtilen zamanlama özelliklerini devralır.
 
-###Alt hedefler
+### Alt hedefler
 
 `selector` öğesinin belirtilebileceği her yerde, `subtargets: []` değerinin belirtilmesi de mümkündür. Alt hedefler, bir dizin veya CSS seçici aracılığıyla belirtilen belirli alt hedefler için animasyonda tanımlanan zamanlama özelliklerini veya değişkenleri geçersiz kılabilir.
 
@@ -298,7 +302,7 @@ Bu örnekte, varsayılan olarak ".target" ile eşleşen tüm hedefler 100 ms gec
 
 Birden çok alt hedefin bir hedef öğeyle eşleşebileceğine dikkat edin.
 
-###Animasyon kareleri
+### Animasyon kareleri
 
 Animasyon kareleri, Web Animasyonları spesifikasyonunun [animasyon kareleri bölümünde](https://www.w3.org/TR/web-animations/#processing-a-keyframes-argument) açıklanan çeşitli şekillerde veya CSS'de `@keyframes` adına bir dize yönlendirmesi olarak belirtilebilir.
 
@@ -366,7 +370,7 @@ Ek animasyon karesi biçimleri için [Web Animasyonları spesifikasyonuna](https
 
 Özellik değerleri, aralarında `calc()`, `var()` ve diğer CSS ifadelerinin de bulunduğu geçerli CSS değerlerine izin verir.
 
-####CSS'den animasyon kareleri
+#### CSS'den animasyon kareleri
 
 Animasyon karelerini belirtmenin bir başka yolu, bunları dokümanın stil sayfasında (`<style>` etiketi) `@keyframes` CSS kuralı olarak belirtmektir. Örneğin:
 ```html
@@ -397,7 +401,7 @@ CSS `@keyframes`, [Web Animasyonları spesifikasyonu](https://www.w3.org/TR/web-
 - Animasyon kareleri CSS'de belirtildiğinde, `calc()` ve `var()` yöntemlerini desteklemeyen platformlar, `amp-animation` çoklu dolgularından yararlanamaz. Dolayısıyla, yedek değerlerin her zaman CSS'ye eklenmesi tavsiye edilir.
 - [`width()`, `height()`, `num()`, `rand()`, `index()` ve `length()`](#css-extensions) gibi CSS uzantıları CSS'de kullanılamaz.
 
-####Animasyon kareleri için beyaz listedeki özellikler
+#### Animasyon kareleri için beyaz listedeki özellikler
 
 Tüm CSS özellikleri animasyon karelerinde kullanılamaz. Yalnızca modern tarayıcıların optimize edip hızlı bir şekilde canlandırabildiği CSS özellikleri beyaz listeye eklenir. İyi performans sağladığı onaylanan özelliklerin sayısı arttıkça bu liste de genişleyecektir. Şu anda liste şu özellikleri içermektedir:
 - [`opacity`](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)
@@ -407,7 +411,7 @@ Tüm CSS özellikleri animasyon karelerinde kullanılamaz. Yalnızca modern tara
 
 Tedarikçi firma önekli CSS özelliklerinin kullanılmasına gerek olmadığına veya bunlara izin verilmediğine dikkat edin.
 
-###Animasyon yapılandırmasının kısaltılmış biçimleri
+### Animasyon yapılandırmasının kısaltılmış biçimleri
 
 Animasyon yalnızca tek bir öğe içeriyorsa ve tek bir animasyon karesi efekti yeterliyse yapılandırma, yalnızca bu bir animasyon bileşenine indirgenebilir. Örneğin:
 ```html
@@ -443,7 +447,7 @@ Animasyon bir bileşen listesinden oluşuyorsa ancak üst düzey animasyona sahi
   </amp-animation>
 ```
 
-###Animasyon düzeni
+### Animasyon düzeni
 
 Animasyonlar, diğer animasyonlara başvuruda bulunabilir ve böylece, çeşitli `amp-animation` bildirimleri tek bir nihai animasyonda birleştirebilir. Animasyona başka bir animasyondan başvurmak iç içe yerleştirmeyle büyük ölçüde aynıdır. Bir kişinin animasyonları farklı öğelere bölmek istemesinin nedeni, aynı animasyonu çeşitli yerlerden yeniden kullanmak veya her animasyon bildirimini daha küçük ve daha yönetilebilir yapmaktır.
 
@@ -497,7 +501,7 @@ Burada, ".target-class" parametresi bir veya birden fazla öğeyle eşleşirse y
 
 Çağrıyı yapan animasyonunda belirtilen değişkenler ve zamanlama özellikleri de eklenen animasyona geçirilir.
 
-###`var()` ve `calc()` ifadeleri
+### `var()` ve `calc()` ifadeleri
 
 `amp-animation`, zamanlama ve animasyon karesi değerleri için `var()` ve `calc()` ifadelerinin kullanılmasına izin verir.
 
@@ -535,11 +539,11 @@ Burada, ".target-class" parametresi bir veya birden fazla öğeyle eşleşirse y
 
 Animasyon bileşenleri kendi değişkenlerini `--var-name` alanları olarak belirtebilir. Bu değişkenler, iç içe yerleştirilmiş animasyonlara yayılır ve stil sayfası (`<style>` etiketi) aracılığıyla belirtilen hedef öğelerin değişkenlerini geçersiz kılar. `var()` ifadeleri, önce animasyonlarda belirtilenleri ve ardından, hedef stilleri sorgulayarak değişken değerlerini çözümlemeye çalışır.
 
-###CSS uzantıları
+### CSS uzantıları
 
 `amp-animation`, tipik animasyon gereksinimleri için çeşitli CSS uzantıları sağlar: `rand()`, `num()`, `width()` ve `height()`. Bu işlevler, zamanlama ve animasyon karesi değerleri dahil olmak üzere CSS değerlerinin `amp-animation` içinde kullanılabildiği her yerde kullanılabilir.
 
-####CSS `index()` uzantısı
+#### CSS `index()` uzantısı
 
 `index()` işlevi, animasyon efektindeki geçerli hedef öğesinin bir dizinini döndürür. Bu en çok birden fazla hedefin `selector` özelliği kullanılarak aynı efektle canlandırıldığı durumlarla alakalıdır. Seçici tarafından eşleştirilen ilk hedef dizin `0` , ikincisi dizin `1` değerine sahip olur ve diğer hedeflerin değerleri bu düzende devam eder.
 
@@ -551,7 +555,7 @@ Diğer özelliklerin yanı sıra, bu özellik `calc()` ifadeleriyle birleştiril
   }
 ```
 
-####CSS `length()` uzantısı
+#### CSS `length()` uzantısı
 
 `length()` işlevi, animasyon efektindeki hedef öğe sayısını döndürür. Bu uzantı, en çok `index()` ile birleştirildiği durumlarla alakalıdır:
 
@@ -562,7 +566,7 @@ Diğer özelliklerin yanı sıra, bu özellik `calc()` ifadeleriyle birleştiril
   }
 ```
 
-####CSS `rand()` uzantısı
+#### CSS `rand()` uzantısı
 
 `rand()` işlevi rastgele bir CSS değeri döndürür. İki biçimi vardır.
 
@@ -580,7 +584,7 @@ Bağımsız değişken kullanılmayan biçim 0 ile 1 arasındaki rastgele bir sa
   }
 ```
 
-####CSS `width()` ve `height()` uzantıları
+#### CSS `width()` ve `height()` uzantıları
 
 `width()` ve `height()` uzantıları, animasyonlu öğenin veya seçici tarafından belirtilen öğenin genişliğini/yüksekliğini döndürür. Döndürülen değer piksel cinsindendir (ör. `100px`).
 
@@ -598,7 +602,7 @@ Bu işlevler `calc()`, `var()` ve diğer CSS ifadeleriyle birleştirilebilir. Ö
   }
 ```
 
-####CSS `num()` uzantısı
+#### CSS `num()` uzantısı
 
 `num()` işlevi, bir CSS değeri için sayı gösterimini döndürür. Örneğin:
 
@@ -613,7 +617,7 @@ Bu işlevler `calc()`, `var()` ve diğer CSS ifadeleriyle birleştirilebilir. Ö
   }
 ```
 
-###SVG animasyonları
+### SVG animasyonları
 
 SVG'ler harikadır ve bunların animasyonlar için kullanılmasını kesinlikle öneririz!
 
@@ -623,11 +627,11 @@ SVG animasyonları, bazı küçük farklarla [Animasyon kareleri için beyaz lis
 * `transform` CSS'sine IE/Edge için çoklu dolgu yapılırken, ne yazık ki `transform-origin` için çoklu dolgu yapmak mümkün değildir. Dolayısıyla, IE/Edge ile uyumluluk istendiğinde, yalnızca varsayılan `transform-origin` öğesinin kullanılması önerilir.
 * Tarayıcıların çoğu, şu anda `transform-origin` CSS'sini doğru şekilde yorumlama konusunda sorun yaşamaktadır. [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=740300), [Safari](https://bugs.webkit.org/show_bug.cgi?id=174285) ve [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=1379340) ile ilgili sorunlara bakın. Bu karışıklığın büyük bir kısmı, [CSS `transform-box`](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-box) uygulandığında çözülür. `transform-origin` öğesinin önemli olduğu durumlarda, gelecekte uyumlu olması için istenen `transform-box` CSS'sinin de eklenmesi önerilir.
 
-##Animasyonu tetikleme
+## Animasyonu tetikleme
 
 Animasyon, bir `trigger` özelliği veya bir `on` işlemi aracılığıyla tetiklenebilir.
 
-###`trigger` özelliği
+### `trigger` özelliği
 
 Şu anda, `trigger` özelliği için kullanılabilen tek değer `visibility` değeridir. `visibility`, temel doküman veya yerleştirme (görüntü alanında) görünür olduğunda tetiklenir.
 
@@ -639,7 +643,7 @@ Animasyon, bir `trigger` özelliği veya bir `on` işlemi aracılığıyla tetik
   </amp-animation>
 ```
 
-###`on` işlemi aracılığıyla tetikleme
+### `on` işlemi aracılığıyla tetikleme
 
 Örneğin:
 
@@ -650,7 +654,7 @@ Animasyon, bir `trigger` özelliği veya bir `on` işlemi aracılığıyla tetik
 <button on="tap:anim1.start">Animate</button>
 ```
 
-##`on` işlemleri
+## `on` işlemleri
 
 `amp-animation` öğesi aşağıdaki işlemleri dışa aktarır:
 

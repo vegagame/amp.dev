@@ -7,21 +7,22 @@ teaser:
 ---
 
 <!--
-       Copyright 2018 The AMP HTML Authors. Todos los derechos reservados.
+Copyright 2018 The AMP HTML Authors. All Rights Reserved.
 
-       Con licencia Apache, versión 2.0 (en adelante, la "Licencia").
-       Este archivo solo se puede utilizar según lo estipulado en la Licencia.
-       Se puede obtener una copia de la Licencia en la siguiente página:
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       A menos que lo exija la legislación aplicable o se acuerde por escrito, el software
-       distribuido bajo la Licencia se proporciona "TAL CUAL", SIN NINGÚN
-       TIPO DE GARANTÍA NI DE CONDICIÓN, ni expresa ni implícita.
-       En la Licencia se puede consultar la información relativa a las limitaciones y a los permisos aplicables a cada idioma.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-#amp-3d-gltf
+# amp-3d-gltf
 
 Muestra modelos en 3D en formato GL Transmission Format (gITF).
 
@@ -40,13 +41,13 @@ Muestra modelos en 3D en formato GL Transmission Format (gITF).
   </tr>
 </table>
 
-##Uso
+## Uso
 
 El componente `amp-3d-gltf` muestra modelos en 3D que están en formato gITF.
 
 **Nota:** Para poder mostrar estos modelos, se necesita un navegador compatible con WebGL.
 
-###Ejemplo
+### Ejemplo
 
 ```html
 <amp-3d-gltf
@@ -58,7 +59,7 @@ El componente `amp-3d-gltf` muestra modelos en 3D que están en formato gITF.
     src="path/to/model.glb"></amp-3d-gltf>
 ```
 
-###Limitaciones
+### Limitaciones
 
 Actualmente, solo funciona con glTF 2.0.
 
@@ -67,11 +68,11 @@ Funciones no admitidas:
 - cámaras insertadas
 - animación
 
-###CORS
+### CORS
 
 `amp-3d-gltf` hace una solicitud `fetch` desde el origen `https://<random>.ampproject.net`, por lo que `access-control-allow-origin: *.ampproject.net` debe aparecer en el encabezado de respuesta del punto de conexión que se ha definido como `src`. El comodín es necesario porque el origen tiene un componente de subdominio aleatorio.
 
-##Atributos
+## Atributos
 
 <table>
   <tr>
@@ -105,7 +106,7 @@ Funciones no admitidas:
     </tr>
   </table>
 
-##Acciones
+## Acciones
 
 <table>
   <tr>
@@ -119,6 +120,6 @@ Funciones no admitidas:
     </tr>
   </table>
 
-##Validación
+## Validación
 
 Consulta las [reglas de amp-3d-gltf](https://github.com/ampproject/amphtml/blob/master/extensions/amp-3d-gltf/validator-amp-3d-gltf.protoascii) en la especificación de la herramienta de validación de AMP.

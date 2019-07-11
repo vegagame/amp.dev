@@ -10,22 +10,22 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
+Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Apache 라이선스 버전 2.0(이하 '라이선스')에 따라 사용이 허가되었으므로,
-       라이선스를 준수하지 않는 경우 이 파일을 사용할 수 없습니다.
-       해당 라이선스의 사본은 다음에서 가져올 수 있습니다.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       적용 가능한 법률에서 요구하거나 서면으로 동의하지 않은 경우
-       라이선스에 따라 배포된 소프트웨어는 어떠한 종류의 명시적
-       또는 묵시적 보증 또는 조건 없이 '있는 그대로' 배포됩니다.
-       라이선스의 허가 및 제한사항에 관한 구체적인 문구는 라이선스를
-       참조하시기 바랍니다.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-#amp-accordion
+# amp-accordion
 
 조회 사용자가 콘텐츠의 개요를 한눈에 파악하고 원하는 섹션으로 자유롭게 이동할 수 있습니다. 섹션에 몇 문장밖에 없을 때도 스크롤해야 하는 휴대기기에 유용합니다.
 
@@ -45,7 +45,7 @@ teaser:
 </table>
 
 
-##동작
+## 동작
 
 `amp-accordion` 구성요소를 사용하면 접거나 쳐지는 콘텐츠 섹션을 표시할 수 있습니다. 각 `amp-accordion` 구성요소의 바로 하위 구성요소는 아코디언의 섹션으로 간주됩니다. 각 노드는 `<section>` 태그여야 합니다.
 
@@ -56,7 +56,7 @@ teaser:
 * 섹션의 제목을 클릭하거나 탭하면 섹션이 펼쳐지거나 접힙니다.
 * `amp-accordion` 요소에서 각 섹션의 접힌 상태와 펼친 상태는 세션 수준 동안 유지됩니다. 이러한 상태를 유지하지 않으려면 `disable-session-states` 속성을 `amp-accordion` 요소에 추가하세요.
 
-####예: 아코디언 표시
+#### 예: 아코디언 표시
 
 이 예에서는 3개의 섹션을 표시하며, 세 번째 섹션이 페이지 로드 시 펼쳐집니다.  `disable-session-states`를 설정하여 접힌 상태와 펼친 상태를 유지하지 않도록 설정할 수 있습니다.
 
@@ -73,7 +73,7 @@ teaser:
 `amp-accordion` 데모를 더 보려면 [AMP By Example](https://ampbyexample.com/components/amp-accordion/)을 방문하세요.
 [/tip]
 
-###이벤트
+### 이벤트
 
 다음 이벤트는 `accordion`의 `section`에서 트리거됩니다.
 
@@ -88,7 +88,7 @@ teaser:
   </tr>
 </table>
 
-###작업
+### 작업
 
 <table>
   <tr>
@@ -109,7 +109,7 @@ teaser:
   </tr>
 </table>
 
-####속성
+#### 속성
 
 <table>
   <tr>
@@ -130,7 +130,7 @@ teaser:
   </tr>
 </table>
 
-##스타일 지정
+## 스타일 지정
 
 * `amp-accordion` 요소 선택기를 사용해 자유롭게 스타일을 지정할 수 있습니다.
 * `amp-accordion` 요소는 항상 `display: block`입니다.
@@ -140,6 +140,6 @@ teaser:
 * `<amp-accordion>`, `<section>`, 제목, 콘텐츠 요소의 여백은 0으로 설정되며 맞춤 스타일에서 재정의될 수 있습니다.
 * 헤더와 콘텐츠 요소는 모두 `position: relative`입니다.
 
-##유효성 검사
+## 유효성 검사
 
 AMP 유효성 검사기 사양의 [amp-accordion 규칙](https://github.com/ampproject/amphtml/blob/master/extensions/amp-accordion/validator-amp-accordion.protoascii)을 참조하세요.

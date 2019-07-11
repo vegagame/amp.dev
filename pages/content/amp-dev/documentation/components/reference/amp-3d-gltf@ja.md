@@ -7,22 +7,22 @@ teaser:
 ---
 
 <!--
-       Copyright 2018 The AMP HTML Authors. All Rights Reserved.
+Copyright 2018 The AMP HTML Authors. All Rights Reserved.
 
-       Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS-IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 
-#amp-3d-gltf
+# amp-3d-gltf
 
 GL Transmission Format（glTF）の 3D モデルを表示します。
 
@@ -41,13 +41,13 @@ GL Transmission Format（glTF）の 3D モデルを表示します。
   </tr>
 </table>
 
-##使用方法
+## 使用方法
 
 `amp-3d-gltf` コンポーネントは、glTF 形式の 3D モデルを表示します。
 
 **注**: このモデルを表示するには、WebGL 対応ブラウザが必要です。
 
-###例
+### 例
 
 ```html
 <amp-3d-gltf
@@ -59,7 +59,7 @@ GL Transmission Format（glTF）の 3D モデルを表示します。
     src="path/to/model.glb"></amp-3d-gltf>
 ```
 
-###制限事項
+### 制限事項
 
 現在のところ、対応しているのは glTF 2.0 だけに限られます。
 
@@ -68,11 +68,11 @@ GL Transmission Format（glTF）の 3D モデルを表示します。
 - embeded cameras
 - animation
 
-###CORS
+### CORS
 
 `amp-3d-gltf` は、オリジンの `https://<random>.ampproject.net` から `fetch` リクエストを作成します。そのため、エンドポイントのレスポンス ヘッダーで `access-control-allow-origin: *.ampproject.net` を `src` として指定する必要があります。オリジンにはランダムなサブドメイン コンポーネントがあるため、ワイルドカードが必要です。
 
-##属性
+## 属性
 
 <table>
   <tr>
@@ -106,7 +106,7 @@ GL Transmission Format（glTF）の 3D モデルを表示します。
     </tr>
   </table>
 
-##アクション
+## アクション
 
 <table>
   <tr>
@@ -120,6 +120,6 @@ GL Transmission Format（glTF）の 3D モデルを表示します。
     </tr>
   </table>
 
-##検証
+## 検証
 
 AMP 検証ツール仕様の [amp-3d-gltf ルール](https://github.com/ampproject/amphtml/blob/master/extensions/amp-3d-gltf/validator-amp-3d-gltf.protoascii)をご覧ください。

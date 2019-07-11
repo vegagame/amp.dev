@@ -6,11 +6,11 @@ teaser:
   text: 一种用于展示广告的容器。
 ---
 
-#amp-ad/amp-embed
+# amp-ad/amp-embed
 
 一种用于展示广告的容器。`amp-embed` 是 `amp-ad` 标记的别名，以不同的标记名称提供后者的所有功能。在语义上更准确的情况下，请使用 `amp-embed`。AMP 文档仅支持通过 HTTPS 投放的广告/嵌入内容。
 
-#<a name="amp-ad"></a> `amp-ad`/`amp-embed`
+# `amp-ad` / `amp-embed`
 
 
 [tip type="note"]
@@ -18,14 +18,21 @@ teaser:
 [/tip]
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
-<!--- 版权所有 2015 The AMP HTML Authors。保留所有权利。
+<!---
+Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 
-       根据 Apache 许可 2.0 版（以下简称“许可”）授权用户使用；您只有在遵循该许可的情况下才可使用本文件。您可以通过以下网址获得该许可的副本：
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       除非适用法律要求或已达成书面协议，否则按照该许可分发的软件均“按原样”分发，不提供任何类型的担保或条件（无论明示或暗示）。有关该许可规定的具体语言管辖权限和限制，请参阅该许可。
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
 <table>
   <tr>
@@ -46,13 +53,13 @@ teaser:
   </tr>
 </table>
 
-##行为
+## 行为
 
 与 AMP 文档中的所有其他资源一样，广告会随一个名为 `<amp-ad>` 的特殊自定义元素一起加载。AMP 文档中不得运行任何由广告网络提供的 JavaScript。不过，AMP runtime 会通过 iframe 沙盒将来自另一个来源的 iframe 加载为 AMP 文档，并且会在该 iframe 沙盒内执行相应广告网络的 JS。
 
 `<amp-ad>` 要求根据其布局类型需要遵从的[规则](https://www.ampproject.org/docs/design/amp-html-layout#%28tl;dr%29-summary-of-layout-requirements-&amp;-behaviors)指定宽度值和高度值，并要求提供 `type` 参数，以便选择展示哪个广告网络。标记上的所有 `data-*` 属性会自动作为参数传递给最终呈现广告的代码。给定类型的广告网络所需的 `data-` 属性取决于广告网络，并且必须与广告网络一起记录。
 
-####示例：展示一些广告
+#### 示例：展示一些广告
 
 <!--嵌入式示例 - 在 ampproject.org 中展示-->
 
@@ -63,7 +70,7 @@ teaser:
   </amp-iframe>
 </div>
 
-##属性
+## 属性
 
 <table>
   <tr>
@@ -105,7 +112,7 @@ teaser:
   </tr>
 </table>
 
-##占位符
+## 占位符
 
 `amp-ad` 可能支持包含 `placeholder` 属性的子元素。如果广告网络支持此元素，此元素会在广告可供查看之前一直显示。如需了解详情，请参阅[占位符和后备行为](https://www.ampproject.org/docs/guides/responsive/placeholders)。
 
@@ -116,7 +123,7 @@ teaser:
 </amp-ad>
 ```
 
-##没有广告
+## 没有广告
 
 如果没有广告可投放到相应广告位，AMP 会尝试收起 `amp-ad` 元素（即，将其设为 `display: none`）。AMP 负责确定可以在不影响用户滚动位置的情况下执行此操作。如果广告位于当前视口中，则不会被收起，因为该操作会影响用户的滚动位置；不过，如果广告位于当前视口之外，则会被收起。
 
@@ -130,7 +137,7 @@ teaser:
 </amp-ad>
 ```
 
-##投放视频广告
+## 投放视频广告
 
 有 3 种方式可通过视频广告在 AMP 中利用视频获利。
 
@@ -142,7 +149,7 @@ teaser:
     * 如果在第一个视口中加载播放器，请确保有一张海报。[详细信息](https://www.ampproject.org/docs/reference/components/amp-iframe#iframe-with-placeholder)。
     * 必须通过 HTTPS 投放视频和海报。</li>
 
-##从自定义网域投放广告
+## 从自定义网域投放广告
 
 AMP 支持加载用于从自定义网域（例如您自己的网域）加载广告的引导 iframe。
 
@@ -154,7 +161,7 @@ AMP 支持加载用于从自定义网域（例如您自己的网域）加载广�
 
   元标记的 `content` 属性是一个绝对网址，指向您网络服务器上的 remote.html 文件副本。此网址必须使用“https”架构。它所在的位置不能与 AMP 文件所在的位置属于同一来源。例如，如果您将 AMP 文件托管在 `www.example.com` 上，则此网址不能位于 `www.example.com` 上（但可以位于 `something-else.example.com` 上）。如需详细了解允许的 iframe 来源，请参阅[《iframe 来源政策》](../../spec/amp-iframe-origin-policy.md)。
 
-###安全
+### 安全
 
 先**验证传入的数据**，然后再将其传递给 `draw3p` 函数，以确保您的 iframe 仅执行预期的操作。对于允许自定义 JavaScript 注入的广告网络来说，尤为如此。
 
@@ -167,7 +174,7 @@ iframe 还应强制规定它们只能 iframe 到预期的来源。来源为：
 
 可以使用 `draw3p` 的第 3 个参数强制规定来源，但必须额外使用 [allow-from](https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options) 指令，以便实现全面的浏览器支持。
 
-###优化传入广告配置
+### 优化传入广告配置
 
 是否进行此项优化完全由您自己决定：有时需要先优化广告请求，然后再向广告服务器发出广告请求。
 
@@ -188,15 +195,15 @@ draw3p(function(config, done) {
 }, ['allowed-ad-type'], ['your-domain.com']);
 ```
 
-##样式设置
+## 样式设置
 
 `<amp-ad>` 元素本身可能不具备包含 CSS `position: fixed` 集（`amp-lightbox` 除外）的容器，或可能未位于此类容器中。这是因为全页展示的重叠式广告会影响用户体验。我们可能会考虑将来允许在能够使特定用户体验保持不变的 AMP 受控容器中使用类似的广告格式。
 
-##验证
+## 验证
 
 请参阅 AMP 验证工具规范中的 [amp-ad 规则](https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/validator-amp-ad.protoascii)。
 
-##支持的广告网络
+## 支持的广告网络
 
 * [A8](../../ads/a8.md)
 * [A9](../../ads/a9.md)
@@ -378,7 +385,7 @@ draw3p(function(config, done) {
 * [Zedo](../../ads/zedo.md)
 * [Zucks](../../ads/zucks.md)
 
-##支持的嵌入类型
+## 支持的嵌入类型
 
 * [24smi](../../ads/24smi.md)
 * [AJA](../../ads/aja.md)

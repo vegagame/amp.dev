@@ -8,22 +8,22 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2018 The AMP HTML Authors. All Rights Reserved.
+Copyright 2018 The AMP HTML Authors. All Rights Reserved.
 
-       Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS-IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 
-#amp-addthis
+# amp-addthis
 
 Menampilkan sematan fitur situs [AddThis](https://www.addthis.com).
 
@@ -39,15 +39,15 @@ Menampilkan sematan fitur situs [AddThis](https://www.addthis.com).
 </table>
 
 
-##Mengapa AddThis?
+## Mengapa AddThis?
 
 Komponen `amp-addthis` menyediakan tombol berbagi yang simpel dan cantik. Permudah pengunjung situs Anda untuk membagikan konten ke lebih dari 200 saluran sosial termasuk Messenger, WhatsApp, Facebook, Twitter, Pinterest, dan banyak lagi.
 
 AddThis dipercaya oleh lebih dari 15.000.000 situs dengan lebih dari 2 miliar pengguna unik, yang membagikan konten ke seluruh dunia, dalam lebih dari 60 bahasa.
 
-##Tombol Berbagi
+## Tombol Berbagi
 
-###Mengambang
+### Mengambang
 
 Ditempatkan di samping, di atas, atau di bawah halaman, mengikuti gerakan scroll pembaca. Cara terbaik untuk mempromosikan fitur berbagi dengan cara yang tidak terlalu mencolok.
 
@@ -68,7 +68,7 @@ Contoh:
 </amp-addthis>
 ```
 
-###Inline
+### Inline
 
 Integrasikan tombol berbagi ke dalam konten Anda untuk memberikan pengalaman berbagi yang lancar.
 
@@ -88,7 +88,7 @@ Contoh:
 </amp-addthis>
 ```
 
-##Atribut
+## Atribut
 
 <table>
   <tr>
@@ -125,7 +125,7 @@ Contoh:
     </tr>
   </table>
 
-##Dokumentasi Penerapan
+## Dokumentasi Penerapan
 
 1. Jika belum memiliki akun AddThis, Anda perlu membuatnya di [https://www.addthis.com/register](https://www.addthis.com/register). Akun AddThis sepenuhnya gratis dan dapat Anda gunakan untuk mengakses seluruh rangkaian fitur situs serta laporan analisis mendalam kami untuk memahami traffic media sosial situs Anda dengan lebih baik.
 1. Buka [dasbor](https://addthis.com/dashboard) dan sesuaikan Tombol Berbagi Anda (saat ini AMP hanya mendukung Tombol Berbagi jenis Mengambang &amp; Inline).
@@ -137,11 +137,11 @@ Dan selesai! Anda akan melihat tombol berbagi di halaman Anda!
 Lihat [video YouTube](https://www.youtube.com/watch?v=BSkuAB4er2o) kami untuk mendapatkan petunjuk langkah demi langkah:
 <amp-youtube width="480" height="270" data-videoid="BSkuAB4er2o" layout="responsive"></amp-youtube>
 
-##Validasi
+## Validasi
 
 Lihat [aturan amp-addthis](https://github.com/ampproject/amphtml/blob/master/extensions/amp-addthis/validator-amp-addthis.protoascii) dalam spesifikasi validator AMP.
 
-##Privasi
+## Privasi
 
 [http://www.addthis.com/privacy/privacy-policy/](http://www.addthis.com/privacy/privacy-policy/)
 
@@ -159,6 +159,6 @@ Data AddThis dapat terdiri dari berikut ini:
 
 Data AddThis akan diperlakukan sebagai informasi pribadi sejauh yang diwajibkan berdasarkan undang-undang yang berlaku. Sesuai Persyaratan Layanan AddThis, penerbit diwajibkan memperoleh semua persetujuan dan otorisasi Pengguna Akhir yang diperlukan, dan menyampaikan semua pemberitahuan wajib terkait penyediaan Data AddThis yang dikumpulkan dari Pengguna Akhir ke Oracle.
 
-##Dukungan
+## Dukungan
 
 Jika Anda memiliki pertanyaan atau memerlukan bantuan dalam menerapkan AddThis di AMP, hubungi tim dukungan kami yang luar biasa dengan mengirimkan tiket [di sini](https://www.addthis.com/support/) atau dengan mengirim email ke [help@addthis.com](mailto%3ahelp@addthis.com).

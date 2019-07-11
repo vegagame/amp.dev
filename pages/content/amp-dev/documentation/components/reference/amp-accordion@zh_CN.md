@@ -9,16 +9,23 @@ teaser:
 ---
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
-<!--- 版权所有 2016 The AMP HTML Authors。保留所有权利。
+<!---
+Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       根据 Apache 许可 2.0 版（以下简称“许可”）授权用户使用；您只有在遵循该许可的情况下才可使用本文件。您可以通过以下网址获得该许可的副本：
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       除非适用法律要求或已达成书面协议，否则按照该许可分发的软件均“按原样”分发，不提供任何类型的担保或条件（无论明示或暗示）。有关该许可规定的具体语言管辖权限和限制，请参阅该许可。
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-#amp-accordion
+# amp-accordion
 
 提供一种方式，让观看者可以大致了解网页内容并跳至任意部分。对于甚至连一个部分中的几个句子都需要滚动才能完整显示的移动设备来说，这非常有用。
 
@@ -38,7 +45,7 @@ teaser:
 </table>
 
 
-##行为
+## 行为
 
 借助 `amp-accordion` 组件，您能够显示可收起和可展开的内容部分。`amp-accordion` 组件的每个直接子级均被视为可折叠内容中的一个部分。每个节点都必须是 `<section>` 标记。
 
@@ -49,7 +56,7 @@ teaser:
 * 点击/点按某个部分的标题即可展开或收起相应部分。
 * `amp-accordion` 元素中每个部分的收起/展开状态会保存下来供会话级别使用。要选择不保存此状态，请向 `amp-accordion` 元素添加 `disable-session-states` 属性。
 
-####示例：显示可折叠内容
+#### 示例：显示可折叠内容
 
 在此示例中，我们显示了三个部分，其中第三个部分会在网页加载时展开。此外，我们通过设置 `disable-session-states` 选择不保存收起/展开状态。
 
@@ -66,7 +73,7 @@ teaser:
 如需查看 `amp-accordion` 的更多演示，请访问 [AMP By Example](https://ampbyexample.com/components/amp-accordion/)。
 [/tip]
 
-###事件
+### 事件
 
 以下事件会在 `accordion` 的 `section` 上触发。
 
@@ -81,7 +88,7 @@ teaser:
   </tr>
 </table>
 
-###操作
+### 操作
 
 <table>
   <tr>
@@ -102,7 +109,7 @@ teaser:
   </tr>
 </table>
 
-####属性
+#### 属性
 
 <table>
   <tr>
@@ -123,7 +130,7 @@ teaser:
   </tr>
 </table>
 
-##样式设置
+## 样式设置
 
 * 您可以使用 `amp-accordion` 元素选择器自由设置样式。
 * `amp-accordion` 元素始终为 `display: block`。
@@ -133,6 +140,6 @@ teaser:
 * `<amp-accordion>`、`<section>`、标题和内容元素的外边距设为 0，这些值可在自定义样式中替换。
 * 标头和内容元素都是 `position: relative`。
 
-##验证
+## 验证
 
 请参阅 AMP 验证工具规范中的 [amp-accordion 规则](https://github.com/ampproject/amphtml/blob/master/extensions/amp-accordion/validator-amp-accordion.protoascii)。

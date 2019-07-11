@@ -9,18 +9,22 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2016 The AMP HTML Authors. Todos os direitos reservados.
+Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Licenciado sob a Licença Apache, Versão 2.0 (a "Licença"). O uso deste arquivo só é permitido em conformidade com a Licença.
-       Uma cópia da Licença está disponível em
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       A menos que exigido pela legislação aplicável ou acordado por escrito, o software fornecido de acordo com a Licença é distribuído "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIAS OU CONDIÇÕES DE QUALQUER TIPO, expressas ou implícitas.
-       Consulte a Licença para ver informações sobre permissões e limitações para o idioma específico.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-#amp-animation
+# amp-animation
 
 Define e executa animações.
 
@@ -40,15 +44,15 @@ Define e executa animações.
 </table>
 
 
-##Visão geral
+## Visão geral
 
 O AMP Animations usa a [API Web Animations](https://www.w3.org/TR/web-animations/) (link em inglês) para definir e executar animações em documentos AMP.
 
-##Formato
+## Formato
 
 Um elemento `amp-animation` define a animação como uma estrutura JSON.
 
-###Especificação de animação de nível superior
+### Especificação de animação de nível superior
 
 O objeto de nível superior define um processo geral de animação, que consiste em um número arbitrário de componentes de animação definidos como uma matriz `animations`:
 ```html
@@ -71,11 +75,11 @@ O objeto de nível superior define um processo geral de animação, que consiste
 </amp-animation>
 ```
 
-###Posicionamento no DOM
+### Posicionamento no DOM
 
 `<amp-animation>` só pode ser colocado como filho direto do elemento `<body>` se `trigger="visibility"`. Se o `trigger` não for especificado e a reprodução da animação for controlada de modo programático por meio das ações dela, ele poderá ser posicionado em qualquer lugar no DOM.
 
-###Componente de animação
+### Componente de animação
 
 Cada componente de animação tem um [efeito de frame-chave](https://www.w3.org/TR/web-animations/#dom-keyframeeffect-keyframeeffect) (link em inglês) e é composto por:
 
@@ -96,23 +100,23 @@ Cada componente de animação tem um [efeito de frame-chave](https://www.w3.org/
 }
 ```
 
-###Condições
+### Condições
 
 As condições podem especificar se o componente de animação será incluído na animação final.
 
-####Consulta de mídia
+#### Consulta de mídia
 
 A consulta de mídia pode ser especificada usando a propriedade `media`. Essa propriedade pode conter qualquer expressão permitida para a API [Window.matchMedia](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/matchMedia) e corresponde à regra CSS `@media`.
 
 Se um valor for especificado para um componente de animação, o componente só será incluído se a consulta de mídia corresponder ao ambiente atual.
 
-####Condição de suporte
+#### Condição de suporte
 
 A condição de suporte pode ser especificada usando a propriedade `supports`. Essa propriedade pode conter qualquer expressão permitida para a API [CSS.supports](https://developer.mozilla.org/pt-BR/docs/Web/API/CSS/supports) e corresponde à regra CSS `@supports`.
 
 Se um valor for especificado para um componente de animação, o componente só será incluído se a condição de suporte corresponder ao ambiente atual.
 
-###Declaração de animação `switch`
+### Declaração de animação `switch`
 
 Em alguns casos, é recomendável combinar várias [animações condicionais](#conditions) com um padrão opcional em uma única animação. Isso pode ser feito usando a declaração de animação `switch` neste formato:
 
@@ -159,7 +163,7 @@ Por exemplo, esta animação executa uma animação com trajetória, se compatí
 }
 ```
 
-###Variáveis
+### Variáveis
 
 Um componente de animação pode declarar variáveis CSS que serão usadas para valores de tempo e de frames-chave por meio de expressões `var()`. As expressões `var()` são avaliadas usando o contexto de destino atual. As variáveis CSS especificadas nos componentes de animação são propagadas para animações aninhadas, aplicadas a destinos de animação e, assim, substituem as variáveis CSS usadas nas animações finais.
 
@@ -192,7 +196,7 @@ Neste exemplo:
 
 Para mais informações sobre `var()`, consulte a seção [`var()` e `calc()`](#var-and-calc-expressions).
 
-###Propriedades de tempo
+### Propriedades de tempo
 
 Os componentes de animação e de animação de nível superior podem conter propriedades de tempo. Essas propriedades são definidas em detalhes no [AnimationEffectTimingProperties](https://www.w3.org/TR/web-animations/#dictdef-animationeffecttimingproperties) (link em inglês) da especificação da Web Animation. O conjunto de propriedades permitidas inclui:
 
@@ -270,7 +274,7 @@ Um exemplo de propriedades de tempo em JSON:
 
 Os componentes de animação herdam as propriedades de tempo especificadas para a animação de nível superior.
 
-###Subdestinos
+### Subdestinos
 
 Em todos os locais em que o `selector` pode ser especificado, também é possível especificar `subtargets: []`. Os subdestinos podem modificar as propriedades de tempo ou variáveis definidas na animação para subdestinos específicos, indicados por meio de um seletor de CSS ou um índice.
 
@@ -297,7 +301,7 @@ Nesse exemplo, por padrão, todos os destinos correspondentes a ".target" têm u
 
 Observe que vários subdestinos podem corresponder a um único elemento de destino.
 
-###Frames-chave
+### Frames-chave
 
 Os frames-chave podem ser especificados de várias maneiras, descritas na [seção de frames-chave](https://www.w3.org/TR/web-animations/#processing-a-keyframes-argument) da especificação da API Web Animations ou como uma string que se refere ao nome dos `@keyframes` no CSS.
 
@@ -365,7 +369,7 @@ Para outros formatos de frames-chave, consulte a [especificação da Web Animati
 
 Os valores de propriedades permitem qualquer valor CSS válido, incluindo `calc()`, `var()` e outras expressões CSS.
 
-####Frames-chave do CSS
+#### Frames-chave do CSS
 
 Outra maneira de especificar frames-chave é na folha de estilo do documento (tag `<style>`) como uma regra de `@keyframes` do CSS. Por exemplo:
 ```html
@@ -396,7 +400,7 @@ Outra maneira de especificar frames-chave é na folha de estilo do documento (ta
 - As plataformas que não compatíveis com `calc()` e `var()` não poderão usar polyfills do `amp-animation` quando forem especificados frames-chave no CSS. Portanto, é sempre recomendável incluir valores substitutos no CSS.
 - Extensões de CSS, como [`width()`, `height()`, `num()`, `rand()`, `index()` e `length()`](#css-extensions), não podem ser usadas no CSS.
 
-####Propriedades permitidas para frames-chave
+#### Propriedades permitidas para frames-chave
 
 Nem todas as propriedades do CSS podem ser usadas em frames-chave. Somente as propriedades CSS que os navegadores modernos podem otimizar e animar de forma rápida são incluídas na lista de permissões. Essa lista aumentará à medida que mais propriedades forem confirmadas como geradoras de bom desempenho. No momento, a lista contém:
 - [`opacity`](https://developer.mozilla.org/pt-BR/docs/Web/CSS/opacity)
@@ -406,7 +410,7 @@ Nem todas as propriedades do CSS podem ser usadas em frames-chave. Somente as pr
 
 Observe que o uso de propriedades CSS com prefixos do fornecedor não é necessário nem permitido.
 
-###Formas abreviadas de configuração de animação
+### Formas abreviadas de configuração de animação
 
 Se a animação envolver apenas um único elemento, e um único efeito de frames-chave for suficiente, a configuração poderá ser reduzida a esse único componente de animação. Por exemplo:
 ```html
@@ -442,7 +446,7 @@ Se a animação for composta por uma lista de componentes, mas não tiver anima�
   </amp-animation>
 ```
 
-###Composição de animação
+### Composição de animação
 
 As animações podem fazer referência a outras animações, combinando várias declarações de `amp-animation` em uma única animação final. Fazer referência a uma animação a partir de outra animação é basicamente o mesmo que aninhar. O motivo para dividir animações em elementos diferentes seria reutilizar a mesma animação em vários lugares ou simplesmente tornar cada declaração de animação menor e mais gerenciável.
 
@@ -496,7 +500,7 @@ Aqui, se "target-class" corresponder a um elemento, vários ou nenhum, o "anim2'
 
 As variáveis e as propriedades de tempo especificadas na animação de autor da chamada também são transmitidas para a animação incluída.
 
-###Expressões `var()` e `calc()`
+### Expressões `var()` e `calc()`
 
 O `amp-animation` permite o uso de expressões `var()` e `calc()` para valores de tempo e frames-chave.
 
@@ -534,11 +538,11 @@ O polyfill é aplicado às expressões `var()` e `calc()` em plataformas que nã
 
 Os componentes de animação podem especificar as próprias variáveis como campos `--var-name`. Essas variáveis são propagadas em animações aninhadas e substituem variáveis de elementos de destino especificadas pela folha de estilo (tag `<style>`). As expressões `var()` primeiro tentam resolver os valores de variáveis especificados nas animações e depois consultam os estilos de destino.
 
-###Extensões CSS
+### Extensões CSS
 
 O `amp-animation` fornece várias extensões CSS para necessidades típicas de animações: `rand()`, `num()`, `width()` e `height()`. Essas funções podem ser usadas em todos os lugares em que os valores de CSS possam ser utilizados no `amp-animation`, incluindo valores de tempo e de frames-chave.
 
-####Extensão CSS `index()`
+#### Extensão CSS `index()`
 
 A função `index()` retorna um índice do elemento de destino atual no efeito de animação. Isso é mais relevante quando vários destinos são animados com o mesmo efeito usando a propriedade `selector`. O primeiro destino correspondido pelo seletor terá o índice `0`, o segundo terá o índice `1` e assim por diante.
 
@@ -550,7 +554,7 @@ Entre outras coisas, essa propriedade pode ser combinada com expressões `calc()
   }
 ```
 
-####Extensão CSS `length()`
+#### Extensão CSS `length()`
 
 A função `length()` retorna o número de elementos de destino no efeito de animação. Isso é mais relevante quando combinado com `index()`:
 
@@ -561,7 +565,7 @@ A função `length()` retorna o número de elementos de destino no efeito de ani
   }
 ```
 
-####Extensão CSS `rand()`
+#### Extensão CSS `rand()`
 
 A função `rand()` retorna um valor CSS aleatório. Existem dois formatos.
 
@@ -579,7 +583,7 @@ O segundo formato tem dois argumentos e retorna o valor aleatório entre eles.
   }
 ```
 
-####Extensões CSS `width()` e `height()`
+#### Extensões CSS `width()` e `height()`
 
 As extensões `width()` e `height()` retornam a largura/altura do elemento animado ou o elemento especificado pelo seletor. O valor retornado está em pixels, por exemplo, `100px`.
 
@@ -598,7 +602,7 @@ Essas funções podem ser combinadas com `calc()`, `var()` e outras expressões 
   }
 ```
 
-####Extensão CSS `num()`
+#### Extensão CSS `num()`
 
 A função `num()` retorna uma representação numérica de um valor CSS. Por exemplo:
 
@@ -613,7 +617,7 @@ Por exemplo, a expressão a seguir calcula o atraso em segundos proporcional à 
   }
 ```
 
-###Animações SVG
+### Animações SVG
 
 SVGs são incríveis e certamente recomendamos o uso deles em animações.
 
@@ -623,11 +627,11 @@ As animações SVG são compatíveis usando as mesmas propriedades CSS descritas
 * Embora o CSS `transform` tenha polyfill aplicado para o IE/Edge, não é possível transformar `transform-origin` em um polypill. Assim, quando a compatibilidade com o IE/Edge é desejada, recomenda-se usar somente o `transform-origin` padrão.
 * A maioria dos navegadores atuais tem problemas para interpretar o CSS `transform-origin` corretamente. Veja os problemas do [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=740300), [Safari](https://bugs.webkit.org/show_bug.cgi?id=174285) e [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=1379340). A maior parte dessa confusão provavelmente é resolvida depois que o [CSS `transform-box`](https://developer.mozilla.org/pt-BR/docs/Web/CSS/transform-box) é implementado. Quando `transform-origin` é importante, recomenda-se incluir também o CSS `transform-box` desejado para compatibilidade futura.
 
-##Acionar animação
+## Acionar animação
 
 A animação pode ser acionada por meio do atributo `trigger` ou da ação `on`.
 
-###Atributo `trigger`
+### Atributo `trigger`
 
 Atualmente, `visibility` é o único valor disponível para o atributo `trigger`. O `visibility` é acionado quando o documento subjacente ou a incorporação está visível (na janela de visualização).
 
@@ -639,7 +643,7 @@ Por exemplo:
   </amp-animation>
 ```
 
-###Acionar usando a ação `on`
+### Acionar usando a ação `on`
 
 Por exemplo:
 
@@ -650,7 +654,7 @@ Por exemplo:
 <button on="tap:anim1.start">Animate</button>
 ```
 
-##Ações `on`
+## Ações `on`
 
 O elemento `amp-animation` exporta as seguintes ações:
 

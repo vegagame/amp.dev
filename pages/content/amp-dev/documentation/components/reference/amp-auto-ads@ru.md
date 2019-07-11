@@ -6,19 +6,23 @@ teaser:
   text: Динамически размещает объявления на AMP-странице с помощью файла конфигурации с удаленного сервера.
 ---
 
-<!--© Авторы AMPHTML, 2017. Все права защищены.
+<!---
+Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 
-       Лицензия Apache версии 2.0 (далее – Лицензия);
-     этот файл можно использовать только в соответствии с Лицензией.
-     Чтобы получить текст Лицензии, перейдите по ссылке:
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-     Если иное не требуется действующим законодательством или не оговорено в письменном виде, программное обеспечение, распространяемое по Лицензии, распространяется "КАК ЕСТЬ", БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ И УСЛОВИЙ, явных или подразумеваемых.
-     Определения используемых в Лицензии понятий, с помощью которых оговариваются разрешения и ограничения, приводятся в тексте Лицензии.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 
-#amp-auto-ads
+# amp-auto-ads
 
 Динамически размещает объявления на AMP-странице с помощью файла конфигурации со стороннего сервера.
 
@@ -50,7 +54,7 @@ teaser:
 
 
 
-##Принципы работы
+## Принципы работы
 
 При достаточном количестве действительных мест размещения, заданных в конфигурации, компонент `amp-auto-ads` стремится добавить дополнительные объявления, соблюдая ограничения в рекламной сети. Ограничения касаются:
 
@@ -69,12 +73,12 @@ teaser:
   </amp-auto-ads>
 ```
 
-##Поддерживаемые рекламные сети
+## Поддерживаемые рекламные сети
 
 * [AdSense](../../ads/google/adsense.md)
 * [DoubleClick (эксперимент)](../../ads/google/doubleclick.md)
 
-##Атрибуты
+## Атрибуты
 
 <table>
   <tr>
@@ -91,11 +95,11 @@ teaser:
   </tr>
 </table>
 
-##Сведения о конфигурации
+## Сведения о конфигурации
 
 В конфигурации определено, в каких областях страницы при помощи компонента `<amp-auto-ads>` можно размещать рекламу. Конфигурация извлекается из сторонней рекламной сети по адресу, заданному в элементе `ad-network-config.js`, и представляет собой сериализованный объект JSON, который соответствует описанному ниже определению [`ConfigObj`](#configobj).
 
-###Пример конфигурации
+### Пример конфигурации
 
 В приведенном ниже примере объявление должно быть размещено сразу после всех элементов `<P class='paragraph'>`, находящихся в третьем элементе `<DIV id='domId'>` на странице. В этих областях можно размещать только объявления типа "баннер" верхнее и нижнее поля которого составляют 4 и 10 пикселей соответственно.
 
@@ -122,9 +126,9 @@ teaser:
 }
 ```
 
-###Определение объектов
+### Определение объектов
 
-####ConfigObj
+#### ConfigObj
 
 Ниже перечислены поля, которые следует заполнить в объекте конфигурации.
 
@@ -159,7 +163,7 @@ teaser:
     </tr>
   </table>
 
-####PlacementObj
+#### PlacementObj
 
 Ниже перечислены поля, которые следует заполнить в объекте конфигурации `placements`.
 
@@ -204,7 +208,7 @@ teaser:
   </tr>
 </table>
 
-####AnchorObj
+#### AnchorObj
 
 Ниже перечислены поля, которые следует заполнить в объекте конфигурации `anchor`.
 
@@ -244,7 +248,7 @@ teaser:
   </tr>
 </table>
 
-####PlacementStyleObj
+#### PlacementStyleObj
 
 Ниже перечислены поля, которые следует заполнить в объекте конфигурации `style`.
 
@@ -268,7 +272,7 @@ teaser:
   </tr>
 </table>
 
-####RelativePositionEnum
+#### RelativePositionEnum
 
 Значения ENUM для поля `pos` в объекте конфигурации `placements`:
 
@@ -300,7 +304,7 @@ teaser:
   </tr>
 </table>
 
-####PlacementTypeEnum
+#### PlacementTypeEnum
 
 Значения ENUM для поля `type` в объекте конфигурации `placements`:
 
@@ -317,7 +321,7 @@ teaser:
   </tr>
 </table>
 
-####AdConstraintsObj
+#### AdConstraintsObj
 
 Ниже перечислены поля, которые следует заполнить в объекте конфигурации `adConstraints`.
 
@@ -357,7 +361,7 @@ teaser:
         </tr>
       </table>
 
-####SubsequentMinSpacingObj
+#### SubsequentMinSpacingObj
 
 В этих полях указывается объект конфигурации `subsequentMinSpacing`. Данные в поле `subsequentMinSpacing` позволяют изменять интервалы между дополнительными объявлениями исходя из того, сколько рекламных материалов уже есть на странице. Приведем пример:
 
@@ -405,6 +409,6 @@ teaser:
       </tr>
     </table>
 
-##Валидация
+## Валидация
 
 С правилами для компонента amp-auto-ads можно ознакомиться в [спецификации валидатора AMP](https://github.com/ampproject/amphtml/blob/master/extensions/amp-auto-ads/validator-amp-auto-ads.protoascii).

@@ -6,19 +6,23 @@ teaser:
   text: Позволяет издателям легко обеспечивать интеграцию с платформой для микроплатежей LaterPay
 ---
 
-<!--© Авторы AMPHTML, 2017. Все права защищены.
+<!---
+Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 
-       Лицензия Apache версии 2.0 (далее "Лицензия");
-     этот файл можно использовать только в соответствии с Лицензией.
-     Чтобы приобрести копию Лицензии, перейдите по ссылке:
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-     Если иное не требуется действующим законодательством или не оговорено в письменном виде, программное обеспечение, распространяемое по Лицензии, распространяется "КАК ЕСТЬ", БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ И УСЛОВИЙ, явных или подразумеваемых.
-     Определения используемых в Лицензии понятий, с помощью которых оговариваются разрешения и ограничения, приводятся в тексте Лицензии.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 
-#amp-access-laterpay
+# amp-access-laterpay
 
 Позволяет издателям легко обеспечивать интеграцию с платформой для микроплатежей [LaterPay](https://www.laterpay.net). Для работы с `amp-access-laterpay` необходимо использовать [amp-access](https://www.ampproject.org/docs/reference/components/amp-access).
 
@@ -45,7 +49,7 @@ teaser:
 </table>
 
 
-##Действия
+## Действия
 
 [LaterPay](https://laterpay.net) – это платформа для микроплатежей, которая позволяет пользователям покупать онлайн-контент всего в два клика. При этом они сразу получают доступ к оплаченным данным – без предварительной регистрации и отправки личной или платежной информации. Оплата осуществляется только после того, как сумма покупки достигла 5 долл. США или евро на разных сайтах. Поставщики контента могут продавать отдельные элементы или повременный доступ к контенту (ограниченный или постоянный).
 
@@ -67,7 +71,7 @@ teaser:
 
 При работе компонента также применяется [разметка контента для доступа](https://www.ampproject.org/docs/reference/components/amp-access#access-content-markup). Она позволяет скрывать и показывать контент.
 
-##Конфигурация
+## Конфигурация
 
 Конфигурация похожа на ту, что используется для AMP Access, но не требует авторизации, автоматического уведомления и ссылок для входа.
 
@@ -139,7 +143,7 @@ teaser:
         </tr>
       </table>
 
-##Разметка контента для доступа и список вариантов покупки
+## Разметка контента для доступа и список вариантов покупки
 
 Разметка контента для доступа здесь используется так же, как и в случае с AMP Access.
 
@@ -162,7 +166,7 @@ teaser:
 
 ```
 
-##Стилизация
+## Стилизация
 
 К некоторым элементам сгенерированной разметки применяется несколько классов. На элементы без классов можно однозначно ссылаться через селекторы элементов CSS.
 
@@ -206,7 +210,7 @@ teaser:
 
 ```
 
-##Локализация
+## Локализация
 
 Текст, который отображается в диалоговом окне с вариантами покупки, указывается издателем в интерфейсе LaterPay Connector.
 
@@ -267,13 +271,13 @@ teaser:
   </tr>
 </table>
 
-##Аналитика
+## Аналитика
 
 Поскольку в основе `amp-access-laterpay` лежит `amp-access`, этот компонент поддерживает все [события аналитики](https://www.ampproject.org/docs/reference/components/amp-access#integration-with-amp-analytics), которые отправляет `amp-access`.
 
 Подробные практические примеры можно найти на сайте [https://ampexample.laterpay.net/](https://ampexample.laterpay.net/). Все они настроены так, чтобы отправлять эти события.
 
-##Совместное использование AMP Access LaterPay и AMP Access
+## Совместное использование AMP Access LaterPay и AMP Access
 
 Если у вас есть собственная система подписки и вы собираетесь использовать LaterPay только для продажи отдельных статей, можно сочетать AMP Access LaterPay и AMP Access на одной странице.
 
@@ -332,13 +336,13 @@ teaser:
 
 Более подробный пример можно найти по ссылке: [https://ampexample.laterpay.net/dual-amp-access.html](https://ampexample.laterpay.net/dual-amp-access.html).
 
-##Статьи по теме
+## Статьи по теме
 
 * [AMP Access](https://www.ampproject.org/docs/reference/components/amp-access)
 * [LaterPay](https://www.laterpay.net)
 * [LaterPay: как мы работаем с микроплатежами](https://docs.laterpay.net/how_we_do_micropayments/)
 * [LaterPay Connector](https://connectormwi.laterpay.net/docs/index.html) – решение, похожее на AMP Access LaterPay, но созданное для обычных страниц без AMP.
 
-##Проверка
+## Проверка
 
 О правилах для amp-access-laterpay читайте в [спецификации валидатора AMP](https://github.com/ampproject/amphtml/blob/master/extensions/amp-access-laterpay/validator-amp-access-laterpay.protoascii).

@@ -25,7 +25,7 @@ teaser:
      limitations under the License.
 -->
 
-#amp-accordion
+# amp-accordion
 
 閲覧者がコンテンツの概要を一目で把握し、選択した任意のセクションにジャンプできるようにします。この機能は、セクション内の数行の文章でもスクロールが必要なモバイル デバイスの場合に役立ちます。
 
@@ -45,7 +45,7 @@ teaser:
 </table>
 
 
-##動作
+## 動作
 
 `amp-accordion` コンポーネントを使用すると、折りたたみと展開が可能なコンテンツ セクションを表示できます。`amp-accordion` コンポーネントの直接の子は、それぞれアコーディオン内の 1 つのセクションと見なされます。各ノードは、`<section>` タグにする必要があります。
 
@@ -56,7 +56,7 @@ teaser:
 * セクションの見出しをクリック / タップすると、セクションの展開や折りたたみが行われます。
 * `amp-accordion` 要素内の各セクションの折りたたみ状態 / 展開状態は、セッション レベルで保持されます。状態を保持しないようにするには、`amp-accordion` 要素に `disable-session-states` 属性を追加します。
 
-####例: アコーディオンを表示する
+#### 例: アコーディオンを表示する
 
 この例では、3 つのセクションを表示します。3 番目のセクションはページの読み込み時に展開されます。また、`disable-session-states` を設定して、折りたたみ状態や展開状態を保持しないようにします。
 
@@ -73,7 +73,7 @@ teaser:
 `amp-accordion` の他のデモについては、[AMP By Example](https://ampbyexample.com/components/amp-accordion/) をご覧ください。
 [/tip]
 
-###イベント
+### イベント
 
 `accordion` の `section` で、以下のイベントがトリガーされます。
 
@@ -88,7 +88,7 @@ teaser:
   </tr>
 </table>
 
-###アクション
+### アクション
 
 <table>
   <tr>
@@ -109,7 +109,7 @@ teaser:
   </tr>
 </table>
 
-####属性
+#### 属性
 
 <table>
   <tr>
@@ -130,7 +130,7 @@ teaser:
   </tr>
 </table>
 
-##スタイル設定
+## スタイル設定
 
 * `amp-accordion` 要素セレクタを使用して、自由にスタイルを設定できます。
 * `amp-accordion` 要素は常に `display: block` です。
@@ -140,6 +140,6 @@ teaser:
 * `<amp-accordion>` 要素、`<section>` 要素、heading 要素、content 要素のマージンは 0 に設定され、カスタム スタイルでオーバーライドできます。
 * header 要素と content 要素はどちらも `position: relative` です。
 
-##検証
+## 検証
 
 AMP 検証ツール仕様の [amp-accordion ルール](https://github.com/ampproject/amphtml/blob/master/extensions/amp-accordion/validator-amp-accordion.protoascii)をご覧ください。

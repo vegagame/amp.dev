@@ -6,12 +6,11 @@ teaser:
   text: A container to display an ad.
 ---
 
-#amp-ad/amp-embed
+# amp-ad/amp-embed
 
 Container untuk menampilkan iklan. `amp-embed` adalah alias untuk tag `amp-ad`, yang memperoleh semua fungsionalitasnya dengan nama tag berbeda. Gunakan `amp-embed` jika secara semantis lebih akurat. Dokumen AMP hanya mendukung iklan/sematan yang ditayangkan melalui HTTPS.
 
-#<a name="amp-ad"></a> `amp-ad`/`amp-embed`
-
+# `amp-ad` / `amp-embed`
 
 [tip type="note"]
 Spesifikasi `amp-ad`/`amp-embed` besar kemungkinan akan terus berubah secara signifikan seiring waktu. Pendekatan saat ini dirancang untuk mem-bootstrap format agar dapat menampilkan iklan.
@@ -19,19 +18,19 @@ Spesifikasi `amp-ad`/`amp-embed` besar kemungkinan akan terus berubah secara sig
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2015 The AMP HTML Authors. All Rights Reserved.
+Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 
-       Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS-IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 
 <table>
@@ -53,13 +52,13 @@ Spesifikasi `amp-ad`/`amp-embed` besar kemungkinan akan terus berubah secara sig
   </tr>
 </table>
 
-##Perilaku
+## Perilaku
 
 Iklan dimuat seperti semua resource lainnya dalam dokumen AMP, dengan elemen kustom khusus yang disebut `<amp-ad>`. Tidak ada JavaScript yang disediakan jaringan iklan yang diizinkan untuk dijalankan di dalam dokumen AMP. Sebagai gantinya, AMP runtime memuat iframe dari asal yang berbeda (melalui sandbox iframe) sebagai dokumen AMP dan menjalankan JavaScript jaringan iklan di dalam sandbox iframe tersebut.
 
 `<amp-ad>` membutuhkan nilai lebar dan tinggi yang akan ditentukan sesuai [aturan](https://www.ampproject.org/docs/design/amp-html-layout#%28tl;dr%29-summary-of-layout-requirements-&amp;-behaviors) jenis tata letaknya. Argumen `type` diperlukan untuk memilih jenis jaringan iklan yang akan ditampilkan. Semua atribut `data-*` pada tag ini otomatis diteruskan sebagai argumen ke kode yang nantinya merender iklan. Atribut `data-` apa saja yang diperlukan untuk jenis jaringan tertentu bergantung pada, dan harus didokumentasikan bersama, jaringan iklannya.
 
-####Contoh: Menampilkan beberapa iklan
+#### Contoh: Menampilkan beberapa iklan
 
 <!--embedded example - displays in ampproject.org -->
 
@@ -70,7 +69,7 @@ Iklan dimuat seperti semua resource lainnya dalam dokumen AMP, dengan elemen kus
   </amp-iframe>
 </div>
 
-##Atribut
+## Atribut
 
 <table>
   <tr>
@@ -112,7 +111,7 @@ Iklan dimuat seperti semua resource lainnya dalam dokumen AMP, dengan elemen kus
   </tr>
 </table>
 
-##Placeholder
+## Placeholder
 
 Secara opsional, `amp-ad` mendukung elemen turunan dengan atribut `placeholder`. Jika didukung oleh jaringan iklan, elemen ini diperlihatkan hingga iklan tersedia untuk ditampilkan. Pelajari lebih lanjut di [Placeholder &amp; Fallback](https://www.ampproject.org/docs/guides/responsive/placeholders).
 
@@ -123,7 +122,7 @@ Secara opsional, `amp-ad` mendukung elemen turunan dengan atribut `placeholder`.
 </amp-ad>
 ```
 
-##Tidak ada iklan yang tersedia
+## Tidak ada iklan yang tersedia
 
 Jika tidak ada iklan yang tersedia untuk slot, AMP akan mencoba menciutkan elemen `amp-ad` (artinya, menetapkan elemen ke `display: none`). AMP menentukan bahwa operasi ini dapat dijalankan tanpa memengaruhi posisi scroll pengguna. Jika sedang berada di viewport aktif, iklan tidak akan diciutkan karena hal tersebut dapat memengaruhi posisi scroll pengguna; namun, jika berada di luar viewport aktif, iklan akan diciutkan.
 
@@ -137,7 +136,7 @@ Contoh dengan fallback:
 </amp-ad>
 ```
 
-##Menayangkan iklan video
+## Menayangkan iklan video
 
 Ada 3 cara untuk memonetisasi video di AMP dengan iklan video:
 
@@ -150,7 +149,7 @@ Saat menggunakan pendekatan `amp-iframe`:
     * Pastikan ada poster jika memuat pemutar di viewport pertama. [Detail](https://www.ampproject.org/docs/reference/components/amp-iframe#iframe-with-placeholder).
     * Video dan poster harus ditayangkan melalui HTTPS.</li>
 
-##Menjalankan iklan dari domain kustom
+## Menjalankan iklan dari domain kustom
 
 AMP mendukung pemuatan iframe bootstrap yang digunakan untuk memuat iklan dari domain kustom seperti domain Anda sendiri.
 
@@ -162,7 +161,7 @@ Untuk mengaktifkan ini, salin file [remote.html](../../3p/remote.html) ke server
 
   Atribut `content` tag meta adalah URL mutlak bagi salinan file remote.html di server web Anda. URL ini harus menggunakan skema "https". URL ini tidak boleh berada pada asal yang sama dengan file AMP Anda. Misalnya, jika Anda menghosting file AMP di `www.example.com`, URL ini tidak boleh ada di `www.example.com`, tetapi boleh di `something-else.example.com`. Lihat [“Kebijakan asal iframe”](../../spec/amp-iframe-origin-policy.md) untuk penjelasan selengkapnya tentang asal iframe yang diizinkan.
 
-###Keamanan
+### Keamanan
 
 **Validasi data yang masuk** sebelum meneruskannya ke fungsi `draw3p`, untuk memastikan bahwa iframe hanya menjalankan fungsi yang diharapkan. Hal ini penting khususnya pada jaringan iklan yang mengizinkan injeksi JavaScript kustom.
 
@@ -175,7 +174,7 @@ Dalam kasus cache AMP, Anda juga harus memeriksa apakah "asal sumber" (asal doku
 
 Penerapan asal dapat dilakukan dengan argumen ke-3 pada `draw3p` dan harus dilakukan menggunakan perintah [allow-from](https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options) untuk dukungan browser lengkap.
 
-###Memperkaya konfigurasi iklan masuk
+### Memperkaya konfigurasi iklan masuk
 
 Konfigurasi ini sepenuhnya opsional: Terkadang, permintaan iklan perlu diperkaya sebelum permintaan iklan dibuat ke server iklan.
 
@@ -196,16 +195,16 @@ draw3p(function(config, done) {
 }, ['allowed-ad-type'], ['your-domain.com']);
 ```
 
-##Penataan gaya
+## Penataan gaya
 
 Elemen `<amp-ad>` tidak dengan sendirinya memiliki atau ditempatkan dalam container dengan CSS yang ditetapkan ke `position: fixed` (kecuali `amp-lightbox`).
 Hal ini karena implikasi UX dari iklan overlay sehalaman penuh. Anda dapat mempertimbangkan untuk mengizinkan format iklan serupa di masa mendatang dalam container yang dikontrol AMP yang mempertahankan invarian UX tertentu.
 
-##Validasi
+## Validasi
 
 Lihat [aturan amp-ad](https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/validator-amp-ad.protoascii) dalam spesifikasi validator AMP.
 
-##Jaringan iklan yang didukung
+## Jaringan iklan yang didukung
 
 * [A8](../../ads/a8.md)
 * [A9](../../ads/a9.md)
@@ -387,7 +386,7 @@ Lihat [aturan amp-ad](https://github.com/ampproject/amphtml/blob/master/extensio
 * [Zedo](../../ads/zedo.md)
 * [Zucks](../../ads/zucks.md)
 
-##Jenis sematan yang didukung
+## Jenis sematan yang didukung
 
 * [24smi](../../ads/24smi.md)
 * [AJA](../../ads/aja.md)

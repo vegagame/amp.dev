@@ -10,7 +10,7 @@ teaser:
 
 Bir reklamın görüntüleneceği kapsayıcı. `amp-embed`, `amp-ad` etiketinin bir diğer adıdır ve bu etiketin tüm işlevlerini farklı bir etiket adıyla alır. Anlam açısından daha doğru olduğunda `amp-embed` etiketini kullanın. AMP dokümanları yalnızca HTTPS aracılığıyla sunulan reklamları/yerleştirmeleri destekler.
 
-#<a name="amp-ad"></a> `amp-ad` / `amp-embed`
+# `amp-ad` / `amp-embed`
 
 
 [tip type="note"]
@@ -19,16 +19,20 @@ Bir reklamın görüntüleneceği kapsayıcı. `amp-embed`, `amp-ad` etiketinin 
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2015 The AMP HTML Authors. Tüm Hakları Saklıdır.
+Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 
-       Apache Lisansı, Sürüm 2.0 ("Lisans") ile lisanslıdır; bu dosyayı Lisans koşulları dışında kullanamazsınız.
-       Lisansın bir kopyasını şu adresten edinebilirsiniz:
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       Geçerli yasa tarafından gerekli görülmediği veya yazılı olarak bir sözleşme yapılmadığı sürece, Lisanslı olarak dağıtılan yazılım açıkça veya zımni olarak HİÇBİR GARANTİ VEYA KOŞUL SUNULMADAN "OLDUĞU GİBİ" dağıtılır.
-       Lisans kapsamında belirli bir dilde sağlanan izinleri ve uygulanan kısıtlamaları öğrenmek için söz konusu dille ilgili Lisans'a bakın.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
 <table>
   <tr>
@@ -49,13 +53,13 @@ Bir reklamın görüntüleneceği kapsayıcı. `amp-embed`, `amp-ad` etiketinin 
   </tr>
 </table>
 
-##Davranış
+## Davranış
 
 Reklamlar, AMP dokümanlarındaki diğer tüm kaynaklar gibi `<amp-ad>` adlı özel bir öğeyle yüklenir. Reklam ağları tarafından sağlanan JavaScript'in AMP dokümanı içinde çalıştırılmasına izin verilmez. Bunun yerine, AMP çalışma zamanı AMP dokümanından farklı bir kaynaktan (iframe korumalı alanı aracılığıyla) bir iframe yükler ve reklam ağının JS'sini o iframe korumalı alanı içinde yürütür.
 
 `<amp-ad>`, düzen türünün [kuralına](https://www.ampproject.org/docs/design/amp-html-layout#%28tl;dr%29-summary-of-layout-requirements-&amp;-behaviors) göre belirtilecek genişlik ve yükseklik değerlerinin bildirilmesini gerektirir. Hangi reklam ağının görüntüleneceğini seçen bir `type` bağımsız değişkeni gerektirir. Etiketteki tüm `data-*` özellikleri, sonunda reklamı oluşturan kodu otomatik olarak bağımsız değişken biçiminde geçirir. Belirli bir ağ türü için hangi `data-` özelliklerinin gerekli olduğu değişiklik gösterir ve reklam ağıyla belgelenmelidir.
 
-####Örnek: Birkaç reklam görüntüleme
+#### Örnek: Birkaç reklam görüntüleme
 
 <!--yerleşik örnek - ampproject.org'da görüntülenir -->
 
@@ -66,7 +70,7 @@ Reklamlar, AMP dokümanlarındaki diğer tüm kaynaklar gibi `<amp-ad>` adlı ö
   </amp-iframe>
 </div>
 
-##Özellikler
+## Özellikler
 
 <table>
   <tr>
@@ -108,7 +112,7 @@ Reklamlar, AMP dokümanlarındaki diğer tüm kaynaklar gibi `<amp-ad>` adlı ö
   </tr>
 </table>
 
-##Yer Tutucu
+## Yer Tutucu
 
 İsteğe bağlı olarak `amp-ad`, `placeholder` özelliğine sahip bir alt öğeyi destekler. Reklam ağı tarafından desteklenirse bu öğe, reklam görüntülenmeye hazır olana kadar gösterilir. [Yer Tutucu ve Yedekler](https://www.ampproject.org/docs/guides/responsive/placeholders) hakkında daha fazla bilgi edinin.
 
@@ -119,7 +123,7 @@ Reklamlar, AMP dokümanlarındaki diğer tüm kaynaklar gibi `<amp-ad>` adlı ö
 </amp-ad>
 ```
 
-##Reklam yok
+## Reklam yok
 
 Alan için kullanılabilir reklam yoksa AMP, (`display: none` değerine ayarlanmış) `amp-ad` öğesini daraltmaya çalışır. AMP, bu işlemin kullanıcının kaydırma konumunu etkilemeden gerçekleştirilebileceğini belirler. Reklam geçerli görüntü alanındaysa kullanıcının kaydırma konumunu etkileyeceği için daraltılmaz; ancak, reklam geçerli görüntü alanının dışındaysa daraltılır.
 
@@ -133,7 +137,7 @@ Yedek içeren örnek:
 </amp-ad>
 ```
 
-##Video reklamlar sunma
+## Video reklamlar sunma
 
 Video reklamlarla AMP'deki videolardan para kazanmanın 3 yolu vardır:
 
@@ -146,7 +150,7 @@ Video reklamlarla AMP'deki videolardan para kazanmanın 3 yolu vardır:
     * Oynatıcıyı ilk görüntü alanına yüklüyorsanız bir poster olduğundan emin olun. [Ayrıntılar](https://www.ampproject.org/docs/reference/components/amp-iframe#iframe-with-placeholder).
     * Video ve poster, HTTPS üzerinden sunulmalıdır.</li>
 
-##Reklamları bir özel alandan yayınlama
+## Reklamları bir özel alandan yayınlama
 
 AMP, kendi alanınız gibi bir özel alandan reklam yüklemek için kullanılan önyükleme iframe'inin yüklenmesini destekler.
 
@@ -158,7 +162,7 @@ Bunu etkinleştirmek için [remote.html](../../3p/remote.html) dosyasını web s
 
   Meta etiketin `content` özelliği, web sunucunuzdaki remote.html dosya kopyasının mutlak URL'sidir. Bu URL bir "https" şeması kullanmalıdır. AMP dosyalarınızla aynı kaynakta bulunamaz. Örneğin, `www.example.com` adresinde AMP dosyaları barındırırsanız bu URL, `www.example.com` adresinde olmamalı; bunun yerine, `something-else.example.com` gibi bir adreste olmalıdır. iframe'ler için izin verilen kaynaklar hakkında daha fazla bilgi için ["Iframe kaynak politikası"](../../spec/amp-iframe-origin-policy.md) konusuna bakın.
 
-###Güvenlik
+### Güvenlik
 
 iframe'inizin yalnızca beklenen şeyleri yaptığından emin olmak için gelen verileri `draw3p` işlevine geçirmeden önce **doğrulayın**. Bu durum, bilhassa özel JavaScript yerleştirmeye izin veren reklam ağları için geçerlidir.
 
@@ -171,7 +175,7 @@ AMP önbelleği için "kaynak kökenin" (cdn.ampproject.org tarafından sunulan 
 
 Kaynakların uygulanması `draw3p` için 3. bağımsız değişkenle yapılabilir ve ayrıca, tam tarayıcı desteği için [allow-from](https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options) yönergesi kullanılarak yapılmalıdır.
 
-###Gelen reklam yapılandırmasını geliştirme
+### Gelen reklam yapılandırmasını geliştirme
 
 Bu tamamen isteğe bağlıdır: Bazen reklam isteğini reklam sunucusuna göndermeden önce reklam isteğinin geliştirilmesi istenir.
 
@@ -192,16 +196,16 @@ draw3p(function(config, done) {
 }, ['allowed-ad-type'], ['your-domain.com']);
 ```
 
-##Stil
+## Stil
 
 `<amp-ad>` öğelerinin kendileri CSS `position: fixed` değerine ayarlanmış kapsayıcılara sahip olamaz veya böyle kapsayıcıların içine yerleştirilemez (`amp-lightbox` hariç).
 Bunun nedeni, tam sayfa yer paylaşımlı reklamların kullanıcı deneyimi açısından yarattığı zorluklardır. Gelecekte, belirli kullanıcı deneyimi değişmez değerlerini sağlayan AMP kontrollü kapsayıcıların içinde benzer reklam biçimlerine izin verme seçeneği değerlendirilebilir.
 
-##Doğrulama
+## Doğrulama
 
 AMP doğrulayıcı spesifikasyonundaki [amp-ad kurallarına](https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/validator-amp-ad.protoascii) bakın.
 
-##Desteklenen reklam ağları
+## Desteklenen reklam ağları
 
 * [A8](../../ads/a8.md)
 * [A9](../../ads/a9.md)
@@ -383,7 +387,7 @@ AMP doğrulayıcı spesifikasyonundaki [amp-ad kurallarına](https://github.com/
 * [Zedo](../../ads/zedo.md)
 * [Zucks](../../ads/zucks.md)
 
-##Desteklenen yerleştirme türleri
+## Desteklenen yerleştirme türleri
 
 * [24smi](../../ads/24smi.md)
 * [AJA](../../ads/aja.md)

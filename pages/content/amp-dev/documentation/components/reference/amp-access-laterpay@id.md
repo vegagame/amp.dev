@@ -8,22 +8,22 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2017 The AMP HTML Authors. All Rights Reserved.
+Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 
-       Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS-IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 
-#amp-access-laterpay
+# amp-access-laterpay
 
 Memungkinkan penayang untuk berintegrasi lebih mudah dengan platform pembayaran mikro [LaterPay](https://www.laterpay.net). `amp-access-laterpay` didasarkan pada, dan memerlukan [AMP Access](https://www.ampproject.org/docs/reference/components/amp-access).
 
@@ -50,7 +50,7 @@ Memungkinkan penayang untuk berintegrasi lebih mudah dengan platform pembayaran 
 </table>
 
 
-##Perilaku
+## Perilaku
 
 [LaterPay](https://laterpay.net) adalah platform pembayaran mikro yang memungkinkan pengguna membeli konten online apa pun hanya dengan dua klik, dan mendapatkan akses langsung – tanpa pembayaran, data pribadi, atau pendaftaran di muka. Pengguna hanya membayar setelah pembelian mereka mencapai total $5 atau €5 di berbagai situs. Penyedia konten dapat menjual item tertentu atau akses berkala, yang memungkinkan akses tarif tetap atau akses berbatas waktu ke konten.
 
@@ -72,7 +72,7 @@ Daftar yang dihasilkan dapat diberi gaya dan ditampilkan sesuai dengan preferens
 
 Komponen ini juga mengandalkan [Markup Konten Akses](https://www.ampproject.org/docs/reference/components/amp-access#access-content-markup) untuk menampilkan dan menyembunyikan konten.
 
-##Konfigurasi
+## Konfigurasi
 
 Konfigurasi mirip dengan AMP Access, tetapi tanpa memerlukan otorisasi, pingback, dan link login.
 
@@ -144,7 +144,7 @@ Nilai berikut dapat ditetapkan dalam objek konfigurasi `laterpay`:
         </tr>
       </table>
 
-##Menggunakan Markup Konten Akses dan menampilkan daftar pembelian
+## Menggunakan Markup Konten Akses dan menampilkan daftar pembelian
 
 Markup Konten Akses harus digunakan dengan cara yang sama seperti AMP Access.
 
@@ -167,7 +167,7 @@ Pastikan Anda menambahkan class `amp-access-laterpay` jika ingin menggunakan pen
 
 ```
 
-##Penataan gaya
+## Penataan gaya
 
 Beberapa class diterapkan pada beberapa elemen dalam markup yang dihasilkan. Elemen yang tidak memiliki class dapat dirujuk dengan jelas melalui pemilih elemen CSS.
 
@@ -211,7 +211,7 @@ Struktur yang dibuat untuk dialog terlihat seperti berikut:
 
 ```
 
-##Pelokalan
+## Pelokalan
 
 Teks yang ditampilkan dalam dialog untuk opsi pembelian akan ditentukan oleh penayang di UI Konektor LaterPay.
 
@@ -272,13 +272,13 @@ Kunci pesan berikut dapat diterjemahkan atau disesuaikan, tetapi perhatikan bahw
   </tr>
 </table>
 
-##Analisis
+## Analisis
 
 Karena didasarkan pada `amp-access`, `amp-access-laterpay` mendukung semua [peristiwa analisis](https://www.ampproject.org/docs/reference/components/amp-access#integration-with-amp-analytics) yang dikirim oleh `amp-access`.
 
 Semua contoh di [https://ampexample.laterpay.net/](https://ampexample.laterpay.net/) dikonfigurasi untuk mengirimkan peristiwa analisis ini jika Anda ingin melihat contoh lengkap penggunaan sebenarnya.
 
-##Menggunakan LaterPay AMP Access bersama dengan AMP Access
+## Menggunakan LaterPay AMP Access bersama dengan AMP Access
 
 Jika sudah memiliki sistem langganan dan ingin menggunakan LaterPay hanya untuk penjualan artikel tertentu, Anda dapat menerapkan kedua metode penjualan di halaman yang sama, menggunakan AMP Access dan LaterPay AMP Access bersama.
 
@@ -337,13 +337,13 @@ Sedangkan markup akses konten dapat terlihat seperti ini:
 
 Anda dapat menemukan contoh yang lebih lengkap di [https://ampexample.laterpay.net/dual-amp-access.html](https://ampexample.laterpay.net/dual-amp-access.html)
 
-##Dokumentasi Terkait
+## Dokumentasi Terkait
 
 * [AMP Access](https://www.ampproject.org/docs/reference/components/amp-access)
 * [LaterPay](https://www.laterpay.net)
 * [LaterPay: Cara kami menjalankan Pembayaran Mikro](https://docs.laterpay.net/how_we_do_micropayments/)
 * [Konektor LaterPay](https://connectormwi.laterpay.net/docs/index.html) - Mirip dengan AMP Access LaterPay tetapi untuk halaman non-AMP.
 
-##Validasi
+## Validasi
 
 Lihat [aturan amp-access-laterpay](https://github.com/ampproject/amphtml/blob/master/extensions/amp-access-laterpay/validator-amp-access-laterpay.protoascii) dalam spesifikasi validator AMP.
