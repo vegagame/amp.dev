@@ -2,15 +2,15 @@
 $category@: ads-analytics
 formats:
 - websites
-티저:
- 텍스트: 광고를 표시하는 컨테이너입니다.
+teaser:
+  text: 광고를 표시하는 컨테이너입니다.
 ---
 
-#amp-ad/amp-embed
+# mp-ad/amp-embed
 
 광고를 표시하는 컨테이너입니다. `amp-embed`는 `amp-ad` 태그의 별칭이며 다양한 태그 이름으로 모든 기능이 파생됩니다. 의미상 더 정확한 경우 `amp-embed`를 사용하세요. AMP 문서는 HTTPS를 통해 게재되는 광고/삽입만 지원합니다.
 
-#<a name="amp-ad"></a> `amp-ad`/`amp-embed`
+# `amp-ad` / `amp-embed`
 
 
 [tip type="note"]
@@ -19,20 +19,20 @@ formats:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2015 The AMP HTML Authors. All Rights Reserved.
+Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 
-       Apache 라이선스 버전 2.0(이하 '라이선스')에 따라 사용이 허가되었으므로,
-       라이선스를 준수하지 않는 경우 이 파일을 사용할 수 없습니다.
-       해당 라이선스의 사본은 다음에서 가져올 수 있습니다.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       적용 가능한 법률에서 요구하거나 서면으로 동의하지 않은 경우
-       라이선스에 따라 배포된 소프트웨어는 어떠한 종류의 명시적
-       또는 묵시적 보증 또는 조건 없이 '있는 그대로' 배포됩니다.
-       라이선스의 허가 및 제한사항에 관한 구체적인 문구는 라이선스를
-       참조하시기 바랍니다.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
 <table>
   <tr>
@@ -53,14 +53,14 @@ formats:
   </tr>
 </table>
 
-##동작
+## 동작
 
 광고는 AMP 문서의 다른 모든 리소스와 마찬가지로
 `<amp-ad>`라는 특별한 맞춤 요소와 함께 로드됩니다. 광고 네트워크에서 제공하는 자바스크립트는 AMP 문서 내에서 실행할 수 없습니다. 대신 AMP 런타임에서는 AMP 문서로 iframe 샌드박스를 통해 다른 원본에서 iframe을 로드하고 그 iframe 샌드박스 내에서는 광고 네트워크의 JS를 실행합니다.
 
 `<amp-ad>`를 사용하려면 레이아웃 유형의 [규칙](https://www.ampproject.org/docs/design/amp-html-layout#%28tl;dr%29-summary-of-layout-requirements-&amp;-behaviors)에 따라 너비와 높이 값을 지정해야 합니다. 이를 위해 표시할 광고 네트워크를 선택하는 `type` 인수가 필요합니다. 태그의 모든 `data-*` 속성은 이후에 광고를 렌더링하는 코드에 인수로 자동 전달됩니다. 특정 네트워크 유형에 필요한 `data-` 속성은 상황에 따라 다르며 광고 네트워크에서 문서화되어야 합니다.
 
-####예: 몇 가지 광고 표시
+#### 예: 몇 가지 광고 표시
 
 <!--embedded example - displays in ampproject.org -->
 
@@ -71,7 +71,7 @@ formats:
   </amp-iframe>
 </div>
 
-##속성
+## 속성
 
 <table>
   <tr>
@@ -113,7 +113,7 @@ formats:
   </tr>
 </table>
 
-##자리표시자
+## 자리표시자
 
 필요한 경우 `amp-ad`는 `placeholder` 속성으로 하위 요소를 지원합니다. 광고 네트워크에서 지원하는 경우 게재할 수 있는 광고가 없으면 이 요소가 표시됩니다. [자리표시자 및 대체 동작](https://www.ampproject.org/docs/guides/responsive/placeholders)에서 자세히 알아보세요.
 
@@ -124,7 +124,7 @@ formats:
 </amp-ad>
 ```
 
-##사용 가능한 광고 없음
+## 사용 가능한 광고 없음
 
 슬롯에 사용할 수 있는 광고가 없으면 AMP에서 `amp-ad` 요소를 접으려고(즉, `display: none`으로 설정) 시도합니다. AMP에서는 사용자의 스크롤 위치에 영향을 주지 않고 이 작업을 실행할 수 있는지 확인합니다. 광고가 현재 표시 영역에 있으면 사용자의 스크롤 위치에 영향을 주기 때문에 광고가 접히지 않지만, 광고가 현재 표시 영역 외부에 있으면 접힙니다.
 
@@ -138,7 +138,7 @@ formats:
 </amp-ad>
 ```
 
-##동영상 광고 게재
+## 동영상 광고 게재
 
 다음 3가지 방법으로 동영상 광고로 AMP에서 수익을 창출할 수 있습니다.
 
@@ -151,7 +151,7 @@ formats:
     * 첫 번째 표시 영역에 플레이어를 로드하는 경우 포스터가 있어야 합니다. [자세히 알아보기](https://www.ampproject.org/docs/reference/components/amp-iframe#iframe-with-placeholder)
     * 동영상과 포스터는 HTTPS를 통해 제공되어야 합니다.</li>
 
-##맞춤 도메인에서 광고 게재
+## 맞춤 도메인에서 광고 게재
 
 AMP에서는 내 도메인과 같은 맞춤 도메인에서 광고를 로드하는 데 사용되는 부트스트랩 iframe 로드를 지원합니다.
 
@@ -163,7 +163,7 @@ AMP에서는 내 도메인과 같은 맞춤 도메인에서 광고를 로드하�
 
   메타 태그의 `content` 속성은 웹 서버의 remote.html 파일 사본의 절대 URL입니다. 이 URL은 'https' 스키마를 사용해야 하며, AMP 파일과 동일한 원본에 있으면 안 됩니다. 예를 들어 `www.example.com`에 AMP 파일을 호스팅하는 경우 이 URL은 `www.example.com`에 있으면 안 되지만 `something-else.example.com`에 있는 것은 괜찮습니다. iframe에서 허용되는 원본에 대한 자세한 내용은 ['Iframe 원본 정책'](../../spec/amp-iframe-origin-policy.md)을 참조하세요.
 
-###보안
+### 보안
 
 수신 데이터를 `draw3p` 함수에 전달하기 전에 **수신 데이터의 유효성을 검사** 하여 iframe에서 정상적인 작업만 실행하는지 확인합니다. 특히 맞춤 자바스크립트 삽입을 허용하는 광고 네트워크의 경우가 여기에 해당합니다.
 
@@ -176,7 +176,7 @@ AMP 캐시의 경우 '소스 원본'(cdn.ampproject.org에서 제공한 문서�
 
 원본 시행은 `draw3p`의 세 번째 인수와 함께 실행될 수 있으며 전체 브라우저 지원을 받으려면 [allow-from](https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options) 명령어를 사용해 추가로 실행되어야 합니다.
 
-###수신 광고 구성 향상
+### 수신 광고 구성 향상
 
 완전히 선택사항입니다. 광고 서버로 광고 요청을 하기 전에 광고 요청을 향상하는 것이 바람직한 경우가 있습니다.
 
@@ -197,16 +197,16 @@ draw3p(function(config, done) {
 }, ['allowed-ad-type'], ['your-domain.com']);
 ```
 
-##스타일 지정
+## 스타일 지정
 
 `<amp-ad>` 요소는 CSS `position: fixed`가 설정된 컨테이너(`amp-lightbox` 제외)에 포함되거나 배치되지 않을 수 있습니다.
 이는 전체 페이지 오버레이 광고가 UX에 미치는 영향 때문이며, 향후 특정 UX 불변 속성을 유지 관리하는 AMP 제어 컨테이너 내에 유사한 광고 형식을 허용하는 것으로 간주될 수 있습니다.
 
-##확인
+## 확인
 
 AMP 유효성 검사기 사양의 [amp-ad 규칙](https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/validator-amp-ad.protoascii)을 참조하세요.
 
-##지원되는 광고 네트워크
+## 지원되는 광고 네트워크
 
 * [A8](../../ads/a8.md)
 * [A9](../../ads/a9.md)
@@ -388,7 +388,7 @@ AMP 유효성 검사기 사양의 [amp-ad 규칙](https://github.com/ampproject/
 * [Zedo](../../ads/zedo.md)
 * [Zucks](../../ads/zucks.md)
 
-##지원되는 삽입 유형
+## 지원되는 삽입 유형
 
 * [24smi](../../ads/24smi.md)
 * [AJA](../../ads/aja.md)

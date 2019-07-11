@@ -5,24 +5,23 @@ formats:
 teaser:
   text: Displays GL Transmission Format (gITF) 3D models.
 ---
-
 <!--
-       Copyright 2018 The AMP HTML Authors. All Rights Reserved.
+Copyright 2018 The AMP HTML Authors. All Rights Reserved.
 
-       Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS-IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 
-#amp-3d-gltf
+# amp-3d-gltf
 
 Menampilkan model 3D GL Transmission Format (gITF).
 
@@ -41,13 +40,13 @@ Menampilkan model 3D GL Transmission Format (gITF).
   </tr>
 </table>
 
-##Penggunaan
+## Penggunaan
 
 Komponen `amp-3d-gltf` menampilkan model 3D dalam format gITF.
 
 **Catatan**: Browser berkemampuan WebGL diperlukan untuk menampilkan model ini.
 
-###Contoh
+### Contoh
 
 ```html
 <amp-3d-gltf
@@ -59,7 +58,7 @@ Komponen `amp-3d-gltf` menampilkan model 3D dalam format gITF.
     src="path/to/model.glb"></amp-3d-gltf>
 ```
 
-###Batasan
+### Batasan
 
 Saat ini, hanya berfungsi dengan glTF 2.0.
 Fitur yang tidak didukung:
@@ -67,11 +66,11 @@ Fitur yang tidak didukung:
 - kamera tersemat
 - animasi
 
-###CORS
+### CORS
 
 `amp-3d-gltf` membuat permintaan `fetch` dari `https://<random>.ampproject.net` asal sehingga `access-control-allow-origin: *.ampproject.net` harus ditetapkan pada header respons endpoint yang ditetapkan sebagai `src`. Karakter pengganti diperlukan karena asal memiliki komponen sub-domain acak.
 
-##Atribut
+## Atribut
 
 <table>
   <tr>
@@ -105,7 +104,7 @@ Fitur yang tidak didukung:
     </tr>
   </table>
 
-##Tindakan
+## Tindakan
 
 <table>
   <tr>
@@ -119,6 +118,6 @@ Fitur yang tidak didukung:
     </tr>
   </table>
 
-##Validasi
+## Validasi
 
 Lihat [aturan amp-3d-gltf](https://github.com/ampproject/amphtml/blob/master/extensions/amp-3d-gltf/validator-amp-3d-gltf.protoascii) dalam spesifikasi validator AMP.

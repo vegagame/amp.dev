@@ -6,11 +6,11 @@ teaser:
   text: Representa un contenedor que puede mostrar un anuncio.
 ---
 
-#amp-ad/amp-embed
+# amp-ad/amp-embed
 
 Representa un contenedor que puede mostrar un anuncio. `amp-embed` funciona como un alias de la etiqueta `amp-ad`, ya que deriva todas sus funciones con un nombre de etiqueta diferente. Recomendamos utilizar `amp-embed` cuando sea más preciso semánticamente. Los documentos AMP solo admiten inserciones o anuncios servidos mediante HTTPS.
 
-#<a name="amp-ad"></a> `amp-ad`/`amp-embed`
+# `amp-ad` / `amp-embed`
 
 
 
@@ -20,20 +20,20 @@ Es probable que la especificación de `amp-ad`/`amp-embed` evolucione significat
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2015 The AMP HTML Authors. Todos los derechos reservados.
+Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 
-       Con licencia Apache, versión 2.0 (en adelante, la "Licencia").
-       Este archivo solo se puede utilizar según lo estipulado en la Licencia.
-       Se puede obtener una copia de la Licencia en la siguiente página:
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       A menos que lo exija la legislación aplicable o se acuerde por escrito, el software
-       distribuido bajo la Licencia se proporciona "TAL CUAL", SIN NINGÚN
-       TIPO DE GARANTÍA NI DE CONDICIÓN, ni expresa ni implícita.
-       En la Licencia se puede consultar la información relativa a las limitaciones
-       y a los permisos aplicables a cada idioma.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
 <table>
   <tr>
@@ -54,13 +54,13 @@ Es probable que la especificación de `amp-ad`/`amp-embed` evolucione significat
   </tr>
 </table>
 
-##Comportamiento
+## Comportamiento
 
 Los anuncios se cargan en los documentos AMP como cualquier otro recurso mediante un elemento personalizado especial llamado `<amp-ad>`. No se puede ejecutar JavaScript proporcionado por redes publicitarias en documentos AMP. En su lugar, el tiempo de ejecución de AMP cargará un iframe desde otro origen (a través de una zona de pruebas de iframe) como documento AMP y ejecutará el JS de la red publicitaria dentro de dicha zona de pruebas.
 
 `<amp-ad>` requiere que se definan valores de anchura y altura de acuerdo con la [regla](https://www.ampproject.org/docs/design/amp-html-layout#%28tl;dr%29-summary-of-layout-requirements-&amp;-behaviors) correspondiente a su tipo de diseño, así como un argumento `type` que seleccione la red publicitaria que se mostrará. Todos los atributos `data-*` de la etiqueta se transfieren automáticamente como argumentos al código que renderiza el anuncio. Los atributos `data-` que se necesitan para un determinado tipo de red varían en función de la red publicitaria, y deben consultarse en la documentación de cada una de ellas.
 
-####Ejemplo: Mostrar algunos anuncios
+#### Ejemplo: Mostrar algunos anuncios
 
 <!--ejemplo insertado - aparece en ampproject.org -->
 
@@ -71,7 +71,7 @@ Los anuncios se cargan en los documentos AMP como cualquier otro recurso mediant
   </amp-iframe>
 </div>
 
-##Atributos
+## Atributos
 
 <table>
   <tr>
@@ -113,7 +113,7 @@ Los anuncios se cargan en los documentos AMP como cualquier otro recurso mediant
   </tr>
 </table>
 
-##Marcador de posición
+## Marcador de posición
 
 De forma opcional, `amp-ad` admite un elemento secundario con el atributo `placeholder`. Si la red publicitaria lo admite, este elemento se mostrará hasta que el anuncio esté disponible para publicarse. Obtén más información sobre los [marcadores de posición y los respaldos](https://www.ampproject.org/docs/guides/responsive/placeholders).
 
@@ -124,7 +124,7 @@ De forma opcional, `amp-ad` admite un elemento secundario con el atributo `place
 </amp-ad>
 ```
 
-##No hay ningún anuncio disponible
+## No hay ningún anuncio disponible
 
 Si no hay ningún anuncio disponible para el espacio, AMP intenta ocultar el elemento `amp-ad` (es decir, define `display: none`), ya que determina que esta operación se puede llevar a cabo sin afectar a la posición de desplazamiento del usuario. Si el anuncio está en el viewport actual, no se ocultará porque afecta a la posición de desplazamiento del usuario; de lo contrario, se ocultará.
 
@@ -138,7 +138,7 @@ Ejemplo con un respaldo:
 </amp-ad>
 ```
 
-##Publicar anuncios de vídeo
+## Publicar anuncios de vídeo
 
 Hay 3 formas de monetizar anuncios de vídeo en AMP:
 
@@ -151,7 +151,7 @@ Si usas este método, ten en cuenta que:
     * Debe haber una imagen de póster si cargas el reproductor en el primer viewport. [Más información](https://www.ampproject.org/docs/reference/components/amp-iframe#iframe-with-placeholder)
     * Tanto el vídeo como la imagen de póster se deben servir a través de HTTPS.</li>
 
-##Publicar anuncios desde un dominio personalizado
+## Publicar anuncios desde un dominio personalizado
 
 AMP admite la carga del iframe de arranque que se utiliza para cargar anuncios de un dominio personalizado, como el tuyo.
 
@@ -163,7 +163,7 @@ Para habilitarlo, copia el archivo [remote.html](../../3p/remote.html) en tu ser
 
   El atributo `content` de la metaetiqueta es la URL absoluta de la copia del archivo remote.html que está en tu servidor web. Esta URL debe utilizar un esquema "https", y no puede encontrarse en el mismo origen que tus archivos AMP. Por ejemplo, si alojas archivos AMP en `www.example.com`, esta URL no puede estar en `www.example.com`, pero sí en `something-else.example.com`. Para obtener más información sobre los orígenes de iframe permitidos, consulta la [política de origen de iframe](../../spec/amp-iframe-origin-policy.md).
 
-###Seguridad
+### Seguridad
 
 **Valida los datos entrantes** antes de transferirlos a la función `draw3p` para asegurarte de que el iframe funciona del modo previsto. Esto se aplica, en concreto, a las redes publicitarias que permiten la inyección de código JavaScript personalizado.
 
@@ -176,7 +176,7 @@ En el caso de la caché de AMP, también debes comprobar que el origen de la fue
 
 La aplicación de los orígenes se puede llevar a cabo con el tercer argumento de `draw3p` junto con la directiva [allow-from](https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options), para así obtener compatibilidad total con el navegador.
 
-###Mejorar la configuración de anuncios entrantes
+### Mejorar la configuración de anuncios entrantes
 
 Esto es completamente opcional: a veces se puede querer mejorar la solicitud de anuncio antes de enviarla al servidor de anuncios.
 
@@ -197,16 +197,16 @@ draw3p(function(config, done) {
 }, ['allowed-ad-type'], ['your-domain.com']);
 ```
 
-##Estilo
+## Estilo
 
 Los elementos `<amp-ad>` no pueden contener o estar dentro de contenedores que tengan definido `position: fixed` de CSS, con la excepción de `amp-lightbox`.
 Esto se debe a las implicaciones que tienen en la experiencia de usuario los anuncios superpuestos de página completa. Es posible que se permita en el futuro utilizar formatos de anuncio similares, en contenedores controlados por AMP que mantengan ciertas características invariables de experiencia de usuario.
 
-##Validación
+## Validación
 
 Consulta las [reglas de amp-ad](https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/validator-amp-ad.protoascii) en la especificación de la herramienta de validación de AMP.
 
-##Redes publicitarias admitidas
+## Redes publicitarias admitidas
 
 * [A8](../../ads/a8.md)
 * [A9](../../ads/a9.md)
@@ -388,7 +388,7 @@ Consulta las [reglas de amp-ad](https://github.com/ampproject/amphtml/blob/maste
 * [Zedo](../../ads/zedo.md)
 * [Zucks](../../ads/zucks.md)
 
-##Tipos de inserción admitidos
+## Tipos de inserción admitidos
 
 * [24smi](../../ads/24smi.md)
 * [AJA](../../ads/aja.md)

@@ -8,18 +8,22 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Telif Hakkı 2017 The AMP HTML Authors. Tüm Hakları Saklıdır.
+Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 
-       Apache Lisansı, Sürüm 2.0 ("Lisans") ile lisanslıdır; bu dosyayı Lisans koşulları dışında kullanamazsınız.
-       Lisansın bir kopyasını şu adresten edinebilirsiniz:
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       Geçerli yasa tarafından gerekli görülmediği veya yazılı olarak bir sözleşme yapılmadığı sürece, Lisanslı olarak dağıtılan yazılım açıkça veya zımni olarak HİÇBİR GARANTİ VEYA KOŞUL SUNULMADAN "OLDUĞU GİBİ" dağıtılır.
-       Lisans kapsamında belirli bir dilde sağlanan izinleri ve uygulanan kısıtlamaları öğrenmek için söz konusu dille ilgili Lisans'a bakın.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-#amp-access-laterpay
+# amp-access-laterpay
 
 Yayıncıların [LaterPay](https://www.laterpay.net) mikro ödeme platformuna kolayca entegre olmasına olanak tanır. `amp-access-laterpay` bileşeni [AMP Access](https://www.ampproject.org/docs/reference/components/amp-access)'i temel alır ve gerektirir.
 
@@ -46,7 +50,7 @@ Yayıncıların [LaterPay](https://www.laterpay.net) mikro ödeme platformuna ko
 </table>
 
 
-##Davranış
+## Davranış
 
 [LaterPay](https://laterpay.net), kullanıcıların herhangi bir dijital içeriği önceden kayıt olmadan, kişisel veri sağlamadan veya ödeme yapmadan, sadece iki tıklama ile satın alıp anında erişim sağlamasına olanak tanıyan bir mikro ödeme platformudur. Kullanıcılar yalnızca web sitelerinden yaptıkları toplam alışveriş 5 $ veya 5 € tutarına ulaştığında ödeme yapar. İçerik sağlayıcılar, tek tek öğeler veya süreli pasolar satıp içeriklerine sabit ücretli ya da süre sınırlamalı erişime olanak tanıyabilirler.
 
@@ -68,7 +72,7 @@ Oluşturulan liste, yayıncının tercihine göre şekillendirilip sunulabilir.
 
 Bu bileşen, içeriği göstermek ve gizlemek için [Access İçerik İşaretlemesi](https://www.ampproject.org/docs/reference/components/amp-access#access-content-markup) de kullanır.
 
-##Yapılandırma
+## Yapılandırma
 
 Yapılandırma, AMP Access'e benzer ancak yetkilendirme, geriye pingleme ve giriş bağlantıları gerektirmez.
 
@@ -140,7 +144,7 @@ Yapılandırma, AMP Access'e benzer ancak yetkilendirme, geriye pingleme ve giri
         </tr>
       </table>
 
-##Access İçerik İşaretlemesi'ni kullanma ve satın alma listesini gösterme
+## Access İçerik İşaretlemesi'ni kullanma ve satın alma listesini gösterme
 
 Access İçerik İşaretlemesi, AMP Access ile aynı şekilde kullanılmalıdır.
 
@@ -163,7 +167,7 @@ Varsayılan stili kullanmak istiyorsanız `amp-access-laterpay` sınıfını ekl
 
 ```
 
-##Stil
+## Stil
 
 Oluşturulan işaretlemedeki bazı öğelere birden çok sınıf uygulanır. Sınıf içermeyen öğelere, CSS öğe seçicileri aracılığıyla açık bir biçimde başvurulabilir.
 
@@ -207,7 +211,7 @@ Bazı temel CSS düzenleri zaten vardır ancak yayıncıların, sayfalarının g
 
 ```
 
-##Yerelleştirme
+## Yerelleştirme
 
 İletişim kutusunda satın alma seçenekleri için gösterilen metin, LaterPay Connector kullanıcı arayüzünde yayıncı tarafından tanımlanır.
 
@@ -268,13 +272,13 @@ Aşağıdaki mesaj anahtarları çevrilebilir veya özelleştirilebilir ancak or
   </tr>
 </table>
 
-##Analiz
+## Analiz
 
 `amp-access` bileşenine dayandığı göz önünde bulundurulduğunda, `amp-access-laterpay`, `amp-access` tarafından gönderilen tüm [analiz etkinliklerini](https://www.ampproject.org/docs/reference/components/amp-access#integration-with-amp-analytics) destekler.
 
 Uygulamada bunun nasıl görüneceğine dair daha eksiksiz bir örnek görmek isterseniz [https://ampexample.laterpay.net/](https://ampexample.laterpay.net/) adresindeki örneklerin tamamı, bu analiz etkinliklerini göndermek üzere yapılandırılmıştır.
 
-##AMP Access LaterPay'i AMP Access ile birlikte kullanma
+## AMP Access LaterPay'i AMP Access ile birlikte kullanma
 
 Mevcut bir abonelik sisteminiz varsa ve LaterPay'i yalnızca tek tek ürün satışı için kullanmayı amaçlıyorsanız AMP Access ve AMP Access LaterPay'i birlikte kullanılmasıyla her iki satış yönteminin de aynı sayfada bir arada bulunması mümkündür.
 
@@ -333,13 +337,13 @@ Bunu LaterPay ve mevcut bir ödeme duvarı entegrasyonu ile kullanırken gerekli
 
 Daha eksiksiz bir örneği [https://ampexample.laterpay.net/dual-amp-access.html](https://ampexample.laterpay.net/dual-amp-access.html) adresinde bulabilirsiniz.
 
-##İlgili Dokümanlar
+## İlgili Dokümanlar
 
 * [AMP Access](https://www.ampproject.org/docs/reference/components/amp-access)
 * [LaterPay](https://www.laterpay.net)
 * [LaterPay: Mikro Ödemeleri nasıl yapıyoruz?](https://docs.laterpay.net/how_we_do_micropayments/)
 * [LaterPay Connector](https://connectormwi.laterpay.net/docs/index.html) - AMP Access LaterPay'e benzer ancak AMP olmayan sayfalar için.
 
-##Doğrulama
+## Doğrulama
 
 AMP doğrulayıcı spesifikasyonundaki [amp-access-laterpay kurallarına](https://github.com/ampproject/amphtml/blob/master/extensions/amp-access-laterpay/validator-amp-access-laterpay.protoascii) bakın.

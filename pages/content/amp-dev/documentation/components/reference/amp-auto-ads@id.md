@@ -8,22 +8,22 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2017 The AMP HTML Authors. All Rights Reserved.
+Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 
-       Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS-IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 
-#amp-auto-ads
+# amp-auto-ads
 
 Memasukkan iklan secara dinamis ke halaman AMP dengan menggunakan file konfigurasi yang ditayangkan secara jarak jauh.
 
@@ -54,7 +54,7 @@ Memasukkan iklan secara dinamis ke halaman AMP dengan menggunakan file konfigura
   </table>
 
 
-##Perilaku
+## Perilaku
 
 Dengan jumlah penempatan valid yang memadai (yang disediakan dalam konfigurasi), `amp-auto-ads` mencoba memasukkan iklan tambahan dengan tetap mematuhi sejumlah batasan yang ditetapkan oleh jaringan iklan. Batasan tersebut akan membatasi:
 
@@ -73,12 +73,12 @@ Jenis jaringan iklan dan informasi tambahan apa pun (yang diperlukan oleh jaring
   </amp-auto-ads>
 ```
 
-##Jaringan iklan yang didukung
+## Jaringan iklan yang didukung
 
 * [AdSense](../../ads/google/adsense.md)
 * [DoubleClick (eksperimental)](../../ads/google/doubleclick.md)
 
-##Atribut
+## Atribut
 
 <table>
   <tr>
@@ -95,11 +95,11 @@ Jenis jaringan iklan dan informasi tambahan apa pun (yang diperlukan oleh jaring
   </tr>
 </table>
 
-##Spesifikasi Konfigurasi
+## Spesifikasi Konfigurasi
 
 Konfigurasi menentukan lokasi pada halaman tempat `<amp-auto-ads>` dapat menempatkan iklan. Konfigurasi ini diambil dari jaringan iklan pihak ketiga pada URL yang ditentukan di `ad-network-config.js`. Konfigurasi tersebut harus berupa objek JSON serial yang cocok dengan definisi [`ConfigObj`](#configobj) yang dideskripsikan di bawah.
 
-###Konfigurasi Contoh
+### Konfigurasi Contoh
 
 Contoh berikut menentukan bahwa iklan harus diposisikan tepat setelah semua elemen `<P class='paragraph'>` yang berada dalam `<DIV id='domId'>` ketiga di halaman itu. Iklan yang ditempatkan di salah satu posisi tersebut harus berjenis BANNER dan memiliki margin atas 4 piksel dan margin bawah 10 piksel.
 
@@ -126,9 +126,9 @@ Contoh berikut menentukan bahwa iklan harus diposisikan tepat setelah semua elem
 }
 ```
 
-###Definisi Objek
+### Definisi Objek
 
-####ConfigObj
+#### ConfigObj
 
 Kolom yang perlu ditentukan dalam objek konfigurasi:
 
@@ -163,7 +163,7 @@ Kolom yang perlu ditentukan dalam objek konfigurasi:
   </tr>
 </table>
 
-####PlacementObj
+#### PlacementObj
 
 Kolom yang perlu ditentukan dalam objek konfigurasi `placements`:
 
@@ -208,7 +208,7 @@ Kolom yang perlu ditentukan dalam objek konfigurasi `placements`:
   </tr>
 </table>
 
-####AnchorObj
+#### AnchorObj
 
 Kolom yang perlu ditentukan dalam objek konfigurasi `anchor`:
 
@@ -248,7 +248,7 @@ Kolom yang perlu ditentukan dalam objek konfigurasi `anchor`:
   </tr>
 </table>
 
-####PlacementStyleObj
+#### PlacementStyleObj
 
 Kolom yang perlu ditentukan dalam objek konfigurasi `style`:
 
@@ -272,7 +272,7 @@ Kolom yang perlu ditentukan dalam objek konfigurasi `style`:
   </tr>
 </table>
 
-####RelativePositionEnum
+#### RelativePositionEnum
 
 Nilai ENUM untuk kolom `pos` dalam objek konfigurasi `placements`:
 
@@ -304,7 +304,7 @@ Nilai ENUM untuk kolom `pos` dalam objek konfigurasi `placements`:
   </tr>
 </table>
 
-####PlacementTypeEnum
+#### PlacementTypeEnum
 
 Nilai ENUM untuk kolom `type` dalam objek konfigurasi `placements`:
 
@@ -321,7 +321,7 @@ Nilai ENUM untuk kolom `type` dalam objek konfigurasi `placements`:
   </tr>
 </table>
 
-####AdConstraintsObj
+#### AdConstraintsObj
 
 Kolom yang perlu ditentukan dalam objek konfigurasi `adConstraints`:
 
@@ -361,7 +361,7 @@ Kolom yang perlu ditentukan dalam objek konfigurasi `adConstraints`:
   </tr>
 </table>
 
-####SubsequentMinSpacingObj
+#### SubsequentMinSpacingObj
 
 Kolom yang perlu ditentukan dalam objek konfigurasi `subsequentMinSpacing`. Entri `subsequentMinSpacing` dapat digunakan untuk mengubah jarak yang diperlukan antara iklan tambahan berdasarkan jumlah iklan yang sudah ada di halaman itu. Sebagai contoh, perhatikan skenario berikut:
 
@@ -408,6 +408,6 @@ Hal ini akan berlaku hingga jumlah iklan di halaman itu mencapai 5 buah, karena 
   </tr>
 </table>
 
-##Validasi
+## Validasi
 
 Lihat [aturan iklan otomatis AMP](https://github.com/ampproject/amphtml/blob/master/extensions/amp-auto-ads/validator-amp-auto-ads.protoascii) dalam spesifikasi validator AMP.

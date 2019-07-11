@@ -12,18 +12,22 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-حقوق الطبع والنشر 2016 لصالح "مؤلفو شفرة HTML لصفحات AMP". جميع الحقوق محفوظة.
+Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-تم الترخيص بموجب ترخيص Apache، الإصدار 2.0 (المشار إليه لاحقًا باسم "الترخيص")؛ ولا يحق لك استخدام هذا الملف إلا بما يتوافق مع الترخيص.
-ويمكنك الحصول على نسخة من الترخيص على الصفحة
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-ما لم يكن مطلوبًا بموجب القانون الساري أو تمت الموافقة عليه كتابةً، يتم توزيع البرنامج الذي يتم توزيعه بموجب الترخيص "كما هو"، وبدون أية ضمانات أو شروط من أي نوع، سواء كانت صريحة أو ضمنية.
-راجِع الترخيص للاطّلاع على اللغة المحددة التي تحكم الأذونات والقيود بموجب الترخيص.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 
-#amp-accordion
+# amp-accordion
 
 يوفّر هذا المكّوِن طريقة للمشاهدين لإلقاء نظرة على مخطط المحتوى والانتقال إلى أي قسم. ويفيد هذا في أجهزة الجوال عند الحاجة إلى التمرير في قسم مكون من جملتين فقط.
 
@@ -43,7 +47,7 @@ teaser:
 </table>
 
 
-##السُلوك
+## السُلوك
 
 يتيح لك المكوِّن `amp-accordion` عرض أقسام محتوى قابلة للتصغير والتوسيع. يُعتبر كل عنصر من العناصر الثانوية المباشرة للمكّوِن `amp-accordion` قسمًا من accordion. يجب أن تكون كل عقدة من هذه العقد علامة `<section>`.
 
@@ -54,7 +58,7 @@ teaser:
 * يؤدي النقر على عنوان القسم إلى توسيع القسم أو تصغيره.
 * سيتم الاحتفاظ بحالة التصغير/التوسيع لكل قسم في العنصر `amp-accordion` على مستوى الجلسة. لإيقاف الحفاظ على هذه الحالة، أضِف السمة `disable-session-states` إلى العنصر `amp-accordion`.
 
-####مثال: عرض accordion
+#### مثال: عرض accordion
 
 في هذا المثال، نعرض ثلاثة أقسام حيث يتم توسيع القسم الثالث عند تحميل الصفحة.  وتم أيضًا إيقاف الحفاظ على حالة التصغير/التوسيع من خلال تعيين `disable-session-states`.
 
@@ -73,7 +77,7 @@ teaser:
 
 [/tip]
 
-###الأحداث
+### الأحداث
 
 سيتم تشغيل الأحداث التالية في `section` من `accordion`.
 
@@ -88,7 +92,7 @@ teaser:
   </tr>
 </table>
 
-###الإجراءات
+### الإجراءات
 
 <table>
   <tr>
@@ -109,7 +113,7 @@ teaser:
   </tr>
 </table>
 
-####السمات
+#### السمات
 
 <table>
   <tr>
@@ -130,7 +134,7 @@ teaser:
   </tr>
 </table>
 
-##التصميم
+## التصميم
 
 * يمكنك استخدام محدد العنصر `amp-accordion` لتصميمه بحرية.
 * عناصر `amp-accordion` هي دائمًا `display: block`.
@@ -140,6 +144,6 @@ teaser:
 * يتم تعيين هوامش عناصر `<amp-accordion>` و`<section>` والعنوان والمحتوى على 0 ويمكن إلغاء هذا في التصميمات المخصصة.
 * كل من عناصر العنوان والمحتوى `position: relative`.
 
-##التحقق
+## التحقق
 
 اطِّلع على [قواعد amp-accordion](https://github.com/ampproject/amphtml/blob/master/extensions/amp-accordion/validator-amp-accordion.protoascii) في مواصفات مدقق AMP.

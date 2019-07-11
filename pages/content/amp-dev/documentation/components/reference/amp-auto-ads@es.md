@@ -8,22 +8,22 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2017 The AMP HTML Authors. Todos los derechos reservados.
+Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 
-       Con licencia Apache, versión 2.0 (en adelante, la "Licencia").
-       Este archivo solo se puede utilizar según lo estipulado en la Licencia.
-       Se puede obtener una copia de la Licencia en la siguiente página:
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       A menos que lo exija la legislación aplicable o se acuerde por escrito, el software
-       distribuido bajo la Licencia se proporciona "TAL CUAL", SIN NINGÚN
-       TIPO DE GARANTÍA NI DE CONDICIÓN, ni expresa ni implícita.
-       En la Licencia se puede consultar la información relativa a las limitaciones
-       y a los permisos aplicables a cada idioma.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-#amp-analytics
+# amp-analytics
 
 Inserta de forma dinámica anuncios en una página AMP mediante un archivo de configuración servido de forma remota.
 
@@ -54,7 +54,7 @@ Inserta de forma dinámica anuncios en una página AMP mediante un archivo de co
   </table>
 
 
-##Comportamiento
+## Comportamiento
 
 Si hay un número suficiente de emplazamientos válidos (definidos en la configuración), `amp-auto-ads` intenta insertar anuncios adicionales teniendo en cuenta ciertas restricciones de la red publicitaria. Estas restricciones limitan:
 
@@ -73,12 +73,12 @@ Debe especificarse en la etiqueta el tipo de red publicitaria y cualquier otra i
   </amp-auto-ads>
 ```
 
-##Redes publicitarias admitidas
+## Redes publicitarias admitidas
 
 * [AdSense](../../ads/google/adsense.md)
 * [DoubleClick (experimental)](../../ads/google/doubleclick.md)
 
-##Atributos
+## Atributos
 
 <table>
   <tr>
@@ -95,11 +95,11 @@ Debe especificarse en la etiqueta el tipo de red publicitaria y cualquier otra i
   </tr>
 </table>
 
-##Especificación de la configuración
+## Especificación de la configuración
 
 La configuración define en qué parte de la página `<amp-auto-ads>` puede colocar anuncios. La configuración se obtiene de la red publicitaria de terceros a la que enlaza la URL que aparece en `ad-network-config.js`. La configuración debe ser un objeto JSON serializado que coincida con la definición de [`ConfigObj`](#configobj) que se describe más abajo.
 
-###Configuración de ejemplo
+### Configuración de ejemplo
 
 En el siguiente ejemplo se especifica que el anuncio debe posicionarse inmediatamente después de todos los elementos `<P class='paragraph'>` que se encuentren dentro del tercer `<DIV id='domId'>` de la página. El anuncio que se coloque en cualquiera de estas posiciones debe ser de tipo BANNER y tener un margen superior de 4 píxeles y un margen inferior de 10.
 
@@ -127,9 +127,9 @@ En el siguiente ejemplo se especifica que el anuncio debe posicionarse inmediata
 
 ```
 
-###Definiciones de objetos
+### Definiciones de objetos
 
-####ConfigObj
+#### ConfigObj
 
 Estos son los campos que se especifican en el objeto de configuración:
 
@@ -164,7 +164,7 @@ Estos son los campos que se especifican en el objeto de configuración:
   </tr>
 </table>
 
-####PlacementObj
+#### PlacementObj
 
 Campos que se deben especificar en el objeto de configuración `placements`:
 
@@ -209,7 +209,7 @@ Campos que se deben especificar en el objeto de configuración `placements`:
   </tr>
 </table>
 
-####AnchorObj
+#### AnchorObj
 
 Los campos que se especifican en el objeto de configuración `anchor` son:
 
@@ -249,7 +249,7 @@ Los campos que se especifican en el objeto de configuración `anchor` son:
   </tr>
 </table>
 
-####PlacementStyleObj
+#### PlacementStyleObj
 
 Los campos que se especificarán en el objeto de configuración `style` son:
 
@@ -273,7 +273,7 @@ Los campos que se especificarán en el objeto de configuración `style` son:
   </tr>
 </table>
 
-####RelativePositionEnum
+#### RelativePositionEnum
 
 Los valores ENUM del campo `pos` del objeto de configuración `placements` son:
 
@@ -305,7 +305,7 @@ Los valores ENUM del campo `pos` del objeto de configuración `placements` son:
   </tr>
 </table>
 
-####PlacementTypeEnum
+#### PlacementTypeEnum
 
 Los valores ENUM del campo `type` del objeto de configuración `placements` son:
 
@@ -322,7 +322,7 @@ Los valores ENUM del campo `type` del objeto de configuración `placements` son:
   </tr>
 </table>
 
-####AdConstraintsObj
+#### AdConstraintsObj
 
 Los campos que se especifican en el objeto de configuración `adConstraints` son:
 
@@ -362,7 +362,7 @@ Los campos que se especifican en el objeto de configuración `adConstraints` son
   </tr>
 </table>
 
-####SubsequentMinSpacingObj
+#### SubsequentMinSpacingObj
 
 Campos que se especifican en el objeto de configuración `subsequentMinSpacing`. Las entradas de este objeto`` se pueden utilizar para cambiar el espaciado requerido entre los anuncios adicionales en función del número de anuncios que ya se hayan incluido en la página. Por ejemplo, supongamos que se da la siguiente situación:
 
@@ -410,6 +410,6 @@ Esto se aplica hasta que hay 5 anuncios en la página, ya que hay una regla par
   </tr>
 </table>
 
-##Validación
+## Validación
 
 Consulta las [reglas de amp-auto-ads](https://github.com/ampproject/amphtml/blob/master/extensions/amp-auto-ads/validator-amp-auto-ads.protoascii) en la especificación de la herramienta de validación de AMP.

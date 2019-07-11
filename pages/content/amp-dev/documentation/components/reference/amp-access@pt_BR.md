@@ -6,25 +6,29 @@ teaser:
   text: Oferece um paywall AMP e compatibilidade com assinaturas.
 ---
 
-#amp-access
+# amp-access
 
 O AMP Access ou "paywall AMP e compatibilidade com assinaturas" oferece aos editores controle sobre qual conteúdo pode ser acessado por um leitor e com quais restrições, com base no status da assinatura do leitor, no número de visualizações e em outros fatores.
 
-#<a name="amp-access-"></a> amp-access
+# amp-access
 
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2015 The AMP HTML Authors. Todos os direitos reservados.
+Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 
-       Licenciado sob a Licença Apache, Versão 2.0 (a "Licença"). O uso deste arquivo só é permitido em conformidade com a Licença.
-       Uma cópia da Licença está disponível em
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       A menos que exigido pela legislação aplicável ou acordado por escrito, o software fornecido de acordo com a Licença é distribuído "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIAS OU CONDIÇÕES DE QUALQUER TIPO, expressas ou implícitas.
-       Consulte a Licença para ver informações sobre permissões e limitações para o idioma específico.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
 <table>
   <tr>
@@ -44,7 +48,7 @@ O AMP Access ou "paywall AMP e compatibilidade com assinaturas" oferece aos edit
 </tr>
 </table>
 
-##Relacionamento com `amp-subscriptions`
+## Relacionamento com `amp-subscriptions`
 
 A extensão [`amp-subscriptions`](../amp-subscriptions/amp-subscriptions.md) oferece recursos semelhantes a `amp-access`. No entanto, ela é compatível com um protocolo de paywall de acesso mais especializado. Algumas diferenças notáveis são:
 
@@ -55,7 +59,7 @@ A extensão [`amp-subscriptions`](../amp-subscriptions/amp-subscriptions.md) ofe
 
 Devido à padronização da marcação, à compatibilidade com vários provedores e à compatibilidade aprimorada com o visualizador, é recomendável que as novas implementações do editor e do provedor de paywall usem `amp-subscriptions`.
 
-##Solução
+## Solução
 
 A solução proposta fornece controle ao editor sobre as decisões e os fluxos a seguir:
 - Criar e manter usuários
@@ -81,7 +85,7 @@ Na forma básica, essa solução envia o documento completo (embora obscurecido)
 
 Para que haja compatibilidade com o AMP Access, é necessário que o editor implemente os componentes descritos acima. A marcação de conteúdo de acesso e o endpoint de autorização são obrigatórios. O endpoint de pingback e a página de login são opcionais.
 
-###Código do leitor de AMP
+### Código do leitor de AMP
 
 Para auxiliar os serviços de acesso e casos de uso, o AMP Access introduz o conceito de *código do leitor*.
 
@@ -91,33 +95,33 @@ O código do leitor é construído no dispositivo do usuário e tem longa duraç
 
 O código do leitor é construído de forma semelhante ao mecanismo usado para criar o ExternalCID [descrito aqui](https://docs.google.com/document/d/1f7z3X2GM_ASb3ZCI_7tngglxwS6WoWi1EB3aKzdf6vo/edit#heading=h.hb9q0wpwwhuf) (link em inglês). Um exemplo de código de leitor é `amp-OFsqR4pPKynymPyMmplPNMvxSTsNQob3TnK-oE3nwVT0clORaZ1rkeEz8xej-vV6`.
 
-###Cookies e AMP Access
+### Cookies e AMP Access
 
 Os editores podem usar os próprios cookies de autenticação, o código do leitor ou uma combinação dos dois.
 
-###Marcação de conteúdo de acesso
+### Marcação de conteúdo de acesso
 
 A marcação de conteúdo de acesso determina quais seções ficam visíveis ou ocultas com base na resposta de autorização retornada pelo endpoint de autorização. Ela é descrita por atributos de marcação especiais.
 
-###Endpoint de autorização
+### Endpoint de autorização
 
 Autorização é um endpoint fornecido pelo editor e chamado pelo ambiente de tempo de execução de AMP ou pelo Google AMP Cache. É um endpoint CORS GET credenciado. Esse endpoint retorna os parâmetros de acesso que podem ser usados pela marcação de conteúdo para ocultar ou mostrar diferentes partes do documento.
 
-###Endpoint de pingback
+### Endpoint de pingback
 
 O pingback é um endpoint fornecido pelo editor e chamado pelo ambiente de tempo de execução de AMP ou pelo Google AMP Cache. É um endpoint CORS POST credenciado. O ambiente de tempo de execução de AMP chama esse endpoint automaticamente quando o leitor começa a visualizar o documento. Esse endpoint também é chamado depois que o leitor conclui o fluxo de login. Um dos principais objetivos do pingback é fazer com que o editor atualize as informações de limite.
 
 Pingback opcional. Ele pode ser desativado configurando a propriedade de configuração `noPingback` como `true`.
 
-###Página de login e link de login
+### Página de login e link de login
 
 A página de login é implementada e exibida pelo editor e chamada pelo ambiente de tempo de execução de AMP. Ela geralmente é exibida como uma caixa de diálogo do navegador.
 
 A página de login é acionada quando o leitor toca no link de login, que pode ser colocado pelo editor em qualquer lugar do documento.
 
-##Especificações da v0.1
+## Especificações da v0.1
 
-###Configuração
+### Configuração
 
 Todos os endpoints são configurados no documento AMP como um objeto JSON no HEAD do documento:
 
@@ -202,7 +206,7 @@ Veja um exemplo da configuração do AMP Access:
 
 ```
 
-####Vários provedores de acesso
+#### Vários provedores de acesso
 
 É possível especificar vários provedores de acesso usando uma matriz, em vez de um único objeto, e fornecendo um `namespace` para cada entrada.
 
@@ -220,7 +224,7 @@ Veja um exemplo da configuração do AMP Access:
 </script>
 ```
 
-###Variáveis de URL de acesso
+### Variáveis de URL de acesso
 
 Ao configurar os URLs para vários endpoints, o editor pode usar variáveis de substituição. A lista completa dessas variáveis é definida nas [especificações de variáveis de AMP](https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md) (link em inglês). Essas especificações adicionam algumas variáveis específicas para acesso, como `READER_ID` e `AUTHDATA`. Algumas das variáveis mais relevantes são descritas na tabela abaixo:
 
@@ -278,7 +282,7 @@ https://pub.com/access?
 
 A variável AUTHDATA está disponível para pingback e URLs de login. Ela permite passar qualquer campo da resposta de autorização como um parâmetro de URL. Por exemplo, `AUTHDATA(isSubscriber)`. Expressões aninhadas também são permitidas, como `AUTHDATA(other.isSubscriber)`. Se namespaces forem usados, eles poderão ser anexados ao campo, por exemplo, `AUTHDATA(anamespace.afield)`.
 
-###Marcação de conteúdo de acesso
+### Marcação de conteúdo de acesso
 
 A marcação de conteúdo de acesso descreve quais seções ficam visíveis ou ocultas. Ela é composta por dois atributos de AMP: `amp-access` e `amp-access-hide`, que podem ser colocados em qualquer elemento HTML.
 
@@ -342,7 +346,7 @@ E este é um exemplo que mostra conteúdo adicional para os assinantes premium:
 </section>
 ```
 
-###Endpoint de autorização
+### Endpoint de autorização
 
 A autorização é configurada pela propriedade `authorization` na seção [Configuração de AMP Access](#configuration). É um endpoint CORS GET credenciado. Consulte [Segurança de origem do CORS](#cors-origin-security) para saber como essa solicitação precisa ser protegida.
 
@@ -416,7 +420,7 @@ O ambiente de tempo de execução de AMP usa as seguintes classes CSS durante o 
 
 Na opção *server*, a chamada para o endpoint de autorização é feita pelo Google AMP Cache como um endpoint HTTPS simples. Isso significa que, nesse caso, os cookies do editor não podem ser entregues.
 
-###Endpoint de pingback
+### Endpoint de pingback
 
 O pingback é configurado por meio da propriedade `pingback` na seção [Configuração de AMP Access](#configuration). É um endpoint CORS POST credenciado. Consulte [Segurança de origem do CORS](#cors-origin-security) para saber como essa solicitação precisa ser protegida.
 
@@ -439,7 +443,7 @@ rid=READER_ID
 &url=SOURCE_URL
 ```
 
-###Página de login
+### Página de login
 
 O URL da página de login é configurado por meio da propriedade `login` na seção [Configuração de acesso AMP](#configuration).
 
@@ -479,7 +483,7 @@ Observe o uso do parâmetro de hash de URL “success”. O valor é “true” 
 
 Se o sinal `success=true` for retornado, o ambiente de tempo de execução de AMP repetirá as chamadas para os endpoints de autorização e pingback para atualizar o estado do documento e informar a "view" com o novo perfil de acesso.
 
-####Link de login
+#### Link de login
 
 O editor pode colocar o link de login em qualquer parte do conteúdo do documento.
 
@@ -499,15 +503,15 @@ Quando namespaces são usados, o formato é `tap:amp-access.login-{namespace}` o
 
 A AMP não faz distinção entre login e assinatura. Essa distinção pode ser configurada pelo editor usando vários URLs/links de login ou no lado do editor.
 
-##Integração com *amp-analytics*
+## Integração com *amp-analytics*
 
 A integração com *amp-analytics* está documentada em [amp-access-analytics.md](./amp-access-analytics.md).
 
-##Segurança de origem do CORS
+## Segurança de origem do CORS
 
 Os endpoints de autorização e pingback são endpoints CORS e precisam implementar o protocolo de segurança descrito nas [Especificações de segurança de AMP CORS](https://www.ampproject.org/docs/fundamentals/amp-cors-requests#cors-security-in-amp).
 
-##Limite
+## Limite
 
 Limite é o sistema em que o leitor tem acesso a conteúdo premium gratuitamente para várias visualizações de documentos em determinado período. Quando a cota é atingida, o paywall é exibido e o leitor vê um conteúdo parcial com uma mensagem de venda e um link de assinatura/login. Por exemplo, o limite pode ser definido como “o leitor pode ler 10 artigos por mês gratuitamente”.
 
@@ -519,7 +523,7 @@ O AMP Access oferece os seguintes recursos para a implementação de acesso limi
 
 3. Somente documentos exclusivos podem ser contabilizados na cota. Ou seja, a atualização do mesmo documento dez vezes é contada como uma única visualização. Para essa finalidade, os endpoints de autorização e pingback podem injetar `SOURCE_URL` ou variáveis de URL semelhantes. Consulte [Variáveis de URL de acesso](#access-url-variables).
 
-##Primeiro clique grátis
+## Primeiro clique grátis
 
 A política do Google de Primeiro clique grátis (FCF, na sigla em inglês) é [descrita aqui](https://support.google.com/news/publisher/answer/40543), com a atualização mais recente descrita em mais detalhes [nesta postagem](https://googlewebmastercentral.blogspot.com/2015/09/first-click-free-update.html) (link em inglês).
 
@@ -527,7 +531,7 @@ Para implementar o FCF, o editor precisa: (1) conseguir determinar o serviço de
 
 As duas etapas são abordadas nas especificações do AMP Access. O referenciador pode ser injetado nos URLs de pingback e autorização usando a substituição de URL `DOCUMENT_REFERRER`, conforme descrito em [Variáveis de URL de acesso](#access-url-variables). A contagem de visualizações pode ser feita usando o endpoint de pingback no lado do servidor. Isso é muito parecido com a implementação de limite descrita em [Limite](#metering).
 
-##Fluxo de login
+## Fluxo de login
 
 O AMP inicia uma caixa de diálogo como uma janela própria, um pop-up ou uma guia. Sempre que possível, os visualizadores de AMP precisam tentar iniciar a caixa de diálogo de login no navegador para que possam aproveitar as APIs de nível superior do navegador.
 
@@ -549,7 +553,7 @@ Somente as etapas de 2 a 5 exigem ação do editor, que fornece a própria pági
 
 Como de costume, o código do leitor precisa ser incluído na chamada para a página de login e pode ser usado pelo editor para mapeamento de identidade. Como uma janela própria, o editor também receberá os cookies e poderá defini-los. Se o leitor já estiver conectado no lado do editor, é recomendável que o editor redirecione imediatamente de volta para o "Return URL" com a resposta `success=true`.
 
-##Glossário de AMP
+## Glossário de AMP
 
 * **Documento AMP**: o documento HTML que segue o formato AMP e é validado pelo validador de AMP. Os documentos AMP podem ser armazenados em cache pelo Google AMP Cache.
 * **Validador de AMP**: o programa de computador que faz uma análise estática de um documento HTML e retorna sucesso ou falha, dependendo de se o documento obedece ou não ao formato AMP.
@@ -561,7 +565,7 @@ Como de costume, o código do leitor precisa ser incluído na chamada para a pá
 * **Leitor**: a pessoa que visualiza os documentos AMP.
 * **Pré-renderização de AMP**: os visualizadores de AMP podem usar a pré-renderização, que renderiza um documento oculto antes de ele ser exibido. Isso proporciona uma melhora significativa no desempenho. No entanto, é importante levar em conta que a pré-renderização do documento não constitui uma visualização, já que o leitor pode nunca chegar a ver o documento.
 
-##Revisões
+## Revisões
 
 * 02/09/2016: propriedade de configuração "noPingback" "e pingback opcional.
 * 03/03/2016: reenvio de pingback após o login (v0.5).
@@ -573,7 +577,7 @@ Como de costume, o código do leitor precisa ser incluído na chamada para a pá
 * 03/02/2016: especificação para segurança da "origem da fonte" adicionada a [Segurança de origem do CORS](#cors-origin-security).
 * 01/02/2016: o parâmetro de consulta "return" da página de login pode ser personalizado usando a substituição de URL RETURN_URL.
 
-##Apêndice A: gramática de expressões “amp-access”
+## Apêndice A: gramática de expressões “amp-access”
 
 A gramática BNF mais recente está disponível no arquivo [access-expr-impl.jison](./0.1/access-expr-impl.jison).
 
@@ -609,10 +613,10 @@ literal: STRING | NUMERIC | TRUE | FALSE | NULL
 
 As expressões de `amp-access` são avaliadas pelo ambiente de tempo de execução de AMP e pelo Google AMP Cache. Isso NÃO faz parte das especificações que o editor precisa implementar. É apenas para fins informativos.
 
-##Discussão detalhada
+## Discussão detalhada
 
 Esta seção conterá uma explicação detalhada do design subjacente às especificações do amp-access e esclarecerá as opções de design. Em breve.
 
-##Validação
+## Validação
 
 Consulte as [regras do amp-access](https://github.com/ampproject/amphtml/blob/master/extensions/amp-access/validator-amp-access.protoascii) (link em inglês) nas especificações do validador de AMP.

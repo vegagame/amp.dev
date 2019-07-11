@@ -10,18 +10,22 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2016 The AMP HTML Authors. Tüm Hakları Saklıdır.
+Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Apache Lisansı, Sürüm 2.0 ("Lisans") ile lisanslıdır; bu dosyayı Lisans koşulları dışında kullanamazsınız.
-       Lisansın bir kopyasını şu adresten edinebilirsiniz:
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       Geçerli yasa tarafından gerekli görülmediği veya yazılı olarak bir sözleşme yapılmadığı sürece, Lisanslı olarak dağıtılan yazılım açıkça veya zımni olarak HİÇBİR GARANTİ VEYA KOŞUL SUNULMADAN "OLDUĞU GİBİ" dağıtılır.
-       Lisans kapsamında belirli bir dilde sağlanan izinleri ve uygulanan kısıtlamaları öğrenmek için söz konusu dille ilgili Lisans'a bakın.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-#amp-accordion
+# amp-accordion
 
 Görüntüleyenlerin içeriğin ana hatlarına göz atması ve herhangi bir bölüme atlaması için bir yol sağlar. Bu, bir bölümün birkaç cümlesi kaydırma gerektirdiğinde bile mobil cihazlar için yararlıdır.
 
@@ -41,7 +45,7 @@ Görüntüleyenlerin içeriğin ana hatlarına göz atması ve herhangi bir böl
 </table>
 
 
-##Davranış
+## Davranış
 
 `amp-accordion` bileşeni, daraltılabilir ve genişletilebilir içerik bölümlerini görüntülemenize olanak tanır. `amp-accordion` bileşeninin en yakın alt öğelerinin her biri akordeondaki bir bölüm olarak kabul edilir. Bu düğümlerin her biri bir `<section>` etiketi olmalıdır.
 
@@ -52,7 +56,7 @@ Görüntüleyenlerin içeriğin ana hatlarına göz atması ve herhangi bir böl
 * Bir bölümün başlığı tıklandığında/dokunulduğunda bölüm genişler veya daralır.
 * `amp-accordion` öğesindeki her bir bölümün daraltılmış/genişletilmiş durumu, oturum düzeyi için korunur. Bu durumu koruma özelliğini devre dışı bırakmak için `amp-accordion` öğesine `disable-session-states` özelliğini ekleyin.
 
-####Örnek: Akordeon görüntüleme
+#### Örnek: Akordeon görüntüleme
 
 Bu örnekte, sayfa yüklendiğinde üçüncü bölümün genişletildiği üç bölüm görüntülüyoruz.  Ayrıca, `disable-session-states` özelliğini ayarlayarak daraltılmış/genişletilmiş durumu korumayı devre dışı bıraktık.
 
@@ -69,7 +73,7 @@ Bu örnekte, sayfa yüklendiğinde üçüncü bölümün genişletildiği üç b
 Daha fazla `amp-accordion` demosu için [Örneklerle AMP](https://ampbyexample.com/components/amp-accordion/) sitesini ziyaret edin.
 [/tip]
 
-###Etkinlikler
+### Etkinlikler
 
 Aşağıdaki etkinlikler, `accordion` `section` öğesinde tetiklenir.
 
@@ -84,7 +88,7 @@ Aşağıdaki etkinlikler, `accordion` `section` öğesinde tetiklenir.
   </tr>
 </table>
 
-###İşlemler
+### İşlemler
 
 <table>
   <tr>
@@ -105,7 +109,7 @@ Aşağıdaki etkinlikler, `accordion` `section` öğesinde tetiklenir.
   </tr>
 </table>
 
-####Özellikler
+#### Özellikler
 
 <table>
   <tr>
@@ -126,7 +130,7 @@ Aşağıdaki etkinlikler, `accordion` `section` öğesinde tetiklenir.
   </tr>
 </table>
 
-##Stil
+## Stil
 
 * `amp-accordion` öğe seçicisini serbest bir şekilde biçimlendirmek için kullanabilirsiniz.
 * `amp-accordion` öğeleri her zaman `display: block` değerindedir.
@@ -136,6 +140,6 @@ Aşağıdaki etkinlikler, `accordion` `section` öğesinde tetiklenir.
 * `<amp-accordion>`, `<section>`, başlık ve içerik öğelerinin kenar boşlukları 0 değerine ayarlanır ve özel stillerde geçersiz kılınabilir.
 * Hem üstbilgi hem de içerik öğeleri `position: relative` değerine sahiptir.
 
-##Doğrulama
+## Doğrulama
 
 AMP doğrulayıcı spesifikasyonunda [amp-accordion kurallarına](https://github.com/ampproject/amphtml/blob/master/extensions/amp-accordion/validator-amp-accordion.protoascii) bakın.

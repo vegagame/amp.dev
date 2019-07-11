@@ -8,16 +8,23 @@ teaser:
 ---
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
-<!--- 版权所有 2016 The AMP HTML Authors。保留所有权利。
+<!---
+Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       根据 Apache 许可 2.0 版（以下简称“许可”）授权用户使用；您只有在遵循该许可的情况下才可使用本文件。您可以通过以下网址获得该许可的副本：
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       除非适用法律要求或已达成书面协议，否则按照该许可分发的软件均“按原样”分发，不提供任何类型的担保或条件（无论明示或暗示）。有关该许可规定的具体语言管辖权限和限制，请参阅该许可。
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-#amp-animation
+# amp-animation
 
 定义和运行动画。
 
@@ -38,15 +45,15 @@ teaser:
 
 
 
-##概述
+## 概述
 
 AMP 动画依赖 [Web Animations API](https://www.w3.org/TR/web-animations/) 在 AMP 文档中定义和运行动画。
 
-##格式
+## 格式
 
 `amp-animation` 元素会将此类动画定义为 JSON 结构。
 
-###顶层动画规范
+### 顶层动画规范
 
 顶层对象用于定义整个动画过程，其中包含任意数量的动画组件（定义为 `animations` 数组）：
 ```html
@@ -69,11 +76,11 @@ AMP 动画依赖 [Web Animations API](https://www.w3.org/TR/web-animations/) 在
 </amp-animation>
 ```
 
-###在 DOM 中的位置
+### 在 DOM 中的位置
 
 仅当 `trigger="visibility"` 时，才允许将 `<amp-animation>` 作为 `<body>` 元素的直接子级。如果未指定 `trigger` 且动画播放通过其操作以编程方式控制，则该元素可以放置在 DOM 中的任意位置。
 
-###动画组件
+### 动画组件
 
 每个动画组件都是一种[关键帧效果](https://www.w3.org/TR/web-animations/#dom-keyframeeffect-keyframeeffect)，并且包含以下各项：
 
@@ -94,23 +101,23 @@ AMP 动画依赖 [Web Animations API](https://www.w3.org/TR/web-animations/) 在
 }
 ```
 
-###条件
+### 条件
 
 条件可用于指定相应动画组件是否包含在最终动画中。
 
-####媒体查询
+#### 媒体查询
 
 可以使用 `media` 属性指定媒体查询。该属性可以包含 [Window.matchMedia](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/matchMedia) API 允许的任何表达式，并且对应于 `@media` CSS 规则。
 
 如果已为某动画组件指定值，则仅当媒体查询与当前环境匹配时，该动画组件才会包含在最终动画中。
 
-####支持条件
+#### 支持条件
 
 可以使用 `supports` 属性指定支持条件。该属性可以包含 [CSS.supports](https://developer.mozilla.org/zh-CN/docs/Web/API/CSS/supports) API 允许的任何表达式，并且对应于 `@supports` CSS 规则。
 
 如果已为某动画组件指定值，则仅当支持条件与当前环境匹配时，该动画组件才会包含在最终动画中。
 
-###动画 `switch` 语句
+### 动画 `switch` 语句
 
 在有些情况下，可以非常方便地将多个具有可选默认值的[条件动画](#conditions)合并成单个动画，只需按以下格式使用 `switch` 动画语句即可完成此操作：
 
@@ -157,7 +164,7 @@ AMP 动画依赖 [Web Animations API](https://www.w3.org/TR/web-animations/) 在
 }
 ```
 
-###变量
+### 变量
 
 动画组件可以通过 `var()` 表达式声明将用于时间值和关键帧值的 CSS 变量。系统会根据当前目标上下文对 `var()` 表达式进行求值。在动画组件中指定的 CSS 变量会传播到嵌套动画，应用于动画目标，然后替换最终动画中使用的 CSS 变量。
 
@@ -190,7 +197,7 @@ AMP 动画依赖 [Web Animations API](https://www.w3.org/TR/web-animations/) 在
 
 如需详细了解 `var()`，请参阅[“`var()` 和 `calc()`”部分](#var-and-calc-expressions)。
 
-###时间属性
+### 时间属性
 
 顶层动画和动画组件可以包含时间属性。网页动画规范的 [AnimationEffectTimingProperties](https://www.w3.org/TR/web-animations/#dictdef-animationeffecttimingproperties) 中对这些属性进行了详细定义。允许的一组属性包括：
 
@@ -268,7 +275,7 @@ AMP 动画依赖 [Web Animations API](https://www.w3.org/TR/web-animations/) 在
 
 动画组件会继承为顶层动画指定的时间属性。
 
-###子目标
+### 子目标
 
 在任何可以指定 `selector` 的位置，都可以指定 `subtargets: []`。子目标可以替换动画中为特定子目标（通过索引或 CSS 选择器指明）指定的时间属性或变量。
 
@@ -295,7 +302,7 @@ AMP 动画依赖 [Web Animations API](https://www.w3.org/TR/web-animations/) 在
 
 请注意，可以有多个子目标与同一个目标元素匹配。
 
-###关键帧
+### 关键帧
 
 要指定关键帧，可以采用网页动画规范的[“关键帧”部分](https://www.w3.org/TR/web-animations/#processing-a-keyframes-argument)介绍的多种方式，也可以采用字符串形式（引用 CSS 中的 `@keyframes` 名称）。
 
@@ -363,7 +370,7 @@ AMP 动画依赖 [Web Animations API](https://www.w3.org/TR/web-animations/) 在
 
 这些属性值可以是任何有效的 CSS 值，包括 `calc()`、`var()` 以及其他 CSS 表达式。
 
-####通过 CSS 指定关键帧
+#### 通过 CSS 指定关键帧
 
 另一种指定关键帧的方式是在文档的样式表（`<style>` 标记）中以 `@keyframes` CSS 规则的形式进行指定。例如：
 ```html
@@ -394,7 +401,7 @@ AMP 动画依赖 [Web Animations API](https://www.w3.org/TR/web-animations/) 在
 - 以 CSS 格式指定关键帧时，不支持 `calc()` 和 `var()` 的平台将无法使用 `amp-animation` polyfill。因此，建议您始终在 CSS 中添加后备值。
 - CSS 中无法使用 [`width()`、`height()`、`num()`、`rand()`、`index()` 和 `length()`](#css-extensions) 等 CSS 扩展。
 
-####列入白名单的关键帧属性
+#### 列入白名单的关键帧属性
 
 并非所有 CSS 属性都可用于关键帧。只有新型浏览器可以优化和快速以动画形式呈现的 CSS 属性才可列入白名单。随着越来越多的属性被确认为可提供良好性能，此名单将不断扩充。目前，该名单包含以下属性：
 - [`opacity`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/opacity)
@@ -404,7 +411,7 @@ AMP 动画依赖 [Web Animations API](https://www.w3.org/TR/web-animations/) 在
 
 请注意，不需要也不允许使用带供应商前缀的 CSS 属性。
 
-###动画配置的缩略形式
+### 动画配置的缩略形式
 
 如果动画仅涉及一个元素且一个关键帧效果就已足够，则配置可以缩减为只有这一个动画组件。例如：
 ```html
@@ -440,7 +447,7 @@ AMP 动画依赖 [Web Animations API](https://www.w3.org/TR/web-animations/) 在
 </amp-animation>
 ```
 
-###动画组成
+### 动画组成
 
 动画可以引用其他动画，因此可以将多个 `amp-animation` 声明合并成一个最终动画。引用其他动画中的动画与嵌套基本相同。人们希望将动画拆分成不同元素的原因是，他们想要在多个位置重复使用同一个动画，或者只是想让每个动画声明更简短、更易于管理。
 
@@ -494,7 +501,7 @@ AMP 动画依赖 [Web Animations API](https://www.w3.org/TR/web-animations/) 在
 
 在调用方动画中指定的变量和时间属性也会传递到所添加的动画中。
 
-###`var()` 和 `calc()` 表达式
+### `var()` 和 `calc()` 表达式
 
 `amp-animation` 允许将 `var()` 和 `calc()` 表达式用于时间值和关键帧值。
 
@@ -532,11 +539,11 @@ AMP 动画依赖 [Web Animations API](https://www.w3.org/TR/web-animations/) 在
 
 动画组件可以将自己的变量指定为 `--var-name` 字段。这些变量会传播到嵌套动画中，并替换通过样式表（`<style>` 标记）指定的目标元素的变量。`var()` 表达式会先尝试解析在动画中指定的变量值，然后通过查询目标样式进行解析。
 
-###CSS 扩展
+### CSS 扩展
 
 `amp-animation` 提供了一些 CSS 扩展，以满足典型动画需求：`rand()`、`num()`、`width()` 和 `height()`。CSS 值（包括时间值和关键帧值）能在 `amp-animation` 中的哪些位置使用，这些函数就能在哪些位置使用。
 
-####CSS `index()` 扩展
+#### CSS `index()` 扩展
 
 `index()` 函数可返回动画效果中当前目标元素的索引。当多个目标使用 `selector` 属性呈现相同的动画效果时，此函数的用处最大。第一个与选择器匹配的目标的索引为 `0`，第二个目标的索引为 `1`，依此类推。
 
@@ -548,7 +555,7 @@ AMP 动画依赖 [Web Animations API](https://www.w3.org/TR/web-animations/) 在
   }
 ```
 
-####CSS `length()` 扩展
+#### CSS `length()` 扩展
 
 `length()` 函数可返回动画效果中目标元素的数量。与 `index()` 组合使用时，此函数的用处最大：
 
@@ -559,7 +566,7 @@ AMP 动画依赖 [Web Animations API](https://www.w3.org/TR/web-animations/) 在
   }
 ```
 
-####CSS `rand()` 扩展
+#### CSS `rand()` 扩展
 
 `rand()` 函数可返回一个随机 CSS 值。有以下两种形式。
 
@@ -577,7 +584,7 @@ AMP 动画依赖 [Web Animations API](https://www.w3.org/TR/web-animations/) 在
   }
 ```
 
-####CSS `width()` 和 `height()` 扩展
+#### CSS `width()` 和 `height()` 扩展
 
 `width()` 和 `height()` 扩展可返回动画元素或通过选择器指定的元素的宽度/高度。返回的值以像素为单位，例如 `100px`。
 
@@ -596,7 +603,7 @@ AMP 动画依赖 [Web Animations API](https://www.w3.org/TR/web-animations/) 在
   }
 ```
 
-####CSS `num()` 扩展
+#### CSS `num()` 扩展
 
 `num()` 函数可返回 CSS 值的数字表示法。例如：
 
@@ -611,7 +618,7 @@ AMP 动画依赖 [Web Animations API](https://www.w3.org/TR/web-animations/) 在
   }
 ```
 
-###SVG 动画
+### SVG 动画
 
 SVG 非常棒，我们建议将其用于动画！
 
@@ -621,11 +628,11 @@ SVG 动画受到[列入白名单的关键帧属性](#whitelisted-properties-for-
 * 虽然已针对 IE/Edge 对 `transform` CSS 执行 polyfill 操作，但遗憾的是，无法对 `transform-origin` 执行 polyfill 操作。因此，如果需要与 IE/Edge 兼容，建议仅使用默认 `transform-origin`。
 * 大多数浏览器目前都无法正确解读 `transform-origin` CSS。请参阅 [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=740300)、[Safari](https://bugs.webkit.org/show_bug.cgi?id=174285) 和 [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=1379340) 的相关问题。实现 [CSS `transform-box`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-box) 后，大部分引起混淆的问题应该会得到解决。如果 `transform-origin` 至关重要，建议您同时添加必需的 `transform-box` CSS，以确保未来的兼容性。
 
-##触发动画
+## 触发动画
 
 您可以通过 `trigger` 属性或 `on` 操作触发动画。
 
-###`trigger` 属性
+### `trigger` 属性
 
 对于 `trigger` 属性，目前 `visibility` 是唯一可用的值。`visibility` 会在基础文档或嵌入内容可见时（位于视口中时）触发。
 
@@ -637,7 +644,7 @@ SVG 动画受到[列入白名单的关键帧属性](#whitelisted-properties-for-
   </amp-animation>
 ```
 
-###通过 `on` 操作触发
+### 通过 `on` 操作触发
 
 例如：
 
@@ -648,7 +655,7 @@ SVG 动画受到[列入白名单的关键帧属性](#whitelisted-properties-for-
 <button on="tap:anim1.start">Animate</button>
 ```
 
-##`on` 操作
+## `on` 操作
 
 `amp-animation` 元素会导出以下操作：
 

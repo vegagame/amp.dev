@@ -7,18 +7,22 @@ teaser:
 ---
 
 <!--
-       Copyright 2018 The AMP HTML Authors. Tüm Hakları Saklıdır.
+Copyright 2018 The AMP HTML Authors. All Rights Reserved.
 
-       Apache Lisansı, Sürüm 2.0 ("Lisans") ile lisanslıdır; bu dosyayı Lisans koşulları dışında kullanamazsınız.
-       Lisansın bir kopyasını şu adresten edinebilirsiniz:
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       Geçerli yasa tarafından gerekli görülmediği veya yazılı olarak bir sözleşme yapılmadığı sürece, Lisanslı olarak dağıtılan yazılım açıkça veya zımni olarak HİÇBİR GARANTİ VEYA KOŞUL SUNULMADAN "OLDUĞU GİBİ" dağıtılır.
-       Lisans kapsamında belirli bir dilde sağlanan izinleri ve uygulanan kısıtlamaları öğrenmek için söz konusu dille ilgili Lisans'a bakın.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-#amp-3d-gltf
+# amp-3d-gltf
 
 GL İletim Biçimi (gITF) 3D modellerini görüntüler.
 
@@ -37,13 +41,13 @@ GL İletim Biçimi (gITF) 3D modellerini görüntüler.
   </tr>
 </table>
 
-##Kullanım
+## Kullanım
 
 `amp-3d-gltf` bileşeni, gITF biçimindeki 3D modelleri görüntüler.
 
 **Not**: Bu modelleri görüntülemek için WebGL özellikli bir tarayıcı gerekir.
 
-###Örnek
+### Örnek
 
 ```html
 <amp-3d-gltf
@@ -55,7 +59,7 @@ GL İletim Biçimi (gITF) 3D modellerini görüntüler.
     src="path/to/model.glb"></amp-3d-gltf>
 ```
 
-###Sınırlamalar
+### Sınırlamalar
 
 Şu anda yalnızca glTF 2.0 ile çalışmaktadır.
 
@@ -64,11 +68,11 @@ Desteklenmeyen özellikler:
 - yerleşik kameralar
 - animasyon
 
-###CORS
+### CORS
 
 `amp-3d-gltf`, kaynak `https://<random>.ampproject.net` adresinden bir `getirme` isteğinde bulunur. Bu nedenle, `src` olarak belirtilen uç noktanın yanıt üstbilgisinde `access-control-allow-origin: *.ampproject.net` değeri ayarlanmalıdır. Kaynakta joker karakter için rastgele bir alt alan bileşeni olduğundan bu karakter gereklidir.
 
-##Özellikler
+## Özellikler
 
 <table>
   <tr>
@@ -102,7 +106,7 @@ Desteklenmeyen özellikler:
     </tr>
   </table>
 
-##İşlemler
+## İşlemler
 
 <table>
   <tr>
@@ -116,6 +120,6 @@ Desteklenmeyen özellikler:
     </tr>
   </table>
 
-##Doğrulama
+## Doğrulama
 
 AMP doğrulayıcı spesifikasyonundaki [amp-3d-gltf kurallarına](https://github.com/ampproject/amphtml/blob/master/extensions/amp-3d-gltf/validator-amp-3d-gltf.protoascii) bakın.

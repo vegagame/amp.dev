@@ -8,22 +8,22 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2017 The AMP HTML Authors. All Rights Reserved.
+Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 
-       Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS-IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 
-#amp-access-laterpay
+# amp-access-laterpay
 
 このコンポーネントにより、サイト運営者は [LaterPay](https://www.laterpay.net) マイクロペイメント プラットフォームと簡単に統合できます。`amp-access-laterpay` は [amp-access](https://www.ampproject.org/docs/reference/components/amp-access) をベースとしているため、amp-access は必須です。
 
@@ -50,7 +50,7 @@ teaser:
 </table>
 
 
-##動作
+## 動作
 
 [LaterPay](https://laterpay.net) は、ユーザーが 2 回クリックするだけでオンライン コンテンツを購入できるマイクロペイメント プラットフォームです。購入したコンテンツにはすぐにアクセスできます。しかも、登録、個人データの入力、支払いを事前に行う必要はありません。ウェブサイトでの合計購入額が 5 ドルまたは 5 ユーロに達したときに初めて支払い義務が生じます。コンテンツ プロバイダは、個々の商品アイテムや、コンテンツへの定額アクセスや時間制限付きのアクセスを提供する時間パスを販売できます。
 
@@ -72,7 +72,7 @@ amp-access と組み合わせて使用したい独自のペイウォール サ�
 
 また、このコンポーネントで[アクセス コンテンツ マークアップ](https://www.ampproject.org/docs/reference/components/amp-access#access-content-markup)を使用して、コンテンツの表示と非表示を切り替えることができます。
 
-##設定
+## 設定
 
 設定は amp-access に似ていますが、承認、Pingback、ログインリンクは必要ありません。
 
@@ -142,7 +142,7 @@ amp-access と組み合わせて使用したい独自のペイウォール サ�
         </tr>
       </table>
 
-##アクセス コンテンツ マークアップを使用して購入リストを表示する
+## アクセス コンテンツ マークアップを使用して購入リストを表示する
 
 アクセス コンテンツ マークアップは amp-access と同じように使用する必要があります。
 
@@ -165,7 +165,7 @@ ID が `amp-access-laterpay-dialog` に設定された要素では、ユーザ�
 
 ```
 
-##スタイル設定
+## スタイル設定
 
 生成されたマークアップの要素の一部に複数のクラスが適用されます。クラスが適用されていない要素は、CSS 要素セレクタで一義的に参照できます。
 
@@ -209,7 +209,7 @@ ID が `amp-access-laterpay-dialog` に設定された要素では、ユーザ�
 
 ```
 
-##ローカライズ
+## ローカライズ
 
 購入オプションのダイアログに表示されるテキストは、LaterPay Connector の UI でサイト運営者が定義します。
 
@@ -270,13 +270,13 @@ ID が `amp-access-laterpay-dialog` に設定された要素では、ユーザ�
   </tr>
 </table>
 
-##アナリティクス
+## アナリティクス
 
 `amp-access-laterpay` は `amp-access` をベースとしているため、`amp-access` から送信された[アナリティクス イベント](https://www.ampproject.org/docs/reference/components/amp-access#integration-with-amp-analytics)をすべてサポートします。
 
 実際のページの詳細な例については、[https://ampexample.laterpay.net/](https://ampexample.laterpay.net/) をご覧ください。この例は、アナリティクス イベントを送信するように設定されています。
 
-##amp-access-laterpay と amp-access を同時に使用する
+## amp-access-laterpay と amp-access を同時に使用する
 
 既存のサブスクリプション システムがあり、LaterPay を個々の記事の販売用にのみ使用する予定の場合は、amp-access と amp-access-laterpay を同時に使用して、同一ページ内に両方の販売方法を共存させることができます。
 
@@ -335,13 +335,13 @@ LaterPay と既存のペイウォールを統合して使用する場合、次�
 
 詳細な例については、[https://ampexample.laterpay.net/dual-amp-access.html](https://ampexample.laterpay.net/dual-amp-access.html) をご覧ください。
 
-##関連ドキュメント
+## 関連ドキュメント
 
 * [amp-access](https://www.ampproject.org/docs/reference/components/amp-access)
 * [LaterPay](https://www.laterpay.net)
 * [LaterPay: マイクロペイメントの使用方法](https://docs.laterpay.net/how_we_do_micropayments/)
 * [LaterPay Connector](https://connectormwi.laterpay.net/docs/index.html): amp-access-laterpay に似ていますが、非 AMP ページが対象です。
 
-##検証
+## 検証
 
 AMP 検証ツールの仕様で [amp-access-laterpay のルール](https://github.com/ampproject/amphtml/blob/master/extensions/amp-access-laterpay/validator-amp-access-laterpay.protoascii)をご確認ください。

@@ -10,22 +10,22 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
+Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS-IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 
-#amp-accordion
+# amp-accordion
 
 Menyediakan cara bagi pengunjung untuk melihat sekilas garis besar konten dan meloncat ke bagian mana pun. Cara ini berguna pada perangkat seluler yang bahkan beberapa kalimat dalam suatu bagian pun terkadang memerlukan scrolling.
 
@@ -45,7 +45,7 @@ Menyediakan cara bagi pengunjung untuk melihat sekilas garis besar konten dan me
 </table>
 
 
-##Perilaku
+## Perilaku
 
 Komponen `amp-accordion` memungkinkan Anda menampilkan bagian konten yang dapat diciutkan dan diluaskan. Setiap turunan langsung dari komponen `amp-accordion` akan dianggap sebagai bagian dalam accordion. Setiap node tersebut harus berupa tag `<section>`.
 
@@ -56,7 +56,7 @@ Komponen `amp-accordion` memungkinkan Anda menampilkan bagian konten yang dapat 
 * Mengklik/menge-tap judul bagian akan memperluas atau menciutkan bagian itu.
 * Status diciutkan/diluaskan setiap bagian dalam elemen `amp-accordion` akan dipertahankan selama level sesi. Untuk berhenti mempertahankan status ini, tambahkan atribut `disable-session-states` ke elemen `amp-accordion`.
 
-####Contoh: Menampilkan accordion
+#### Contoh: Menampilkan accordion
 
 Dalam contoh ini, kami menampilkan tiga bagian. Bagian ketiga diluaskan saat halaman dimuat.  Selain itu, kami tidak mempertahankan status yang diciutkan/diluaskan dengan menetapkan `disable-session-states`.
 
@@ -73,7 +73,7 @@ Dalam contoh ini, kami menampilkan tiga bagian. Bagian ketiga diluaskan saat hal
 Untuk melihat demo `amp-accordion` lainnya, buka [AMP By Example](https://ampbyexample.com/components/amp-accordion/).
 [/tip]
 
-###Peristiwa
+### Peristiwa
 
 Peristiwa di bawah akan dipicu pada `section` dari `accordion`.
 
@@ -89,7 +89,7 @@ Peristiwa di bawah akan dipicu pada `section` dari `accordion`.
   </tr>
 </table>
 
-###Tindakan
+### Tindakan
 
 <table>
   <tr>
@@ -110,7 +110,7 @@ Peristiwa di bawah akan dipicu pada `section` dari `accordion`.
   </tr>
 </table>
 
-####Atribut
+#### Atribut
 
 <table>
   <tr>
@@ -131,7 +131,7 @@ Peristiwa di bawah akan dipicu pada `section` dari `accordion`.
   </tr>
 </table>
 
-##Penataan gaya
+## Penataan gaya
 
 * Anda dapat menggunakan pemilih elemen `amp-accordion` untuk menata gayanya dengan bebas.
 * Elemen `amp-accordion` selalu berupa `display: block`.
@@ -141,6 +141,6 @@ Peristiwa di bawah akan dipicu pada `section` dari `accordion`.
 * Margin elemen `<amp-accordion>`, `<section>`, judul, dan isi ditetapkan ke 0 dan dapat diganti dalam gaya kustom.
 * Baik elemen judul maupun isi bersifat `position: relative`.
 
-##Validasi
+## Validasi
 
 Lihat [aturan amp-accordion](https://github.com/ampproject/amphtml/blob/master/extensions/amp-accordion/validator-amp-accordion.protoascii) dalam spesifikasi validator AMP.

@@ -10,19 +10,22 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2016 The AMP HTML Authors. Tous droits réservés.
+Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Autorisation sous licence Apache, version 2.0 (la "Licence") ;
-       n'utilisez ce fichier que dans le cadre de la Licence.
-       Vous pouvez obtenir une copie de la Licence à l'adresse suivante :
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       Sauf dispositions légales applicables ou accord écrit préalable, le logiciel distribué dans le cadre de la Licence est fourni "EN L'ÉTAT", À L'EXCLUSION DE TOUTE GARANTIE OU CONDITION DE QUELQUE NATURE QUE CE SOIT, expresse ou implicite.
-       Consultez la Licence correspondant à la langue spécifique qui régit les autorisations et limitations applicables.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-#amp-accordion
+# amp-accordion
 
 Ce composant permet aux internautes d'avoir un aperçu du contenu et d'accéder directement à la section de leur choix. Cette fonctionnalité s'avère particulièrement utile pour les appareils mobiles sur lesquels l'utilisateur doit faire défiler ne serait-ce que quelques phrases d'une section.
 
@@ -42,7 +45,7 @@ Ce composant permet aux internautes d'avoir un aperçu du contenu et d'accéder 
 </table>
 
 
-##Comportement
+## Comportement
 
 Le composant `amp-accordion` vous permet d'afficher des sections de contenu qui peuvent être réduites et développées. Chaque élément enfant immédiat du composant `amp-accordion` est considéré comme une section de l'accordéon. Chacun de ces nœuds doit être une balise `<section>`.
 
@@ -53,7 +56,7 @@ Le composant `amp-accordion` vous permet d'afficher des sections de contenu qui 
 * Cliquer ou appuyer sur le titre d'une section a pour effet de développer ou de réduire cette dernière.
 * L'état réduit/développé de chaque section de l'élément `amp-accordion` est conservé pour le niveau de session. Pour désactiver la conservation de cet état, ajoutez l'attribut `disable-session-states` à l'élément `amp-accordion`.
 
-####Exemple : Affichage d'un accordéon
+#### Exemple : Affichage d'un accordéon
 
 Trois sections sont affichées dans cet exemple. La troisième section est développée lors du chargement de la page.  Nous avons, en outre, désactivé la conservation de l'état réduit/développé en définissant l'attribut `disable-session-states`.
 
@@ -70,7 +73,7 @@ Trois sections sont affichées dans cet exemple. La troisième section est déve
 Pour regarder d'autres démos du composant `amp-accordion`, rendez-vous sur [AMP By Example](https://ampbyexample.com/components/amp-accordion/).
 [/tip]
 
-###Événements
+### Événements
 
 Les événements ci-dessous sont déclenchés sur les éléments `section` de `accordion`.
 
@@ -85,7 +88,7 @@ Les événements ci-dessous sont déclenchés sur les éléments `section` de `a
   </tr>
 </table>
 
-###Actions
+### Actions
 
 <table>
   <tr>
@@ -106,7 +109,7 @@ Les événements ci-dessous sont déclenchés sur les éléments `section` de `a
   </tr>
 </table>
 
-####Attributs
+#### Attributs
 
 <table>
   <tr>
@@ -127,7 +130,7 @@ Les événements ci-dessous sont déclenchés sur les éléments `section` de `a
   </tr>
 </table>
 
-##Application d'un style
+## Application d'un style
 
 * Vous pouvez utiliser le sélecteur d'élément `amp-accordion` pour appliquer un style librement.
 * Les éléments `amp-accordion` sont toujours `display: block`.
@@ -137,6 +140,6 @@ Les événements ci-dessous sont déclenchés sur les éléments `section` de `a
 * Les marges des éléments `<amp-accordion>`, `<section>`, titre et contenu sont définies sur 0, et peuvent être remplacées dans des styles personnalisés.
 * Les éléments de titre et de contenu ont tous deux la propriété `position: relative`.
 
-##Validation
+## Validation
 
 Consultez les [règles relatives à amp-accordion](https://github.com/ampproject/amphtml/blob/master/extensions/amp-accordion/validator-amp-accordion.protoascii) dans les spécifications du validateur AMP.

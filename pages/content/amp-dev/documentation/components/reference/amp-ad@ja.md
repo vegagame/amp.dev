@@ -6,11 +6,11 @@ teaser:
   text: 広告を表示するコンテナです。
 ---
 
-#amp-ad / amp-embed
+# amp-ad / amp-embed
 
 広告を表示するコンテナです。`amp-embed` は `amp-ad` タグの別名です。タグ名は異なりますが、そのすべての機能を受け継いでいます。より正確な意味では、`amp-embed` を使用します。AMP ドキュメントでは、HTTPS 経由で配信される広告と埋め込みのみを表示できます。
 
-#<a name="amp-ad"></a>`amp-ad` / `amp-embed`
+# `amp-ad` / `amp-embed`
 
 
 [tip type="note"] `amp-ad` / `amp-embed` の仕様は今後、大幅に変更される可能性があります。現在は、広告を自動表示できる形式に設計されています。
@@ -18,19 +18,19 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2015 The AMP HTML Authors. All Rights Reserved.
+Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 
-       Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS-IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 
 <table>
@@ -52,13 +52,13 @@ teaser:
   </tr>
 </table>
 
-##動作
+## 動作
 
 広告は、AMP ドキュメントの他のすべてのリソースと同じように、`<amp-ad>` と呼ばれる特別なカスタム要素とともに読み込まれます。広告ネットワークから提供される JavaScript を AMP ドキュメント内で実行することはできません。代わりに、AMP ランタイムは（iframe サンドボックス経由で）別のオリジンから iframe を AMP ドキュメントとして読み込み、広告ネットワークの JavaScript をその iframe サンドボックス内で実行します。
 
 `<amp-ad>` では、そのレイアウト タイプの[ルール](https://www.ampproject.org/docs/design/amp-html-layout#%28tl;dr%29-summary-of-layout-requirements-&amp;-behaviors)に沿って、幅と高さの値を指定する必要があります。また、表示する広告ネットワークを指定する `type` 引数が必要です。タグのすべての `data-*` 属性は、最終的に広告をレンダリングするコードに引数として自動的に渡されます。特定のタイプのネットワークで必要な `data-` 属性は広告ネットワークによって異なるため、広告ネットワークとともに記述する必要があります。
 
-####例: 複数の広告の表示
+#### 例: 複数の広告の表示
 
 <!--embedded example - displays in ampproject.org -->
 
@@ -69,7 +69,7 @@ teaser:
   </amp-iframe>
 </div>
 
-##属性
+## 属性
 
 <table>
   <tr>
@@ -111,7 +111,7 @@ teaser:
   </tr>
 </table>
 
-##プレースホルダ
+## プレースホルダ
 
 `amp-ad` は必要に応じて、`placeholder` 属性が設定された子要素をサポートします。広告ネットワークでこの子要素がサポートされている場合、広告を表示できるようになるまでこの子要素が表示されます。詳しくは、[プレースホルダとフォールバック](https://www.ampproject.org/docs/guides/responsive/placeholders)をご覧ください。
 
@@ -122,7 +122,7 @@ teaser:
 </amp-ad>
 ```
 
-##表示可能な広告がない場合
+## 表示可能な広告がない場合
 
 スロットに表示できる広告がない場合、AMPは `amp-ad` 要素を折りたたもうとします（つまり、この要素を `display: none` に設定しようとします）。AMP は、ユーザーのスクロール位置に影響を及ぼさずにこの処理を実行できるかどうかを判断します。広告が現在のビューポート内に表示されている場合は、ユーザーのスクロール位置に影響が及ぶため、広告は折りたたまれませんが、広告が現在のビューポートの外部に表示されている場合は、広告が折りたたまれます。
 
@@ -136,7 +136,7 @@ teaser:
 </amp-ad>
 ```
 
-##動画広告の配信
+## 動画広告の配信
 
 動画広告で AMP の動画を収益化する方法には次の 3 つがあります。
 
@@ -148,7 +148,7 @@ teaser:
     * 最初のビューポートでプレーヤーを読み込む場合は、ポスターがあることを確認します。詳しくは、[こちら](https://www.ampproject.org/docs/reference/components/amp-iframe#iframe-with-placeholder)をご覧ください。
     * 動画とポスターは HTTPS 経由で配信する必要があります。</li>
 
-##カスタム ドメインからの広告の掲載
+## カスタム ドメインからの広告の掲載
 
 AMP は、独自のドメインなどのカスタム ドメインから広告を読み込むために使用するブートストラップ iframe の読み込みをサポートしています。
 
@@ -160,7 +160,7 @@ AMP は、独自のドメインなどのカスタム ドメインから広告を
 
   メタタグの `content` 属性には、ウェブサーバーにコピーした remote.html ファイルの絶対 URL を指定します。この URL には「https」スキーマを使用する必要があります。このファイルを AMP ファイルと同じオリジンに格納することはできません。たとえば、AMP ファイルを `www.example.com` にホストする場合、この URL に `www.example.com` を指定することはできませんが、`something-else.example.com` は指定できます。iframe 用に使用できるオリジンについて詳しくは、[iframe のオリジン ポリシー](../../spec/amp-iframe-origin-policy.md)をご覧ください。
 
-###セキュリティ
+### セキュリティ
 
 受信データを `draw3p` 関数に渡す前に**検証**を行って、iframe が想定どおりの動作のみを行うことを確認します。これは、カスタムの JavaScript インジェクションが可能な広告ネットワークの場合は特に当てはまります。
 
@@ -173,7 +173,7 @@ AMP キャッシュの場合は、「ソースオリジン」（cdn.ampproject.o
 
 オリジンの適用は、`draw3p` の 3 番目の引数で行うことができます。さらに、ブラウザが完全にサポートされている場合、[allow-from](https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options) ディレクティブを使用して行う必要もあります。
 
-###配信元の広告設定の拡張
+### 配信元の広告設定の拡張
 
 この機能はあくまでも任意です。広告サーバーへの広告リクエストを作成する前に、広告リクエストを拡張したい場合があります。
 
@@ -194,15 +194,15 @@ draw3p(function(config, done) {
 }, ['allowed-ad-type'], ['your-domain.com']);
 ```
 
-##スタイル設定
+## スタイル設定
 
 CSS の `position: fixed` が設定されているコンテナに `<amp-ad>` 要素自体を含めたり配置したりすることはできません（`amp-lightbox` を除く）。これは、ページ全体のオーバーレイ広告の UX に影響するためです。UX を一定に維持できるよう、AMP が管理するコンテナの内部で同様の広告フォーマットを使用できるようにすることが今後検討される可能性があります。
 
-##検証
+## 検証
 
 AMP 検証ツールの仕様で [amp-ad のルール](https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/validator-amp-ad.protoascii)をご確認ください。
 
-##サポートされている広告ネットワーク
+## サポートされている広告ネットワーク
 
 * [A8](../../ads/a8.md)
 * [A9](../../ads/a9.md)
@@ -384,7 +384,7 @@ AMP 検証ツールの仕様で [amp-ad のルール](https://github.com/ampproj
 * [Zedo](../../ads/zedo.md)
 * [Zucks](../../ads/zucks.md)
 
-##サポートされている埋め込みタイプ
+## サポートされている埋め込みタイプ
 
 * [24smi](../../ads/24smi.md)
 * [AJA](../../ads/aja.md)

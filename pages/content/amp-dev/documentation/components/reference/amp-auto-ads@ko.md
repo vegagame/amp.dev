@@ -2,24 +2,27 @@
 $category@: ads-analytics
 formats:
 - websites
-티저:
-
-##  텍스트: 원격으로 제공되는 구성 파일을 사용하여 AMP 페이지에 동적으로 광고를 삽입합니다.
+teaser:
+  text: 원격으로 제공되는 구성 파일을 사용하여 AMP 페이지에 동적으로 광고를 삽입합니다.
 ---
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2017 The AMP HTML Authors. All Rights Reserved.
+Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 
-       Apache 라이선스 버전 2.0(이하 '라이선스')에 따라 사용이 허가되었으므로, 라이선스를 준수하지 않는 경우 이 파일을 사용할 수 없습니다.
-       라이선스의 사본은 다음에서 가져올 수 있습니다.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       해당 법률에 따라 요구되거나 서면으로 동의한 경우를 제외하고, 라이선스에 따라 배포된 소프트웨어는 어떠한 종류의 명시적 또는 묵시적 보증 또는 조건도 없이 '있는 그대로' 배포됩니다.
-       라이선스의 허가 및 제한 사항에 관한 구체적인 문구는 라이선스를 참조하시기 바랍니다.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-#amp-auto-ads
+# amp-auto-ads
 
 원격으로 제공되는 구성 파일을 사용하여 AMP 페이지에 동적으로 광고를 삽입합니다.
 
@@ -50,7 +53,7 @@ formats:
   </table>
 
 
-##동작
+## 동작
 
 충분한 수의 유효한 위치가 지정되면(구성에서 제공) `amp-auto-ads`는 광고 네트워크에서 지정한 제약 조건을 준수하면서 추가 광고를 삽입하려고 시도합니다. 이러한 제약 조건은 다음을 제한합니다.
 
@@ -69,12 +72,12 @@ formats:
   </amp-auto-ads>
 ```
 
-##지원되는 광고 네트워크
+## 지원되는 광고 네트워크
 
 * [애드센스](../../ads/google/adsense.md)
 * [DoubleClick (experimental)](../../ads/google/doubleclick.md)
 
-##속성
+## 속성
 
 <table>
   <tr>
@@ -91,11 +94,11 @@ formats:
   </tr>
 </table>
 
-##구성 사양
+## 구성 사양
 
 구성은 `<amp-auto-ads>`가 페이지의 어느 위치에 광고를 개제할 수 있는지를 정의합니다. `ad-network-config.js`에 정의된 URL의 제3자 광고 네트워크에서 구성을 가져옵니다. 구성은 아래에 설명된 [`ConfigObj`](#configobj) 정의와 일치하는 직렬화된 JSON 개체여야 합니다.
 
-###구성 예
+### 구성 예
 
 다음 예는 페이지에서 세 번째 `<DIV id='domId'>` 내에 있는 `<P class='paragraph'>` 요소 바로 뒤에 광고를 배치하도록 지정합니다. 이러한 위치에 배치되는 광고는 BANNER 유형이어야 하며 상단 여백은 4px, 하단 여백은 10px여야 합니다.
 
@@ -122,9 +125,9 @@ formats:
 }
 ```
 
-###개체 정의
+### 개체 정의
 
-####ConfigObj
+#### ConfigObj
 
 구성 개체에서 지정할 입력란:
 
@@ -159,7 +162,7 @@ formats:
   </tr>
 </table>
 
-####PlacementObj
+#### PlacementObj
 
 `placements` 구성 개체에서 지정할 입력란:
 
@@ -204,7 +207,7 @@ formats:
   </tr>
 </table>
 
-####AnchorObj
+#### AnchorObj
 
 `anchor` 구성 개체에서 지정할 입력란:
 
@@ -244,7 +247,7 @@ formats:
   </tr>
 </table>
 
-####PlacementStyleObj
+#### PlacementStyleObj
 
 `style` 구성 개체에서 지정할 입력란:
 
@@ -268,7 +271,7 @@ formats:
   </tr>
 </table>
 
-####RelativePositionEnum
+#### RelativePositionEnum
 
 `placements` 구성 개체의 `pos` 입력란에 대한 ENUM 값:
 
@@ -300,7 +303,7 @@ formats:
   </tr>
 </table>
 
-####PlacementTypeEnum
+#### PlacementTypeEnum
 
 `placements` 구성 개체의 `type` 입력란에 대한 ENUM 값:
 
@@ -317,7 +320,7 @@ formats:
   </tr>
 </table>
 
-####AdConstraintsObj
+#### AdConstraintsObj
 
 `adConstraints` 구성 개체에서 지정할 입력란:
 
@@ -357,7 +360,7 @@ formats:
     </tr>
   </table>
 
-####SubsequentMinSpacingObj
+#### SubsequentMinSpacingObj
 
 `subsequentMinSpacing` 구성 개체에서 지정할 입력란. 이미 페이지에 있는 광고의 수를 기반으로 추가적인 광고 간에 필요한 간격을 변경하는 데 `subsequentMinSpacing` 항목을 사용할 수 있습니다. 예를 들어 다음 시나리오를 고려해볼 수 있습니다.
 
@@ -404,6 +407,6 @@ formats:
       </tr>
     </table>
 
-##유효성 검사
+## 유효성 검사
 
 AMP 유효성 검사 도구 사양의 [amp-auto-ads 규칙](https://github.com/ampproject/amphtml/blob/master/extensions/amp-auto-ads/validator-amp-auto-ads.protoascii)을 참조하세요.

@@ -8,18 +8,22 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Telif Hakkı 2017 The AMP HTML Authors. Tüm Hakları Saklıdır.
+Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 
-       Apache Lisansı, Sürüm 2.0 ("Lisans") ile lisanslıdır; bu dosyayı Lisans koşulları dışında kullanamazsınız.
-       Lisansın bir kopyasını şu adresten edinebilirsiniz:
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       Geçerli yasa tarafından gerekli görülmediği veya yazılı olarak bir sözleşme yapılmadığı sürece, Lisanslı olarak dağıtılan yazılım açıkça veya zımni olarak HİÇBİR GARANTİ VEYA KOŞUL SUNULMADAN "OLDUĞU GİBİ" dağıtılır.
-       Lisans kapsamında belirli bir dilde sağlanan izinleri ve uygulanan kısıtlamaları öğrenmek için söz konusu dille ilgili Lisans'a bakın.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-#amp-auto-ads
+# amp-auto-ads
 
 Uzaktan sunulan bir yapılandırma dosyası kullanarak reklamları bir AMP sayfasına dinamik şekilde yerleştirir.
 
@@ -51,7 +55,7 @@ Uzaktan sunulan bir yapılandırma dosyası kullanarak reklamları bir AMP sayfa
 
 
 
-##Davranış
+## Davranış
 
 Yeterli sayıda geçerli yerleşim göz önünde bulundurulduğunda (yapılandırmada sağlanır) `amp-auto-ads`, bir yandan reklam ağı tarafından belirtilen kısıtlamalara uyarken diğer yandan ek reklamlar yerleştirmeye çalışır. Bu kısıtlamalar şunları sınırlandırır:
 
@@ -70,12 +74,12 @@ Reklam ağı türü ve (reklam ağının gerektirdiği) ek bilgiler etikette bel
   </amp-auto-ads>
 ```
 
-##Desteklenen reklam ağları
+## Desteklenen reklam ağları
 
 * [AdSense](../../ads/google/adsense.md)
 * [DoubleClick (deneysel)](../../ads/google/doubleclick.md)
 
-##Özellikler
+## Özellikler
 
 <table>
   <tr>
@@ -92,11 +96,11 @@ Reklam ağı türü ve (reklam ağının gerektirdiği) ek bilgiler etikette bel
   </tr>
 </table>
 
-##Yapılandırma Spesifikasyonu
+## Yapılandırma Spesifikasyonu
 
 Yapılandırma, `<amp-auto-ads>` etiketinin reklamları sayfada yerleştirebileceği yerleri tanımlar. Yapılandırma, `ad-network-config.js` dosyasında tanımlanan URL'deki bir üçüncü taraf reklam ağından getirilir. Yapılandırma, aşağıda açıklanan [`ConfigObj`](#configobj) tanımına uygun serileştirilmiş bir JSON nesnesi olmalıdır.
 
-###Örnek Yapılandırma
+### Örnek Yapılandırma
 
 Aşağıdaki örnekte, reklamın sayfada üçüncü `<DIV id='domId'>` öğesi içindeki tüm `<P class='paragraph'>` öğelerinden hemen sonra yerleştirilmesi gerektiği belirtilmektedir. Bu konumların herhangi birine yerleştirilen bir reklamın BANNER türünde olması ve 4 piksel üst ve 10 piksel alt kenar boşluğu olması gerekir.
 
@@ -123,9 +127,9 @@ Aşağıdaki örnekte, reklamın sayfada üçüncü `<DIV id='domId'>` öğesi i
 }
 ```
 
-###Nesne Tanımları
+### Nesne Tanımları
 
-####ConfigObj
+#### ConfigObj
 
 Yapılandırma nesnesinde belirtilecek alanlar:
 
@@ -160,7 +164,7 @@ Yapılandırma nesnesinde belirtilecek alanlar:
   </tr>
 </table>
 
-####PlacementObj
+#### PlacementObj
 
 `placements` yapılandırma nesnesinde belirtilecek alanlar:
 
@@ -205,7 +209,7 @@ Yapılandırma nesnesinde belirtilecek alanlar:
   </tr>
 </table>
 
-####AnchorObj
+#### AnchorObj
 
 `anchor` yapılandırma nesnesinde belirtilecek alanlar:
 
@@ -245,7 +249,7 @@ Yapılandırma nesnesinde belirtilecek alanlar:
   </tr>
 </table>
 
-####PlacementStyleObj
+#### PlacementStyleObj
 
 `style` yapılandırma nesnesinde belirtilecek alanlar:
 
@@ -269,7 +273,7 @@ Yapılandırma nesnesinde belirtilecek alanlar:
   </tr>
 </table>
 
-####RelativePositionEnum
+#### RelativePositionEnum
 
 `placements` yapılandırma nesnesindeki `pos` alanı için ENUM değerleri:
 
@@ -301,7 +305,7 @@ Yapılandırma nesnesinde belirtilecek alanlar:
   </tr>
 </table>
 
-####PlacementTypeEnum
+#### PlacementTypeEnum
 
 `placements` yapılandırma nesnesindeki `type` alanı için ENUM değerleri:
 
@@ -318,7 +322,7 @@ Yapılandırma nesnesinde belirtilecek alanlar:
   </tr>
 </table>
 
-####AdConstraintsObj
+#### AdConstraintsObj
 
 `adConstraints` yapılandırma nesnesinde belirtilecek alanlar:
 
@@ -358,7 +362,7 @@ Yapılandırma nesnesinde belirtilecek alanlar:
     </tr>
   </table>
 
-####SubsequentMinSpacingObj
+#### SubsequentMinSpacingObj
 
 `subsequentMinSpacing` yapılandırma nesnesinde belirtilecek alanlar. `subsequentMinSpacing` girişleri, halihazırda sayfada bulunan reklamların sayısına dayalı olarak ilave reklamlar arasında bulunması gereken aralıkları değiştirmek için kullanılabilir. Örneğin, aşağıdaki senaryoyu inceleyin:
 
@@ -405,6 +409,6 @@ Dolayısıyla, minimum aralık varsayılan olarak `AdConstraints` nesnesindeki i
     </tr>
   </table>
 
-##Doğrulama
+## Doğrulama
 
 AMP doğrulayıcı spesifikasyonundaki [amp-auto-ads kurallarına](https://github.com/ampproject/amphtml/blob/master/extensions/amp-auto-ads/validator-amp-auto-ads.protoascii) bakın.

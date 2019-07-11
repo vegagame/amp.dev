@@ -8,19 +8,22 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2017 The AMP HTML Authors. Tous droits réservés.
+Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 
-       Autorisation sous licence Apache, version 2.0 (la "Licence") ;
-       n'utilisez ce fichier que dans le cadre de la Licence.
-       Vous pouvez obtenir une copie de la Licence à l'adresse suivante :
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       Sauf dispositions légales applicables ou accord écrit préalable, le logiciel distribué dans le cadre de la Licence est fourni "EN L'ÉTAT", À L'EXCLUSION DE TOUTE GARANTIE OU CONDITION DE QUELQUE NATURE QUE CE SOIT, expresse ou implicite.
-       Consultez la Licence correspondant à la langue spécifique qui régit les autorisations et limitations applicables.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-#amp-access-laterpay
+# amp-access-laterpay
 
 Ce composant permet aux éditeurs de s'intégrer facilement à la plate-forme de micropaiement [LaterPay](https://www.laterpay.net). `amp-access-laterpay` est basé sur [AMP Access](https://www.ampproject.org/docs/reference/components/amp-access) et requiert cette extension.
 
@@ -47,7 +50,7 @@ Ce composant permet aux éditeurs de s'intégrer facilement à la plate-forme de
 </table>
 
 
-##Comportement
+## Comportement
 
 [LaterPay](https://laterpay.net) est une plate-forme de micropaiement qui permet aux utilisateurs d'acheter du contenu en ligne en seulement deux clics, puis d'y accéder immédiatement, sans inscription initiale, sans fournir de données à caractère personnel et sans effectuer de paiement. Les utilisateurs paient uniquement lorsque le montant de leurs achats atteint un total de 5 $ ou 5 € sur l'ensemble des sites Web. Les fournisseurs de contenu peuvent vendre des articles individuels ou des forfaits au temps, ce qui permet un accès forfaitaire au contenu ou un accès limité dans le temps.
 
@@ -69,7 +72,7 @@ La liste générée peut être mise en forme et présentée selon les préféren
 
 Ce composant utilise également le [balisage de contenu accessible](https://www.ampproject.org/docs/reference/components/amp-access#access-content-markup) pour afficher et masquer le contenu.
 
-##Configuration
+## Configuration
 
 La configuration est semblable à celle d'AMP Access, si ce n'est qu'aucune autorisation, aucun pingback et aucun lien de connexion ne sont nécessaires.
 
@@ -141,7 +144,7 @@ Les valeurs suivantes peuvent être définies dans l'objet de configuration `lat
         </tr>
       </table>
 
-##Utiliser le balisage du contenu accessible et afficher la liste d'achats
+## Utiliser le balisage du contenu accessible et afficher la liste d'achats
 
 Vous devez utiliser le balisage du contenu accessible de la même manière qu'avec AMP Access.
 
@@ -164,7 +167,7 @@ Veillez à ajouter la classe `amp-access-laterpay` si vous souhaitez utiliser le
 
 ```
 
-##Application d'un style
+## Application d'un style
 
 Plusieurs classes sont appliquées à certains éléments du balisage généré. Les éléments ne comportant aucune classe peuvent être référencés sans équivoque au moyen de sélecteurs d'éléments CSS.
 
@@ -208,7 +211,7 @@ La structure créée pour la boîte de dialogue se présente comme suit :
 
 ```
 
-##Localisation
+## Localisation
 
 Le texte affiché pour les options d'achat dans la boîte de dialogue est défini par l'éditeur dans l'interface utilisateur de LaterPay Connector.
 
@@ -269,13 +272,13 @@ Les clés de message suivantes peuvent être traduites ou personnalisées. Sache
   </tr>
 </table>
 
-##Analyse
+## Analyse
 
 Le composant `amp-access-laterpay` est basé sur `amp-access`. Il accepte donc tous les [événements d'analyse](https://www.ampproject.org/docs/reference/components/amp-access#integration-with-amp-analytics) envoyés par `amp-access`.
 
 Tous les exemples disponibles à l'adresse [https://ampexample.laterpay.net/](https://ampexample.laterpay.net/) sont configurés de manière à envoyer ces événements d'analyse, afin que vous disposiez d'un exemple d'utilisation pratique plus complet.
 
-##Utiliser AMP Access LaterPay avec AMP Access
+## Utiliser AMP Access LaterPay avec AMP Access
 
 Si un système d'abonnement est déjà actif et que vous souhaitez utiliser LaterPay uniquement pour certaines ventes d'articles, vous pouvez faire en sorte que les deux méthodes de vente coexistent sur la même page en utilisant conjointement AMP Access et AMP Access LaterPay.
 
@@ -334,13 +337,13 @@ Par contre, le balisage d'accès au contenu peut se présenter comme suit :
 
 Pour un exemple plus complet, rendez-vous à l'adresse suivante : [https://ampexample.laterpay.net/dual-amp-access.html](https://ampexample.laterpay.net/dual-amp-access.html).
 
-##Documentation associée
+## Documentation associée
 
 * [AMP Access](https://www.ampproject.org/docs/reference/components/amp-access)
 * [LaterPay](https://www.laterpay.net)
 * [LaterPay: How we do MicroPayments](https://docs.laterpay.net/how_we_do_micropayments/)
 * [LaterPay Connector](https://connectormwi.laterpay.net/docs/index.html) (semblable à AMP Access LaterPay, mais pour les pages non AMP).
 
-##Validation
+## Validation
 
 Consultez les [règles relatives à amp-access-laterpay](https://github.com/ampproject/amphtml/blob/master/extensions/amp-access-laterpay/validator-amp-access-laterpay.protoascii) dans les spécifications du validateur AMP.

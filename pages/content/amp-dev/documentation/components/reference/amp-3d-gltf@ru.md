@@ -7,19 +7,22 @@ teaser:
 ---
 
 <!--
-       © Авторы HTML с технологией AMP, 2018. Все права защищены.
+Copyright 2018 The AMP HTML Authors. All Rights Reserved.
 
-       Лицензия Apache версии 2.0 (далее – "Лицензия");
-     этот файл можно использовать только в соответствии с Лицензией.
-     Чтобы получить текст Лицензии, перейдите по ссылке:
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-     Если иное не требуется действующим законодательством или не оговорено в письменном виде, программное обеспечение, распространяемое по Лицензии, распространяется "КАК ЕСТЬ", БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ И УСЛОВИЙ, явных или подразумеваемых.
-     Определения используемых в Лицензии понятий, с помощью которых оговариваются разрешения и ограничения, приводятся в тексте Лицензии.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 
-#amp-3d-gltf
+# amp-3d-gltf
 
 Этот компонент предназначен для показа 3D-моделей, использующих формат gITF (GL Transmission Format).
 
@@ -38,13 +41,13 @@ teaser:
   </tr>
 </table>
 
-##Использование
+## Использование
 
 Компонент `amp-3d-gltf` предназначен для показа 3D-моделей, при создании которых использовался формат gITF.
 
 **Примечание.** Такие модели могут демонстрироваться только в браузерах, которые поддерживают WebGL.
 
-###Пример
+### Пример
 
 ```html
 <amp-3d-gltf
@@ -56,7 +59,7 @@ teaser:
     src="path/to/model.glb"></amp-3d-gltf>
 ```
 
-###Ограничения
+### Ограничения
 
 В настоящее время поддерживается только версия glTF 2.0.
 
@@ -67,11 +70,11 @@ teaser:
 
 
 
-###Поддержка CORS
+### Поддержка CORS
 
 Компонент `amp-3d-gltf` выполняет запрос `fetch` с исходного URL `https://<random>.ampproject.net`, поэтому в заголовке ответа конечной точки, определенной с помощью атрибута `src`, должен быть указан элемент `access-control-allow-origin: *.ampproject.net`. Поскольку исходный URL содержит случайным образом указываемый субдомен, потребуется использовать подстановочный знак.
 
-##Атрибуты
+## Атрибуты
 
 <table>
   <tr>
@@ -105,7 +108,7 @@ teaser:
     </tr>
   </table>
 
-##Действия
+## Действия
 
 <table>
   <tr>
@@ -119,6 +122,6 @@ teaser:
     </tr>
   </table>
 
-##Проверка
+## Проверка
 
 С правилами для компонента amp-3d-gltf rules можно ознакомиться в [спецификации валидатора AMP](https://github.com/ampproject/amphtml/blob/master/extensions/amp-3d-gltf/validator-amp-3d-gltf.protoascii).
