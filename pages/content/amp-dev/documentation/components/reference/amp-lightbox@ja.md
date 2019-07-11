@@ -24,7 +24,7 @@ teaser:
      limitations under the License.
 -->
 
-#amp-lightbox
+# amp-lightbox
 
 <table>
   <tr>
@@ -45,7 +45,7 @@ teaser:
   </tr>
 </table>
 
-##動作
+## 動作
 
 `amp-lightbox` コンポーネントは、フルビューポート オーバーレイ / モーダル内に表示する子要素を定義します。ユーザーが要素（ボタンなど）に対してタップやクリックを行うと、クリックされた要素の `on` 属性内で参照されている `amp-lightbox` ID がライトボックスをトリガーしてフルビューポートを占有し、`amp-lightbox` の子要素を表示します。
 
@@ -63,7 +63,7 @@ teaser:
 ライトボックス内に画像を表示するための [`<amp-image-lightbox>`](https://www.ampproject.org/docs/reference/components/amp-image-lightbox) コンポーネントもあります。
 [/tip]
 
-##属性
+## 属性
 
 <table>
   <tr>
@@ -96,11 +96,11 @@ teaser:
           </tr>
         </table>
 
-##スタイル設定
+## スタイル設定
 
 標準の CSS を使用して `amp-lightbox` のスタイルを設定できます。
 
-##アクション
+## アクション
 
 `amp-lightbox` は、[AMP on 構文を使用してトリガー](https://www.ampproject.org/docs/reference/amp-actions-and-events)できる以下のアクションをエクスポーズします。
 
@@ -119,7 +119,7 @@ teaser:
   </tr>
 </table>
 
-##<a id="a4a"></a>AMPHTML 広告内で `amp-lightbox` を使用する
+## <a id="a4a"></a>AMPHTML 広告内で `amp-lightbox` を使用する
 
 [tip type="note"]
 AMPHTML 広告内で使用する `amp-lightbox` コンポーネントは[試験運用中](https://www.ampproject.org/docs/reference/experimental)であり、現時点でも開発が続けられています。AMPHTML 広告内で `amp-lightbox` を使用するには、[`amp-lightbox-a4a-proto` テストを有効](http://cdn.ampproject.org/experiments.html)にします。
@@ -127,7 +127,7 @@ AMPHTML 広告内で使用する `amp-lightbox` コンポーネントは[試験�
 
 [AMPHTML で記述された広告](../amp-a4a/amp-a4a-format.md)の場合、通常の AMP ドキュメントの場合と比べて、`amp-lightbox` の使用に関して以下のような相違点があります。
 
-###閉じるボタンが必要となる
+### 閉じるボタンが必要となる
 
 AMPHTML 広告の場合、`close-button` 属性は必須になります。この属性により、ヘッダーがライトボックスの上部に表示されます。ヘッダーには、閉じるボタンと「Ad」と表示されるラベルがあります。このヘッダーが必要とされるのは、以下の目的のためです。
 
@@ -136,21 +136,21 @@ AMPHTML 広告の場合、`close-button` 属性は必須になります。この
 
 `close-button` 属性は、AMPHTML 広告の場合に限り必須であり、使用することができます。通常の AMP ドキュメントの場合は、必要に応じて、`<amp-lightbox>` コンテンツの一部として、閉じるボタンを任意の場所に表示することができます。
 
-###スクロール可能なライトボックスは許可されていない
+### スクロール可能なライトボックスは許可されていない
 
 AMPHTML 広告の場合、スクロール可能なライトボックスは使用できません。
 
-###透明な背景
+### 透明な背景
 
 AMPHTML 広告内で `<amp-lightbox>` を使用する場合、ライトボックスが展開される前に AMP ランタイムがクリエイティブ コンテンツのサイズを変更し、位置を再調整するため、`<body>` 要素の背景が透明になります。これは、ライトボックスが開く際にクリエイティブが視覚的に「ジャンプ」するのを防ぐための仕様です。クリエイティブに背景が必要な場合は、`<body>` ではなく、中間コンテナ（フルサイズの `<div>` など）を使用して設定してください。
 
 AMPHTML 広告がサードパーティ環境（非 AMP ドキュメントなど）内で配信された場合、クリエイティブはビューポートを基準にして中央に配置されてから展開されます。これは、非同期フレームサイズ変更などの機能を有効にするために、サードパーティ iframe が postMessage API を使用する必要があるためです。そのため、最初にクリエイティブを中央に配置することで、視覚的なジャンプをせずにスムーズに移行できるようになります。
 
-###AMPHTML 広告のライトボックス内のトランジションの例
+### AMPHTML 広告のライトボックス内のトランジションの例
 
 以下の例では、lightbox 要素に `animate-in="fly-in-bottom"` 属性が設定されている AMPHTML 広告の場合に、Friendly iframe 内とサードパーティ iframe 内で AMPHTML 広告のトランジションがどのように表示されるのかを示します。
 
-#####Friendly iframe の場合（AMP キャッシュ内の iframe など）
+##### Friendly iframe の場合（AMP キャッシュ内の iframe など）
 
 <amp-img alt="Friendly iframe 内のライトボックス広告" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/master/spec/img/lightbox-ad-fie.gif" layout="fixed">
   <noscript>
@@ -158,7 +158,7 @@ AMPHTML 広告がサードパーティ環境（非 AMP ドキュメントなど�
     </noscript>
   </amp-img>
 
-#####サードパーティ iframe の場合（AMP キャッシュ外の iframe など）
+##### サードパーティ iframe の場合（AMP キャッシュ外の iframe など）
 
 <amp-img alt="サードパーティ iframe 内のライトボックス広告" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/master/spec/img/lightbox-ad-3p.gif" layout="fixed">
   <noscript>
@@ -166,6 +166,6 @@ AMPHTML 広告がサードパーティ環境（非 AMP ドキュメントなど�
     </noscript>
   </amp-img>
 
-##検証
+## 検証
 
 AMP 検証ツール仕様の [amp-lightbox ルール](https://github.com/ampproject/amphtml/blob/master/extensions/amp-lightbox/validator-amp-lightbox.protoascii)をご覧ください。

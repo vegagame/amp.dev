@@ -25,7 +25,7 @@ $title: amp-layout
      limitations under the License.
 -->
 
-#<a name="amp-layout"></a> `amp-layout`
+# <a name="amp-layout"></a> `amp-layout`
 
 <table>
   <tr>
@@ -38,7 +38,7 @@ $title: amp-layout
   </tr>
 </table>
 
-##개요
+## 개요
 
 `amp-layout` 구성요소를 사용하면 가로세로 비율 기반 반응형 레이아웃을 모든 요소에 적용할 수 있습니다. `amp-layout` 구성요소는 기존 AMP 구성요소의 [layout](https://www.ampproject.org/docs/guides/responsive/control_layout#the-layout-attribute) 속성과 비슷하게 작동하지만 HTML 마크업을 하위 요소로 지원합니다. 기타 지원되는 모든 레이아웃은 모두 `amp-layout`과 함께 작동합니다(예: fixed-height, fixed 등).
 
@@ -55,10 +55,10 @@ $title: amp-layout
   </amp-layout>
 ```
 
-##속성
+## 속성
 
 이 요소에는 AMP 구성요소로 확장된 [공통 속성](https://www.ampproject.org/docs/reference/common_attributes)이 포함됩니다.
 
-##유효성 검사
+## 유효성 검사
 
 AMP 유효성 검사기 사양의 [amp-layout 규칙](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii)을 참조하세요.

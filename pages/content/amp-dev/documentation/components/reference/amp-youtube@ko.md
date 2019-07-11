@@ -25,7 +25,7 @@ formats:
      limitations under the License.
 -->
 
-#amp-youtube
+# amp-youtube
 
 [YouTube](https://www.youtube.com/) 동영상을 표시합니다.
 
@@ -45,7 +45,7 @@ formats:
 </table>
 
 
-##예
+## 예
 
 반응형 레이아웃에서 예에 표시된 너비와 높이를 사용하면 가로세로 비율이 16:9인 동영상에 맞는 올바른 레이아웃이 생성되어야 합니다.
 
@@ -71,7 +71,7 @@ formats:
   </amp-youtube>
   [/sourcecode]
 
-##속성
+## 속성
 
 <table>
   <tr>
@@ -130,6 +130,6 @@ formats:
             </tr>
           </table>
 
-##유효성 검사
+## 유효성 검사
 
 AMP 유효성 검사기 사양에서 [amp-youtube 규칙](https://github.com/ampproject/amphtml/blob/master/extensions/amp-youtube/validator-amp-youtube.protoascii)을 참조하세요.

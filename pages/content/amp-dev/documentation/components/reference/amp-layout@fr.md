@@ -25,7 +25,7 @@ $title: amp-layout
      limitations under the License.
 -->
 
-#<a name="amp-layout"></a> `amp-layout`
+# <a name="amp-layout"></a> `amp-layout`
 
 <table>
   <tr>
@@ -38,7 +38,7 @@ $title: amp-layout
   </tr>
 </table>
 
-##Aperçu
+## Aperçu
 
 Le composant `amp-layout` vous permet d'appliquer à n'importe quel élément des mises en page réactives basées sur le format. Ce composant fonctionne de la même manière que l'attribut [layout](https://www.ampproject.org/docs/guides/responsive/control_layout#the-layout-attribute) sur les composants AMP existants, si ce n'est qu'il accepte des balises HTML comme éléments enfants. Les autres mises en page compatibles fonctionnent toutes avec `amp-layout` (fixed-height, fixed, etc.).
 
@@ -55,10 +55,10 @@ Dans l'exemple ci-dessous, le composant `amp-layout` est utilisé pour créer un
   </amp-layout>
 ```
 
-##Attributs
+## Attributs
 
 Cet élément inclut des [attributs communs](https://www.ampproject.org/docs/reference/common_attributes) étendus aux composants AMP.
 
-##Validation
+## Validation
 
 Consultez les [règles relatives à amp-layout](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii) dans les spécifications du validateur AMP.

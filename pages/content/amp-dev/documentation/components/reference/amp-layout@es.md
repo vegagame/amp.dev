@@ -25,7 +25,7 @@ $title: amp-layout
      limitations under the License.
 -->
 
-#<a name="amp-layout"></a> `amp-layout`
+# <a name="amp-layout"></a> `amp-layout`
 
 <table>
   <tr>
@@ -38,7 +38,7 @@ $title: amp-layout
   </tr>
 </table>
 
-##Descripción general
+## Descripción general
 
 El componente `amp-layout` permite aplicar a cualquier elemento diseños adaptables basados en la relación de aspecto. Funciona de forma similar al atributo [layout](https://www.ampproject.org/docs/guides/responsive/control_layout#the-layout-attribute) en los componentes AMP disponibles, pero admite cualquier etiqueta HTML como elemento secundario. Todos los demás diseños admitidos funcionan con `amp-layout` (por ejemplo, fixed-height, fixed, etc.).
 
@@ -55,10 +55,10 @@ En este ejemplo se utiliza `amp-layout` para crear un contenedor adaptable alred
   </amp-layout>
 ```
 
-##Atributos
+## Atributos
 
 Este elemento incluye [atributos comunes](https://www.ampproject.org/docs/reference/common_attributes) que se aplican a los componentes de AMP.
 
-##Validación
+## Validación
 
 Consulta las [reglas de amp-layout](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii) en la especificación de la herramienta de validación de AMP.

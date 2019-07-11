@@ -25,7 +25,7 @@ teaser:
      limitations under the License.
 -->
 
-#amp-selector
+# amp-selector
 
 Representa um controle que exibe um menu de opções para escolha do usuário.
 
@@ -45,7 +45,7 @@ Representa um controle que exibe um menu de opções para escolha do usuário.
 </table>
 
 
-##Comportamento
+## Comportamento
 
 O seletor de AMP é um controle que representa uma lista de opções para que o usuário escolha uma ou mais delas. O conteúdo das opções não se limita apenas a texto.
 
@@ -95,7 +95,7 @@ Exemplo:
 </amp-selector>
 ```
 
-##Apagar seleções
+## Apagar seleções
 
 Para limpar todas as seleções quando se toca ou clica em um elemento, defina o atributo de ação [`on`](../../spec/amp-actions-and-events.md) no elemento e especifique o `id` seletor de AMP com o método de ação `clear`.
 
@@ -114,9 +114,9 @@ Exemplo:
 veja demonstrações ativas no [AMP By Example](https://ampbyexample.com/components/amp-selector/).
 [/tip]
 
-##Atributos
+## Atributos
 
-###Atributos em `<amp-selector>`
+### Atributos em `<amp-selector>`
 
 <table>
   <tr>
@@ -133,7 +133,7 @@ veja demonstrações ativas no [AMP By Example](https://ampbyexample.com/compone
       </tr>
     </table>
 
-###Atributos nas opções de `<amp-selector>`
+### Atributos nas opções de `<amp-selector>`
 
 <table>
   <tr>
@@ -146,7 +146,7 @@ veja demonstrações ativas no [AMP By Example](https://ampbyexample.com/compone
   </tr>
 </table>
 
-##Eventos
+## Eventos
 
 Os eventos podem acionar ações em outros componentes AMP usando o atributo `on`.
 Por exemplo, `on="select: my-tab.show"`
@@ -170,6 +170,6 @@ Leia mais sobre [ações e eventos de AMP](../../spec/amp-actions-and-events.md)
 
     </table>
 
-##Validação
+## Validação
 
 Veja as [regras do amp-selector](https://github.com/ampproject/amphtml/blob/master/extensions/amp-selector/validator-amp-selector.protoascii) (link em inglês) nas especificações do validador de AMP.

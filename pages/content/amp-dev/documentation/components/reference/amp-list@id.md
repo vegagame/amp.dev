@@ -26,7 +26,7 @@ teaser:
      limitations under the License.
 -->
 
-#amp-list
+# amp-list
 
 Mengambil konten secara dinamis dari endpoint CORS JSON dan merendernya menggunakan template yang disediakan.
 
@@ -45,7 +45,7 @@ Mengambil konten secara dinamis dari endpoint CORS JSON dan merendernya mengguna
   </tr>
 </table>
 
-##Penggunaan
+## Penggunaan
 
 Komponen `<amp-list>` mengambil konten dinamis dari endpoint CORS JSON. Respons dari endpoint berisi data, yang dirender dalam template yang ditentukan.
 
@@ -106,7 +106,7 @@ amp-list div[role="list"] {
   }
 ```
 
-##Perilaku
+## Perilaku
 
 Permintaan ini selalu dibuat dari klien, meskipun dokumen ditayangkan dari Cache AMP. Pemuatan dipicu menggunakan aturan AMP normal, bergantung pada seberapa jauh elemen dari viewport aktif.
 
@@ -114,13 +114,13 @@ Jika `<amp-list>` memerlukan lebih banyak ruang setelah pemuatan, ia akan memint
 
 Secara default, `<amp-list>` menambahkan peran ARIA `list` ke elemen daftar dan peran `listitem` ke elemen item yang dirender melalui template.
 
-###Pengelompokan XHR
+### Pengelompokan XHR
 
 AMP mengelompokkan XMLHttpRequest (XHR) ke endpoint JSON, artinya, Anda dapat menggunakan satu permintaan data JSON sebagai sumber data untuk banyak konsumen (misalnya beberapa elemen `<amp-list>`) di sebuah halaman AMP.  Sebagai contoh, jika `<amp-list>` membuat XHR ke sebuah endpoint, sementara XHR sedang dalam periode tayang, semua XHR berikutnya ke endpoint yang sama tidak akan terpicu dan sebaliknya akan menampilkan hasil dari XHR pertama.
 
 Dalam `<amp-list>`, Anda dapat menggunakan atribut [`items`](#items-optional) untuk merender sebagian respons JSON, yang memungkinkan Anda untuk memiliki beberapa elemen `<amp-list>` yang merender konten berbeda tetapi menggunakan satu XHR yang sama.
 
-###Menentukan overflow
+### Menentukan overflow
 
 Secara opsional, elemen `<amp-list>` dapat memuat elemen dengan atribut `overflow`. Elemen ini ditampilkan jika AMP Runtime tidak dapat mengubah ukuran elemen `<amp-list>` seperti yang diminta.
 
@@ -148,7 +148,7 @@ Berikut ini CSS untuk `overflow`:
   }
 ```
 
-###Placeholder dan fallback
+### Placeholder dan fallback
 
 Secara opsional, `<amp-list>` mendukung placeholder dan/atau fallback.
 
@@ -164,7 +164,7 @@ Pelajari lebih lanjut di [Placeholder &amp; Fallback](https://www.ampproject.org
 </amp-list>
 ```
 
-###Memuat ulang data
+### Memuat ulang data
 
 Elemen `<amp-list>` mengekspos tindakan `refresh` yang dapat dirujuk elemen lain di atribut `on="tap:..."`.
 
@@ -178,9 +178,9 @@ Elemen `<amp-list>` mengekspos tindakan `refresh` yang dapat dirujuk elemen lain
 {% endraw %}
 ```
 
-###Pengubahan Ukuran Dinamis
+### Pengubahan Ukuran Dinamis
 
-#####Eksperimental: amp-list-resizable-children
+##### Eksperimental: amp-list-resizable-children
 
 Dalam beberapa kasus, `<amp-list>` mungkin perlu berubah ukuran sesuai interaksi pengguna. Misalnya, jika `<amp-list>` memuat amp-accordion yang dapat di-tap oleh pengguna, jika konten `<amp-list>` berubah ukuran akibat class CSS terikat, atau jika sejumlah item dalam `<amp-list>` berubah akibat atribut `[src]` terikat. Tindakan `changeToLayoutContainer` menangani hal ini dengan mengubah amp list ke `layout="CONTAINER"` saat memicu tindakan ini. Lihat contoh berikut:
 
@@ -198,9 +198,9 @@ Dalam beberapa kasus, `<amp-list>` mungkin perlu berubah ukuran sesuai interaksi
 
 Tindakan ini tersedia secara eksperimental dalam `amp-list-resizable-children`.
 
-##Atribut
+## Atribut
 
-#####src (wajib)
+##### src (wajib)
 
 URL endpoint jarak jauh yang menampilkan JSON yang akan dirender dalam `<amp-list>` ini. Harus berupa layanan HTTP CORS. Protokol URL harus berupa HTTPS.
 
@@ -210,7 +210,7 @@ Endpoint Anda harus mengimplementasikan persyaratan yang ditentukan dalam spesif
 
 Atribut `src` dapat dihilangkan jika atribut `[src]` ada. Hal ini berguna saat merender konten sebagai akibat dari gestur pengguna, bukan saat memuat halaman ketika bekerja dengan [`amp-bind`](https://www.ampproject.org/docs/reference/components/amp-bind).
 
-#####credentials (opsional)
+##### credentials (opsional)
 
 Menentukan opsi `credentials` seperti yang ditentukan oleh [Fetch API](https://fetch.spec.whatwg.org/).
 
@@ -231,7 +231,7 @@ Berikut ini contoh yang menentukan kredensial include untuk menampilkan konten y
 {% endraw %}
 ```
 
-#####item (opsional)
+##### item (opsional)
 
 Menentukan ekspresi untuk menemukan array yang akan dirender dalam respons. Ini adalah ekspresi notasi titik yang menavigasi melalui kolom respons JSON.
 Secara default, `<amp-list>` mengharapkan array, atribut `single-item` dapat digunakan untuk memuat data dari objek.
@@ -247,26 +247,26 @@ Jika `items="items"` ditentukan (yang merupakan setelan default), respons harus 
 }
 ```
 
-####max-item (opsional)
+#### max-item (opsional)
 
 Nilai bilangan bulat yang menentukan panjang maksimum array item yang akan dirender.
 Array `items` akan dipangkas ke entri `max-items` jika nilai yang ditampilkan melebihi nilai `max-items`.
 
-####single-item (opsional)
+#### single-item (opsional)
 
 Menyebabkan `<amp-list>` memperlakukan hasil yang ditampilkan seolah-olah itu adalah array elemen tunggal. Respons objek akan digabungkan dalam sebuah array sehingga `{items: {...}}` akan berperilaku seolah-olah item tersebut adalah `{items: [{...}]}`.
 
-####reset-on-refresh (opsional)
+#### reset-on-refresh (opsional)
 
 Menampilkan indikator pemuatan dan placeholder lagi saat sumber daftar di-refresh melalui `amp-bind` atau tindakan `refresh()`.
 
 Secara default, tindakan ini hanya akan memicu refresh yang menyebabkan pengambilan jaringan. Untuk menyetel ulang setiap kali refresh dilakukan, gunakan `reset-on-refresh="always"`.
 
-####[is-layout-container] (eksperimental, opsional)
+#### [is-layout-container] (eksperimental, opsional)
 
 Ini adalah atribut yang dapat diikat yang, secara default, akan selalu bernilai false. Jika ditetapkan ke true melalui `bind`, atribut ini akan mengubah tata letak `<amp-list>` menjadi tata letak `CONTAINER`. Atribut ini berguna untuk menangani pengubahan ukuran dinamis untuk amp-list. Atribut ini tidak dapat ditetapkan ke true secara default karena alasan yang sama dengan mengapa `<amp-list>` tidak mendukung tata letak `CONTAINER`--yaitu berpotensi menyebabkan lompatan konten saat pemuatan pertama. Atribut ini tersedia secara eksperimental dalam `amp-list-resizable-children`. Atau, Anda juga dapat menggunakan tindakan `changeToLayoutContainer`.
 
-####binding (opsional)
+#### binding (opsional)
 
 Untuk halaman yang menggunakan `<amp-list>` dan juga `amp-bind`, atribut ini mengontrol apakah rendering akan diblokir pada evaluasi binding (misalnya `[text]`) dalam turunan yang dirender.
 
@@ -278,11 +278,11 @@ Sebaiknya gunakan `binding="no"` atau `binding="refresh"` untuk performa yang le
 
 Jika atribut `binding` tidak disediakan, setelan default-nya adalah `always`.
 
-##Eksperimental: Muat Lebih Banyak dan Scroll Tanpa Batas (amp-list-load-more)
+## Eksperimental: Muat Lebih Banyak dan Scroll Tanpa Batas (amp-list-load-more)
 
 Kami memperkenalkan eksperimen `amp-list-load-more` sebagai implementasi untuk penomoran halaman dan scroll tanpa batas di `<amp-list>`. Anda dapat menggunakan fitur ini dengan mengaktifkan eksperimen 'amp-list-load-more' di [halaman eksperimen](https://cdn.ampproject.org/experiments.html) dan menambahkan atribut `load-more` ke `<amp-list>`. Saat ini, fitur ini masih dalam uji coba, dan API akhirnya dapat berubah.
 
-####Contoh Penggunaan
+#### Contoh Penggunaan
 
 ```html
 <amp-list height="200" src="https://my.rest.endpoint/" width="100" load-more="auto">
@@ -295,13 +295,13 @@ Kami memperkenalkan eksperimen `amp-list-load-more` sebagai implementasi untuk p
 
 Untuk contoh penggunaan, silakan lihat [test/manual/amp-list/infinite-scroll-1.amp.html](../../test/manual/amp-list/infinite-scroll-1.amp.html) dan [test/manual/amp-list/infinite-scroll-2.amp.html](../../test/manual/amp-list/infinite-scroll-1.amp.html).
 
-###Atribut
+### Atribut
 
-####load-more (wajib)
+#### load-more (wajib)
 
 Atribut ini menerima dua nilai: "auto" atau "manual". Menetapkan nilai atribut ini ke "manual" akan menampilkan tombol "load-more" di akhir `<amp-list>`. Menetapkan nilai atribut ini ke "auto" akan membuat `<amp-list>` otomatis memuat elemen lain hingga tiga viewport ke bawah untuk memberikan efek scroll tanpa batas.
 
-####load-more-bookmark (opsional)
+#### load-more-bookmark (opsional)
 
 Atribut ini menentukan nama kolom dalam data yang ditampilkan yang akan memberikan URL untuk item berikutnya yang akan dimuat. Jika atribut ini tidak ditentukan, `<amp-list>` mengharapkan payload JSON memiliki kolom `load-more-src`, yang sesuai dengan URL berikutnya yang akan dimuat. Dalam kasus di mana kolom ini disebut dengan nama lain, Anda dapat menentukan nama kolom tersebut melalui kolom `load-more-bookmark`. Misalnya, dalam contoh payload berikut, kami akan menentukan `load-more-bookmark="next"`.
 
@@ -309,15 +309,15 @@ Atribut ini menentukan nama kolom dalam data yang ditampilkan yang akan memberik
 { "items": [...], "next": "https://url.to.load" }
 ```
 
-###Menyesuaikan elemen load-more
+### Menyesuaikan elemen load-more
 
 `<amp-list>` dengan atribut `load-more` berisi elemen UI berikut: tombol load-more, pemuat, elemen load-failed, dan end-cap (opsional) yang menandai akhir daftar. Elemen ini dapat disesuaikan dengan memberikan elemen `<amp-list-load-more>` sebagai turunan dari `<amp-list>` dengan atribut berikut:
 
-####load-more-button
+#### load-more-button
 
 Elemen `<amp-list-load-more>` dengan atribut `load-more-button`, yang muncul di akhir daftar (untuk load-more manual) jika ada lebih banyak elemen untuk dimuat. Mengklik elemen ini akan memicu pengambilan untuk memuat lebih banyak elemen dari URL yang ada di kolom `load-more-src` atau kolom data yang ditampilkan yang sesuai dengan atribut `load-more-bookmark`. Elemen ini dapat disesuaikan dengan memberikan `<amp-list>` dengan elemen turunan yang memiliki atribut `load-more-button`.
 
-#####Contoh:
+##### Contoh:
 
 ```html
 <amp-list load-more="manual" src="https://www.load.more.example.com/" width="400" height="800">
@@ -329,7 +329,7 @@ Elemen `<amp-list-load-more>` dengan atribut `load-more-button`, yang muncul di 
 ```
   Elemen ini dapat diberi template melalui `amp-mustache`.
 
-#####Contoh:
+##### Contoh:
 
 ```html
 {% raw %}<amp-list load-more="auto" width="100" height="500" src="https://www.load.more.example.com/">
@@ -346,7 +346,7 @@ Elemen `<amp-list-load-more>` dengan atribut `load-more-button`, yang muncul di 
 {% endraw %}
 ```
 
-####load-more-loading
+#### load-more-loading
 
 Elemen ini adalah pemuat yang akan ditampilkan jika pengguna mencapai akhir daftar sementara konten masih dimuat, atau sebagai akibat dari mengklik elemen `load-more-button` (sementara turunan baru `<amp-list>` masih dimuat). Elemen ini dapat disesuaikan dengan memberikan `<amp-list>` dengan elemen turunan yang memiliki atribut `load-more-loading`. Contohnya:
 ```html
@@ -358,7 +358,7 @@ Elemen ini adalah pemuat yang akan ditampilkan jika pengguna mencapai akhir daft
   </amp-list>
 ```
 
-####load-more-failed
+#### load-more-failed
 
 Elemen `<amp-list-load-more>` yang memuat atribut `load-more-failed` yang berisi tombol dengan atribut `load-more-clickable` yang akan ditampilkan di bawah `<amp-list>` jika pemuatan gagal. Mengklik elemen ini akan memicu pemuatan ulang URL yang gagal. Elemen ini dapat disesuaikan dengan memberikan `<amp-list>` dengan elemen turunan yang memiliki atribut `load-more-failed`. Contohnya:
 
@@ -385,7 +385,7 @@ Pada contoh di atas, seluruh elemen `load-more-failed` dapat diklik. Namun, terd
 </amp-list>
 ```
 
-####load-more-end
+#### load-more-end
 
 Elemen ini tidak disediakan secara default, tetapi jika elemen `<amp-list-load-more>` yang berisi atribut `load-more-end` ditambahkan ke `<amp-list>` sebagai elemen turunan, elemen ini akan ditampilkan di bawah `<amp-list>` jika tidak ada item lainnya.  Elemen ini dapat diberi template melalui `amp-mustache`. Contohnya:
 
@@ -397,11 +397,11 @@ Elemen ini tidak disediakan secara default, tetapi jika elemen `<amp-list-load-m
 </amp-list>
 ```
 
-#####atribut umum
+##### atribut umum
 
 Elemen ini mencakup [atribut umum](https://www.ampproject.org/docs/reference/common_attributes) yang diperluas ke komponen AMP.
 
-##Substitusi
+## Substitusi
 
 `<amp-list>` memungkinkan semua substitusi variabel URL standar.
 Lihat [Panduan Substitusi](../../spec/amp-var-substitutions.md) untuk informasi selengkapnya.
@@ -412,6 +412,6 @@ Misalnya:
 ```
 dapat membuat permintaan ke sesuatu seperti `https://foo.com/list.json?0.8390278471201` di mana nilai RANDOM dihasilkan secara acak setelah setiap tayangan.
 
-##Validasi
+## Validasi
 
 Lihat [aturan amp-list](https://github.com/ampproject/amphtml/blob/master/extensions/amp-list/validator-amp-list.protoascii) dalam spesifikasi validator AMP.

@@ -25,7 +25,7 @@ $title: amp-layout
      limitations under the License.
 -->
 
-#<a name="amp-layout"></a>`amp-layout`
+# <a name="amp-layout"></a>`amp-layout`
 
 <table>
   <tr>
@@ -38,7 +38,7 @@ $title: amp-layout
   </tr>
 </table>
 
-##概要
+## 概要
 
 `amp-layout` コンポーネントを使用すると、任意の要素にアスペクト比ベースのレスポンシブ レイアウトを適用できます。`amp-layout` コンポーネントは、既存の AMP コンポーネントの [layout](https://www.ampproject.org/docs/guides/responsive/control_layout#the-layout-attribute) 属性と同様の機能を果たしますが、任意の HTML マークアップを子としてサポートすることができます。他のサポート対象レイアウトはすべて、`amp-layout` と連携できます（fixed-height、fixed など）。
 
@@ -55,10 +55,10 @@ $title: amp-layout
   </amp-layout>
 ```
 
-##属性
+## 属性
 
 この要素には、AMP コンポーネントに拡張された[共通の属性](https://www.ampproject.org/docs/reference/common_attributes)が含まれます。
 
-##検証
+## 検証
 
 AMP 検証ツール仕様の [amp-layout ルール](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii)をご覧ください。

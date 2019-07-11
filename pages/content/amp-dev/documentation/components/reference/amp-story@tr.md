@@ -56,18 +56,18 @@ teaser:
 Bu bileşen deneyseldir ve etkin geliştirme süreci devam etmektedir. Sorunlar için [bir GitHub sorunu oluşturun](https://github.com/ampproject/amphtml/issues/new).
 [/tip]
 
-##Sürüm notları
+## Sürüm notları
 
 | Sürüm | Açıklama                                                            |
 |-------|----------------------------------------------------------------------|
 | 1.0     | 16.07.2018 tarihinden itibaren geçerli sürüm.                                     |
 | 0.1     | İlk uygulama.  Kullanımdan kaldırıldı ve 19.03.2019 tarihinde tamamen kaldırılacaktır |
 
-##0.1 sürümünden 1.0 sürümüne taşıma
+## 0.1 sürümünden 1.0 sürümüne taşıma
 
 16.07.2018 tarihinden itibaren, sürüm 0.1 kullanımdan kaldırılmıştır ve 19.03.2019 tarihinde tamamıyla kaldırılacaktır.  Hikayeleriniz otomatik olarak 1.0 sürümünü kullanacak şekilde yeni sürüme geçirileceğinden bu durum, bozulmalara yol açabilecek küçük değişikliklere neden olabilir.  İşlevlerin düzgün çalıştığından ve tasarımın doğru göründüğünden emin olmak için sayfalarınızı bu tarihten önce 1.0 sürümüne manuel olarak taşımanızı öneririz.
 
-###Yeni kitap sonu özellikleri
+### Yeni kitap sonu özellikleri
 
 amp-stories kitap sonuna, daha zengin bileşen desteği ve görsel düzenler sağlayan yeni özellikler ekledik. Değişikliklerden bazıları şunlardır:
 
@@ -92,7 +92,7 @@ Bu yeni özellikleri kullanmak için bir `<amp-story-bookend>` etiketini, gerekl
 
     Yeni bileşenler ve JSON yapılandırmasında bu bileşenlerin nasıl belirtileceği hakkında daha fazla bilgiyi [amp-story-bookend](#bookend-amp-story-bookend) bölümünden edinebilirsiniz.
 
-###Yeni meta veri gereksinimleri
+### Yeni meta veri gereksinimleri
 
 `<amp-story>` öğesine yeni meta veri özellikleri ekledik. Bu meta veri özellikleri, AMP hikayeleri ekosisteminde hikayenin önizlemesini görüntülemek için kullanılır. Örneğin, bu özellikler, ilgili bir hikayenin kitap sonunda ilgi çekici bir önizleme bağlantısı oluşturmak için kullanılabilir. Bu özelliklerin sağlanması, hikayenizin ileride AMP hikayeler yüzeylerinde sunulacak zengin, yerleştirilmiş deneyimler için geleceğe hazır olmasına da yardımcı olur.
 
@@ -117,7 +117,7 @@ Yeni özellikler:
 | `poster-square-src` | Kare biçimli (1x1 en boy oranı) hikaye posteri. |
 | `poster-landscape-src` | Yatay biçimli (4x3 en boy oranı) hikaye posteri. |
 
-####`publisher-logo-src` yönergeleri
+#### `publisher-logo-src` yönergeleri
 
 Yayıncı logosu için aşağıdaki yönergeler geçerlidir:
 
@@ -159,7 +159,7 @@ Yayıncı logosu için aşağıdaki yönergeler geçerlidir:
 * AMP hikayelerinde her marka için tutarlı bir şekilde bir logo kullanın.
 * Logo en az 96x96 piksel boyutunda olmalıdır.
 
-####Poster yönergeleri (`poster-portrait-src`, `poster-landscape-src` ve `poster-square-src` için)
+#### Poster yönergeleri (`poster-portrait-src`, `poster-landscape-src` ve `poster-square-src` için)
 
 Hikaye poster resimleri için aşağıdaki yönergeler geçerlidir:
 
@@ -173,7 +173,7 @@ Hikaye poster resimleri için aşağıdaki yönergeler geçerlidir:
     * Yatay: 928px x 696px
     * Kare: 928px x 928px</li>
 
-##Genel Bakış
+## Genel Bakış
 
 `amp-story` uzantısı, hikaye anlatma deneyiminde bir araya getirebileceğiniz görsel içerikleri görüntülemeniz için yeni bir biçim sağlar. Bir AMP hikayesi ile kullanıcılara küçük boyutlu, görsel olarak zengin bilgiler ve içerikler sağlayabilirsiniz.
 
@@ -185,7 +185,7 @@ Hikaye poster resimleri için aşağıdaki yönergeler geçerlidir:
     </amp-anim>
   </figure>
 
-##AMP hikayesi biçimi
+## AMP hikayesi biçimi
 
 [AMP hikayesi](#story%3a-amp-story), [sayfalardan](#pages%3a-amp-story-page) oluşan eksiksiz bir AMP HTML dokümanıdır. Sayfaların içinde [katmanlar](#layers%3a-amp-story-grid-layer), katmanların içinde medya, analiz, metin gibi AMP ve HTML öğeleri yer alır.
 
@@ -195,7 +195,7 @@ Hikaye poster resimleri için aşağıdaki yönergeler geçerlidir:
     </noscript>
   </amp-img>
 
-###Ortak metin
+### Ortak metin
 
 Aşağıdaki işaretleme, iyi bir başlangıç noktası veya ortak metindir. Bunu kopyalayın ve `.html` uzantılı bir dosyaya kaydedin.
 
@@ -245,7 +245,7 @@ Aşağıdaki işaretleme, iyi bir başlangıç noktası veya ortak metindir. Bun
 
 Gövdedeki içerik, iki sayfalı bir hikaye oluşturur.  Her sayfada, tam çerçeve bir arka plan resmi ve arka planın üzerinde basit bir metin dizesi bulunur.
 
-###amp-story için zorunlu işaretleme
+### amp-story için zorunlu işaretleme
 
 AMP hikayesi HTML biçimi, [geçerli bir AMP HTML dokümanıyla aynı işaretleme gereksinimlerinin](https://www.ampproject.org/docs/reference/spec#required-markup) yanı sıra aşağıdaki ek gereksinimlere uygundur:
 
@@ -255,7 +255,7 @@ AMP hikayesi HTML biçimi, [geçerli bir AMP HTML dokümanıyla aynı işaretlem
 | `<script async src="https://cdn.ampproject.org/v0/amp-story-1.0.js" custom-element="amp-story"></script>` etiketini, `<head>` etiketinin üçüncü alt öğesi olarak dahil edin. | amp-story JS kitaplığını içerir ve yükler. |
 | `<head>` öğesinin içine bir `<link rel="canonical" href="$STORY_URL">` etiketi dahil edin. | Bağlantı, hikayenin kendisine işaret ederek hikayeyi standart doküman olarak tanımlar. |
 
-##Hikaye: `amp-story`
+## Hikaye: `amp-story`
 
 `amp-story` bileşeni bir hikayenin tamamını temsil eder.  Bileşenin kendisi, hareketleri ve gezinmeyi işleme ve uygulama kabuğu kullanıcı arayüzünü (kontroller, ilerleme çubuğu vb.) eklemeyi de içeren kullanıcı arayüzü kabuğunu uygular.
 
@@ -267,7 +267,7 @@ AMP hikayesi HTML biçimi, [geçerli bir AMP HTML dokümanıyla aynı işaretlem
     </amp-anim>
   </figure>
 
-###Örnek
+### Örnek
 
 ```html
 <amp-story
@@ -286,53 +286,53 @@ AMP hikayesi HTML biçimi, [geçerli bir AMP HTML dokümanıyla aynı işaretlem
 </amp-story>
 ```
 
-###Özellikler
+### Özellikler
 
-#####standalone [zorunlu]
+##### standalone [zorunlu]
 
 AMP dokümanının bir hikaye olduğunu belirtir.
 
-#####title [zorunlu]
+##### title [zorunlu]
 
 Hikayenin başlığı.
 
-#####publisher [zorunlu]
+##### publisher [zorunlu]
 
 Hikaye yayıncısının adı.
 
-#####publisher-logo-src [zorunlu]
+##### publisher-logo-src [zorunlu]
 
 Kare biçimli (1x1 en boy oranı) yayıncı logosunun bir URL'si. Örneğin, `publisher-logo-src="https://example.com/logo/1x1.png"`; burada 1x1.png, 36x36 piksel boyutlu bir logodur.
 
-#####poster-portrait-src [zorunlu]
+##### poster-portrait-src [zorunlu]
 
 Dikey biçimli (3x4 en boy oranı) [hikaye posterinin](#posters) bir URL'si.
 
-#####supports-landscape [isteğe bağlı]
+##### supports-landscape [isteğe bağlı]
 
 Mobil cihazlarda yatay yön desteği ve masaüstü cihazlarda tam çerçeve yatay görüntüleme deneyimi sağlar.
 
-#####background-audio [isteğe bağlı]
+##### background-audio [isteğe bağlı]
 
 Hikaye boyunca çalınan bir ses dosyasının URL'si.
 
-#####poster-square-src [isteğe bağlı]
+##### poster-square-src [isteğe bağlı]
 
 Kare biçimli (1x1 en boy oranı) [hikaye posterinin](#posters) bir URL'si.
 
-#####poster-landscape-src [isteğe bağlı]
+##### poster-landscape-src [isteğe bağlı]
 
 Yatay biçimli (4x3 en boy oranı) [hikaye posterinin](#posters) bir URL'si.
 
-###Posterler
+### Posterler
 
 "Poster", hikayeniz yüklenene kadar kullanıcı arayüzünde görüntülenen bir resimdir. Poster, genellikle hikayenizin ilk ekranı olabilir. Bununla birlikte, hikayeyi temsil eden herhangi bir resmi kullanabilirsiniz.
 
-###Alt öğeler (amp-story öğesinin)
+### Alt öğeler (amp-story öğesinin)
 
 `<amp-story>` bileşeninde bir veya daha fazla [`<amp-story-page>`](#pages%3a-amp-story-page) bileşeni bulunur. Bu bileşenler, hikayenin her bir bağımsız ekranını içerir.  Doküman sırasında belirtilen ilk sayfa, hikayede gösterilen ilk sayfadır.
 
-###Yatay yön ve tam çerçeve masaüstü deneyimini etkinleştirme
+### Yatay yön ve tam çerçeve masaüstü deneyimini etkinleştirme
 
 `supports-landscape` özelliği `<amp-story>` öğesinde belirtiliyorsa:
 
@@ -352,7 +352,7 @@ Kullanım: `<amp-story ... supports-landscape>...</amp-story>`
   </amp-anim>
 </figure>
 
-##Sayfalar: `amp-story-page`
+## Sayfalar: `amp-story-page`
 
 `<amp-story-page>` bileşeni, bir hikayenin tek bir sayfasında görüntülenecek içeriği temsil eder.
 
@@ -371,7 +371,7 @@ Kullanım: `<amp-story ... supports-landscape>...</amp-story>`
       </amp-anim>
     </figure>
 
-###Örnek
+### Örnek
 
 ```html
 <amp-story-page id="cover">
@@ -389,13 +389,13 @@ Kullanım: `<amp-story ... supports-landscape>...</amp-story>`
 </amp-story-page>
 ```
 
-###Özellikler
+### Özellikler
 
-#####id [zorunlu]
+##### id [zorunlu]
 
 Sayfa için benzersiz bir tanımlayıcı. CSS'de sayfayı ve alt öğelerini biçimlendirmek ve ayrıca, URL parçasında sayfayı benzersiz bir şekilde tanımlamak için kullanılır.
 
-#####auto-advance-after [isteğe bağlı]
+##### auto-advance-after [isteğe bağlı]
 
 Bir sonraki sayfaya otomatik olarak ne zaman ilerleneceğini belirtir.  Belirtilmezse sayfa otomatik olarak ilerlemez. `auto-advance-after` değeri şunlardan biri olmalıdır:
 
@@ -408,7 +408,7 @@ Bir sonraki sayfaya otomatik olarak ne zaman ilerleneceğini belirtir.  Belirtil
 <amp-story-page id="tokyo" auto-advance-after="1s">
 ```
 
-#####background-audio [isteğe bağlı]
+##### background-audio [isteğe bağlı]
 
 Bu sayfa görünümdeyken çalan bir ses dosyasının URI'sı.
 
@@ -418,15 +418,15 @@ Bu sayfa görünümdeyken çalan bir ses dosyasının URI'sı.
 <amp-story-page id="zurich" background-audio="./media/switzerland.mp3">
 ```
 
-###Alt öğeler (amp-story-page öğesinin)
+### Alt öğeler (amp-story-page öğesinin)
 
 `<amp-story-page>` bileşeni, bir veya daha fazla [katman](#layers) içerir.  Katmanlar aşağıdan yukarıya doğru yığılır (DOM'da belirtilen ilk katman en altta, DOM'da belirtilen son katman en üstte yer alır).
 
-##Katmanlar
+## Katmanlar
 
 Katmanlar, istenen görsel efekti oluşturmak için üst üste yığılır.
 
-###`amp-story-grid-layer`
+### `amp-story-grid-layer`
 
 `<amp-story-grid-layer>` bileşeni, alt öğelerini bir ızgaraya yerleştirir.  Bu bileşen, [CSS Izgara Spesifikasyonuna](https://www.w3.org/TR/css-grid-1/) göre uygulanır.
 
@@ -445,13 +445,13 @@ Katmanlar, istenen görsel efekti oluşturmak için üst üste yığılır.
     <noscript><img width="200" src="https://raw.githubusercontent.com/ampproject/amphtml/master/extensions/amp-story/img/layers-layer-4.gif"></noscript></amp-img>
 </div>
 
-####Özellikler
+#### Özellikler
 
-#####template [zorunlu]
+##### template [zorunlu]
 
 `template` özelliği, ızgara katmanının düzenini belirler. Kullanılabilir şablonlar, aşağıdaki [Şablonlar](#templates) bölümünde açıklanmıştır.
 
-#####grid-area [isteğe bağlı]
+##### grid-area [isteğe bağlı]
 
 Bu özellik, `<amp-story-grid-layer>` öğesinin alt öğelerinde belirtilir. `grid-area`, bu özelliği içeren öğenin içinde görünmesi gereken (kendilerini tanımlayan bir  `template` değerine göre) adlandırılmış alanı belirtir.
 
@@ -465,7 +465,7 @@ Bu özellik, `<amp-story-grid-layer>` öğesinin alt öğelerinde belirtilir. `g
 </amp-story-grid-layer>
 ```
 
-####Şablonlar
+#### Şablonlar
 
 Aşağıda, ızgara katmanı düzenini belirtmek için kullanabileceğiniz şablonlar bulunmaktadır.
 
@@ -473,7 +473,7 @@ Aşağıda, ızgara katmanı düzenini belirtmek için kullanabileceğiniz şabl
 Kullanımdaki düzen şablonlarını görmek için [Örneklerle AMP'de düzenler demosuna](https://ampbyexample.com/stories/features/layouts/) göz atın.
 [/tip]
 
-#####fill
+##### fill
 
 `fill` şablonu, alt öğesini tam çerçevede gösterir. Diğer alt öğelerin hiçbiri gösterilmez.
 
@@ -493,7 +493,7 @@ Adlandırılmış Alanlar: (yok)
 </amp-story-grid-layer>
 ```
 
-#####vertical
+##### vertical
 
 `vertical` şablonu, öğelerini y ekseni boyunca yerleştirir.  Bu şablonun öğeleri varsayılan olarak üste hizalanır ve x ekseni boyunca ekranın tamamını kaplayabilir.
 
@@ -513,7 +513,7 @@ Adlandırılmış Alanlar: (yok)
 </amp-story-grid-layer>
 ```
 
-#####horizontal
+##### horizontal
 
 `horizontal` şablonu, öğelerini x ekseni boyunca yerleştirir.  Bu şablonun öğeleri varsayılan olarak çizginin başlangıcına hizalanır ve y ekseni boyunca ekranın tamamını kaplayabilir.
 
@@ -533,7 +533,7 @@ Adlandırılmış Alanlar: (yok)
 </amp-story-grid-layer>
 ```
 
-#####thirds
+##### thirds
 
 `thirds` şablonu, ekranı eşit boyutlu üç satıra böler ve her bir alana içerik yerleştirmenize olanak tanır.
 
@@ -557,7 +557,7 @@ Adlandırılmış Alanlar:
 </amp-story-grid-layer>
 ```
 
-####Alt Öğeler
+#### Alt Öğeler
 
 `amp-story-grid-layer`, aşağıdaki öğelerin herhangi birini içerebilir:
 
@@ -701,16 +701,16 @@ Adlandırılmış Alanlar:
   </tr>
 </table>
 
-###`amp-story-cta-layer`
+### `amp-story-cta-layer`
 
 `<amp-story-cta-layer>` bileşeni, bir `<amp-story-page>` içinde `<a>` ve `<button>` öğelerinin kullanımına olanak tanır.
 
-####Sınırlamalar
+#### Sınırlamalar
 
 * Belirtilirse `<amp-story-cta-layer>` öğesi, bir `<amp-story-page>` içindeki son katman olmalıdır. Sonuç olarak, etkin bir şekilde her `<amp-story-page>` tam olarak bir veya tam olarak sıfır `<amp-story-cta-layer>` öğesine sahip olabilir.
 * Bu katmanın konumlandırılması ve boyutlandırılması kontrol edilemez. Her zaman sayfanın %100 genişliğinde, sayfanın %20 yüksekliğinde ve sayfanın alt kısmına hizalı olur.
 
-####Örnek
+#### Örnek
 
 ```html
 <amp-story-page id="vertical-template-thirds">
@@ -733,15 +733,15 @@ Adlandırılmış Alanlar:
 
 [Tam örneği, örnekler dizininde bulabilirsiniz](https://github.com/ampproject/amphtml/blob/master/examples/amp-story/cta-layer-outlink.html)
 
-####Alt öğeler
+#### Alt öğeler
 
 `amp-story-cta-layer`, çoğunlukla `amp-story-grid-layer` ile aynı alt öğelere ve ayrıca, `<a>` ile `<button>` etiketlerine izin verir.
 
 Desteklenen alt öğelerin güncellenmiş bir listesi için doğrulama kurallarındaki [amp-story-cta-layer-allowed-descendants](https://github.com/ampproject/amphtml/blob/master/extensions/amp-story/validator-amp-story.protoascii) alanına göz atın.
 
-##Sayfa ekleri
+## Sayfa ekleri
 
-###`amp-story-page-attachment`
+### `amp-story-page-attachment`
 
 <amp-img alt="AMP Hikayesi sayfa eki" src="https://github.com/ampproject/amphtml/raw/master/extensions/amp-story/img/amp-story-page-attachment.gif" width="240" height="480" layout="fixed">
   <noscript>
@@ -756,7 +756,7 @@ Bir ek yapılandıran her sayfanın alt kısmına, eki açmak için bir kullanı
 
 `<amp-story-page-attachment>` öğesi, `<amp-story-page>` öğesinin son alt öğesi olmalı ve `layout="nodisplay"` özelliğini içermelidir. Ek AMPHTML içeriğinin, bu `<amp-story-page-attachment>` etiketiyle, AMP Hikayenizde satır içinde sağlanması beklenir.
 
-###İzin verilen içerik ve bileşenler
+### İzin verilen içerik ve bileşenler
 
 Hikaye sayfası ekleri, AMP Hikayesi ile aynı HTML öğelerinin yanı sıra aşağıda listelenen, üçüncü taraf video oynatıcılar veya sosyal medya yerleştirmeleri gibi ek bileşenlerin kullanılmasına olanak tanır. Bu, çok ayrıntılı veya bir AMP Hikayesi sayfasında izin verilmeyen ilave içerikler ekleyebileceğiniz anlamına gelir.
 
@@ -832,7 +832,7 @@ Hikaye sayfası ekleri, AMP Hikayesi ile aynı HTML öğelerinin yanı sıra aş
 
 </details>
 
-###Örnek
+### Örnek
 
 ```html
 <amp-story-page id="foo">
@@ -858,13 +858,13 @@ Hikaye sayfası ekleri, AMP Hikayesi ile aynı HTML öğelerinin yanı sıra aş
 </amp-story-page>
 ```
 
-##Animasyonlar
+## Animasyonlar
 
 Bir `<amp-story-page>` öğesinin içindeki her öğenin bir giriş animasyonu olabilir.
 
 Animasyonları, öğede bir dizi [animasyon özelliği](#animation-attributes) belirterek yapılandırabilirsiniz; ek AMP uzantılarına veya yapılandırmaya gerek yoktur.
 
-###Animasyon efektleri
+### Animasyon efektleri
 
 Aşağıdaki animasyon efektleri, AMP hikayeleri için hazır ayar olarak kullanılabilir:
 
@@ -893,9 +893,9 @@ Aşağıdaki animasyon efektleri, AMP hikayeleri için hazır ayar olarak kullan
 Örneklerle AMP'de [tüm AMP hikayesi animasyonlarının canlı demosuna](https://ampbyexample.com/stories/features/animations/) bakın.
 [/tip]
 
-###Animasyon özellikleri
+### Animasyon özellikleri
 
-#####animate-in [zorunlu]
+##### animate-in [zorunlu]
 
 Giriş [animasyon hazır ayarının](#animation-effects) adını belirtmek için bu özelliği kullanın.
 
@@ -907,7 +907,7 @@ Giriş [animasyon hazır ayarının](#animation-effects) adını belirtmek için
 </h2>
 ```
 
-#####animate-in-duration [isteğe bağlı]
+##### animate-in-duration [isteğe bağlı]
 
 Giriş animasyonunun süresini, saniye veya milisaniye cinsinden (ör. 0,2 s veya 200 ms) belirtmek için bu özelliği kullanın. Varsayılan süre, belirttiğiniz animasyon hazır ayarına bağlıdır.
 
@@ -921,7 +921,7 @@ Giriş animasyonunun süresini, saniye veya milisaniye cinsinden (ör. 0,2 s vey
 
 ```
 
-#####animate-in-delay [isteğe bağlı]
+##### animate-in-delay [isteğe bağlı]
 
 Animasyonu başlatmadan önceki gecikmeyi belirtmek için bu özelliği kullanın. Değer, saniye veya milisaniye cinsinde 0'dan büyük veya 0'a eşit olmalıdır (örneğin, 0,2 s veya 200 ms). Varsayılan gecikme, belirttiğiniz animasyon hazır ayarına bağlıdır.
 
@@ -939,7 +939,7 @@ Animasyonu başlatmadan önceki gecikmeyi belirtmek için bu özelliği kullanı
 Animasyon gecikmesinin kesin olduğu garanti edilmez. İlk animasyonlu öğe tarandığında arka planda `amp-animation` uzantısının yüklenmesinden kaynaklanabilecek ek gecikmeler olabilir. Özellik sözleşmesi, *bu animasyonu en az N milisaniye geciktir* şeklinde tanımlanır. Bu, 0 saniye gecikmeli olanlar da dahil olmak üzere tüm öğeler için geçerlidir.
 [/tip]
 
-#####animate-in-after [isteğe bağlı]
+##### animate-in-after [isteğe bağlı]
 
 Bu özelliği, animasyon zinciri veya sırası (örneğin, animasyon2, animasyon1 tamamlandıktan sonra başlar) oluşturmak için kullanın. Bu öğenin animasyonunun izleyeceği animasyonlu öğenin kimliğini belirtin. Öğe, aynı `<amp-story-page>` öğesinde olmalıdır. Gecikme, önceki öğenin animasyonu bittikten sonra uygulanır. Daha ayrıntılı bilgi için aşağıdaki [Animasyonları sıralama](#sequencing-animations) bölümüne bakın.
 
@@ -961,7 +961,7 @@ Bu özelliği, animasyon zinciri veya sırası (örneğin, animasyon2, animasyon
   </amp-story-page>
  ```
 
-#####scale-start, scale-end [isteğe bağlı, yalnızca `zoom-in` ve `zoom-out` animasyonlarıyla çalışır]
+##### scale-start, scale-end [isteğe bağlı, yalnızca `zoom-in` ve `zoom-out` animasyonlarıyla çalışır]
 
 Yakınlaştırma ve uzaklaştırma animasyonlarınızın parametrelerini daha ayrıntılı belirtmek için bu iki özelliği kullanın. Değer, 0'dan büyük veya 0'a eşit olmalıdır ve ondalık basamaklara izin verilir. Varsayılan değer, yakınlaştırma için scale-start: 1 ve scale-start: 3, uzaklaştırma için bunların tersidir.
 
@@ -972,7 +972,7 @@ Yakınlaştırma ve uzaklaştırma animasyonlarınızın parametrelerini daha ay
 </amp-img>
 ```
 
-#####translate-x [isteğe bağlı, yalnızca `pan-left` ve `pan-right` animasyonlarıyla çalışır]
+##### translate-x [isteğe bağlı, yalnızca `pan-left` ve `pan-right` animasyonlarıyla çalışır]
 
 Bir pan-left/pan-right animasyonunda resminizin yatay kaydırmasını belirtmek için bu özelliği kullanın. Değer, piksel cinsinden 0'dan büyük veya 0'a eşit olmalıdır. Varsayılan değer, belirtilen resmin tüm genişliğini kaydırır.
 
@@ -983,7 +983,7 @@ Bir pan-left/pan-right animasyonunda resminizin yatay kaydırmasını belirtmek 
 </amp-img>
 ```
 
-#####translate-y [isteğe bağlı, yalnızca `pan-up` ve `pan-down` animasyonlarıyla çalışır]
+##### translate-y [isteğe bağlı, yalnızca `pan-up` ve `pan-down` animasyonlarıyla çalışır]
 
 Bir pan-up/pan-down animasyonunda resminizin dikey kaydırmasını belirtmek için bu özelliği kullanın. Değer, piksel cinsinden 0'dan büyük veya 0'a eşit olmalıdır. Varsayılan değer, belirtilen resmin tüm yüksekliğini kaydırır.
 
@@ -994,7 +994,7 @@ Bir pan-up/pan-down animasyonunda resminizin dikey kaydırmasını belirtmek iç
 </amp-img>
 ```
 
-###Animasyonları sıralama
+### Animasyonları sıralama
 
 Sıralı animasyonlardan bir zincir oluşturmak için `animate-in-after` özelliğini kullanın. Belirli bir zincirdeki tüm öğeler, aynı `<amp-story-page>` öğesi içinde olmalıdır. `animate-in-after` özelliğine sahip olmayan öğeler bir sıra zincirine ait olmaz ve sayfa girişinde bağımsız olarak başlatılır.
 
@@ -1029,7 +1029,7 @@ Sıralı animasyonlardan bir zincir oluşturmak için `animate-in-after` özelli
 </amp-story-page>
 ```
 
-###Birden çok animasyonu birleştirme
+### Birden çok animasyonu birleştirme
 
 Birden çok giriş animasyonunu bir öğede uygulayabilirsiniz (örneğin, bir öğe sayfa görünümüne kayarak ve aynı zamanda yükselerek girer). Tek bir öğeye birden fazla animasyon hazır ayarının atanması mümkün değildir; bununla birlikte, farklı giriş animasyonlarına sahip öğeler iç içe yerleştirilerek bir animasyonda birleşmeleri sağlanabilir.
 
@@ -1047,7 +1047,7 @@ Birden çok giriş animasyonunu bir öğede uygulayabilirsiniz (örneğin, bir �
 Oluşturulan bir animasyonun, ayrı bir öğenin animasyonu sona erdikten sonra başlaması gerekiyorsa, animasyonu oluşturan iç içe yerleştirilmiş tüm öğelerin `animate-in-after` özelliğinin aynı `id` değerine ayarlandığından emin olun.
 [/tip]
 
-##Kitap sonu: `amp-story-bookend`
+## Kitap sonu: `amp-story-bookend`
 
 `amp-story-bookend`, hikayenin son ekranıdır. İlgili bağlantılar, paylaşım seçenekleri, harekete geçirici mesaj bağlantıları ve daha fazlasını içerir.
 
@@ -1109,13 +1109,13 @@ Ardından, JSON yapılandırmasını doldurmanız gerekir. Bu, kitap sonunu öze
 
 İlk satırı ekleyerek v1.0'ı kullandığınızı belirtmeniz gerekir.
 
-####Kitap sonu bileşenleri
+#### Kitap sonu bileşenleri
 
 Kitap sonu, çeşitli bileşenlerden oluşur. Bu bileşenler; makale, harekete geçirici mesaj bağlantıları, metin ve daha fazlası olabilir.
 
 Bunlar, yapılandırılan JSON öğesinin `components` alanında belirtilir. Bir örnek için aşağıdaki [JSON yanıtı örneği](#example-json-response) bölümüne bakın.
 
-#####heading
+##### heading
 
 <code>heading</code> bileşeninde, bir makale grubuna başlık eklemek için kullanabileceğiniz bir ```text</code> alanı bulunur.
 
@@ -1132,7 +1132,7 @@ Bunlar, yapılandırılan JSON öğesinin `components` alanında belirtilir. Bir
   </noscript>
 </amp-img>
 
-#####small
+##### small
 
 `small` bileşeni, ilgili makalelere bağlantı vermek için kullanılabilir. Bu bileşen, şu alanları gerektirir: `title`, `url` ve isteğe bağlı olarak bir `image`.
 
@@ -1151,7 +1151,7 @@ Bunlar, yapılandırılan JSON öğesinin `components` alanında belirtilir. Bir
   </noscript>
 </amp-img>
 
-#####landscape
+##### landscape
 
 `landscape` bileşeni, videolar gibi alternatif içerik biçimleri için kullanılabilir. Bu bileşen, şu alanları gerektirir: `title`, `url` ve `image`. İsteğe bağlı olarak, bir `category` alanı ekleyebilirsiniz. Bu alan, başlığın üzerinde bir alt başlık görüntüler.
 
@@ -1171,7 +1171,7 @@ Bunlar, yapılandırılan JSON öğesinin `components` alanında belirtilir. Bir
   </noscript>
 </amp-img>
 
-#####portrait
+##### portrait
 
 `portrait` bileşeni, diğer hikayelere bağlantı vermek için kullanılabilir. Bu bileşen, şu alanları gerektirir: `title`, `url` ve `image`. İsteğe bağlı olarak, bir `category` alanı ekleyebilirsiniz. Bu alan, başlığın üzerinde bir alt başlık görüntüler.
 
@@ -1191,7 +1191,7 @@ Bunlar, yapılandırılan JSON öğesinin `components` alanında belirtilir. Bir
   </noscript>
 </amp-img>
 
-#####cta-link
+##### cta-link
 
 <code>cta-link</code> bileşeni, harekete geçirici mesajlar için bağlantılar belirtebilmenizi sağlar (ör. <code>Read More</code> veya <code>Subscribe</code>). Bu bileşen, bir bağlantı dizisi belirten <code>links</code> anahtarını içerir. Her bir bağlantı, ```text</code> ve <code>url</code> değerlerine sahip bir nesnedir.
 
@@ -1217,7 +1217,7 @@ Bunlar, yapılandırılan JSON öğesinin `components` alanında belirtilir. Bir
   </noscript>
 </amp-img>
 
-#####textbox
+##### textbox
 
 ```textbox</code> bileşeni, kitap sonu içinde bir metin (örneğin, fotoğraf tanıtma yazısı) belirtebilmenizi sağlar . Bu bileşen bir <code>text</code> dizisi gerektirir. Bu dizinin her bir öğesi, bir metin satırıdır.
 
@@ -1269,7 +1269,7 @@ Bunlar, yapılandırılan JSON öğesinin `components` alanında belirtilir. Bir
 ...
 ```
 
-####Sosyal paylaşım
+#### Sosyal paylaşım
 
 Sosyal paylaşım yapılandırması, yanıt nesnesinin `shareProviders` alanında tanımlanır ve isteğe bağlıdır.
 
@@ -1281,11 +1281,11 @@ Kullanılabilir sağlayıcıların listesi, [amp-social-share](https://www.amppr
 
 Bu sağlayıcıların her biri, farklı kullanılabilir parametre gruplarına sahiptir ([`data-param-*` bölümüne bakın](https://www.ampproject.org/docs/reference/components/amp-social-share#data-param-%2a)). Yapılandırma nesnesi, bu parametreleri `data-param-` öneki olmadan alır (örneğin, `data-param-app_id` parametresi, yapılandırma nesnesinde `app_id` olarak görünür).
 
-####JSON yapılandırması
+#### JSON yapılandırması
 
 `<amp-story-bookend>`, kitap sonunun JSON yapılandırmasına işaret eden bir `src` özelliği içermelidir. GET isteklerini kabul eden ve kitap sonunun içeriği ile JSON yanıtı döndüren bir URL uç noktası olarak tanımlanır.  Belirtilmezse amp-story bileşeni bitiş ekranı için bir varsayılan kullanıcı arayüzü oluşturur. Sistem, ilgili ve trend olan makaleleri oluşturmak için gerekli verilerin getirilmesinden sorumludur.  Bu, statik bir JSON dosyasından sunulabilir veya (ör. o anda nelerin trend olduğunu hesaplamak için) dinamik olarak oluşturulur.
 
-####Örnek JSON yanıtı
+#### Örnek JSON yanıtı
 
 ```text
 {
@@ -1323,7 +1323,7 @@ Bu sağlayıcıların her biri, farklı kullanılabilir parametre gruplarına sa
 }
 ```
 
-##AMP hikayelerinde kullanılabilen diğer bileşenler
+## AMP hikayelerinde kullanılabilen diğer bileşenler
 
 Aşağıda, AMP hikayelerinde kullanılabilecek ve hikayeye özel bazı uyarıların yapılmasını gerektiren diğer bileşenler bulunmaktadır.
 
@@ -1332,11 +1332,11 @@ Aşağıda, AMP hikayelerinde kullanılabilecek ve hikayeye özel bazı uyarıla
 
 Genel olarak kullanılabilir daha fazla bileşen için [izin verilen alt öğeler listesine](https://www.ampproject.org/docs/reference/components/amp-story#children) bakın.
 
-##Doğrulama
+## Doğrulama
 
 AMP doğrulayıcı spesifikasyonunda [amp-story kurallarına](https://github.com/ampproject/amphtml/blob/master/extensions/amp-story/validator-amp-story.protoascii) bakın.
 
-##Yerelleştirme
+## Yerelleştirme
 
 Hikayenizi yerelleştirmek için hikayenizin `<html>` etiketinin `lang` özelliğine dil kodunu ekleyin (ör. İngilizce için `<html lang="en">`).  Desteklenen dil kodları şunlardır:
 
@@ -1365,7 +1365,7 @@ Hikayenizi yerelleştirmek için hikayenizin `<html>` etiketinin `lang` özelli�
 
 Buna ek olarak, sağdan sola diller için hikayenizin `<html>` etiketine `dir="rtl"` özelliğini ekleyebilirsiniz.  Bu, dil koduyla birlikte de kullanılabilir; örneğin, `<html lang="ar" dir="rtl">`.
 
-##İlgili kaynaklar
+## İlgili kaynaklar
 
 * [Eğitici: Bir görsel AMP hikayesi oluşturma](https://www.ampproject.org/docs/tutorials/visual_story)
 * [Örneklerle AMP'deki örnekler](https://ampbyexample.com/stories/#stories/introduction)

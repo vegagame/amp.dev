@@ -25,7 +25,7 @@ teaser:
      limitations under the License.
 -->
 
-#amp-youtube
+# amp-youtube
 
 Bir [YouTube](https://www.youtube.com/) videosu görüntüler.
 
@@ -46,7 +46,7 @@ Bir [YouTube](https://www.youtube.com/) videosu görüntüler.
 
 [İçindekiler]
 
-##Örnek
+## Örnek
 
 Duyarlı düzenle, örnekteki genişlik ve yükseklik, 16:9 en boy oranlı videolar için doğru düzenler sağlamalıdır:
 
@@ -72,7 +72,7 @@ Duyarlı düzenle, örnekteki genişlik ve yükseklik, 16:9 en boy oranlı video
   </amp-youtube>
   [/sourcecode]
 
-##Özellikler
+## Özellikler
 
 <table>
   <tr>
@@ -131,6 +131,6 @@ Duyarlı düzenle, örnekteki genişlik ve yükseklik, 16:9 en boy oranlı video
             </tr>
           </table>
 
-##Doğrulama
+## Doğrulama
 
 AMP doğrulayıcı spesifikasyonundaki [amp-youtube kurallarına](https://github.com/ampproject/amphtml/blob/master/extensions/amp-youtube/validator-amp-youtube.protoascii) bakın.

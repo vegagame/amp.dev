@@ -25,7 +25,7 @@ teaser:
      limitations under the License.
 -->
 
-#amp-youtube
+# amp-youtube
 
 Exibe um vídeo do [YouTube](https://www.youtube.com/).
 
@@ -44,7 +44,7 @@ Exibe um vídeo do [YouTube](https://www.youtube.com/).
   </tr>
 </table>
 
-##Exemplo
+## Exemplo
 
 Com o layout responsivo, a largura e a altura do exemplo geram layouts corretos para vídeos com proporção de 16:9:
 
@@ -70,7 +70,7 @@ Com o layout responsivo, a largura e a altura do exemplo geram layouts corretos 
   </amp-youtube>
   [/sourcecode]
 
-##Atributos
+## Atributos
 
 <table>
   <tr>
@@ -129,7 +129,7 @@ Com o layout responsivo, a largura e a altura do exemplo geram layouts corretos 
           </tr>
         </table>
 
-##Validação
+## Validação
 
 Consulte as [regras do amp-youtube](https://github.com/ampproject/amphtml/blob/master/extensions/amp-youtube/validator-amp-youtube.protoascii) (link em inglês) nas especificações do validador de AMP.
 ,false,false

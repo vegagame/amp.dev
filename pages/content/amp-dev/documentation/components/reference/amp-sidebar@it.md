@@ -52,12 +52,12 @@ $title: amp-sidebar
   </tr>
 </table>
 
-##Panoramica
+## Panoramica
 
 `<amp-sidebar>` nasconde meta contenuti destinati all'accesso temporaneo (link di navigazione, pulsanti, menu e così via). `<amp-sidebar>` può essere aperta e chiusa toccando pulsanti e toccando all'esterno dell'amp-sidebar.
 Tuttavia, gli attributi facoltativi che accettano le media query possono essere utilizzati per visualizzare meta contenuti in altre parti del sito. Gli elementi secondari `<nav toolbar="(media query)" toolbar-target="elementID">` consentono di visualizzare i contenuti della barra laterale in altre parti dei contenuti principali.
 
-##Comportamento
+## Comportamento
 
 * `<amp-sidebar>` deve essere un elemento secondario diretto di `<body>`.
 * La barra laterale può essere visualizzata solo sul lato sinistro o destro di una pagina.
@@ -90,7 +90,7 @@ Nel seguente esempio, utilizziamo `amp-sidebar` come contenitore degli elementi 
 </amp-sidebar>
 ```
 
-###Apertura e chiusura della barra laterale
+### Apertura e chiusura della barra laterale
 
 Per attivare/disattivare, aprire o chiudere la barra laterale quando un elemento viene toccato o cliccato, imposta l'attributo di azione [`on`](https://github.com/ampproject/amphtml/blob/master/extensions/amp-sidebar/../../spec/amp-actions-and-events.md) sull'elemento e specifica uno dei seguenti metodi di azione:
 
@@ -126,11 +126,11 @@ In alternativa, la barra laterale viene chiusa anche premendo il tasto Esc sulla
 <button on='tap:sidebar1.close'>x</button>
 ```
 
-###Barra degli strumenti
+### Barra degli strumenti
 
 Puoi creare un elemento `toolbar` visualizzato in `<body>` specificando l'attributo `toolbar` con una media query e un attributo `toolbar-target` con un id elemento su un elemento `<nav>` secondario di `<amp-sidebar>`. La `toolbar` duplica l'elemento `<nav>` e i relativi elementi secondari e lo aggiunge all'elemento `toolbar-target`.
 
-####Comportamento
+#### Comportamento
 
 * La barra laterale può implementare le barre degli strumenti aggiungendo elementi nav con gli attributi `toolbar` e `toolbar-target`.
 * L'elemento nav deve essere un elemento secondario di `<amp-sidebar>` e avere il seguente formato: `<nav toolbar="(media-query)" toolbar-target="elementID">`.
@@ -168,7 +168,7 @@ Nel seguente esempio, viene visualizzata una `toolbar` se la larghezza della fin
 
 ```
 
-##Stile della barra degli strumenti
+## Stile della barra degli strumenti
 
 All'elemento `toolbar` all'interno dell'elemento `<amp-sidebar>` verranno applicate classi a seconda che l'elemento `toolbar-target` sia visualizzato o nascosto. Questa funzione è utile per applicare stili diversi all'elemento `toolbar` e quindi all'elemento `toolbar-target`. Le classi sono `amp-sidebar-toolbar-target-shown` e `amp-sidebar-toolbar-target-hidden`. La classe `amp-sidebar-toolbar-target-shown` viene applicata all'elemento `toolbar` quando l'elemento `toolbar-target` è visualizzato. La classe `amp-sidebar-toolbar-target-hidden` viene applicata all'elemento `toolbar` quando l'elemento `toolbar-target` è nascosto.
 
@@ -214,11 +214,11 @@ Nel seguente esempio, viene visualizzata una `toolbar` se la larghezza della fin
 guarda le demo dal vivo sul sito [AMP By Example](https://ampbyexample.com/components/amp-sidebar/).
 [/tip]
 
-##Barra laterale per le storie
+## Barra laterale per le storie
 
 L'uso di `amp-sidebar` è supportato nel [componente](https://www.ampproject.org/stories/) `amp-story`.
 
-###Comportamento
+### Comportamento
 
 * `<amp-sidebar>` deve essere un elemento secondario diretto di `<amp-story>`.
 * Per impostazione predefinita, la barra laterale è sul lato "start" per i normali documenti AMP, ovvero quelli redatti in lingue con scrittura da sinistra a destra e da destra a sinistra.
@@ -228,7 +228,7 @@ L'uso di `amp-sidebar` è supportato nel [componente](https://www.ampproject.org
 
 Per fornire un'esperienza di interfaccia utente coerente sull'intera piattaforma della storia, esistono alcune restrizioni relative agli attributi e alle funzionalità consentiti. Di seguito sono riportati gli attributi e le funzionalità consentiti di un `amp-sidebar` all'interno di un `amp-story`.
 
-###Attributi consentiti
+### Attributi consentiti
 
 * [layout](#layout)
 * [data-close-button-aria-label](#data)
@@ -259,37 +259,37 @@ Il seguente esempio mostra una semplice `amp-sidebar` all'interno di un'`amp-sto
 </body>
 ```
 
-##Attributi
+## Attributi
 
-#####side
+##### side
 
 Indica da che lato della pagina si deve aprire la barra laterale: `left` o `right`.  Se non viene specificato un `side`, il valore `side` viene ereditato dall'attributo `dir` del tag `body` (`ltr` => `left` , `rtl` => `right`). Se non esiste alcuna `dir`, il `side` predefinito è `left`.
 
-#####layout<a name="layout"></a>
+##### layout<a name="layout"></a>
 
 Specifica il layout di visualizzazione della barra laterale, che deve essere `nodisplay`.
 
-#####open
+##### open
 
 Questo attributo è presente quando la barra laterale è aperta.
 
-#####data-close-button-aria-label<a name="data"></a>
+##### data-close-button-aria-label<a name="data"></a>
 
 Attributo facoltativo utilizzato per impostare l'etichetta ARIA per il pulsante di chiusura aggiunto per l'accessibilità.
 
-#####toolbar
+##### toolbar
 
 Questo attributo è presente negli elementi secondari `<nav toolbar="(media-query)" toolbar-target="elementID">` e accetta una media query relativa a quando mostrare una barra degli strumenti. Per ulteriori informazioni su come utilizzare le barre degli strumenti, consulta la sezione [Barra degli strumenti](#toolbar).
 
-#####toolbar-target
+##### toolbar-target
 
 Questo attributo è presente nell'elemento secondario `<nav toolbar="(media-query)" toolbar-target="elementID">` e accetta un ID di un elemento nella pagina.  L'attributo `toolbar-target` inserisce la barra degli strumenti nell'ID specificato dell'elemento sulla pagina, senza utilizzare lo stile predefinito della barra degli strumenti. Per ulteriori informazioni su come utilizzare le barre degli strumenti, consulta la sezione [Barra degli strumenti](#toolbar).
 
-#####attributi comuni<a name="common"></a>
+##### attributi comuni<a name="common"></a>
 
 Questo elemento include [attributi comuni](https://www.ampproject.org/docs/reference/common_attributes) estesi ai componenti AMP.
 
-##Stili
+## Stili
 
 Il componente `amp-sidebar` può essere in stile CSS standard.
 
@@ -301,7 +301,7 @@ Il componente `amp-sidebar` può essere in stile CSS standard.
 consulta [AMP Start](https://ampstart.com/components#navigation) per menu di navigazione reattivi e con stile predefinito, da utilizzare nelle tue pagine AMP.
 [/tip]
 
-##Scorrimento automatico all'interno delle aree in overflow
+## Scorrimento automatico all'interno delle aree in overflow
 
 `amp-sidebar` può far scorrere automaticamente il contenitore in overflow al primo elemento decorato con `autoscroll` come attributo sia per la barra laterale che per la barra degli strumenti.
 
@@ -338,12 +338,12 @@ Quando utilizzi la funzione `toolbar`, `autoscroll` funziona solo se l'elemento 
 
 Per un esempio funzionante di codice, consulta [questo file di esempio](https://github.com/ampproject/amphtml/blob/master/examples/amp-sidebar-autoscroll.amp.html).
 
-##Considerazioni relative all'esperienza utente
+## Considerazioni relative all'esperienza utente
 
 Quando utilizzi `<amp-sidebar>`, tieni presente che gli utenti visualizzano spesso la tua pagina sui dispositivi mobili in un visualizzatore AMP, che potrebbe visualizzare un'intestazione fissa. Inoltre, spesso i browser visualizzano la propria intestazione fissa nella parte superiore della pagina. Un ulteriore elemento con posizione fissa nella parte superiore dello schermo occuperebbe molto spazio sullo schermo del dispositivo mobile, con contenuti che non forniscono all'utente nuove informazioni.
 
 Per questo motivo, consigliamo che gli inviti ad aprire la barra laterale non siano posizionati in un'intestazione fissa a larghezza massima.
 
-##Convalida
+## Convalida
 
 Consulta le [regole amp-sidebar](https://github.com/ampproject/amphtml/blob/master/extensions/amp-sidebar/validator-amp-sidebar.protoascii) nella specifica dello strumento di convalida AMP.

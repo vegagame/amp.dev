@@ -25,7 +25,7 @@ $title: amp-layout
      limitations under the License.
 -->
 
-#<a name="amp-layout"></a> `amp-layout`
+# <a name="amp-layout"></a> `amp-layout`
 
 <table>
   <tr>
@@ -38,7 +38,7 @@ $title: amp-layout
   </tr>
 </table>
 
-##Panoramica
+## Panoramica
 
 Il componente `amp-layout` permette di applicare layout adattabili basati sulle proporzioni a qualsiasi elemento. Il componente `amp-layout` funziona in modo simile all'attributo [layout](https://www.ampproject.org/docs/guides/responsive/control_layout#the-layout-attribute) sui componenti AMP esistenti, ma supporta qualsiasi markup HTML come elemento secondario. Tutti gli altri layout supportati funzionano con `amp-layout`, ad esempio fixed-height, fixed ecc.
 
@@ -55,10 +55,10 @@ In questo esempio viene utilizzato `amp-layout` per creare un contenitore adatta
   </amp-layout>
 ```
 
-##Attributi
+## Attributi
 
 Questo elemento include [attributi comuni](https://www.ampproject.org/docs/reference/common_attributes) estesi ai componenti AMP.
 
-##Convalida
+## Convalida
 
 Consulta le [regole amp-layout](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii) nella specifica dello Strumento di convalida AMP.

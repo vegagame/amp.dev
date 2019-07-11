@@ -23,7 +23,7 @@ teaser:
      limitations under the License.
 -->
 
-#amp-social-share
+# amp-social-share
 
 Menampilkan tombol berbagi di platform sosial.
 
@@ -47,11 +47,11 @@ Menampilkan tombol berbagi di platform sosial.
   </tr>
 </table>
 
-##Ringkasan
+## Ringkasan
 
 Komponen `amp-social-share` menampilkan tombol berbagi untuk sejumlah penyedia media sosial.
 
-##Contoh
+## Contoh
 
 **Contoh: Tombol berbagi sosial dasar**
 
@@ -73,7 +73,7 @@ Jika ingin meneruskan parameter ke endpoint berbagi, Anda dapat menentukan `data
 
 LinkedIn adalah salah satu penyedia yang dikonfigurasi sebelumnya, sehingga Anda tidak perlu menyediakan atribut `data-share-endpoint`.
 
-##Atribut
+## Atribut
 
 <table>
   <tr>
@@ -97,7 +97,7 @@ LinkedIn adalah salah satu penyedia yang dikonfigurasi sebelumnya, sehingga Anda
         </tr>
       </table>
 
-##Penyedia yang dikonfigurasi sebelumnya
+## Penyedia yang dikonfigurasi sebelumnya
 
 Komponen `amp-social-share` menyediakan [beberapa penyedia yang dikonfigurasi sebelumnya](0.1/amp-social-share-config.js) yang mengetahui endpoint berbaginya serta beberapa parameter default.
 
@@ -219,7 +219,7 @@ Komponen `amp-social-share` menyediakan [beberapa penyedia yang dikonfigurasi se
     </tr>
   </table>
 
-##Penyedia yang tidak dikonfigurasi
+## Penyedia yang tidak dikonfigurasi
 
 Selain penyedia yang dikonfigurasi sebelumnya, Anda dapat menggunakan penyedia yang tidak dikonfigurasi dengan menentukan atribut tambahan pada komponen `amp-social-share`.
 
@@ -236,9 +236,9 @@ Contoh berikut membuat tombol berbagi melalui Facebook Messenger dengan menetapk
 
 Karena penyedia ini tidak dikonfigurasi sebelumnya, Anda harus membuat gambar dan gaya tombol yang sesuai untuk penyedia tersebut.
 
-##Gaya
+## Gaya
 
-###Gaya Default
+### Gaya Default
 
 Secara default, `amp-social-share` menyertakan beberapa penyedia populer yang dikonfigurasi sebelumnya. Tombol untuk penyedia tersebut disesuaikan dengan warna dan logo resmi penyedia. Lebar default adalah 60 piksel dan tinggi default adalah 44 piksel.
 
@@ -246,7 +246,7 @@ Secara default, `amp-social-share` menyertakan beberapa penyedia populer yang di
 Kunjungi [AMP Start](https://ampstart.com/components#links-and-sharing) untuk link berbagi yang responsif dan sudah diberi gaya sebelumnya, yang dapat digunakan di halaman AMP Anda.
 [/tip]
 
-###Gaya Kustom
+### Gaya Kustom
 
 Terkadang Anda ingin memberikan gaya Anda sendiri. Anda dapat mengganti gaya yang disediakan dengan mudah, seperti berikut:
 ```css
@@ -256,7 +256,7 @@ amp-social-share[type="twitter"] {
 }
 ```
 
-##Penggantian Variabel
+## Penggantian Variabel
 
 Anda dapat menggunakan [penggantian variabel AMP global](https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md) dalam elemen `<amp-social-share>`. Pada contoh di bawah, `TITLE` diganti dengan judul halaman dan `CANONICAL_URL` diganti dengan URL kanonis dokumen.
 
@@ -266,6 +266,6 @@ Anda dapat menggunakan [penggantian variabel AMP global](https://github.com/ampp
 </amp-social-share>
 ```
 
-##Validasi
+## Validasi
 
 Lihat [aturan amp-social-share](https://github.com/ampproject/amphtml/blob/master/extensions/amp-social-share/validator-amp-social-share.protoascii) dalam spesifikasi validator AMP.

@@ -59,18 +59,18 @@ teaser:
 
 
 
-##버전 메모
+## 버전 메모
 
 | 버전 | 설명                                                            |
 |-------|----------------------------------------------------------------------|
 | 1.0     | 2018년 7월 16일 이후 최신 버전입니다.                                     |
 | 0.1     | 처음으로 구현되는 형식입니다.  지원이 중단되었으며 2019-03-19에 삭제됩니다. |
 
-##0.1에서 1.0으로 이전
+## 0.1에서 1.0으로 이전
 
 2018년 7월 16일 현재, 버전 0.1은 지원이 중단된 것으로 간주되며 2019년 3월 19일에 삭제됩니다.  사용자의 스토리가 버전 1.0을 사용하도록 자동 업그레이드되므로 약간의 브레이킹 체인지가 발생할 수 있습니다.  올바른 기능과 디자인을 사용할 수 있도록 이 날짜 이전에 페이지를 버전 1.0으로 직접 이전하는 것이 좋습니다.
 
-###새로운 북엔드 기능
+### 새로운 북엔드 기능
 
 amp-stories 북엔드에 새 기능을 추가했으므로, 더 풍부한 구성요소를 지원하고 시각적 레이아웃을 사용할 수 있습니다. 몇 가지 변경사항은 다음과 같습니다.
 
@@ -95,7 +95,7 @@ amp-stories 북엔드에 새 기능을 추가했으므로, 더 풍부한 구성�
 
 [amp-story-bookend](#bookend-amp-story-bookend) 섹션에서 새로운 구성요소와 JSON 구성에서 해당 구성요소를 지정하는 방법에 관해 자세히 알아보세요.
 
-###새로운 메타데이터 요구사항
+### 새로운 메타데이터 요구사항
 
 `<amp-story>` 요소에 새로운 메타데이터 속성을 추가했습니다. 이러한 메타데이터 속성은 AMP 스토리 생태계 전체에서 스토리 미리보기를 표시하는 데 사용합니다. 예를 들어 해당 속성은 관련 기사의 북엔드에서 매력적인 미리보기 링크를 렌더링하는 데 사용할 수 있습니다. 이러한 속성을 제공하면 다가올 AMP 스토리의 풍부한 삽입 환경에 맞게 스토리를 대비할 수 있습니다.
 
@@ -120,7 +120,7 @@ amp-stories 북엔드에 새 기능을 추가했으므로, 더 풍부한 구성�
 | `poster-square-src` | 정사각형 형식(가로세로 비율 1x1)의 스토리 포스터입니다. |
 | `poster-landscape-src` | 가로 모드 형식(가로세로 비율 4x3)의 스토리 포스터입니다. |
 
-####`publisher-logo-src` 지침
+#### `publisher-logo-src` 지침
 
 다음 지침은 게시자 로고의 이미지에 적용됩니다.
 
@@ -162,7 +162,7 @@ amp-stories 북엔드에 새 기능을 추가했으므로, 더 풍부한 구성�
 * 브랜드마다 AMP 스토리 전체에서 일관된 하나의 로고를 사용합니다.
 * 로고는 최소 96 x 96픽셀이어야 합니다.
 
-####포스터 지침(`poster-portrait-src`, `poster-landscape-src` 및 `poster-square-src`용)
+#### 포스터 지침(`poster-portrait-src`, `poster-landscape-src` 및 `poster-square-src`용)
 
 스토리 포스터 이미지에는 다음 지침이 적용됩니다.
 
@@ -176,7 +176,7 @@ amp-stories 북엔드에 새 기능을 추가했으므로, 더 풍부한 구성�
     * 가로 모드: 928 x 696픽셀
     * 정사각형: 928 x 928픽셀</li>
 
-##개요
+## 개요
 
 `amp-story` 확장 프로그램에서는 스토리텔링 환경으로 통합할 수 있는 시각적 콘텐츠를 표시하는 새로운 형식을 제공합니다. AMP 스토리를 사용하면 사용자에게 바이트 크기의 시각적으로 풍부한 정보와 콘텐츠를 제공할 수 있습니다.
 
@@ -188,7 +188,7 @@ amp-stories 북엔드에 새 기능을 추가했으므로, 더 풍부한 구성�
   </amp-anim>
 </figure>
 
-##AMP 스토리 형식
+## AMP 스토리 형식
 
 [AMP 스토리](#story%3a-amp-story)는 [페이지](#pages%3a-amp-story-page)로 구성된 전체 AMP HTML 문서입니다. 페이지에는 [레이어](#layers%3a-amp-story-grid-layer)가 있고, 레이어에는 미디어, 분석, 텍스트 등의 AMP 및 HTML 요소가 있습니다.
 
@@ -198,7 +198,7 @@ amp-stories 북엔드에 새 기능을 추가했으므로, 더 풍부한 구성�
   </noscript>
 </amp-img>
 
-###상용구
+### 상용구
 
 다음 마크업은 알맞은 시작점 또는 상용구입니다. 이 마크업을 복사하여 확장자가 `.html`인 파일에 저장합니다.
 
@@ -248,7 +248,7 @@ amp-stories 북엔드에 새 기능을 추가했으므로, 더 풍부한 구성�
 
 본문 콘텐츠에서는 페이지가 두 개인 스토리를 만듭니다.  각 페이지에는 전면 백그라운드 이미지가 있으며, 그 상단에는 간단한 텍스트 문자열이 있습니다.
 
-###amp-story의 필수 마크업
+### amp-story의 필수 마크업
 
 AMP 스토리 HTML 형식은 [유효한 AMP HTML 문서와 동일한 마크업 요구사항](https://www.ampproject.org/docs/reference/spec#required-markup)과 다음 추가 요구사항을 따릅니다.
 
@@ -258,7 +258,7 @@ AMP 스토리 HTML 형식은 [유효한 AMP HTML 문서와 동일한 마크업 �
 | `<script async src="https://cdn.ampproject.org/v0/amp-story-1.0.js" custom-element="amp-story"></script>` 태그가 `<head>` 태그의 세 번째 하위 요소로 포함되어 있습니다. | amp-story JS 라이브러리를 포함하고 로드합니다. |
 | `<link rel="canonical" href="$STORY_URL">` 태그가 `<head>`에 포함되어 있습니다. | 링크에서 스토리 자체를 가리키며, 스토리를 표준 문서로 식별합니다. |
 
-##스토리: `amp-story`
+## 스토리: `amp-story`
 
 `amp-story` 구성요소는 전체 스토리를 나타냅니다.  구성요소 자체에서 동작 및 탐색 처리와 앱 셸 UI(컨트롤, 진행률 표시줄 등) 삽입으로 UI 셸을 구현합니다.
 
@@ -270,7 +270,7 @@ AMP 스토리 HTML 형식은 [유효한 AMP HTML 문서와 동일한 마크업 �
   </amp-anim>
 </figure>
 
-###예
+### 예
 
 ```html
 <amp-story
@@ -289,53 +289,53 @@ AMP 스토리 HTML 형식은 [유효한 AMP HTML 문서와 동일한 마크업 �
 </amp-story>
 ```
 
-###속성
+### 속성
 
-#####standalone[필수]
+##### standalone[필수]
 
 AMP 문서가 스토리임을 식별합니다.
 
-#####title[필수]
+##### title[필수]
 
 스토리의 제목입니다.
 
-#####publisher[필수]
+##### publisher[필수]
 
 스토리 게시자의 이름입니다.
 
-#####publisher-logo-src[필수]
+##### publisher-logo-src[필수]
 
 정사각형 형식(가로세로 비율 1x1)으로 된 스토리 게시자 로고의 URL입니다. 예를 들어 `publisher-logo-src="https://example.com/logo/1x1.png"`입니다. 여기서 1x1.png는 36x36픽셀 로고입니다.
 
-#####poster-portrait-src[필수]
+##### poster-portrait-src[필수]
 
 세로 모드 형식(가로세로 비율 3x4)으로 된 [스토리 포스터](#posters)의 URL입니다.
 
-#####supports-landscape[선택사항]
+##### supports-landscape[선택사항]
 
 휴대기기에서는 가로 모드 방향 지원을 사용하고 데스크톱 기기에서는 전면 가로 모드 환경을 사용합니다.
 
-#####background-audio[선택사항]
+##### background-audio[선택사항]
 
 스토리 전체에서 재생되는 오디오 파일의 URL입니다.
 
-#####poster-square-src[선택사항]
+##### poster-square-src[선택사항]
 
 정사각형 형식(가로세로 비율 1x1)으로 된 [스토리 포스터](#posters)의 URL입니다.
 
-#####poster-landscape-src[선택사항]
+##### poster-landscape-src[선택사항]
 
 가로 모드 형식(가로세로 비율 4x3)으로 된 [스토리 포스터](#posters)의 URL입니다.
 
-###포스터
+### 포스터
 
 '포스터'는 스토리가 로드될 때까지 UI에 표시되는 이미지입니다. 일반적으로 포스터가 스토리의 첫 화면이 되지만, 스토리를 나타내는 어떤 이미지든 사용할 수 있습니다.
 
-###하위 요소(amp-story에 속함)
+### 하위 요소(amp-story에 속함)
 
 `<amp-story>` 구성요소에는 각각 스토리의 개별 화면을 담고 있는 하나 이상의 [`<amp-story-page>`](#pages%3a-amp-story-page) 구성요소가 포함되어 있습니다.  문서 순서에 가장 먼저 지정된 페이지가 스토리에 표시되는 첫 번째 페이지입니다.
 
-###가로 모드 방향과 전면 데스크톱 환경 선택
+### 가로 모드 방향과 전면 데스크톱 환경 선택
 
 `supports-landscape` 속성이 `<amp-story>` 요소에 지정된 경우 다음을 시행합니다.
 
@@ -355,7 +355,7 @@ AMP 문서가 스토리임을 식별합니다.
   </amp-anim>
 </figure>
 
-##페이지: `amp-story-page`
+## 페이지: `amp-story-page`
 
 `<amp-story-page>` 구성요소는 스토리의 단일 페이지에 표시할 콘텐츠를 나타냅니다.
 
@@ -374,7 +374,7 @@ AMP 문서가 스토리임을 식별합니다.
       </amp-anim>
     </figure>
 
-###예
+### 예
 
 ```html
 <amp-story-page id="cover">
@@ -392,13 +392,13 @@ AMP 문서가 스토리임을 식별합니다.
 </amp-story-page>
 ```
 
-###속성
+### 속성
 
-#####id[필수]
+##### id[필수]
 
 페이지의 고유 식별자입니다. CSS에서 페이지와 하위 항목의 스타일을 지정하는 데 사용할 수 있고, URL 단편에서 페이지를 고유하게 식별하는 데도 사용합니다.
 
-#####auto-advance-after[선택사항]
+##### auto-advance-after[선택사항]
 
 다음 페이지로 자동 진행하는 시기를 지정합니다.  생략하면 페이지가 자동으로 진행되지 않습니다. `auto-advance-after`의 값은 다음 중 하나여야 합니다.
 
@@ -411,7 +411,7 @@ AMP 문서가 스토리임을 식별합니다.
 <amp-story-page id="tokyo" auto-advance-after="1s">
 ```
 
-#####background-audio[선택사항]
+##### background-audio[선택사항]
 
 이 페이지가 표시되는 동안 재생되는 오디오 파일의 URI입니다.
 
@@ -421,15 +421,15 @@ AMP 문서가 스토리임을 식별합니다.
 <amp-story-page id="zurich" background-audio="./media/switzerland.mp3">
 ```
 
-###하위 요소(amp-story-page에 속함)
+### 하위 요소(amp-story-page에 속함)
 
 `<amp-story-page>` 구성요소에는 하나 이상의 [레이어](#layers)가 포함되어 있습니다.  레이어는 상향식으로 누적됩니다(DOM에 지정된 첫 번째 레이어가 하단에 오고 DOM에 지정된 마지막 레이어가 상단에 옴).
 
-##레이어
+## 레이어
 
 레이어는 서로 겹쳐 누적되므로 원하는 시각적 효과를 낼 수 있습니다.
 
-###`amp-story-grid-layer`
+### `amp-story-grid-layer`
 
 `<amp-story-grid-layer>` 구성요소는 하위 요소를 그리드에 배치하며,  [CSS 그리드 사양](https://www.w3.org/TR/css-grid-1/)을 기반으로 구현됩니다.
 
@@ -448,13 +448,13 @@ AMP 문서가 스토리임을 식별합니다.
         <noscript><img width="200" src="https://raw.githubusercontent.com/ampproject/amphtml/master/extensions/amp-story/img/layers-layer-4.gif"></noscript></amp-img>
       </div>
 
-####속성
+#### 속성
 
-#####template[필수]
+##### template[필수]
 
 `template` 속성을 사용하여 그리드 레이어의 레이아웃을 결정합니다. 사용 가능한 템플릿은 아래 [템플릿](#templates) 섹션에 설명되어 있습니다.
 
-#####grid-area[선택사항]
+##### grid-area[선택사항]
 
 이 속성은 `<amp-story-grid-layer>`의 하위 요소에 지정됩니다. `grid-area`를 통해서는 이 속성을 포함하는 요소가 표시되어야 하는 이름이 있는 영역(해당 레이어를 정의하는 `template` 사용)을 지정합니다.
 
@@ -468,7 +468,7 @@ AMP 문서가 스토리임을 식별합니다.
 </amp-story-grid-layer>
 ```
 
-####템플릿
+#### 템플릿
 
 다음은 그리드 레이어의 레이아웃을 지정하는 데 사용할 수 있는 템플릿입니다.
 
@@ -476,7 +476,7 @@ AMP 문서가 스토리임을 식별합니다.
 사용 중인 레이아웃 템플릿을 보려면 [AMP By Example의 레이아웃 데모](https://ampbyexample.com/stories/features/layouts/)를 확인하세요.
 [/tip]
 
-#####fill
+##### fill
 
 `fill` 템플릿에서는 첫 번째 하위 요소를 전면으로 표시합니다. 기타 모든 하위 요소는 표시되지 않습니다.
 
@@ -496,7 +496,7 @@ AMP 문서가 스토리임을 식별합니다.
 </amp-story-grid-layer>
 ```
 
-#####vertical
+##### vertical
 
 `vertical` 템플릿은 Y축을 따라 요소를 배치합니다.  기본적으로 요소가 상단에 정렬되고 X축을 따라 화면 전체를 차지할 수 있습니다.
 
@@ -516,7 +516,7 @@ AMP 문서가 스토리임을 식별합니다.
 </amp-story-grid-layer>
 ```
 
-#####horizontal
+##### horizontal
 
 `horizontal` 템플릿은 X축을 따라 요소를 배치합니다.  기본적으로 요소가 행의 시작 부분에 정렬되고 Y축을 따라 화면 전체를 차지할 수 있습니다.
 
@@ -536,7 +536,7 @@ AMP 문서가 스토리임을 식별합니다.
 </amp-story-grid-layer>
 ```
 
-#####thirds
+##### thirds
 
 `thirds` 템플릿을 사용하면 화면을 가로로 삼등분하여 각 영역에 콘텐츠를 배치할 수 있습니다.
 
@@ -560,7 +560,7 @@ AMP 문서가 스토리임을 식별합니다.
 </amp-story-grid-layer>
 ```
 
-####하위 요소
+#### 하위 요소
 
 `amp-story-grid-layer`에는 다음 요소를 포함할 수 있습니다.
 
@@ -704,16 +704,16 @@ AMP 문서가 스토리임을 식별합니다.
   </tr>
 </table>
 
-###`amp-story-cta-layer`
+### `amp-story-cta-layer`
 
 `<amp-story-cta-layer>` 구성요소를 사용하면 `<amp-story-page>`에서 `<a>` 및 `<button>` 요소를 사용할 수 있습니다.
 
-####제약사항
+#### 제약사항
 
 * 지정된 경우 `<amp-story-cta-layer>` 요소는 `<amp-story-page>`의 마지막 레이어여야 합니다. 결과적으로 모든 `<amp-story-page>`에 `<amp-story-cta-layer>` 요소가 정확히 하나 또는 정확히 0개가 있을 수 있습니다.
 * 이 레이어의 위치와 크기는 조정할 수 없습니다. 항상 페이지 너비의 100%와 페이지 높이의 20%를 사용하고 페이지 하단에 정렬됩니다.
 
-####예
+#### 예
 
 ```html
 <amp-story-page id="vertical-template-thirds">
@@ -736,15 +736,15 @@ AMP 문서가 스토리임을 식별합니다.
 
 [예제 디렉토리에 있는 전체 예](https://github.com/ampproject/amphtml/blob/master/examples/amp-story/cta-layer-outlink.html)
 
-####하위 요소
+#### 하위 요소
 
 `amp-story-cta-layer`를 사용하면 `amp-story-grid-layer`와 거의 동일한 하위 요소를 사용할 수 있고, 추가로 `<a>`와 `<button>` 태그를 사용할 수 있습니다.
 
 지원되는 하위 요소의 업데이트된 목록을 보려면 유효성 검사 규칙의 [amp-story-cta-layer-allowed-descendants](https://github.com/ampproject/amphtml/blob/master/extensions/amp-story/validator-amp-story.protoascii) 필드를 확인하세요.
 
-##페이지 첨부파일
+## 페이지 첨부파일
 
-###`amp-story-page-attachment`
+### `amp-story-page-attachment`
 
 <amp-img alt="AMP 스토리 페이지 첨부파일" src="https://github.com/ampproject/amphtml/raw/master/extensions/amp-story/img/amp-story-page-attachment.gif" width="240" height="480" layout="fixed">
   <noscript>
@@ -759,7 +759,7 @@ AMP 문서가 스토리임을 식별합니다.
 
 `<amp-story-page-attachment>` 요소는 `<amp-story-page>`의 마지막 하위 요소여야 하며 `layout="nodisplay"` 속성이 있어야 합니다. 첨부파일 AMPHTML 콘텐츠는 `<amp-story-page-attachment>` 태그의 AMP 스토리에 인라인으로 제공해야 합니다.
 
-###허용된 콘텐츠와 구성요소
+### 허용된 콘텐츠와 구성요소
 
 스토리 페이지 첨부파일을 사용하면 제3자 동영상 플레이어 또는 소셜 미디어 삽입과 같이 아래 나열된 추가 구성요소와 함께 AMP 스토리와 동일한 HTML 요소를 사용할 수 있습니다. 즉, 너무 상세하거나 AMP 스토리 페이지에서 허용되지 않는 콘텐츠를 추가할 수 있습니다.
 
@@ -835,7 +835,7 @@ AMP 문서가 스토리임을 식별합니다.
 
 </details>
 
-###예
+### 예
 
 ```html
 <amp-story-page id="foo">
@@ -861,13 +861,13 @@ AMP 문서가 스토리임을 식별합니다.
 </amp-story-page>
 ```
 
-##애니메이션
+## 애니메이션
 
 `<amp-story-page>`의 모든 요소에는 시작 애니메이션이 있습니다.
 
 요소에서 [애니메이션 속성](#animation-attributes) 조합을 지정하여 애니메이션을 구성할 수 있습니다. 추가 AMP 확장 프로그램이나 구성이 필요하지 않습니다.
 
-###애니메이션 효과
+### 애니메이션 효과
 
 다음 애니메이션 효과는 AMP 스토리에 미리 설정되어 있습니다.
 
@@ -896,9 +896,9 @@ AMP 문서가 스토리임을 식별합니다.
 AMP By Example에서 [모든 AMP 스토리 애니메이션의 라이브 데모](https://ampbyexample.com/stories/features/animations/)를 참조하세요.
 [/tip]
 
-###애니메이션 속성
+### 애니메이션 속성
 
-#####animate-in[필수]
+##### animate-in[필수]
 
 이 속성을 사용하여 시작 [애니메이션 사전 설정](#animation-effects)의 이름을 지정합니다.
 
@@ -912,7 +912,7 @@ AMP By Example에서 [모든 AMP 스토리 애니메이션의 라이브 데모](
 
 ```
 
-#####animate-in-duration[선택사항]
+##### animate-in-duration[선택사항]
 
 이 속성을 사용하여 시작 애니메이션의 지속 기간을 초 또는 밀리초(예: 0.2s 또는 200ms) 단위로 지정합니다. 기본 지속 기간은 사용자가 지정한 애니메이션 미리 설정에 따라 달라집니다.
 
@@ -926,7 +926,7 @@ AMP By Example에서 [모든 AMP 스토리 애니메이션의 라이브 데모](
 
 ```
 
-#####animate-in-delay[선택사항]
+##### animate-in-delay[선택사항]
 
 이 속성을 사용하여 애니메이션을 시작하기 전에 지연되는 시간을 지정합니다. 이 값은 0 이상이어야 하며 초 또는 밀리초 단위로 지정해야 합니다(예: 0.2s 또는 200ms). 기본 지연 기간은 사용자가 지정한 애니메이션 사전 설정에 따라 달라집니다.
 
@@ -944,7 +944,7 @@ AMP By Example에서 [모든 AMP 스토리 애니메이션의 라이브 데모](
 애니메이션 지연 시간은 정확하지 않을 수 있습니다. 첫 번째 애니메이션 요소를 스캔할 때 백그라운드에서 `amp-animation` 확장 프로그램을 로드하면 지연 시간이 늘어날 수 있습니다. 속성 규칙은 *이 애니메이션을 최소 N밀리초 동안 지연*으로 정의합니다. 이 규칙은 지연이 0초인 요소를 포함하여 모든 요소에 적용됩니다.
 [/tip]
 
-#####animate-in-after[선택사항]
+##### animate-in-after[선택사항]
 
 이 속성을 사용하여 애니메이션을 연쇄적으로 연결하거나 순차적으로 지정합니다(예: 애니메이션1을 완료한 후에 애니메이션2 시작). 이 요소의 애니메이션이 따를 애니메이션 요소의 ID를 지정합니다. 이 요소는 같은 `<amp-story-page>`에 있어야 합니다. 이전 요소의 애니메이션이 완료되고 나면 지연 시간이 적용됩니다. 자세한 정보는 아래 [애니메이션 순서 지정](#sequencing-animations) 섹션을 참조하세요.
 
@@ -966,7 +966,7 @@ AMP By Example에서 [모든 AMP 스토리 애니메이션의 라이브 데모](
 </amp-story-page>
 ```
 
-#####scale-start, scale-end[선택사항, `zoom-in` 및 `zoom-out` 애니메이션과만 작동]
+##### scale-start, scale-end[선택사항, `zoom-in` 및 `zoom-out` 애니메이션과만 작동]
 
 이 두 속성을 사용하여 확대 및 축소 애니메이션의 매개변수를 자세히 지정합니다. 이 값은 0 이상이어야 하며 소수가 허용됩니다. 확대의 경우 기본값은 scale-start: 1과 scale-end: 3이며, 축소의 기본값은 그 반대입니다.
 
@@ -977,7 +977,7 @@ AMP By Example에서 [모든 AMP 스토리 애니메이션의 라이브 데모](
 </amp-img>
 ```
 
-#####translate-x[선택사항, `pan-left` 및 `pan-right` 애니메이션과만 작동]
+##### translate-x[선택사항, `pan-left` 및 `pan-right` 애니메이션과만 작동]
 
 이 속성을 사용하면 왼쪽으로 이동/오른쪽으로 이동 애니메이션으로 이미지의 가로 이동을 지정합니다. 이 값은 0픽셀 이상이어야 합니다. 기본값은 지정된 이미지의 전체 너비를 화면 이동합니다.
 
@@ -988,7 +988,7 @@ AMP By Example에서 [모든 AMP 스토리 애니메이션의 라이브 데모](
 </amp-img>
 ```
 
-#####translate-y[선택사항, `pan-up` 및 `pan-down` 애니메이션과만 작동]
+##### translate-y[선택사항, `pan-up` 및 `pan-down` 애니메이션과만 작동]
 
 이 속성을 사용하면 위로 이동/아래로 이동 애니메이션으로 이미지의 세로 화면 이동을 지정할 수 있습니다. 이 값은 0픽셀 이상이어야 합니다. 기본값은 지정된 이미지의 전체 높이를 이동합니다.
 
@@ -999,7 +999,7 @@ AMP By Example에서 [모든 AMP 스토리 애니메이션의 라이브 데모](
 </amp-img>
 ```
 
-###애니메이션 순서 지정
+### 애니메이션 순서 지정
 
 애니메이션을 순서대로 연결하려면 `animate-in-after` 속성을 사용합니다. 연쇄적으로 지정된 모든 요소는 같은 `<amp-story-page>`에 있어야 합니다. `animate-in-after` 속성을 사용하지 않는 요소는 순차 연쇄에 속하지 않으며 페이지 시작 시 개별적으로 시작합니다.
 
@@ -1034,7 +1034,7 @@ AMP By Example에서 [모든 AMP 스토리 애니메이션의 라이브 데모](
 </amp-story-page>
 ```
 
-###여러 애니메이션 결합
+### 여러 애니메이션 결합
 
 한 요소에 여러 시작 애니메이션을 적용할 수 있습니다(예: 요소가 페이지에 날아 들어오는 동시에 점점 사라짐). 한 요소에 두 개 이상의 사전 설정 애니메이션을 할당할 수 없지만, 다른 시작 애니메이션이 있는 여러 요소를 중첩하여 하나로 결합할 수 있습니다.
 
@@ -1052,7 +1052,7 @@ AMP By Example에서 [모든 AMP 스토리 애니메이션의 라이브 데모](
 개별 요소의 애니메이션이 끝나고 난 후 조합된 애니메이션을 시작해야 하는 경우, 애니메이션을 구성하는 중첩 요소 모두의 `animate-in-after` 속성이 동일한 `id`로 설정되었는지 확인하세요.
 [/tip]
 
-##북엔드: `amp-story-bookend`
+## 북엔드: `amp-story-bookend`
 
 `amp-story-bookend`는 스토리의 마지막 화면입니다. 관련 링크, 공유 옵션, 클릭 유도문안 링크 등을 포함합니다.
 
@@ -1113,13 +1113,13 @@ AMP By Example에서 [모든 AMP 스토리 애니메이션의 라이브 데모](
 
 첫 번째 행을 포함하여 v1.0 버전을 사용 중임을 지정해야 합니다.
 
-####북엔드 구성요소
+#### 북엔드 구성요소
 
 북엔드는 다양한 구성요소로 구성됩니다. 해당 구성요소는 기사, 클릭 유도문안 링크, 텍스트 등이 될 수 있습니다.
 
 해당 요소는 구성된 JSON의 `components` 필드에 지정됩니다. 예제는 아래 [예제 JSON 응답](#example-json-response) 섹션을 확인하세요.
 
-#####heading
+##### heading
 
 <code>heading</code> 구성요소에는 기사 그룹에 제목을 추가하는 데 사용할 수 있는 ```text</code> 필드가 있습니다.
 
@@ -1136,7 +1136,7 @@ AMP By Example에서 [모든 AMP 스토리 애니메이션의 라이브 데모](
   </noscript>
 </amp-img>
 
-#####small
+##### small
 
 `small` 구성요소는 관련 기사에 링크하는 데 사용할 수 있습니다. 이 구성요소에는 `title`, `url` 및 선택적으로 `image` 필드가 필요합니다.
 
@@ -1155,7 +1155,7 @@ AMP By Example에서 [모든 AMP 스토리 애니메이션의 라이브 데모](
   </noscript>
 </amp-img>
 
-#####landscape
+##### landscape
 
 `landscape` 구성요소는 동영상과 같은 대체 콘텐츠 형식에 사용할 수 있습니다. 이 구성요소에는 `title`, `url` 및 `image` 필드가 필요합니다. 선택적으로 제목 위에 부제목을 표시하는 `category` 필드를 추가할 수 있습니다.
 
@@ -1175,7 +1175,7 @@ AMP By Example에서 [모든 AMP 스토리 애니메이션의 라이브 데모](
     </noscript>
   </amp-img>
 
-#####portrait
+##### portrait
 
 `portrait` 구성요소는 다른 스토리에 링크하는 데 사용할 수 있습니다. 이 구성요소에는 `title`, `url` 및 `image` 필드가 필요합니다. 선택적으로 제목 위에 부제목을 표시하는 `category` 필드를 추가할 수 있습니다.
 
@@ -1195,7 +1195,7 @@ AMP By Example에서 [모든 AMP 스토리 애니메이션의 라이브 데모](
   </noscript>
 </amp-img>
 
-#####cta-link
+##### cta-link
 
 <code>cta-link</code> 구성요소를 사용하면 클릭 유도문안(예: <code>Read More</code> 또는 <code>Subscribe</code>)의 링크를 지정할 수 있습니다. 이 구성요소에는 링크의 배열을 지정하는 <code>links</code> 키가 있습니다. 각 링크는 ```text</code>와 <code>url</code> 값이 있는 개체입니다.
 
@@ -1221,7 +1221,7 @@ AMP By Example에서 [모든 AMP 스토리 애니메이션의 라이브 데모](
   </noscript>
 </amp-img>
 
-#####textbox
+##### textbox
 
 ```textbox</code> 구성요소를 사용하면 북엔드 안에 텍스트를 지정할 수 있습니다(예: 사진 크레딧). 이 구성요소에는 배열의 각 요소가 텍스트 행인 <code>text</code> 배열이 필요합니다.
 
@@ -1273,7 +1273,7 @@ AMP 뷰어에 표시되는 문서에서 링크는 대개 `_top`을 탐색하거�
 ...
 ```
 
-####소셜 공유
+#### 소셜 공유
 
 소셜 공유의 구성은 응답 개체의 `shareProviders` 필드에 정의되며 선택사항입니다.
 
@@ -1285,11 +1285,11 @@ AMP 뷰어에 표시되는 문서에서 링크는 대개 `_top`을 탐색하거�
 
 이러한 제공자의 사용 가능한 매개변수 조합은 각각 다릅니다([`data-param-*` 참조](https://www.ampproject.org/docs/reference/components/amp-social-share#data-param-%2a)). 구성 개체에서는 `data-param-` 접두사 없이 해당 매개변수를 사용합니다(예: `data-param-app_id`는 구성 개체에서 `app_id`로 표시됨).
 
-####JSON 구성
+#### JSON 구성
 
 `<amp-story-bookend>`에는 북엔드의 JSON 구성을 가리키는 `src` 속성이 있어야 합니다. 이 속성은 GET 요청을 받아 북엔드의 콘텐츠가 포함된 JSON 응답을 돌려주는 URL 엔드포인트로 설명되어 있습니다.  생략하면 amp-story 구성요소에서 최종 화면의 기본 UI를 렌더링합니다. 시스템에서 관련 기사와 인기 있는 기사를 렌더링하는 데 필요한 데이터를 가져와야 합니다.  이 데이터는 정적 JSON 파일에서 제공하거나 동적으로 생성합니다(예: 현재 인기 있는 내용을 계산하는 용도).
 
-####예제 JSON 응답
+#### 예제 JSON 응답
 
 ```text
 {
@@ -1327,7 +1327,7 @@ AMP 뷰어에 표시되는 문서에서 링크는 대개 `_top`을 탐색하거�
 }
 ```
 
-##AMP 스토리에서 사용할 수 있는 기타 구성요소
+## AMP 스토리에서 사용할 수 있는 기타 구성요소
 
 다음은 스토리별 주의사항이 있는 AMP 스토리에서 사용 가능한 기타 구성요소입니다.
 
@@ -1336,11 +1336,11 @@ AMP 뷰어에 표시되는 문서에서 링크는 대개 `_top`을 탐색하거�
 
 더 일반적으로 사용할 수 있는 구성요소는 [허용된 하위 요소 목록](https://www.ampproject.org/docs/reference/components/amp-story#children)을 참조하세요.
 
-##유효성 검사
+## 유효성 검사
 
 AMP 유효성 검사기 사양에서 [amp-story 규칙](https://github.com/ampproject/amphtml/blob/master/extensions/amp-story/validator-amp-story.protoascii)을 참조하세요.
 
-##현지화
+## 현지화
 
 스토리를 현지화하려면 스토리의 `<html>` 태그에서 `lang` 속성에 언어 코드를 포함합니다(예: 영어는 `<html lang="en">`).  지원되는 언어 코드는 다음과 같습니다.
 
@@ -1369,7 +1369,7 @@ AMP 유효성 검사기 사양에서 [amp-story 규칙](https://github.com/amppr
 
 또한 오른쪽에서 왼쪽으로 쓰는 언어의 경우 스토리의 `<html>` 태그에 `dir="rtl"` 속성을 포함할 수 있습니다.  이 속성은 `<html lang="ar" dir="rtl">`과 같은 언어 코드와도 함께 사용할 수 있습니다.
 
-##관련 리소스
+## 관련 리소스
 
 * [가이드: 시각적 AMP 스토리 작성하기](https://www.ampproject.org/docs/tutorials/visual_story)
 * [AMP By Example의 샘플](https://ampbyexample.com/stories/#stories/introduction)

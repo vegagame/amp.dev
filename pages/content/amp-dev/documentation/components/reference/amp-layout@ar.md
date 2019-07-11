@@ -26,7 +26,7 @@ $title: amp-layout
      limitations under the License.
 -->
 
-#<a name="amp-layout"></a> `amp-layout`
+# <a name="amp-layout"></a> `amp-layout`
 
 <table>
   <tr>
@@ -39,7 +39,7 @@ $title: amp-layout
   </tr>
 </table>
 
-##نظرة عامة
+## نظرة عامة
 
 يتيح لك المكّوِن `amp-layout` تطبيق تصميمات استجابة تستند إلى نسبة العرض إلى الارتفاع على أي عنصر. يعمل المكوِّن `amp-layout` بشكل مشابه للسمة [layout](https://www.ampproject.org/docs/guides/responsive/control_layout#the-layout-attribute) على مكونات AMP الموجودة لكنه يتيح عمل ترميز HTML كعناصر ثانوية. وتعمل جميع التنسيقات الأخرى مع `amp-layout` (مثل fixed-height وfixed وغيرها).
 
@@ -56,10 +56,10 @@ $title: amp-layout
 </amp-layout>
 ```
 
-##السمات
+## السمات
 
 يتضمن هذا العنصر [السمات المشتركة](https://www.ampproject.org/docs/reference/common_attributes) التي تشمل مكونات AMP.
 
-##التحقق
+## التحقق
 
 اطِّلع على [قواعد amp-layout](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii) في مواصفات مدقق AMP.
