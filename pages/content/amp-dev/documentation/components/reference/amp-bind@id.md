@@ -8,7 +8,7 @@ teaser:
   text: Allows elements to mutate in response to user actions or data changes via data binding and simple JS-like expressions.
 ---
 
-#amp-bind
+# amp-bind
 
 Menambahkan interaktivitas kustom dengan data binding dan ekspresi.
 
@@ -55,7 +55,7 @@ Menambahkan interaktivitas kustom dengan data binding dan ekspresi.
   </tr>
 </table>
 
-##Ringkasan
+# Ringkasan
 
 Komponen `amp-bind` memungkinkan Anda untuk menambahkan interaktivitas stateful kustom ke halaman AMP melalui data binding dan ekspresi yang mirip JS.
 
@@ -63,7 +63,7 @@ Komponen `amp-bind` memungkinkan Anda untuk menambahkan interaktivitas stateful 
   <amp-youtube width="480" height="270" data-videoid="xzCFU8b5fCU" layout="responsive"></amp-youtube>
   <figcaption>Tonton video ini untuk mengenal amp-bind.</figcaption></figure>
 
-###Contoh sederhana
+# Contoh sederhana
 
 Pada contoh berikut, menge-tap tombol akan mengubah teks elemen `<p>` dari "Hello World" menjadi "Hello amp-bind".
 
@@ -141,13 +141,13 @@ Ada batas 100 operand yang dapat digunakan dalam sebuah ekspresi.
 [Cobalah **demo langsung**](https://ampbyexample.com/components/amp-bind/) untuk contoh ini dengan anotasi kode.
 [/tip]
 
-##Detail
+# Detail
 
-###Status
+# Status
 
 Setiap dokumen AMP yang menggunakan `amp-bind` memiliki data JSON lingkup dokumen yang dapat diubah, atau **status**.
 
-####Menginisialisasi status dengan `amp-state`
+# Menginisialisasi status dengan `amp-state`
 
 Status `amp-bind` dapat diinisialisasi dengan komponen `amp-state`:
 
@@ -166,7 +166,7 @@ Status `amp-bind` dapat diinisialisasi dengan komponen `amp-state`:
 * JSON turunan elemen `<amp-state>` memiliki ukuran maksimal 100 KB.
 * Elemen `<amp-state>` juga dapat menentukan URL CORS, bukan skrip JSON turunan. Lihat [Apendiks](#amp-state-specification) untuk mengetahui detailnya.
 
-####Me-refresh status
+# Me-refresh status
 
 Tindakan `refresh` didukung oleh komponen ini dan dapat digunakan untuk me-refresh konten status.
 
@@ -176,7 +176,7 @@ Tindakan `refresh` didukung oleh komponen ini dan dapat digunakan untuk me-refre
 <button on="tap:amp-state.refresh"></button>
 ```
 
-####Mengubah status dengan `AMP.setState()`
+# Mengubah status dengan `AMP.setState()`
 
 Tindakan [`AMP.setState()`](../../spec/amp-actions-and-events.md#amp) menggabungkan literal objek ke dalam status. Misalnya, saat tombol di bawah ditekan, `AMP.setState()` akan [menggabungkan secara mendalam](#deep-merge-with-ampsetstate) literal objek dengan status.
 
@@ -196,7 +196,7 @@ Jika dipicu oleh peristiwa tertentu, `AMP.setState()` juga dapat mengakses data 
   <input type="range" on="change:AMP.setState({myRangeValue: event.value})">
 ```
 
-####Mengubah histori dengan `AMP.pushState()`
+# Mengubah histori dengan `AMP.pushState()`
 
 Tindakan [`AMP.pushState()`](../../spec/amp-actions-and-events.md#amp) mirip dengan `AMP.setState()` kecuali tindakan ini juga mendorong entri baru ke tumpukan histori browser. Memunculkan entri histori ini (misalnya dengan menavigasi mundur) akan memulihkan nilai variabel sebelumnya yang ditetapkan oleh `AMP.pushState()`.
 
@@ -208,11 +208,11 @@ Misalnya:
 * Menge-tap tombol tersebut akan menetapkan variabel `foo` ke 123 dan mengirimkan entri histori baru.
 * Menavigasi mundur akan memulihkan `foo` ke nilai sebelumnya, "bar" (setara dengan memanggil `AMP.setState({foo: 'bar'})`.
 
-###Ekspresi
+# Ekspresi
 
 Ekspresi mirip dengan JavaScript dengan beberapa perbedaan penting.
 
-####Perbedaan dengan JavaScript
+# Perbedaan dengan JavaScript
 
 * Ekspresi hanya dapat mengakses [status](#state) dokumen penampungnya.
 * Ekspresi **tidak** memiliki akses ke elemen global seperti `window` atau `document`.
@@ -223,7 +223,7 @@ Ekspresi mirip dengan JavaScript dengan beberapa perbedaan penting.
 
 Implementasi dan tata bahasa lengkap ekspresi dapat dilihat di [bind-expr-impl.jison](./0.1/bind-expr-impl.jison) dan [bind-expression.js](./0.1/bind-expression.js).
 
-####Contoh
+# Contoh
 
 Berikut adalah semua ekspresi yang valid:
 
@@ -234,7 +234,7 @@ Berikut adalah semua ekspresi yang valid:
 null || 'default' // 'default'
 ```
 
-####Fungsi yang diizinkan
+# Fungsi yang diizinkan
 
 <table>
   <tr>
@@ -346,7 +346,7 @@ null || 'default' // 'default'
 <sup>1</sup>Fungsi panah parameter tunggal tidak dapat menggunakan tanda kurung, misalnya gunakan `x => x + 1` bukan `(x) => x + 1`. Selain itu, `sort()` dan `splice()` akan menampilkan salinan termodifikasi, bukan mengoperasikan in-place.
 <sup>2</sup>Fungsi statis tidak di-namespace, misalnya gunakan `abs(-1)`, bukan `Math.abs(-1)`.
 
-####Menentukan makro dengan `amp-bind-macro`
+# Menentukan makro dengan `amp-bind-macro`
 
 Fragmen ekspresi `amp-bind` dapat digunakan kembali dengan menentukan `amp-bind-macro`. Elemen `amp-bind-macro` memungkinkan Anda menentukan ekspresi yang memerlukan nol atau lebih argumen dan merujuk ke status saat ini. Makro dapat dipanggil seperti fungsi dengan merujuk nilai atribut `id`-nya dari mana saja dalam dokumen Anda.
 
@@ -361,7 +361,7 @@ Fragmen ekspresi `amp-bind` dapat digunakan kembali dengan menentukan `amp-bind-
 
 Makro juga dapat memanggil makro lain yang <i>ditentukan sebelum makro itu sendiri</i>. Makro tidak dapat memanggil dirinya sendiri secara berulang.
 
-###Binding
+# Binding
 
 **Binding** adalah atribut khusus dari bentuk `[property]` yang menautkan properti sebuah elemen ke sebuah [ekspresi](#expressions). Sintaks alternatif yang kompatibel dengan XML juga dapat digunakan dalam bentuk `data-amp-bind-property`.
 
@@ -409,7 +409,7 @@ Catatan tentang binding:
 * Hasil ekspresi boolean mengalihkan atribut boolean. Misalnya: `<amp-video [controls]="expr"...>`. Saat `expr` dievaluasi ke `true`, elemen `<amp-video>` memiliki atribut `controls`. Saat `expr` dievaluasi ke `false`, atribut `controls` akan dihapus.
 * Karakter tanda kurung `[` dan `]` dalam nama atribut dapat menyulitkan saat menulis XML (misalnya XHTML, JSX) atau menulis atribut melalui DOM API. Dalam kasus ini, gunakan sintaks alternatif `data-amp-bind-x="foo"`, bukan `[x]="foo"`.
 
-####Atribut khusus elemen
+# Atribut khusus elemen
 
 Hanya binding ke komponen dan atribut berikut yang diizinkan:
 
@@ -553,11 +553,11 @@ Hanya binding ke komponen dan atribut berikut yang diizinkan:
 
   <sup>*</sup>Menunjukkan atribut yang dapat diikat yang tidak memiliki pasangan yang tidak dapat diikat.
 
-##Debugging
+# Debugging
 
 Jalankan pengujian dalam mode pengembangan (dengan fragmen URL `#development=1`) untuk menandai peringatan dan error selama pengembangan dan untuk mengakses fungsi debug khusus.
 
-###Peringatan
+# Peringatan
 
 Dalam mode pengembangan, `amp-bind` akan mengeluarkan peringatan saat nilai default atribut terikat tidak cocok dengan hasil awal ekspresi yang terkait. Hal ini dapat membantu mencegah mutasi tak terduga yang disebabkan oleh perubahan pada variabel status lainnya. Contoh:
 
@@ -585,7 +585,7 @@ Dalam mode pengembangan, `amp-bind` juga akan mengeluarkan peringatan saat mengh
 
 ```
 
-###Error
+# Error
 
 Ada beberapa jenis error runtime yang mungkin ditemui ketika bekerja dengan `amp-bind`.
 
@@ -622,13 +622,13 @@ Ada beberapa jenis error runtime yang mungkin ditemui ketika bekerja dengan `amp
   </tr>
 </table>
 
-###Men-debug Status
+# Men-debug Status
 
 Gunakan `AMP.printState()` untuk mencetak status saat ini ke konsol.
 
-##Lampiran
+# Lampiran
 
-###Spesifikasi `<amp-state>`
+# Spesifikasi `<amp-state>`
 
 Elemen `amp-state` dapat berisi elemen `<script>` turunan **ATAU** atribut `src` yang berisi URL CORS ke endpoint JSON jarak jauh, tetapi tidak keduanya.
 
@@ -645,11 +645,11 @@ Elemen `amp-state` dapat berisi elemen `<script>` turunan **ATAU** atribut `src`
 </amp-state>
 ```
 
-####Pengelompokan XHR
+# Pengelompokan XHR
 
 AMP mengelompokkan XMLHttpRequest (XHR) ke endpoint JSON, artinya, Anda dapat menggunakan satu permintaan data JSON sebagai sumber data untuk banyak konsumen (misalnya beberapa elemen `<amp-list>`) di sebuah halaman AMP.  Sebagai contoh, jika elemen `amp-list` membuat XHR ke sebuah endpoint, sementara XHR sedang dalam periode tayang, semua XHR berikutnya ke endpoint yang sama tidak akan terpicu dan sebaliknya akan menampilkan hasil dari XHR pertama.
 
-####Atribut
+# Atribut
 
 <table>
   <tr>
@@ -670,7 +670,7 @@ AMP mengelompokkan XMLHttpRequest (XHR) ke endpoint JSON, artinya, Anda dapat me
       </tr>
     </table>
 
-###Penggabungan mendalam dengan `AMP.setState()`
+# Penggabungan mendalam dengan `AMP.setState()`
 
 Ketika `AMP.setState()` dipanggil, `amp-bind` akan menggabungkan secara mendalam literal objek yang disediakan dengan status saat ini. Semua variabel dari literal objek akan ditulis ke status secara langsung kecuali untuk objek bertingkat, yang akan digabung secara berulang. Primitive dan array dalam status akan selalu ditimpa oleh variabel dengan nama yang sama dalam literal objek.
 
@@ -715,7 +715,7 @@ Saat tombol kedua ditekan, `amp-bind` secara berulang akan menggabungkan argumen
 
 Perhatikan bahwa `amp-bind` akan memunculkan error jika Anda memanggil `AMP.setState()` dengan literal objek yang berisi referensi melingkar.
 
-####Menghapus variabel
+# Menghapus variabel
 
 Hapus variabel status yang ada dengan menetapkan nilainya ke `null` di `AMP.setState()`. Dimulai dengan status dari contoh sebelumnya, menekan:
 
@@ -748,7 +748,7 @@ akan mengubah status menjadi:
   }
 ```
 
-###Tata bahasa ekspresi
+# Tata bahasa ekspresi
 
 Tata bahasa mirip BNF untuk ekspresi `amp-bind`:
 

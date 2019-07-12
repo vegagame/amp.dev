@@ -11,16 +11,20 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Telif Hakkı 2015 The AMP HTML Authors. Tüm Hakları Saklıdır.
+Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 
-       Apache Lisansı, Sürüm 2.0 ("Lisans") ile lisanslıdır; bu dosyayı Lisans koşulları dışında kullanamazsınız.
-       Lisansın bir kopyasını şu adresten edinebilirsiniz:
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       Geçerli yasa tarafından gerekli görülmediği veya yazılı olarak bir sözleşme yapılmadığı sürece, Lisanslı olarak dağıtılan yazılım açıkça veya zımni olarak HİÇBİR GARANTİ VEYA KOŞUL SUNULMADAN "OLDUĞU GİBİ" dağıtılır.
-       Lisans kapsamında belirli bir dilde sağlanan izinleri ve uygulanan kısıtlamaları öğrenmek için söz konusu dille ilgili Lisans'a bakın.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
 # amp-img
 
@@ -40,7 +44,7 @@ teaser:
 </table>
 
 
-##Davranış
+# Davranış
 
 Çalışma zamanı; görüntü alanı konumuna, sistem kaynaklarına, bağlantı bant genişliğine veya diğer faktörlere dayalı olarak kaynak yüklemesini geciktirmeyi veya öncelikli hale getirmeyi seçebilir. `amp-img` bileşenleri, çalışma zamanının resim kaynaklarını bu şekilde etkili bir şekilde yönetmesine olanak tanır.
 
@@ -50,7 +54,7 @@ Dışarıdan getirilen tüm AMP kaynakları gibi `amp-img` bileşenlerine de ön
 [AMP HTML Düzeni Sistemi](https://github.com/ampproject/amphtml/blob/master/spec/amp-html-layout.md) spesifikasyonundaki düzenler [Desteklenen Düzenler](https://www.ampproject.org/docs/guides/responsive/control_layout.html#the-layout-attribute) hakkında daha fazla bilgi edinin.
 [/tip]
 
-####Örnek: Duyarlı bir resim gösterme
+# Örnek: Duyarlı bir resim gösterme
 
 Aşağıdaki örnekte, `layout=responsive` öğesini ayarlayarak görüntü alanının boyutuna yanıt veren bir resim görüntülenmektedir.  Resim, `width` ve `height` tarafından belirtilen en boy oranına göre uzar ve küçülür.
 
@@ -67,7 +71,7 @@ Aşağıdaki örnekte, `layout=responsive` öğesini ayarlayarak görüntü alan
 
 `amp-img` bileşeni tarafından istenen kaynak yüklenemezse bir [`fallback`](https://github.com/ampproject/amphtml/blob/master/spec/amp-html-layout.md#fallback) alt öğesi sağlanıncaya kadar alan boş kalır. Bir yedek yalnızca başlangıç düzeninde oluşturulur ve olaydan sonraki src değişikliklerinin (örneğin, yeniden boyutlandırma + srcset aracılığıyla) performans sonuçları için bir yedeği olmaz.
 
-####Örnek: Bir yedek resim belirtme
+# Örnek: Bir yedek resim belirtme
 
 Aşağıdaki örnekte, tarayıcı WebP'yi desteklemiyorsa yedek JPG resmi görüntülenir:
 
@@ -89,7 +93,7 @@ Altyazılar gibi ek resim özellikleri, standart HTML ile uygulanabilir (örneğ
 * [Resim ve Video Ekleme](https://www.ampproject.org/docs/media/amp_replacements)
 [/tip]
 
-##Özellikler
+# Özellikler
 
 **src**
 
@@ -123,7 +127,7 @@ AMP çalışma zamanı tarafından, resmi getirmeden en boy oranını belirlemek
 
 Bu öğe, AMP bileşenlerine genişletilmiş [ortak özellikleri](https://www.ampproject.org/docs/reference/common_attributes) içerirç
 
-##Stil
+# Stil
 
 `amp-img`, doğrudan CSS özellikleri aracılığıyla şekillendirilebilir. Örneğin, şu yolla gri renkli bir arka plan yer tutucu ayarlanabilir:
 
@@ -133,20 +137,20 @@ amp-img {
   }
 ```
 
-##İpuçları ve Püf Noktaları
+# İpuçları ve Püf Noktaları
 
-####Bir resmi maksimum genişliğe kadar ölçeklendirme
+# Bir resmi maksimum genişliğe kadar ölçeklendirme
 
 Pencere yeniden boyutlandırıldıkça resminizin de bir genişlik üst sınırına kadar (böylece, resim genişliğinden daha fazla uzatılmaz) ölçeklenmesini isterseniz:
 
 1. `<amp-img>` için `layout=responsive` değerini ayarlayın.
 1. Resmin kapsayıcısında, `max-width:<max width to display image>` CSS özelliğini belirtin.  Neden kapsayıcıda?  `layout=responsive` değerine sahip bir `amp-img` öğesi *blok düzeyindeyken*, `<img>` *satır içi* bir öğedir. Alternatif olarak, amp-img öğesi için CSS'nizde `display: inline-block` değerini ayarlayabilirsiniz.
 
-####Duyarlı ve içsel düzen arasındaki fark
+# Duyarlı ve içsel düzen arasındaki fark
 
 Hem `responsive` hem de `intrinsic` düzenler, otomatik olarak ölçeklenen resimler oluşturur.  Temel fark, `intrinsic` düzenin ölçekleme öğesi olarak bir SVG resmi kullanmasıdır.  Bu, resmin standart bir HTML resmiyle aynı şekilde davranmasını sağlarken tarayıcının, başlangıç düzenindeki resim boyutunu bilmesi avantajını korur. `intrinsic` düzenin içsel bir boyutu olur ve kayan bir `div` öğesini, doğal resim boyutuna veya `max-width` gibi bir CSS sabitine ulaşana kadar genişletir. `responsive` düzen, boyutunu, kayan hale getirildiğinde doğal boyutu olmayan üst öğeden aldığı için kayan bir `div` öğesinde 0x0 boyutuyla oluşturulur.
 
-####Sabit boyutlu resim ayarlama
+# Sabit boyutlu resim ayarlama
 
 Resminizin sabit bir boyutta görüntülenmesini isterseniz:
 
@@ -157,7 +161,7 @@ Resminizin sabit bir boyutta görüntülenmesini isterseniz:
 `layout` özelliğini belirtmeyecekseniz [tahmin edilen düzen](https://www.ampproject.org/docs/design/responsive/control_layout#what-if-the-layout-attribute-isn%E2%80%99t-specified?) hakkında bilgi edinin.
 [/tip]
 
-####En boy oranını ayarlama
+# En boy oranını ayarlama
 
 Duyarlı resimlerde, `width` ve `height` değerlerinin `amp-img` etiketinin genişliği ve yüksekliği ile tam olarak eşleşmesi gerekmez. Bu değerlerin aynı en boy oranıyla sonuçlanması yeterlidir.
 
@@ -170,7 +174,7 @@ Duyarlı resimlerde, `width` ve `height` değerlerinin `amp-img` etiketinin geni
   </amp-iframe>
 </div>
 
-####Farklı ekran çözünürlükleri için birden fazla kaynak dosyası ayarlama
+# Farklı ekran çözünürlükleri için birden fazla kaynak dosyası ayarlama
 
 Aynı resmin tamamında aynı en boy oranına sahip farklı çözünürlüklerini sağlamak için [`srcset`](#attributes) özelliği kullanılmalıdır. Tarayıcı, kullanıcının cihazının ekran çözünürlüğüne ve genişliğine göre en uygun dosyayı `srcset` özelliğinden otomatik olarak seçer.
 
@@ -178,10 +182,10 @@ Buna karşılık, [`media`](https://www.ampproject.org/docs/reference/common_att
 
 Daha ayrıntılı bilgi için [duyarlı AMP sayfaları oluşturma](https://www.ampproject.org/docs/design/responsive/responsive_design#displaying-responsive-images) ile ilgili kılavuza bakın.
 
-####Bilinmeyen boyutları olan resimler için en boy oranını koruma
+# Bilinmeyen boyutları olan resimler için en boy oranını koruma
 
 AMP düzen sistemi, bir resmin en boy oranının resim getirilmeden önce bilinmesini gerektirir; ancak, bazı durumlarda resmin boyutlarını bilmiyor olabilirsiniz. Bilinmeyen boyutlara sahip resimleri görüntülemek ve en boy oranlarını korumak için [`object-fit`](https://css-tricks.com/almanac/properties/o/object-fit/) CSS özelliği ile AMP'nin [`fill`](https://www.ampproject.org/docs/design/responsive/control_layout#the-layout-attribute) düzenini birleştirin. Daha fazla bilgi için Örneklerle AMP [Bilinmeyen boyutlara sahip resimleri destekleme](https://ampbyexample.com/advanced/how_to_support_images_with_unknown_dimensions) sayfasına bakın.
 
-##Doğrulama
+# Doğrulama
 
 AMP doğrulayıcı spesifikasyonundaki [amp-img kurallarına](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii) bakın.

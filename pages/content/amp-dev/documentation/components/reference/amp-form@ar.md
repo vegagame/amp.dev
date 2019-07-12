@@ -10,18 +10,22 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-حقوق الطبع والنشر 2017 لصالح "مؤلفو رمز HTML لصفحات AMP". جميع الحقوق محفوظة.
+Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 
-تم الترخيص بموجب ترخيص Apache، الإصدار 2.0 (المشار إليه لاحقًا باسم "الترخيص")؛ ولا يحق لك استخدام هذا الملف إلا بما يتوافق مع الترخيص.
-ويمكنك الحصول على نسخة من الترخيص على الصفحة
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-ما لم يكن مطلوبًا بموجب القانون الساري أو تمت الموافقة عليه كتابةً، يتم توزيع البرنامج الذي يتم توزيعه بموجب الترخيص "كما هو"، وبدون أية ضمانات أو شروط من أي نوع، سواء كانت صريحة أو ضمنية.
-راجِع الترخيص للاطّلاع على اللغة المحددة التي تحكم الأذونات والقيود بموجب الترخيص.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 
-#<a name="`amp-form`"></a> `amp-form`
+# <a name="`amp-form`"></a> `amp-form`
 
 <table>
   <tr>
@@ -45,7 +49,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 
 [جدول المحتويات]
 
-##السلوك
+# السلوك
 
 تتيح لك الإضافة `amp-form` إنشاء نماذج (`<form>`) لإرسال حقول الإدخال في مستند AMP. وتوفر الإضافة `amp-form` أيضًا [تعويضات](#polyfills) لبعض السلوكيات المفقودة في المتصفحات.
 
@@ -70,13 +74,13 @@ http://www.apache.org/licenses/LICENSE-2.0
 </amp-iframe>
 </div>
 
-##السمات
+# السمات
 
-#####target
+# target
 
 تشير إلى مكان عرض استجابة النموذج بعد إرساله. ويجب أن تكون القيمة `_blank` أو `_top`.
 
-#####action
+# action
 
 تحدد نقطة نهاية الخادم لمعالجة إدخال النموذج. يجب أن تكون القيمة عنوان URL مبدوءًا بـ `https` (مطلق أو نسبي) ويجب ألا تكون رابطًا إلى شبكة عرض المحتوى.
 
@@ -89,7 +93,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 
 [/tip]
 
-#####action-xhr
+# action-xhr
 
 تحدد نقطة نهاية الخادم لمعالجة إدخال النموذج وإرساله عبر XMLHttpRequest (XHR). طلب XHR (الذي يسمى أحيانًا طلب AJAX) هو طلب يقدمه المتصفح بدون تحميل كامل للصفحة أو فتح صفحة جديدة. سترسل المتصفحات الطلب في الخلفية باستخدام [واجهة برمجة تطبيقات الجلب](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) متى توفرت وترجع إلى استخدام [واجهة برمجة تطبيقات XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) للمتصفحات الأقدم.
 
@@ -105,17 +109,17 @@ http://www.apache.org/licenses/LICENSE-2.0
 
 لمعرفة المزيد عن إعادة توجيه المستخدِم بعد إرسال النموذج بنجاح، يمكنك مراجعة القسم [إعادة التوجيه بعد إرسال النموذج](#redirecting-after-a-submission) أدناه.
 
-#####السمات الأخرى للنموذج
+# السمات الأخرى للنموذج
 
 جميع [سمات النموذج](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form) الأخرى اختيارية.
 
-#####custom-validation-reporting
+# custom-validation-reporting
 
 هذه سمة اختيارية تُستخدم لتفعيل واختيار استراتيجية مخصصة لإعداد تقارير التحقق من الصحة. وقيمها الصالحة واحدة مما يلي: `show-first-on-submit` أو `show-all-on-submit` أو `as-you-go`.
 
 راجِع قسم [التحقق المخصص](#custom-validations) لمعرفة المزيد من التفاصيل.
 
-##الإدخالات والحقول
+# الإدخالات والحقول
 
 **المسموح بها**:
 
@@ -132,7 +136,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 
 للحصول على تفاصيل حول الإدخالات والحقول الصحيحة، راجِع [قواعد amp-form](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii) في مواصفات مدقق AMP.
 
-##الإجراءات
+# الإجراءات
 
 يقدم العنصر `amp-form` الإجراءات التالية:
 
@@ -145,7 +149,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 تعرّف عن [الإجراءات والأحداث في AMP](https://www.ampproject.org/docs/interaction_dynamic/amp-actions-and-events.html).
 [/tip]
 
-##الأحداث
+# الأحداث
 
 يعرض `amp-form` الأحداث التالية:
 
@@ -172,7 +176,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 
 يمكن الاطّلاع على [المثال بالكامل هنا](../../examples/forms.amp.html).
 
-####أحداث الإدخال
+# أحداث الإدخال
 
 تعرض AMP أحداث `change` و`input-debounced` في عناصر `<input>` الثانوية. يتيح لك ذلك استخدام [السمة `on`](https://www.ampproject.org/docs/fundamentals/spec#on) لتنفيذ إجراء على أي عنصر عند تغيّر قيمة الإدخال.
 
@@ -189,7 +193,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 
 يمكن الاطّلاع على [المثال بالكامل هنا](../../examples/forms.amp.html).
 
-###مشغلات التحليلات
+# مشغلات التحليلات
 
 تؤدي الإضافة `amp-form` إلى تشغيل الأحداث التالية التي يمكنك تتبعها في تهيئة [amp-analytics](https://www.ampproject.org/docs/reference/components/amp-analytics):
 
@@ -252,7 +256,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 * `formId`
 * `formFields[comment]`
 
-##عرض استجابة النجاح/الخطأ
+# عرض استجابة النجاح/الخطأ
 
 يمكنك عرض استجابات النجاح أو الخطأ في النموذج باستخدام [النماذج الموسَّعة](https://www.ampproject.org/docs/fundamentals/spec#extended-templates)، مثل [amp-mustache](https://www.ampproject.org/docs/reference/components/amp-mustache)، أو عرض استجابات النجاح من خلال ربط البيانات باستخدام [amp-bind](https://www.ampproject.org/docs/reference/components/amp-bind) وسمات الاستجابة التالية:
 
@@ -262,7 +266,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 | `submit-error` | يمكن استخدامها لعرض رسالة "خطأ في الإرسال" في حال عدم نجاح الاستجابة (أي ألا تكون حالتها `2XX`).  |
 | `submitting` | يمكن استخدامها لعرض رسالة عند إرسال النموذج. يتمتع نموذج هذه السمة بحق الوصول إلى حقول إدخالات النموذج لغرض عرض أي رسائل. يرجى الاطّلاع على [مثال النموذج الكامل أدناه](#example-submitting) لمعرفة كيفية استخدام السمة `submitting`. |
 
-###لعرض الاستجابات باستخدام النماذج، يمكنك:
+# لعرض الاستجابات باستخدام النماذج، يمكنك:
 
 * تطبيق سمة استجابة على *أي عنصر ثانوي مباشر* للعنصر `&lt;form&gt;`
 * عرض الاستجابة في العنصر الثانوي من خلال إدراج نموذج عبر العلامة `&lt;template&gt;&lt;/template&gt;` أو `&lt;script type="text/plain"&gt;&lt;/script&gt;` داخل العنصر أو بالإشارة إلى النموذج باستخدام السمة `template="id_of_other_template"`
@@ -270,7 +274,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 
 <a id="example-submitting"></a>
 
-#####مثال: نموذج يعرض رسائل النجاح والخطأ والإرسال
+# مثال: نموذج يعرض رسائل النجاح والخطأ والإرسال
 
 في المثال التالي، يتم عرض الاستجابات في نموذج مضمّن داخل النموذج.
 
@@ -349,7 +353,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 
 يمكن الاطّلاع على [المثال بالكامل هنا](../../examples/forms.amp.html).
 
-###لعرض استجابة ناجحة باستخدام ربط البيانات
+# لعرض استجابة ناجحة باستخدام ربط البيانات
 
 * استخدِم [السمة on](https://www.ampproject.org/docs/interaction_dynamic/amp-actions-and-events) لربط سمة النموذج *submit-success* بالإجراء [`AMP.setState()`](https://www.ampproject.org/docs/reference/components/amp-bind#updating-state-with-amp.setstate%28%29).
 * استخدِم الخاصية `event` لاستخراج بيانات الاستجابة.
@@ -392,7 +396,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 ...
 ```
 
-###إعادة التوجيه بعد إرسال النموذج
+# إعادة التوجيه بعد إرسال النموذج
 
 يمكنك إعادة توجيه المستخدِمين إلى صفحة جديدة بعد إرسال النموذج بنجاح عن طريق تعيين رأس الاستجابة `AMP-Redirect-To` وتحديد عنوان URL لإعادة التوجيه. يجب أن يكون عنوان URL هذا هو عنوان HTTPS URL، وإلا ستعرض AMP رسالة خطأ ولن تتم إعادة التوجيه.  تتم تهيئة رؤوس استجابة HTTP عبر الخادم لديك.
 
@@ -411,7 +415,7 @@ Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin, AMP-Redir
 
 [/tip]
 
-##عمليات التحقق المخصصة
+# عمليات التحقق المخصصة
 
 تتيح لك الإضافة `amp-form` إنشاء واجهة مستخدِم مخصصة للتحقق باستخدام السمة `custom-validation-reporting` جنبًا إلى جنب مع إحدى استراتيجيات إعداد التقارير التالية: `show-first-on-submit` أو `show-all-on-submit` أو `as-you-go` .
 
@@ -443,27 +447,27 @@ Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin, AMP-Redir
 يجب تقديم واجهة مستخدِم للتحقق من صحة البيانات الخاصة بك لكل نوع من الحالات غير الصالحة التي يمكن أن يمر بها الإدخال. في حال عدم توفير هذه الواجهات، فلن يرى المستخدموِن أي `custom-validation-reporting` لحالة الخطأ المتعلقة بفقدان الإدخالات. يمكن العثور على حالات الصلاحية في [وثائق W3C الرسمية المتعلقة بإعداد تقارير التحقق من صحة HTML](https://www.w3.org/TR/html50/forms.html#validitystate).
 [/tip]
 
-###استراتيجيات إعداد التقارير
+# استراتيجيات إعداد التقارير
 
 حدِّد أحد خيارات إعداد التقارير التالية للسمة `custom-validation-reporting`:
 
-####Show First on Submit
+# Show First on Submit
 
 يحاكي خيار إعداد التقارير `show-first-on-submit` السلوك التلقائي للمتصفح عند بدء عملية التحقق التلقائية من صحة البيانات. ويعرض أول خطأ يجده في عملية التحقق ثم يتوقف عند هذا الحد.
 
-####Show All on Submit
+# Show All on Submit
 
 يعرض خيار إعداد التقارير `show-all-on-submit` جميع أخطاء التحقق من جميع الإدخالات غير الصالحة عند إرسال النموذج. ويفيد إذا أردت عرض ملخص لعمليات التحقق من صحة البيانات.
 
-####As You Go
+# As You Go
 
 يتيح خيار إعداد التقارير `as-you-go` للمستخدِم رؤية رسائل التحقق من صحة البيانات أثناء تفاعله مع الإدخال. إذا كتب المستخدِم مثلاً عنوان بريد إلكتروني غير صالح، سيرى المستخدِم الخطأ على الفور.  وبعد تصحيح القيمة، يختفي الخطأ.
 
-####Interact and Submit
+# Interact and Submit
 
 يجمع خيار إعداد التقارير `interact-and-submit` بين سلوك `show-all-on-submit` و`as-you-go`. ستعرض الحقول الفردية أي أخطاء فور التفاعل، وستظهر أخطاء جميع الحقول غير الصالحة عند إرسال النموذج.
 
-##التأكيد
+# التأكيد
 
 يعطي التحقق من توافق HTML5 تعليقات بناءً على المعلومات المتوفرة فقط على الصفحة، مثل ما إذا كانت القيمة تتطابق مع نمط معين. مع التأكيد في `amp-form` يمكنك إعطاء المستخدِم ملاحظات لا يمكن للتحقق من توافق HTML5 بمفرده تقديمها. يمكن أن يستخدم النموذج مثلاً التأكيد للتحقق مما إذا كان عنوان بريد إلكتروني مسجلاً. ويأتي تأكيد تطابق حقل المدينة وحقل الرمز البريدي بين حالات الاستخدام الأخرى.
 
@@ -532,7 +536,7 @@ Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin, AMP-Redir
 
 لمزيد من الأمثلة، راجِع [examples/forms.amp.html](../../examples/forms.amp.html).
 
-##استبدال المتغيرات
+# استبدال المتغيرات
 
 تتيح الإضافة `amp-form` [استبدال المتغيرات في المنصة](../../spec/amp-var-substitutions.md) للإدخالات المخفية والتي تحتوي على السمة `data-amp-replace`. عند كل عملية إرسال للنموذج، يعثر `amp-form` على كل `input[type=hidden][data-amp-replace]` في النموذج ويطبق استبدال المتغيرات على السمة `value` ويغيّرها بنتيجة الاستبدال.
 
@@ -571,15 +575,15 @@ Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin, AMP-Redir
 
 ستحدث عمليات الاستبدال عند كل إرسال لاحق. يمكنك قراءة المزيد عن [عمليات استبدال المتغيرات في AMP](../../spec/amp-var-substitutions.md).
 
-##تعويض الميزات المفقودة من المتصفحات
+# تعويض الميزات المفقودة من المتصفحات
 
 توفر الإضافة `amp-form` تعويضات للسلوكيات والوظائف المفقودة من بعض المتصفحات أو الجاري تنفيذها في الإصدار التالي من CSS.
 
-####حظر الإرسال غير الصالح وفقاعة رسائل التحقق
+# حظر الإرسال غير الصالح وفقاعة رسائل التحقق
 
 لا تتيح المتصفحات التي تستخدم محركات مستندة إلى الويب حاليًا (اعتبارًا من آب (أغسطس) 2016) عمليات إرسال النماذج غير الصالحة. وتشمل المتصفح Safari على جميع المنصات بالإضافة إلى جميع متصفحات iOS. تعوّض الإضافة `amp-form` هذا السلوك لحظر أي عمليات إرسال غير صالحة وتعرض فقاعات لرسائل التحقق من الإدخالات غير صالحة.
 
-####الفئات الزائفة المستندة إلى تفاعل المستخدِم
+# الفئات الزائفة المستندة إلى تفاعل المستخدِم
 
 إن الفئات الزائفة `:user-invalid` و`:user-valid` جزء من [المواصفات المستقبلية لمحددات CSS 4](https://drafts.csswg.org/selectors-4/#user-pseudos) ويتم استخدامها لإتاحة عناصر الهوك بشكل أفضل بهدف تصميم الحقول الصالحة/غير الصالحة بناء على بضع معايير.
 
@@ -587,7 +591,7 @@ Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin, AMP-Redir
 
 توفر الإضافة `amp-form` [فئات](#classes-and-css-hooks) لتعويض ما تفقده هذه الفئات الزائفة. تنشر الإضافة `amp-form` أيضًا هذه الفئات على عناصر `fieldset` للكيانات الأصلية و`form`.
 
-####التحقق من `<textarea>`
+# التحقق من `<textarea>`
 
 مطابقة التعبيرات العادية هي ميزة تحقق شائعة متاحة بشكل أصلي على معظم عناصر الإدخال، باستثناء `<textarea>`. ونعمل على تعويض هذه الوظيفة ونتيح السمة `pattern` على عناصر `<textarea>`.
 
@@ -597,9 +601,9 @@ Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin, AMP-Redir
 <textarea autoexpand></textarea>
 ```
 
-##التصميم
+# التصميم
 
-###الفئات وعناصر الهوك CSS
+# الفئات وعناصر الهوك CSS
 
 توفر الإضافة `amp-form` فئات وعناصر الهوك CSS للناشرين لتصميم النماذج والإدخالات.
 
@@ -627,9 +631,9 @@ Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin, AMP-Redir
 
 [/tip]
 
-##الاعتبارات الأمنية
+# الاعتبارات الأمنية
 
-###الحماية من XSRF
+# الحماية من XSRF
 
 بالإضافة إلى اتباع التفاصيل الواردة في [مواصفات AMP CORS](https://www.ampproject.org/docs/fundamentals/amp-cors-requests.html)، يُرجى توجيه العناية الفائقة للقسم ["معالجة طلبات تغيير الحالة" ](https://www.ampproject.org/docs/fundamentals/amp-cors-requests.html#processing-state-changing-requests) للحماية من [هجمات XSRF](https://en.wikipedia.org/wiki/Cross-site_request_forgery) التي ينفذ فيها المهاجم أوامر غير مصرح بها باستخدام الجلسة الحالية للمستخدِم بدون علمه.
 

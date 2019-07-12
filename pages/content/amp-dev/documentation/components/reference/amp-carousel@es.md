@@ -10,21 +10,22 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2015 The AMP HTML Authors. Todos los derechos reservados.
+Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 
-       Con licencia Apache, versión 2.0 (en adelante, la "Licencia").
-       Este archivo solo se puede utilizar según lo estipulado en la Licencia.
-       Se puede obtener una copia de la Licencia en la siguiente página:
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       A menos que lo exija la legislación aplicable o se acuerde por escrito, el software
-       distribuido bajo la Licencia se proporciona "TAL CUAL", SIN NINGÚN
-       TIPO DE GARANTÍA NI DE CONDICIÓN, ni expresa ni implícita.
-       En la Licencia se puede consultar la información relativa a las limitaciones y a los permisos aplicables a cada idioma.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-#amp-carousel
+# amp-carousel
 
 Carrusel genérico que muestra varios fragmentos de contenido similares en un eje horizontal; es muy flexible y eficaz.
 
@@ -50,7 +51,7 @@ Carrusel genérico que muestra varios fragmentos de contenido similares en un ej
     </tr>
   </table>
 
-##Comportamiento
+# Comportamiento
 
 Cada uno de los elementos secundarios inmediatos de `amp-carousel` se considera un elemento del propio carrusel. Cada uno de estos nodos también puede tener elementos secundarios HTML arbitrarios.
 
@@ -67,7 +68,7 @@ El usuario puede desplazarse por los elementos deslizando el dedo, utilizando la
   </amp-iframe>
 </div>
 
-###Avanzar a una diapositiva concreta
+# Avanzar a una diapositiva concreta
 
 Si se configura un método `tap:carousel-id.goToSlide(index=N)` para el atributo `on` de un elemento, un carrusel con el ID "carousel-id" se desplazará a la diapositiva index=N si el usuario toca o hace clic en él (la primera diapositiva se encuentra en index=0; la segunda diapositiva, en index=1, etc.).
 
@@ -82,7 +83,7 @@ En el siguiente ejemplo, tenemos un carrusel de tres imágenes con botones de vi
   </amp-iframe>
 </div>
 
-##Atributos
+# Atributos
 
 <table>
   <tr>
@@ -153,7 +154,7 @@ En el siguiente ejemplo, tenemos un carrusel de tres imágenes con botones de vi
           </tr>
         </table>
 
-##Estilo
+# Estilo
 
 * Puedes utilizar el selector de elementos de `amp-carousel` para aplicar un estilo al carrusel.
 * Puedes usar el selector de clases de `.amp-carousel-slide` para hacer referencia a elementos del carrusel.
@@ -178,6 +179,6 @@ En el siguiente ejemplo, tenemos un carrusel de tres imágenes con botones de vi
 }
 ```
 
-##Validación
+# Validación
 
 Consulta las [reglas de amp-carousel](https://github.com/ampproject/amphtml/blob/master/extensions/amp-carousel/validator-amp-carousel.protoascii) en la especificación de la herramienta de validación de AMP.

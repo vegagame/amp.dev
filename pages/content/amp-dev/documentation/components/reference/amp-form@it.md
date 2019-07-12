@@ -11,19 +11,19 @@ $title: amp-form
 ---
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2017 The AMP HTML Authors. Tutti i diritti riservati.
+Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 
-       Rilasciato ai sensi della Licenza Apache, versione 2.0 (la "Licenza");
-     è possibile utilizzare questo file esclusivamente in conformità con la Licenza.
-     Una copia della Licenza è disponibile all'indirizzo
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-     Se non diversamente imposto dalla legge vigente o concordato per iscritto,
-     il software rilasciato ai sensi della Licenza viene distribuito "COSÌ
-     COM'È", SENZA GARANZIE O CONDIZIONI DI ALCUN TIPO, esplicite o implicite.
-     Leggi la Licenza per conoscere le autorizzazioni e le limitazioni in vigore
-     specifiche della lingua previste dalla Licenza.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 
 # amp-form
@@ -48,7 +48,7 @@ $title: amp-form
 </table>
 
 
-##Comportamento
+# Comportamento
 
 L'estensione `amp-form` consente di creare moduli (`<form>`) per inviare campi di inserimento in un documento AMP. L'estensione `amp-form` fornisce anche il [polyfill](#polyfills) per alcuni comportamenti mancanti nei browser.
 
@@ -69,13 +69,13 @@ Ecco un esempio di un modulo di base:
   </amp-iframe>
 </div>
 
-##Attributi
+# Attributi
 
-#####target
+# target
 
 Indica dove visualizzare la risposta del modulo dopo averlo inviato. Il valore deve essere `_blank` o `_top`.
 
-#####azione
+# azione
 
 Specifica un endpoint del server per gestire l'input del modulo. Il valore deve essere un URL `https` (assoluto o relativo) e non deve essere un link a un CDN.
 
@@ -86,7 +86,7 @@ Specifica un endpoint del server per gestire l'input del modulo. Il valore deve 
 Gli attributi `target` e `action` vengono utilizzati solo per le richieste GET non xhr. Il runtime AMP utilizzerà `action-xhr` per effettuare la richiesta e ignorerà `action` e `target`. Quando `action-xhr` non viene fornito, AMP effettua una richiesta GET all'endpoint `action` e utilizza `target` per aprire una nuova finestra (se `_blank`). Il runtime AMP potrebbe anche eseguire una procedura di riserva utilizzando `action` e `target` nei casi in cui l'estensione `amp-form` non viene caricata.
 [/tip]
 
-#####action-xhr
+# action-xhr
 
 Specifica un endpoint del server per gestire l'input del modulo e inviarlo tramite XMLHttpRequest (XHR). Una richiesta XHR (a volte chiamata richiesta AJAX) è quella in cui il browser effettua la richiesta senza caricare completamente la pagina o aprirne una nuova. I browser invieranno la richiesta in background utilizzando l'[API Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) quando disponibile e le procedure di riserva all'[API XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) per i browser meno recenti.
 
@@ -100,17 +100,17 @@ Il valore di `action-xhr` può essere lo stesso o un endpoint diverso da `action
 
 Per ulteriori informazioni su come reindirizzare l'utente dopo aver inviato correttamente il modulo, consulta la sezione [Reindirizzamento a seguito di un invio](#redirecting-after-a-submission).
 
-#####Altri attributi del modulo
+# Altri attributi del modulo
 
 Tutti gli altri [attributi del modulo](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form) sono facoltativi.
 
-#####custom-validation-reporting
+# custom-validation-reporting
 
 Si tratta di un attributo facoltativo che abilita e seleziona una strategia di generazione di rapporti di convalida personalizzati. I valori validi sono: `show-first-on-submit`, `show-all-on-submit` o `as-you-go`.
 
 Per ulteriori dettagli, consulta la sezione [Convalida personalizzata](#custom-validations).
 
-##Input e campi
+# Input e campi
 
 **Consentiti**:
 
@@ -127,7 +127,7 @@ Per ulteriori dettagli, consulta la sezione [Convalida personalizzata](#custom-v
 
 Per informazioni dettagliate su campi e input validi, consulta le [regole relative ad amp-form](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii) nella specifica dello strumento di convalida AMP.
 
-##Azioni
+# Azioni
 
 L'elemento `amp-form` espone le seguenti azioni:
 
@@ -140,7 +140,7 @@ L'elemento `amp-form` espone le seguenti azioni:
 ulteriori informazioni su [Azioni ed eventi in AMP](https://www.ampproject.org/docs/interaction_dynamic/amp-actions-and-events.html).
 [/tip]
 
-##Eventi
+# Eventi
 
 `amp-form` espone i seguenti eventi:
 
@@ -167,7 +167,7 @@ Ad esempio, quanto segue prende in considerazione gli eventi `submit-success` e 
 
 Vedi l'[esempio completo qui](../../examples/forms.amp.html).
 
-####Eventi di input
+# Eventi di input
 
 AMP espone gli eventi `change` e `input-debounced` sugli elementi `<input>` secondari. Ciò consente di utilizzare l'[attributo `on`](https://www.ampproject.org/docs/fundamentals/spec#on) per eseguire un'azione su qualsiasi elemento quando un valore di input cambia.
 
@@ -184,7 +184,7 @@ Ad esempio, un caso d'uso comune è inviare un modulo alla modifica dell'input (
 
 Vedi l'[esempio completo qui](../../examples/forms.amp.html).
 
-###Trigger di Analytics
+# Trigger di Analytics
 
 L'estensione `amp-form` attiva i seguenti eventi che puoi monitorare nella configurazione [Analytics per AMP](https://www.ampproject.org/docs/reference/components/amp-analytics):
 
@@ -245,7 +245,7 @@ Quando si attiva l'evento `amp-form-submit`, `amp-form-submit-success` o `amp-fo
 * `formId`
 * `formFields[comment]`
 
-##Visualizzazione di risposta positiva o di errore
+# Visualizzazione di risposta positiva o di errore
 
 Puoi eseguire la visualizzazione delle risposte positive o di errore nel modulo utilizzando [modelli estesi](https://www.ampproject.org/docs/fundamentals/spec#extended-templates), ad esempio [amp-mustache](https://www.ampproject.org/docs/reference/components/amp-mustache), o risposte positive tramite associazione di dati con [amp-bind](https://www.ampproject.org/docs/reference/components/amp-bind) e i seguenti attributi di risposta:
 
@@ -255,7 +255,7 @@ Puoi eseguire la visualizzazione delle risposte positive o di errore nel modulo 
 | `submit-error` | Può essere utilizzato per visualizzare un errore di invio se la risposta non va a buon fine (cioè non ha lo stato `2XX`).  |
 | `submitting` | Può essere utilizzato per visualizzare un messaggio quando il modulo viene inviato. Il modello di questo attributo ha accesso ai campi di input del modulo per qualsiasi scopo di visualizzazione. Consulta l'[esempio di modulo completo di seguito](#example-submitting) per informazioni su come utilizzare l'attributo `submitting`. |
 
-###Per eseguire la visualizzazione delle risposte con i modelli:
+# Per eseguire la visualizzazione delle risposte con i modelli:
 
 * Applicare un attributo di risposta a *qualsiasi elemento secondario diretto* dell'elemento `<form>`.
 * Eseguire la visualizzazione della risposta nell'elemento secondario includendo un modello tramite il tag `<template></template>` o `<script type="text/plain"></script>` oppure facendo riferimento a un modello con un attributo `template="id_of_other_template"`.
@@ -263,7 +263,7 @@ Puoi eseguire la visualizzazione delle risposte positive o di errore nel modulo 
 
 <a id="example-submitting"></a>
 
-#####Esempio: il modulo visualizza messaggi di esito positivo, errore e di invio
+# Esempio: il modulo visualizza messaggi di esito positivo, errore e di invio
 
 Nel seguente esempio, le risposte vengono visualizzate in un modello incorporato all'interno del modulo.
 
@@ -340,7 +340,7 @@ In caso di errore:
 
 Vedi l'[esempio completo qui](../../examples/forms.amp.html).
 
-###Eseguire la visualizzazione di una risposta positiva con associazione dati
+# Eseguire la visualizzazione di una risposta positiva con associazione dati
 
 * Utilizza l'[attributo on](https://www.ampproject.org/docs/interaction_dynamic/amp-actions-and-events) per associare l'attributo del modulo *submit-success* ad [`AMP.setState()`](https://www.ampproject.org/docs/reference/components/amp-bind#updating-state-with-amp.setstate%28%29).
 * Utilizza la proprietà `event` per acquisire i dati della risposta.
@@ -383,7 +383,7 @@ Quindi `amp-bind` aggiorna il testo dell'elemento `<p>` per farlo corrispondere 
 ...
 ```
 
-###Il reindirizzamento dopo un invio
+# Il reindirizzamento dopo un invio
 
 Dopo che gli utenti hanno inviato correttamente il modulo puoi reindirizzarli su una nuova pagina impostando l'intestazione di risposta `AMP-Redirect-To` e specificando un URL di reindirizzamento. L'URL di reindirizzamento deve essere un URL HTTPS, altrimenti AMP genererà un errore e il reindirizzamento non si verificherà.  Le intestazioni delle risposte HTTP sono configurate tramite il server.
 
@@ -400,7 +400,7 @@ Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin, AMP-Redir
 Su AMP By Example consulta [Invio di moduli con aggiornamento](https://ampbyexample.com/components/amp-form/#form-submission-with-page-update) e [Pagina del prodotto](https://ampbyexample.com/samples_templates/product_page/#product-page) per esempi in cui si utilizza il reindirizzamento dopo l'invio di un modulo.
 [/tip]
 
-##Convalide personalizzate
+# Convalide personalizzate
 
 L'estensione `amp-form` consente di creare una propria interfaccia utente di convalida personalizzata utilizzando l'attributo di `custom-validation-reporting` con una delle seguenti strategie di generazione di rapporti: `show-first-on-submit`, `show-all-on-submit` o `as-you-go`.
 
@@ -428,27 +428,27 @@ Per i messaggi di convalida, se l'elemento non presenta contenuti di testo al su
 devi fornire la tua interfaccia utente di convalida per ogni tipo di stato non valido che l'input potrebbe avere. Se non sono presenti, gli utenti non vedranno alcun `custom-validation-reporting` per lo stato di errore mancante. Gli stati di validità sono disponibili nella [documentazione ufficiale sui rapporti di convalida HTML del W3C](https://www.w3.org/TR/html50/forms.html#validitystate).
 [/tip]
 
-###Strategie di generazione dei rapporti
+# Strategie di generazione dei rapporti
 
 Specifica una delle seguenti opzioni di generazione dei rapporti per l'attributo `custom-validation-reporting`:
 
-####Mostra prima al momento dell'invio
+# Mostra prima al momento dell'invio
 
 L'opzione di generazione del rapporto `show-first-on-submit` riproduce il comportamento predefinito del browser quando viene attivata la convalida predefinita. Mostra il primo errore di convalida rilevato e si ferma lì.
 
-####Mostra tutto al momento dell'invio
+# Mostra tutto al momento dell'invio
 
 L'opzione di generazione dei rapporti `show-all-on-submit` visualizza tutti gli errori di convalida di ogni input non valido quando il modulo viene inviato. Questa funzione è utile se vuoi visualizzare un riepilogo delle convalide.
 
-####Opzione di visualizzazione durante la compilazione
+# Opzione di visualizzazione durante la compilazione
 
 L'opzione di generazione dei rapporti `as-you-go` consente all'utente di visualizzare i messaggi di convalida mentre interagisce con l'input. Ad esempio, se l'utente digita un indirizzo email non valido visualizzerà immediatamente l'errore.  Una volta corretto il valore, l'errore scompare.
 
-####Interazione e invio
+# Interazione e invio
 
 L'opzione di generazione dei rapporti `interact-and-submit` combina il comportamento di `show-all-on-submit` e `as-you-go`. I singoli campi mostreranno eventuali errori subito dopo le interazioni e, al momento dell'invio, il modulo mostrerà gli errori in tutti i campi non validi.
 
-##Verifica
+# Verifica
 
 La convalida HTML5 fornisce feedback basati solo sulle informazioni disponibili nella pagina, ad esempio se un valore corrisponde a un determinato pattern. Con la verifica `amp-form` puoi fornire agli utenti dei feedback che la sola convalida HTML5 non sarebbe in grado di generare. Ad esempio, un modulo può utilizzare la verifica per controllare se un indirizzo email è già stato registrato. Un altro caso d'uso consiste nel verificare che un campo città e un campo codice di avviamento postale corrispondano.
 
@@ -514,7 +514,7 @@ Per rimuovere un campo dalla richiesta `verify-xhr`, aggiungi l'attributo `no-ve
 
 Per ulteriori esempi, consulta [esempi/forms.amp.html](../../examples/forms.amp.html).
 
-##Sostituzioni delle variabili
+# Sostituzioni delle variabili
 
 L'estensione `amp-form` consente la [sostituzione delle variabili di piattaforma](../../spec/amp-var-substitutions.md) per gli input che sono nascosti e hanno l'attributo `data-amp-replace`. Per ogni invio di modulo, `amp-form` trova tutto l' `input[type=hidden][data-amp-replace]` all'interno del modulo e applica sostituzioni di variabili al relativo attributo `value` e lo sostituisce con il risultato della sostituzione.
 
@@ -553,15 +553,15 @@ Nota che `CANONICAL_HOSTNAME` non è stato sostituito perché non era incluso ne
 
 Le sostituzioni avverranno a ogni invio successivo. Ulteriori informazioni sulle [sostituzioni di variabili in AMP](../../spec/amp-var-substitutions.md).
 
-##Polyfill
+# Polyfill
 
 L'estensione `amp-form` fornisce polyfill per comportamenti e funzionalità mancanti in alcuni browser o implementati nella versione di CSS successiva.
 
-####Messaggio di convalida e di blocco per invio non valido
+# Messaggio di convalida e di blocco per invio non valido
 
 I browser che utilizzano attualmente motori basati sul Webkit (a partire da agosto 2016) non supportano l'invio di moduli non validi. Uno di questi è Safari (su tutte le piattaforme) e tutti i browser iOS. L'estensione `amp-form` esegue il polyfill di questo comportamento per bloccare gli invii non validi e mostra i messaggi di convalida sugli input non validi.
 
-####Pseudo-classi di interazione utente
+# Pseudo-classi di interazione utente
 
 Le pseudo classi `:user-invalid` e `:user-valid` fanno parte della [futura specifica CSS Selectors 4](https://drafts.csswg.org/selectors-4/#user-pseudos) e sono state introdotte per consentire hook migliori per lo styling dei campi non validi/validi in base a determinati criteri.
 
@@ -569,7 +569,7 @@ Una delle principali differenze tra `:invalid` e `:user-invalid` è il momento i
 
 L'estensione `amp-form` fornisce [classi](#classes-and-css-hooks) per il polyfill di queste pseudo-classi. L'estensione `amp-form` propaga anche negli elementi predecessori `fieldset` e `form`.
 
-####`<textarea>` convalida
+# `<textarea>` convalida
 
 La corrispondenza delle espressioni regolari è una funzione di convalida comune supportata nativamente sulla maggior parte degli elementi di input, ad eccezione di `<textarea>`. Questa funzione è disponibile per il polyfill e supporta l'attributo `pattern` sugli elementi `<textarea>`.
 
@@ -580,9 +580,9 @@ di rimpicciolirsi ed espandersi fino alla dimensione massima del campo per accog
 <textarea autoexpand></textarea>
 ```
 
-##Stili
+# Stili
 
-###Classi e hook CSS
+# Classi e hook CSS
 
 L'estensione `amp-form` mette a disposizione dei publisher classi e hook CSS per creare input e moduli con stili diversi.
 
@@ -608,9 +608,9 @@ Vedi l'[esempio completo](../../examples/forms.amp.html) dell'utilizzo delle cla
 visita [AMP Start](https://ampstart.com/components#form-elements) per elementi di moduli AMP reattivi e pre-formattati che puoi utilizzare nelle tue pagine AMP.
 [/tip]
 
-##Considerazioni sulla sicurezza
+# Considerazioni sulla sicurezza
 
-###Protezione contro XSRF
+# Protezione contro XSRF
 
 Oltre a seguire le istruzioni nella [specifica CORS AMP](https://www.ampproject.org/docs/fundamentals/amp-cors-requests.html), presta particolare attenzione alla sezione ["Elaborazione delle richieste di modifica dello stato"](https://www.ampproject.org/docs/fundamentals/amp-cors-requests.html#processing-state-changing-requests) per la protezione dagli [attacchi XSRF](https://en.wikipedia.org/wiki/Cross-site_request_forgery) in cui un utente malintenzionato può eseguire comandi non autorizzati utilizzando la sessione utente corrente all'insaputa di quest'ultimo.
 

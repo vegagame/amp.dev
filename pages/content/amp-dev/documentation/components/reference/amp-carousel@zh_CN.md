@@ -9,16 +9,23 @@ teaser:
 ---
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
-<!--- 版权所有 2015 The AMP HTML Authors。保留所有权利。
+<!---
+Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 
-       根据 Apache 许可 2.0 版（以下简称“许可”）授权用户使用；您只有在遵循该许可的情况下才可使用本文件。您可以通过以下网址获得该许可的副本：
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       除非适用法律要求或已达成书面协议，否则按照该许可分发的软件均“按原样”分发，不提供任何类型的担保或条件（无论明示或暗示）。有关该许可规定的具体语言管辖权限和限制，请参阅该许可。
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-#amp-carousel
+# amp-carousel
 
 用于沿着一条横轴显示多个相似的内容片段的通用轮播界面；具有高度灵活性和高性能。
 
@@ -44,7 +51,7 @@ teaser:
     </tr>
   </table>
 
-##行为
+# 行为
 
 每个 `amp-carousel` 组件的直接子级在轮播界面中均视为一个项。每个节点还可能包含任意 HTML 子级。
 
@@ -61,7 +68,7 @@ teaser:
   </amp-iframe>
 </div>
 
-###前往某张特定幻灯片
+# 前往某张特定幻灯片
 
 如果在某元素上将 `on` 属性的某个方法设为 `tap:carousel-id.goToSlide(index=N)`，则会在用户点按或点击时从具有 "carousel-id" ID 的轮播界面前往 index=N 位置的幻灯片（第一张幻灯片的位置为 index=0，第二张幻灯片的位置为 index=1，以此类推）。
 
@@ -76,7 +83,7 @@ teaser:
   </amp-iframe>
 </div>
 
-##属性
+# 属性
 
 <table>
   <tr>
@@ -144,7 +151,7 @@ teaser:
       </tr>
     </table>
 
-##样式设置
+# 样式设置
 
 * 您可以使用 `amp-carousel` 元素选择器随意设置样式。
 * 您可以使用 `.amp-carousel-slide` 类别选择器定位轮播项。
@@ -169,6 +176,6 @@ teaser:
 }
 ```
 
-##验证
+# 验证
 
 请参阅 AMP 验证工具规范中的 [amp-carousel 规则](https://github.com/ampproject/amphtml/blob/master/extensions/amp-carousel/validator-amp-carousel.protoascii)。

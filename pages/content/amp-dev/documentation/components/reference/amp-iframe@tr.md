@@ -8,18 +8,22 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Telif Hakkı 2015 The AMP HTML Authors. Tüm Hakları Saklıdır.
+Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 
-       Apache Lisansı, Sürüm 2.0 ("Lisans") ile lisanslıdır; bu dosyayı Lisans koşulları dışında kullanamazsınız.
-       Lisansın bir kopyasını şu adresten edinebilirsiniz:
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       Geçerli yasa tarafından gerekli görülmediği veya yazılı olarak bir sözleşme yapılmadığı sürece, Lisanslı olarak dağıtılan yazılım açıkça veya zımni olarak HİÇBİR GARANTİ VEYA KOŞUL SUNULMADAN "OLDUĞU GİBİ" dağıtılır.
-       Lisans kapsamında belirli bir dilde sağlanan izinleri ve uygulanan kısıtlamaları öğrenmek için söz konusu dille ilgili Lisans'a bakın.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-#amp-iframe
+# amp-iframe
 
 Bir iframe görüntüler.
 
@@ -39,7 +43,7 @@ Bir iframe görüntüler.
   </tr>
 </table>
 
-##Davranış
+# Davranış
 
 `amp-iframe` öğesinin, vanilla iframe'e göre kendisini daha güvenli hale getirmek ve tek bir iframe tarafından yönetilen AMP dosyalarından kaçınmak için tasarlanmış bazı önemli farklılıkları vardır:
 
@@ -68,7 +72,7 @@ Bir iframe görüntüler.
 Daha fazla `amp-iframe` demosu için [Örneklerle AMP](https://ampbyexample.com/components/amp-iframe/) sitesini ziyaret edin.
 [/tip]
 
-##amp-iframe öğesinin reklamcılık için kullanımı
+# amp-iframe öğesinin reklamcılık için kullanımı
 
 `amp-iframe`, reklam görüntülemenin birincil amacı için **kullanılmamalıdır**. `amp-iframe`, reklamların bir parçası olan videoların görüntülenmesi amacıyla kullanılabilir. Bu AMP politikası, ilgili iframe'lerin oluşturulmamasıyla uygulanabilir.
 
@@ -81,7 +85,7 @@ Bu politikanın gerekçileri şunlardır:
 * `amp-iframe`, iframe tarafından tam olarak kontrol edilen yeniden boyutlandırma mekanizmasına sahip değildir.
 * Görüntülenebilirlik bilgileri `amp-iframe` tarafından kullanılamaz.
 
-##Özellikler
+# Özellikler
 
 <table>
   <tr>
@@ -110,7 +114,7 @@ Bu politikanın gerekçileri şunlardır:
               </tr>
             </table>
 
-##Yer tutucu içeren iframe
+# Yer tutucu içeren iframe
 
 `amp-iframe`, aşağıdaki örnekte gösterildiği gibi bir `placeholder` öğesi içerdiğinde, `amp-iframe` öğesinin dokümanın üst kısmında görünmesi mümkündür.
 
@@ -137,7 +141,7 @@ window.parent.postMessage({
   }, '*');
 ```
 
-##iframe'i yeniden boyutlandırma
+# iframe'i yeniden boyutlandırma
 
 `amp-iframe` öğesinin, diğer AMP öğelerinde olduğu gibi tanımlı statik bir düzeni olmalıdır. Bununla birlikte, çalışma zamanında bir `amp-iframe` öğesini yeniden boyutlandırmak mümkündür. Bunu yapmak için:
 
@@ -179,7 +183,7 @@ Yeniden boyutlandırmanın ne kadar hızlı yürütüleceğini etkileyen bazı f
 * Yeniden boyutlandırmanın şu anda etkin olan bir iframe için istenip istenmediği.
 * Yeniden boyutlandırmanın görüntü alanının altında veya üstünde bulunan bir iframe için istenip istenmediği.
 
-##iframe görüntülenebilirliği
+# iframe görüntülenebilirliği
 
 iframe'ler, iframe'in üst görüntü alanıyla kesişiminin IntersectionObserver stil [değişiklik kayıtlarını](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry) almaya başlaması için üst öğelerine bir `send-intersections` mesajı gönderebilir.
 
@@ -215,7 +219,7 @@ window.addEventListener('message', function(event) {
 
 Kesişim mesajı, iframe kaydırıldığında veya yeniden boyutlandırıldığında görüntü alanının içine veya dışına taşındığında (veya kısmen göründüğünde) iframe'e üst öğe tarafından gönderilir.
 
-##İzleme/analiz iframe'leri
+# İzleme/analiz iframe'leri
 
 Analiz yapmayı amaçladığınızda [`amp-analytics`](https://www.ampproject.org/docs/reference/components/amp-analytics) öğesini kullanmanızı önemle tavsiye ederiz. Bu öğe, çok çeşitli analiz tedarikçi firması için yapılandırılabilen çok daha güçlü, eksiksiz ve etkili bir çözümdür.
 
@@ -223,7 +227,7 @@ AMP, her sayfada analiz ve izleme amacıyla yalnızca tek bir iframe'in kullanı
 
 iframe'ler, görünmez veya küçük olmaları gibi kullanıcıya yönelik doğrudan bir amaca hizmet etmiyorlarsa izleme/analiz iframe'leri olarak tanımlanır.
 
-##Yönerge: amp-iframe üzerinde mevcut AMP bileşenlerini kullanma
+# Yönerge: amp-iframe üzerinde mevcut AMP bileşenlerini kullanma
 
 Gerekli kullanıcı deneyimi AMP'deki diğer araçlarla mümkün değilse yani kullanım alanı için halihazırda mevcut bir [AMP bileşeni](https://www.ampproject.org/docs/reference/components) yoksa `amp-iframe` bileşeni, bir yedek olarak kabul edilmelidir. Bunun nedeni, belirli bir kullanım alanı için uyarlanmış bir AMP bileşenini kullanmanın birçok yararının olmasıdır. Örneğin:
 
@@ -232,6 +236,6 @@ Gerekli kullanıcı deneyimi AMP'deki diğer araçlarla mümkün değilse yani k
 * Yerleşik yeniden boyutlandırma. Bu, öngörülemeyen boyuta sahip iframe içeriğinin kullanıcıya, kaydırılabilir bir çerçeve yerine sayfanın kendi içindeymiş gibi görünebileceği anlamına gelir
 * Başka ek özellikler de oluşturulabilir (örneğin, video oynatıcılar için otomatik oynatma)
 
-##Doğrulama
+# Doğrulama
 
 AMP doğrulayıcı spesifikasyonunda [amp-iframe kurallarına](https://github.com/ampproject/amphtml/blob/master/extensions/amp-iframe/validator-amp-iframe.protoascii) bakın.
