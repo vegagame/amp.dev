@@ -8,7 +8,7 @@ teaser:
   text: Permettre aux internautes d'avoir un aperçu du contenu et d'accéder directement à la section de leur choix.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 

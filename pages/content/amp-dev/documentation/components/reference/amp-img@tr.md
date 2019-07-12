@@ -9,7 +9,7 @@ teaser:
   text: HTML5 img etiketinin yerini alır.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
        Telif Hakkı 2015 The AMP HTML Authors. Tüm Hakları Saklıdır.
 

@@ -8,7 +8,7 @@ teaser:
   text: 提供一种方式，让观看者可以大致了解网页内容并随意跳至想查看的部分。
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 

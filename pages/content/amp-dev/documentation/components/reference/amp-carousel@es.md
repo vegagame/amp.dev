@@ -8,7 +8,7 @@ teaser:
   text: Muestra varios fragmentos de contenido similares en un eje horizontal.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
        Copyright 2015 The AMP HTML Authors. Todos los derechos reservados.
 

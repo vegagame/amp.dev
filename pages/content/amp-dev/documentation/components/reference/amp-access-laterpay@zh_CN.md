@@ -6,7 +6,7 @@ teaser:
   text: 可让发布商轻松集成 LaterPay 微支付平台。
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 

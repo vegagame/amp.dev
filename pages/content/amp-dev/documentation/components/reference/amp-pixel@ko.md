@@ -9,7 +9,7 @@ formats:
 ##  텍스트: 페이지 조회수를 계산하는 추적 픽셀입니다.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
        Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 

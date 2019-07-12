@@ -8,7 +8,7 @@ teaser:
   text: Capturer les données d'analyse à partir d'un document AMP.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2019 The AMP HTML Authors. All Rights Reserved.
 

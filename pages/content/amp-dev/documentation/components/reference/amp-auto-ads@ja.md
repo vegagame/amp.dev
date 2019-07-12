@@ -6,7 +6,7 @@ teaser:
   text: リモートで提供される設定ファイルを使用して、AMP ページに広告を動的に挿入します。
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 

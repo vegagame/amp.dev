@@ -9,7 +9,7 @@ formats:
   text: 가로축을 따라 여러 개의 유사한 콘텐츠를 표시합니다.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
        Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 

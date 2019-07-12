@@ -5,7 +5,7 @@ formats:
 teaser:
   text: 게시자가 LaterPay 소액결제 플랫폼과 손쉽게 통합할 수 있습니다.
 ---
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 

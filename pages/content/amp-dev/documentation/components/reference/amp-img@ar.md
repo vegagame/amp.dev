@@ -9,7 +9,7 @@ teaser:
   text: Replaces the HTML5 img tag.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 حقوق الطبع والنشر 2015 لصالح "مؤلفو رمز HTML لصفحات AMP". جميع الحقوق محفوظة.
 

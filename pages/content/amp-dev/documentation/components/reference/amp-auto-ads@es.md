@@ -6,7 +6,7 @@ teaser:
   text: Inserta de forma dinámica anuncios en una página AMP mediante un archivo de configuración servido de forma remota.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 

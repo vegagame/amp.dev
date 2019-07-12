@@ -8,7 +8,7 @@ teaser:
   text: Görüntüleyenlerin içeriğin ana hatlarına göz atması ve istediklerinde seçtikleri bir bölüme atlaması için bir yol sağlar.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 

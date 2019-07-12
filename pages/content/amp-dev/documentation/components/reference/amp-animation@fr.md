@@ -7,7 +7,7 @@ teaser:
   text: Définir et afficher une animation.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 

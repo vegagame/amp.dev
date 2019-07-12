@@ -17,7 +17,7 @@ Bir reklamın görüntüleneceği kapsayıcı. `amp-embed`, `amp-ad` etiketinin 
 `amp-ad`/`amp-embed` spesifikasyonu zaman içinde önemli ölçüde gelişebilir. Geçerli yaklaşım, reklamları gösterebilmek için biçimin önyükleneceği şekilde tasarlanmıştır.
 [/tip]
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 

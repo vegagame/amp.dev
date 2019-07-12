@@ -12,7 +12,7 @@ teaser:
 
 通过数据绑定和表达式添加自定义互动方式。
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!--- 版权所有 2016 The AMP HTML Authors。保留所有权利。
 
        根据 Apache 许可 2.0 版（以下简称“许可”）授权用户使用；您只有在遵循该许可的情况下才可使用本文件。您可以通过以下网址获得该许可的副本：

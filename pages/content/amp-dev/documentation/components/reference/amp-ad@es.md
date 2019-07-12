@@ -18,7 +18,7 @@ Representa un contenedor que puede mostrar un anuncio. `amp-embed` funciona como
 Es probable que la especificación de `amp-ad`/`amp-embed` evolucione significativamente con el tiempo. El enfoque actual de estos componentes se ha diseñado para poner en funcionamiento el formato para poder mostrar anuncios.
 [/tip]
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 

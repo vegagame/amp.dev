@@ -6,7 +6,7 @@ teaser:
   text: Permite que os editores se integrem facilmente com a plataforma de micropagamentos LaterPay.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 

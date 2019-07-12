@@ -6,7 +6,7 @@ teaser:
   text: Consente ai publisher una facile integrazione con la piattaforma di micropagamenti LaterPay.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 

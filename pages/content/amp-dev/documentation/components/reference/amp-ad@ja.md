@@ -16,7 +16,7 @@ teaser:
 [tip type="note"] `amp-ad` / `amp-embed` の仕様は今後、大幅に変更される可能性があります。現在は、広告を自動表示できる形式に設計されています。
 [/tip]
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 

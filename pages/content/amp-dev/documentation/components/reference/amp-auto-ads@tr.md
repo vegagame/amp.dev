@@ -6,7 +6,7 @@ teaser:
   text: Uzaktan sunulan bir yapılandırma dosyası kullanarak reklamları bir AMP sayfasına dinamik şekilde yerleştirir.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 

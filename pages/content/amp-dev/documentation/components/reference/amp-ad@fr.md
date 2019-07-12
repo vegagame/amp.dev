@@ -17,7 +17,7 @@ Il s'agit d'un conteneur permettant de diffuser une annonce. `amp-embed` est un 
 La spécification du composant `amp-ad`/`amp-embed` est susceptible d'évoluer considérablement au fil du temps. La méthode actuelle consiste à amorcer le format pour qu'il soit possible de diffuser des annonces.
 [/tip]
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 

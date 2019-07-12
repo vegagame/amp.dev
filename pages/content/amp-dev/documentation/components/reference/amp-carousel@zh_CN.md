@@ -8,7 +8,7 @@ teaser:
   text: 沿着一条横轴显示多个相似的内容片段。
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!--- 版权所有 2015 The AMP HTML Authors。保留所有权利。
 
        根据 Apache 许可 2.0 版（以下简称“许可”）授权用户使用；您只有在遵循该许可的情况下才可使用本文件。您可以通过以下网址获得该许可的副本：

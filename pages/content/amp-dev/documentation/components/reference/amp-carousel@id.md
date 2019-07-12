@@ -8,7 +8,7 @@ teaser:
   text: Displays multiple similar pieces of content along a horizontal axis.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
        Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 
