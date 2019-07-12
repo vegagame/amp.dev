@@ -25,7 +25,7 @@ teaser:
      limitations under the License.
 -->
 
-#amp-carousel
+# amp-carousel
 
 Carousel generik untuk menampilkan beberapa konten serupa secara bergantian sepanjang sumbu horizontal; yang dimaksudkan untuk memiliki fleksibilitas dan performa tinggi.
 
@@ -51,7 +51,7 @@ Carousel generik untuk menampilkan beberapa konten serupa secara bergantian sepa
     </tr>
   </table>
 
-##Perilaku
+# Perilaku
 
 Setiap turunan langsung komponen `amp-carousel` dianggap sebagai item dalam carousel. Masing-masing node ini mungkin juga memiliki sembarang turunan HTML.
 
@@ -68,7 +68,7 @@ Carousel berpindah-pindah item jika pengguna menggeser, menggunakan tombol panah
   </amp-iframe>
 </div>
 
-###Berpindah ke slide tertentu
+# Berpindah ke slide tertentu
 
 Apabila metode untuk atribut `on` pada suatu elemen ditetapkan ke `tap:carousel-id.goToSlide(index=N)`, saat pengguna menge-tap atau mengklik, carousel dengan ID "carousel-id" akan menuju ke slide yang berada pada index=N (slide pertama berada pada index=0, slide kedua berada pada index=1, dan seterusnya).
 
@@ -83,7 +83,7 @@ Pada contoh berikut, terdapat carousel tiga gambar dengan tombol pratinjau di ba
   </amp-iframe>
 </div>
 
-##Atribut
+# Atribut
 
 <table>
   <tr>
@@ -154,7 +154,7 @@ Pada contoh berikut, terdapat carousel tiga gambar dengan tombol pratinjau di ba
           </tr>
         </table>
 
-##Penataan gaya
+# Penataan gaya
 
 * Anda dapat menggunakan pemilih elemen `amp-carousel` untuk menata gayanya dengan bebas.
 * Anda dapat menggunakan pemilih class `.amp-carousel-slide` untuk menargetkan item carousel.
@@ -179,6 +179,6 @@ Pada contoh berikut, terdapat carousel tiga gambar dengan tombol pratinjau di ba
 }
 ```
 
-##Validasi
+# Validasi
 
 Lihat [aturan amp-carousel](https://github.com/ampproject/amphtml/blob/master/extensions/amp-carousel/validator-amp-carousel.protoascii) dalam spesifikasi validator AMP.

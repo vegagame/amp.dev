@@ -7,16 +7,23 @@ teaser:
 ---
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
-<!--- 版权所有 2015 The AMP HTML Authors。保留所有权利。
+<!---
+Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 
-       根据 Apache 许可 2.0 版（以下简称“许可”）授权用户使用；您只有在遵循该许可的情况下才可使用本文件。您可以通过以下网址获得该许可的副本：
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       除非适用法律要求或已达成书面协议，否则按照该许可分发的软件均“按原样”分发，不提供任何类型的担保或条件（无论明示或暗示）。有关该许可规定的具体语言管辖权限和限制，请参阅该许可。
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-#amp-iframe
+# amp-iframe
 
 显示 iframe。
 
@@ -36,7 +43,7 @@ teaser:
   </tr>
 </table>
 
-##行为
+# 行为
 
 `amp-iframe` 与 vanilla iframe 之间存在一些重大差异，后者旨在提高安全性并避免生成由单个 iframe 主导的 AMP 文件：
 
@@ -65,7 +72,7 @@ teaser:
 如需查看 `amp-iframe` 的更多演示，请访问 [AMP By Example](https://ampbyexample.com/components/amp-iframe/)。
 [/tip]
 
-##将 amp-iframe 用于广告
+# 将 amp-iframe 用于广告
 
 `amp-iframe` **不得** 用于以展示广告为主要目的的用途。您可以将 `amp-iframe` 用于展示其中部分内容是广告的视频。系统可能会强制实施此 AMP 政策：不呈现相应 iframe。
 
@@ -78,7 +85,7 @@ teaser:
 * `amp-iframe` 没有完全由 iframe 控制的大小调整机制。
 * `amp-iframe` 可能无法使用可见度信息。
 
-##属性
+# 属性
 
 <table>
   <tr>
@@ -103,7 +110,7 @@ teaser:
               </tr>
             </table>
 
-##具有 placeholder 的 iframe
+# 具有 placeholder 的 iframe
 
 如果 `amp-iframe` 包含 `placeholder` 元素，则 `amp-iframe` 可以显示在文档顶部，如下例所示。
 
@@ -130,7 +137,7 @@ window.parent.postMessage({
   }, '*');
 ```
 
-##iframe 大小调整
+# iframe 大小调整
 
 `amp-iframe` 必须指定静态布局，与任何其他 AMP 元素一样。不过，您可以在运行时调整 `amp-iframe` 的大小。为此，请按下列步骤操作：
 
@@ -172,7 +179,7 @@ window.parent.postMessage({
 * 调整大小是否为当前处于活动状态的 iframe 请求的。
 * 调整大小是否为位于视口下方或上方的 iframe 请求的。
 
-##iframe 可见度
+# iframe 可见度
 
 iframe 可以将 `send-intersections` 消息发送至其父级，以开始接收 iframe 与父视口相交部分的 IntersectionObserver 样式[更改记录](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry)。
 
@@ -208,7 +215,7 @@ window.addEventListener('message', function(event) {
 
 在 iframe 移入或移出视口（或部分可见）时，或者在滚动 iframe 或调整其大小时，iframe 父级会将相交消息发送给 iframe。
 
-##跟踪/分析 iframe
+# 跟踪/分析 iframe
 
 我们强烈建议将 [`amp-analytics`](https://www.ampproject.org/docs/reference/components/amp-analytics) 用于分析，因为该解决方案显然更加强大、全面和高效，可为各种分析服务供应商进行配置。
 
@@ -216,7 +223,7 @@ AMP 仅允许每个页面使用一个 iframe 进行分析和跟踪。为了节�
 
 如果 iframe 的直接目的看起来不是为用户提供服务（例如，不可见或很小），则标识为跟踪/分析 iframe。
 
-##准则：使用现有 AMP 组件而非 amp-iframe
+# 准则：使用现有 AMP 组件而非 amp-iframe
 
 如果在 AMP 中无法通过其他方法获取所需的用户体验，则应将 `amp-iframe` 组件视为备用方法，也就是说，对于这种用例，现在还没有相应的 [AMP 组件](https://www.ampproject.org/zh_cn/docs/reference/components)。这是因为针对特定用例使用 AMP 组件有诸多益处，例如：
 
@@ -225,6 +232,6 @@ AMP 仅允许每个页面使用一个 iframe 进行分析和跟踪。为了节�
 * 内置大小调整功能。这意味着，大小无法预测的 iframe 内容能够更频繁向用户展示，这些内容就好像与页面内容浑然一体，而不是在可滚动的框架中。
 * 还可以内置其他功能（例如，视频播放器自动播放功能）
 
-##验证
+# 验证
 
 请参阅 AMP 验证工具规范中的 [amp-iframe 规则](https://github.com/ampproject/amphtml/blob/master/extensions/amp-iframe/validator-amp-iframe.protoascii)。

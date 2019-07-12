@@ -10,14 +10,21 @@ teaser:
 ---
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
-<!--- 版权所有 2015 The AMP HTML Authors。保留所有权利。
+<!---
+Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 
-       根据 Apache 许可 2.0 版（以下简称“许可”）授权用户使用；您只有在遵循该许可的情况下才可使用本文件。您可以通过以下网址获得该许可的副本：
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       除非适用法律要求或已达成书面协议，否则按照该许可分发的软件均“按原样”分发，不提供任何类型的担保或条件（无论明示或暗示）。有关该许可规定的具体语言管辖权限和限制，请参阅该许可。
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
 # amp-img
 
@@ -37,7 +44,7 @@ teaser:
 </table>
 
 
-##行为
+# 行为
 
 运行时可能会根据视口位置、系统资源、连接带宽或其他因素选择延迟或优先加载资源。通过 `amp-img` 组件，运行时能够以这种方式有效管理图片资源。
 
@@ -47,7 +54,7 @@ teaser:
 详细了解 [AMP HTML 布局系统](https://github.com/ampproject/amphtml/blob/master/spec/amp-html-layout.md)规范中的布局以及[支持的布局](https://www.ampproject.org/docs/guides/responsive/control_layout.html#the-layout-attribute)。
 [/tip]
 
-####示例：显示自适应图片
+# 示例：显示自适应图片
 
 在下面的示例中，我们通过设置 `layout=responsive` 来展示一张能够根据视口尺寸自行调整大小的图片。该图片会根据通过 `width` 和 `height` 指定的宽高比进行缩放。
 
@@ -64,7 +71,7 @@ teaser:
 
 如果 `amp-img` 组件请求的资源未能成功加载，则该资源所对应的空间将为空白，除非提供了 [`fallback`](https://github.com/ampproject/amphtml/blob/master/spec/amp-html-layout.md#fallback) 子级。仅对初始布局执行后备操作；如果在初始布局完成之后进行后续的 src 更改（例如，通过调整大小和 srcset），则不会执行后备操作，以免影响性能。
 
-####示例：指定后备图片
+# 示例：指定后备图片
 
 在下面的示例中，如果浏览器不支持 WebP，则会显示后备 JPG 图片：
 
@@ -86,7 +93,7 @@ teaser:
 * [添加图片和视频](https://www.ampproject.org/docs/media/amp_replacements)
 [/tip]
 
-##属性
+# 属性
 
 **src**
 
@@ -120,7 +127,7 @@ teaser:
 
 此元素包含扩展到 AMP 组件的[常见属性](https://www.ampproject.org/docs/reference/common_attributes)。
 
-##样式设置
+# 样式设置
 
 可通过 CSS 属性直接设置 `amp-img` 的样式。例如，可通过以下代码将占位符背景颜色设置为灰色：
 
@@ -130,20 +137,20 @@ amp-img {
   }
 ```
 
-##提示和技巧
+# 提示和技巧
 
-####放大图片，但不超过最大宽度
+# 放大图片，但不超过最大宽度
 
 如果您希望图片随着窗口大小的调整而缩放，但宽度不超过最大宽度（这样，拉伸图片时不会超过窗口宽度），请执行以下操作：
 
 1. 为 `<amp-img>` 设置 `layout=responsive`。
 1. 在图片的容器中，指定 `max-width:<max width to display image>` CSS 属性。为何在容器中指定？这是因为 `layout=responsive` 的 `amp-img` 元素是块级元素，而 `<img>` 是内嵌元素。****或者，您可以在 CSS 中为 amp-img 元素设置 `display: inline-block`。
 
-####自适应布局和固有布局之间的区别
+# 自适应布局和固有布局之间的区别
 
 使用 `responsive` 和 `intrinsic` 布局都可以创建能够自动缩放的图片。这两种布局的主要区别在于，`intrinsic` 布局使用 SVG 图片作为其缩放元素。这样一来，它就与标准的 HTML 图片具有相同的行为方式，同时保留浏览器知道图片在初始布局上的尺寸这一优势。`intrinsic` 布局具有固定尺寸，且会不断扩大悬浮式 `div`，直至其达到自然图片尺寸或 CSS 上限（如 `max-width`）。在悬浮式 `div` 中，`responsive` 布局将呈现 0x0，这是因为其尺寸继承自父级，而父级在处于悬浮状态时没有自然尺寸。
 
-####设置尺寸固定的图片
+# 设置尺寸固定的图片
 
 如果您希望图片以固定尺寸显示，请执行以下操作：
 
@@ -154,7 +161,7 @@ amp-img {
 如果您没有指定 `layout` 属性，可了解一下[推断布局](https://www.ampproject.org/docs/design/responsive/control_layout#what-if-the-layout-attribute-isn%E2%80%99t-specified?)。
 [/tip]
 
-####设置宽高比
+# 设置宽高比
 
 对于自适应图片，`width` 和 `height` 无需与 `amp-img` 的宽度和高度完全匹配；这些值只需要能够实现相同的宽高比即可。
 
@@ -167,7 +174,7 @@ amp-img {
   </amp-iframe>
 </div>
 
-####为不同的屏幕分辨率设置多个源文件
+# 为不同的屏幕分辨率设置多个源文件
 
 要提供同一张图片的不同分辨率，应使用 [`srcset`](#attributes) 属性，这些分辨率的宽高比要全部相同。浏览器将根据用户设备的屏幕分辨率和宽度，通过 `srcset` 自动选择最适合的文件。
 
@@ -175,10 +182,10 @@ amp-img {
 
 如需了解详情，请参阅[制作自适应 AMP 网页](https://www.ampproject.org/docs/design/responsive/responsive_design#displaying-responsive-images)指南。
 
-####使尺寸未知的图片的宽高比保持不变
+# 使尺寸未知的图片的宽高比保持不变
 
 AMP 布局系统需要提前知道图片的宽高比，然后才能抓取图片；但在某些情况下，您可能不知道图片的尺寸。要显示尺寸未知的图片并使其宽高比保持不变，请将 AMP 的 [`fill`](https://www.ampproject.org/docs/design/responsive/control_layout#the-layout-attribute) 布局与 [`object-fit`](https://css-tricks.com/almanac/properties/o/object-fit/) CSS 属性结合使用。如需了解详情，请参阅 AMP By Example 的[如何支持尺寸未知的图片](https://ampbyexample.com/advanced/how_to_support_images_with_unknown_dimensions)。
 
-##验证
+# 验证
 
 请参阅 AMP 验证工具规范中的 [amp-img 规则](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii)。

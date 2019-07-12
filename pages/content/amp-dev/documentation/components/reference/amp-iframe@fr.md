@@ -8,19 +8,22 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2015 The AMP HTML Authors. Tous droits réservés.
+Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 
-       Autorisation sous licence Apache, version 2.0 (la "Licence") ;
-       n'utilisez ce fichier que dans le cadre de la Licence.
-       Vous pouvez obtenir une copie de la Licence à l'adresse suivante :
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       Sauf dispositions légales applicables ou accord écrit préalable, le logiciel distribué dans le cadre de la Licence est fourni "EN L'ÉTAT", À L'EXCLUSION DE TOUTE GARANTIE OU CONDITION DE QUELQUE NATURE QUE CE SOIT, expresse ou implicite.
-       Consultez la Licence correspondant à la langue spécifique qui régit les autorisations et limitations applicables.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-#amp-iframe
+# amp-iframe
 
 Affiche un iFrame.
 
@@ -40,7 +43,7 @@ Affiche un iFrame.
   </tr>
 </table>
 
-##Comportement
+# Comportement
 
 Il existe plusieurs différences notables entre le composant `amp-iframe` et les cadres iFrame "vanille" qui sont conçus dans une optique de sécurité accrue et pour éviter les fichiers AMP dominés par un seul iFrame :
 
@@ -69,7 +72,7 @@ Rendu effectué sous la forme suivante :
 Pour regarder d'autres démos du composant `amp-iframe`, rendez-vous sur [AMP By Example](https://ampbyexample.com/components/amp-iframe/).
 [/tip]
 
-##Utilisation du composant amp-iframe pour les annonces
+# Utilisation du composant amp-iframe pour les annonces
 
 Le composant `amp-iframe` **ne doit pas** être utilisé principalement dans le but de diffuser de la publicité. Vous pouvez cependant utiliser `amp-iframe` pour afficher des vidéos qui comprennent de la publicité. Cette règle AMP peut être appliquée en n'affichant pas les cadres iFrame respectifs.
 
@@ -82,7 +85,7 @@ Il y a plusieurs raisons à cela :
 * `amp-iframe` ne dispose pas d'un mécanisme de redimensionnement entièrement contrôlé par l'iFrame.
 * Les informations de visibilité ne sont peut-être pas disponibles pour le composant `amp-iframe`.
 
-##Attributs
+# Attributs
 
 <table>
   <tr>
@@ -111,7 +114,7 @@ Il y a plusieurs raisons à cela :
               </tr>
             </table>
 
-##Cadre iFrame avec espace réservé
+# Cadre iFrame avec espace réservé
 
 Il est possible de faire en sorte qu'un composant `amp-iframe` apparaisse en haut d'un document lorsqu'un élément ```placeholder` lui est associé, comme illustré dans l'exemple ci-dessous.
 
@@ -138,7 +141,7 @@ window.parent.postMessage({
   }, '*');
 ```
 
-##Redimensionnement des cadres iFrame
+# Redimensionnement des cadres iFrame
 
 Une mise en page statique doit être définie pour un composant `amp-iframe`, comme c'est le cas pour tout autre élément AMP. Cependant, il est possible de redimensionner un composant `amp-iframe` au moment de l'exécution. Pour ce faire :
 
@@ -180,7 +183,7 @@ Voici quelques facteurs qui ont une incidence sur la vitesse d'exécution du red
 * La demande de redimensionnement porte-t-elle sur un iFrame actif ?
 * La demande de redimensionnement concerne-t-elle un iFrame situé en dessous ou au-dessus de la fenêtre d'affichage ?
 
-##Visibilité des cadres iFrame
+# Visibilité des cadres iFrame
 
 Les cadres iFrame peuvent envoyer un message `send-intersections` à leurs éléments parents pour commencer à recevoir des [enregistrements de modification](https://developer.mozilla.org/fr/docs/Web/API/IntersectionObserverEntry) de type IntersectionObserver de l'intersection de l'iFrame avec la fenêtre d'affichage parent.
 
@@ -216,7 +219,7 @@ window.addEventListener('message', function(event) {
 
 Le parent envoie le message d'intersection à l'iFrame lorsque ce dernier est déplacé dans ou hors de la fenêtre d'affichage (ou s'il est partiellement visible), lorsque l'utilisateur fait défiler l'iFrame ou lorsqu'il le redimensionne.
 
-##Cadres iFrame de suivi et d'analyse
+# Cadres iFrame de suivi et d'analyse
 
 Nous recommandons vivement d'utiliser [`amp-analytics`](https://www.ampproject.org/docs/reference/components/amp-analytics) à des fins d'analyse, car il s'agit d'une solution beaucoup plus robuste, complète et efficace. Cet outil peut, en outre, être configuré pour un large éventail de fournisseurs de solutions d'analyse.
 
@@ -224,7 +227,7 @@ AMP n'autorise qu'un seul iFrame par page, utilisé à des fins d'analyse et de 
 
 Les cadres iFrame sont identifiés en tant que cadres de suivi et d'analyse s'ils ne semblent pas avoir d'utilité directe pour l'utilisateur ; être invisibles ou de petite taille, par exemple.
 
-##Conseil : Utiliser des composants AMP existants sur amp-iframe
+# Conseil : Utiliser des composants AMP existants sur amp-iframe
 
 Le composant `amp-iframe` doit être considéré comme une solution de remplacement si l'expérience utilisateur requise n'est pas possible autrement dans AMP ; c'est-à-dire, s'il n'existe pas encore de [composant AMP](https://www.ampproject.org/docs/reference/components) pour le cas d'utilisation. Cela s'explique par le fait que l'utilisation d'un composant AMP adapté à un cas d'utilisation spécifique présente de nombreux avantages. En voici un aperçu :
 
@@ -233,6 +236,6 @@ Le composant `amp-iframe` doit être considéré comme une solution de remplacem
 * Redimensionnement intégré. Dans ce cas, un contenu d'iFrame de taille imprévisible peut être présenté plus souvent à l'utilisateur comme un élément natif de la page, plutôt que dans un cadre que l'utilisateur peut faire défiler.
 * D'autres fonctionnalités peuvent être intégrées ; par exemple, la lecture automatique pour les lecteurs vidéo.
 
-##Validation
+# Validation
 
 Consultez les [règles relatives à amp-iframe](https://github.com/ampproject/amphtml/blob/master/extensions/amp-iframe/validator-amp-iframe.protoascii) dans les spécifications du validateur AMP.

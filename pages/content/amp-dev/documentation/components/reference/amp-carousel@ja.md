@@ -10,22 +10,22 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2015 The AMP HTML Authors. All Rights Reserved.
+Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 
-       Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS-IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 
-#amp-carousel
+# amp-carousel
 
 汎用カルーセルは、横軸に沿って複数の類似コンテンツを表示します。優れた柔軟性とパフォーマンスを備えています。
 
@@ -51,7 +51,7 @@ teaser:
     </tr>
   </table>
 
-##動作
+# 動作
 
 `amp-carousel` コンポーネントの直接の子は、それぞれカルーセル内の 1 つのアイテムと見なされます。各ノードに対して、任意の HTML 子を指定することもできます。
 
@@ -68,7 +68,7 @@ teaser:
   </amp-iframe>
 </div>
 
-###特定のスライドに進む
+# 特定のスライドに進む
 
 要素の `on` 属性のメソッドを `tap:carousel-id.goToSlide(index=N)` に設定した場合、ユーザーのタップまたはクリックによって、「carousel-id」ID のカルーセルが index=N のスライドに進みます（1 番目のスライドは index=0、2 番目のスライドは index=1 で、以降も順に続いていきます）。
 
@@ -83,7 +83,7 @@ teaser:
   </amp-iframe>
 </div>
 
-##属性
+# 属性
 
 <table>
   <tr>
@@ -154,7 +154,7 @@ teaser:
           </tr>
         </table>
 
-##スタイル設定
+# スタイル設定
 
 * `amp-carousel` 要素セレクタを使用して、自由にスタイルを設定できます。
 * カルーセル アイテムをターゲティングするには、`.amp-carousel-slide` クラスセレクタを使用します。
@@ -179,6 +179,6 @@ teaser:
 }
 ```
 
-##検証
+# 検証
 
 AMP 検証ツール仕様の [amp-carousel ルール](https://github.com/ampproject/amphtml/blob/master/extensions/amp-carousel/validator-amp-carousel.protoascii)をご覧ください。

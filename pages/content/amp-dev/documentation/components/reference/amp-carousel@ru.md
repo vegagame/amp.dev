@@ -8,19 +8,23 @@ teaser:
   text: Показ похожих материалов вдоль горизонтальной оси.
 ---
 
-<!--© Авторы AMPHTML, 2015. Все права защищены.
+<!---
+Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 
-       Лицензия Apache версии 2.0 (далее – Лицензия);
-     этот файл можно использовать только в соответствии с Лицензией.
-     Чтобы получить текст Лицензии, перейдите по ссылке:
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-     Если иное не требуется действующим законодательством или не оговорено в письменном виде, программное обеспечение, распространяемое по Лицензии, распространяется "КАК ЕСТЬ", БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ И УСЛОВИЙ, явных или подразумеваемых.
-     Определения используемых в Лицензии понятий, с помощью которых оговариваются разрешения и ограничения, приводятся в тексте Лицензии.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 
-#amp-carousel
+# amp-carousel
 
 Общая карусель, которая предназначена для показа похожих материалов вдоль горизонтальной оси и отличается гибкостью и эффективностью.
 
@@ -46,7 +50,7 @@ teaser:
     </tr>
   </table>
 
-##Принципы работы
+# Принципы работы
 
 Каждый непосредственный дочерний элемент компонента `amp-carousel` представляет собой элемент карусели. У каждого из этих узлов также могут иметь дочерние элементы HTML.
 
@@ -63,7 +67,7 @@ teaser:
   </amp-iframe>
 </div>
 
-###Переход к нужному слайду
+# Переход к нужному слайду
 
 Если в качестве метод для атрибута `on` в элементе задать `tap:carousel-id.goToSlide(index=N)`, при нажатии пользователя в карусели с идентификатором carousel-id будет выполнен переход к слайду с порядковым значением index=N (значение первого слайда – index=0, второго – index=1 и т. д.).
 
@@ -78,7 +82,7 @@ teaser:
   </amp-iframe>
 </div>
 
-##Атрибуты
+# Атрибуты
 
 <table>
   <tr>
@@ -149,7 +153,7 @@ teaser:
           </tr>
         </table>
 
-##Поддержка стилей
+# Поддержка стилей
 
 * Настраивать стиль элемента `amp-carousel` можно с помощью селектора этого элемента.
 * Для таргетинга элементов карусели можно использовать селектор класса `.amp-carousel-slide`.
@@ -174,6 +178,6 @@ teaser:
 }
 ```
 
-##Валидация
+# Валидация
 
 С правилами для компонента amp-carousel можно ознакомиться в [спецификации валидатора AMP](https://github.com/ampproject/amphtml/blob/master/extensions/amp-carousel/validator-amp-carousel.protoascii).

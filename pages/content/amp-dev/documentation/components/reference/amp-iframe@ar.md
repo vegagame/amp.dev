@@ -8,18 +8,22 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-حقوق الطبع والنشر 2015 لصالح "مؤلفو رمز HTML لصفحات AMP". جميع الحقوق محفوظة.
+Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 
-تم الترخيص بموجب ترخيص Apache، الإصدار 2.0 (المشار إليه لاحقًا باسم "الترخيص")؛ ولا يحق لك استخدام هذا الملف إلا بما يتوافق مع الترخيص.
-ويمكنك الحصول على نسخة من الترخيص على الصفحة
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-ما لم يكن مطلوبًا بموجب القانون الساري أو تمت الموافقة عليه كتابةً، يتم توزيع البرنامج الذي يتم توزيعه بموجب الترخيص "كما هو"، وبدون أية ضمانات أو شروط من أي نوع، سواء كانت صريحة أو ضمنية.
-راجِع الترخيص للاطّلاع على اللغة المحددة التي تحكم الأذونات والقيود بموجب الترخيص.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 
-#amp-iframe
+# amp-iframe
 
 يعرض هذا المكوِّن إطار iframe.
 
@@ -40,7 +44,7 @@ teaser:
   </tr>
 </table>
 
-##السلوك
+# السلوك
 
 يتميز المكوِّن `amp-iframe` بعدة اختلافات مهمة عن إطارات vanilla iframe المصممة لزيادة الأمان وتجنب ملفات AMP التي يسيطر عليها إطار iframe واحد:
 
@@ -69,7 +73,7 @@ teaser:
 يمكنك الاطّلاع على مزيد من العروض التوضيحية للمكوِّن `amp-iframe` عند الانتقال إلى الموقع [AMP بالمثال](https://ampbyexample.com/components/amp-iframe/).
 [/tip]
 
-##استخدام amp-iframe للإعلان
+# استخدام amp-iframe للإعلان
 
 **يجب عدم** استخدام `amp-iframe` لعرض الإعلانات كغرض أساسي. فلا بأس من استخدام `amp-iframe` لعرض فيديوهات تكون الإعلانات جزءًا منها. قد يتم تنفيذ سياسة AMP هذه بعدم عرض إطارات iframe المعنّية.
 
@@ -82,7 +86,7 @@ teaser:
 * لا يحتوي `amp-iframe` على آلية لتغيير حجم إطارات iframe يتم التحكم فيها بالكامل.
 * قد لا تكون معلومات إمكانية العرض متاحة للمكّوِن `amp-iframe`.
 
-##السمات
+# السمات
 
 <table>
   <tr>
@@ -112,7 +116,7 @@ teaser:
 </table>
 
 
-##إطار iframe له عنصر نائب
+# إطار iframe له عنصر نائب
 
 من الممكن ظهور `amp-iframe` في الجزء العلوي من المستند عندما يحتوي `amp-iframe` على عنصر `placeholder` كما هو موضح في المثال أدناه.
 
@@ -139,7 +143,7 @@ window.parent.postMessage({
 }, '*');
 ```
 
-##تغيير حجم الإطار iframe
+# تغيير حجم الإطار iframe
 
 يجب أن يكون للمكوِّن `amp-iframe` تنسيق ثابت محدد كما هو الحال مع أي عنصر AMP آخر. ومع ذلك، من الممكن تغيير حجم `amp-iframe` عند وقت التشغيل. لإجراء ذلك:
 
@@ -181,7 +185,7 @@ height: document.body.scrollHeight
 * ما إذا يتم طلب تغيير الحجم لإطار iframe نشط حاليًا
 * ما إذا يتم طلب تغيير الحجم لإطار iframe أسفل إطار العرض أو أعلاه
 
-##إمكانية عرض إطار iframe
+# إمكانية عرض إطار iframe
 
 يمكن لإطارات iframe إرسال رسالة `send-intersections` إلى العناصر الرئيسية لبدء تلقي [سجلات تغيّر](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry) أنماط IntersectionObserver لتقاطع إطار iframe مع إطار العرض للعنصر الرئيسي.
 
@@ -217,7 +221,7 @@ window.addEventListener('message', function(event) {
 
 سيتم إرسال رسالة التقاطع بواسطة العنصر الرئيسي إلى iframe عندما يتحرك iframe داخل إطار العرض أو خارجه (أو يكون مرئيًا بشكل جزئي)، أي عندما يتم تمرير iframe أو تغيير حجمه.
 
-##تتبع/تحليلات iframe
+# تتبع/تحليلات iframe
 
 ننصح بشدة باستخدام المكوِّن [`amp-analytics`](https://www.ampproject.org/docs/reference/components/amp-analytics) لأغراض التحليل لأنه حل أكثر قوة وفعالية وكمال ويمكنك تهيئته لمجموعة واسعة من موردي التحليلات.
 
@@ -225,7 +229,7 @@ window.addEventListener('message', function(event) {
 
 يتم تحديد إطارات iframes على أنها إطارات للتتبع/التحليل إذا بدا أنها لا تخدم أي غرض مباشر للمستخدِم كأن تكون غير مرئية أو صغيرة.
 
-##إرشادات: استخدِم مكونات AMP بدلاً من amp-iframe
+# إرشادات: استخدِم مكونات AMP بدلاً من amp-iframe
 
 يجب اعتبار المكوِّن `amp-iframe` عنصرًا احتياطيًا إذا كانت تجربة المستخدِم المطلوبة غير ممكنة بوسائل أخرى في AMP، أي غياب [مكون AMP](https://www.ampproject.org/docs/reference/components) متوفر لحالة الاستخدام. ويرجع هذا إلى تعدد فوائد استخدام مكوِّن AMP مصمم لحالة استخدام معينة مثل:
 
@@ -234,6 +238,6 @@ window.addEventListener('message', function(event) {
 * تغيير الحجم المضمَّن وهو ما يعني أن محتوى iframe ذا الحجم غير المتوقع يمكن أن يظهر للمستخدِم في أغلب الأحيان كما لو كان أصليًا في الصفحة، وليس في إطار قابل للتمرير.
 * يمكن إنشاء ميزات إضافية أخرى (مثل التشغيل التلقائي لمشغّلات الفيديو).
 
-##التحقق
+# التحقق
 
 اطِّلع على [قواعد amp-iframe](https://github.com/ampproject/amphtml/blob/master/extensions/amp-iframe/validator-amp-iframe.protoascii) في مواصفات مدقق AMP.
