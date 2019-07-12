@@ -105,7 +105,7 @@ limitations under the License.
     <br><br>
     إذا كنت تضيف إطار iframe إلى مستند لم يتم إنشاؤه تحديدًا مع وضع الحماية في الاعتبار، ستحتاج على الأرجح إلى إضافة <code>allow-scripts allow-same-origin</code> إلى السمة <code>sandbox</code> وقد تحتاج إلى السماح بإمكانات إضافية.
     <br><br>
-    لاحظ أيضًا أن وضع الحماية ينطبق على جميع النوافذ المفتوحة من إطار iframe المضاف إليه هذا الوضع. ويشمل هذا النوافذ الجديدة التي تم إنشاؤها بالربط بـ <code>target=_blank</code> (أضِف <code>allow-popups</code> للسماح بحدوث ذلك). إن إضافة <code>allow-popups-to-escape-sandbox</code> إلى السمة <code>sandbox</code> يجعل تلك النوافذ الجديدة تتصرف مثل النوافذ الجديدة غير المضاف إليها وضع الحماية. وهذا على الأرجح ما تتوقعه وتريده في معظم الوقت. ولسوء الحظ، لا يتيح Chrome إلا <code>allow-popups-to-escape-sandbox</code> من هذه الكتابة.
+    لاحظ أيضًا أن وضع الحماية ينطبق على جميع النوافذ المفتوحة من إطار iframe المضاف إليه هذا الوضع. ويشمل هذا النوافذ الجديدة التي تم إنشاؤها بالربط بـ <code>target=_ blank</code> (أضِف <code>allow-popups</code> للسماح بحدوث ذلك). إن إضافة <code>allow-popups-to-escape-sandbox</code> إلى السمة <code>sandbox</code> يجعل تلك النوافذ الجديدة تتصرف مثل النوافذ الجديدة غير المضاف إليها وضع الحماية. وهذا على الأرجح ما تتوقعه وتريده في معظم الوقت. ولسوء الحظ، لا يتيح Chrome إلا <code>allow-popups-to-escape-sandbox</code> من هذه الكتابة.
     <br><br>
     راجِع <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-sandbox">مستندات عن MDN</a> للحصول على مزيد من التفاصيل عن السمة sandbox.</td>
   </tr>
