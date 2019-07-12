@@ -10,22 +10,22 @@ teaser:
 
 
 <!---
-       Copyright 2015 The AMP HTML Authors. Tutti i diritti riservati.
+Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 
-       Rilasciato ai sensi della Licenza Apache, versione 2.0 (la "Licenza");
-     è possibile utilizzare questo file esclusivamente in conformità con la Licenza.
-     Una copia della Licenza è disponibile all'indirizzo
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-     Se non diversamente imposto dalla legge vigente o concordato per iscritto,
-     il software rilasciato ai sensi della Licenza viene distribuito "COSÌ COM'È",
-     SENZA GARANZIE O CONDIZIONI DI ALCUN TIPO, esplicite o implicite.
-     Leggi la Licenza per conoscere le autorizzazioni e le limitazioni in vigore
-     specifiche della lingua previste dalla Licenza.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 
-#amp-carousel
+# amp-carousel
 
 Un carosello generico per mostrare più contenuti simili lungo un asse orizzontale, progettato per un'ottima flessibilità e prestazioni.
 
@@ -51,7 +51,7 @@ Un carosello generico per mostrare più contenuti simili lungo un asse orizzonta
     </tr>
   </table>
 
-##Comportamento
+# Comportamento
 
 Ciascuno degli elementi secondari immediati del componente `amp-carousel` viene considerato un elemento del carosello. Ognuno di questi nodi può avere anche elementi secondari HTML arbitrari.
 
@@ -68,7 +68,7 @@ Il carosello passa da un elemento all'altro se l'utente scorre, utilizza le frec
   </amp-iframe>
 </div>
 
-###Passare a una diapositiva specifica
+# Passare a una diapositiva specifica
 
 Se imposti un metodo per l'attributo `on` di un elemento su `tap:carousel-id.goToSlide(index=N)`, al tocco o clic dell'utente il carosello con l'ID "carousel-id" avanzerà a index=N, dove la prima diapositiva si trova a index=0, la seconda a index=1 e così via.
 
@@ -83,7 +83,7 @@ Nel seguente esempio, viene mostrato un carosello di tre immagini con in basso d
   </amp-iframe>
 </div>
 
-##Attributi
+# Attributi
 
 <table>
   <tr>
@@ -154,7 +154,7 @@ Nel seguente esempio, viene mostrato un carosello di tre immagini con in basso d
           </tr>
         </table>
 
-##Stili
+# Stili
 
 * Puoi utilizzare il selettore di elementi `amp-carousel` per modificare lo stile del carosello.
 * Puoi utilizzare il selettore di classi `.amp-carousel-slide` per concentrarti su elementi specifici del carosello.
@@ -179,6 +179,6 @@ Nel seguente esempio, viene mostrato un carosello di tre immagini con in basso d
 }
 ```
 
-##Convalida
+# Convalida
 
 Consulta le [regole amp-carousel](https://github.com/ampproject/amphtml/blob/master/extensions/amp-carousel/validator-amp-carousel.protoascii) nella specifica dello strumento di convalida AMP.

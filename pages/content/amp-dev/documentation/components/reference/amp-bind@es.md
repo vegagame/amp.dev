@@ -8,26 +8,26 @@ teaser:
   text: Permite que los elementos muten como respuesta a las acciones del usuario o a cambios de datos mediante data binding y expresiones simples similares a JS.
 ---
 
-#amp-bind
+# amp-bind
 
 Añade interactividad personalizada utilizando data bindings y expresiones.
 
 
 <!---
-       Copyright 2016 The AMP HTML Authors. Todos los derechos reservados.
+Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Con licencia Apache, versión 2.0 (en adelante, la "Licencia").
-       Este archivo solo se puede utilizar según lo estipulado en la Licencia.
-       Se puede obtener una copia de la Licencia en la siguiente página:
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       A menos que lo exija la legislación aplicable o se acuerde por escrito, el software
-       distribuido bajo la Licencia se proporciona "TAL CUAL", SIN NINGÚN
-       TIPO DE GARANTÍA NI DE CONDICIÓN, ni expresa ni implícita.
-       En la Licencia se puede consultar la información relativa a las limitaciones
-       y a los permisos aplicables a cada idioma.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
 
 <table>
@@ -55,7 +55,7 @@ Añade interactividad personalizada utilizando data bindings y expresiones.
   </tr>
 </table>
 
-##Descripción general
+# Descripción general
 
 El componente `amp-bind` te permite añadir interactividad personalizada con reconocimiento de estado a tus páginas de AMP mediante el uso de data binding y expresiones similares a JS.
 
@@ -63,7 +63,7 @@ El componente `amp-bind` te permite añadir interactividad personalizada con rec
   <amp-youtube width="480" height="270" data-videoid="xzCFU8b5fCU" layout="responsive"></amp-youtube>
   <figcaption>Echa un vistazo a este vídeo para conocer los aspectos básicos de amp-bind.</figcaption></figure>
 
-###Un ejemplo muy sencillo
+# Un ejemplo muy sencillo
 
 En el siguiente ejemplo, si tocas el botón, el texto del elemento `<p>` pasará de ser "Hello World" a "Hello amp-bind".
 
@@ -141,13 +141,13 @@ Una expresión puede contener un máximo de 100 operandos.
 [Prueba la **demostración**](https://ampbyexample.com/components/amp-bind/) de este ejemplo con anotaciones de código.
 [/tip]
 
-##Información detallada
+# Información detallada
 
-###País
+# País
 
 Cada documento AMP que utiliza `amp-bind` contiene datos JSON mutables que afectan a dicho documento, a los que llamamos **estado**.
 
-####Inicializar el estado mediante `amp-state`
+# Inicializar el estado mediante `amp-state`
 
 El estado de `amp-bind` se puede inicializar mediante el componente `amp-state`:
 
@@ -166,7 +166,7 @@ Las [expresiones](#expressions) pueden hacer referencia a variables de estado me
 * El JSON secundario de un elemento `<amp-state>` puede tener un tamaño máximo de 100 KB.
 * También se puede especificar una URL de CORS para un elemento `<amp-state>` en lugar de una secuencia de comandos JSON secundaria. Para obtener más información, consulta el [Anexo](#amp-state-specification).
 
-####Actualizar el estado
+# Actualizar el estado
 
 La acción `refresh` es compatible con este componente y se puede utilizar para actualizar el contenido del estado.
 
@@ -176,7 +176,7 @@ La acción `refresh` es compatible con este componente y se puede utilizar para 
 <button on="tap:amp-state.refresh"></button>
 ```
 
-####Actualizar el estado mediante `AMP.setState()`
+# Actualizar el estado mediante `AMP.setState()`
 
 La acción [`AMP.setState()`](../../spec/amp-actions-and-events.md#amp) combina una literal de objeto con el estado. Por ejemplo, cuando se pulsa el botón que aparece más abajo, `AMP.setState()` [combinará mediante deepmerge](#deep-merge-with-ampsetstate) la literal de objeto con el estado.
 
@@ -196,7 +196,7 @@ Cuando se activa debido a determinados eventos, `AMP.setState()` también puede 
 <input type="range" on="change:AMP.setState({myRangeValue: event.value})">
 ```
 
-####Modificar el historial mediante `AMP.pushState()`
+# Modificar el historial mediante `AMP.pushState()`
 
 La acción [`AMP.pushState()`](../../spec/amp-actions-and-events.md#amp) es similar a `AMP.setState()`, con la diferencia de que también añade una entrada a la pila del historial de navegación. Al deshacer esta entrada del historial (por ejemplo, volviendo a la página anterior), se restaura el valor anterior de las variables que define `AMP.pushState()`.
 
@@ -208,11 +208,11 @@ Por ejemplo:
 * Al tocar el botón, se define la variable `foo` en 123 y se envía una nueva entrada al historial.
 * Al volver a la página anterior, se restaurará el valor previo de `foo`, es decir, "bar" (equivale a hacer una llamada a `AMP.setState({foo: 'bar'})`.
 
-###Expresiones
+# Expresiones
 
 Las expresiones son similares a JavaScript, con algunas diferencias importantes.
 
-####Diferencias con respecto a JavaScript
+# Diferencias con respecto a JavaScript
 
 * Las expresiones solo pueden acceder al [estado](#state) del documento al que pertenecen.
 * Las expresiones ****no tienen acceso a variables globales como `window` o `document`.
@@ -223,7 +223,7 @@ Las expresiones son similares a JavaScript, con algunas diferencias importantes.
 
 Encontrarás la expresión gramatical completa y la implementación en [bind-expr-impl.jison](./0.1/bind-expr-impl.jison) y [bind-expression.js](./0.1/bind-expression.js).
 
-####Ejemplos
+# Ejemplos
 
 Las expresiones que aparecen a continuación son válidas:
 
@@ -234,7 +234,7 @@ Las expresiones que aparecen a continuación son válidas:
 null || 'default' // 'default'
 ```
 
-####Funciones incluidas en la lista blanca
+# Funciones incluidas en la lista blanca
 
 <table>
   <tr>
@@ -346,7 +346,7 @@ null || 'default' // 'default'
 <sup>1</sup> Las funciones de flecha de un solo parámetro no pueden tener paréntesis. Por ejemplo, utiliza `x => x + 1` en lugar de `(x) => x + 1`. Además, `sort()` y `splice()` devuelven copias modificadas en lugar de funcionar in situ.
 <sup>2</sup> Las funciones estáticas no llevan espacios de nombre. Por ejemplo, utiliza `abs(-1)` en lugar de `Math.abs(-1)`.
 
-####Definir macros mediante `amp-bind-macro`
+# Definir macros mediante `amp-bind-macro`
 
 Los fragmentos de expresión de `amp-bind` se pueden reutilizar definiendo un `amp-bind-macro`. Este elemento`` permite definir una expresión que utiliza cero o más argumentos y hace referencia al estado actual. Se puede invocar una macro como si fuera una función haciendo referencia en cualquier parte del documento al valor de su atributo `id`.
 
@@ -361,7 +361,7 @@ Los fragmentos de expresión de `amp-bind` se pueden reutilizar definiendo un `a
 
 Una macro también puede llamar a otras macros <i>que se han definido antes que a sí misma</i>. Una macro no puede hacerse llamadas a sí misma de forma recursiva.
 
-###Bindings
+# Bindings
 
 Un **binding** es un atributo especial del formulario `[property]` que vincula la propiedad de un elemento con una [expresión](#expressions). También se puede utilizar una sintaxis alternativa compatible con XML mediante `data-amp-bind-property`.
 
@@ -409,7 +409,7 @@ Notas sobre los bindings:
 * Los resultados de las expresiones booleanas habilitan o inhabilitan los atributos booleanos. Por ejemplo: `<amp-video [controls]="expr"...>`. Cuando `expr` da como resultado `true`, el elemento `<amp-video>` tiene el atributo `controls`. Cuando `expr` da como resultado `false`, se elimina el atributo `controls`.
 * Incluir caracteres de corchetes `[` y `]` en nombres de atributos puede dar problemas al escribir XML (p. ej., XHTML o JSX) o atributos a través de las API de DOM. En estos casos, utiliza la sintaxis alternativa `data-amp-bind-x="foo"` en lugar de `[x]="foo"`.
 
-####Atributos específicos de los elementos
+# Atributos específicos de los elementos
 
 Solo se admiten los bindings a los siguientes componentes y atributos:
 
@@ -553,11 +553,11 @@ Solo se admiten los bindings a los siguientes componentes y atributos:
 
   <sup>*</sup> Indica atributos vinculables que no tienen contrapartida que no se pueda vincular.
 
-##Depuración
+# Depuración
 
 Haz las pruebas en modo de desarrollo (con el fragmento de URL `#development=1`) para hacer que se resalten los mensajes de advertencia y error durante el desarrollo y para acceder a funciones de depuración especiales.
 
-###Advertencias
+# Advertencias
 
 En el modo de desarrollo, `amp-bind` enviará una advertencia cuando el valor predeterminado de un atributo vinculado no coincida con el resultado inicial de su expresión correspondiente.  Esto puede evitar mutaciones no deseadas causadas por cambios en otras variables de estado. Por ejemplo:
 
@@ -583,7 +583,7 @@ En el modo de desarrollo, `amp-bind` también enviará una advertencia cuando se
 
 ```
 
-###Errores
+# Errores
 
 Hay varios tipos de errores de tiempo de ejecución que se pueden encontrar al trabajar con `amp-bind`.
 
@@ -620,13 +620,13 @@ Hay varios tipos de errores de tiempo de ejecución que se pueden encontrar al t
   </tr>
 </table>
 
-###Estado de depuración
+# Estado de depuración
 
 Utiliza `AMP.printState()` para imprimir el estado actual en la consola.
 
-##Apéndice
+# Apéndice
 
-###Especificación de `<amp-state>`
+# Especificación de `<amp-state>`
 
 Un elemento `amp-state` puede contener un elemento secundario `<script>` ****o bien un atributo `src` que contenga una URL CORS de un punto final remoto JSON, pero no ambos.
 
@@ -643,11 +643,11 @@ Un elemento `amp-state` puede contener un elemento secundario `<script>` ****o b
 </amp-state>
 ```
 
-####Procesamiento por lotes de XHR
+# Procesamiento por lotes de XHR
 
 AMP envía XMLHttpRequests (XHR) por lotes a puntos de conexión JSON. Es decir, puedes utilizar una sola solicitud de datos JSON como fuente de datos para varios consumidores (p. ej., varios elementos `amp-state`) en una página AMP.  Por ejemplo, si tu elemento `amp-state` hace un XHR a un punto de conexión, y mientras esté procesándose, los XHR posteriores que se hagan al mismo punto de conexión no se activarán, y devolverán en su lugar los resultados del primer XHR.
 
-####Atributos
+# Atributos
 
 <table>
   <tr>
@@ -669,7 +669,7 @@ AMP envía XMLHttpRequests (XHR) por lotes a puntos de conexión JSON. Es decir,
     </tr>
   </table>
 
-###Combinar con deepmerge mediante `AMP.setState()`
+# Combinar con deepmerge mediante `AMP.setState()`
 
 Cuando se hace una llamada a `AMP.setState()`, `amp-bind` lleva a cabo una combinación con deepmerge y fusiona la literal del objeto con el estado actual. Todas las variables de la literal del objeto se añaden directamente al estado, excepto los objetos anidados, que se fusionan de forma recursiva. Los primitivos y las matrices que se encuentran en el estado siempre se sobrescriben en la literal del objeto con variables del mismo nombre.
 
@@ -714,7 +714,7 @@ Se ha actualizado `employee.age`, pero las claves `employee.name` y `employee.ve
 
 Ten en cuenta que `amp-bind` generará un error si haces una llamada a `AMP.setState()` utilizando una literal de objeto que contiene referencias circulares.
 
-####Eliminar una variable
+# Eliminar una variable
 
 Puedes eliminar una variable de estado existente definiendo su valor como `null` en `AMP.setState()`. Empezando por el estado del ejemplo anterior, si se pulsa:
 
@@ -747,7 +747,7 @@ Pulsando el botón, el estado cambiará a:
   }
 ```
 
-###Gramática de las expresiones
+# Gramática de las expresiones
 
 Esta es la gramática para las expresiones de `amp-bind`, similar a BNF:
 

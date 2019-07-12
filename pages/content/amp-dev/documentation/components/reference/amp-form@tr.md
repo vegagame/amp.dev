@@ -11,16 +11,20 @@ $title: amp-form
 ---
 
 <!---
-       Telif Hakkı 2017 The AMP HTML Authors. Tüm Hakları Saklıdır.
+Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 
-       Apache Lisansı, Sürüm 2.0 ("Lisans") ile lisanslıdır; bu dosyayı Lisans koşulları dışında kullanamazsınız.
-       Lisansın bir kopyasını şu adresten edinebilirsiniz:
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       Geçerli yasa tarafından gerekli görülmediği veya yazılı olarak bir sözleşme yapılmadığı sürece, Lisanslı olarak dağıtılan yazılım açıkça veya zımni olarak HİÇBİR GARANTİ VEYA KOŞUL SUNULMADAN "OLDUĞU GİBİ" dağıtılır.
-       Lisans kapsamında belirli bir dilde sağlanan izinleri ve uygulanan kısıtlamaları öğrenmek için söz konusu dille ilgili Lisans'a bakın.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
 # amp-form
 
@@ -44,7 +48,7 @@ $title: amp-form
 </table>
 
 
-##Davranış
+# Davranış
 
 `amp-form` uzantısı, bir AMP belgesindeki giriş alanlarını göndermek için formlar (`<form>`) oluşturmanıza olanak tanır. `amp-form` uzantısı, tarayıcılardaki bazı eksik davranışlar için [çoklu dolgular](#polyfills) da sağlar.
 
@@ -65,13 +69,13 @@ Temel bir form örneğini burada bulabilirsiniz:
   </amp-iframe>
 </div>
 
-##Özellikler
+# Özellikler
 
-#####target
+# target
 
 Formu gönderdikten sonra form yanıtının görüntüleneceği yeri belirtir. `_blank` veya `_top` değerini almalıdır.
 
-#####action
+# action
 
 Form girişini işlemek için bir sunucu uç noktası belirtir. Değer bir `https` URL'si (mutlak veya göreli) olmalı ve bir CDN bağlantısı olmamalıdır.
 
@@ -82,7 +86,7 @@ Form girişini işlemek için bir sunucu uç noktası belirtir. Değer bir `http
 `target` ve `action` özellikleri yalnızca xhr dışındaki GET istekleri için kullanılır. AMP çalışma zamanı, istekte bulunmak için `action-xhr` özelliğini kullanır ve `action` ve `target` özelliklerini yoksayar. `action-xhr` sağlanmadığında AMP, `action` uç noktasına bir GET isteğinde bulunur ve yeni bir pencere açmak için `target` özelliğini kullanır (`_blank` değerinde). AMP çalışma zamanı, `amp-form` uzantısının yüklenemediği durumlarda da `action` ve `target` özelliklerini kullanmaya geri dönebilir.
 [/tip]
 
-#####action-xhr
+# action-xhr
 
 Form girişini işlemek ve XMLHttpRequest (XHR) aracılığıyla formu göndermek için bir sunucu uç noktası belirtir. Bir XHR isteği (bazen AJAX isteği olarak da bilinir), tarayıcının sayfa tam yüklenmeden veya yeni bir sayfa açılmadan istekte bulunmasına neden olur. Tarayıcılar, uygun durumlarda isteği [Getirme API'sini](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) kullanarak arka planda gönderir ve eski tarayıcılar için [XMLHttpRequest API'sini](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) kullanır.
 
@@ -96,17 +100,17 @@ Bu özellik `method=POST` için gereklidir ve `method=GET` için isteğe bağlı
 
 Formu başarıyla gönderdikten sonra kullanıcıyı yönlendirme hakkında bilgi edinmek için aşağıdaki [Gönderimden sonra yönlendirme](#redirecting-after-a-submission) bölümüne bakın.
 
-#####Diğer form özellikleri
+# Diğer form özellikleri
 
 Diğer tüm [form özellikleri](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form) isteğe bağlıdır.
 
-#####custom-validation-reporting
+# custom-validation-reporting
 
 Bu, özel bir doğrulama raporlama stratejisini etkinleştiren ve seçen isteğe bağlı bir özelliktir. Geçerli değerler şunlardan biridir: `show-first-on-submit`, `show-all-on-submit` veya `as-you-go`.
 
 Daha ayrıntılı bilgi için [Özel Doğrulama](#custom-validations) bölümüne bakın.
 
-##Girişler ve alanlar
+# Girişler ve alanlar
 
 **İzin Verilenler**:
 
@@ -123,7 +127,7 @@ Daha ayrıntılı bilgi için [Özel Doğrulama](#custom-validations) bölümün
 
 Geçerli girişler ve alanlarla ilgili ayrıntılar için AMP doğrulayıcı spesifikasyonundaki [amp-form kurallarına](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii) bakın.
 
-##İşlemler
+# İşlemler
 
 `amp-form` öğesi, aşağıdaki işlemleri sunar:
 
@@ -136,7 +140,7 @@ Geçerli girişler ve alanlarla ilgili ayrıntılar için AMP doğrulayıcı spe
 [AMP'de İşlemler ve Etkinlikler](https://www.ampproject.org/docs/interaction_dynamic/amp-actions-and-events.html) hakkında daha fazla bilgi edinin.
 [/tip]
 
-##Etkinlikler
+# Etkinlikler
 
 `amp-form` aşağıdaki etkinlikleri sunar:
 
@@ -163,7 +167,7 @@ Bu etkinlikler, [`on` özelliği](https://www.ampproject.org/docs/fundamentals/s
 
 [Tam örneği burada](../../examples/forms.amp.html) görebilirsiniz.
 
-####Giriş etkinlikleri
+# Giriş etkinlikleri
 
 AMP, alt `<input>` öğelerinde `change` ve `input-debounced` etkinliklerini gösterir. Bu, bir giriş değeri değiştiğinde herhangi bir öğede bir işlemi yürütmek için [`on` özelliğini](https://www.ampproject.org/docs/fundamentals/spec#on) kullanmanıza olanak tanır.
 
@@ -180,7 +184,7 @@ AMP, alt `<input>` öğelerinde `change` ve `input-debounced` etkinliklerini gö
 
 [Tam örneği burada](../../examples/forms.amp.html) görebilirsiniz.
 
-###Analiz tetikleyicileri
+# Analiz tetikleyicileri
 
 `amp-form` uzantısı, [amp-analytics](https://www.ampproject.org/docs/reference/components/amp-analytics) yapılandırmanızda izleyebileceğiniz aşağıdaki etkinlikleri tetikler:
 
@@ -241,7 +245,7 @@ Bu üç etkinlik de belirli bir forma ve formdaki alanlara karşılık gelen bir
   * `formId`
   * `formFields[comment]`
 
-##Başarı/hata yanıtı oluşturma
+# Başarı/hata yanıtı oluşturma
 
 Formunuzdaki başarı veya hata yanıtlarını, [amp-moustache](https://www.ampproject.org/docs/reference/components/amp-mustache) gibi [genişletilmiş şablonları](https://www.ampproject.org/docs/fundamentals/spec#extended-templates) kullanarak veya başarı yanıtlarını, verileri, [amp-bind](https://www.ampproject.org/docs/reference/components/amp-bind) ve aşağıdaki yanıt özellikleriyle bağlayarak oluşturabilirsiniz:
 
@@ -251,7 +255,7 @@ Formunuzdaki başarı veya hata yanıtlarını, [amp-moustache](https://www.ampp
 | `submit-error` | Yanıt başarısız olursa (ör. `2XX` durumuna sahip değilse) bir gönderim hatası görüntülemek için kullanılabilir.  |
 | `submitting` | Form gönderilirken bir mesaj görüntülemek için kullanılabilir. Bu özelliğe ait şablonun, görüntüleme amaçlı tüm form giriş alanlarına erişimi vardır. `submitting` özelliğini nasıl kullanacağınızı öğrenmek için lütfen [aşağıdaki tam form örneğine](#example-submitting) bakın. |
 
-###Yanıtları şablonlarla oluşturmak için:
+# Yanıtları şablonlarla oluşturmak için:
 
 * `<form>` öğesinin *doğrudan alt öğelerine* bir yanıt özelliği uygulayın.
 * İçinde `<template></template>` veya `<script type="text/plain"></script>` etiketiyle bir şablona ekleyerek ya da `template="id_of_other_template"` özelliğiyle bir şablonu referans alarak alt öğede yanıtı oluşturun.
@@ -259,7 +263,7 @@ Formunuzdaki başarı veya hata yanıtlarını, [amp-moustache](https://www.ampp
 
 <a id="example-submitting"></a>
 
-#####Örnek: Başarı, hata ve gönderiliyor medjlarını görüntüleyen form
+# Örnek: Başarı, hata ve gönderiliyor medjlarını görüntüleyen form
 
 Aşağıdaki örnekte, yanıtlar, formun içindeki bir satır içi şablonda oluşturulur.
 
@@ -338,7 +342,7 @@ to confirm! After that we'll start sending you weekly articles on {{#interests}}
 
 [Tam örneği burada](../../examples/forms.amp.html) görebilirsiniz.
 
-###Veri bağlama ile bir başarılı yanıtı oluşturmak için
+# Veri bağlama ile bir başarılı yanıtı oluşturmak için
 
 * Form *submit-success* özelliğini [`AMP.setState()`](https://www.ampproject.org/docs/reference/components/amp-bind#updating-state-with-amp.setstate%28%29) yöntemine bağlamak için [on özelliğini](https://www.ampproject.org/docs/interaction_dynamic/amp-actions-and-events) kullanın.
 * Yanıt verilerini yakalamak için `event` özelliğini kullanın.
@@ -381,7 +385,7 @@ Ardından, `amp-bind` özelliği `<p>` öğesinin metnini `subscibe` durumuyla e
 ...
 ```
 
-###Gönderimden sonra yönlendirme
+# Gönderimden sonra yönlendirme
 
 `AMP-Redirect-To` yanıt üstbilgisini ayarlayarak ve bir yönlendirme URL'si belirterek, başarılı bir form gönderildikten sonra kullanıcıları yeni bir sayfaya yönlendirebilirsiniz. Yönlendirme URL'si bir HTTPS URL'si olmalıdır; aksi takdirde, AMP bir hata bildirir ve yönlendirme gerçekleşmez.  HTTP yanıtı üstbilgileri, sunucunuz aracılığıyla yapılandırılır.
 
@@ -398,7 +402,7 @@ Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin, AMP-Redir
 Form gönderiminden sonra yönlendirmenin kullanımını gösteren Örneklerle AMP [Güncelleme ile Form Gönderimi](https://ampbyexample.com/components/amp-form/#form-submission-with-page-update) ve [Ürün Sayfası](https://ampbyexample.com/samples_templates/product_page/#product-page) bölümlerine göz atın.
 [/tip]
 
-##Özel doğrulamalar
+# Özel doğrulamalar
 
 `amp-form` uzantısı, kendi özel doğrulama kullanıcı arayüzünüzü oluşturmak için `custom-validation-reporting` özelliğini ve şu raporlama stratejilerinden birini kullanmanıza olanak tanır: `show-first-on-submit`, `show-all-on-submit` veya `as-you-go`.
 
@@ -426,27 +430,27 @@ Doğrulama mesajlarında, öğenizin içinde herhangi bir metin içeriği yoksa 
 Girişin sahip olabileceği her geçersiz durum türü için kendi doğrulama kullanıcı arayüzünüzü sağlamanız gerekir. Bunlar mevcut değilse kullanıcılar, eksik hata durumu için herhangi bir `custom-validation-reporting` öğesi görmez. Geçerlilik durumları, [resmi W3C HTML doğrulama raporlama dokümanlarında](https://www.w3.org/TR/html50/forms.html#validitystate) bulunabilir.
 [/tip]
 
-###Raporlama stratejileri
+# Raporlama stratejileri
 
 `custom-validation-reporting` özelliği için aşağıdaki raporlama seçeneklerinden birini belirtin:
 
-####Gönderimde İlkini Göster
+# Gönderimde İlkini Göster
 
 `show-first-on-submit` raporlama seçeneği, varsayılan ilk doğrulama devreye girdiğinde tarayıcının varsayılan davranışını taklit eder. Bulduğu ilk doğrulama hatasını gösterir ve orada durur.
 
-####Gönderimde Tümünü Göster
+# Gönderimde Tümünü Göster
 
 `show-all-on-submit` raporlama seçeneği, form gönderildiğinde tüm geçersiz girişlerdeki tüm doğrulama hatalarını gösterir. Bu, doğrulamaların bir özetini göstermek istiyorsanız yararlı olur.
 
-####Devam Ederken
+# Devam Ederken
 
 `as-you-go` raporlama seçeneği, kullanıcınızın girişle etkileşimde bulunurken doğrulama mesajlarını görmesine olanak tanır. Örneğin, kullanıcı geçersiz bir e-posta adresi girerse hatayı hemen görür.  Değeri düzelttikten sonra hata kaybolur.
 
-####Etkileşimde Bulun ve Gönder
+# Etkileşimde Bulun ve Gönder
 
 `interact-and-submit` raporlama seçeneği, `show-all-on-submit` ve `as-you-go` davranışını birleştirir. Tek tek alanlar, etkileşimlerden hemen sonra hataları gösterir ve gönderimde, form tüm geçersiz alanlardaki hataları gösterir.
 
-##Doğrulama
+# Doğrulama
 
 HTML5 doğrulaması, yalnızca sayfada bulunan bir değerin belirli bir kalıpla eşleşip eşleşmediği gibi bilgilere dayalı geri bildirimler sağlar. `amp-form` doğrulaması ile kullanıcıya, HTML5 doğrulamasının tek başına sağlayamayacağı bir geri bildirim sunabilirsiniz. Örneğin, bir form, bir e-posta adresinin önceden kayıtlı olup olmadığını kontrol etmek için doğrulamayı kullanabilir. Başka bir kullanım örneği, bir şehir alanı ve posta kodu alanının birbiriyle eşleştiğini doğrulamaktır.
 
@@ -510,7 +514,7 @@ Bir hata yanıtının doğrulama için nasıl görüneceği burada gösterilmekt
 
 Daha fazla örnek için [examples/forms.amp.html](../../examples/forms.amp.html) sayfasına bakın.
 
-##Değişken değişiklikleri
+# Değişken değişiklikleri
 
 `amp-form` uzantısı, gizli olan ve `data-amp-replace` özelliğine sahip girişler için [platform değişken değişikliklerine](../../spec/amp-var-substitutions.md) olanak tanır. Her form gönderiminde `amp-form`, formun içindeki tüm `input[type=hidden][data-amp-replace]` öğelerini bulur ve değişken değişikliklerini `value` özelliğine uygulayıp bunu, değişikliğin sonucuyla değiştirir.
 
@@ -549,15 +553,15 @@ Yukarıdaki `CANONICAL_HOSTNAME` öğesinin, ilk alandaki `data-amp-replace` öz
 
 Değişiklikler, bir sonraki gönderimde gerçekleşir. [AMP'deki değişken değişiklikleri](../../spec/amp-var-substitutions.md) hakkında daha fazla bilgi edinin.
 
-##Çoklu dolgular
+# Çoklu dolgular
 
 `amp-form` uzantısı, bazı tarayıcılarda eksik olan veya CSS'nin sonraki sürümünde uygulanan davranışlar ve işlevler için çoklu dolgular sağlar.
 
-####Geçersiz gönderim engelleme ve doğrulama mesajı balonu
+# Geçersiz gönderim engelleme ve doğrulama mesajı balonu
 
 Şu anda (Ağustos 2016 itibarıyla) webkit tabanlı motorlar kullanan tarayıcılar geçersiz form gönderimlerini desteklememektedir. Bu tarayıcılar arasında tüm platformlarda Safari ve tüm iOS tarayıcıları bulunur. `amp-form` uzantısı, geçersiz gönderimleri engellemek ve geçersiz girişlerdeki doğrulama mesajı balonlarını göstermek için bu davranışı gerçekleştirir.
 
-####Kullanıcı etkileşimi sözde sınıfları
+# Kullanıcı etkileşimi sözde sınıfları
 
 `:user-invalid` ve `:user-valid` sözde sınıfları, [gelecekteki CSS Seçicileri 4 spesifikasyonunun](https://drafts.csswg.org/selectors-4/#user-pseudos) parçasıdır ve geçersiz/geçerli alanların birkaç ölçüt temelinde şekillendirilmesine yönelik daha iyi kancalar sağlamak için kullanıma sunulmuştur.
 
@@ -565,7 +569,7 @@ Değişiklikler, bir sonraki gönderimde gerçekleşir. [AMP'deki değişken de�
 
 `amp-form` uzantısı, bu sözde sınıfları çoklu dolduracak [sınıflar](#classes-and-css-hooks) sağlar. `amp-form` uzantısı, bunları üst `fieldset` öğelerine ve `form` öğesine de yayar.
 
-####`<textarea>` doğrulaması
+# `<textarea>` doğrulaması
 
 Normal ifade eşleştirme, `<textarea>` haricindeki çoğu giriş öğesinde yerel olarak desteklenen yaygın bir doğrulama özelliğidir. Bu işlevselliğe çoklu dolgu yapar ve `<textarea>` öğelerinde `pattern` özelliğini destekleriz.
 
@@ -575,9 +579,9 @@ AMP Formu, `<textarea>` öğelerine bir `autoexpand` özelliği sağlar. Bu, kul
 <textarea autoexpand></textarea>
 ```
 
-##Stil
+# Stil
 
-###Sınıflar ve CSS kancaları
+# Sınıflar ve CSS kancaları
 
 `amp-form` uzantısı, yayıncıların formlarını ve girişlerini şekillendirmeleri için sınıflar ve CSS kancaları sağlar.
 
@@ -603,9 +607,9 @@ Bunların kullanımıyla ilgili [tam örneği burada](../../examples/forms.amp.h
 AMP sayfalarınızda kullanabileceğiniz duyarlı, önceden şekillendirilmiş AMP formu öğeleri için [AMP Start](https://ampstart.com/components#form-elements) sayfasını ziyaret edin.
 [/tip]
 
-##Güvenlikle ilgili olarak göz önünde bulundurulması gerekenler
+# Güvenlikle ilgili olarak göz önünde bulundurulması gerekenler
 
-###XSRF'ye karşı koruma
+# XSRF'ye karşı koruma
 
 Bir saldırganın, kullanıcının bilgisi olmadan geçerli kullanıcı oturumunu kullanarak yetkisiz komutlar yürütebildiği [XSRF saldırılarına](https://en.wikipedia.org/wiki/Cross-site_request_forgery) karşı koruma sağlamak için [AMP CORS spesifikasyonundaki](https://www.ampproject.org/docs/fundamentals/amp-cors-requests.html) ayrıntıları uygulamaya ek olarak, lütfen ["Durum değiştirme isteklerini işleme"](https://www.ampproject.org/docs/fundamentals/amp-cors-requests.html#processing-state-changing-requests) konulu bölüme de dikkat edin.
 

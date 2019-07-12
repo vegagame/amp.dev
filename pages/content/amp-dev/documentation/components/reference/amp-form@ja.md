@@ -48,7 +48,7 @@ $title: amp-form
 </table>
 
 
-##動作
+# 動作
 
 `amp-form` 拡張機能を使用すると、AMP ドキュメントの入力フィールドを送信するためのフォーム（`<form>`）を作成できます。また、`amp-form` 拡張機能には、ブラウザに実装されていない動作を補うための[ポリフィル](#polyfills)が用意されています。
 
@@ -68,13 +68,13 @@ $title: amp-form
   </amp-iframe>
 </div>
 
-##属性
+# 属性
 
-#####target
+# target
 
 フォームの送信後にフォームの回答を表示する場所を指定します。値には `_blank` または `_top` を指定する必要があります。
 
-#####action
+# action
 
 フォームの入力を処理するサーバー エンドポイントを指定します。値には `https` URL（絶対または相対）を指定する必要があります。CDN へのリンクは指定できません。
 
@@ -84,7 +84,7 @@ $title: amp-form
 [tip type="note"] `target` 属性と `action` 属性は non-xhr GET リクエストにのみ使用します。AMP ランタイムはリクエストの作成に `action-xhr` を使用し、`action` と `target` は無視します。`action-xhr` が使用されていない場合、AMP は `action` エンドポイントに対する GET リクエストを作成し、`target` を使用して新しいウィンドウを開きます（`_blank` の場合）。`amp-form` 拡張機能が読み込みに失敗した場合、AMP ランタイムは `action` と `target` を使用するように切り替えることがあります。
 [/tip]
 
-#####action-xhr
+# action-xhr
 
 フォームの入力を処理し、XMLHttpRequest（XHR）でフォームを送信するサーバー エンドポイントを指定します。XHR リクエスト（AJAX リクエストと呼ばれることもあります）では、ブラウザでページを完全に読み込んだり新しいページを開いたりしなくてもリクエストを作成できます。ブラウザは、[Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) を使用（可能な場合）してバックグラウンドでリクエストを送信します。また、古いブラウザの場合は、代わりに [XMLHttpRequest API](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) を使用します。
 
@@ -97,17 +97,17 @@ $title: amp-form
 
 フォームの送信に成功した後にユーザーをリダイレクトする方法については、以下の[送信後のリダイレクト](#redirecting-after-a-submission)をご覧ください。
 
-#####その他のフォーム属性
+# その他のフォーム属性
 
 その他の[フォーム属性](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)はすべてオプションです。
 
-#####custom-validation-reporting
+# custom-validation-reporting
 
 これは、カスタム検証レポート戦略を有効にして選択するためのオプションの属性です。`show-first-on-submit`、`show-all-on-submit`、`as-you-go` のいずれかを指定できます。
 
 詳しくは、[カスタム検証](#custom-validations)をご覧ください。
 
-##入力とフィールド
+# 入力とフィールド
 
 **使用可**:
 
@@ -124,7 +124,7 @@ $title: amp-form
 
 有効な入力とフィールドについて詳しくは、AMP 検証ツールの仕様で [amp-form のルール](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii)をご覧ください。
 
-##アクション
+# アクション
 
 `amp-form` 要素では以下のアクションを使用できます。
 
@@ -136,7 +136,7 @@ $title: amp-form
 [tip type="read-on"] [AMP のアクションとイベント](https://www.ampproject.org/docs/interaction_dynamic/amp-actions-and-events.html)の詳細をご確認ください。
 [/tip]
 
-##イベント
+# イベント
 
 `amp-form` では以下のイベントを使用できます。
 
@@ -164,7 +164,7 @@ $title: amp-form
 [この例のコード全体](../../examples/forms.amp.html)をご覧ください。
 
 
-####入力イベント
+# 入力イベント
 
 AMP では、子の `<input>` 要素で `change` イベントと `input-debounced` イベントを使用できます。このため、[`on` 属性](https://www.ampproject.org/docs/fundamentals/spec#on)を使用して、入力値が変更されたときに任意の要素のアクションを実行できます。
 
@@ -181,7 +181,7 @@ AMP では、子の `<input>` 要素で `change` イベントと `input-debounce
 
 [この例のコード全体](../../examples/forms.amp.html)をご覧ください。
 
-###アナリティクス トリガー
+# アナリティクス トリガー
 
 `amp-form` 拡張機能は、[amp-analytics](https://www.ampproject.org/docs/reference/components/amp-analytics) の設定でトラッキング可能な以下のイベントをトリガーします。
 
@@ -243,7 +243,7 @@ AMP では、子の `<input>` 要素で `change` イベントと `input-debounce
   * `formId`
   * `formFields[comment]`
 
-##成功 / エラー レスポンスのレンダリング
+# 成功 / エラー レスポンスのレンダリング
 
 [amp-mustache](https://www.ampproject.org/docs/reference/components/amp-mustache) などの[拡張テンプレート](https://www.ampproject.org/docs/fundamentals/spec#extended-templates)を使用することで、成功またはエラー レスポンスをフォームにレンダリングできます。また、[amp-bind](https://www.ampproject.org/docs/reference/components/amp-bind) によるデータ バインディングと以下のレスポンス属性を使用して成功レスポンスをレンダリングすることもできます。
 
@@ -253,7 +253,7 @@ AMP では、子の `<input>` 要素で `change` イベントと `input-debounce
 | `submit-error` | レスポンスが失敗の場合（ステータスが `2XX` でない場合など）、送信エラーの表示に使用できます。 |
 | `submitting` | フォームの送信中にメッセージを表示する場合に使用できます。この属性のテンプレートから、表示目的でフォームの入力フィールドにアクセスできます。`submitting` 属性の使用方法については、[以下のフォームの例](#example-submitting)をご覧ください。 |
 
-###テンプレートを使用したレスポンスのレンダリング方法:
+# テンプレートを使用したレスポンスのレンダリング方法:
 
 * `<form>` 要素の*直接の子*にレスポンス属性を適用します。
 * 子要素の内部で `<template></template>` タグまたは `<script type="text/plain"></script>` タグを使用してテンプレートを含めるか、`template="id_of_other_template"` 属性でテンプレートを参照することにより、子要素でレスポンスをレンダリングします。
@@ -261,7 +261,7 @@ AMP では、子の `<input>` 要素で `change` イベントと `input-debounce
 
 <a id="example-submitting"></a>
 
-#####例: フォームに成功、エラー、送信中のメッセージを表示する
+# 例: フォームに成功、エラー、送信中のメッセージを表示する
 
 次の例では、フォーム内のインライン テンプレートにレスポンスがレンダリングされます。
 
@@ -340,7 +340,7 @@ to confirm! After that we'll start sending you weekly articles on {{#interests}}
 
 [この例のコード全体](../../examples/forms.amp.html)をご覧ください。
 
-###データ バインディングを使用して成功レスポンスをレンダリングするには
+# データ バインディングを使用して成功レスポンスをレンダリングするには
 
 * [on 属性](https://www.ampproject.org/docs/interaction_dynamic/amp-actions-and-events)を使用して、フォームの submit-success** 属性を [`AMP.setState()`](https://www.ampproject.org/docs/reference/components/amp-bind#updating-state-with-amp.setstate%28%29) にバインドします。
 * `event` プロパティを使用して、レスポンス データを収集します。
@@ -383,7 +383,7 @@ to confirm! After that we'll start sending you weekly articles on {{#interests}}
 ...
 ```
 
-###送信後のリダイレクト
+# 送信後のリダイレクト
 
 `AMP-Redirect-To` レスポンス ヘッダーを設定し、リダイレクト URL を指定することにより、フォームの送信が成功した後にユーザーを新しいページにリダイレクトできます。リダイレクト URL には HTTPS URL を指定する必要があります。そうしないと、AMP によってエラーがスローされ、リダイレクトが行われなくなります。HTTP レスポンス ヘッダーはサーバーで設定されます。
 
@@ -399,7 +399,7 @@ Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin, AMP-Redir
 [tip type="success"] AMP By Example の[更新に伴うフォームの送信](https://ampbyexample.com/components/amp-form/#form-submission-with-page-update)と[商品ページ](https://ampbyexample.com/samples_templates/product_page/#product-page)をご確認ください。フォームの送信後にリダイレクトを使用する例が紹介されています。
 [/tip]
 
-##カスタム検証
+# カスタム検証
 
 `amp-form` 拡張機能では、`custom-validation-reporting` 属性をレポート戦略（`show-first-on-submit`、`show-all-on-submit`、`as-you-go` のいずれか）と組み合わせて使用することで、独自のカスタム検証 UI を作成できます。
 
@@ -426,27 +426,27 @@ Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin, AMP-Redir
 [tip type="important"] 入力の無効な状態の種類ごとに独自の検証 UI を用意する必要があります。そうしないと、エラー状態が存在しない場合、`custom-validation-reporting` がユーザーに表示されなくなります。有効な状態については、[W3C HTML の検証レポートに関する公式ドキュメント](https://www.w3.org/TR/html50/forms.html#validitystate)をご覧ください。
 [/tip]
 
-###レポート戦略
+# レポート戦略
 
 `custom-validation-reporting` 属性の以下のレポート オプションのいずれかを指定します。
 
-####show-first-on-submit
+# show-first-on-submit
 
 `show-first-on-submit` レポート オプションは、デフォルトの検証が開始されたときのブラウザのデフォルトの動作によく似ています。検出された最初の検証エラーが表示され、そこで停止します。
 
-####show-all-on-submit
+# show-all-on-submit
 
 `show-all-on-submit` レポート オプションでは、フォームの送信時にすべての無効な入力に対する検証エラーがすべて表示されます。このオプションは、検証の概要を表示する場合に便利です。
 
-####as-you-go
+# as-you-go
 
 `as-you-go` レポート オプションを使用すると、入力の操作中に検証メッセージを確認できます。たとえば、ユーザーが無効なメールアドレスを入力すると、エラーがすぐに表示されます。値を修正すると、エラーが表示されなくなります。
 
-####interact-and-submit
+# interact-and-submit
 
 `interact-and-submit` レポート オプションは、`show-all-on-submit` と `as-you-go` の動作を組み合わせたものです。操作後に個々のフィールドにエラーが即座に表示され、フォームの送信時にすべての無効なフィールドに関するエラーが表示されます。
 
-##検証
+# 検証
 
 HTML5 の検証で提供されるフィードバックは、ページで利用できる情報のみに基づくものです（値が特定のパターンと一致するかどうかなど）。`amp-form` 検証では、HTML5 の検証だけでは得られないユーザー フィードバックを得ることができます。たとえば、フォームで検証を使用すると、メールアドレスが登録済みかどうか、市区町村名フィールドと郵便番号フィールドが対応しているかどうかなどを確認できます。
 
@@ -509,7 +509,7 @@ HTML5 の検証で提供されるフィードバックは、ページで利用�
 
 その他の例については、[examples/forms.amp.html](../../examples/forms.amp.html) をご覧ください。
 
-##変数の置換
+# 変数の置換
 
 `amp-form` 拡張機能では、非表示の入力と `data-amp-replace` 属性が指定されている入力に対して、[プラットフォーム変数の置換](../../spec/amp-var-substitutions.md)を行うことができます。各フォームの送信時に、`amp-form` がフォーム内の `input[type=hidden][data-amp-replace]` をすべて検出し、その `value` 属性に対して変数置換を適用して、置換の結果で値を置き換えます。
 
@@ -548,15 +548,15 @@ HTML5 の検証で提供されるフィードバックは、ページで利用�
 
 その後は送信のたびに置換が行われます。詳しくは、[AMP での変数の置換](../../spec/amp-var-substitutions.md)をご覧ください。
 
-##ポリフィル
+# ポリフィル
 
 `amp-form` 拡張機能には、一部のブラウザに実装されていない動作や機能、または次のバージョンの CSS で実装される動作や機能を補うためのポリフィルが用意されています。
 
-####無効な送信のブロックと検証メッセージのバブル
+# 無効な送信のブロックと検証メッセージのバブル
 
 現在（2016 年 8 月）、WebKit ベースのエンジンを使用しているブラウザは、無効なフォームの送信をサポートしていません。これには、すべてのプラットフォームの Safari と、すべての iOS ブラウザが含まれます。`amp-form` 拡張機能は、無効な送信をすべてブロックする動作をサポートしており、無効な入力に対して検証メッセージのバブルを表示します。
 
-####ユーザー操作の疑似クラス
+# ユーザー操作の疑似クラス
 
 `:user-invalid` および `:user-valid` 疑似クラスは、[将来の CSS セレクタ 4 の仕様](https://drafts.csswg.org/selectors-4/#user-pseudos)に含まれています。フックを改良し、フィールドが有効か無効かに関係なく、いくつかの条件に基づいてそのスタイルを設定できるようにするために導入されたものです。
 
@@ -564,7 +564,7 @@ HTML5 の検証で提供されるフィードバックは、ページで利用�
 
 `amp-form` 拡張機能には、これらの疑似クラスのポリフィルを提供する[クラス](#classes-and-css-hooks)が用意されています。`amp-form` 拡張機能は、これらのクラスを祖先の `fieldset` 要素や `form` にも伝播します。
 
-####`<textarea>` の検証
+# `<textarea>` の検証
 
 正規表現マッチングは、`<textarea>` を除くほとんどの入力要素でネイティブにサポートされている一般的な検証機能です。この機能にはポリフィルが用意されており、`<textarea>` 要素に `pattern` 属性を指定できます。
 
@@ -574,9 +574,9 @@ amp-form では、`<textarea>` 要素に `autoexpand` 属性を指定できま�
 <textarea autoexpand></textarea>
 ```
 
-##スタイル設定
+# スタイル設定
 
-###クラスと CSS フック
+# クラスと CSS フック
 
 `amp-form` 拡張機能には、サイト運営者がフォームと入力のスタイルを設定するためのクラスと CSS フックが用意されています。
 
@@ -601,9 +601,9 @@ amp-form では、`<textarea>` 要素に `autoexpand` 属性を指定できま�
 [tip type="success"] あらかじめスタイルが設定された、レスポンシブな AMP フォームの要素については、[AMP Start](https://ampstart.com/components#form-elements) をご覧ください。これらの要素は AMP ページで使用することができます。
 [/tip]
 
-##セキュリティ上の考慮事項
+# セキュリティ上の考慮事項
 
-###XSRF に対する保護
+# XSRF に対する保護
 
 [AMP CORS 仕様](https://www.ampproject.org/docs/fundamentals/amp-cors-requests.html)を遵守するだけでなく、[状態の変化に関するリクエストの処理](https://www.ampproject.org/docs/fundamentals/amp-cors-requests.html#processing-state-changing-requests)のセクションに特に注意して、[XSRF 攻撃](https://en.wikipedia.org/wiki/Cross-site_request_forgery)から保護してください。この攻撃では、攻撃者が現在のユーザー セッションを利用して、ユーザーが気付かないうちに不正なコマンドを実行できます。
 

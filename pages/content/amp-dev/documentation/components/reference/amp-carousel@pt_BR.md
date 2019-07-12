@@ -10,18 +10,22 @@ teaser:
 
 
 <!---
-       Copyright 2015 The AMP HTML Authors. Todos os direitos reservados.
+Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 
-       Licenciado sob a Licença Apache, Versão 2.0 (a "Licença"). O uso deste arquivo só é permitido em conformidade com a Licença.
-       Uma cópia da Licença está disponível em
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       A menos que exigido pela legislação aplicável ou acordado por escrito, o software fornecido de acordo com a Licença é distribuído "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIAS OU CONDIÇÕES DE QUALQUER TIPO, expressas ou implícitas.
-       Consulte a Licença para ver informações sobre permissões e limitações para o idioma específico.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-#amp-carousel
+# amp-carousel
 
 Um carrossel genérico para exibir vários conteúdos semelhantes em um eixo horizontal, que visa ser flexível e com excelente desempenho.
 
@@ -47,7 +51,7 @@ Um carrossel genérico para exibir vários conteúdos semelhantes em um eixo hor
     </tr>
   </table>
 
-##Comportamento
+# Comportamento
 
 Cada filho imediato do componente `amp-carousel` é considerado um item do carrossel. Cada um desses nós também pode ter filhos HTML arbitrários.
 
@@ -64,7 +68,7 @@ O carrossel avança entre os itens se o usuário deslizar o dedo, usar as teclas
   </amp-iframe>
 </div>
 
-###Avançar para um slide específico
+# Avançar para um slide específico
 
 Definir um método para o atributo `on` em um elemento `tap:carousel-id.goToSlide(index=N)`, quando o usuário tocar ou clicar nele, avançará um carrossel com o código "carousel-id" para o slide em index=N (o primeiro slide está no index=0, o segundo no index=1 e assim por diante).
 
@@ -79,7 +83,7 @@ No exemplo a seguir, temos um carrossel de três imagens com botões de visualiz
   </amp-iframe>
 </div>
 
-##Atributos
+# Atributos
 
 <table>
   <tr>
@@ -150,7 +154,7 @@ No exemplo a seguir, temos um carrossel de três imagens com botões de visualiz
           </tr>
         </table>
 
-##Estilo
+# Estilo
 
 * Você pode usar o seletor de elemento `amp-carousel` para estilizá-lo à vontade.
 * Você pode usar o seletor de classe `.amp-carousel-slide` para segmentar itens do carrossel.
@@ -175,6 +179,6 @@ No exemplo a seguir, temos um carrossel de três imagens com botões de visualiz
 }
 ```
 
-##Validação
+# Validação
 
 Consulte as [regras do amp-carousel](https://github.com/ampproject/amphtml/blob/master/extensions/amp-carousel/validator-amp-carousel.protoascii) (link em inglês) nas especificações do validador de AMP.

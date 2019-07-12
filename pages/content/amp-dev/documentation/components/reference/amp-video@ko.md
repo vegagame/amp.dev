@@ -4,9 +4,8 @@ formats:
 - websites
 - ads
 - stories
-티저:
-
-##  텍스트: HTML5 동영상 태그를 대체합니다.
+teaser:
+    text:  HTML5 동영상 태그를 대체합니다.
 ---
 
 

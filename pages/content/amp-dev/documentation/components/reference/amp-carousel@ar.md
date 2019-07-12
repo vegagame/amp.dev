@@ -10,18 +10,22 @@ teaser:
 
 
 <!---
-حقوق الطبع والنشر 2015 لصالح "مؤلفو رمز HTML لصفحات AMP". جميع الحقوق محفوظة.
+Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 
-تم الترخيص بموجب ترخيص Apache، الإصدار 2.0 (المشار إليه لاحقًا باسم "الترخيص")؛ ولا يحق لك استخدام هذا الملف إلا بما يتوافق مع الترخيص.
-ويمكنك الحصول على نسخة من الترخيص على الصفحة
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-ما لم يكن مطلوبًا بموجب القانون الساري أو تمت الموافقة عليه كتابةً، يتم توزيع البرنامج الذي يتم توزيعه بموجب الترخيص "كما هو"، وبدون أية ضمانات أو شروط من أي نوع، سواء كانت صريحة أو ضمنية.
-راجِع الترخيص للاطّلاع على اللغة المحددة التي تحكم الأذونات والقيود بموجب الترخيص.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 
-#amp-carousel
+# amp-carousel
 
 منصّة عرض بعناصر متغيّرة لعرض عدة عناصر محتوى متشابهة متغيّرة على محور أفقي؛ وتهدف إلى توفير مرونة عالية وأداء عالٍ.
 
@@ -47,7 +51,7 @@ teaser:
     </tr>
   </table>
 
-##السلوك
+# السلوك
 
 يُعتبر كل عنصر من العناصر الثانوية المباشرة للمكوِّن `amp-carousel` عنصرًا في منصّة عرض بعناصر متغيّرة. قد يكون لكل من هذه العقد أيضًا عناصر HTML ثانوية عشوائية.
 
@@ -68,7 +72,7 @@ teaser:
   </amp-iframe>
 </div>
 
-###التقدم إلى شريحة محددة
+# التقدم إلى شريحة محددة
 
 سيؤدي تعيين طريقة للسمة `on` في عنصر لتنفيذ `tap:carousel-id.goToSlide(index=N)`، عند نقر المستخدِم، إلى انتقال منصّة عرض بعناصر متغيّرة ذات المعرف "carousel-id" إلى الشريحة بالفهرس index=N (ستكون الشريحة الأولى عند index=0 والشريحة الثانية عند  index=1 وهكذا).
 
@@ -87,7 +91,7 @@ teaser:
 </amp-iframe>
 </div>
 
-##السمات
+# السمات
 
 <table>
   <tr>
@@ -162,7 +166,7 @@ teaser:
 </table>
 
 
-##التصميم
+# التصميم
 
 * يمكنك استخدام محدد العنصر `amp-carousel` لتصميمه بحرية.
 * يمكنك استخدام محدد الفئة `.amp-carousel-slide` لاستهداف عناصر منصّة العرض.
@@ -187,6 +191,6 @@ teaser:
 }
 ```
 
-##التحقق
+# التحقق
 
 اطِّلع على [قواعد amp-carousel](https://github.com/ampproject/amphtml/blob/master/extensions/amp-carousel/validator-amp-carousel.protoascii) في مواصفات مدقق AMP.

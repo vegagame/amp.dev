@@ -8,18 +8,22 @@ formats:
 ---
 
 <!---
-       Copyright 2015 The AMP HTML Authors. All Rights Reserved.
+Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 
-       Apache 라이선스 버전 2.0(이하 '라이선스')에 따라 사용이 허가되었으므로, 라이선스를 준수하지 않는 경우 이 파일을 사용할 수 없습니다.
-       라이선스의 사본은 다음에서 가져올 수 있습니다.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       해당 법률에 따라 요구되거나 서면으로 동의한 경우를 제외하고, 라이선스에 따라 배포된 소프트웨어는 어떠한 종류의 명시적 또는 묵시적 보증 또는 조건도 없이 '있는 그대로' 배포됩니다.
-       라이선스의 허가 및 제한사항에 관한 구체적인 문구는 라이선스를 참조하시기 바랍니다.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-#amp-iframe
+# amp-iframe
 
 iframe을 표시합니다.
 
@@ -39,7 +43,7 @@ iframe을 표시합니다.
   </tr>
 </table>
 
-##동작
+# 동작
 
 `amp-iframe`에는 보안을 강화하고 단일 iframe에서 좌우하는 AMP 파일을 방지하도록 디자인된 vanilla iframe과 다른 중요한 여러 차이점이 있습니다.
 
@@ -68,7 +72,7 @@ iframe을 표시합니다.
 `amp-iframe`의 더 많은 데모를 보려면 [AMP By Example](https://ampbyexample.com/components/amp-iframe/)을 참조하세요.
 [/tip]
 
-##광고에 amp-iframe 사용
+# 광고에 amp-iframe 사용
 
 `amp-iframe`을 광고 표시의 주용도로 사용해서는 **안 됩니다**. 일부가 광고인 동영상을 표시하는 용도로 `amp-iframe`을 사용하는 것은 괜찮습니다. 이 AMP 정책은 각 iframe을 렌더링하지 않아도 적용될 수 있습니다.
 
@@ -81,7 +85,7 @@ iframe을 표시합니다.
 * `amp-iframe`에는 iframe에서 완전히 제어하는 크기 조정 메커니즘이 없습니다.
 * 조회가능성 정보는 `amp-iframe`에 사용하지 못할 수 있습니다.
 
-##속성
+# 속성
 
 <table>
   <tr>
@@ -110,7 +114,7 @@ iframe을 표시합니다.
               </tr>
             </table>
 
-##자리표시자가 있는 iframe
+# 자리표시자가 있는 iframe
 
 아래 예에 표시된 대로 `amp-iframe`에 `placeholder` 요소가 있으면 `amp-iframe`이 문서의 상단에 표시될 수 있습니다.
 
@@ -137,7 +141,7 @@ window.parent.postMessage({
   }, '*');
 ```
 
-##iframe 크기 조정
+# iframe 크기 조정
 
 `amp-iframe`에는 다른 모든 AMP 요소와 마찬가지로 정적 레이아웃이 정의되어 있어야 합니다. 그러나
 런타임 시 `amp-iframe`의 크기를 조정할 수 있습니다. 방법은 다음과 같습니다.
@@ -181,7 +185,7 @@ window.parent.postMessage({
 * 현재 활성 상태인 iframe의 크기 조정이 요청되었는지 여부
 * 표시 영역 아래 또는 표시 영역 위의 iframe에 대한 크기 조정이 요청되었는지 여부
 
-##iframe 조회가능성
+# iframe 조회가능성
 
 iframe에서는 상위 표시 영역과 교차하는 iframe의 IntersectionObserver 스타일 [변경 레코드](https://developer.mozilla.org/ko-KR/docs/Web/API/IntersectionObserverEntry)를 수신하기 위해 상위 요소에 `send-intersections` 메시지를 보낼 수 있습니다.
 
@@ -217,7 +221,7 @@ window.addEventListener('message', function(event) {
 
 교차 메시지는 iframe이 표시 영역 내외부로 이동(또는 부분적으로 공개)하거나 iframe이 스크롤링되거나 크기 조정될 때 상위 요소에서 iframe으로 보냅니다.
 
-##추적/분석 iframe
+# 추적/분석 iframe
 
 분석 용도로는 [`amp-analytics`](https://www.ampproject.org/docs/reference/components/amp-analytics)를 사용하는 것이 가장 좋습니다. 다양한 분석 공급업체에 맞게 구성할 수 있는 훨씬 더 강력하고 완전하며 효율적인 솔루션이기 때문입니다.
 
@@ -225,7 +229,7 @@ AMP에서는 페이지당 분석 및 추적 용도로 사용하는 단일 iframe
 
 iframe이 사용자 숨기기 또는 작게 표시와 같이 직접적으로 사용자에게 도움을 주지 않는 것으로 보이면 추적/분석 iframe으로 식별됩니다.
 
-##지침: amp-iframe을 통해 기존 AMP 구성요소 사용
+# 지침: amp-iframe을 통해 기존 AMP 구성요소 사용
 
 AMP의 다른 방법으로 필수 사용자 환경을 사용할 수 없는 경우, 즉 사용 사례에 맞는 기존 [AMP 구성요소](https://www.ampproject.org/docs/reference/components)가 아직 없다면 `amp-iframe` 구성요소를 대체로 고려해야 합니다. 다음과 같이 특정 사용 사례에 맞게 조정된 AMP 구성요소를 사용하면 많은 이점이기 때문입니다.
 
@@ -234,6 +238,6 @@ AMP의 다른 방법으로 필수 사용자 환경을 사용할 수 없는 경�
 * 크기 조정을 기본 제공합니다. 크기를 예측할 수 없는 iframe 콘텐츠가 스크롤 가능 프레임에 표시되지 않고 페이지에 고유한 것처럼 사용자에게 더 자주 표시될 수 있습니다.
 * 기타 추가 기능을 기본 제공할 수 있습니다(예: 동영상 플레이어를 위한 자동 재생).
 
-##유효성 검사
+# 유효성 검사
 
 AMP 유효성 검사기 사양에서 [amp-iframe 규칙](https://github.com/ampproject/amphtml/blob/master/extensions/amp-iframe/validator-amp-iframe.protoascii)을 참조하세요.

@@ -8,22 +8,22 @@ teaser:
 
 
 <!---
-       Copyright 2015 The AMP HTML Authors. Todos los derechos reservados.
+Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 
-       Con licencia Apache, versión 2.0 (en adelante, la "Licencia").
-       Este archivo solo se puede utilizar según lo estipulado en la Licencia.
-       Se puede obtener una copia de la Licencia en la siguiente página:
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       A menos que lo exija la legislación aplicable o se acuerde por escrito, el software
-       distribuido bajo la Licencia se proporciona "TAL CUAL", SIN NINGÚN
-       TIPO DE GARANTÍA NI DE CONDICIÓN, ni expresa ni implícita.
-       En la Licencia se puede consultar la información relativa a las limitaciones
-       y a los permisos aplicables a cada idioma.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-#amp-iframe
+# amp-iframe
 
 Muestra un iframe.
 
@@ -43,7 +43,7 @@ Muestra un iframe.
   </tr>
 </table>
 
-##Comportamiento
+# Comportamiento
 
 `amp-iframe` presenta varias diferencias importantes con respecto a los iframes estándar que tienen como objetivo aumentar la seguridad y evitar que los archivos AMP estén dominados por un único iframe:
 
@@ -72,7 +72,7 @@ Se renderiza así:
 Para ver más ejemplos del componente `amp-iframe`, visita [AMP By Example](https://ampbyexample.com/components/amp-iframe/).
 [/tip]
 
-##Usar amp-iframe con fines publicitarios
+# Usar amp-iframe con fines publicitarios
 
 `amp-iframe` ****no debe utilizarse con el propósito principal de mostrar publicidad, ``pero se puede usar para mostrar vídeos que contienen anuncios. Para aplicar esta política, se puede denegar el renderizado de los respectivos iframes.
 
@@ -85,7 +85,7 @@ Los motivos de esta política son los siguientes:
 * `amp-iframe` no tiene un mecanismo de cambio de tamaño que controle totalmente el iframe.
 * La información de visibilidad puede no estar disponible para `amp-iframe`.
 
-##Atributos
+# Atributos
 
 <table>
   <tr>
@@ -114,7 +114,7 @@ Los motivos de esta política son los siguientes:
               </tr>
             </table>
 
-##Iframe con marcador de posición
+# Iframe con marcador de posición
 
 Se puede incluir un elemento `placeholder` para lograr que `amp-iframe` aparezca en la parte superior de un documento``, como se muestra en el ejemplo que aparece más abajo.
 
@@ -141,7 +141,7 @@ window.parent.postMessage({
   }, '*');
 ```
 
-##Cambio de tamaño del iframe
+# Cambio de tamaño del iframe
 
 `amp-iframe` debe tener un diseño estático definido, como cualquier otro elemento AMP. Sin embargo, se puede cambiar el tamaño de un `amp-iframe` en el tiempo de ejecución. Para ello:
 
@@ -183,7 +183,7 @@ Algunos factores que afectan a la rapidez con la que se realizará el cambio de 
 * Si se ha solicitado para un iframe que está activo en ese momento.
 * Si se ha solicitado para un iframe situado debajo o encima del viewport.
 
-##Visibilidad del iframe
+# Visibilidad del iframe
 
 Los iframes pueden enviar un mensaje `send-intersections` a sus elementos superiores para empezar a recibir [registros de cambios de estilo IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry) de la intersección del iframe con el viewport principal.
 
@@ -219,7 +219,7 @@ window.addEventListener('message', function(event) {
 
 El elemento superior envía el mensaje de intersección al iframe cuando este se mueva dentro o fuera del viewport (o esté parcialmente visible), se desplace o se modifique.
 
-##Iframes de seguimiento y analíticas
+# Iframes de seguimiento y analíticas
 
 Recomendamos encarecidamente el uso de [`amp-analytics`](https://www.ampproject.org/docs/reference/components/amp-analytics) para realizar analíticas, ya que es una solución mucho más potente, completa y eficiente, y se puede configurar con un gran número de proveedores de analíticas.
 
@@ -227,7 +227,7 @@ AMP solo permite un único iframe por página con fines de analíticas y de segu
 
 Los iframes se identifican como de seguimiento o de analíticas si no parecen ofrecer una utilidad directa al usuario (p. ej., si son invisibles o pequeños).
 
-##Directriz: Es mejor usar otros componentes de AMP antes que amp-iframe
+# Directriz: Es mejor usar otros componentes de AMP antes que amp-iframe
 
 El componente `amp-iframe` debe considerarse como un respaldo si no se puede ofrecer la experiencia de usuario deseada utilizando otros medios de AMP; es decir, si no existe un [componente de AMP](https://www.ampproject.org/es/docs/reference/components) que se ocupe de dicho caso práctico. Si se utiliza un componente de AMP diseñado para un caso práctico específico, se logran ventajas como las siguientes:
 
@@ -236,6 +236,6 @@ El componente `amp-iframe` debe considerarse como un respaldo si no se puede ofr
 * Cambio de tamaño integrado, lo que supone que el contenido de un iframe de tamaño impredecible se pueda mostrar al usuario como si fuera nativo de la página en lugar de un marco desplazable.
 * Se pueden integrar otras funciones adicionales (por ejemplo, la reproducción automática para reproductores de vídeo).
 
-##Validación
+# Validación
 
 Consulta las [reglas de amp-iframe](https://github.com/ampproject/amphtml/blob/master/extensions/amp-iframe/validator-amp-iframe.protoascii) en la especificación de la herramienta de validación de AMP.

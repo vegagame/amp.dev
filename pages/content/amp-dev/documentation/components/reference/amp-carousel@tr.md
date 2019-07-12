@@ -10,18 +10,22 @@ teaser:
 
 
 <!---
-       Telif Hakkı 2015 The AMP HTML Authors. Tüm Hakları Saklıdır.
+Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 
-       Apache Lisansı, Sürüm 2.0 ("Lisans") ile lisanslıdır; bu dosyayı Lisans koşulları dışında kullanamazsınız.
-       Lisansın bir kopyasını şu adresten edinebilirsiniz:
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       Geçerli yasa tarafından gerekli görülmediği veya yazılı olarak bir sözleşme yapılmadığı sürece, Lisanslı olarak dağıtılan yazılım açıkça veya zımni olarak HİÇBİR GARANTİ VEYA KOŞUL SUNULMADAN "OLDUĞU GİBİ" dağıtılır.
-       Lisans kapsamında belirli bir dilde sağlanan izinleri ve uygulanan kısıtlamaları öğrenmek için söz konusu dille ilgili Lisans'a bakın.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-#amp-carousel
+# amp-carousel
 
 Bir yatay eksen boyunca birden çok benzer içerik parçasını görüntülemek için genel bir bant; son derece eksek ve yüksek performanslı olması amaçlanmıştır.
 
@@ -47,7 +51,7 @@ Bir yatay eksen boyunca birden çok benzer içerik parçasını görüntülemek 
     </tr>
   </table>
 
-##Davranış
+# Davranış
 
 `amp-carousel` bileşeninin en yakın alt öğelerinin her biri, banttaki bir öğe olarak kabul edilir. Bu düğümlerin her birinde rastgele HTML alt öğeleri de olabilir.
 
@@ -64,7 +68,7 @@ Kullanıcı kaydırırsa, ok tuşlarını kullanırsa veya isteğe bağlı bir g
   </amp-iframe>
 </div>
 
-###Belirli bir slayda ilerleme
+# Belirli bir slayda ilerleme
 
 Bir öğede `on` özelliğinin yönteminin `tap:carousel-id.goToSlide(index=N)` olarak ayarlanması, kullanıcı dokunduğunda veya tıkladığında "carousel-id" kimliğine sahip bir bandı index=N konumundaki slayda ilerletir (ilk slayt index=0, ikinci slayt index=1 konumundadır ve diğer slaytların konum değeri bu düzenle devam eder).
 
@@ -79,7 +83,7 @@ Aşağıdaki örnekte, bandın altında önizleme düğmeleri olan, üç resimde
   </amp-iframe>
 </div>
 
-##Özellikler
+# Özellikler
 
 <table>
   <tr>
@@ -150,7 +154,7 @@ Aşağıdaki örnekte, bandın altında önizleme düğmeleri olan, üç resimde
           </tr>
         </table>
 
-##Stil
+# Stil
 
 * `amp-carousel` öğe seçicisini serbest bir şekilde biçimlendirmek için kullanabilirsiniz.
 * Bant öğelerini hedeflemek için `.amp-carousel-slide` sınıf seçicisini kullanabilirsiniz.
@@ -175,6 +179,6 @@ Aşağıdaki örnekte, bandın altında önizleme düğmeleri olan, üç resimde
 }
 ```
 
-##Doğrulama
+# Doğrulama
 
 AMP doğrulayıcı spesifikasyonunda [amp-carousel kurallarına](https://github.com/ampproject/amphtml/blob/master/extensions/amp-carousel/validator-amp-carousel.protoascii) bakın.

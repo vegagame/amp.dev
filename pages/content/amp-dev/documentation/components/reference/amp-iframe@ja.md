@@ -8,22 +8,22 @@ teaser:
 
 
 <!---
-       Copyright 2015 The AMP HTML Authors. All Rights Reserved.
+Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 
-       Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS-IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
 
-#amp-iframe
+# amp-iframe
 
 iframe を表示します。
 
@@ -43,7 +43,7 @@ iframe を表示します。
   </tr>
 </table>
 
-##動作
+# 動作
 
 `amp-iframe` と vanilla iframe には重要な違いがいくつかあります。vanilla iframe は安全性を重視して設計されており、単一の iframe で制御される AMP ファイルを使用しません。
 
@@ -71,7 +71,7 @@ iframe を表示します。
 [tip type="success"] `amp-iframe` のその他のデモを [AMP By Example](https://ampbyexample.com/components/amp-iframe/) でご覧いただけます。
 [/tip]
 
-##広告での amp-iframe の使用
+# 広告での amp-iframe の使用
 
 `amp-iframe` は、広告の表示を主な目的として使用**しないでください**。広告が含まれている動画を表示する目的で `amp-iframe` を使用することについては問題ありません。この AMP ポリシーを適用するには、個々の iframe をレンダリングしないようにします。
 
@@ -84,7 +84,7 @@ iframe を表示します。
 * `amp-iframe` は、iframe を完全に制御するサイズ変更メカニズムを備えていません。
 * 視認性に関する情報を `amp-iframe` で使用できない場合があります。
 
-##属性
+# 属性
 
 <table>
   <tr>
@@ -109,7 +109,7 @@ iframe を表示します。
               </tr>
             </table>
 
-##プレースホルダが設定された iframe
+# プレースホルダが設定された iframe
 
 以下の例に示すように、`amp-iframe` に `placeholder` 要素を設定すると、`amp-iframe` をドキュメントの上部に表示させることができます。
 
@@ -136,7 +136,7 @@ window.parent.postMessage({
   }, '*');
 ```
 
-##iframe のサイズ変更
+# iframe のサイズ変更
 
 `amp-iframe` では、他のすべての AMP 要素と同様に、静的レイアウトを定義する必要があります。ただし、実行時に `amp-iframe` のサイズを変更することは可能です。そのためには、次のようにする必要があります。
 
@@ -178,7 +178,7 @@ window.parent.postMessage({
 * サイズ変更リクエストの対象が現在アクティブな iframe かどうか。
 * サイズ変更リクエストの対象の iframe がビューポートの上と下のどちらにあるか。
 
-##iframe の視認性
+# iframe の視認性
 
 iframe は `send-intersections` メッセージを自身の親に送信することで、iframe の親ビューポートとの共通部分に関する IntersectionObserver スタイル[変更レコード](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry)の受信を開始できます。
 
@@ -214,7 +214,7 @@ window.addEventListener('message', function(event) {
 
 共通部分に関するメッセージは、iframe がビューポートに出入りしたとき（または、iframe が部分的に表示されているとき）、iframe がスクロールまたはサイズ変更されたときに、親から iframe に送信されます。
 
-##トラッキング / アナリティクス用の iframe
+# トラッキング / アナリティクス用の iframe
 
 [`amp-analytics`](https://www.ampproject.org/docs/reference/components/amp-analytics) は幅広いアナリティクス ベンダー向けに設定可能な、堅牢性と効率性に優れた包括的なソリューションであるため、アナリティクスの目的ではこのコンポーネントを使用することを強くおすすめします。
 
@@ -222,7 +222,7 @@ AMP でアナリティクスやトラッキングの目的で使用できる ifr
 
 iframe は、ユーザーの直接の目的を果たさないように思える場合（ユーザーから見えない、表示が小さいなど）、トラッキング / アナリティクス用の iframe として認識されます。
 
-##ガイドライン: amp-iframe を介して既存の AMP コンポーネントを使用する
+# ガイドライン: amp-iframe を介して既存の AMP コンポーネントを使用する
 
 必要なユーザー エクスペリエンスを AMP の他の手段では実現できない場合、つまり、ユースケースに適した既存の [AMP コンポーネント](https://www.ampproject.org/docs/reference/components)がない場合、代わりに `amp-iframe` コンポーネントを使用することを検討してください。その理由は、特定のユースケース用に調整された AMP コンポーネントを使用することには、以下のようなさまざまなメリットがあるためです。
 
@@ -231,6 +231,6 @@ iframe は、ユーザーの直接の目的を果たさないように思える�
 * サイズ変更機能を組み込むことができます。これにより多くの場合、予測不能なサイズの iframe コンテンツを、スクロール可能なフレーム内に表示するのではなく、ページに対してネイティブであるかのように表示できるようになります。
 * 他の追加機能（動画プレーヤーの自動再生など）を組み込むこともできます。
 
-##検証
+# 検証
 
 AMP 検証ツールの仕様で [amp-iframe のルール](https://github.com/ampproject/amphtml/blob/master/extensions/amp-iframe/validator-amp-iframe.protoascii)をご確認ください。

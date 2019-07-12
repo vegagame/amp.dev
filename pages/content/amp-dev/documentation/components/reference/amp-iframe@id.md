@@ -23,7 +23,7 @@ teaser:
      limitations under the License.
 -->
 
-#amp-iframe
+# amp-iframe
 
 Menampilkan iframe.
 
@@ -43,7 +43,7 @@ Menampilkan iframe.
   </tr>
 </table>
 
-##Perilaku
+# Perilaku
 
 `amp-iframe` memiliki beberapa perbedaan penting dibandingkan iframe vanilla yang dirancang untuk menjadikannya lebih aman dan menghindari file AMP yang didominasi oleh iframe tunggal:
 
@@ -72,7 +72,7 @@ Dirender sebagai:
 Untuk melihat demo `amp-iframe` lainnya, buka [AMP By Example](https://ampbyexample.com/components/amp-iframe/).
 [/tip]
 
-##Penggunaan amp-iframe untuk iklan
+# Penggunaan amp-iframe untuk iklan
 
 `amp-iframe` **tidak boleh** digunakan dengan maksud utama untuk menampilkan iklan. Anda BOLEH menggunakan `amp-iframe` untuk menampilkan video, di mana bagian dari video tersebut merupakan iklan. Kebijakan AMP ini dapat diberlakukan dengan tidak merender iframe yang terkait.
 
@@ -85,7 +85,7 @@ Alasan penggunaan kebijakan ini adalah:
 * `amp-iframe` tidak memiliki mekanisme pengubahan ukuran terkontrol iframe sepenuhnya.
 * Informasi visibilitas mungkin tidak tersedia untuk `amp-iframe`.
 
-##Atribut
+# Atribut
 
 <table>
   <tr>
@@ -114,7 +114,7 @@ Alasan penggunaan kebijakan ini adalah:
               </tr>
             </table>
 
-##iframe dengan placeholder
+# iframe dengan placeholder
 
 Anda dapat memunculkan `amp-iframe` di bagian atas dokumen jika `amp-iframe` memiliki elemen `placeholder` seperti ditunjukkan pada contoh di bawah.
 
@@ -141,7 +141,7 @@ window.parent.postMessage({
   }, '*');
 ```
 
-##Pengubahan ukuran iframe
+# Pengubahan ukuran iframe
 
 `amp-iframe` harus menggunakan tata letak statis seperti halnya elemen AMP lainnya. Namun, Anda dapat mengubah ukuran `amp-iframe` saat runtime. Untuk melakukannya:
 
@@ -183,7 +183,7 @@ Berikut ini beberapa faktor yang memengaruhi seberapa cepat pengubahan ukuran ak
 * Apakah pengubahan ukuran diminta untuk iframe yang sedang aktif.
 * Apakah pengubahan ukuran diminta untuk iframe yang berada di bawah, atau di atas viewport.
 
-##Visibilitas iframe
+# Visibilitas iframe
 
 iframe dapat mengirim pesan `send-intersections` kepada induknya agar mulai menerima [catatan perubahan](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry) gaya IntersectionObserver untuk intersection iframe dengan viewport induk.
 
@@ -219,7 +219,7 @@ window.addEventListener('message', function(event) {
 
 Pesan intersection akan dikirim oleh induk ke iframe saat iframe bergerak masuk atau keluar dari viewport (atau terlihat sebagian), ketika iframe di-scroll atau diubah ukurannya.
 
-##iframe pelacakan/analisis
+# iframe pelacakan/analisis
 
 Kami sangat merekomendasikan penggunaan [`amp-analytics`](https://www.ampproject.org/docs/reference/components/amp-analytics) untuk keperluan analisis, karena solusi ini jauh lebih tangguh, lengkap, dan efisien yang dapat dikonfigurasi untuk berbagai vendor analisis.
 
@@ -227,7 +227,7 @@ AMP hanya mengizinkan satu iframe yang digunakan untuk keperluan pelacakan dan a
 
 iframe diidentifikasi sebagai iframe pelacakan/analisis jika tampaknya tidak memiliki kegunaan pengguna langsung apa pun, misalnya iframe yang tidak terlihat atau kecil.
 
-##Panduan: Prioritaskan komponen AMP yang ada daripada amp-iframe
+# Panduan: Prioritaskan komponen AMP yang ada daripada amp-iframe
 
 Komponen `amp-iframe` harus dianggap sebagai fallback jika pengalaman pengguna yang diperlukan tidak dimungkinkan melalui cara lain di AMP; artinya, belum ada [komponen AMP](https://www.ampproject.org/docs/reference/components) untuk kasus penggunaan itu. Hal ini karena ada banyak manfaat dari penggunaan komponen AMP yang disesuaikan dengan kasus penggunaan tertentu seperti:
 
@@ -236,6 +236,6 @@ Komponen `amp-iframe` harus dianggap sebagai fallback jika pengalaman pengguna y
 * Pengubahan ukuran built-in. Hal ini berarti konten iframe dengan ukuran yang tidak dapat diprediksi dapat ditampilkan lebih sering kepada pengguna seolah-olah konten tersebut native untuk halaman itu, bukan dalam frame yang dapat di-scroll
 * Fitur tambahan lainnya dapat tersedia secara built-in (misalnya, fitur autoplay untuk pemutar video)
 
-##Validasi
+# Validasi
 
 Lihat [aturan amp-iframe](https://github.com/ampproject/amphtml/blob/master/extensions/amp-iframe/validator-amp-iframe.protoascii) dalam spesifikasi validator AMP.

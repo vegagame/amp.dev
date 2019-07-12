@@ -8,21 +8,23 @@ teaser:
   text: Afficher plusieurs éléments de contenu similaires le long d'un axe horizontal.
 ---
 
-
 <!---
-       Copyright 2015 The AMP HTML Authors. Tous droits réservés.
+Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 
-       Autorisation sous licence Apache, version 2.0 (la "Licence") ;
-       n'utilisez ce fichier que dans le cadre de la Licence.
-       Vous pouvez obtenir une copie de la Licence à l'adresse suivante :
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       Sauf dispositions légales applicables ou accord écrit préalable, le logiciel distribué dans le cadre de la Licence est fourni "EN L'ÉTAT", À L'EXCLUSION DE TOUTE GARANTIE OU CONDITION DE QUELQUE NATURE QUE CE SOIT, expresse ou implicite.
-       Consultez la Licence correspondant à la langue spécifique qui régit les autorisations et limitations applicables.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-#amp-carousel
+# amp-carousel
 
 Carrousel générique permettant d'afficher plusieurs éléments de contenu similaires le long d'un axe horizontal. Ce composant a été conçu pour offrir une flexibilité et des performances élevées.
 
@@ -48,7 +50,7 @@ Carrousel générique permettant d'afficher plusieurs éléments de contenu simi
     </tr>
   </table>
 
-##Comportement
+# Comportement
 
 Chacun des éléments enfants immédiats du composant `amp-carousel` est considéré comme un élément du carrousel. Chacun de ces nœuds peut également comporter des éléments enfants HTML arbitraires.
 
@@ -65,7 +67,7 @@ Le carrousel change d'élément lorsque l'utilisateur balaie l'écran, utilise l
   </amp-iframe>
 </div>
 
-###Accéder à une diapositive spécifique
+# Accéder à une diapositive spécifique
 
 Si vous définissez une méthode pour l'attribut `on` d'un élément sur `tap:carousel-id.goToSlide(index=N)`, le carrousel ayant l'identifiant "carousel-id" passe à la diapositive suivante à index=N lorsque l'utilisateur appuie ou clique sur un élément (la première diapositive se situe à index=0, la deuxième à index=1 et ainsi de suite).
 
@@ -80,7 +82,7 @@ L'exemple suivant illustre un carrousel de trois images, sous lequel sont dispos
   </amp-iframe>
 </div>
 
-##Attributs
+# Attributs
 
 <table>
   <tr>
@@ -151,7 +153,7 @@ L'exemple suivant illustre un carrousel de trois images, sous lequel sont dispos
           </tr>
         </table>
 
-##Application d'un style
+# Application d'un style
 
 * Vous pouvez utiliser le sélecteur d'éléments `amp-carousel` pour appliquer un style librement.
 * Vous pouvez utiliser le sélecteur de classes `.amp-carousel-slide` pour cibler des éléments du carrousel.
@@ -176,6 +178,6 @@ L'exemple suivant illustre un carrousel de trois images, sous lequel sont dispos
 }
 ```
 
-##Validation
+# Validation
 
 Consultez les [règles relatives à amp-carousel](https://github.com/ampproject/amphtml/blob/master/extensions/amp-carousel/validator-amp-carousel.protoascii) dans les spécifications du validateur AMP.

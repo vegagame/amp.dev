@@ -5,22 +5,26 @@ formats:
 - email
 - ads
 - stories
-티저:
-##  텍스트: HTML5 이미지 태그를 대체합니다.
+teaser:
+  text:: HTML5 이미지 태그를 대체합니다.
 ---
 
 
 <!---
-       Copyright 2015 The AMP HTML Authors. All Rights Reserved.
+Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 
-       Apache 라이선스 버전 2.0(이하 '라이선스')에 따라 사용이 허가되었으므로, 라이선스를 준수하지 않는 경우 이 파일을 사용할 수 없습니다.
-       라이선스의 사본은 다음에서 가져올 수 있습니다.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-       해당 법률에 따라 요구되거나 서면으로 동의한 경우를 제외하고, 라이선스에 따라 배포된 소프트웨어는 어떠한 종류의 명시적 또는 묵시적 보증 또는 조건도 없이 '있는 그대로' 배포됩니다.
-       라이선스의 허가 및 제한사항에 관한 구체적인 문구는 라이선스를 참조하시기 바랍니다.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS-IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
 # amp-img
 
@@ -40,7 +44,7 @@ formats:
 </table>
 
 
-##동작
+# 동작
 
 런타임에서 표시 영역 위치, 시스템 리소스, 연결, 대역폭 또는 기타 요인을 기반으로 리소스 로드를 지연하거나 우선순위를 지정하도록 선택할 수 있습니다. `amp-img` 구성요소를 사용하면 런타임에서 이미지 리소스를 이와 같이 효율적으로 관리할 수 있습니다.
 
@@ -50,7 +54,7 @@ formats:
 [AMP HTML 레이아웃 시스템](https://github.com/ampproject/amphtml/blob/master/spec/amp-html-layout.md) 사양과 [지원되는 레이아웃](https://www.ampproject.org/docs/guides/responsive/control_layout.html#the-layout-attribute)에서 레이아웃에 관해 자세히 알아보세요.
 [/tip]
 
-####예: 반응형 이미지 표시
+# 예: 반응형 이미지 표시
 
 다음 예에서는 `layout=responsive`를 설정하여 표시 영역의 크기에 반응하는 이미지를 표시합니다.  `width`와 `height`로 지정된 가로세로 비율에 따라 이미지가 확장되고 줄어듭니다.
 
@@ -67,7 +71,7 @@ formats:
 
 `amp-img` 구성요소에서 요청한 리소스를 로드하지 못하면, [`fallback`](https://github.com/ampproject/amphtml/blob/master/spec/amp-html-layout.md#fallback) 하위 요소를 제공하지 않은 경우 공간이 비게 됩니다. 대체(예: 크기 조정 + srcset를 통한) 사실이 성능에 영향을 미치지 않는 한 초기 레이아웃과 후속 src 변경에서만 대체가 실행됩니다.
 
-####예: 대체 이미지 지정
+# 예: 대체 이미지 지정
 
 다음 예에서 브라우저가 WebP를 지원하지 않는 경우 대체 JPG 이미지가 표시됩니다.
 
@@ -89,7 +93,7 @@ formats:
 * [이미지 및 동영상 포함](https://www.ampproject.org/docs/media/amp_replacements)
 [/tip]
 
-##속성
+# 속성
 
 **src**
 
@@ -123,7 +127,7 @@ formats:
 
 이 요소에는 AMP 구성요소로 확장된 [공통 속성](https://www.ampproject.org/docs/reference/common_attributes)이 포함됩니다.
 
-##스타일 지정
+# 스타일 지정
 
 `amp-img`는 CSS 속성을 통해 직접 스타일을 지정할 수 있습니다. 예를 들어 다음을 통해
 회색의 백그라운드 자리표시자를 사용할 수 있습니다.
@@ -134,20 +138,20 @@ amp-img {
   }
 ```
 
-##도움말 및 유용한 정보
+# 도움말 및 유용한 정보
 
-####이미지를 최대 너비까지 확장
+# 이미지를 최대 너비까지 확장
 
 창의 크기가 조정됨에 따라 이미지의 크기를 조정하지만 이미지가 자체 너비 이상으로 확장되지 않도록 최대 너비까지만 조정하려는 경우 다음을 시행합니다.
 
 1. `<amp-img>`의 `layout=responsive`를 설정합니다.
 1. 이미지의 컨테이너에서 `max-width:<max width to display image>` CSS 속성을 지정합니다.  왜 컨테이너에서 지정해야 할까요?  `layout=responsive`가 있는 `amp-img` 요소는 *블록 수준* 요소입니다. 여기서 `<img>`는 *인라인*입니다*. 또는 CSS에서 amp-img 요소의 `display: inline-block`을 설정할 수 있습니다.
 
-####반응형 레이아웃과 내장형 레이아웃 사이의 차이점
+# 반응형 레이아웃과 내장형 레이아웃 사이의 차이점
 
 `responsive`과 `intrinsic` 레이아웃에서는 자동으로 크기가 조정되는 이미지를 만듭니다.  `intrinsic` 레이아웃에서는 SVG 이미지를 크기 조정 요소로 사용한다는 주된 차이점이 있습니다.  따라서 표준 HTML 이미지와 동일한 방식으로 작동하며 브라우저에서 초기 레이아웃의 이미지 크기를 알 수 있다는 이점이 유지됩니다. `intrinsic` 레이아웃에는 고유 크기가 있으며 기본 이미지 크기 또는 `max-width`와 같은 CSS 제한조건에 도달할 때까지 플로팅 `div`로 확장됩니다. `responsive` 레이아웃은 플로팅될 때 기본 크기가 지정되지 않는 상위 요소로부터 크기를 가져오므로 플로팅된 `div`에서 0 x 0으로 렌더링됩니다.
 
-####고정 크기 이미지 설정
+# 고정 크기 이미지 설정
 
 이미지를 고정 크기로 표시하려는 경우 다음을 시행하세요.
 
@@ -158,7 +162,7 @@ amp-img {
 `layout` 속성을 지정하지 않는 경우 [유추된 레이아웃](https://www.ampproject.org/docs/design/responsive/control_layout#what-if-the-layout-attribute-isn%E2%80%99t-specified?)에 관해 알아보세요.
 [/tip]
 
-####가로세로 비율 설정
+# 가로세로 비율 설정
 
 반응형 이미지의 경우 `width`와 `height`은 `amp-img`의 너비 및 높이와 정확히 일치하지 않아도 됩니다. 해당 값의 가로세로 비율이 같기만 하면 됩니다.
 
@@ -171,7 +175,7 @@ amp-img {
   </amp-iframe>
 </div>
 
-####여러 다른 화면 해상도에 맞게 여러 소스 파일 설정
+# 여러 다른 화면 해상도에 맞게 여러 소스 파일 설정
 
 같은 이미지에 대해 가로세로 비율이 모두 동일한 여러 다른 해상도를 제공하기 위해 [`srcset`](#attributes) 속성을 사용해야 합니다. 브라우저에서 사용자 기기의 화면 해상도와 너비를 기반으로 `srcset`에서 가장 적합한 파일을 자동으로 선택합니다.
 
@@ -179,10 +183,10 @@ amp-img {
 
 자세한 내용은 [반응형 AMP 페이지 만들기](https://www.ampproject.org/docs/design/responsive/responsive_design#displaying-responsive-images)의 가이드를 참조하세요.
 
-####크기를 알 수 없는 이미지의 가로세로 비율 유지
+# 크기를 알 수 없는 이미지의 가로세로 비율 유지
 
 AMP 레이아웃 시스템에서 이미지를 가져오기 전에 이미지의 가로세로 비율을 미리 알고 있어야 합니다. 그러나 경우에 따라 이미지의 크기를 알지 못할 수 있습니다. 크기를 알 수 없는 이미지를 표시하고 가로세로 비율을 유지하려면 AMP의 [`fill`](https://www.ampproject.org/docs/design/responsive/control_layout#the-layout-attribute) 레이아웃을 [`object-fit`](https://css-tricks.com/almanac/properties/o/object-fit/) CSS 속성과 결합합니다. 자세한 정보는 AMP By Example의 [크기를 알 수 없는 이미지 지원 방법](https://ampbyexample.com/advanced/how_to_support_images_with_unknown_dimensions)을 참조하세요.
 
-##유효성 검사
+# 유효성 검사
 
 AMP 유효성 검사기 사양에서 [amp-img rules](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii)를 참조하세요.
