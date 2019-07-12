@@ -6,24 +6,25 @@ teaser:
   text: La funzione di monitoraggio della condivisione è in fase di sviluppo.
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2016 The AMP HTML Authors. Tutti i diritti riservati.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Rilasciato ai sensi della Licenza Apache, versione 2.0 (la "Licenza");
-     è possibile utilizzare questo file esclusivamente in conformità con la Licenza.
-     Una copia della Licenza è disponibile all'indirizzo
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
      http://www.apache.org/licenses/LICENSE-2.0
 
-     Se non diversamente imposto dalla legge vigente o concordato per iscritto,
-     il software rilasciato ai sensi della Licenza viene distribuito "COSÌ COM'È",
-     SENZA GARANZIE O CONDIZIONI DI ALCUN TIPO, esplicite o implicite.
-     Leggi la Licenza per conoscere le autorizzazioni e le limitazioni in vigore
-     specifiche della lingua previste dalla Licenza.
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
 -->
 
-#amp-social-share
+# amp-social-share
 
 Mostra un pulsante di condivisione social.
 
@@ -47,11 +48,11 @@ Mostra un pulsante di condivisione social.
   </tr>
 </table>
 
-##Panoramica
+## Panoramica
 
 Il componente `amp-social-share` mostra un pulsante di condivisione per diversi fornitori di piattaforme social.
 
-##Esempi
+## Esempi
 
 **Esempio: pulsante di condivisione social di base**
 
@@ -73,7 +74,7 @@ Se vuoi trasmettere dei parametri all'endpoint di condivisione, puoi specificare
 
 Linkedin è uno dei fornitori preconfigurati, pertanto in questo caso non è necessario che tu fornisca l'attributo `data-share-endpoint`.
 
-##Attributi
+## Attributi
 
 <table>
   <tr>
@@ -97,7 +98,7 @@ Linkedin è uno dei fornitori preconfigurati, pertanto in questo caso non è nec
         </tr>
       </table>
 
-##Fornitori preconfigurati
+## Fornitori preconfigurati
 
 Il componente `amp-social-share` fornisce [alcuni fornitori preconfigurati](0.1/amp-social-share-config.js) che conoscono i loro endpoint di condivisione e alcuni parametri predefiniti.
 
@@ -219,7 +220,7 @@ Il componente `amp-social-share` fornisce [alcuni fornitori preconfigurati](0.1/
     </tr>
   </table>
 
-##Fornitori non configurati
+## Fornitori non configurati
 
 Oltre ai fornitori preconfigurati, puoi utilizzare dei fornitori non configurati specificando attributi aggiuntivi nel componente `amp-social-share`.
 
@@ -236,9 +237,9 @@ Nell'esempio seguente, viene creato un pulsante di condivisione tramite Facebook
 
 Poiché questi fornitori non sono preconfigurati, dovrai creare immagini e stili appropriati ai pulsanti per il fornitore.
 
-##Stili
+## Stili
 
-###Stili predefiniti
+### Stili predefiniti
 
 Per impostazione predefinita, `amp-social-share` include alcuni fornitori preconfigurati. I pulsanti di questi fornitori sono abbinati al colore e al logo ufficiali del fornitore. La larghezza e l'altezza predefinite sono rispettivamente 60 px e 44 px.
 
@@ -246,7 +247,7 @@ Per impostazione predefinita, `amp-social-share` include alcuni fornitori precon
 visita il sito [AMP Start](https://ampstart.com/components#links-and-sharing) per link di condivisione adattabili e preimpostati da utilizzare nelle tue pagine AMP.
 [/tip]
 
-###Stili personalizzati
+### Stili personalizzati
 
 Se vuoi utilizzare un tuo stile personale, puoi semplicemente sostituire gli stili già forniti come segue:
 ```css
@@ -256,7 +257,7 @@ amp-social-share[type="twitter"] {
 }
 ```
 
-##Sostituzione delle variabili
+## Sostituzione delle variabili
 
 Puoi utilizzare la [sostituzione delle variabili AMP globali](https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md) nell'elemento `<amp-social-share>`. Nell'esempio seguente, `TITLE` viene sostituito con il titolo pagina e `CANONICAL_URL` con l'URL canonico del documento.
 
@@ -266,6 +267,6 @@ Puoi utilizzare la [sostituzione delle variabili AMP globali](https://github.com
 </amp-social-share>
 ```
 
-##Convalida
+## Convalida
 
 Consulta le [regole amp-social-share](https://github.com/ampproject/amphtml/blob/master/extensions/amp-social-share/validator-amp-social-share.protoascii) nella specifica dello strumento di convalida AMP.

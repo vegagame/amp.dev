@@ -7,21 +7,25 @@ teaser:
   text: Afficher une vidéo YouTube.
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2015 The AMP HTML Authors. Tous droits réservés.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Autorisation sous licence Apache, version 2.0 (la "Licence") ;
-       n'utilisez ce fichier que dans le cadre de la Licence.
-       Vous pouvez obtenir une copie de la Licence à l'adresse suivante :
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-       Sauf dispositions légales applicables ou accord écrit préalable, le logiciel distribué dans le cadre de la Licence est fourni "EN L'ÉTAT", À L'EXCLUSION DE TOUTE GARANTIE OU CONDITION DE QUELQUE NATURE QUE CE SOIT, expresse ou implicite.
-       Consultez la Licence correspondant à la langue spécifique qui régit les autorisations et limitations applicables.
-  -->
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 
-#amp-youtube
+# amp-youtube
 
 Ce composant affiche une vidéo [YouTube](https://www.youtube.com/).
 
@@ -40,7 +44,7 @@ Ce composant affiche une vidéo [YouTube](https://www.youtube.com/).
   </tr>
 </table>
 
-##Exemple
+## Exemple
 
 Avec la mise en page responsive, les valeurs de largeur et de hauteur utilisées dans l'exemple ci-dessous doivent normalement générer des mises en page correctes pour les vidéos au format 16:9 :
 
@@ -66,7 +70,7 @@ Avec la mise en page responsive, les valeurs de largeur et de hauteur utilisées
   </amp-youtube>
   [/sourcecode]
 
-##Attributs
+## Attributs
 
 <table>
   <tr>
@@ -125,6 +129,6 @@ Avec la mise en page responsive, les valeurs de largeur et de hauteur utilisées
           </tr>
         </table>
 
-##Validation
+## Validation
 
 Consultez les [règles relatives à amp-youtube](https://github.com/ampproject/amphtml/blob/master/extensions/amp-youtube/validator-amp-youtube.protoascii) dans les spécifications du validateur AMP.

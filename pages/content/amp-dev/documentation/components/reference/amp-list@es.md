@@ -8,24 +8,25 @@ teaser:
   text: Descarga datos de forma dinámica y crea elementos de lista mediante una plantilla.
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2015 The AMP HTML Authors. Todos los derechos reservados.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Con licencia Apache, versión 2.0 (en adelante, la "Licencia").
-       Este archivo solo se puede utilizar según lo estipulado en la Licencia.
-       Se puede obtener una copia de la Licencia en la siguiente página:
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-       A menos que lo exija la legislación aplicable o se acuerde por escrito, el software
-       distribuido bajo la Licencia se proporciona "TAL CUAL", SIN NINGÚN
-       TIPO DE GARANTÍA NI DE CONDICIÓN, ni expresa ni implícita.
-       En la Licencia se puede consultar la información relativa a las limitaciones
-       y a los permisos aplicables a cada idioma.
-  -->
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 
-#amp-list
+# amp-list
 
 Obtiene contenido de forma dinámica desde un punto de conexión CORS JSON y lo renderiza mediante una plantilla proporcionada.
 
@@ -44,7 +45,7 @@ Obtiene contenido de forma dinámica desde un punto de conexión CORS JSON y lo 
   </tr>
 </table>
 
-##Uso
+## Uso
 
 El componente `<amp-list>` obtiene contenido dinámico de un punto final CORS JSON. La respuesta del punto de conexión contiene datos que se renderizan en la plantilla especificada.
 
@@ -105,7 +106,7 @@ amp-list div[role="list"] {
   }
 ```
 
-##Comportamiento
+## Comportamiento
 
 La solicitud siempre la realiza el cliente, aunque el documento se haya servido desde AMP Cache. La carga se activa mediante reglas de AMP normales en función de la distancia a la que está el elemento del viewport actual.
 
@@ -113,13 +114,13 @@ Si `<amp-list>` necesita más espacio después de la carga, solicita al tiempo d
 
 De forma predeterminada, `<amp-list>` añade una función de ARIA `list` al elemento de lista y una función `listitem` a los elementos renderizados mediante la plantilla.
 
-###Procesamiento por lotes de XHR
+### Procesamiento por lotes de XHR
 
 AMP envía XMLHttpRequests (XHR) por lotes a puntos de conexión JSON. Es decir, puedes utilizar una sola solicitud de datos JSON como fuente de datos para varios consumidores (p. ej., varios elementos `<amp-list>`) en una página AMP.  Por ejemplo, si tu `<amp-list>` hace un XHR a un punto de conexión, y mientras esté procesándose, los XHR posteriores que se hagan al mismo punto de conexión no se activarán, y devolverán en su lugar los resultados del primer XHR.
 
 Con `<amp-list>`, puedes utilizar el atributo [`items`](#items-optional) para renderizar un subconjunto de la respuesta JSON, lo que te permite tener varios elementos `<amp-list>` que muestren contenido diferente pero que compartan el mismo XHR.
 
-###Especificar un desbordamiento
+### Especificar un desbordamiento
 
 De forma opcional, `<amp-list>` puede contener un elemento con un atributo `overflow`. Este elemento se muestra si el tiempo de ejecución de AMP no puede cambiar el tamaño del elemento `<amp-list>` tras haberse solicitado.
 
@@ -147,7 +148,7 @@ Este es el CSS de `overflow`:
   }
 ```
 
-###Marcador de posición y respaldo
+### Marcador de posición y respaldo
 
 `<amp-list>` admite de manera opcional un marcador de posición o un respaldo.
 
@@ -163,7 +164,7 @@ Obtén más información sobre los [marcadores de posición y los respaldos](htt
 </amp-list>
 ```
 
-###Actualizar datos
+### Actualizar datos
 
 El elemento `<amp-list>` expone una acción `refresh` a la que pueden hacer referencia otros elementos en los atributos `on="tap:..."`.
 
@@ -177,9 +178,9 @@ El elemento `<amp-list>` expone una acción `refresh` a la que pueden hacer refe
 {% endraw %}
 ```
 
-###Cambiar de tamaño de forma dinámica
+### Cambiar de tamaño de forma dinámica
 
-#####Experimento: amp-list-resizable-children
+##### Experimento: amp-list-resizable-children
 
 En algunos casos, puede que necesitemos que `<amp-list>` cambie de tamaño en función de la interacción del usuario. Por ejemplo, cuando ``contiene un componente amp-accordion en el que el usuario puede tocar, cuando ``su contenido cambia debido a clases de CSS vinculadas o cuando al número de elementos que contiene cambia debido a un atributo `[src]` vinculado. Para lograrlo, la acción `changeToLayoutContainer` cambia la lista de amp a `layout="CONTAINER"` al activar esta acción. Echa un vistazo al siguiente ejemplo:
 
@@ -197,9 +198,9 @@ En algunos casos, puede que necesitemos que `<amp-list>` cambie de tamaño en fu
 
 Esta acción está disponible para su uso experimental en `amp-list-resizable-children`.
 
-##Atributos
+## Atributos
 
-#####src (obligatorio)
+##### src (obligatorio)
 
 La URL del punto de conexión remoto que devuelve el JSON que se renderizará en esta `<amp-list>`. Debe ser un servicio CORS HTTP y con protocolo de URL HTTPS.
 
@@ -209,7 +210,7 @@ El punto de conexión debe implementar los requisitos que se detallan en la [esp
 
 El atributo `src` se puede omitir si está presente el atributo `[src]`. Esta omisión resulta útil cuando se trabaja con [`amp-bind`](https://www.ampproject.org/docs/reference/components/amp-bind), para renderizar contenido en respuesta a un gesto del usuario en lugar de al cargar la página.
 
-#####credentials (opcional)
+##### credentials (opcional)
 
 Define una opción `credentials` tal y como especifica la [API de Fetch](https://fetch.spec.whatwg.org/).
 
@@ -230,7 +231,7 @@ A continuación, se muestra un ejemplo que define que se deben incluir credencia
 {% endraw %}
 ```
 
-#####items (opcional)
+##### items (opcional)
 
 Define la expresión que localizará la matriz que se va a procesar en la respuesta. Es una expresión con notación de puntos que navega a través de los campos de la respuesta JSON.
 `<amp-list>` espera una matriz de forma predeterminada; el atributo `single-item` se puede utilizar para cargar datos desde un objeto.
@@ -246,26 +247,26 @@ Cuando se especifica `items="items"`, que es el valor predeterminado, la respues
 }
 ```
 
-####max-items (opcional)
+#### max-items (opcional)
 
 Un valor de número entero que especifica la longitud máxima de la matriz de elementos que se va a renderizar.
 La matriz `items` se truncará al número de entradas de `max-items` si el valor devuelto supera el valor permitido.
 
-####single-item (opcional)
+#### single-item (opcional)
 
 Hace que `<amp-list>` trate el resultado devuelto como si fuera una matriz de un solo elemento. Se encapsulará una respuesta de objeto en una matriz, por lo que `{items: {...}}` se comportará como si fuera `{items: [{...}]}`.
 
-####reset-on-refresh (opcional)
+#### reset-on-refresh (opcional)
 
 Muestra un indicador de carga y un marcador de posición de nuevo cuando la fuente de la lista se actualiza mediante `amp-bind` o la acción `refresh()`.
 
 De forma predeterminada, solo se activará cuando se produzca una actualización que provoque una recuperación de red. Para que se active tras cualquier tipo de actualización, utiliza `reset-on-refresh="always"`.
 
-####[is-layout-container] (atributo experimental, opcional)
+#### [is-layout-container] (atributo experimental, opcional)
 
 Se trata de un atributo vinculable que debe ser "false" de forma predeterminada. Si se establece en "true" a través de `bind`, cambia el diseño de `<amp-list>` a `CONTAINER`. Este atributo es útil para lograr que se modifique el tamaño de amp-list de forma dinámica; no puede ser "true" de forma predeterminada porque `<amp-list>` no admite el formato `CONTAINER`, ya que puede provocar que el contenido se desplace al cargarse por primera vez. Este atributo está disponible para su uso experimental en `amp-list-resizable-children`. También se puede utilizar la acción `changeToLayoutContainer`.
 
-####binding (opcional)
+#### binding (opcional)
 
 En las páginas que utilizan `<amp-list>` y `amp-bind`, este atributo controla si se bloquea o no el renderizado para evaluar los bindings (por ejemplo, `[text]`) de los elementos secundarios ya renderizados.
 
@@ -277,11 +278,11 @@ Para lograr un mayor rendimiento, recomendamos utilizar `binding="no"` o `bindin
 
 Si no se proporciona el atributo `binding`, el valor predeterminado es `always`.
 
-##Experimento: Cargar más y desplazamiento infinito (amp-list-load-more)
+## Experimento: Cargar más y desplazamiento infinito (amp-list-load-more)
 
 Hemos introducido los atributos `load-more` con las opciones [manual](https://cdn.ampproject.org/experiments.html) y `auto` para que se pueda aplicar la paginación y el desplazamiento infinito.
 
-####Ejemplo de uso
+#### Ejemplo de uso
 
 ```html
 <amp-list height="200" src="https://my.rest.endpoint/" width="100" load-more="auto">
@@ -294,13 +295,13 @@ Hemos introducido los atributos `load-more` con las opciones [manual](https://cd
 
 Para ver ejemplos prácticos, consulta las páginas [test/manual/amp-list/infinite-scroll-1.amp.html](../../test/manual/amp-list/infinite-scroll-1.amp.html) y [test/manual/amp-list/infinite-scroll-2.amp.html](../../test/manual/amp-list/infinite-scroll-1.amp.html).
 
-###Atributos
+### Atributos
 
-####load-more (obligatorio)
+#### load-more (obligatorio)
 
 Este atributo admite dos valores: "auto" o "manual". Si se define el valor de este atributo en "manual", se mostrará un botón de "load-more" (cargar más) al final de `<amp-list>`. Si se define como "auto", `<amp-list>` cargará automáticamente más elementos tres viewports más abajo para conseguir un efecto de desplazamiento infinito.
 
-####load-more-bookmark (opcional)
+#### load-more-bookmark (opcional)
 
 Este atributo especifica en los datos devueltos el nombre del campo que proporcionará la URL para que se carguen los siguientes elementos. Si no se especifica este atributo, `<amp-list>` espera que la carga útil del JSON tenga el campo `load-more-src`, que corresponde a la siguiente URL que se debe cargar. Si este campo tiene otro nombre, puedes especificarlo mediante el campo `load-more-bookmark`. En la siguiente carga útil de ejemplo, especificaríamos `load-more-bookmark="next"`.
 
@@ -308,15 +309,15 @@ Este atributo especifica en los datos devueltos el nombre del campo que proporci
 { "items": [...], "next": "https://url.to.load" }
 ```
 
-###Personalizar los elementos load-more
+### Personalizar los elementos load-more
 
 Un componente `<amp-list>` con el atributo `load-more` contiene los siguientes elementos de UI: un botón de load-more, un cargador, un elemento de load-failed ("error al cargar") y, de manera opcional, un botón final que marca el final de la lista. Estos elementos se pueden personalizar añadiendo `<amp-list-load-more>` como elementos secundarios de `<amp-list>`, con los siguientes atributos:
 
-####load-more-button
+#### load-more-button
 
 Un elemento `<amp-list-load-more>` con el atributo `load-more-button` que aparece al final de la lista (para "load-more" con valor "manual") si quedan más elementos que cargar. Al hacer clic en este elemento, se activará una recuperación para cargar más elementos de la URL que contiene el campo `load-more-src` o del campo del atributo `load-more-bookmark` que corresponde a los datos devueltos. Este elemento se puede personalizar añadiendo un elemento secundario a `<amp-list>` que tenga el atributo `load-more-button`.
 
-#####Ejemplo:
+##### Ejemplo:
 
 ```html
 <amp-list load-more="manual" src="https://www.load.more.example.com/" width="400" height="800">
@@ -328,7 +329,7 @@ Un elemento `<amp-list-load-more>` con el atributo `load-more-button` que aparec
 ```
   Este elemento puede estar basado en una plantilla de `amp-mustache`.
 
-#####Ejemplo:
+##### Ejemplo:
 
 ```html
 {% raw %}<amp-list load-more="auto" width="100" height="500" src="https://www.load.more.example.com/">
@@ -345,7 +346,7 @@ Un elemento `<amp-list-load-more>` con el atributo `load-more-button` que aparec
 {% endraw %}
 ```
 
-####load-more-loading
+#### load-more-loading
 
 Este elemento es un cargador que se muestra si el usuario llega al final de la lista y el contenido sigue cargándose o si hace clic en el elemento `load-more-button` mientras los elementos secundarios de `<amp-list>` todavía se están cargando. Este elemento se puede personalizar añadiendo un elemento secundario a `<amp-list>` que tenga el atributo `load-more-loading`. Por ejemplo:
 ```html
@@ -357,7 +358,7 @@ Este elemento es un cargador que se muestra si el usuario llega al final de la l
   </amp-list>
 ```
 
-####load-more-failed
+#### load-more-failed
 
 Un elemento `<amp-list-load-more>` con el atributo `load-more-failed`, que a su vez contiene un botón con el atributo `load-more-clickable`. Se mostrará en la parte inferior de `<amp-list>` si este no se carga. Al hacer clic en este elemento, se volverá a cargar la URL que ha tenido un error. Este elemento se puede personalizar añadiendo un elemento secundario a `<amp-list>` que tenga el atributo `load-more-failed`. Por ejemplo:
 
@@ -384,7 +385,7 @@ En el ejemplo anterior, se puede hacer clic en todo el elemento `load-more-faile
 </amp-list>
 ```
 
-####load-more-end
+#### load-more-end
 
 Este elemento no se proporciona de forma predeterminada, pero si un elemento `<amp-list-load-more>` con el atributo `load-more-end` se añade a `<amp-list>` como elemento secundario, aparecerá al final de `<amp-list>` cuando no queden más elementos que mostrar.  Este elemento puede estar basado en una plantilla de `amp-mustache`. Por ejemplo:
 
@@ -397,11 +398,11 @@ Este elemento no se proporciona de forma predeterminada, pero si un elemento `<a
 </amp-list>
 ```
 
-#####atributos comunes
+##### atributos comunes
 
 Este elemento incluye [atributos comunes](https://www.ampproject.org/docs/reference/common_attributes) que se aplican a los componentes de AMP.
 
-##Sustituciones
+## Sustituciones
 
 `<amp-list>` admite todas las sustituciones estándar de variables de URL.
 Para obtener más información, consulta la [guía de sustituciones](../../spec/amp-var-substitutions.md).
@@ -412,6 +413,6 @@ Por ejemplo:
 ```
 puede hacer una solicitud a algo similar a `https://foo.com/list.json?0.8390278471201`. Es decir, se genera un valor RANDOM de forma aleatoria al producirse cada impresión.
 
-##Validación
+## Validación
 
 Consulta las [reglas de amp-list](https://github.com/ampproject/amphtml/blob/master/extensions/amp-list/validator-amp-list.protoascii) en la especificación de la herramienta de validación de AMP.

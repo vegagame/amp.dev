@@ -8,20 +8,25 @@ teaser:
   text: Mustache.js şablonlarının oluşturulmasına izin verir.
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2015 The AMP HTML Authors. Tüm Hakları Saklıdır.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Apache Lisansı, Sürüm 2.0 ("Lisans") ile lisanslıdır; bu dosyayı Lisans koşulları dışında kullanamazsınız.
-       Lisansın bir kopyasını şu adresten edinebilirsiniz:
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-       Geçerli yasa tarafından gerekli görülmediği veya yazılı olarak bir sözleşme yapılmadığı sürece, Lisanslı olarak dağıtılan yazılım açıkça veya zımni olarak HİÇBİR GARANTİ VEYA KOŞUL SUNULMADAN "OLDUĞU GİBİ" dağıtılır.
-       Lisans kapsamında belirli bir dilde sağlanan izinleri ve uygulanan kısıtlamaları öğrenmek için söz konusu dille ilgili Lisans'a bakın.
-  -->
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 
-#amp-mustache
+# amp-mustache
 
 [Mustache.js](https://github.com/janl/mustache.js/) oluşturulmasına izin verir.
 
@@ -41,14 +46,14 @@ teaser:
 </table>
 
 
-##Sürüm notları
+## Sürüm notları
 
 | Sürüm | Açıklama |
 |-------|-----|
 | 0.2 | `<svg>` öğeleri için destek ve daha küçük paket boyutu (12,2 KB - 20,5 KB, gzip ile sıkıştırılmış).<br><br> Daha modern bir temiz HTML kitaplığına (Caja'dan DOMPurify'a) geçiş. Bu, etiket ve özellik beyaz listesi oluşturmadaki farklılıklar nedeniyle zarar veren küçük değişikliklere neden olabilir. Oluşturulan işaretlemedeki değişikliklerin işlevselliği etkilemediğinden emin olmak için üretim kanalına aktarmadan önce sayfalarınızı test etmenizi öneririz. |
 | 0.1 | İlk uygulama. |
 
-##Söz dizimi
+## Söz dizimi
 
 Mustache, mantık içermeyen bir şablon söz dizimidir. Daha ayrıntılı bilgi için [Mustache.js dokümanlarına](https://github.com/janl/mustache.js/) bakın. Temel Mustache etiketlerinden bazıları şunlardır:
 
@@ -57,7 +62,7 @@ Mustache, mantık içermeyen bir şablon söz dizimidir. Daha ayrıntılı bilgi
 * {% raw %}`{{^section}}`{% endraw %}{% raw %}`{{/section}}`{% endraw %}: Ters çevrilmiş bir etiket. Bir değişkenin var olmayışını test edebilir.
 * {% raw %}`{{{unescaped}}}`{% endraw %}: Çıkış karaktersiz HTML. Sağlayabileceği işaretlemede kısıtlanmıştır (aşağıdaki "Kısıtlamalar" konusuna bakın).
 
-##Kullanım
+## Kullanım
 
 `amp-mustache` şablonu, [AMP Şablon Spesifikasyonu](../../spec/amp-html-templates.md)'na göre tanımlanmalı ve kullanılmalıdır.
 
@@ -88,9 +93,9 @@ AMP doğrulaması yararlı dev-x ipuçları sağladığından, mümkün olan her
 
 Şablonların nasıl keşfedileceğine, ne zaman oluşturulacağına ve verilerin nasıl sağlanacağına, içeriğini oluşturmak için bu şablonu kullanan hedef AMP öğesi (ör. bir [amp-list](../amp-list/amp-list.md), [amp-form](../amp-form/amp-form.md) vb.) karar verir.
 
-##Kısıtlamalar
+## Kısıtlamalar
 
-###Doğrulama
+### Doğrulama
 
 Tüm AMP şablonları gibi `amp-mustache` şablonlarının da iyi biçimlendirilmiş DOM parçaları olmalıdır. Bu, diğer noktaların yanı sıra, `amp-mustache` etiketini şunlar için kullanamayacağınız anlamına gelir:
 
@@ -99,13 +104,13 @@ Tüm AMP şablonları gibi `amp-mustache` şablonlarının da iyi biçimlendiril
 
 "Üçlü mustache"ın sonucu yalnızca şu etiketlere izin verecek şekilde temizlenir: `a`, `b`, `br`, `caption`, `colgroup`, `code`, `del`, `div`, `em`, `i`, `ins`, `li`, `mark`, `ol`, `p`, `q`, `s`, `small`, `span`, `strong`, `sub`, `sup`, `table`, `tbody`, `time`, `td`, `th`, `thead`, `tfoot`, `tr`, `u`, `ul`.
 
-###Temizleme
+### Temizleme
 
 Mustache çıktısı, güvenlik nedenleriyle ve AMP'nin geçerliliğini korumak için temizlenir. Bu, belirli öğelerin ve özelliklerin haber verilmeden kaldırılmasına neden olabilir.
 
-##Güçlükler
+## Güçlükler
 
-###İç içe yerleştirilmiş şablonlar
+### İç içe yerleştirilmiş şablonlar
 
 AMP Doğrulaması'na göre `<template>` öğeleri, diğer `<template>` öğelerinin alt öğeleri olmamalıdır. Bu durum, `amp-list` ve `amp-form` gibi, şablonları kullanan iki bileşen iç içe yerleştirilirken ortaya çıkabilir.
 
@@ -131,7 +136,7 @@ Bu sorunu geçici olarak çözmek için `<template>` öğeleri, bileşendeki `te
 </amp-list>
 {% endraw %}[/sourcecode]
 
-###Tablolar
+### Tablolar
 
 AMP şablon dizelerinin `<template>` öğelerinde belirtilmesi gerektiğinden bu durum, tarayıcı ayrıştırması nedeniyle beklenmeyen davranışlara neden olabilir. Örneğin, `<table>` öğelerinin, metnin [koruyucu üst öğesi](https://www.w3.org/TR/html5/syntax.html#unexpected-markup-in-tables) olmasına neden olabilir. Aşağıdaki örnekte:
 
@@ -169,7 +174,7 @@ Geçici çözümler arasında Mustache bölümlerinin HTML yorumlarında sarmala
 </script>
 {% endraw %}[/sourcecode]
 
-###Çıkış karakterlerini alıntılama
+### Çıkış karakterlerini alıntılama
 
 Özellik değerlerini hesaplamak için `amp-mustache` kullanılırken çıkış karakterlerini alıntılama bir sorun olabilir. Örneğin:
 
@@ -187,7 +192,7 @@ Mustache HTML `&amp;` çıkış karakterlerini kullanacağından (ör. `&quot;` 
 
 Bunun yerine, bu değişikliğin `amp-mustache` içinde gerçekleştirilmesi için [açık bir teklif](https://github.com/ampproject/amphtml/issues/8395) vardır. Bu teklifi desteklemek isterseniz lütfen konu hakkında yorum yapın.
 
-###HTML varlıkları
+### HTML varlıkları
 
 HTML varlıkları, `<template>` öğelerinde korunmaz.
 
@@ -195,6 +200,6 @@ Kullanıcı tarafından oluşturulmuş metin içeren bir `<template>` öğesinin
 
 Geçici çözümler, {% raw %}`{{`{% endraw %} gibi dizeleri farklı karakterlerle değiştirmeyi veya bunları kullanıcı tarafından oluşturulmuş içerikten bütünüyle ayırmayı içerir.
 
-##Doğrulama
+## Doğrulama
 
 AMP doğrulayıcı spesifikasyonundaki [amp-mustache kurallarına](https://github.com/ampproject/amphtml/blob/master/extensions/amp-mustache/validator-amp-mustache.protoascii) bakın.

@@ -7,18 +7,25 @@ teaser:
     layout.
 $title: amp-layout
 ---
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       版权所有 2016 The AMP HTML Authors。保留所有权利。
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       根据 Apache 许可 2.0 版（以下简称“许可”）授权用户使用；您只有在遵循该许可的情况下才可使用本文件。您可以通过以下网址获得该许可的副本：
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-       除非适用法律要求或已达成书面协议，否则按照该许可分发的软件均“按原样”分发，不提供任何类型的担保或条件（无论明示或暗示）。有关该许可规定的具体语言管辖权限和限制，请参阅该许可。
-  -->
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 
-#<a name="amp-layout"></a>`amp-layout`
+# <a name="amp-layout"></a>`amp-layout`
 
 <table>
   <tr>
@@ -31,7 +38,7 @@ $title: amp-layout
   </tr>
 </table>
 
-##概述
+## 概述
 
 借助 `amp-layout` 组件，您可以将基于宽高比的自适应布局应用于任何元素。`amp-layout` 组件与现有 AMP 组件的 [layout](https://www.ampproject.org/docs/guides/responsive/control_layout#the-layout-attribute) 属性的工作原理相似，但前者支持用作子级的所有 HTML 标记。其他支持的布局均使用 `amp-layout`（例如 fixed-height、fixed 等）。
 
@@ -48,10 +55,10 @@ $title: amp-layout
   </amp-layout>
 ```
 
-##属性
+## 属性
 
 此元素包含扩展到 AMP 组件的[常见属性](https://www.ampproject.org/docs/reference/common_attributes)。
 
-##验证
+## 验证
 
 请参阅 AMP 验证工具规范中的 [amp-layout 规则](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii)。

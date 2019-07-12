@@ -7,20 +7,25 @@ teaser:
   text: Öğeleri tam görüntü alanı "lightbox" kalıcı iletişim kutusunda görüntüler.
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Telif Hakkı 2015 The AMP HTML Authors. Tüm Hakları Saklıdır.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Apache Lisansı, Sürüm 2.0 ("Lisans") ile lisanslıdır; bu dosyayı Lisans koşulları dışında kullanamazsınız.
-       Lisansın bir kopyasını şu adresten edinebilirsiniz:
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-       Geçerli yasa tarafından gerekli görülmediği veya yazılı olarak bir sözleşme yapılmadığı sürece, Lisanslı olarak dağıtılan yazılım açıkça veya zımni olarak HİÇBİR GARANTİ VEYA KOŞUL SUNULMADAN "OLDUĞU GİBİ" dağıtılır.
-       Lisans kapsamında belirli bir dilde sağlanan izinleri ve uygulanan kısıtlamaları öğrenmek için söz konusu dille ilgili Lisans'a bakın.
-  -->
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 
-#amp-lightbox
+# amp-lightbox
 
 <table>
   <tr>
@@ -42,7 +47,7 @@ teaser:
 </table>
 
 
-##Davranış
+## Davranış
 
 `amp-lightbox` bileşeni, tam görüntü alanı yer paylaşımı/kalıcı iletişim kutusunda görüntülenen alt öğeleri tanımlar. Kullanıcı bir öğeye (ör. bir düğme) dokunduğunda veya tıkladığında, tıklanan öğenin `on` özelliğinde referans alınan `amp-lightbox` kimliği, lightbox'ın tam görüntü alanını kaplamasını tetikler ve `amp-lightbox` alt öğelerini görüntüler.
 
@@ -60,7 +65,7 @@ Klavyedeki çıkış tuşuna basıldığında lightbox kapanır. Alternatif olar
 Lightbox'ta resimleri göstermek için [`<amp-image-lightbox>`](https://www.ampproject.org/docs/reference/components/amp-image-lightbox) bileşeni de vardır.
 [/tip]
 
-##Özellikler
+## Özellikler
 
 <table>
   <tr>
@@ -93,11 +98,11 @@ Lightbox'ta resimleri göstermek için [`<amp-image-lightbox>`](https://www.ampp
           </tr>
         </table>
 
-##Stil
+## Stil
 
 `amp-lightbox` özelliğini standart CSS ile şekillendirebilirsiniz.
 
-##İşlemler
+## İşlemler
 
 `amp-lightbox`, [söz diziminde AMP kullanabileceğiniz aşağıdaki işlemlerin tetiklenmesini](https://www.ampproject.org/docs/reference/amp-actions-and-events) sağlar:
 
@@ -116,7 +121,7 @@ Lightbox'ta resimleri göstermek için [`<amp-image-lightbox>`](https://www.ampp
   </tr>
 </table>
 
-##<a id="a4a"></a> AMPHTML reklamlarında `amp-lightbox` özelliğini kullanma
+## <a id="a4a"></a> AMPHTML reklamlarında `amp-lightbox` özelliğini kullanma
 
 [tip type="note"]
 `amp-lightbox` bileşeninin AMPHTML reklamlarında kullanılması [deneme aşamasındadır](https://www.ampproject.org/docs/reference/experimental) ve etkin bir şekilde geliştirilmektedir. AMPHTML reklamlarında `amp-lightbox` özelliğini kullanmak [`amp-lightbox-a4a-proto` denemesini etkinleştirin](http://cdn.ampproject.org/experiments.html).
@@ -124,7 +129,7 @@ Lightbox'ta resimleri göstermek için [`<amp-image-lightbox>`](https://www.ampp
 
 `amp-lightbox` özelliğinin normal AMP dokümanlarında kullanılması ile [AMPHTML'de yazılmış reklamlar](../amp-a4a/amp-a4a-format.md) arasında bazı farklar vardır:
 
-###close-button gerektirir
+### close-button gerektirir
 
 AMPHTML reklamları için `close-button` özelliği gerekir. Bu özellik, lightbox'ınızın üst kısmında bir başlığın oluşturulmasına neden olur. Başlık, bir kapat düğmesini ve "Reklam"ı görüntüleyen bir etiketi içerir. Bu başlık aşağıdakilerin sağlanması için gereklidir:
 
@@ -133,21 +138,21 @@ AMPHTML reklamları için `close-button` özelliği gerekir. Bu özellik, lightb
 
 `close-button` özelliği zorunludur ve yalnızca AMPHTML reklamlarında buna izin verilir. Normal AMP dokümanlarında, `<amp-lightbox>` içeriğinin parçası olarak ihtiyaç duyduğunuz herhangi bir yerde bir kapat düğmesi oluşturabilirsiniz.
 
-###Kaydırılabilir lightbox'lara izin verilmez
+### Kaydırılabilir lightbox'lara izin verilmez
 
 AMPHTML reklamlarında kaydırılabilir lightbox'lara izin verilmez.
 
-###Şeffaf arka plan
+### Şeffaf arka plan
 
 AMP çalışma zamanı lightbox genişletilmeden önce reklam öğenizi yeniden boyutlandırdığı ve yeniden hizaladığı için AMPHTML reklamlarında `<amp-lightbox>` özelliğini kullandığınızda, `<body>` öğenizin arka planı şeffaf hale gelir. Bu, lightbox açılırken reklam öğesinin görsel olarak "atlanmasını" önlemek için yapılır. Reklam öğenizin bir arka plana ihtiyacı varsa bu arka planı `<body>` öğesi yerine bir ara kapsayıcıda (tam boyutlu `<div>` gibi) ayarlayın.
 
 AMPHTML reklamı bir üçüncü taraf ortamında (örneğin, AMP olmayan bir dokümanda) yayınlandığında, reklam öğesi görüntü alanına göre ortalandıktan sonra genişletilir. Bu durum, üçüncü taraf iframe'lerinin eşzamansız olan çerçeve yeniden boyutlandırma gibi özellikler için bir postMessage API'sini kullanma gerekliliğinden kaynaklanır. Böylece, önce reklam öğesinin ortalanması görsel atlamalar olmadan yumuşak bir geçişe olanak tanır.
 
-###AMPHTML reklamları için lightbox'ta geçiş örnekleri
+### AMPHTML reklamları için lightbox'ta geçiş örnekleri
 
 Aşağıdaki örneklerde, bir güvenilir iframe ve bir üçüncü taraf iframe içindeki AMPHTML reklamları için lightbox öğesinde `animate-in="fly-in-bottom"` özelliğinin ayarlandığı bir AMPHTML reklam geçişinin nasıl göründüğü gösterilmektedir.
 
-#####Güvenilir iframe'lerde (ör. AMP önbelleğinden gelmektedir)
+##### Güvenilir iframe'lerde (ör. AMP önbelleğinden gelmektedir)
 
 <amp-img alt="güvenilir iframe içindeki lightbox reklamı" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/master/spec/img/lightbox-ad-fie.gif" layout="fixed">
   <noscript>
@@ -155,7 +160,7 @@ Aşağıdaki örneklerde, bir güvenilir iframe ve bir üçüncü taraf iframe i
     </noscript>
   </amp-img>
 
-#####Üçüncü taraf iframe'lerde (ör. AMP önbelleği dışındadır)
+##### Üçüncü taraf iframe'lerde (ör. AMP önbelleği dışındadır)
 
 <amp-img alt="3p iframe içindeki lightbox reklamı" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/master/spec/img/lightbox-ad-3p.gif" layout="fixed">
   <noscript>
@@ -163,6 +168,6 @@ Aşağıdaki örneklerde, bir güvenilir iframe ve bir üçüncü taraf iframe i
     </noscript>
   </amp-img>
 
-##Doğrulama
+## Doğrulama
 
 AMP doğrulayıcı spesifikasyonundaki [amp-lightbox kurallarına](https://github.com/ampproject/amphtml/blob/master/extensions/amp-lightbox/validator-amp-lightbox.protoascii) bakın.

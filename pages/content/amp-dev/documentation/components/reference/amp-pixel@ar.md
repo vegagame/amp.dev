@@ -8,20 +8,25 @@ teaser:
   text: A tracking pixel to count page views.
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-حقوق الطبع والنشر 2015 لصالح "مؤلفو رمز HTML لصفحات AMP". جميع الحقوق محفوظة.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-تم الترخيص بموجب ترخيص Apache، الإصدار 2.0 (المشار إليه لاحقًا باسم "الترخيص")؛ ولا يحق لك استخدام هذا الملف إلا بما يتوافق مع الترخيص.
-ويمكنك الحصول على نسخة من الترخيص على الصفحة
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-ما لم يكن مطلوبًا بموجب القانون الساري أو تمت الموافقة عليه كتابةً، يتم توزيع البرنامج الذي يتم توزيعه بموجب الترخيص "كما هو"، وبدون أية ضمانات أو شروط من أي نوع، سواء كانت صريحة أو ضمنية.
-راجِع الترخيص للاطّلاع على اللغة المحددة التي تحكم الأذونات والقيود بموجب الترخيص.
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
 -->
 
-#<a name="amp-pixel"></a> `amp-pixel`
+# <a name="amp-pixel"></a> `amp-pixel`
 
 [جدول المحتويات]
 
@@ -40,7 +45,7 @@ teaser:
   </tr>
 </table>
 
-##السلوك
+## السلوك
 
 يتصرف مكوِّن `amp-pixel` كبكسل تتبع بسيط `img`. يأخذ عنوان URL واحدًا لكنه يوفر متغيرات يمكن استبدالها بالمكوِّن في سلسلة عنوان URL عند إرسال الطلب. راجع قسم [الاستبدالات](#substitutions) لمعرفة مزيد من التفاصيل.
 
@@ -55,13 +60,13 @@ teaser:
 عند معالجة عناوين AMP URL في الرأس المُحيل لطلبات التحليلات، أزِل المعلَمة `usqp` أو تجاهلها. يستخدم Google هذه المعلَمة لتشغيل تجارب "لذاكرة التخزين المؤقت لصفحات AMP من Google".
 [/tip]
 
-##السمات
+## السمات
 
-#####src (مطلوبة)
+##### src (مطلوبة)
 
 هي عنوان URL بسيط لنقطة نهاية بعيدة والتي يجب أن تتبع البروتوكول `https`.
 
-#####referrerpolicy (اختياريّة)
+##### referrerpolicy (اختياريّة)
 
 تشبه هذه السمة سمة `referrerpolicy` على `<img>` إلا أن `no-referrer` هي القيمة الوحيدة المقبولة. في حال تحديد `referrerpolicy=no-referrer`، تتم إزالة الرأس `referrer` من الطلب HTTP.
 
@@ -71,16 +76,16 @@ teaser:
     referrerpolicy="no-referrer"></amp-pixel>
 ```
 
-#####allow-ssr-img (اختياريّة)
+##### allow-ssr-img (اختياريّة)
 
 تشير هذه السمة المستخدَمة في تصميمات إعلانات AMP4ADS إلى أنه في إطار التحويل ما بعد مرحلة التحقق، يمكن وضع عنصر img مباشرة داخل العنصر amp-pixel، ما يسمح بإرسال فحص الاتصال بالتوازي مع جلب/تنفيذ وقت تشغيل AMP.
 وهو ما يعني عدم توسيع أي وحدات ماكرو داخل عنوان URL لذا استخدَم السمة فقط إذا لم تكن متوفرة في src.
 
-#####السمات المشتركة
+##### السمات المشتركة
 
 يتضمن هذا العنصر [السمات المشتركة](https://www.ampproject.org/docs/reference/common_attributes) التي تشمل مكونات AMP.
 
-##الاستبدالات
+## الاستبدالات
 
 يسمح `amp-pixel` بجميع استبدالات متغيرات عناوين URL القياسية.
 اطّلِع على [دليل الاستبدالات](../spec/amp-var-substitutions.md) للحصول على المزيد من المعلومات.
@@ -92,10 +97,10 @@ teaser:
     layout="nodisplay"></amp-pixel>
 ```
 
-##التصميم
+## التصميم
 
 يجب ألا يكون للمكوِّن `amp-pixel` تصميم.
 
-##التحقق
+## التحقق
 
 اطِّلع على [قواعد amp-pixel](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii) في مواصفات مدقق AMP.

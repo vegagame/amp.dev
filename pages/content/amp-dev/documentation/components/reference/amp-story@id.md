@@ -6,8 +6,10 @@ teaser:
   text: A rich, visual storytelling format.
 ---
 
-<!--
-       Copyright 2017 The AMP HTML Authors. All Rights Reserved.
+
+<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+<!---
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
        Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -55,18 +57,18 @@ Komponen ini bersifat eksperimental dan masih terus dikembangkan. Jika ada masal
 [/tip]
 
 
-##Catatan versi
+## Catatan versi
 
 | Versi | Deskripsi                                                            |
 |-------|----------------------------------------------------------------------|
 | 1.0     | Versi saat ini, sejak 16-07-2018.                                     |
 | 0.1     | Implementasi awal.  Tidak digunakan lagi, dan akan dihapus pada 19-03-2019 |
 
-##Bermigrasi dari 0.1 ke 1.0
+## Bermigrasi dari 0.1 ke 1.0
 
 Mulai 16-07-2018, versi 0.1 dianggap tidak digunakan lagi dan akan dihapus pada 19-03-2019.  Ada potensi terjadinya perubahan yang dapat menyebabkan gangguan minor, karena artikel Anda akan otomatis diupgrade untuk menggunakan versi 1.0.  Sebaiknya migrasikan halaman Anda ke versi 1.0 secara manual sebelum tanggal ini untuk memastikan fungsionalitas dan desain yang sesuai.
 
-###Kapabilitas bookend baru
+### Kapabilitas bookend baru
 
 Kami telah menambahkan kapabilitas baru ke bookend amp-stories, yang memungkinkan dukungan komponen dan tata letak visual yang lebih beragam. Sebagian dari perubahan ini meliputi:
 
@@ -91,7 +93,7 @@ Untuk menggunakan kapabilitas baru ini, tambahkan tag `<amp-story-bookend>` seba
 
 Pelajari lebih lanjut komponen baru ini dan cara menetapkannya dalam konfigurasi JSON di bagian [amp-story-bookend](#bookend-amp-story-bookend).
 
-###Persyaratan metadata baru
+### Persyaratan metadata baru
 
 Kami telah menambahkan atribut metadata baru ke elemen `<amp-story>`. Atribut metadata ini akan digunakan untuk menampilkan pratinjau artikel di seluruh ekosistem artikel AMP. Misalnya, atribut ini dapat digunakan untuk merender link pratinjau yang menarik di bookend artikel terkait. Dengan menyediakan atribut ini, Anda dapat memastikan bahwa artikel akan tetap berlaku untuk pengalaman yang kaya dan tersemat di menu artikel AMP yang akan datang.
 
@@ -116,7 +118,7 @@ Atribut baru:
 | `poster-square-src` | Poster artikel dalam format persegi (rasio tinggi lebar 1x1). |
 | `poster-landscape-src` | Poster artikel dalam format lanskap (rasio tinggi lebar 4x3). |
 
-####Panduan `publisher-logo-src`
+#### Panduan `publisher-logo-src`
 
 Panduan berikut berlaku untuk gambar yang digunakan di logo penayang:
 
@@ -158,7 +160,7 @@ Panduan berikut berlaku untuk gambar yang digunakan di logo penayang:
 * Gunakan satu logo per brand yang konsisten di seluruh artikel AMP.
 * Logo berukuran setidaknya 96x96 piksel.
 
-####Panduan poster (untuk `poster-portrait-src`, `poster-landscape-src`, dan `poster-square-src`)
+#### Panduan poster (untuk `poster-portrait-src`, `poster-landscape-src`, dan `poster-square-src`)
 
 Panduan berikut berlaku untuk gambar yang digunakan di poster artikel:
 
@@ -172,7 +174,7 @@ Panduan berikut berlaku untuk gambar yang digunakan di poster artikel:
     * Lanskap: 928x696 piksel
     * Persegi: 928x928 piksel</li>
 
-##Ringkasan
+## Ringkasan
 
 Ekstensi `amp-story` menyediakan format baru untuk menampilkan konten visual yang dapat disusun menjadi pengalaman bercerita. Dengan artikel AMP, Anda dapat menyajikan informasi dan konten yang berukuran kecil tetapi kaya secara visual kepada pengguna.
 
@@ -184,7 +186,7 @@ Ekstensi `amp-story` menyediakan format baru untuk menampilkan konten visual yan
     </amp-anim>
 </figure>
 
-##Format artikel AMP
+## Format artikel AMP
 
 [Artikel AMP](#story%3a-amp-story) adalah dokumen HTML AMP lengkap yang terdiri dari [sejumlah halaman](#pages%3a-amp-story-page), yang di dalam halaman tersebut terdapat [lapisan-lapisan](#layers%3a-amp-story-grid-layer), dan di dalam lapisan terdapat elemen AMP &amp; HTML, seperti media, analisis, teks, dan sebagainya.
 
@@ -194,7 +196,7 @@ Ekstensi `amp-story` menyediakan format baru untuk menampilkan konten visual yan
   </noscript>
 </amp-img>
 
-###Boilerplate
+### Boilerplate
 
 Markup berikut merupakan titik awal atau boilerplate yang baik. Salin dan simpan markup ini ke dalam file berekstensi `.html`.
 
@@ -244,7 +246,7 @@ Markup berikut merupakan titik awal atau boilerplate yang baik. Salin dan simpan
 
 Isi kode di atas menghasilkan artikel dengan dua halaman.  Setiap halaman memiliki gambar latar belakang dengan tampilan penuh, dengan string teks sederhana di bagian atasnya.
 
-###Markup yang diperlukan untuk amp-story
+### Markup yang diperlukan untuk amp-story
 
 Format HTML artikel AMP mematuhi [persyaratan markup yang sama dengan dokumen HTML AMP yang valid](https://www.ampproject.org/docs/reference/spec#required-markup), beserta persyaratan tambahan berikut:
 
@@ -254,7 +256,7 @@ Format HTML artikel AMP mematuhi [persyaratan markup yang sama dengan dokumen HT
 | Berisi tag `<script async src="https://cdn.ampproject.org/v0/amp-story-1.0.js" custom-element="amp-story"></script>` sebagai turunan ketiga tag `<head>`. | Menyertakan dan memuat library JS amp-story. |
 | Berisi tag `<link rel="canonical" href="$STORY_URL">` di dalam `<head>`. | Link mengarah ke artikel itu sendiri, mengidentifikasi artikel sebagai dokumen kanonis. |
 
-##Artikel: `amp-story`
+## Artikel: `amp-story`
 
 Komponen `amp-story` merepresentasikan seluruh artikel.  Komponen itu sendiri mengimplementasikan shell UI, termasuk menangani gestur dan navigasi, serta menyisipkan UI application shell (kontrol, status progres, dll.).
 
@@ -266,7 +268,7 @@ Komponen `amp-story` merepresentasikan seluruh artikel.  Komponen itu sendiri me
     </amp-anim>
   </figure>
 
-###Contoh
+### Contoh
 
 ```html
 <amp-story
@@ -285,53 +287,53 @@ Komponen `amp-story` merepresentasikan seluruh artikel.  Komponen itu sendiri me
 </amp-story>
 ```
 
-###Atribut
+### Atribut
 
-#####standalone [wajib]
+##### standalone [wajib]
 
 Mengidentifikasi bahwa dokumen AMP merupakan artikel.
 
-#####title [wajib]
+##### title [wajib]
 
 Judul artikel.
 
-#####publisher [wajib]
+##### publisher [wajib]
 
 Nama penayang artikel.
 
-#####publisher-logo-src [wajib]
+##### publisher-logo-src [wajib]
 
 URL ke logo penayang artikel dalam format persegi (rasio tinggi lebar 1x1). Misalnya `publisher-logo-src="https://example.com/logo/1x1.png"`, di mana 1x1.png merupakan logo berukuran 36x36 piksel.
 
-#####poster-portrait-src [wajib]
+##### poster-portrait-src [wajib]
 
 URL ke [poster artikel](#posters) dalam format potret (rasio tinggi lebar 3x4).
 
-#####supports-landscape [opsional]
+##### supports-landscape [opsional]
 
 Mengaktifkan dukungan orientasi lanskap di perangkat seluler dan pengalaman lanskap tampilan penuh di perangkat desktop.
 
-#####background-audio [opsional]
+##### background-audio [opsional]
 
 URL ke file audio yang diputar sepanjang artikel.
 
-#####poster-square-src [opsional]
+##### poster-square-src [opsional]
 
 URL ke [poster artikel](#posters) dalam format persegi (rasio tinggi lebar 1x1).
 
-#####poster-landscape-src [opsional]
+##### poster-landscape-src [opsional]
 
 URL ke [poster artikel](#posters) dalam format lanskap (rasio tinggi lebar 4x3).
 
-###Poster
+### Poster
 
 "Poster" adalah gambar yang ditampilkan di UI sampai artikel dimuat. Umumnya, poster merupakan layar pertama artikel, meskipun Anda dapat menggunakan gambar apa saja yang merepresentasikan artikel.
 
-###Turunan (dari amp-story)
+### Turunan (dari amp-story)
 
 Komponen `<amp-story>` berisi satu atau beberapa komponen [`<amp-story-page>`](#pages%3a-amp-story-page), yang masing-masing berisi layar individual dari artikel.  Halaman pertama yang ditetapkan dalam urutan dokumen akan menjadi halaman pertama yang ditampilkan dalam artikel tersebut.
 
-###Penyertaan orientasi lanskap dan pengalaman desktop tampilan penuh
+### Penyertaan orientasi lanskap dan pengalaman desktop tampilan penuh
 
 Jika atribut `supports-landscape` ditetapkan pada elemen `<amp-story>`, atribut tersebut akan:
 
@@ -351,7 +353,7 @@ Penggunaan: `<amp-story ... supports-landscape>...</amp-story>`
   </amp-anim>
 </figure>
 
-##Halaman: `amp-story-page`
+## Halaman: `amp-story-page`
 
 Komponen `<amp-story-page>` merepresentasikan konten untuk ditampilkan di satu halaman artikel.
 
@@ -370,7 +372,7 @@ Komponen `<amp-story-page>` merepresentasikan konten untuk ditampilkan di satu h
       </amp-anim>
     </figure>
 
-###Contoh
+### Contoh
 
 ```html
 <amp-story-page id="cover">
@@ -388,13 +390,13 @@ Komponen `<amp-story-page>` merepresentasikan konten untuk ditampilkan di satu h
 </amp-story-page>
 ```
 
-###Atribut
+### Atribut
 
-#####id [wajib]
+##### id [wajib]
 
 ID unik untuk halaman. Dapat digunakan untuk menata gaya halaman dan turunannya di CSS, dan juga digunakan untuk mengidentifikasi halaman secara unik di fragmen URL.
 
-#####auto-advance-after [opsional]
+##### auto-advance-after [opsional]
 
 Menentukan waktu untuk maju otomatis ke halaman berikutnya.  Jika dihilangkan, halaman tidak akan maju secara otomatis. Nilai untuk `auto-advance-after` harus salah satu dari:
 
@@ -407,7 +409,7 @@ Contoh:
 <amp-story-page id="tokyo" auto-advance-after="1s">
 ```
 
-#####background-audio [opsional]
+##### background-audio [opsional]
 
 URI ke file audio yang diputar selama halaman ini ditampilkan.
 
@@ -417,16 +419,16 @@ Contoh:
 <amp-story-page id="zurich" background-audio="./media/switzerland.mp3">
 ```
 
-###Turunan (dari amp-story-page)
+### Turunan (dari amp-story-page)
 
 Komponen `<amp-story-page>` berisi satu atau beberapa [lapisan](#layers).  Lapisan ditumpuk dari bawah ke atas (lapisan pertama yang ditetapkan di DOM berada di bagian paling bawah; lapisan terakhir yang ditetapkan di DOM berada di bagian paling atas).
 
-##Lapisan
+## Lapisan
 
 Lapisan ditumpuk satu di atas yang lain untuk membuat efek visual yang diinginkan.
 
 
-###`amp-story-grid-layer`
+### `amp-story-grid-layer`
 
 Komponen `<amp-story-grid-layer>` menata turunannya ke dalam sebuah petak.  Implementasinya didasarkan pada [Spesifikasi Petak CSS](https://www.w3.org/TR/css-grid-1/).
 
@@ -445,13 +447,13 @@ Komponen `<amp-story-grid-layer>` menata turunannya ke dalam sebuah petak.  Impl
     <noscript><img width="200" src="https://raw.githubusercontent.com/ampproject/amphtml/master/extensions/amp-story/img/layers-layer-4.gif"></noscript></amp-img>
 </div>
 
-####Atribut
+#### Atribut
 
-#####template [wajib]
+##### template [wajib]
 
 Atribut `template` menentukan tata letak lapisan petak. Template yang tersedia dijelaskan di bagian [Template](#templates) di bawah.
 
-#####grid-area [opsional]
+##### grid-area [opsional]
 
 Atribut ini ditetapkan pada turunan `<amp-story-grid-layer>`. Atribut `grid-area` menetapkan area bernama (dari penggunaan `template` yang menentukannya) di mana elemen yang berisi atribut ini seharusnya muncul.
 
@@ -465,7 +467,7 @@ Contoh:
 </amp-story-grid-layer>
 ```
 
-####Template
+#### Template
 
 Berikut adalah template yang tersedia untuk menentukan tata letak lapisan petak.
 
@@ -473,7 +475,7 @@ Berikut adalah template yang tersedia untuk menentukan tata letak lapisan petak.
 Untuk mengetahui template tata letak yang digunakan, lihat [demo tata letak di AMP By Example](https://ampbyexample.com/stories/features/layouts/).
 [/tip]
 
-#####fill
+##### fill
 
 Template `fill` menampilkan turunan pertamanya dalam tampilan penuh. Semua turunan lainnya tidak ditampilkan.
 
@@ -493,7 +495,7 @@ Contoh:
 </amp-story-grid-layer>
 ```
 
-#####vertical
+##### vertical
 
 Template `vertical` menata elemennya di sepanjang sumbu Y.  Secara default, elemennya disejajarkan dengan bagian atas, dan dapat memenuhi seluruh layar di sepanjang sumbu X.
 
@@ -513,7 +515,7 @@ Area Bernama: (tidak ada)
 </amp-story-grid-layer>
 ```
 
-#####horizontal
+##### horizontal
 
 Template `horizontal` menata elemennya di sepanjang sumbu X.  Secara default, elemennya disejajarkan dengan bagian awal baris dan dapat memenuhi seluruh layar di sepanjang sumbu Y.
 
@@ -533,7 +535,7 @@ Area Bernama: (tidak ada)
 </amp-story-grid-layer>
 ```
 
-#####thirds
+##### thirds
 
 Template `thirds` membagi layar menjadi tiga area berjarak sama, yang masing-masing dapat diisi dengan konten.
 
@@ -557,7 +559,7 @@ Area Bernama:
 </amp-story-grid-layer>
 ```
 
-####Turunan
+#### Turunan
 
 Komponen `amp-story-grid-layer` dapat berisi salah satu dari elemen berikut:
 
@@ -701,16 +703,16 @@ Komponen `amp-story-grid-layer` dapat berisi salah satu dari elemen berikut:
   </tr>
 </table>
 
-###`amp-story-cta-layer`
+### `amp-story-cta-layer`
 
 Komponen `<amp-story-cta-layer>` memungkinkan penggunaan elemen `<a>` dan `<button>` di dalam `<amp-story-page>`.
 
-####Batasan
+#### Batasan
 
 * Jika ditentukan, elemen `<amp-story-cta-layer>` harus menjadi lapisan terakhir dalam `<amp-story-page>`. Akibatnya, setiap `<amp-story-page>` hanya dapat memiliki satu atau nol elemen `<amp-story-cta-layer>`.
 * Pengaturan posisi dan ukuran lapisan ini tidak dapat dikontrol. Ukurannya akan selalu 100% lebar halaman, 20% tinggi halaman, dengan posisi yang sejajar dengan bagian bawah halaman.
 
-####Contoh
+#### Contoh
 
 ```html
 <amp-story-page id="vertical-template-thirds">
@@ -733,15 +735,15 @@ Komponen `<amp-story-cta-layer>` memungkinkan penggunaan elemen `<a>` dan `<butt
 
   [Contoh lengkap dapat dilihat di direktori contoh](https://github.com/ampproject/amphtml/blob/master/examples/amp-story/cta-layer-outlink.html)
 
-####Turunan
+#### Turunan
 
 Komponen `amp-story-cta-layer` mendukung sebagian besar turunan yang sama dengan `amp-story-grid-layer`, dan juga mendukung tag `<a>` dan `<button>`.
 
 Untuk mengetahui daftar terbaru turunan yang didukung, pastikan untuk melihat kolom [amp-story-cta-layer-allowed-desendedants](https://github.com/ampproject/amphtml/blob/master/extensions/amp-story/validator-amp-story.protoascii) di aturan validasi.
 
-##Lampiran halaman
+## Lampiran halaman
 
-###`amp-story-page-attachment`
+### `amp-story-page-attachment`
 
 <amp-img alt="Lampiran halaman Artikel AMP" src="https://github.com/ampproject/amphtml/raw/master/extensions/amp-story/img/amp-story-page-attachment.gif" width="240" height="480" layout="fixed">
   <noscript>
@@ -756,7 +758,7 @@ Untuk mengetahui daftar terbaru turunan yang didukung, pastikan untuk melihat ko
 
   Elemen `<amp-story-page-attachment>` harus menjadi turunan terakhir dari `<amp-story-page>`, dan harus memiliki atribut `layout="nodisplay"`. Konten AMPHTML lampiran diharapkan untuk disediakan secara inline dalam Artikel AMP Anda, dalam tag `<amp-story-page-attachment>`.
 
-###Konten dan komponen yang diizinkan
+### Konten dan komponen yang diizinkan
 
 Lampiran halaman artikel mendukung elemen HTML yang sama dengan Artikel AMP beserta komponen tambahan yang tercantum di bawah, seperti pemutar video pihak ketiga atau sematan media sosial. Ini berarti Anda dapat menambahkan konten lain yang terlalu verbose atau yang tidak diizinkan di halaman Artikel AMP.
 
@@ -832,7 +834,7 @@ Lampiran halaman artikel mendukung elemen HTML yang sama dengan Artikel AMP bese
 
 </details>
 
-###Contoh
+### Contoh
 
 ```html
 <amp-story-page id="foo">
@@ -858,13 +860,13 @@ Lampiran halaman artikel mendukung elemen HTML yang sama dengan Artikel AMP bese
 </amp-story-page>
 ```
 
-##Animasi
+## Animasi
 
 Setiap elemen di dalam `<amp-story-page>` dapat memiliki animasi masuk.
 
 Anda dapat mengonfigurasi animasi dengan menentukan kumpulan [atribut animasi](#animation-attributes) pada elemen; tidak perlu ekstensi atau konfigurasi AMP tambahan.
 
-###Efek animasi
+### Efek animasi
 
 Efek animasi berikut tersedia sebagai preset untuk artikel AMP:
 
@@ -893,9 +895,9 @@ Efek animasi berikut tersedia sebagai preset untuk artikel AMP:
 Lihat [demo langsung semua animasi artikel AMP](https://ampbyexample.com/stories/features/animations/) di AMP By Example.
 [/tip]
 
-###Atribut animasi
+### Atribut animasi
 
-#####animate-in [wajib]
+##### animate-in [wajib]
 
 Gunakan atribut ini untuk menentukan nama [preset animasi](#animation-effects) masuk.
 
@@ -907,7 +909,7 @@ Gunakan atribut ini untuk menentukan nama [preset animasi](#animation-effects) m
 </h2>
 ```
 
-#####animate-in-duration [opsional]
+##### animate-in-duration [opsional]
 
 Gunakan atribut ini untuk menentukan durasi animasi masuk, dalam hitungan detik atau milidetik (misalnya 0,2 detik atau 200 milidetik). Durasi default bergantung pada preset animasi yang ditentukan.
 
@@ -919,7 +921,7 @@ Gunakan atribut ini untuk menentukan durasi animasi masuk, dalam hitungan detik 
 </h2>
 ```
 
-#####animate-in-delay [opsional]
+##### animate-in-delay [opsional]
 
 Gunakan atribut ini untuk menentukan penundaan sebelum memulai animasi. Nilai ini harus lebih besar atau sama dengan 0, dalam hitungan detik atau milidetik (misalnya 0,2 detik atau 200 milidetik). Penundaan default bergantung pada preset animasi yang ditentukan.
 
@@ -935,7 +937,7 @@ Gunakan atribut ini untuk menentukan penundaan sebelum memulai animasi. Nilai in
 Penundaan animasi tidak dijamin selalu tepat. Penundaan tambahan dapat disebabkan oleh pemuatan ekstensi `amp-animation` di latar belakang saat elemen animasi pertama selesai dipindai. Kontrak atribut ditetapkan sebagai *tunda animasi ini selama setidaknya N milidetik*. Hal ini berlaku untuk semua elemen termasuk yang memiliki penundaan 0 detik.
 [/tip]
 
-#####animate-in-after [opsional]
+##### animate-in-after [opsional]
 
 Gunakan atribut ini untuk merangkai atau mengurutkan animasi (misalnya, animasi2 dimulai setelah animasi1 selesai). Tentukan ID elemen animasi yang akan diikuti oleh animasi elemen ini. Elemen tersebut harus ada di `<amp-story-page>` yang sama. Penundaan diterapkan setelah animasi elemen sebelumnya selesai. Untuk detail lebih lanjut, lihat bagian [Mengurutkan animasi](#sequencing-animations) di bawah.
 
@@ -957,7 +959,7 @@ Misalnya, dalam kode berikut, `object2` mulai dianimasikan setelah `object1` men
 </amp-story-page>
 ```
 
-#####scale-start, scale-end [opsional, hanya berfungsi dengan animasi `zoom-in` &amp; `zoom-out`]
+##### scale-start, scale-end [opsional, hanya berfungsi dengan animasi `zoom-in` &amp; `zoom-out`]
 
 Gunakan kedua atribut ini untuk menentukan lebih lanjut parameter animasi zoom-in dan zoom-out. Nilai ini harus lebih besar atau sama dengan 0, dan bilangan desimal diperbolehkan. Defaultnya adalah scale-start: 1 dan scale-start: 3 untuk zoom-in, dan kebalikannya untuk zoom-out.
 
@@ -968,7 +970,7 @@ Gunakan kedua atribut ini untuk menentukan lebih lanjut parameter animasi zoom-i
 </amp-img>
 ```
 
-#####translate-x [opsional, hanya berfungsi dengan animasi `pan-left` &amp; `pan-right`]
+##### translate-x [opsional, hanya berfungsi dengan animasi `pan-left` &amp; `pan-right`]
 
 Gunakan atribut ini untuk menentukan penggeseran horizontal gambar Anda dalam animasi pan-left/pan-right. Nilainya harus lebih besar atau sama dengan 0 dalam piksel. Nilai default akan menggeser keseluruhan lebar dari gambar yang ditentukan.
 
@@ -979,7 +981,7 @@ Gunakan atribut ini untuk menentukan penggeseran horizontal gambar Anda dalam an
 </amp-img>
 ```
 
-#####translate-y [opsional, hanya berfungsi dengan animasi `pan-up` &amp; `pan-down`]
+##### translate-y [opsional, hanya berfungsi dengan animasi `pan-up` &amp; `pan-down`]
 
 Gunakan atribut ini untuk menentukan penggeseran vertikal gambar Anda dalam animasi pan-up/pan-down. Nilainya harus lebih besar atau sama dengan 0 dalam piksel. Nilai default akan menggeser keseluruhan tinggi dari gambar yang ditentukan.
 
@@ -990,7 +992,7 @@ Gunakan atribut ini untuk menentukan penggeseran vertikal gambar Anda dalam anim
 </amp-img>
 ```
 
-###Mengurutkan animasi
+### Mengurutkan animasi
 
 Untuk merangkai animasi secara berurutan, gunakan atribut `animate-in-after`. Semua elemen dalam rangkaian tertentu harus ada di `<amp-story-page>` yang sama. Elemen tanpa atribut `animate-in-after` tidak termasuk dalam rangkaian urutan, dan akan dimulai secara terpisah di halaman masuk.
 
@@ -1025,7 +1027,7 @@ Untuk merangkai animasi secara berurutan, gunakan atribut `animate-in-after`. Se
 </amp-story-page>
 ```
 
-###Menggabungkan beberapa animasi
+### Menggabungkan beberapa animasi
 
 Anda dapat menerapkan beberapa animasi masuk pada satu elemen (misalnya, elemen melayang ke halaman dan memudar pada saat yang sama). Anda tidak dapat menetapkan lebih dari satu preset animasi ke satu elemen; tetapi, elemen dengan animasi masuk berbeda dapat disarangkan untuk menggabungkannya menjadi satu.
 
@@ -1041,7 +1043,7 @@ Anda dapat menerapkan beberapa animasi masuk pada satu elemen (misalnya, elemen 
 Jika animasi yang terbentuk diharapkan untuk dimulai setelah akhir dari animasi elemen lain, pastikan semua elemen tersarang yang menyusun animasi tersebut memiliki atribut `animate-in-after` yang ditetapkan ke `id` yang sama.
 [/tip]
 
-##Bookend: `amp-story-bookend`
+## Bookend: `amp-story-bookend`
 
 `amp-story-bookend` adalah layar terakhir dari artikel. Komponen ini memuat link terkait, opsi berbagi, link pesan ajakan, dan sebagainya.
 
@@ -1102,13 +1104,13 @@ Selanjutnya, Anda harus mengisi konfigurasi JSON. Di sinilah Anda menyesuaikan b
 
 Anda wajib menentukan bahwa Anda menggunakan versi v1.0 dengan menyertakan baris pertama.
 
-####Komponen bookend
+#### Komponen bookend
 
 Bookend terdiri dari beberapa komponen berbeda. Komponen ini dapat berupa artikel, link pesan ajakan, teks, dan sebagainya.
 
 Komponen ini ditentukan dalam kolom `components` dari JSON yang dikonfigurasi. Lihat bagian [Contoh respons JSON](#example-json-response) di bawah sebagai contoh.
 
-#####heading
+##### heading
 
 Komponen <code>heading</code> memiliki kolom ```text</code>, yang dapat digunakan untuk menambahkan judul ke akhir sekelompok artikel.
 
@@ -1125,7 +1127,7 @@ Komponen <code>heading</code> memiliki kolom ```text</code>, yang dapat digunaka
   </noscript>
 </amp-img>
 
-#####small
+##### small
 
 Komponen `small` dapat digunakan untuk menaut ke artikel terkait. Komponen ini memerlukan kolom berikut: `title`, `url`, dan `image` (opsional).
 
@@ -1144,7 +1146,7 @@ Komponen `small` dapat digunakan untuk menaut ke artikel terkait. Komponen ini m
   </noscript>
 </amp-img>
 
-#####landscape
+##### landscape
 
 Komponen `landscape` dapat digunakan untuk format alternatif konten, seperti video. Komponen ini memerlukan kolom berikut: `title`, `url`, dan `image`. Jika ingin, Anda dapat menambahkan kolom `category`, yang menampilkan subjudul di atas judul.
 
@@ -1164,7 +1166,7 @@ Komponen `landscape` dapat digunakan untuk format alternatif konten, seperti vid
   </noscript>
 </amp-img>
 
-#####portrait
+##### portrait
 
 Komponen `portrait` dapat digunakan untuk menaut ke artikel lain. Komponen ini memerlukan kolom berikut: `title`, `url`, dan `image`. Jika ingin, Anda dapat menambahkan kolom `category`, yang menampilkan subjudul di atas judul.
 
@@ -1184,7 +1186,7 @@ Komponen `portrait` dapat digunakan untuk menaut ke artikel lain. Komponen ini m
   </noscript>
 </amp-img>
 
-#####cta-link
+##### cta-link
 
 Komponen <code>cta-link</code> memungkinkan Anda menentukan link pesan ajakan (misalnya <code>Read More</code> atau <code>Subscribe</code>). Komponen ini memiliki kunci <code>links</code>, yang menentukan array link. Setiap link adalah objek dengan nilai ```text</code> dan <code>url</code>.
 
@@ -1207,7 +1209,7 @@ Komponen <code>cta-link</code> memungkinkan Anda menentukan link pesan ajakan (m
   </noscript>
 </amp-img>
 
-#####textbox
+##### textbox
 
 Komponen ```textbox</code> memungkinkan Anda menentukan teks di dalam bookend (misalnya kredit foto). Komponen ini memerlukan array <code>text</code>, di mana setiap elemen array berupa baris teks.
 
@@ -1258,7 +1260,7 @@ Komponen ```textbox</code> memungkinkan Anda menentukan teks di dalam bookend (m
   ...
 ```
 
-####Berbagi di media sosial
+#### Berbagi di media sosial
 
 Konfigurasi untuk berbagi di media sosial ditentukan dalam kolom `shareProviders` objek respons, dan bersifat opsional.
 
@@ -1270,11 +1272,11 @@ Daftar penyedia layanan yang tersedia sama dengan yang ada di komponen [amp-soci
 
 Masing-masing penyedia layanan ini memiliki kumpulan parameter yang tersedia yang berbeda ([lihat `data-param-*`](https://www.ampproject.org/docs/reference/components/amp-social-share#data-param-%2a)). Objek konfigurasi menggunakan parameter tersebut tanpa awalan `data-param-` (misalnya, `data-param-app_id` akan muncul dalam objek konfigurasi sebagai `app_id`).
 
-####Konfigurasi JSON
+#### Konfigurasi JSON
 
 Komponen `<amp-story-bookend>` harus memiliki atribut `src` yang mengarah ke konfigurasi JSON bookend. Komponen ini dideskripsikan sebagai endpoint URL yang menerima permintaan GET dan menampilkan respons JSON beserta isi bookend.  Jika dihilangkan, komponen amp-story akan merender UI default untuk layar akhir. Sistem bertanggung jawab mengambil data yang diperlukan untuk merender artikel terkait dan yang sedang tren.  Konten ini dapat ditayangkan dari file JSON statis, atau yang dibuat secara dinamis (misalnya, untuk menghitung apa yang sedang tren saat ini).
 
-####Contoh respons JSON
+#### Contoh respons JSON
 
 ```text
 {
@@ -1312,7 +1314,7 @@ Komponen `<amp-story-bookend>` harus memiliki atribut `src` yang mengarah ke kon
 }
 ```
 
-##Komponen lain yang dapat digunakan dalam artikel AMP
+## Komponen lain yang dapat digunakan dalam artikel AMP
 
 Berikut adalah komponen lain yang dapat digunakan dalam artikel AMP yang memerlukan beberapa penjelasan khusus artikel.
 
@@ -1321,11 +1323,11 @@ Berikut adalah komponen lain yang dapat digunakan dalam artikel AMP yang memerlu
 
 Untuk mengetahui komponen lain yang umumnya dapat digunakan, lihat [daftar turunan yang diizinkan](https://www.ampproject.org/docs/reference/components/amp-story#children).
 
-##Validasi
+## Validasi
 
 Lihat [aturan amp-story](https://github.com/ampproject/amphtml/blob/master/extensions/amp-story/validator-amp-story.protoascii) dalam spesifikasi validator AMP.
 
-##Pelokalan
+## Pelokalan
 
 Untuk melokalkan artikel, sertakan kode bahasa dalam atribut `lang` pada tag `<html>` artikel Anda, misalnya `<html lang="en">` untuk bahasa Inggris.  Kode bahasa yang didukung adalah:
 
@@ -1354,7 +1356,7 @@ Untuk melokalkan artikel, sertakan kode bahasa dalam atribut `lang` pada tag `<h
 
 Selain itu, untuk bahasa yang penulisannya dari kanan ke kiri, Anda dapat menyertakan atribut `dir="rtl"` pada tag `<html>` artikel Anda.  Kode ini juga dapat digunakan bersama dengan kode bahasa, misalnya `<html lang="ar" dir="rtl">`.
 
-##Referensi terkait
+## Referensi terkait
 
 * [Tutorial: Membuat artikel AMP visual](https://www.ampproject.org/docs/tutorials/visual_story)
 * [Sampel di AMP By Example](https://ampbyexample.com/stories/#stories/introduction)

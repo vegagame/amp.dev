@@ -8,20 +8,25 @@ teaser:
   text: Replaces the HTML5 video tag.
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-حقوق الطبع والنشر 2015 لصالح "مؤلفو رمز HTML لصفحات AMP". جميع الحقوق محفوظة.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-تم الترخيص بموجب ترخيص Apache، الإصدار 2.0 (المشار إليه لاحقًا باسم "الترخيص")؛ ولا يحق لك استخدام هذا الملف إلا بما يتوافق مع الترخيص.
-ويمكنك الحصول على نسخة من الترخيص على الصفحة
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-ما لم يكن مطلوبًا بموجب القانون الساري أو تمت الموافقة عليه كتابةً، يتم توزيع البرنامج الذي يتم توزيعه بموجب الترخيص "كما هو"، وبدون أية ضمانات أو شروط من أي نوع، سواء كانت صريحة أو ضمنية.
-راجِع الترخيص للاطّلاع على اللغة المحددة التي تحكم الأذونات والقيود بموجب الترخيص.
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
 -->
 
-#amp-video
+# amp-video
 
 [جدول المحتويات]
 
@@ -44,7 +49,7 @@ teaser:
     </tr>
   </table>
 
-##السلوك
+## السلوك
 
 يعمل المكوِّن `amp-video` على تحميل مورد الفيديو الذي تحدده سمته `src` ببطء في الوقت الذي يحدده وقت التشغيل. يمكنك التحكم في المكوِّن `amp-video` بنفس طريقة التحكم في العلامة `<video>` للغة HTML5 القياسية.
 
@@ -55,7 +60,7 @@ teaser:
 * عنصر نائب قبل بدء الفيديو
 * عنصر احتياطي في حال عدم عمل فيديو HTML5 على المتصفح: يمكن أن تتضمن أحد عقد العناصر الثانوية المباشرة السمة `fallback` أو لا يتضمن أي منها هذا. عند توفّر السمة، تظهر هذه العقدة وعناصرها الثانوية من المحتوى الذي يتم عرضه إذا كان متصفح المستخدم لا يتيح عمل الفيديو HTML5.
 
-####مثال
+#### مثال
 
 <!--embedded example - displays in ampproject.org -->
 
@@ -71,11 +76,11 @@ teaser:
 
 </div>
 
-##التحليلات
+## التحليلات
 
 يوفر المكوِّن `amp-video` التحليلات بطريقة مبتكرة. ويمكنك الاطّلاع على [تحليلات الفيديو](https://github.com/ampproject/amphtml/blob/master/extensions/amp-analytics/amp-video-analytics.md) للحصول على مزيد من المعلومات.
 
-##السمات
+## السمات
 
 <table>
   <tr>
@@ -136,7 +141,7 @@ teaser:
 </table>
 
 
-##سمات واجهة برمجة التطبيقات لجلسات الوسائط
+## سمات واجهة برمجة التطبيقات لجلسات الوسائط
 
 ينفذ المكوِّن `amp-video` [واجهة برمجة التطبيقات لجلسات الوسائط](https://developers.google.com/web/updates/2017/02/media-session)، التي تمكّن مطوّري البرامج من تحديد المزيد من المعلومات عن ملف الفيديو. وتظهر المعلومات الإضافية عن الفيديو في مركز الإشعارات على جهاز المستخدِم (مع عناصر التحكم في التشغيل/الإيقاف المؤقت).
 
@@ -174,12 +179,12 @@ teaser:
 </amp-video>
 ```
 
-##تراكب النقر للتشغيل
+## تراكب النقر للتشغيل
 
 إن توفير تراكب النقر للتشغيل ميزة شائعة في تجربة المستخدم بالنسبة إلى مشغلات الفيديو على الويب.  يمكنك مثلاً عرض رمز مخصص للتشغيل يمكن للمستخدِم النقر عليه، ويمكنك أيضًا تضمين عنوان الفيديو وصور الملصقات ذات الأحجام المختلفة وغير هذا.  يمكنك بسهولة تنفيذ النقر للتشغيل لأن المكوِّن `amp-video` يتيح عمل الإجراء `play` القياسي في AMP.
 
 للحصول على مثال مُفصّل، يمكنك الانتقال إلى [تراكب النقر للتشغيل للمكّوِن amp-video](https://ampbyexample.com/advanced/click-to-play_overlay_for_amp-video/) في موقع "AMP بالمثال".
 
-##التحقق
+## التحقق
 
 اطّلع على [قواعد amp-video](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii) في مواصفات مدقق AMP.

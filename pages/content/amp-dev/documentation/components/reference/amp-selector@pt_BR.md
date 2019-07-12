@@ -7,20 +7,25 @@ teaser:
   text: Representa um controle que exibe um menu de opções para escolha do usuário.
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2016 The AMP HTML Authors. Todos os direitos reservados.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Licenciado sob a Licença Apache, Versão 2.0 (a "Licença"). O uso deste arquivo só é permitido em conformidade com a Licença.
-       Uma cópia da Licença está disponível em
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-       A menos que exigido pela legislação aplicável ou acordado por escrito, o software fornecido de acordo com a Licença é distribuído "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIAS OU CONDIÇÕES DE QUALQUER TIPO, expressas ou implícitas.
-       Consulte a Licença para ver informações sobre permissões e limitações para o idioma específico.
-  -->
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 
-#amp-selector
+# amp-selector
 
 Representa um controle que exibe um menu de opções para escolha do usuário.
 
@@ -40,7 +45,7 @@ Representa um controle que exibe um menu de opções para escolha do usuário.
 </table>
 
 
-##Comportamento
+## Comportamento
 
 O seletor de AMP é um controle que representa uma lista de opções para que o usuário escolha uma ou mais delas. O conteúdo das opções não se limita apenas a texto.
 
@@ -90,7 +95,7 @@ Exemplo:
 </amp-selector>
 ```
 
-##Apagar seleções
+## Apagar seleções
 
 Para limpar todas as seleções quando se toca ou clica em um elemento, defina o atributo de ação [`on`](../../spec/amp-actions-and-events.md) no elemento e especifique o `id` seletor de AMP com o método de ação `clear`.
 
@@ -109,9 +114,9 @@ Exemplo:
 veja demonstrações ativas no [AMP By Example](https://ampbyexample.com/components/amp-selector/).
 [/tip]
 
-##Atributos
+## Atributos
 
-###Atributos em `<amp-selector>`
+### Atributos em `<amp-selector>`
 
 <table>
   <tr>
@@ -128,7 +133,7 @@ veja demonstrações ativas no [AMP By Example](https://ampbyexample.com/compone
       </tr>
     </table>
 
-###Atributos nas opções de `<amp-selector>`
+### Atributos nas opções de `<amp-selector>`
 
 <table>
   <tr>
@@ -141,7 +146,7 @@ veja demonstrações ativas no [AMP By Example](https://ampbyexample.com/compone
   </tr>
 </table>
 
-##Eventos
+## Eventos
 
 Os eventos podem acionar ações em outros componentes AMP usando o atributo `on`.
 Por exemplo, `on="select: my-tab.show"`
@@ -165,6 +170,6 @@ Leia mais sobre [ações e eventos de AMP](../../spec/amp-actions-and-events.md)
 
     </table>
 
-##Validação
+## Validação
 
 Veja as [regras do amp-selector](https://github.com/ampproject/amphtml/blob/master/extensions/amp-selector/validator-amp-selector.protoascii) (link em inglês) nas especificações do validador de AMP.

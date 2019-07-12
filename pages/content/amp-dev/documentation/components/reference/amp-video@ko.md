@@ -8,20 +8,25 @@ formats:
 
 ##  텍스트: HTML5 동영상 태그를 대체합니다.
 ---
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2015 The AMP HTML Authors. All Rights Reserved.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Apache 라이선스 버전 2.0(이하 '라이선스')에 따라 사용이 허가되었으므로, 라이선스를 준수하지 않는 경우 이 파일을 사용할 수 없습니다.
-       라이선스의 사본은 다음에서 가져올 수 있습니다.
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-       해당 법률에 따라 요구되거나 서면으로 동의한 경우를 제외하고, 라이선스에 따라 배포된 소프트웨어는 어떠한 종류의 명시적 또는 묵시적 보증 또는 조건도 없이 '있는 그대로' 배포됩니다.
-       라이선스의 허가 및 제한사항에 관한 구체적인 문구는 라이선스를 참조하시기 바랍니다.
-  -->
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 
-#amp-video
+# amp-video
 
 HTML5 `video` 태그의 대체 태그입니다. HTML5 동영상 파일 직접 삽입에만 사용합니다.
 
@@ -42,7 +47,7 @@ HTML5 `video` 태그의 대체 태그입니다. HTML5 동영상 파일 직접 �
     </tr>
   </table>
 
-##동작
+## 동작
 
 `amp-video` 구성요소에서는 런타임에서 결정한 시간에 `src` 속성으로 지정된 동영상 리소스를 로드합니다. 표준 HTML5 `<video>` 태그와 동일한 방식으로 `amp-video` 구성요소를 제어할 수 있습니다.
 
@@ -53,7 +58,7 @@ HTML5 `video` 태그의 대체 태그입니다. HTML5 동영상 파일 직접 �
 * 동영상이 시작하기 전의 자리표시자
 * 브라우저에서 HTML5 동영상을 지원하지 않는 경우 대체: 하나 이상의 직속 하위 노드에 `fallback` 속성이 있을 수 있습니다. 이 노드와 하위 노드가 있으면 HTML5 동영상이 사용자의 브라우저에서 지원되지 않는 경우 해당 노드가 표시되는 콘텐츠를 구성합니다.
 
-####예
+#### 예
 
 <!--embedded example - displays in ampproject.org -->
 
@@ -65,11 +70,11 @@ HTML5 `video` 태그의 대체 태그입니다. HTML5 동영상 파일 직접 �
 
 </div>
 
-##분석
+## 분석
 
 `amp-video`에서는 바로 사용할 수 있는 분석을 지원합니다. 자세한 정보는 [동영상 분석](https://github.com/ampproject/amphtml/blob/master/extensions/amp-analytics/amp-video-analytics.md)을 참조하세요.
 
-##속성
+## 속성
 
 <table>
   <tr>
@@ -133,7 +138,7 @@ HTML5 `video` 태그의 대체 태그입니다. HTML5 동영상 파일 직접 �
             </tr>
           </table>
 
-##Media Session API 속성
+## Media Session API 속성
 
 `amp-video` 구성요소에서는 개발자가 동영상 파일에 관한 자세한 정보를 지정하는 데 사용할 수 있는 [Media Session API](https://developers.google.com/web/updates/2017/02/media-session)를 구현합니다. 동영상에 관한 추가 정보는 사용자 기기의 알림 센터에 표시됩니다(재생/일시중지 컨트롤과 함께).
 
@@ -170,12 +175,12 @@ HTML5 `video` 태그의 대체 태그입니다. HTML5 동영상 파일 직접 �
 </amp-video>
 ```
 
-##클릭하여 재생 오버레이
+## 클릭하여 재생 오버레이
 
 클릭하여 재생 오버레이는 웹에서 실행되는 동영상 플레이어에 대한 일반적인 UX 기능입니다.  예를 들어 사용자가 클릭할 맞춤 재생 아이콘을 표시할 뿐 아니라 동영상 제목, 다른 크기의 포스터 이미지 등을 포함할 수 있습니다.  `amp-video` 구성요소에서는 표준 `play` AMP 작업을 지원하므로 클릭하여 재생을 쉽게 구현할 수 있습니다.
 
 자세한 예는 AMP By Example에 있는 [amp-video의 클릭하여 재생 오버레이](https://ampbyexample.com/advanced/click-to-play_overlay_for_amp-video/)를 참조하세요.
 
-##유효성 검사
+## 유효성 검사
 
 AMP 유효성 검사기 사양의 [amp-video 규칙](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii)을 참조하세요.

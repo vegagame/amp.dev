@@ -9,19 +9,22 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2015 The AMP HTML Authors. Tous droits réservés.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Autorisation sous licence Apache, version 2.0 (la "Licence") ;
-       n'utilisez ce fichier que dans le cadre de la Licence.
-       Vous pouvez obtenir une copie de la Licence à l'adresse suivante :
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-       Sauf dispositions légales applicables ou accord écrit préalable, le logiciel distribué dans le cadre de la Licence est fourni "EN L'ÉTAT", À L'EXCLUSION DE TOUTE GARANTIE OU CONDITION DE QUELQUE NATURE QUE CE SOIT, expresse ou implicite.
-       Consultez la Licence correspondant à la langue spécifique qui régit les autorisations et limitations applicables.
-  -->
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 
-#amp-lightbox
+# amp-lightbox
 
 <table>
   <tr>
@@ -43,7 +46,7 @@ teaser:
 </table>
 
 
-##Comportement
+## Comportement
 
 Le composant `amp-lightbox` définit les éléments enfants qui s'affichent dans une superposition ou une fenêtre modale en plein écran. Lorsque l'utilisateur clique ou appuie sur un élément (un bouton, par exemple), l'identifiant `amp-lightbox` référencé dans l'attribut `on` de l'élément sélectionné affiche l'annonce Lightbox sur toute la surface de la fenêtre affichage et présente les éléments enfants du composant `amp-lightbox`.
 
@@ -61,7 +64,7 @@ La touche Échap permet de fermer le mode Lightbox. Vous pouvez également défi
 Pour afficher des images dans une annonce Lightbox, vous pouvez également utiliser le composant [`<amp-image-lightbox>`](https://www.ampproject.org/docs/reference/components/amp-image-lightbox).
 [/tip]
 
-##Attributs
+## Attributs
 
 <table>
   <tr>
@@ -94,11 +97,11 @@ Pour afficher des images dans une annonce Lightbox, vous pouvez également utili
           </tr>
         </table>
 
-##Application d'un style
+## Application d'un style
 
 Vous pouvez appliquer un style au composant `amp-lightbox` à l'aide d'une feuille de style (CSS) standard.
 
-##Actions
+## Actions
 
 Le composant `amp-lightbox` présente les actions que vous pouvez [déclencher avec la syntaxe de l'attribut "on" d'AMP](https://www.ampproject.org/docs/reference/amp-actions-and-events) :
 
@@ -117,7 +120,7 @@ Le composant `amp-lightbox` présente les actions que vous pouvez [déclencher a
   </tr>
 </table>
 
-##<a id="a4a"></a> Utiliser `amp-lightbox` dans des annonces AMP HTML
+## <a id="a4a"></a> Utiliser `amp-lightbox` dans des annonces AMP HTML
 
 [tip type="note"]
 Le composant `amp-lightbox` à utiliser dans les annonces AMP HTML est proposé à titre [expérimental](https://www.ampproject.org/docs/reference/experimental) et est actuellement en cours de développement. Pour utiliser `amp-lightbox` dans des annonces AMP HTML, [activez le test `amp-lightbox-a4a-proto`](http://cdn.ampproject.org/experiments.html).
@@ -125,7 +128,7 @@ Le composant `amp-lightbox` à utiliser dans les annonces AMP HTML est proposé
 
 Notons quelques différences selon que le composant `amp-lightbox` est utilisé dans des documents AMP standards ou dans des [annonces écrites dans le langage AMP HTML](../amp-a4a/amp-a4a-format.md) :
 
-###Attribut close-button obligatoire
+### Attribut close-button obligatoire
 
 L'attribut `close-button` est obligatoire pour les annonces AMP HTML. Cet attribut permet d'afficher un en-tête en haut de votre annonce Lightbox. L'en-tête contient un bouton de fermeture et un libellé qui indique "Ad" (Annonce). Cet en-tête est obligatoire pour :
 
@@ -134,21 +137,21 @@ L'attribut `close-button` est obligatoire pour les annonces AMP HTML. Cet attri
 
 L'attribut `close-button` est obligatoire et n'est autorisé que dans les annonces AMP HTML. Dans les documents AMP standards, vous pouvez afficher un bouton de fermeture à tout moment dans le cadre du contenu `<amp-lightbox>`.
 
-###Le mode Lightbox déroulant n'est pas autorisé
+### Le mode Lightbox déroulant n'est pas autorisé
 
 Le mode Lightbox déroulant n'est pas autorisé pour les annonces AMP HTML.
 
-###Arrière-plan transparent
+### Arrière-plan transparent
 
 Lorsque vous utilisez `<amp-lightbox>` dans des annonces AMP HTML, l'arrière-plan de votre élément `<body>` devient transparent, car l'exécution AMP redimensionne et réaligne le contenu de votre création avant le développement du mode Lightbox. Cela permet d'éviter un "saut" visuel de la création pendant l'affichage du mode Lightbox. Si un arrière-plan est nécessaire pour votre création, définissez-la sur un conteneur intermédiaire (comme un `<div>` plein écran) au lieu d'utiliser l'élément `<body>`.
 
 Lorsque l'annonce AMP HTML est diffusée dans un environnement tiers (dans un document non AMP, par exemple), la création est centrée par rapport à la fenêtre d'affichage, puis elle est développée. Cela est dû au fait que les cadres iFrame tiers doivent utiliser une API postMessage pour activer des fonctionnalités telles que le redimensionnement des cadres (qui est de type asynchrone). Commencer par le centrage de la création permet donc une transition en douceur, sans sauts d'images.
 
-###Exemples de transitions dans le mode Lightbox pour les annonces AMP HTML
+### Exemples de transitions dans le mode Lightbox pour les annonces AMP HTML
 
 Dans les exemples ci-dessous, vous pouvez voir comment la transition recherche une annonce AMP HTML dont l'attribut `animate-in="fly-in-bottom"` est défini sur l'élément Lightbox pour une annonce AMP HTML dans un friendly iframe et pour une annonce AMP HTML dans un iFrame tiers.
 
-#####Sur des friendly iframes (provenant, par exemple, d'un cache AMP)
+##### Sur des friendly iframes (provenant, par exemple, d'un cache AMP)
 
 <amp-img alt="annonce Lightbox dans un friendly iframe" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/master/spec/img/lightbox-ad-fie.gif" layout="fixed">
   <noscript>
@@ -156,7 +159,7 @@ Dans les exemples ci-dessous, vous pouvez voir comment la transition recherche u
     </noscript>
   </amp-img>
 
-#####Sur des cadres iFrame tiers (par exemple, en dehors du cache AMP)
+##### Sur des cadres iFrame tiers (par exemple, en dehors du cache AMP)
 
 <amp-img alt="annonce Lightbox dans un iFrame 3p" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/master/spec/img/lightbox-ad-3p.gif" layout="fixed">
   <noscript>
@@ -164,6 +167,6 @@ Dans les exemples ci-dessous, vous pouvez voir comment la transition recherche u
     </noscript>
   </amp-img>
 
-##Validation
+## Validation
 
 Consultez les [règles relatives à amp-lightbox](https://github.com/ampproject/amphtml/blob/master/extensions/amp-lightbox/validator-amp-lightbox.protoascii) dans les spécifications du validateur AMP.

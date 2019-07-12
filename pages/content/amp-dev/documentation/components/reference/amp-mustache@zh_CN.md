@@ -8,17 +8,25 @@ teaser:
   text: 允许呈现 Mustache.js 模板。
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
-<!--- 版权所有 2015 The AMP HTML Authors。保留所有权利。
+<!---
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       根据 Apache 许可 2.0 版（以下简称“许可”）授权用户使用；您只有在遵循该许可的情况下才可使用本文件。您可以通过以下网址获得该许可的副本：
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-       除非适用法律要求或已达成书面协议，否则按照该许可分发的软件均“按原样”分发，不提供任何类型的担保或条件（无论明示或暗示）。有关该许可规定的具体语言管辖权限和限制，请参阅该许可。
-  -->
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 
-#amp-mustache
+# amp-mustache
 
 允许呈现 [Mustache.js](https://github.com/janl/mustache.js/)。
 
@@ -38,14 +46,14 @@ teaser:
 </table>
 
 
-##版本说明
+## 版本说明
 
 | 版本 | 说明 |
 |-------|-----|
 | 0.2 | 新增了对 `<svg>` 元素的支持，同时缩小了软件包大小（从 20.5KB 缩写到了 12.2KB，经过了 Gzip 压缩）。迁移到更新型的 HTML 排错程序库（从 Caja 迁移到 DOMPurify）。由于标记和属性白名单之间的差异，这可能会导致轻微的破坏性更改。我们建议您先测试网页，然后再推送到生产环境，以确保对生成的标记造成的更改不会影响功能。 |
 | 0.1 | 初始实现版本。 |
 
-##语法
+## 语法
 
 Mustache 是一种无逻辑模板语法。如需了解详情，请参阅 [Mustache.js 文档](https://github.com/janl/mustache.js/)。下面是一些核心的 Mustache 标记：
 
@@ -54,7 +62,7 @@ Mustache 是一种无逻辑模板语法。如需了解详情，请参阅 [Mustac
 * {% raw %}`{{^section}}`{% endraw %}{% raw %}`{{/section}}`{% endraw %}：反向标记。可以测试变量是否不存在。
 * {% raw %}`{{{unescaped}}}`{% endraw %}：非转义 HTML。可能输出的标记受到限制（请参阅下面的“限制”）。
 
-##用法
+## 用法
 
 `amp-mustache` 模板的定义和使用必须符合 [AMP 模板规范](../../spec/amp-html-templates.md)。
 
@@ -85,9 +93,9 @@ Mustache 是一种无逻辑模板语法。如需了解详情，请参阅 [Mustac
 
 如何发现模板、何时呈现模板、如何提供数据，这些都取决于使用此模板呈现其内容的目标 AMP 元素（例如 [amp-list](../amp-list/amp-list.md)、[amp-form](../amp-form/amp-form.md) 等）。
 
-##限制
+## 限制
 
-###验证
+### 验证
 
 与所有 AMP 模板一样，`amp-mustache` 模板必须是格式正确的 DOM 片段。这意味着您无法使用 `amp-mustache` 执行一些操作，其中包括：
 
@@ -96,13 +104,13 @@ Mustache 是一种无逻辑模板语法。如需了解详情，请参阅 [Mustac
 
 系统会对“triple-mustache”的输出进行排错处理，以便仅允许以下标记：`a`、`b`、`br`、`caption`、`colgroup`、`code`、`del`、`div`、`em`、`i`、`ins`、`li`、`mark`、`ol`、`p`、`q`、`s`、`small`、`span`、`strong`、`sub`、`sup`、`table`、`tbody`、`time`、`td`、`th`、`thead`、`tfoot`、`tr`、`u`、`ul`。
 
-###排错
+### 排错
 
 为了确保安全性并维持 AMP 有效性，系统会对 Mustache 输出进行排错处理。这可能会导致某些元素和属性被静默移除。
 
-##问题
+## 问题
 
-###嵌套模板
+### 嵌套模板
 
 根据 AMP 验证，`<template>` 元素不得是其他 `<template>` 元素的子级。嵌套两个使用模板的组件（例如 `amp-list` 和 `amp-form`）时会出现这种情况。
 
@@ -129,7 +137,7 @@ Mustache 是一种无逻辑模板语法。如需了解详情，请参阅 [Mustac
 </amp-list>
 {% endraw %}[/sourcecode]
 
-###表格
+### 表格
 
 由于必须在 `<template>` 元素中指定 AMP 模板字符串，因此这可能会因浏览器解析而导致发生意外行为。例如，`<table>` 元素可能导致为文本[建立父级](https://www.w3.org/TR/html5/syntax.html#unexpected-markup-in-tables)。在以下示例中：
 
@@ -167,7 +175,7 @@ Mustache 是一种无逻辑模板语法。如需了解详情，请参阅 [Mustac
 </script>
 {% endraw %}[/sourcecode]
 
-###英文引号转义
+### 英文引号转义
 
 使用 `amp-mustache` 计算属性值时，英文引号转义可能是一个问题。例如：
 
@@ -185,7 +193,7 @@ Mustache 是一种无逻辑模板语法。如需了解详情，请参阅 [Mustac
 
 有一个[开放的提议](https://github.com/ampproject/amphtml/issues/8395)就是，改为在 `amp-mustache` 中执行这种替换。如果您想协助我们解决此问题，请提供评论。
 
-###HTML 实体
+### HTML 实体
 
 HTML 实体不会保留在 `<template>` 元素中。
 
@@ -193,6 +201,6 @@ HTML 实体不会保留在 `<template>` 元素中。
 
 解决办法包括将 {% raw %}`{{`{% endraw %} 等字符串替换为其他字符，或者直接从用户生成的内容中删除它们。
 
-##验证
+## 验证
 
 请参阅 AMP 验证工具规范中的 [amp-mustache 规则](https://github.com/ampproject/amphtml/blob/master/extensions/amp-mustache/validator-amp-mustache.protoascii)。

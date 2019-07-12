@@ -7,21 +7,25 @@ teaser:
   text: Représente une commande qui affiche un menu d'options et permet à l'utilisateur d'y effectuer une sélection.
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2016 The AMP HTML Authors. Tous droits réservés.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Autorisation sous licence Apache, version 2.0 (la "Licence") ;
-       n'utilisez ce fichier que dans le cadre de la Licence.
-       Vous pouvez obtenir une copie de la Licence à l'adresse suivante :
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-       Sauf dispositions légales applicables ou accord écrit préalable, le logiciel distribué dans le cadre de la Licence est fourni "EN L'ÉTAT", À L'EXCLUSION DE TOUTE GARANTIE OU CONDITION DE QUELQUE NATURE QUE CE SOIT, expresse ou implicite.
-       Consultez la Licence correspondant à la langue spécifique qui régit les autorisations et limitations applicables.
-  -->
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 
-#amp-selector
+# amp-selector
 
 Ce composant représente une commande qui affiche un menu d'options et permet à l'utilisateur d'y effectuer une sélection.
 
@@ -41,7 +45,7 @@ Ce composant représente une commande qui affiche un menu d'options et permet à
 </table>
 
 
-##Comportement
+## Comportement
 
 Le sélecteur AMP est une commande qui présente une liste dans laquelle l'utilisateur peut choisir une ou plusieurs options. Le contenu des options ne se limite pas simplement à du texte.
 
@@ -91,7 +95,7 @@ Exemple :
 </amp-selector>
 ```
 
-##Effacer les sélections
+## Effacer les sélections
 
 Pour effacer toutes les sélections lorsque l'utilisateur clique ou appuie sur un élément, définissez l'attribut d'action [`on`](../../spec/amp-actions-and-events.md) sur l'élément en question et spécifiez ensuite l'`id` du sélecteur AMP avec la méthode d'action `clear`.
 
@@ -110,9 +114,9 @@ Exemple :
 Regardez les démos sur [AMP By Example](https://ampbyexample.com/components/amp-selector/).
 [/tip]
 
-##Attributs
+## Attributs
 
-###Attributs sur `<amp-selector>`
+### Attributs sur `<amp-selector>`
 
 <table>
   <tr>
@@ -129,7 +133,7 @@ Regardez les démos sur [AMP By Example](https://ampbyexample.com/components/amp
     </tr>
     </table>
 
-###Attributs sur les options `<amp-selector>`
+### Attributs sur les options `<amp-selector>`
 
 <table>
   <tr>
@@ -143,7 +147,7 @@ Regardez les démos sur [AMP By Example](https://ampbyexample.com/components/amp
   </tr>
 </table>
 
-##Événements
+## Événements
 
 Les événements peuvent déclencher des actions sur d'autres composants AMP à l'aide de l'attribut `on`.
 Par exemple : `on="select: my-tab.show"`
@@ -167,6 +171,6 @@ En savoir plus sur les [actions et événements AMP](../../spec/amp-actions-and-
 
     </table>
 
-##Validation
+## Validation
 
 Consultez les [règles relatives à amp-selector](https://github.com/ampproject/amphtml/blob/master/extensions/amp-selector/validator-amp-selector.protoascii) dans les spécifications du validateur AMP.

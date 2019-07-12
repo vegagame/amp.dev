@@ -7,17 +7,25 @@ teaser:
   text: 表示一种控件，可显示选项菜单并让用户从中选择。
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
-<!--- 版权所有 2016 The AMP HTML Authors。保留所有权利。
+<!---
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       根据 Apache 许可 2.0 版（以下简称“许可”）授权用户使用；您只有在遵循该许可的情况下才可使用本文件。您可以通过以下网址获得该许可的副本：
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-       除非适用法律要求或已达成书面协议，否则按照该许可分发的软件均“按原样”分发，不提供任何类型的担保或条件（无论明示或暗示）。有关该许可规定的具体语言管辖权限和限制，请参阅该许可。
-  -->
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 
-#amp-selector
+# amp-selector
 
 表示一种控件，可显示选项菜单并让用户从中选择。
 
@@ -37,7 +45,7 @@ teaser:
 </table>
 
 
-##行为
+## 行为
 
 AMP 选择器是一种控件，可显示一系列选项并让用户从中选择一个或多个选项；选项内容不只局限于文本。
 
@@ -87,7 +95,7 @@ AMP 选择器是一种控件，可显示一系列选项并让用户从中选择�
 </amp-selector>
 ```
 
-##清除所选内容
+## 清除所选内容
 
 要在用户点按或点击某个元素后清除所有所选内容，请在相应元素上设置 [`on`](../../spec/amp-actions-and-events.md) 操作属性，然后使用 `clear` 操作方法指定 AMP 选择器 `id`。
 
@@ -106,9 +114,9 @@ AMP 选择器是一种控件，可显示一系列选项并让用户从中选择�
 [AMP By Example](https://ampbyexample.com/components/amp-selector/) 上的在线演示。
 [/tip]
 
-##属性
+## 属性
 
-###`<amp-selector>` 上的属性
+### `<amp-selector>` 上的属性
 
 <table>
   <tr>
@@ -125,7 +133,7 @@ AMP 选择器是一种控件，可显示一系列选项并让用户从中选择�
     </tr>
   </table>
 
-###`<amp-selector>` 选项的属性
+### `<amp-selector>` 选项的属性
 
 <table>
   <tr>
@@ -138,7 +146,7 @@ AMP 选择器是一种控件，可显示一系列选项并让用户从中选择�
   </tr>
 </table>
 
-##事件
+## 事件
 
 事件可以使用 `on` 属性触发其他 AMP 组件上的操作。例如，`on="select: my-tab.show"`
 
@@ -159,6 +167,6 @@ AMP 选择器是一种控件，可显示一系列选项并让用户从中选择�
 
     </table>
 
-##验证
+## 验证
 
 请参阅 AMP 验证工具规范中的 [amp-selector 规则](https://github.com/ampproject/amphtml/blob/master/extensions/amp-selector/validator-amp-selector.protoascii)。

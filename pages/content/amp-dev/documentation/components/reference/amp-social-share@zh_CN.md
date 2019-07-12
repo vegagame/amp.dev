@@ -6,17 +6,25 @@ teaser:
   text: 分享跟踪功能正在开发中。
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
-<!--- 版权所有 2016 The AMP HTML Authors。保留所有权利。
+<!---
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       根据 Apache 许可 2.0 版（以下简称“许可”）授权使用；您只有在遵循此许可的情况下才能使用该文件。您可以通过以下网址获得该许可的副本：
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-       除非适用法律要求或已达成书面协议，否则按照该许可分发的软件均“按原样”分发，不提供任何类型的担保或条件（无论明示或暗示）。有关该许可下特定的语言管辖权限和限制，请参阅该许可。
-  -->
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 
-#amp-social-share
+# amp-social-share
 
 显示社交分享按钮。
 
@@ -40,11 +48,11 @@ teaser:
   </tr>
 </table>
 
-##概览
+## 概览
 
 `amp-social-share` 组件会显示一个针对各种社交平台提供商的社交分享按钮。
 
-##示例
+## 示例
 
 **示例：基本社交分享按钮**
 
@@ -56,18 +64,18 @@ teaser:
 
 **示例：传递参数**
 
-当您需要将参数传递给分享端点时，可以指定要附加到分享端点的 `data-param-<attribute>`。
-
+当您需要将参数传递给分享端点时，可以指定要附加到分享端点的 `data-param-
+<attribute>`。
 ```html
 <amp-social-share type="linkedin" width="60" height="44"
-          data-param-text="Hello world"
-          data-param-url="https://example.com/">
+  data-param-text="Hello world"
+  data-param-url="https://example.com/">
 </amp-social-share>
 ```
 
-      Linkedin 是预配置的提供商之一，因此您无需提供 `data-share-endpoint` 属性。
+LinkedIn 是预配置的提供商之一，因此您无需提供 `data-share-endpoint` 属性。
 
-##属性
+## 属性
 
 <table>
   <tr>
@@ -91,7 +99,7 @@ teaser:
         </tr>
       </table>
 
-##预配置的提供商
+## 预配置的提供商
 
 `amp-social-share` 组件提供了[一些预配置的提供商](0.1/amp-social-share-config.js)，这些提供商知道其分享端点及部分默认参数。
 
@@ -213,7 +221,7 @@ teaser:
     </tr>
   </table>
 
-##未配置的提供商
+## 未配置的提供商
 
 除了预配置的提供商之外，您还可以通过在 `amp-social-share` 组件中指定其他属性来使用未配置的提供商。
 
@@ -230,9 +238,9 @@ teaser:
 
 由于这些提供商未预先配置，因此您需要为提供商创建相应的按钮图片和样式。
 
-##样式
+## 样式
 
-###默认样式
+### 默认样式
 
 默认情况下，`amp-social-share` 包含一些热门的预配置提供商。这些提供商的按钮样式与提供商的官方颜色和徽标样式一致。默认宽度为 60 像素，默认高度为 44 像素。
 
@@ -240,7 +248,7 @@ teaser:
 如需了解您可以在 AMP 网页中使用的已预设样式的自适应分享链接，请访问 [AMP Start](https://ampstart.com/components#links-and-sharing)。
 [/tip]
 
-###自定义样式
+### 自定义样式
 
 有时，您可能希望使用您自己的样式。您可以通过下述方式将默认样式替换为您的自定义样式：
 ```css
@@ -250,7 +258,7 @@ amp-social-share[type="twitter"] {
 }
 ```
 
-##变量替换
+## 变量替换
 
 您可以在 `<amp-social-share>` 元素中使用[全局 AMP 变量替换](https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md)。在下面的示例中，`TITLE` 替换为网页标题，`CANONICAL_URL` 替换为文档的规范网址。
 
@@ -260,6 +268,6 @@ amp-social-share[type="twitter"] {
 </amp-social-share>
 ```
 
-##验证
+## 验证
 
 请参阅 AMP 验证工具规范中的 [amp-social-share 规则](https://github.com/ampproject/amphtml/blob/master/extensions/amp-social-share/validator-amp-social-share.protoascii)。

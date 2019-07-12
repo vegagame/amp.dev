@@ -8,16 +8,22 @@ teaser:
   text: Пиксель отслеживания, используемый для регистрации просмотров страниц
 ---
 
-<!--© Авторы HTML с технологией AMP, 2015. Все права защищены.
 
-       Лицензия Apache версии 2.0 (далее – "Лицензия");
-     этот файл можно использовать только в соответствии с Лицензией.
-     Чтобы приобрести копию Лицензии, перейдите по ссылке:
+<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+<!---
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
+
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
      http://www.apache.org/licenses/LICENSE-2.0
 
-     Если иное не требуется действующим законодательством или не оговорено в письменном виде, программное обеспечение, распространяемое по Лицензии, распространяется "КАК ЕСТЬ", БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ И УСЛОВИЙ, явных или подразумеваемых.
-     Определения используемых в Лицензии понятий, с помощью которых оговариваются разрешения и ограничения, приводятся в тексте Лицензии.
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
 -->
 
 # amp-pixel
@@ -38,7 +44,7 @@ teaser:
   </tr>
 </table>
 
-##Функционирование
+## Функционирование
 
 Компонент `amp-pixel` обрабатывается аналогично стандартному пикселю отслеживания `img`. Он использует единственный URL, но добавляет в него переменные, которые при выполнении запроса могут быть заменены в строке URL на данный компонент. Более подробные сведения вы найдете в разделе, который посвящен [заменам](#substitutions).
 
@@ -53,13 +59,13 @@ teaser:
 Игнорируйте параметр `usqp` при обработке URL для AMP в заголовке перехода, относящегося к запросу. Этот параметр используется Google для запуска экспериментов в Google AMP Cache.
 [/tip]
 
-##Атрибуты
+## Атрибуты
 
-#####src (обязательно)
+##### src (обязательно)
 
 Обычный URL удаленной конечной точки, который должен использовать протокол `https`.
 
-#####referrerpolicy (необязательно)
+##### referrerpolicy (необязательно)
 
 Этот атрибут аналогичен атрибуту `referrerpolicy`, предназначенному для тега `<img>`, однако ему может присваиваться только значение `no-referrer`. Если в коде представлен элемент `referrerpolicy=no-referrer`, заголовок `referrer` будет удален из HTTP-запроса.
 
@@ -69,16 +75,16 @@ teaser:
     referrerpolicy="no-referrer"></amp-pixel>
 ```
 
-#####allow-ssr-img (необязательно)
+##### allow-ssr-img (необязательно)
 
 Этот атрибут используется в креативах AMP4ADS и указывает, что при преобразовании, выполняемом после проверки кода AMP, элемент img может быть размещен внутри элемента amp-pixel. Благодаря этому запрос ping будет отправляться одновременно с извлечением или обработкой библиотеки AMP.
 Обратите внимание, что при этом все макросы в составе URL не будут заменяться, поэтому применяйте их только в том случае, если они не содержатся внутри элемента src.
 
-#####common attributes
+##### common attributes
 
 Этот элемент содержит [распространенные атрибуты](https://www.ampproject.org/docs/reference/common_attributes), которые поддерживаются компонентами AMP.
 
-##Замены
+## Замены
 
 Компонент `amp-pixel` поддерживает все стандартные замены переменных AMP.
 Более подробные сведения вы найдете в [руководстве по работе с заменами](../spec/amp-var-substitutions.md).
@@ -90,10 +96,10 @@ teaser:
     layout="nodisplay"></amp-pixel>
 ```
 
-##Поддержка стилей
+## Поддержка стилей
 
 К компоненту `amp-pixel` невозможно применять стили.
 
-##Проверка
+## Проверка
 
 С правилами для компонента amp-pixel можно ознакомиться в [спецификации валидатора AMP](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii).

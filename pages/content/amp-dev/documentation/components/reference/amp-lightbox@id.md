@@ -9,7 +9,7 @@ teaser:
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2015 The AMP HTML Authors. All Rights Reserved.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
        Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ teaser:
      limitations under the License.
 -->
 
-#amp-lightbox
+# amp-lightbox
 
 <table>
   <tr>
@@ -46,7 +46,7 @@ teaser:
 </table>
 
 
-##Perilaku
+## Perilaku
 
 Komponen `amp-lightbox` menentukan elemen turunan yang ditampilkan dalam modal/overlay viewport penuh. Saat pengguna menge-tap atau mengklik sebuah elemen (misalnya tombol), ID `amp-lightbox` yang dirujuk dalam atribut `on` elemen yang diklik akan memicu lightbox agar mengisi viewport penuh dan menampilkan elemen turunan `amp-lightbox`.
 
@@ -64,7 +64,7 @@ Menekan tombol escape pada keyboard akan menutup lightbox. Cara lainnya, menetap
 Untuk menampilkan gambar di lightbox, ada juga komponen [`<amp-image-lightbox>`](https://www.ampproject.org/docs/reference/components/amp-image-lightbox).
 [/tip]
 
-##Atribut
+## Atribut
 
 <table>
   <tr>
@@ -97,11 +97,11 @@ Untuk menampilkan gambar di lightbox, ada juga komponen [`<amp-image-lightbox>`]
           </tr>
         </table>
 
-##Penataan gaya
+## Penataan gaya
 
 Anda dapat mengatur gaya `amp-lightbox` dengan CSS standar.
 
-##Tindakan
+## Tindakan
 
 `amp-lightbox` menampilkan tindakan berikut yang dapat Anda gunakan pada [AMP on-syntax untuk memicu](https://www.ampproject.org/docs/reference/amp-actions-and-events):
 
@@ -120,7 +120,7 @@ Anda dapat mengatur gaya `amp-lightbox` dengan CSS standar.
   </tr>
 </table>
 
-##<a id="a4a"></a>Menggunakan `amp-lightbox` dalam iklan AMPHTML
+## <a id="a4a"></a>Menggunakan `amp-lightbox` dalam iklan AMPHTML
 
 [tip type="note"]
 Komponen `amp-lightbox` untuk digunakan dalam ikan AMPHTML masih bersifat [eksperimental](https://www.ampproject.org/docs/reference/experimental) dan terus mengalami pengembangan. Untuk menggunakan `amp-lightbox` dalam iklan AMPHTML, [aktifkan eksperimen `amp-lightbox-a4a-proto`](http://cdn.ampproject.org/experiments.html).
@@ -128,7 +128,7 @@ Komponen `amp-lightbox` untuk digunakan dalam ikan AMPHTML masih bersifat [ekspe
 
 Ada beberapa perbedaan antara menggunakan `amp-lightbox` dalam dokumen AMP normal dengan [iklan yang ditulis dalam AMPHTML](../amp-a4a/amp-a4a-format.md):
 
-###Memerlukan close-button
+### Memerlukan close-button
 
 Untuk iklan AMPHTML, atribut `close-button` wajib ada. Atribut ini menyebabkan header dirender di bagian atas lightbox. Header berisi tombol tutup dan label yang menampilkan "Ad" (Iklan). Persyaratan header ini diperlukan untuk:
 
@@ -137,21 +137,21 @@ Untuk iklan AMPHTML, atribut `close-button` wajib ada. Atribut ini menyebabkan h
 
 Atribut `close-button` wajib dan hanya diizinkan dalam iklan AMPHTML. Dalam dokumen AMP reguler, Anda dapat merender tombol tutup di mana pun diperlukan sebagai bagian dari konten `<amp-lightbox>`.
 
-###Lightbox yang dapat di-scroll tidak diizinkan
+### Lightbox yang dapat di-scroll tidak diizinkan
 
 Untuk iklan AMPHTML, lightbox yang dapat di-scroll tidak diizinkan.
 
-###Latar belakang transparan
+### Latar belakang transparan
 
 Ketika Anda menggunakan `<amp-lightbox>` dalam iklan AMPHTML, latar belakang elemen `<body>` menjadi transparan karena AMP runtime berubah ukuran dan menyusun kembali konten materi iklan Anda sebelum lightbox diperluas. Hal ini dilakukan untuk mencegah visual "jump" (loncatan visual) materi iklan saat lightbox terbuka. Jika materi iklan Anda membutuhkan latar belakang, tetapkan nilainya pada container (seperti `<div>` ukuran penuh), bukan `<body>`.
 
 Saat iklan AMPHTML berjalan di lingkungan pihak ketiga (misalnya dalam dokumen non-AMP), materi iklan tersebut akan ditempatkan di tengah viewport, baru kemudian diperluas. Hal ini karena iframe pihak ketiga harus mengandalkan postMessage API untuk mengaktifkan fitur seperti pengubahan ukuran bingkai, yang bersifat asinkron. Jadi, dengan mula-mula menempatkan materi iklan di tengah viewport, transisi akan berjalan lancar tanpa visual jump.
 
-###Contoh transisi dalam lightbox untuk iklan AMPHTML
+### Contoh transisi dalam lightbox untuk iklan AMPHTML
 
 Pada contoh di bawah, kami menunjukkan tampilan transisi untuk iklan AMPHTML dengan atribut `animate-in="fly-in-bottom"` yang ditetapkan pada elemen lightbox untuk iklan AMPHTML dalam iframe yang sesuai, dan iklan AMPHTML dalam iframe pihak ketiga.
 
-#####Pada iframe yang sesuai (misalnya, yang berasal dari cache AMP)
+##### Pada iframe yang sesuai (misalnya, yang berasal dari cache AMP)
 
 <amp-img alt="iklan lightbox dalam iframe yang sesuai" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/master/spec/img/lightbox-ad-fie.gif" layout="fixed">
   <noscript>
@@ -159,7 +159,7 @@ Pada contoh di bawah, kami menunjukkan tampilan transisi untuk iklan AMPHTML den
     </noscript>
   </amp-img>
 
-#####Pada iframe pihak ketiga (misalnya, dari luar cache AMP)
+##### Pada iframe pihak ketiga (misalnya, dari luar cache AMP)
 
 <amp-img alt="iklan lightbox dalam iframe 3p" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/master/spec/img/lightbox-ad-3p.gif" layout="fixed">
   <noscript>
@@ -167,6 +167,6 @@ Pada contoh di bawah, kami menunjukkan tampilan transisi untuk iklan AMPHTML den
     </noscript>
   </amp-img>
 
-##Validasi
+## Validasi
 
 Lihat [aturan amp-lightbox](https://github.com/ampproject/amphtml/blob/master/extensions/amp-lightbox/validator-amp-lightbox.protoascii) dalam spesifikasi validator AMP.

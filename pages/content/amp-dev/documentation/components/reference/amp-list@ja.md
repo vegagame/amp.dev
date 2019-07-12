@@ -8,9 +8,10 @@ teaser:
   text: データを動的にダウンロードし、テンプレートを使用してリスト項目を作成します。
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2015 The AMP HTML Authors. All Rights Reserved.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
        Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -25,7 +26,7 @@ teaser:
      limitations under the License.
 -->
 
-#amp-list
+# amp-list
 
 CORS JSON エンドポイントからコンテンツを動的に取得し、指定のテンプレートを使用してレンダリングします。
 
@@ -44,7 +45,7 @@ CORS JSON エンドポイントからコンテンツを動的に取得し、指�
   </tr>
 </table>
 
-##使用方法
+## 使用方法
 
 `<amp-list>` コンポーネントは、CORS JSON エンドポイントから動的コンテンツを取得します。エンドポイントからのレスポンスには、指定したテンプレートでレンダリングされるデータが含まれます。
 
@@ -104,7 +105,7 @@ amp-list div[role="list"] {
   }
 ```
 
-##動作
+## 動作
 
 ドキュメントが AMP キャッシュから配信された場合でも、リクエストは常にクライアントで作成されます。読み込みは、要素が現在のビューポートからどれだけ離れているかに応じて、通常の AMP ルールを使用してトリガーされます。
 
@@ -112,13 +113,13 @@ amp-list div[role="list"] {
 
 `<amp-list>` はデフォルトで、リスト要素に `list` ARIA ロールを、テンプレートを介してレンダリングされるアイテム要素に `listitem` ロールを追加します。
 
-###XHR のバッチ処理
+### XHR のバッチ処理
 
 AMP では、JSON エンドポイントに対する XMLHttpRequest（XHR）をバッチ処理します。つまり、AMP ページでは、複数のコンシューマー（複数の `<amp-list>` 要素など）のデータソースとして単一の JSON データ リクエストを使用できます。たとえば、`<amp-list>` によってエンドポイントへの XHR が作成された場合、XHR の送信中は、同じエンドポイントに対する後続の XHR はトリガーされず、代わりに 1 つ目の XHR の結果を返します。
 
 `<amp-list>` では、[`items`](#items-optional) 属性を使用して JSON レスポンスのサブセットをレンダリングできます。これにより、さまざまなコンテンツをレンダリングする複数の `<amp-list>` 要素を指定できますが、1 つの XHR を共有します。
 
-###オーバーフローの指定
+### オーバーフローの指定
 
 必要に応じて、`overflow` 属性が設定された要素を `<amp-list>` 要素に含めることができます。AMP ランタイムが `<amp-list>` 要素のサイズを要求どおりに変更できない場合、この要素が表示されます。
 
@@ -146,7 +147,7 @@ AMP では、JSON エンドポイントに対する XMLHttpRequest（XHR）を�
   }
 ```
 
-###プレースホルダとフォールバック
+### プレースホルダとフォールバック
 
 `<amp-list>` は必要に応じて、プレースホルダまたはフォールバック（あるいはその両方）をサポートします。
 
@@ -162,7 +163,7 @@ AMP では、JSON エンドポイントに対する XMLHttpRequest（XHR）を�
 </amp-list>
 ```
 
-###データの更新
+### データの更新
 
 `<amp-list>` 要素は、他の要素が `on="tap:..."` 属性で参照可能な `refresh` アクションを公開します。
 
@@ -176,9 +177,9 @@ AMP では、JSON エンドポイントに対する XMLHttpRequest（XHR）を�
 {% endraw %}
 ```
 
-###動的なサイズ変更
+### 動的なサイズ変更
 
-#####試験運用版: amp-list-resizable-children
+##### 試験運用版: amp-list-resizable-children
 
 ユーザー操作に基づいてサイズを変更する際に `<amp-list>` が必要になることがあります。たとえば、ユーザーがタップする可能性がある amp-accordion が `<amp-list>` に含まれている場合、バインドされた CSS クラスが原因で `<amp-list>` のコンテンツがサイズ変更する場合、バインドされた `[src]` 属性が原因で `<amp-list>` 内のアイテム数が変更される場合などです。`changeToLayoutContainer` アクションは動的なサイズ変更に対処するために、アクションがトリガーされたときに amp-list を `layout="CONTAINER"` に変更します。次の例をご覧ください。
 
@@ -196,9 +197,9 @@ AMP では、JSON エンドポイントに対する XMLHttpRequest（XHR）を�
 
 このアクションは試験運用版として、`amp-list-resizable-children` で使用できます。
 
-##属性
+## 属性
 
-#####src（必須）
+##### src（必須）
 
 `<amp-list>` 内でレンダリングされる JSON を返すリモート エンドポイントの URL。この属性には CORS HTTP サービスを指定する必要があります。また、URL のプロトコルは HTTPS である必要があります。
 
@@ -207,7 +208,7 @@ AMP では、JSON エンドポイントに対する XMLHttpRequest（XHR）を�
 
 `[src]` 属性が存在する場合、`src` 属性を省略できることがあります。この属性は、[`amp-bind`](https://www.ampproject.org/docs/reference/components/amp-bind) を使用している場合に、ページ読み込みではなくユーザー操作の結果としてコンテンツをレンダリングするのに便利です。
 
-#####credentials（オプション）
+##### credentials（オプション）
 
 [Fetch API](https://fetch.spec.whatwg.org/) で指定されているとおりに `credentials` オプションを定義します。
 
@@ -228,7 +229,7 @@ AMP では、JSON エンドポイントに対する XMLHttpRequest（XHR）を�
 {% endraw %}
 ```
 
-#####items（オプション）
+##### items（オプション）
 
 レスポンス内でレンダリングする配列を特定する式を定義します。これは、JSON レスポンスのフィールドを介してナビゲートするドット表記の式です。デフォルトでは、`<amp-list>` は配列を期待しますが、`single-item` 属性を使用してオブジェクトからデータを読み込むこともできます。
 
@@ -243,25 +244,25 @@ AMP では、JSON エンドポイントに対する XMLHttpRequest（XHR）を�
 }
 ```
 
-####max-items（オプション）
+#### max-items（オプション）
 
 レンダリングするアイテム配列の最大長を指定する整数値。戻り値が `max-items` を超えると、`items` 配列が `max-items` のエントリ数で切り捨てられます。
 
-####single-item（オプション）
+#### single-item（オプション）
 
 この属性を指定すると、`<amp-list>` において返された結果が単一の要素配列のように扱われます。オブジェクト レスポンスは配列でラップされるため、`{items: {...}}` は `{items: [{...}]}` のように動作するようになります。
 
-####reset-on-refresh（オプション）
+#### reset-on-refresh（オプション）
 
 リストのソースが `amp-bind` アクションまたは `refresh()` アクションによって更新されたときに、読み込みインジケーターとプレースホルダを再表示します。
 
 デフォルトでは、ネットワーク フェッチを開始させる更新時にのみトリガーされます。すべての更新時にリセットするには、`reset-on-refresh="always"` を使用します。
 
-####[is-layout-container] （試験運用版、オプション）
+#### [is-layout-container] （試験運用版、オプション）
 
 これはバインド可能な属性です。デフォルトでは必ず false に指定されている必要があります。`bind` を介して true に設定すると、`<amp-list>` のレイアウトが `CONTAINER` に変更されます。この属性は、amp-list の動的なサイズ変更を処理する際に役立ちます。`<amp-list>` がレイアウト `CONTAINER` をサポートしていないのと同じ理由により（最初の読み込み時にコンテンツが移動される可能性があります）、デフォルトではこの属性を true に設定できません。この属性は試験運用版として、`amp-list-resizable-children` で使用できます。また、`changeToLayoutContainer` アクションを使用することも可能です。
 
-####binding（オプション）
+#### binding（オプション）
 
 `<amp-list>` を使用しているページで `amp-bind` も使用する場合、レンダリング対象の子要素でのバインディング（`[text]` など）の評価に基づいてレンダリングをブロックするかどうかを制御します。
 
@@ -273,11 +274,11 @@ AMP では、JSON エンドポイントに対する XMLHttpRequest（XHR）を�
 
 `binding` 属性を指定しない場合のデフォルト値は `always` です。
 
-##試験運用版: 追加の読み込みと無限スクロール（amp-list-load-more）
+## 試験運用版: 追加の読み込みと無限スクロール（amp-list-load-more）
 
 `<amp-list>` でのページ分けと無限スクロールの実装として `amp-list-load-more`（試験運用版）が導入されました。この機能を有効にするには、[テストページ](https://cdn.ampproject.org/experiments.html)で「amp-list-load-more」（試験運用版）を有効にして、`load-more` 属性を `<amp-list>` に追加します。この機能は現在、初期試用版のため、最終的な API は変更される可能性があります。
 
-####使用例
+#### 使用例
 
 ```html
 <amp-list height="200" src="https://my.rest.endpoint/" width="100" load-more="auto">
@@ -290,13 +291,13 @@ AMP では、JSON エンドポイントに対する XMLHttpRequest（XHR）を�
 
 実際の例については、[test/manual/amp-list/infinite-scroll-1.amp.html](../../test/manual/amp-list/infinite-scroll-1.amp.html) と [test/manual/amp-list/infinite-scroll-2.amp.html](../../test/manual/amp-list/infinite-scroll-1.amp.html) をご覧ください。
 
-###属性
+### 属性
 
-####load-more（必須）
+#### load-more（必須）
 
 この属性には「auto」または「manual」を設定できます。「manual」に設定すると、`<amp-list>` の最後に「load-more」ボタンが表示されます。「auto」に設定すると、`<amp-list>` が無限スクロール効果用の 3 つのビューポートを自動的に読み込み、下方向に追加します。
 
-####load-more-bookmark（オプション）
+#### load-more-bookmark（オプション）
 
 この属性では、返されたデータのフィールド名を指定します。このフィールド名によって次に読み込むアイテムの URL が指定されます。この属性が指定されていない場合、`<amp-list>` は、次に読み込む URL に対応する `load-more-src` フィールドが JSON ペイロードに設定されることを期待します。このフィールドが他の名前で呼ばれている場合、`load-more-bookmark` フィールドでそのフィールドの名前を指定できます。たとえば次のサンプル ペイロードでは、`load-more-bookmark="next"` を指定しています。
 
@@ -304,15 +305,15 @@ AMP では、JSON エンドポイントに対する XMLHttpRequest（XHR）を�
 { "items": [...], "next": "https://url.to.load" }
 ```
 
-###load-more 要素のカスタマイズ
+### load-more 要素のカスタマイズ
 
 `load-more` 属性が設定された `<amp-list>` には、UI 要素（load-more ボタン、ローダー、load-failed 要素）と、リストの最後を示すエンドキャップ（オプション）が含まれます。これらの要素をカスタマイズするには、以下の属性を使用して、`<amp-list-load-more>` 要素を `<amp-list>` の子として指定します。
 
-####load-more-button
+#### load-more-button
 
 `load-more-button` 属性が設定された `<amp-list-load-more>` 要素。読み込む要素が他にもある場合、（手動の load-more の）リストの最後に表示されます。この要素をクリックするとフェッチがトリガーされ、`load-more-src` フィールド、または `load-more-bookmark` 属性に対応して返されたデータのフィールドに含まれている URL からさらに要素が読み込まれます。この要素をカスタマイズするには、`load-more-button` 属性が設定された子要素を `<amp-list>` に指定します。
 
-#####例:
+##### 例:
 
 ```html
 <amp-list load-more="manual" src="https://www.load.more.example.com/" width="400" height="800">
@@ -324,7 +325,7 @@ AMP では、JSON エンドポイントに対する XMLHttpRequest（XHR）を�
 ```
   テンプレート化するには `amp-mustache` を使用します。
 
-#####例:
+##### 例:
 
 ```html
 {% raw %}<amp-list load-more="auto" width="100" height="500" src="https://www.load.more.example.com/">
@@ -341,7 +342,7 @@ AMP では、JSON エンドポイントに対する XMLHttpRequest（XHR）を�
 {% endraw %}
 ```
 
-####load-more-loading
+#### load-more-loading
 
 この要素は、ユーザーがリストの最後に到達したときにコンテンツがまだ読み込む中の場合に表示されるローダーです。また、（`<amp-list>` の新しい子要素の読み込み中に）`load-more-button` 要素をクリックした場合にも表示されます。この要素をカスタマイズするには、`load-more-loading` 属性が設定された子要素を `<amp-list>` に指定します。以下に例を示します。
 ```html
@@ -353,7 +354,7 @@ AMP では、JSON エンドポイントに対する XMLHttpRequest（XHR）を�
   </amp-list>
 ```
 
-####load-more-failed
+#### load-more-failed
 
 `load-more-failed` 属性を含む `<amp-list-load-more>` 要素。読み込みが失敗した場合に `<amp-list>` の一番下に表示される、`load-more-clickable` 属性が設定されたボタンが含まれています。この要素をクリックすると、失敗した URL の読み込みが再度トリガーされます。この要素をカスタマイズするには、`load-more-failed` 属性が設定された子要素を `<amp-list>` に指定します。以下に例を示します。
 
@@ -380,7 +381,7 @@ AMP では、JSON エンドポイントに対する XMLHttpRequest（XHR）を�
 </amp-list>
 ```
 
-####load-more-end
+#### load-more-end
 
 この要素はデフォルトでは指定されませんが、`load-more-end` 属性を含む `<amp-list-load-more>` 要素が子要素として `<amp-list>` に追加されると、読み込むアイテムがもうない場合、この要素が `<amp-list>` の一番下に表示されます。この要素をテンプレート化するには、`amp-mustache` を使用します。以下に例を示します。
 
@@ -393,11 +394,11 @@ AMP では、JSON エンドポイントに対する XMLHttpRequest（XHR）を�
 </amp-list>
 ```
 
-#####共通の属性
+##### 共通の属性
 
 この要素には、AMP コンポーネントに拡張された[共通の属性](https://www.ampproject.org/docs/reference/common_attributes)が含まれます。
 
-##置換
+## 置換
 
 `<amp-list>` では、標準的な URL 変数の置換をすべて使用できます。詳しくは、[置換ガイド](../../spec/amp-var-substitutions.md)をご覧ください。
 
@@ -407,6 +408,6 @@ AMP では、JSON エンドポイントに対する XMLHttpRequest（XHR）を�
 ```
 この例のリクエストの送信先は、`https://foo.com/list.json?0.8390278471201` のようになります。RANDOM の値は各インプレッションに基づいてランダムに生成されます。
 
-##検証
+## 検証
 
 AMP 検証ツールの仕様で [amp-list のルール](https://github.com/ampproject/amphtml/blob/master/extensions/amp-list/validator-amp-list.protoascii)をご確認ください。

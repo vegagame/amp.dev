@@ -8,18 +8,23 @@ teaser:
   text: Um pixel de rastreamento usado para contar visualizações de páginas.
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2015 The AMP HTML Authors. Todos os direitos reservados.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Licenciado sob a Licença Apache, Versão 2.0 (a "Licença"). O uso deste arquivo só é permitido em conformidade com a Licença.
-       Uma cópia da Licença está disponível em
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-       A menos que exigido pela legislação aplicável ou acordado por escrito, o software fornecido de acordo com a Licença é distribuído "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIAS OU CONDIÇÕES DE QUALQUER TIPO, expressas ou implícitas.
-       Consulte a Licença para ver informações sobre permissões e limitações para o idioma específico.
-  -->
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 
 # amp-pixel
 
@@ -39,7 +44,7 @@ teaser:
   </tr>
 </table>
 
-##Comportamento
+## Comportamento
 
 O componente `amp-pixel` se comporta como um pixel de rastreamento simples `img`. Ele usa um único URL, mas fornece variáveis que podem ser substituídas pelo componente na string de URL ao fazer a solicitação. Consulte a [seção de substituições](#substitutions) para ver mais detalhes.
 
@@ -54,13 +59,13 @@ Neste exemplo básico, o `amp-pixel` emite uma solicitação GET simples para o 
 ao processar URLs de AMP no cabeçalho do referenciador das solicitações de análise, remova ou ignore o parâmetro `usqp`. Esse parâmetro é usado pelo Google para acionar experimentos para o Google AMP Cache.
 [/tip]
 
-##Atributos
+## Atributos
 
-#####src (obrigatório)
+##### src (obrigatório)
 
 Um URL simples para um endpoint remoto que precisa ser o protocolo `https`.
 
-#####referrerpolicy (opcional)
+##### referrerpolicy (opcional)
 
 Este atributo é semelhante ao atributo `referrerpolicy` em `<img>`. No entanto, `no-referrer` é o único valor aceito. Se `referrerpolicy=no-referrer` for especificado, o cabeçalho de `referrer` será removido da solicitação HTTP.
 
@@ -70,16 +75,16 @@ Este atributo é semelhante ao atributo `referrerpolicy` em `<img>`. No entanto,
     referrerpolicy="no-referrer"></amp-pixel>
 ```
 
-#####allow-ssr-img (opcional)
+##### allow-ssr-img (opcional)
 
 Este atributo usado em anúncios AMP4ADS indica que, como parte da transformação de pós-validação, um elemento img pode ser colocado diretamente no elemento amp-pixel, permitindo que o ping seja enviado em paralelo com a busca/execução do ambiente de tempo de execução de AMP.
 Isso significa que as macros no URL NÃO serão expandidas, então use-as somente se elas não estiverem presentes no src.
 
-#####common attributes
+##### common attributes
 
 Este elemento inclui [atributos comuns](https://www.ampproject.org/docs/reference/common_attributes) estendidos a componentes de AMP.
 
-##Substituições
+## Substituições
 
 O `amp-pixel` permite todas as substituições de variáveis de URL padrão.
 Consulte o [Guia de substituições](../spec/amp-var-substitutions.md) (em inglês) para ver mais informações.
@@ -91,10 +96,10 @@ No exemplo a seguir, uma solicitação pode ser feita para algo como `https://fo
     layout="nodisplay"></amp-pixel>
 ```
 
-##Estilo
+## Estilo
 
 `amp-pixel` não deve ser estilizado.
 
-##Validação
+## Validação
 
 Veja as [regras do amp-pixel](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii) (link em inglês) nas especificações do validador de AMP.

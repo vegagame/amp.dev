@@ -6,24 +6,29 @@ teaser:
   text: Paylaşım izleme özelliği geliştirme aşamasındadır.
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2016 The AMP HTML Authors. Tüm Hakları Saklıdır.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Apache Lisansı, Sürüm 2.0 ("Lisans") ile lisanslıdır; bu dosyayı Lisans koşulları dışında kullanamazsınız.
-       Lisansın bir kopyasını şu adresten edinebilirsiniz:
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-       Geçerli yasa tarafından gerekli görülmediği veya yazılı olarak bir sözleşme yapılmadığı sürece, Lisanslı olarak dağıtılan yazılım açıkça veya zımni olarak HİÇBİR GARANTİ VEYA KOŞUL SUNULMADAN "OLDUĞU GİBİ" dağıtılır.
-       Lisans kapsamında belirli bir dilde sağlanan izinleri ve uygulanan kısıtlamaları öğrenmek için söz konusu dille ilgili Lisans'a bakın.
-  -->
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 
-#amp-social-share
+# amp-social-share
 
 Bir sosyal paylaşım düğmesi görüntüler.
 
-[İçindekiler]
+
 
 <table>
   <tr>
@@ -44,11 +49,11 @@ Bir sosyal paylaşım düğmesi görüntüler.
   </tr>
 </table>
 
-##Genel Bakış
+## Genel Bakış
 
 `amp-social-share` bileşeni, çeşitli sosyal platform sağlayıcıları için bir sosyal paylaşım düğmesi görüntüler.
 
-##Örnekler
+## Örnekler
 
 **Örnek: Temel sosyal paylaşım düğmesi**
 
@@ -70,7 +75,7 @@ Parametreleri paylaşım uç noktasına geçirmek istediğinizde, paylaşım uç
 
 Linkedin önceden yapılandırılmış sağlayıcılardan biridir; dolayısıyla, `data-share-endpoint` özelliğini sağlamanız gerekmez.
 
-##Özellikler
+## Özellikler
 
 <table>
   <tr>
@@ -94,7 +99,7 @@ Linkedin önceden yapılandırılmış sağlayıcılardan biridir; dolayısıyla
         </tr>
       </table>
 
-##Önceden yapılandırılmış sağlayıcılar
+## Önceden yapılandırılmış sağlayıcılar
 
 `amp-social-share` bileşeni, bazı varsayılan parametrelerin yanı sıra kendi paylaşım uç noktalarını bilen [bazı önceden yapılandırılmış sağlayıcılar](0.1/amp-social-share-config.js) sunar.
 
@@ -216,7 +221,7 @@ Linkedin önceden yapılandırılmış sağlayıcılardan biridir; dolayısıyla
     </tr>
   </table>
 
-##Yapılandırılmamış sağlayıcılar
+## Yapılandırılmamış sağlayıcılar
 
 Önceden yapılandırılmış sağlayıcılara ek olarak, `amp-social-share` bileşeninde ek özellikler belirterek yapılandırılmamış sağlayıcıları da kullanabilirsiniz.
 
@@ -233,9 +238,9 @@ Aşağıdaki örnekte, `data-share-endpoint` özelliğinin Facebook Messenger ö
 
 Bu sağlayıcılar önceden yapılandırılmadığından, sağlayıcı için uygun düğme resmini ve stillerini oluşturmanız gerekir.
 
-##Stiller
+## Stiller
 
-###Varsayılan Stiller
+### Varsayılan Stiller
 
 Varsayılan olarak, `amp-social-share` bileşeni bazı popüler önceden yapılandırılmış sağlayıcıları içerir. Bu sağlayıcıların düğmeleri, sağlayıcının resmi rengi ve logosuyla şekillendirilmiştir. Varsayılan genişlik 60 piksel ve varsayılan yükseklik 44 pikseldir.
 
@@ -243,7 +248,7 @@ Varsayılan olarak, `amp-social-share` bileşeni bazı popüler önceden yapıla
 AMP sayfalarınızda kullanabileceğiniz duyarlı, önceden şekillendirilmiş paylaşım bağlantıları için [AMP Start](https://ampstart.com/components#links-and-sharing) sayfasını ziyaret edin.
 [/tip]
 
-###Özel Stiller
+### Özel Stiller
 
 Bazen kendi stilinizi sağlamak istersiniz. Bunun için sağlanan stilleri aşağıda gösterilen şekilde geçersiz kılabilirsiniz:
 ```css
@@ -253,7 +258,7 @@ amp-social-share[type="twitter"] {
 }
 ```
 
-##Değişken Değişikliği
+## Değişken Değişikliği
 
 `<amp-social-share>` öğesinde [genel AMP değişkeni değişikliklerini](https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md) kullanabilirsiniz. Aşağıdaki örnekte, `TITLE` değişkeni, doküman başlığı ve `CANONICAL_URL` değişkeni, dokümanın standart URL'si ile değiştirilmiştir.
 
@@ -263,6 +268,6 @@ amp-social-share[type="twitter"] {
 </amp-social-share>
 ```
 
-##Doğrulama
+## Doğrulama
 
 AMP doğrulayıcı spesifikasyonundaki [amp-social-share kurallarına](https://github.com/ampproject/amphtml/blob/master/extensions/amp-social-share/validator-amp-social-share.protoascii) bakın.

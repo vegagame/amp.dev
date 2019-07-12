@@ -8,21 +8,25 @@ teaser:
   text: Remplacer la balise vidéo HTML5.
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2015 The AMP HTML Authors. Tous droits réservés.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Autorisation sous licence Apache, version 2.0 (la "Licence") ;
-       n'utilisez ce fichier que dans le cadre de la Licence.
-       Vous pouvez obtenir une copie de la Licence à l'adresse suivante :
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-       Sauf dispositions légales applicables ou accord écrit préalable, le logiciel distribué dans le cadre de la Licence est fourni "EN L'ÉTAT", À L'EXCLUSION DE TOUTE GARANTIE OU CONDITION DE QUELQUE NATURE QUE CE SOIT, expresse ou implicite.
-       Consultez la Licence correspondant à la langue spécifique qui régit les autorisations et limitations applicables.
-  -->
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 
-#amp-video
+# amp-video
 
 Ce composant remplace la balise `video` HTML5 ; il ne doit être utilisé que pour les intégrations directes de fichiers vidéo HTML5.
 
@@ -43,7 +47,7 @@ Ce composant remplace la balise `video` HTML5 ; il ne doit être utilisé que p
     </tr>
   </table>
 
-##Comportement
+## Comportement
 
 Le composant `amp-video` charge de manière différée la ressource vidéo spécifiée par son attribut `src`, à une heure déterminée par l'environnement d'exécution. Vous pouvez contrôler un composant `amp-video` de la même manière qu'une balise `<video>` HTML5 standard.
 
@@ -54,7 +58,7 @@ Le composant `amp-video` accepte jusqu'à quatre types de nœuds HTML uniques en
 * Espace réservé avant le lancement de la lecture de la vidéo.
 * Création de remplacement si le navigateur n'accepte pas le contenu vidéo HTML5 : l'attribut `fallback` peut être affecté à un ou à aucun nœud enfant immédiat. Si cet attribut est utilisé, ce nœud et ses enfants constituent le contenu qui s'affiche si la vidéo HTML5 n'est pas acceptée par le navigateur de l'utilisateur.
 
-####Exemple
+#### Exemple
 
 <!--embedded example - displays in ampproject.org -->
 
@@ -66,11 +70,11 @@ Le composant `amp-video` accepte jusqu'à quatre types de nœuds HTML uniques en
 
 </div>
 
-##Analyse
+## Analyse
 
 Le composant `amp-video` est directement compatible avec la technologie d'analyse. Pour en savoir plus, consultez la page consacrée à l'[analyse vidéo](https://github.com/ampproject/amphtml/blob/master/extensions/amp-analytics/amp-video-analytics.md).
 
-##Attributs
+## Attributs
 
 <table>
   <tr>
@@ -130,7 +134,7 @@ Le composant `amp-video` est directement compatible avec la technologie d'analys
         </tr>
       </table>
 
-##Attributs de l'API Media Session
+## Attributs de l'API Media Session
 
 Le composant `amp-video` met en œuvre l'[API Media Session](https://developers.google.com/web/updates/2017/02/media-session) qui permet aux développeurs de spécifier davantage d'informations sur le fichier vidéo. Ces informations supplémentaires sur la vidéo s'affichent dans le centre de notifications de l'appareil de l'utilisateur (avec les commandes de lecture et de mise en pause de la vidéo).
 
@@ -167,12 +171,12 @@ Cet exemple contient à la fois les attributs `poster` et `artwork`. L'attribut 
 </amp-video>
 ```
 
-##Superposition click-to-play
+## Superposition click-to-play
 
 La superposition click-to-play est une fonctionnalité d'utilisation courante pour les lecteurs vidéo sur le Web.  Vous pouvez, par exemple, afficher une icône de lecture personnalisée sur laquelle l'utilisateur peut cliquer, ou encore inclure le titre de la vidéo, des images poster de différentes tailles, etc.  Étant donné que le composant `amp-video` est compatible avec l'action AMP `play` standard, vous pouvez facilement mettre en œuvre la technologie click-to-play.
 
 Pour obtenir un exemple détaillé, consultez la page [Superposition click-to-play pour amp-video](https://ampbyexample.com/advanced/click-to-play_overlay_for_amp-video/) sur AMP by Example.
 
-##Validation
+## Validation
 
 Consultez les [règles relatives à amp-video](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii) dans les spécifications du validateur AMP.

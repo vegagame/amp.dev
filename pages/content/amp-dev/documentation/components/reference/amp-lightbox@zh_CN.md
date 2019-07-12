@@ -7,17 +7,25 @@ teaser:
   text: 以完整视口“灯箱”模式显示元素。
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
-<!--- 版权所有 2015 The AMP HTML Authors。保留所有权利。
+<!---
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       根据 Apache 许可 2.0 版（以下简称“许可”）授权用户使用；您只有在遵循该许可的情况下才可使用本文件。您可以通过以下网址获得该许可的副本：
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-       除非适用法律要求或已达成书面协议，否则按照该许可分发的软件均“按原样”分发，不提供任何类型的担保或条件（无论明示或暗示）。有关该许可规定的具体语言管辖权限和限制，请参阅该许可。
-  -->
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 
-#amp-lightbox
+# amp-lightbox
 
 <table>
   <tr>
@@ -39,7 +47,7 @@ teaser:
 </table>
 
 
-##行为
+## 行为
 
 `amp-lightbox` 组件可定义以完整视口叠加层/模式显示的子元素。当用户点按或点击某个元素（例如按钮）时，所点击元素的 `on` 属性中引用的 `amp-lightbox` ID 会触发灯箱占据整个视口并显示 `amp-lightbox` 的子元素。
 
@@ -57,7 +65,7 @@ teaser:
 要在灯箱中显示图片，还可使用 [`<amp-image-lightbox>`](https://www.ampproject.org/docs/reference/components/amp-image-lightbox) 组件。
 [/tip]
 
-##属性
+## 属性
 
 <table>
   <tr>
@@ -90,11 +98,11 @@ teaser:
           </tr>
         </table>
 
-##样式设置
+## 样式设置
 
 可以使用标准 CSS 对 `amp-lightbox` 进行样式设置。
 
-##操作
+## 操作
 
 `amp-lightbox` 提供以下操作，它们可以使用 [AMP on 语法触发](https://www.ampproject.org/docs/reference/amp-actions-and-events)：
 
@@ -113,7 +121,7 @@ teaser:
   </tr>
 </table>
 
-##<a id="a4a"></a>在 AMPHTML 广告中使用 `amp-lightbox`
+## <a id="a4a"></a>在 AMPHTML 广告中使用 `amp-lightbox`
 
 [tip type="ll callout('注意：</b><a class="type_note"]
 用于 AMPHTML 广告的 `amp-lightbox` 组件是[实验性组件](https://www.ampproject.org/docs/reference/experimental)，仍处于积极开发阶段。要在 AMPHTML 广告中使用 `amp-lightbox`，请[启用 `amp-lightbox-a4a-proto` 实验](http://cdn.ampproject.org/experiments.html)。
@@ -121,7 +129,7 @@ teaser:
 
 在常规 AMP 文档与在[用 AMPHTML 编写的广告](../amp-a4a/amp-a4a-format.md)中使用 `amp-lightbox` 存在一些差异：
 
-###需要使用 close-button
+### 需要使用 close-button
 
 对于 AMPHTML 广告，`close-button` 为必需的属性。此属性会导致标头呈现在灯箱顶部。标头包含关闭按钮和显示“Ad”的标签。需要使用此标头才能执行以下操作：
 
@@ -130,21 +138,21 @@ teaser:
 
 对于 AMPHTML 广告，`close-button` 为必需的属性，且此属性只能在 AMPHTML 广告中使用。在常规 AMP 文档中，您可以在任意需要的位置呈现关闭按钮（作为 `<amp-lightbox>` 内容的一部分）。
 
-###不允许使用可滚动的灯箱
+### 不允许使用可滚动的灯箱
 
 AMPHTML 广告不允许使用可滚动的灯箱。
 
-###透明背景
+### 透明背景
 
 在 AMPHTML 广告中使用 `<amp-lightbox>` 时，`<body>` 元素的背景将变为透明，这是因为 AMP runtime 会在灯箱展开之前调整广告素材内容的大小和对齐方式。这样做是为了防止广告素材在灯箱打开时发生视觉“跳转”。如果您的广告素材需要背景，请在中间容器（例如完整尺寸的 `<div>`）而非 `<body>` 上进行设置。
 
 当 AMPHTML 广告在第三方环境（例如，非 AMP 文档）中运行时，广告素材相对于视口居中，然后展开。这是因为第三方 iframe 需要依赖 postMessage API 来启用帧大小调整（异步调整）等功能，因此，先使广告素材居中可在不发生视觉跳转的情况下平稳转换。
 
-###AMPHTML 广告的灯箱转换示例
+### AMPHTML 广告的灯箱转换示例
 
 在下面的示例中，我们展示了灯箱元素上设置了 `animate-in="fly-in-bottom"` 属性的 AMPHTML 广告在友好型 iframe 以及在第三方 iframe 中的转换效果。
 
-#####在友好型 iframe 中（例如来自 AMP 缓存）
+##### 在友好型 iframe 中（例如来自 AMP 缓存）
 
 <amp-img alt="友好型 iframe 中的灯箱广告" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/master/spec/img/lightbox-ad-fie.gif" layout="fixed">
   <noscript>
@@ -152,7 +160,7 @@ AMPHTML 广告不允许使用可滚动的灯箱。
     </noscript>
   </amp-img>
 
-#####在第三方 iframe 中（例如在 AMP 缓存之外）
+##### 在第三方 iframe 中（例如在 AMP 缓存之外）
 
 <amp-img alt="第三方 iframe 中的灯箱广告" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/master/spec/img/lightbox-ad-3p.gif" layout="fixed">
   <noscript>
@@ -160,6 +168,6 @@ AMPHTML 广告不允许使用可滚动的灯箱。
     </noscript>
   </amp-img>
 
-##验证
+## 验证
 
 请参阅 AMP 验证工具规范中的 [amp-lightbox 规则](https://github.com/ampproject/amphtml/blob/master/extensions/amp-lightbox/validator-amp-lightbox.protoascii)。

@@ -6,17 +6,23 @@ teaser:
   text: É um formato avançado de narrativa visual.
 ---
 
-<!--
-       Copyright 2017 The AMP HTML Authors. Todos os direitos reservados.
 
-       Licenciado sob a Licença Apache, Versão 2.0 (a "Licença"). O uso deste arquivo só é permitido em conformidade com a Licença.
-       Uma cópia da Licença está disponível em
+<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+<!---
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       http://www.apache.org/licenses/LICENSE-2.0
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       A menos que exigido pela legislação aplicável ou acordado por escrito, o software fornecido de acordo com a Licença é distribuído "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIAS OU CONDIÇÕES DE QUALQUER TIPO, expressas ou implícitas.
-       Consulte a Licença para ver informações sobre permissões e limitações para o idioma específico.
-  -->
+     http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 
 # amp-story
 
@@ -50,18 +56,18 @@ teaser:
 este recurso é experimental e está em desenvolvimento. Se tiver algum problema, [registre-o no GitHub](https://github.com/ampproject/amphtml/issues/new).
 [/tip]
 
-##Notas de versão
+## Notas de versão
 
 | Versão | Descrição                                                            |
 |-------|----------------------------------------------------------------------|
 | 1.0     | Versão atual, desde 16/07/2018.                                     |
 | 0.1     | Implementação inicial.  Obsoleta e foi removida em 19/03/2019. |
 
-##Migração de 0.1 para 1.0
+## Migração de 0.1 para 1.0
 
 Desde 16/07/2018, a versão 0.1 é considerada obsoleta e foi removida em 19/03/2019.  Isso pode causar pequenas alterações interruptivas, porque suas histórias serão atualizadas automaticamente para a versão 1.0.  Recomendamos a migração manual das suas páginas para a versão 1.0 antes dessa data para garantir a funcionalidade e um design adequado.
 
-###Novos recursos de bookend
+### Novos recursos de bookend
 
 Adicionamos novos recursos ao bookend do amp-stories, proporcionando compatibilidade com componentes e layouts visuais mais sofisticados. Algumas das alterações:
 
@@ -86,7 +92,7 @@ Para usar esses novos recursos, adicione uma tag `<amp-story-bookend>` como a ú
 
 Saiba mais sobre os novos componentes e como especificá-los na configuração JSON na seção [amp-story-bookend](#bookend-amp-story-bookend).
 
-###Novos requisitos de metadados
+### Novos requisitos de metadados
 
 Adicionamos novos atributos de metadados ao elemento `<amp-story>`. Esses atributos de metadados serão usados para exibir uma visualização da história em todo o ecossistema de histórias em AMP. Por exemplo, esses atributos podem ser usados para renderizar um link de visualização atraente no bookend de uma história relacionada. Ao fornecer esses atributos, você também ajuda a garantir que sua história esteja preparada para o futuro, oferecendo experiências ricas e incorporadas nas histórias em AMP que estão por vir.
 
@@ -111,7 +117,7 @@ Os novos atributos:
 | `poster-square-src` | O pôster da história em formato quadrado (proporção 1 x 1). |
 | `poster-landscape-src` | O pôster da história em formato paisagem (proporção 4 x 3). |
 
-####Diretrizes do `publisher-logo-src`
+#### Diretrizes do `publisher-logo-src`
 
 As seguintes diretrizes se aplicam à imagem do logotipo do editor:
 
@@ -153,7 +159,7 @@ As seguintes diretrizes se aplicam à imagem do logotipo do editor:
 * Use um logotipo por marca, que seja consistente em todas as histórias em AMP.
 * O logotipo precisa ter pelo menos 96 x 96 pixels.
 
-####Diretrizes para pôsteres (`poster-portrait-src`, `poster-landscape-src` e `poster-square-src`)
+#### Diretrizes para pôsteres (`poster-portrait-src`, `poster-landscape-src` e `poster-square-src`)
 
 As diretrizes a seguir se aplicam às imagens de pôsteres de histórias:
 
@@ -167,7 +173,7 @@ As diretrizes a seguir se aplicam às imagens de pôsteres de histórias:
     * Paisagem: 928 px x 696 px
     * Quadrado: 928 px x 928 px</li>
 
-##Visão geral
+## Visão geral
 
 A extensão `amp-story` oferece um novo formato para a exibição de conteúdo visual que pode ser usado para contar histórias. Com uma história em AMP, você pode oferecer aos usuários conteúdo e informações visualmente interessantes, em um tamanho reduzido.
 
@@ -179,7 +185,7 @@ A extensão `amp-story` oferece um novo formato para a exibição de conteúdo v
   </amp-anim>
 </figure>
 
-##Formato da história em AMP
+## Formato da história em AMP
 
 Uma [história em AMP](#story%3a-amp-story) é um documento HTML para AMP completo, composto de [páginas](#pages%3a-amp-story-page). Dentro das páginas há [camadas](#layers%3a-amp-story-grid-layer) e, dentro delas, há elementos AMP e HTML, como mídia, análise, texto e assim por diante.
 
@@ -189,7 +195,7 @@ Uma [história em AMP](#story%3a-amp-story) é um documento HTML para AMP comple
     </noscript>
   </amp-img>
 
-###Clichê
+### Clichê
 
 A marcação a seguir é um bom ponto de partida ou clichê. Copie e salve-a em um arquivo com extensão `.html`.
 
@@ -239,7 +245,7 @@ A marcação a seguir é um bom ponto de partida ou clichê. Copie e salve-a em 
 
 O conteúdo do corpo cria uma história com duas páginas.  Cada página tem uma imagem de plano de fundo sem margens, com uma string de texto simples sobre ela.
 
-###Marcação obrigatória para amp-story
+### Marcação obrigatória para amp-story
 
 O formato HTML da história em AMP segue os [mesmos requisitos de marcação de um documento HTML para AMP válido](https://www.ampproject.org/docs/reference/spec#required-markup), além dos seguintes requisitos adicionais:
 
@@ -249,7 +255,7 @@ O formato HTML da história em AMP segue os [mesmos requisitos de marcação de 
 | Contém uma tag `<script async src="https://cdn.ampproject.org/v0/amp-story-1.0.js" custom-element="amp-story"></script>` como terceira filha da tag `<head>`. | Inclui e carrega a biblioteca JavaScript amp-story. |
 | Contém uma tag `<link rel="canonical" href="$STORY_URL">` dentro de `<head>`. | O link aponta para a história em si, identificando-a como o documento canônico. |
 
-##História: `amp-story`
+## História: `amp-story`
 
 O componente `amp-story` representa uma história inteira.  O componente em si implementa o shell da IU, incluindo o processamento de gestos e navegação, e inserindo a IU do shell do aplicativo (controles, barra de progresso etc.).
 
@@ -261,7 +267,7 @@ O componente `amp-story` representa uma história inteira.  O componente em si i
     </amp-anim>
   </figure>
 
-###Exemplo
+### Exemplo
 
 ```html
 <amp-story
@@ -280,53 +286,53 @@ O componente `amp-story` representa uma história inteira.  O componente em si i
 </amp-story>
 ```
 
-###Atributos
+### Atributos
 
-#####standalone [obrigatório]
+##### standalone [obrigatório]
 
 Identifica que o documento AMP é uma história.
 
-#####title [obrigatório]
+##### title [obrigatório]
 
 O título da história.
 
-#####publisher [obrigatório]
+##### publisher [obrigatório]
 
 O nome do editor da história.
 
-#####publisher-logo-src [obrigatório]
+##### publisher-logo-src [obrigatório]
 
 URL para o logotipo do editor da história em formato quadrado (proporção 1 x 1). Por exemplo, `publisher-logo-src="https://example.com/logo/1x1.png"`, em que 1x1.png é um logotipo de 36 x 36 px.
 
-#####poster-portrait-src [obrigatório]
+##### poster-portrait-src [obrigatório]
 
 URL para o [pôster da história](#posters) em formato retrato (proporção 3 x 4).
 
-#####supports-landscape [opcional]
+##### supports-landscape [opcional]
 
 Ativa a compatibilidade com a orientação paisagem em dispositivos móveis e uma experiência de paisagem sem margens em computadores.
 
-#####background-audio [opcional]
+##### background-audio [opcional]
 
 URL para um arquivo de áudio tocado ao longo da história.
 
-#####poster-square-src [opcional]
+##### poster-square-src [opcional]
 
 URL para o [pôster da história](#posters) em formato quadrado (proporção 1 x 1).
 
-#####poster-landscape-src [opcional]
+##### poster-landscape-src [opcional]
 
 URL para o [pôster da história](#posters) em formato paisagem (proporção 4 x 3).
 
-###Pôsteres
+### Pôsteres
 
 Um "pôster" é uma imagem exibida na IU até que sua história seja carregada. Geralmente, o pôster é a primeira tela da história, mas é possível usar qualquer imagem que a represente.
 
-###Filhos (de amp-story)
+### Filhos (de amp-story)
 
 O componente `<amp-story>` contém um ou mais componentes [`<amp-story-page>`](#pages%3a-amp-story-page), que incluem cada uma das telas da história.  A primeira página especificada na ordem do documento é a primeira página mostrada na história.
 
-###Ativação da orientação paisagem e da experiência sem margens para computadores
+### Ativação da orientação paisagem e da experiência sem margens para computadores
 
 Se o atributo `supports-landscape` for especificado no elemento `<amp-story>`, ele:
 
@@ -346,7 +352,7 @@ Uso: `<amp-story ... supports-landscape>...</amp-story>`
   </amp-anim>
 </figure>
 
-##Páginas: `amp-story-page`
+## Páginas: `amp-story-page`
 
 O componente `<amp-story-page>` representa o conteúdo a ser exibido em uma única página de uma história.
 
@@ -365,7 +371,7 @@ O componente `<amp-story-page>` representa o conteúdo a ser exibido em uma úni
       </amp-anim>
     </figure>
 
-###Exemplo
+### Exemplo
 
 ```html
 <amp-story-page id="cover">
@@ -383,13 +389,13 @@ O componente `<amp-story-page>` representa o conteúdo a ser exibido em uma úni
 </amp-story-page>
 ```
 
-###Atributos
+### Atributos
 
-#####id [obrigatório]
+##### id [obrigatório]
 
 Um identificador exclusivo para a página. Pode ser usado para aplicar estilo à página e aos descendentes dela em CSS, além de ser usado para identificar de modo exclusivo a página no fragmento de URL.
 
-#####auto-advance-after [opcional]
+##### auto-advance-after [opcional]
 
 Especifica quando avançar automaticamente para a próxima página.  Se omitido, a página não avançará automaticamente. O valor para `auto-advance-after` precisa ser:
 
@@ -402,7 +408,7 @@ Exemplo:
 <amp-story-page id="tokyo" auto-advance-after="1s">
 ```
 
-#####background-audio [opcional]
+##### background-audio [opcional]
 
 Um URI para um arquivo de áudio tocado enquanto a página está sendo visualizada.
 
@@ -412,15 +418,15 @@ Exemplo:
 <amp-story-page id="zurich" background-audio="./media/switzerland.mp3">
 ```
 
-###Filhos (de amp-story-page)
+### Filhos (de amp-story-page)
 
 O componente `<amp-story-page>` contém uma ou mais [camadas](#layers).  As camadas são empilhadas de baixo para cima (a primeira camada especificada no DOM fica na base, enquanto a última fica no topo).
 
-##Camadas
+## Camadas
 
 As camadas são empilhadas umas sobre as outras para criar o efeito visual desejado.
 
-###`amp-story-grid-layer`
+### `amp-story-grid-layer`
 
 O componente `<amp-story-grid-layer>` coloca os filhos em uma grade.  A implementação dele se baseia nas [especificações de grade CSS](https://www.w3.org/TR/css-grid-1/) (link em inglês).
 
@@ -439,13 +445,13 @@ O componente `<amp-story-grid-layer>` coloca os filhos em uma grade.  A implemen
     <noscript><img width="200" src="https://raw.githubusercontent.com/ampproject/amphtml/master/extensions/amp-story/img/layers-layer-4.gif"></noscript></amp-img>
 </div>
 
-####Atributos
+#### Atributos
 
-#####template [obrigatório]
+##### template [obrigatório]
 
 O atributo `template` determina o layout da camada de grade. Os modelos disponíveis são descritos na seção [Modelos](#templates) abaixo.
 
-#####grid-area [opcional]
+##### grid-area [opcional]
 
 O atributo é especificado nos filhos de `<amp-story-grid-layer>`. O `grid-area` especifica a área nomeada (usando um `template` que a define) em que o elemento que contém esse atributo precisa aparecer.
 
@@ -459,7 +465,7 @@ Exemplo:
 </amp-story-grid-layer>
 ```
 
-####Modelos
+#### Modelos
 
 Veja a seguir os modelos disponíveis para especificar o layout da camada de grade.
 
@@ -467,7 +473,7 @@ Veja a seguir os modelos disponíveis para especificar o layout da camada de gra
 para ver os modelos de layout em uso, confira a [demonstração de layouts no site AMP By Example](https://ampbyexample.com/stories/features/layouts/).
 [/tip]
 
-#####fill
+##### fill
 
 O modelo `fill` mostra o primeiro filho sem margens. Os outros filhos não são mostrados.
 
@@ -487,7 +493,7 @@ Exemplo:
 </amp-story-grid-layer>
 ```
 
-#####vertical
+##### vertical
 
 O modelo `vertical` posiciona os elementos dele ao longo do eixo y.  Por padrão, os elementos são alinhados à parte superior da tela e a ocupam completamente ao longo do eixo x.
 
@@ -507,7 +513,7 @@ O modelo `vertical` posiciona os elementos dele ao longo do eixo y.  Por padrão
 </amp-story-grid-layer>
 ```
 
-#####horizontal
+##### horizontal
 
 O modelo `horizontal` posiciona os elementos filhos ao longo do eixo x.  Por padrão, os elementos dele são alinhados ao início da linha e podem ocupar a tela inteira ao longo do eixo y.
 
@@ -527,7 +533,7 @@ O modelo `horizontal` posiciona os elementos filhos ao longo do eixo x.  Por pad
 </amp-story-grid-layer>
 ```
 
-#####thirds
+##### thirds
 
 O modelo `thirds` divide a tela em três linhas do mesmo tamanho e permite que você insira conteúdo em cada área.
 
@@ -551,7 +557,7 @@ O modelo `thirds` divide a tela em três linhas do mesmo tamanho e permite que v
 </amp-story-grid-layer>
 ```
 
-####Filhos
+#### Filhos
 
 Uma `amp-story-grid-layer` pode conter os seguintes elementos:
 
@@ -695,16 +701,16 @@ Uma `amp-story-grid-layer` pode conter os seguintes elementos:
   </tr>
 </table>
 
-###`amp-story-cta-layer`
+### `amp-story-cta-layer`
 
 O componente `<amp-story-cta-layer>` permite o uso de elementos `<a>` e `<button>` dentro de uma `<amp-story-page>`.
 
-####Restrições
+#### Restrições
 
 * Se especificado, o elemento `<amp-story-cta-layer>` precisa ser a última camada de uma `<amp-story-page>`. Como resultado, na prática, cada `<amp-story-page>` pode ter exatamente um ou zero elementos `<amp-story-cta-layer>`.
 * Não é possível controlar o posicionamento e o dimensionamento dessa camada. Ela tem sempre 100% da largura da página, 20% da altura e é alinhada à parte inferior da página.
 
-####Exemplo
+#### Exemplo
 
 ```html
 <amp-story-page id="vertical-template-thirds">
@@ -727,15 +733,15 @@ O componente `<amp-story-cta-layer>` permite o uso de elementos `<a>` e `<button
 
 [Exemplo completo encontrado no diretório de exemplos (link em inglês)](https://github.com/ampproject/amphtml/blob/master/examples/amp-story/cta-layer-outlink.html)
 
-####Filhos
+#### Filhos
 
 O componente `amp-story-cta-layer` permite praticamente os mesmos descendentes de `amp-story-grid-layer`, além das tags `<a>` e `<button>`.
 
 Para ver uma lista atualizada dos filhos aceitos, consulte o campo [amp-story-cta-layer-allowed-descendants](https://github.com/ampproject/amphtml/blob/master/extensions/amp-story/validator-amp-story.protoascii) nas regras de validação (link em inglês).
 
-##Anexos de página
+## Anexos de página
 
-###`amp-story-page-attachment`
+### `amp-story-page-attachment`
 
 <amp-img alt="Anexo de página de história em AMP" src="https://github.com/ampproject/amphtml/raw/master/extensions/amp-story/img/amp-story-page-attachment.gif" width="240" height="480" layout="fixed">
   <noscript>
@@ -750,7 +756,7 @@ Para ver uma lista atualizada dos filhos aceitos, consulte o campo [amp-story-ct
 
   O elemento `<amp-story-page-attachment>` precisa ser o último filho de `<amp-story-page>` e ter o atributo `layout="nodisplay"`. O conteúdo HTML para AMP do anexo precisa ser fornecido in-line na sua história em AMP, dentro dessa tag `<amp-story-page-attachment>`.
 
-###Conteúdo e componentes permitidos
+### Conteúdo e componentes permitidos
 
 Os anexos da página de história permitem praticamente os mesmos elementos HTML da história em AMP, além dos outros componentes listados abaixo, como players de vídeo de terceiros ou incorporações de mídia social. Isso significa que você pode adicionar conteúdo muito detalhado ou não permitido em uma página de história em AMP.
 
@@ -826,7 +832,7 @@ Os anexos da página de história permitem praticamente os mesmos elementos HTML
 
 </details>
 
-###Exemplo
+### Exemplo
 
 ```html
 <amp-story-page id="foo">
@@ -852,13 +858,13 @@ Os anexos da página de história permitem praticamente os mesmos elementos HTML
 </amp-story-page>
 ```
 
-##Animações
+## Animações
 
 Cada elemento de uma `<amp-story-page>` pode ter uma animação de entrada.
 
 Você pode configurar animações especificando um conjunto de [atributos de animação](#animation-attributes) no elemento. Nenhuma extensão ou configuração adicional de AMP é necessária.
 
-###Efeitos de animação
+### Efeitos de animação
 
 Os seguintes efeitos de animação estão disponíveis como predefinições para histórias em AMP:
 
@@ -887,9 +893,9 @@ Os seguintes efeitos de animação estão disponíveis como predefinições para
 veja uma [demonstração ao vivo de todas as animações de histórias em AMP](https://ampbyexample.com/stories/features/animations/) no site AMP By Example.
 [/tip]
 
-###Atributos de animação
+### Atributos de animação
 
-#####animate-in [obrigatório]
+##### animate-in [obrigatório]
 
 Use esse atributo para especificar o nome da [predefinição de animação](#animation-effects) da entrada.
 
@@ -901,7 +907,7 @@ Use esse atributo para especificar o nome da [predefinição de animação](#ani
 </h2>
 ```
 
-#####animate-in-duration [opcional]
+##### animate-in-duration [opcional]
 
 Use o atributo para especificar a duração da animação de entrada, em segundos ou milissegundos (por exemplo, 0,2s ou 200ms). A duração padrão depende da predefinição de animação especificada.
 
@@ -913,7 +919,7 @@ Use o atributo para especificar a duração da animação de entrada, em segundo
 </h2>
 ```
 
-#####animate-in-delay [opcional]
+##### animate-in-delay [opcional]
 
 Use esse atributo para especificar o atraso antes do início da animação. O valor precisa ser maior ou igual a 0, em segundos ou milissegundos (por exemplo, 0,2s ou 200ms). O atraso padrão depende da predefinição de animação especificada.
 
@@ -929,7 +935,7 @@ Use esse atributo para especificar o atraso antes do início da animação. O va
 não é garantido que o atraso da animação será exato. Atrasos maiores podem ser causados pelo carregamento da extensão `amp-animation` em segundo plano depois que o primeiro elemento animado é verificado. O contrato de atributo é definido como *atrasar esta animação por pelo menos N milissegundos*. Isso se aplica a todos os elementos, incluindo aqueles com um atraso de 0 segundos.
 [/tip]
 
-#####animate-in-after [opcional]
+##### animate-in-after [opcional]
 
 Use esse atributo para encadear ou sequenciar animações (por exemplo, a animation2 se inicia após a conclusão da animation1). Especifique o código do elemento animado que a animação desse elemento seguirá. O elemento precisa estar presente na mesma `<amp-story-page>`. O atraso é aplicado após a animação do elemento anterior terminar. Para ver mais detalhes, consulte abaixo a seção [Sequenciar animações](#sequencing-animations).
 
@@ -951,7 +957,7 @@ Por exemplo, no código a seguir, o `object2` é animado depois que o `object1` 
 </amp-story-page>
 ```
 
-#####scale-start, scale-end [opcionais, só funcionam com animações `zoom-in` e `zoom-out`]
+##### scale-start, scale-end [opcionais, só funcionam com animações `zoom-in` e `zoom-out`]
 
 Use esses dois atributos para especificar melhor os parâmetros que aumentam e diminuem o zoom das suas animações. O valor precisa ser maior ou igual a 0, e decimais são permitidos. O padrão será scale-start: 1 e scale-end: 3 para aumentar zoom, e o inverso para diminuir zoom.
 
@@ -962,7 +968,7 @@ Use esses dois atributos para especificar melhor os parâmetros que aumentam e d
 </amp-img>
 ```
 
-#####translate-x [opcional, só funciona com animações `pan-left` e `pan-right`]
+##### translate-x [opcional, só funciona com animações `pan-left` e `pan-right`]
 
 Use esse atributo para especificar a movimentação horizontal da sua imagem em uma animação pan-left/pan-right. O valor, em pixels, precisa ser maior ou igual a 0. O valor padrão movimentará toda a largura da imagem especificada.
 
@@ -973,7 +979,7 @@ Use esse atributo para especificar a movimentação horizontal da sua imagem em 
 </amp-img>
 ```
 
-#####translate-y [opcional, só funciona com animações `pan-up` e `pan-down`]
+##### translate-y [opcional, só funciona com animações `pan-up` e `pan-down`]
 
 Use esse atributo para especificar a movimentação vertical da sua imagem em uma animação pan-up/pan-down. O valor, em pixels, precisa ser maior ou igual a 0. O valor padrão movimentará toda a altura da imagem especificada.
 
@@ -984,7 +990,7 @@ Use esse atributo para especificar a movimentação vertical da sua imagem em um
 </amp-img>
 ```
 
-###Sequenciar animações
+### Sequenciar animações
 
 Para encadear animações em sequência, use o atributo `animate-in-after`. Todos os elementos de determinada cadeia precisam estar presentes na mesma `<amp-story-page>`. Elementos sem o atributo `animate-in-after` não pertencem a uma cadeia de sequência e são iniciados de forma independente na entrada da página.
 
@@ -1019,7 +1025,7 @@ Para encadear animações em sequência, use o atributo `animate-in-after`. Todo
 </amp-story-page>
 ```
 
-###Combinar várias animações
+### Combinar várias animações
 
 Você pode aplicar várias animações de entrada a um elemento (por exemplo, um elemento voa para a página e esmaece ao mesmo tempo). Não é possível atribuir mais de uma animação predefinida a um único elemento. No entanto, elementos com diferentes animações de entrada podem ser aninhados para serem combinados em uma só.
 
@@ -1037,7 +1043,7 @@ Você pode aplicar várias animações de entrada a um elemento (por exemplo, um
 se uma animação composta for iniciada após o término da animação de um elemento separado, é preciso que todos os elementos aninhados que compõem a animação tenham o atributo `animate-in-after` configurado com o mesmo `id`.
 [/tip]
 
-##Bookend: `amp-story-bookend`
+## Bookend: `amp-story-bookend`
 
 O `amp-story-bookend` é a última tela da história. Ele contém links relacionados, opções de compartilhamento, links de call-to-action, entre outros itens.
 
@@ -1098,13 +1104,13 @@ Em seguida, você precisa preencher a configuração do JSON. É nela que você 
 
 É obrigatório incluir a primeira linha para especificar que você está usando a versão v1.0.
 
-####Componentes de bookend
+#### Componentes de bookend
 
 O bookend é composto por vários componentes. Esses componentes podem ser artigos, links de call-to-action, texto, entre outros.
 
 Eles são especificados no campo `components` do JSON configurado. Veja a seção [Exemplo de resposta JSON](#example-json-response) abaixo.
 
-#####heading
+##### heading
 
 O componente <code>heading</code> tem um campo `text`, que pode ser usado para anexar um título a um grupo de artigos.
 
@@ -1121,7 +1127,7 @@ O componente <code>heading</code> tem um campo `text`, que pode ser usado para a
     </noscript>
   </amp-img>
 
-#####small
+##### small
 
 O componente `small` pode ser usado para vincular a artigos relacionados. Esse componente tem os campos obrigatórios `title` e `url` e o campo opcional `image`.
 
@@ -1140,7 +1146,7 @@ O componente `small` pode ser usado para vincular a artigos relacionados. Esse c
     </noscript>
   </amp-img>
 
-#####landscape
+##### landscape
 
 O componente `landscape` pode ser usado para formatos alternativos de conteúdo, como vídeos. Esse componente tem os seguintes campos obrigatórios: `title`, `url` e `image`. Se quiser, você pode adicionar um campo `category`, que exibe um subtítulo acima do título.
 
@@ -1160,7 +1166,7 @@ O componente `landscape` pode ser usado para formatos alternativos de conteúdo,
   </noscript>
 </amp-img>
 
-#####portrait
+##### portrait
 
 O componente `portrait` pode ser usado para vincular a outras histórias. Esse componente tem os seguintes campos obrigatórios: `title`, `url` e `image`. Se quiser, você pode adicionar um campo `category`, que exibe um subtítulo acima do título.
 
@@ -1180,7 +1186,7 @@ O componente `portrait` pode ser usado para vincular a outras histórias. Esse c
   </noscript>
 </amp-img>
 
-#####cta-link
+##### cta-link
 
 O componente <code>cta-link</code> permite que você especifique links para calls-to-action (por exemplo, <code>Read More</code> ou <code>Subscribe</code>). Esse componente tem uma chave <code>links</code>, que especifica uma matriz de links. Cada link é um objeto com os valores ```text</code> e <code>url</code>.
 
@@ -1206,7 +1212,7 @@ O componente <code>cta-link</code> permite que você especifique links para call
   </noscript>
 </amp-img>
 
-#####textbox
+##### textbox
 
 O componente ```textbox</code> permite que você especifique o texto dentro do bookend (por exemplo, créditos de fotos). O componente requer uma matriz <code>text</code>, em que cada elemento da matriz é uma linha de texto.
 
@@ -1258,7 +1264,7 @@ O componente ```textbox</code> permite que você especifique o texto dentro do b
 ...
 ```
 
-####Compartilhamento em redes sociais
+#### Compartilhamento em redes sociais
 
 A configuração de compartilhamento em redes sociais é definida no campo `shareProviders` do objeto de resposta e é opcional.
 
@@ -1270,11 +1276,11 @@ A lista de provedores disponíveis é a mesma do componente [amp-social-share](h
 
 Cada um desses provedores tem um conjunto diferente de parâmetros disponíveis ([consulte `data-param-*`](https://www.ampproject.org/docs/reference/components/amp-social-share#data-param-%2a)). O objeto de configuração usa esses parâmetros sem o prefixo `data-param-` (por exemplo, o `data-param-app_id` apareceria no objeto de configuração como `app_id`).
 
-####Configuração JSON
+#### Configuração JSON
 
 O `<amp-story-bookend>` precisa ter um atributo `src` que aponte para a configuração JSON do bookend. Ele é descrito como um endpoint de URL que aceita solicitações GET e retorna uma resposta JSON com o conteúdo do bookend.  Se omitido, o componente amp-story renderiza uma IU padrão para a tela final. O sistema é responsável por buscar os dados necessários para a renderização de artigos relacionados e em alta.  Eles podem ser exibidos a partir de um arquivo JSON estático ou gerados de forma dinâmica (por exemplo, para calcular o que está em alta no momento).
 
-####Exemplo de resposta JSON
+#### Exemplo de resposta JSON
 
 ```text
 {
@@ -1312,7 +1318,7 @@ O `<amp-story-bookend>` precisa ter um atributo `src` que aponte para a configur
 }
 ```
 
-##Outros componentes que podem ser usados em histórias em AMP
+## Outros componentes que podem ser usados em histórias em AMP
 
 Veja abaixo outros componentes que podem ser usados em histórias em AMP que exigem algumas ressalvas específicas para a história.
 
@@ -1321,11 +1327,11 @@ Veja abaixo outros componentes que podem ser usados em histórias em AMP que exi
 
 Para ver os componentes gerais mais utilizáveis, consulte a [lista de filhos permitidos](https://www.ampproject.org/docs/reference/components/amp-story#children).
 
-##Validação
+## Validação
 
 Consulte as [regras do amp-story](https://github.com/ampproject/amphtml/blob/master/extensions/amp-story/validator-amp-story.protoascii) (link em inglês) nas especificações do validador de AMP.
 
-##Localização
+## Localização
 
 Para localizar sua história, inclua o código de idioma no atributo `lang` da tag `<html>` da sua história, como `<html lang="en">` para o inglês.  Os códigos de idioma aceitos são:
 
@@ -1354,7 +1360,7 @@ Para localizar sua história, inclua o código de idioma no atributo `lang` da t
 
 Além disso, para idiomas escritos da direita para a esquerda, você pode incluir o atributo `dir="rtl"` na tag `<html>` da sua história.  Ele também pode ser usado em conjunto com o código de idioma, por exemplo, `<html lang="ar" dir="rtl">`.
 
-##Recursos relacionados
+## Recursos relacionados
 
 * [Tutorial: criar uma história visual com AMP](https://www.ampproject.org/docs/tutorials/visual_story)
 * [Amostras no site AMP By Example](https://ampbyexample.com/stories/#stories/introduction)

@@ -8,16 +8,23 @@ teaser:
   text: 一种跟踪像素，用于统计网页浏览量。
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
-<!--- 版权所有 2015 The AMP HTML Authors。保留所有权利。
+<!---
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       根据 Apache 许可 2.0 版（以下简称“许可”）授权用户使用；您只有在遵循该许可的情况下才可使用本文件。您可以通过以下网址获得该许可的副本：
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-       除非适用法律要求或已达成书面协议，否则按照该许可分发的软件均“按原样”分发，不提供任何类型的担保或条件（无论明示或暗示）。有关该许可规定的具体语言管辖权限和限制，请参阅该许可。
-  -->
-
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 # amp-pixel
 
 
@@ -36,7 +43,7 @@ teaser:
   </tr>
 </table>
 
-##行为
+## 行为
 
 `amp-pixel` 组件的行为与简单的跟踪像素 `img` 类似。该组件只需要一个网址，但提供的变量可以在发出请求时被网址字符串中的组件替换。如需了解详情，请参阅[替换](#substitutions)部分。
 
@@ -51,13 +58,13 @@ teaser:
 在处理分析请求的引荐来源网址标头中包含的 AMP 网址时，请剔除或忽略 `usqp` 参数。该参数供 Google 用于触发针对 Google AMP 缓存的实验。
 [/tip]
 
-##属性
+## 属性
 
-#####src（必需）
+##### src（必需）
 
 一个指向远程端点的简单网址，必须是 `https` 协议。
 
-#####referrerpolicy（可选）
+##### referrerpolicy（可选）
 
 此属性类似于 `<img>` 上的 `referrerpolicy` 属性，但 `no-referrer` 是唯一可接受的值。如果指定了 `referrerpolicy=no-referrer`，则系统会从 HTTP 请求中移除 `referrer` 标头。
 
@@ -67,15 +74,15 @@ teaser:
     referrerpolicy="no-referrer"></amp-pixel>
 ```
 
-#####allow-ssr-img（可选）
+##### allow-ssr-img（可选）
 
 AMP4ADS 广告素材中使用的此属性表示：作为验证后转换的一部分，img 元素可以直接放置在 amp-pixel 元素内，从而允许 ping 与 AMP runtime 获取/执行并行发送。请注意，这意味着网址中的所有宏都不会展开，因此请仅在它们不在 src 中出现时才使用此属性。
 
-#####常见属性
+##### 常见属性
 
 此元素包含扩展到 AMP 组件的[常见属性](https://www.ampproject.org/docs/reference/common_attributes)。
 
-##替换
+## 替换
 
 `amp-pixel` 支持所有标准网址变量替换。如需了解详情，请参阅[替换指南](../spec/amp-var-substitutions.md)。
 
@@ -86,10 +93,10 @@ AMP4ADS 广告素材中使用的此属性表示：作为验证后转换的一部
     layout="nodisplay"></amp-pixel>
 ```
 
-##样式设置
+## 样式设置
 
 不应设置 `amp-pixel` 的样式。
 
-##验证
+## 验证
 
 请参阅 AMP 验证工具规范中的 [amp-pixel 规则](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii)。

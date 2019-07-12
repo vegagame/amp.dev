@@ -7,17 +7,25 @@ teaser:
   text: 显示 YouTube 视频。
 ---
 
-<!--
-       - 版权所有 2015 The AMP HTML Authors。保留所有权利。
 
-       根据 Apache 许可 2.0 版（以下简称“许可”）授权用户使用；您只有在遵循该许可的情况下才可使用本文件。您可以通过以下网址获得该许可的副本：
+<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+<!---
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       http://www.apache.org/licenses/LICENSE-2.0
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       除非适用法律要求或已达成书面协议，否则按照该许可分发的软件均“按原样”分发，不提供任何类型的担保或条件（无论明示或暗示）。有关该许可规定的具体语言管辖权限和限制，请参阅该许可。
-  -->
+     http://www.apache.org/licenses/LICENSE-2.0
 
-#amp-youtube
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+# amp-youtube
 
 显示 [YouTube](https://www.youtube.com/) 视频。
 
@@ -36,7 +44,7 @@ teaser:
   </tr>
 </table>
 
-##示例
+## 示例
 
 采用 responsive 布局时，示例中的宽度和高度应针对 16:9 的宽高比视频生成正确的布局。
 
@@ -62,7 +70,7 @@ teaser:
   </amp-youtube>
   [/sourcecode]
 
-##属性
+## 属性
 
 <table>
   <tr>
@@ -116,6 +124,6 @@ teaser:
         </tr>
       </table>
 
-##验证
+## 验证
 
 请参阅 AMP 验证工具规范中的 [amp-youtube 规则](https://github.com/ampproject/amphtml/blob/master/extensions/amp-youtube/validator-amp-youtube.protoascii)。

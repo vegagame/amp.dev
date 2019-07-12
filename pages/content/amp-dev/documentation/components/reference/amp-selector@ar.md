@@ -9,20 +9,25 @@ teaser:
     choose from it. it.
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-حقوق الطبع والنشر 2016 لصالح "مؤلفو شفرة HTML لصفحات AMP". جميع الحقوق محفوظة.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-تم الترخيص بموجب ترخيص Apache، الإصدار 2.0 (المشار إليه لاحقًا باسم "الترخيص")؛ ولا يحق لك استخدام هذا الملف إلا بما يتوافق مع الترخيص.
-ويمكنك الحصول على نسخة من الترخيص على الصفحة
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-ما لم يكن مطلوبًا بموجب القانون الساري أو تمت الموافقة عليه كتابةً، يتم توزيع البرنامج الذي يتم توزيعه بموجب الترخيص "كما هو"، وبدون أية ضمانات أو شروط من أي نوع، سواء كانت صريحة أو ضمنية.
-راجِع الترخيص للاطّلاع على اللغة المحددة التي تحكم الأذونات والقيود بموجب الترخيص.
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
 -->
 
-#amp-selector
+# amp-selector
 
 يمثل هذا المكّوِن عنصر التحكم الذي يوفر قائمة الخيارات ويتيح للمستخدِم الاختيار من بينها.
 
@@ -43,7 +48,7 @@ teaser:
 
 [جدول المحتويات]
 
-##السُلوك
+## السُلوك
 
 مُحدِد AMP عبارة عن عنصر التحكم الذي يوفر قائمة بالخيارات ويتيح للمستخدِم اختيار أحدها أو العديد منها، علمًا بأن أنواع محتوى الخيارات لا يقتصر على النص فقط.
 
@@ -92,7 +97,7 @@ teaser:
 </amp-selector>
 ```
 
-##محو الاختيارات
+## محو الاختيارات
 
 لمحو جميع الاختيارات عند النقر على العنصر، عيِّن سمة الإجراء [`on`](../../spec/amp-actions-and-events.md) على العنصر وحدِد المعرّف `id` للعنصر AMP Selector بطريقة الإجراء `clear`.
 
@@ -113,9 +118,9 @@ teaser:
 
 [/tip]
 
-##السمات
+## السمات
 
-###السمات في المكّوِن `<amp-selector>`
+### السمات في المكّوِن `<amp-selector>`
 
 <table>
   <tr>
@@ -132,7 +137,7 @@ teaser:
   </tr>
 </table>
 
-###السمات في خيارات `<amp-selector>`
+### السمات في خيارات `<amp-selector>`
 
 <table>
   <tr>
@@ -145,7 +150,7 @@ teaser:
   </tr>
 </table>
 
-##الأحداث
+## الأحداث
 
 قد تؤدي الأحداث إلى تشغيل الإجراءات على مكونات AMP الأخرى باستخدام السمة `on`.
 مثال: `on="select: my-tab.show"`
@@ -169,6 +174,6 @@ teaser:
   </tr>
 </table>
 
-##التحقق
+## التحقق
 
 اطّلع على [قواعد amp-selector](https://github.com/ampproject/amphtml/blob/master/extensions/amp-selector/validator-amp-selector.protoascii) في مواصفات مدقق AMP.

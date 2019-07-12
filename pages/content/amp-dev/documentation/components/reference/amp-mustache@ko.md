@@ -8,20 +8,25 @@ formats:
 
 ##  텍스트: Mustache.js 템플릿의 렌더링을 허용합니다.
 ---
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2015 The AMP HTML Authors. All Rights Reserved.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Apache 라이선스 버전 2.0(이하 '라이선스')에 따라 사용이 허가되었으므로, 라이선스를 준수하지 않는 경우 이 파일을 사용할 수 없습니다.
-       라이선스의 사본은 다음에서 가져올 수 있습니다.
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-       해당 법률에 따라 요구되거나 서면으로 동의한 경우를 제외하고, 라이선스에 따라 배포된 소프트웨어는 어떠한 종류의 명시적 또는 묵시적 보증 또는 조건도 없이 '있는 그대로' 배포됩니다.
-       라이선스의 허가 및 제한사항에 관한 구체적인 문구는 라이선스를 참조하시기 바랍니다.
-  -->
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 
-#amp-mustache
+# amp-mustache
 
 [Mustache.js](https://github.com/janl/mustache.js/)의 렌더링을 허용합니다.
 
@@ -41,14 +46,14 @@ formats:
 </table>
 
 
-##버전 참고사항
+## 버전 참고사항
 
 | 버전 | 설명 |
 |-------|-----|
 | 0.2 | `<svg>` 요소 및 감소한 번들 크기(12.2KB 대비 20.5KB, gzip으로 압축됨)를 지원합니다.최신 HTML Sanitizer 라이브러리로 이전합니다(Caja에서 DOMPurify로). 태그와 속성 허용 목록의 차이로 인해 약간의 브레이킹 체인지가 발생할 수 있습니다. 생성된 마크업의 변경사항이 기능에 영향을 미치지 않는지 확인하기 위해 프로덕션에 푸시하기 전에 페이지를 테스트하는 것이 좋습니다. |
 | 0.1 | 처음으로 구현되는 형식입니다. |
 
-##구문
+## 구문
 
 Mustache는 로직이 없는 템플릿 구문입니다. 자세한 내용은 [Mustache.js 문서](https://github.com/janl/mustache.js/)를 참조하세요. 핵심 Mustache 태그 중 일부는 다음과 같습니다.
 
@@ -57,7 +62,7 @@ Mustache는 로직이 없는 템플릿 구문입니다. 자세한 내용은 [Mus
 * {% raw %}`{{^section}}`{% endraw %}{% raw %}`{{/section}}`{% endraw %}: 역 태그입니다. 변수가 없는지 테스트합니다.
 * {% raw %}`{{{unescaped}}}`{% endraw %}: 이스케이프되지 않은 HTML입니다. 출력할 수 있는 마크업에 제한이 있습니다(아래 '제한사항' 참조).
 
-##사용
+## 사용
 
 [AMP 템플릿 사양](../../spec/amp-html-templates.md)에 따라 `amp-mustache` 템플릿을
 정의하고 사용해야 합니다.
@@ -89,9 +94,9 @@ AMP 유효성 검사기에서 유용한 dev-x 힌트를 제공하므로 가능�
 
 템플릿 탐색 방법, 템플릿 렌더링 시기, 데이터 제공 방식은 모두 이 템플릿을 사용하여 콘텐츠를 렌더링(예: [amp-list](../amp-list/amp-list.md), [amp-form](../amp-form/amp-form.md) 등에서)하는 타겟 AMP 요소를 통해 결정합니다.
 
-##제한사항
+## 제한사항
 
-###유효성 검사
+### 유효성 검사
 
 모든 AMP 템플릿과 마찬가지로 `amp-mustache` 템플릿은 올바른 형식의 DOM 단편이어야 합니다. 즉,
 무엇보다도 `amp-mustache`를 사용하여 다음을 할 수 없습니다.
@@ -101,13 +106,13 @@ AMP 유효성 검사기에서 유용한 dev-x 힌트를 제공하므로 가능�
 
 'triple-mustache'의 출력은 다음 태그만 허용하도록 정리됩니다. `a`, `b`, `br`, `caption`, `colgroup`, `code`, `del`, `div`, `em`, `i`, `ins`, `li`, `mark`, `ol`, `p`, `q`, `s`, `small`, `span`, `strong`, `sub`, `sup`, `table`, `tbody`, `time`, `td`, `th`, `thead`, `tfoot`, `tr`, `u`, `ul`.
 
-###정리
+### 정리
 
 Mustache 출력은 보안상의 이유 및 AMP 유효성을 유지하기 위해 정리됩니다. 따라서 특정 요소와 속성이 자동으로 삭제될 수 있습니다.
 
-##일반적인 문제
+## 일반적인 문제
 
-###중첩된 템플릿
+### 중첩된 템플릿
 
 각각의 AMP 유효성 검사에서 `<template>` 요소는 다른 `<template>` 요소의 하위 요소가 아니어야 합니다. 이 문제는 템플릿을 사용하는 두 구성요소를 중첩할 때 발생할 수 있습니다(예: `amp-list` 및 `amp-form`).
 
@@ -133,7 +138,7 @@ Mustache 출력은 보안상의 이유 및 AMP 유효성을 유지하기 위해 
 </amp-list>
 {% endraw %}[/sourcecode]
 
-###표
+### 표
 
 AMP 템플릿 문자열은 `<template>` 요소에 지정해야 하므로 브라우저 파싱 시 예상치 못한 동작이 발생할 수 있습니다. 예를 들어 `<table>` 요소를 사용하면 텍스트의 [상위 요소 지원](https://www.w3.org/TR/html5/syntax.html#unexpected-markup-in-tables)이 발생하기도 합니다. 다음 예를 참조하세요.
 
@@ -171,7 +176,7 @@ AMP 템플릿 문자열은 `<template>` 요소에 지정해야 하므로 브라�
 </script>
 {% endraw %}[/sourcecode]
 
-###인용부호 이스케이프
+### 인용부호 이스케이프
 
 `amp-mustache`를 사용하여 속성 값을 계산할 때 인용 부호 이스케이프가 문제가 될 수 있습니다. 예:
 
@@ -189,7 +194,7 @@ Mustache에서 `&amp;` 문자를 HTML 이스케이프 처리하므로(예: `&quo
 
 대신 `amp-mustache`에서 이 대체를 해결하기 위한 [공개 제안](https://github.com/ampproject/amphtml/issues/8395)이 있습니다. 이 문제를 지원하고 싶다면 이 문제에 관한 의견을 주세요.
 
-###HTML 개체
+### HTML 개체
 
 HTML 개체는 `<template>` 요소에서 유지되지 않습니다.
 
@@ -197,6 +202,6 @@ HTML 개체는 `<template>` 요소에서 유지되지 않습니다.
 
 {% raw %}`{{`{% endraw %}와 같은 문자열을 다른 문자로 교체하거나 사용자 제작 콘텐츠에서 완전히 제거하는 해결 방법도 있습니다.
 
-##유효성 검사
+## 유효성 검사
 
 AMP 유효성 검사기 사양에서 [amp-mustache 규칙](https://github.com/ampproject/amphtml/blob/master/extensions/amp-mustache/validator-amp-mustache.protoascii)을 참조하세요.

@@ -8,20 +8,25 @@ teaser:
   text: HTML5 video etiketinin yerini alır.
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2015 The AMP HTML Authors. Tüm Hakları Saklıdır.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Apache Lisansı, Sürüm 2.0 ("Lisans") ile lisanslıdır; bu dosyayı Lisans koşulları dışında kullanamazsınız.
-       Lisansın bir kopyasını şu adresten edinebilirsiniz:
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-       Geçerli yasa tarafından gerekli görülmediği veya yazılı olarak bir sözleşme yapılmadığı sürece, Lisanslı olarak dağıtılan yazılım açıkça veya zımni olarak HİÇBİR GARANTİ VEYA KOŞUL SUNULMADAN "OLDUĞU GİBİ" dağıtılır.
-       Lisans kapsamında belirli bir dilde sağlanan izinleri ve uygulanan kısıtlamaları öğrenmek için söz konusu dille ilgili Lisans'a bakın.
-  -->
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 
-#amp-video
+# amp-video
 
 HTML5 `video` etiketinin yerine gelen bir etiket; yalnızca doğrudan HTML5 video dosyası yerleştirmeleri için kullanılır.
 
@@ -42,7 +47,7 @@ HTML5 `video` etiketinin yerine gelen bir etiket; yalnızca doğrudan HTML5 vide
     </tr>
   </table>
 
-##Davranış
+## Davranış
 
 `amp-video` bileşeni, `src` özelliği tarafından belirtilen video kaynağını çalışma zamanı tarafından belirlenen bir zamanda gecikmeli olarak yükler. `amp-video` bileşenini, büyük ölçüde standart HTML5 `<video>` etiketiyle aynı biçimde kontrol edebilirsiniz.
 
@@ -53,7 +58,7 @@ HTML5 `video` etiketinin yerine gelen bir etiket; yalnızca doğrudan HTML5 vide
 * video başlamadan önce bir yer tutucu
 * tarayıcı HTML5 videoyu desteklemiyorsa bir yedek: Bir veya hemen ilk alt düğüm `fallback` özelliğine sahip olabilir. Bu düğüm ve alt öğeleri mevcutsa ve kullanıcının tarayıcısında HTML5 video desteklenmiyorsa bu düğüm ve onun alt öğeleri görüntülenen içeriği oluşturur.
 
-####Örnek
+#### Örnek
 
 <!--yerleşik örnek - ampproject.org'da görüntülenir -->
 
@@ -65,11 +70,11 @@ HTML5 `video` etiketinin yerine gelen bir etiket; yalnızca doğrudan HTML5 vide
 
 </div>
 
-##Analiz
+## Analiz
 
 `amp-video`, ek ayar gerektirmeden analizleri destekler. Daha fazla bilgi için [video analizi](https://github.com/ampproject/amphtml/blob/master/extensions/amp-analytics/amp-video-analytics.md) bölümüne bakın.
 
-##Özellikler
+## Özellikler
 
 <table>
   <tr>
@@ -129,7 +134,7 @@ HTML5 `video` etiketinin yerine gelen bir etiket; yalnızca doğrudan HTML5 vide
         </tr>
       </table>
 
-##Media Session API'si özellikleri
+## Media Session API'si özellikleri
 
 `amp-video` bileşeni, geliştiricilerin video dosyası hakkında daha fazla bilgi belirtmesini sağlayan [Media Session API'sini](https://developers.google.com/web/updates/2017/02/media-session) uygular. Videoyla ilgili ek bilgiler kullanıcının cihazının bildirim merkezinde (oynatma/duraklatma kontrolleri ile birlikte) görüntülenir.
 
@@ -166,12 +171,12 @@ Bu örnekte `poster` ve `artwork` özellikleri yer almaktadır. `poster`, video 
 </amp-video>
 ```
 
-##Oynatmak için Tıklama yer paylaşımı
+## Oynatmak için Tıklama yer paylaşımı
 
 Oynatmak için tıklama yer paylaşımının sağlanması, web'deki video oynatıcılar için yaygın olarak kullanılan bir kullanıcı deneyimi özelliğidir.  Örneğin, kullanıcının tıklayabileceği özel bir oynatma simgesi görüntüleyebilir, ayrıca videonun başlığını, farklı boyutlarda poster resimlerini vb. ekleyebilirsiniz.  `amp-video` bileşeni standart `play` AMP işlemini desteklediğinden oynatmak için tıklamayı kolayca uygulayabilirsiniz.
 
 Ayrıntılı bir örnek için Örneklerle AMP [amp-video ile ilgili oynatmak için tıklama yer paylaşımı](https://ampbyexample.com/advanced/click-to-play_overlay_for_amp-video/) sayfasını ziyaret edin.
 
-##Doğrulama
+## Doğrulama
 
 AMP doğrulayıcı spesifikasyonundaki [amp-video kurallarına](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii) bakın.

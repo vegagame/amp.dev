@@ -7,24 +7,25 @@ teaser:
     layout.
 $title: amp-layout
 ---
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2016 The AMP HTML Authors. Tutti i diritti riservati.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Rilasciato ai sensi della Licenza Apache, versione 2.0 (la "Licenza");
-     è possibile utilizzare questo file esclusivamente in conformità con la Licenza.
-     Una copia della Licenza è disponibile all'indirizzo
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
      http://www.apache.org/licenses/LICENSE-2.0
 
-     Se non diversamente imposto dalla legge vigente o concordato per iscritto,
-     il software rilasciato ai sensi della Licenza viene distribuito "COSÌ
-     COM'È", SENZA GARANZIE O CONDIZIONI DI ALCUN TIPO, esplicite o implicite.
-     Leggi la Licenza per conoscere le autorizzazioni e le limitazioni in vigore
-     specifiche della lingua previste dalla Licenza.
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
 -->
 
-#<a name="amp-layout"></a> `amp-layout`
+# <a name="amp-layout"></a> `amp-layout`
 
 <table>
   <tr>
@@ -37,7 +38,7 @@ $title: amp-layout
   </tr>
 </table>
 
-##Panoramica
+## Panoramica
 
 Il componente `amp-layout` permette di applicare layout adattabili basati sulle proporzioni a qualsiasi elemento. Il componente `amp-layout` funziona in modo simile all'attributo [layout](https://www.ampproject.org/docs/guides/responsive/control_layout#the-layout-attribute) sui componenti AMP esistenti, ma supporta qualsiasi markup HTML come elemento secondario. Tutti gli altri layout supportati funzionano con `amp-layout`, ad esempio fixed-height, fixed ecc.
 
@@ -54,10 +55,10 @@ In questo esempio viene utilizzato `amp-layout` per creare un contenitore adatta
   </amp-layout>
 ```
 
-##Attributi
+## Attributi
 
 Questo elemento include [attributi comuni](https://www.ampproject.org/docs/reference/common_attributes) estesi ai componenti AMP.
 
-##Convalida
+## Convalida
 
 Consulta le [regole amp-layout](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii) nella specifica dello Strumento di convalida AMP.

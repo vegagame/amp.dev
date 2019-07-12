@@ -6,15 +6,23 @@ teaser:
   text: 一种丰富而直观的叙事格式。
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
-<!--- 版权所有 2017 The AMP HTML Authors。保留所有权利。
+<!---
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       根据 Apache 许可 2.0 版（以下简称“许可”）授权用户使用；您只有在遵循该许可的情况下才可使用本文件。您可以通过以下网址获得该许可的副本：
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-       除非适用法律要求或已达成书面协议，否则按照该许可分发的软件均“按原样”分发，不提供任何类型的担保或条件（无论明示或暗示）。有关该许可规定的具体语言管辖权限和限制，请参阅该许可。
-  -->
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 
 # amp-story
 
@@ -49,18 +57,18 @@ teaser:
 [/tip]
 
 
-##版本说明
+## 版本说明
 
 | 版本 | 说明                                                            |
 |-------|----------------------------------------------------------------------|
 | 1.0     | 当前版本，自 2018 年 7 月 16 日至今。                                     |
 | 0.1     | 初始实现版本。已弃用，将于 2019 年 3 月 19 日移除 |
 
-##从 0.1 迁移到 1.0
+## 从 0.1 迁移到 1.0
 
 从 2018 年 7 月 16 日开始，版本 0.1 就被视为已弃用，将于 2019 年 3 月 19 日移除。这可能会导致轻微的破坏性更改，因为您的故事将自动升级为使用 1.0 版。我们建议您在此日期之前手动将网页迁移至 1.0 版，以确保功能正常且设计恰当。
 
-###新的 bookend 功能
+### 新的 bookend 功能
 
 我们为 AMP 故事 bookend 增加了新功能，实现了更丰富的组件支持和视觉布局。部分变更包括：
 
@@ -85,7 +93,7 @@ teaser:
 
 如需详细了解这些新组件以及如何在 JSON 配置中指定它们，请参阅 [amp-story-bookend](#bookend-amp-story-bookend) 部分。
 
-###新的元数据要求
+### 新的元数据要求
 
 我们向 `<amp-story>` 元素中添加了新的元数据属性。这些元数据属性将用于在整个 AMP 故事生态系统中显示故事预览。例如，这些属性可用于在相关故事的 bookend 中呈现具有吸引力的预览链接。此外，提供这些属性还有助于确保您的故事满足未来需求，在 AMP 故事层面实现丰富的嵌入式体验。
 
@@ -110,7 +118,7 @@ teaser:
 | `poster-square-src` | 故事的海报（采用方形格式，宽高比为 1x1）。 |
 | `poster-landscape-src` | 故事的海报（采用横向格式，宽高比为 4x3）。 |
 
-####`publisher-logo-src` 指南
+#### `publisher-logo-src` 指南
 
 发布商徽标的图片应遵循以下指南：
 
@@ -152,7 +160,7 @@ teaser:
 * 每个品牌使用一个徽标，且该徽标应在 AMP 故事之间保持一致。
 * 徽标应至少为 96x96 像素。
 
-####海报指南（适用于 `poster-portrait-src`、`poster-landscape-src` 和 `poster-square-src`）
+#### 海报指南（适用于 `poster-portrait-src`、`poster-landscape-src` 和 `poster-square-src`）
 
 故事海报的图片应遵循以下指南：
 
@@ -166,7 +174,7 @@ teaser:
     * 横向：928 x 696 像素
     * 方形：928 x 928 像素</li>
 
-##概述
+## 概述
 
 `amp-story` 扩展组件提供了一种新的视觉内容显示格式，可供您整合到叙事体验中。利用 AMP 故事，您可以为用户提供短小且视觉效果丰富的信息和内容。
 
@@ -178,7 +186,7 @@ teaser:
   </amp-anim>
 </figure>
 
-##AMP 故事格式
+## AMP 故事格式
 
 [AMP 故事](#story%3a-amp-story)是由[网页](#pages%3a-amp-story-page)组成的完整 AMP HTML 文档，网页内是各种[图层](#layers%3a-amp-story-grid-layer)，而图层内则是 AMP 和 HTML 元素，如 media、analytics、text 等。
 
@@ -188,7 +196,7 @@ teaser:
   </noscript>
 </amp-img>
 
-###样板
+### 样板
 
 以下标记可充当不错的着手点或样板。请复制此标记并将其保存到扩展名为 `.html` 的文件中。
 
@@ -238,7 +246,7 @@ teaser:
 
 body 中的内容创建了一个包含两个网页的故事。每个网页都包含一张全宽背景图片，上面有一串简单的文本。
 
-###amp-story 的必需标记
+### amp-story 的必需标记
 
 AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](https://www.ampproject.org/docs/reference/spec#required-markup)，以及下面这些附加要求：
 
@@ -248,7 +256,7 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
 | 包含 `<script async src="https://cdn.ampproject.org/v0/amp-story-1.0.js" custom-element="amp-story"></script>` 标记，以此作为 `<head>` 标记的第三个子级。 | 包含并加载 amp-story JS 库。 |
 | 在 `<head>` 内包含 `<link rel="canonical" href="$STORY_URL">` 标记。 | 该链接指向故事本身，将故事标识为规范文档。 |
 
-##故事：`amp-story`
+## 故事：`amp-story`
 
 `amp-story` 组件代表整个故事。该组件本身会实现界面 Shell，包括处理手势和导航，以及插入应用 Shell 界面（控件、进度条等）。
 
@@ -260,7 +268,7 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
     </amp-anim>
   </figure>
 
-###示例
+### 示例
 
 ```html
 <amp-story
@@ -279,53 +287,53 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
 </amp-story>
 ```
 
-###属性
+### 属性
 
-#####standalone [必需]
+##### standalone [必需]
 
 标识相应 AMP 文档是一个故事。
 
-#####title [必需]
+##### title [必需]
 
 故事的标题。
 
-#####publisher [必需]
+##### publisher [必需]
 
 故事发布商的名字。
 
-#####publisher-logo-src [必需]
+##### publisher-logo-src [必需]
 
 指向故事发布商徽标（采用方形格式，宽高比为 1x1）的网址。例如，`publisher-logo-src="https://example.com/logo/1x1.png"`，其中 1x1.png 是一个 36x36 像素的徽标。
 
-#####poster-portrait-src [必需]
+##### poster-portrait-src [必需]
 
 指向[故事海报](#posters)（采用纵向格式，宽高比为 3x4）的网址。
 
-#####supports-landscape [可选]
+##### supports-landscape [可选]
 
 在移动设备上启用横向支持，并在桌面设备上提供全宽横向体验。
 
-#####background-audio [可选]
+##### background-audio [可选]
 
 指向在整个故事中播放的音频文件的网址。
 
-#####poster-square-src [可选]
+##### poster-square-src [可选]
 
 指向[故事海报](#posters)（采用方形格式，宽高比为 1x1）的网址。
 
-#####poster-landscape-src [可选]
+##### poster-landscape-src [可选]
 
 指向[故事海报](#posters)（采用横向格式，宽高比为 4x3）的网址。
 
-###海报
+### 海报
 
 “海报”是指故事加载完毕之前显示在界面中的图片。海报图片可以是代表故事的任何图片，通常会采用故事的首屏画面。
 
-###(amp-story) 的子级
+### (amp-story) 的子级
 
 `<amp-story>` 组件包含一个或多个 [`<amp-story-page>`](#pages%3a-amp-story-page) 组件，用于呈现故事的各个画面。按文档顺序指定的第一页即是故事中显示的第一页。
 
-###选择启用横向模式和全宽桌面版体验
+### 选择启用横向模式和全宽桌面版体验
 
 如果在 `<amp-story>` 元素上指定了 `supports-landscape`，则它将执行以下操作：
 
@@ -345,7 +353,7 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
   </amp-anim>
 </figure>
 
-##网页：`amp-story-page`
+## 网页：`amp-story-page`
 
 `<amp-story-page>` 组件表示要在故事的单个网页上显示的内容。
 
@@ -364,7 +372,7 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
   </amp-anim>
 </figure>
 
-###示例
+### 示例
 
 ```html
 <amp-story-page id="cover">
@@ -382,13 +390,13 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
 </amp-story-page>
 ```
 
-###属性
+### 属性
 
-#####id [必需]
+##### id [必需]
 
 网页的唯一标识符，可用于在 CSS 中设置网页及其子孙级的样式，还可用于在网址片段中唯一标识网页。
 
-#####auto-advance-after [可选]
+##### auto-advance-after [可选]
 
 指定何时自动跳转到下一页。如果省略，则网页不会自动跳转。`auto-advance-after` 的值必须是以下任一项：
 
@@ -401,7 +409,7 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
 <amp-story-page id="tokyo" auto-advance-after="1s">
 ```
 
-#####background-audio [可选]
+##### background-audio [可选]
 
 指向在此网页显示时播放的音频文件的 URI。
 
@@ -411,15 +419,15 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
 <amp-story-page id="zurich" background-audio="./media/switzerland.mp3">
 ```
 
-###(amp-story-page) 的子级
+### (amp-story-page) 的子级
 
 `<amp-story-page>` 组件包含一个或多个[图层](#layers)。图层自下而上堆叠（DOM 中指定的第一层位于底部；DOM 中指定的最后一层位于顶部）。
 
-##图层
+## 图层
 
 图层相互堆叠在一起，以产生所需的视觉效果。
 
-###`amp-story-grid-layer`
+### `amp-story-grid-layer`
 
 `<amp-story-grid-layer>` 组件会将其子级摆放在网格中。该组件的实现基于 [CSS 网格规范](https://www.w3.org/TR/css-grid-1/)。
 
@@ -438,13 +446,13 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
     <noscript><img width="200" src="https://raw.githubusercontent.com/ampproject/amphtml/master/extensions/amp-story/img/layers-layer-4.gif"></noscript></amp-img>
 </div>
 
-####属性
+#### 属性
 
-#####template [必需]
+##### template [必需]
 
 `template` 属性用于确定网格图层的布局。下面的[模板](#templates)部分介绍了可用模板。
 
-#####grid-area [可选]
+##### grid-area [可选]
 
 此属性是在 `<amp-story-grid-layer>` 的子级上指定的。`grid-area` 指定应在其中显示包含此属性的元素的命名区域（通过使用定义它们的 `template`）。
 
@@ -458,7 +466,7 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
 </amp-story-grid-layer>
 ```
 
-####模板
+#### 模板
 
 下面介绍了用于指定网格图层布局的可用模板。
 
@@ -466,7 +474,7 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
 如需查看正在使用的布局模板，请查看 [AMP By Example 上的布局演示](https://ampbyexample.com/stories/features/layouts/)。
 [/tip]
 
-#####fill
+##### fill
 
 `fill` 模板会显示第一个子级全宽图片。其他所有子级均未显示。
 
@@ -486,7 +494,7 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
 </amp-story-grid-layer>
 ```
 
-#####vertical
+##### vertical
 
 `vertical` 模板会沿着 y 轴放置其元素。默认情况下，该模板的元素会与屏幕顶部对齐，并会沿着 x 轴占据整个屏幕。
 
@@ -506,7 +514,7 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
 </amp-story-grid-layer>
 ```
 
-#####horizontal
+##### horizontal
 
 `horizontal` 模板会沿着 x 轴放置其元素。默认情况下，该模板的元素会与线条起始位置对齐，并会沿着 y 轴占据整个屏幕。
 
@@ -526,7 +534,7 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
 </amp-story-grid-layer>
 ```
 
-#####thirds
+##### thirds
 
 `thirds` 模板会将屏幕均分为 3 行，以便您在各个区域中放置相应内容。
 
@@ -550,7 +558,7 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
 </amp-story-grid-layer>
 ```
 
-####子级
+#### 子级
 
 `amp-story-grid-layer` 可以包含以下任意元素：
 
@@ -694,16 +702,16 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
   </tr>
 </table>
 
-###`amp-story-cta-layer`
+### `amp-story-cta-layer`
 
 `<amp-story-cta-layer>` 组件允许在 `<amp-story-page>` 中使用 `<a>` 和 `<button>` 元素。
 
-####限制条件
+#### 限制条件
 
 * 如果指定，则 `<amp-story-cta-layer>` 元素必须是 `<amp-story-page>` 内的最后一层。因此，实际上每个 `<amp-story-page>` 都可以正好包含 `<amp-story-cta-layer>` 元素的一个或零个子级。
 * 无法控制此图层的位置和大小。它始终占据网页 100% 的宽度和 20% 的高度，并且与网页底部对齐。
 
-####示例
+#### 示例
 
 ```html
 <amp-story-page id="vertical-template-thirds">
@@ -726,15 +734,15 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
 
 [在示例目录中查看完整示例](https://github.com/ampproject/amphtml/blob/master/examples/amp-story/cta-layer-outlink.html)
 
-####子级
+#### 子级
 
 `amp-story-cta-layer` 允许使用与 `amp-story-grid-layer` 大致相同的子孙级，另外还允许使用 `<a>` 和 `<button>` 标记。
 
 如需受支持子级的更新列表，请务必查看验证规则中的 [amp-story-cta-layer-allowed-descendants](https://github.com/ampproject/amphtml/blob/master/extensions/amp-story/validator-amp-story.protoascii) 字段。
 
-##网页附件
+## 网页附件
 
-###`amp-story-page-attachment`
+### `amp-story-page-attachment`
 
 <amp-img alt="AMP 故事页附件" src="https://github.com/ampproject/amphtml/raw/master/extensions/amp-story/img/amp-story-page-attachment.gif" width="240" height="480" layout="fixed">
   <noscript>
@@ -748,7 +756,7 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
 
 `<amp-story-page-attachment>` 元素必须是 `<amp-story-page>` 的最后一个子级，且必须具有 `layout="nodisplay"` 属性。附件 AMPHTML 内容应该在您的 AMP 故事中内嵌提供，位于此 `<amp-story-page-attachment>` 标记中。
 
-###允许使用的内容和组件
+### 允许使用的内容和组件
 
 故事页附件允许使用与 AMP 故事相同的 HTML 元素以及下面列出的其他组件，例如第三方视频播放器或社交媒体嵌入内容。也就是说，您可以在 AMP 故事页中添加比较长或不允许使用的其他内容。
 
@@ -824,7 +832,7 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
 
 </details>
 
-###示例
+### 示例
 
 ```html
 <amp-story-page id="foo">
@@ -850,13 +858,13 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
 </amp-story-page>
 ```
 
-##动画
+## 动画
 
 `<amp-story-page>` 中的每个元素都可以有一个进入动画。
 
 您可以通过在元素上指定一组[动画属性](#animation-attributes)来配置动画；无需额外的 AMP 扩展组件或配置。
 
-###动画效果
+### 动画效果
 
 以下动画效果可用作 AMP 故事的预设：
 
@@ -885,9 +893,9 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
 可在 AMP By Example 上查看[所有 AMP 故事动画的在线演示](https://ampbyexample.com/stories/features/animations/)。
 [/tip]
 
-###动画属性
+### 动画属性
 
-#####animate-in [必需]
+##### animate-in [必需]
 
 使用此属性可指定进入[动画预设](#animation-effects)的名称。
 
@@ -901,7 +909,7 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
 
 ```
 
-#####animate-in-duration [可选]
+##### animate-in-duration [可选]
 
 使用此属性可指定进入动画的持续时长，以秒或毫秒为单位（例如，0.2 秒或 200 毫秒）。默认持续时长取决于您指定的动画预设。
 
@@ -915,7 +923,7 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
 
 ```
 
-#####animate-in-delay [可选]
+##### animate-in-delay [可选]
 
 使用此属性可指定开始播放动画之前的延迟时间。该值必须大于或等于 0，以秒或毫秒为单位（例如，0.2 秒或 200 毫秒）。默认延迟时间取决于您指定的动画预设。
 
@@ -933,7 +941,7 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
 动画延迟时间无法保证精确无误。扫描完第一个动画元素后，在后台加载 `amp-animation` 扩展组件可能会导致额外的延迟。该属性合约定义为“延迟此动画至少 N 毫秒”。**这适用于所有元素，包括延迟时间为 0 秒的元素。
 [/tip]
 
-#####animate-in-after [可选]
+##### animate-in-after [可选]
 
 使用此属性可对动画进行关联或排序（例如，animation2 在 animation1 完成后开始播放）。指定此元素的动画将遵循的动画元素的 ID。该元素必须位于同一 `<amp-story-page>` 中。延迟是在前一个元素的动画结束后应用的。如需了解更多详情，请参阅下面的[对动画进行排序](#sequencing-animations)部分。
 
@@ -955,7 +963,7 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
 </amp-story-page>
 ```
 
-#####scale-start、scale-end [可选，仅适用于 `zoom-in` 和 `zoom-out` 动画]
+##### scale-start、scale-end [可选，仅适用于 `zoom-in` 和 `zoom-out` 动画]
 
 使用这两个属性可进一步指定放大和缩小动画的参数。这些属性值必须大于或等于 0，且允许使用小数。表示放大的默认值为 scale-start: 1 和 scale-start: 3，而缩小正好相反。
 
@@ -966,7 +974,7 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
 </amp-img>
 ```
 
-#####translate-x [可选，仅适用于 `pan-left` 和 `pan-right` 动画]
+##### translate-x [可选，仅适用于 `pan-left` 和 `pan-right` 动画]
 
 使用此属性可指定图片在向左平移/向右平移动画中的水平平移距离。该值必须大于或等于 0（以像素为单位）。如果采用默认值，则平移指定图片的整个宽度。
 
@@ -977,7 +985,7 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
 </amp-img>
 ```
 
-#####translate-y [可选，仅适用于 `pan-up` 和 `pan-down` 动画]
+##### translate-y [可选，仅适用于 `pan-up` 和 `pan-down` 动画]
 
 使用此属性可指定图片在向上平移/向下平移动画中的垂直平移距离。该值必须大于或等于 0（以像素为单位）。如果采用默认值，则平移指定图片的整个高度。
 
@@ -988,7 +996,7 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
 </amp-img>
 ```
 
-###对动画进行排序
+### 对动画进行排序
 
 要按顺序关联动画，请使用 `animate-in-after` 属性。指定链中的所有元素必须位于同一 `<amp-story-page>` 中。没有 `animate-in-after` 属性的元素不属于序列链，将在网页进入动画上单独开始播放。
 
@@ -1023,7 +1031,7 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
 </amp-story-page>
 ```
 
-###组合多个动画
+### 组合多个动画
 
 您可以在一个元素上应用多个进入动画（例如，元素在飞入网页的同时淡入）。无法为单个元素分配多个动画预设；不过，具有不同进入动画的元素可以嵌套在一起，组合成一个元素。
 
@@ -1041,7 +1049,7 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
 如果某个组合动画应在单独元素的动画结束之后开始播放，请确保构成该动画的所有嵌套元素的 `animate-in-after` 属性都设置为同一 `id`。
 [/tip]
 
-##Bookend：`amp-story-bookend`
+## Bookend：`amp-story-bookend`
 
 `amp-story-bookend` 是故事的最后一个屏幕。它包含相关链接、分享选项、号召性用语链接等。
 
@@ -1101,13 +1109,13 @@ AMP 故事 HTML 格式遵循[与有效 AMP HTML 文档相同的标记要求](htt
 
 必须通过添加第一行来指定您使用的是 v1.0 版本。
 
-####Bookend 组件
+#### Bookend 组件
 
 bookend 由各种组件构成。这些组件可以是文章、号召性用语链接、文本等。
 
 它们在已配置 JSON 的 `components` 字段中指定。如需查看相关示例，请参阅下面的 [JSON 响应示例](#example-json-response)部分。
 
-#####heading
+##### heading
 
 <code>heading</code> 组件有一个 ```text</code> 字段，可用于向一组文章附加标题。
 
@@ -1124,7 +1132,7 @@ bookend 由各种组件构成。这些组件可以是文章、号召性用语链
   </noscript>
 </amp-img>
 
-#####small
+##### small
 
 `small` 组件可用于链接到相关文章。此组件需要以下字段：`title`、`url` 以及 `image`（可选）。
 
@@ -1143,7 +1151,7 @@ bookend 由各种组件构成。这些组件可以是文章、号召性用语链
   </noscript>
 </amp-img>
 
-#####landscape
+##### landscape
 
 `landscape` 组件可用于其他格式的内容，如视频。此组件需要以下字段：`title`、`url` 和 `image`。（可选）您还可以添加 `category` 字段，该字段在标题上方显示一个子标题。
 
@@ -1163,7 +1171,7 @@ bookend 由各种组件构成。这些组件可以是文章、号召性用语链
   </noscript>
 </amp-img>
 
-#####portrait
+##### portrait
 
 `portrait` 组件可用于链接到其他故事。此组件需要以下字段：`title`、`url` 和 `image`。（可选）您还可以添加 `category` 字段，该字段在标题上方显示一个子标题。
 
@@ -1183,7 +1191,7 @@ bookend 由各种组件构成。这些组件可以是文章、号召性用语链
   </noscript>
 </amp-img>
 
-#####cta-link
+##### cta-link
 
 利用 <code>cta-link</code> 组件，您可以指定号召性用语（例如 <code>Read More</code> 或 <code>Subscribe</code>）的链接。此组件有一个 <code>links</code> 键，用于指定一系列链接。每个链接都是一个包含 ```text</code> 和 <code>url</code> 值的对象。
 
@@ -1209,7 +1217,7 @@ bookend 由各种组件构成。这些组件可以是文章、号召性用语链
     </noscript>
   </amp-img>
 
-#####textbox
+##### textbox
 
 利用 ```textbox</code> 组件，您可以指定 bookend 内的文本（例如，照片来源信息）。此组件需要一个 <code>text</code> 数组，其中数组的每个元素都是一行文本。
 
@@ -1261,7 +1269,7 @@ bookend 由各种组件构成。这些组件可以是文章、号召性用语链
 ...
 ```
 
-####社交分享
+#### 社交分享
 
 社交分享的配置在响应对象的 `shareProviders` 字段中指定，属于可选配置。
 
@@ -1273,11 +1281,11 @@ bookend 由各种组件构成。这些组件可以是文章、号召性用语链
 
 这些服务提供商中的每一个都有一组不同的可用参数（[请参阅 `data-param-*`](https://www.ampproject.org/docs/reference/components/amp-social-share#data-param-%2a)）。配置对象采用这些参数时不使用 `data-param-` 前缀（例如，`data-param-app_id` 在配置对象中显示为 `app_id`）。
 
-####JSON 配置
+#### JSON 配置
 
 `<amp-story-bookend>` 必须具有指向 bookend 的 JSON 配置的 `src` 属性。它被描述为一个网址端点，用于接受 GET 请求并返回包含 bookend 内容的 JSON 响应。如果省略，amp-story 组件将呈现默认界面作为结束画面。系统负责获取呈现相关文章和热门文章所需的数据。此类数据可以从静态 JSON 文件中获取，也可以动态生成（例如，统计当前热点）。
 
-####JSON 响应示例
+#### JSON 响应示例
 
 ```text
 {
@@ -1315,7 +1323,7 @@ bookend 由各种组件构成。这些组件可以是文章、号召性用语链
 }
 ```
 
-##AMP 故事中可用的其他组件
+## AMP 故事中可用的其他组件
 
 以下是 AMP 故事中可用的其他组件，需要满足一些仅适用于故事的要求。
 
@@ -1324,11 +1332,11 @@ bookend 由各种组件构成。这些组件可以是文章、号召性用语链
 
 如需了解更常用的组件，请参阅[允许使用的子级列表](https://www.ampproject.org/docs/reference/components/amp-story#children)。
 
-##验证
+## 验证
 
 请参阅 AMP 验证工具规范中的 [amp-story 规则](https://github.com/ampproject/amphtml/blob/master/extensions/amp-story/validator-amp-story.protoascii)。
 
-##本地化
+## 本地化
 
 要将您的故事本地化，请在故事的 `<html>` 标记的 `lang` 属性中添加语言代码，例如为英语添加 `<html lang="en">`。支持的语言代码如下：
 
@@ -1357,7 +1365,7 @@ bookend 由各种组件构成。这些组件可以是文章、号召性用语链
 
 此外，对于从右向左书写的语言，您可以在故事的 `<html>` 标记中添加 `dir="rtl"` 属性。该属性也可以与语言代码一起使用，例如 `<html lang="ar" dir="rtl">`。
 
-##相关资源
+## 相关资源
 
 * [教程：创建一个视觉效果丰富的 AMP 故事](https://www.ampproject.org/docs/tutorials/visual_story)
 * [AMP By Example 中的示例](https://ampbyexample.com/stories/#stories/introduction)

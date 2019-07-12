@@ -6,20 +6,25 @@ teaser:
   text: The share tracking feature is under development.
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-حقوق الطبع والنشر 2016 لصالح "مؤلفو شفرة HTML لصفحات AMP". جميع الحقوق محفوظة.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-تم الترخيص بموجب ترخيص Apache، الإصدار 2.0 (المشار إليه لاحقًا باسم "الترخيص")؛ ولا يحق لك استخدام هذا الملف إلا بما يتوافق مع الترخيص.
-ويمكنك الحصول على نسخة من الترخيص على الصفحة
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-ما لم يكن مطلوبًا بموجب القانون الساري أو تمت الموافقة عليه كتابةً، يتم توزيع البرنامج الذي يتم توزيعه بموجب الترخيص "كما هو"، وبدون أية ضمانات أو شروط من أي نوع، سواء كانت صريحة أو ضمنية.
-راجِع الترخيص للاطّلاع على اللغة المحددة التي تحكم الأذونات والقيود بموجب الترخيص.
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
 -->
 
-#amp-social-share
+# amp-social-share
 
 يعرض هذا المكّوِن زر المشاركة على الشبكات الاجتماعية.
 
@@ -44,11 +49,11 @@ teaser:
   </tr>
 </table>
 
-##نظرة عامة
+## نظرة عامة
 
 يعرض المكّوِن `amp-social-share` زر المشاركة على العديد من موفري منصات الشبكات الاجتماعية.
 
-##أمثلة
+## أمثلة
 
 **مثال: زر المشاركة الأساسي على الشبكات الاجتماعية**
 
@@ -70,7 +75,7 @@ teaser:
 
 Linkedin هو أحد موفري الخدمات الذين تمت تهيئتهم مسبقًا، لذلك لا تحتاج إلى توفير السمة `data-share-endpoint`.
 
-##السمات
+## السمات
 
 <table>
   <tr>
@@ -94,7 +99,7 @@ Linkedin هو أحد موفري الخدمات الذين تمت تهيئتهم 
   </tr>
 </table>
 
-##موفرو الخدمات الذين تمت تهيئتهم مسبقًا
+## موفرو الخدمات الذين تمت تهيئتهم مسبقًا
 
 يوفر المكوِّن `amp-social-share` [بعض موفري الخدمات الذين تمت تهيئتهم مسبقًا](0.1/amp-social-share-config.js) الذين يعرفون نقاط نهاية المشاركة لديهم وكذلك بعض المعلَمات التلقائية.
 
@@ -216,7 +221,7 @@ Linkedin هو أحد موفري الخدمات الذين تمت تهيئتهم 
   </tr>
 </table>
 
-##موفرو الخدمات الذين لم تتم تهيئتهم
+## موفرو الخدمات الذين لم تتم تهيئتهم
 
 بالإضافة إلى الموفرين الذين تمت تهيئتهم مسبقًا، يمكنك استخدام الموفرين الذين لم تتم تهيئتهم عن طريق تحديد سمات إضافية في المكّوِن `amp-social-share`.
 
@@ -233,9 +238,9 @@ Linkedin هو أحد موفري الخدمات الذين تمت تهيئتهم 
 
 ولأن هؤلاء الموفرين لم تتم تهيئتهم مسبقًا، فستحتاج إلى إنشاء صورة وتصميم للزر للموفر.
 
-##التصميمات
+## التصميمات
 
-###التصميمات التلقائية
+### التصميمات التلقائية
 
 يتضمن المكّوِن `amp-social-share` تلقائيًا بعض موفري الخدمات الذين تمت تهيئتهم مسبقًا. يتم تصميم أزرار لهؤلاء الموفرين باللون والشعار الرسمي للموفر. ويبلغ العرض التلقائي للتصميم 60 بكسل والارتفاع التلقائي 44 بكسل.
 
@@ -243,7 +248,7 @@ Linkedin هو أحد موفري الخدمات الذين تمت تهيئتهم 
 انتقِل إلى الموقع [AMP Start](https://ampstart.com/components#links-and-sharing) للحصول على روابط مشاركة متجاوبة جاهزة التصميم والتي يمكنك استخدامها في صفحات AMP.
 [/tip]
 
-###التصميمات المخصَّصة
+### التصميمات المخصَّصة
 
 تريد أحيانًا تقديم تصميمك الخاص. يمكنك ببساطة إلغاء التصميمات المتوفرة كما يلي:
 ```css
@@ -253,7 +258,7 @@ amp-social-share[type="twitter"] {
 }
 ```
 
-##استبدال المتغيرات
+## استبدال المتغيرات
 
 يمكنك استخدام [الاستبدال الشامل لمتغيرات AMP](https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md) في العنصر `<amp-social-share>`. في المثال أدناه، تم استبدال `TITLE` بعنوان الصفحة واستبدال `CANONICAL_URL` بعنوان URL الأساسي للمستند.
 
@@ -263,6 +268,6 @@ amp-social-share[type="twitter"] {
 </amp-social-share>
 ```
 
-##التحقق
+## التحقق
 
 اطِّلع على [قواعد amp-social-share](https://github.com/ampproject/amphtml/blob/master/extensions/amp-social-share/validator-amp-social-share.protoascii) في مواصفات مدقق AMP.

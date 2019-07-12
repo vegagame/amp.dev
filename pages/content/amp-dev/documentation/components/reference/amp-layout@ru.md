@@ -7,19 +7,25 @@ teaser:
     layout.
 $title: amp-layout
 ---
-<!--© Авторы HTML с технологией AMP, 2016. Все права защищены.
 
-       Лицензия Apache версии 2.0 (далее "Лицензия");
-     этот файл можно использовать только в соответствии с Лицензией.
-     Чтобы приобрести копию Лицензии, перейдите по ссылке:
+<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+<!---
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
+
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
      http://www.apache.org/licenses/LICENSE-2.0
 
-     Если иное не требуется действующим законодательством или не оговорено в письменном виде, программное обеспечение, распространяемое по Лицензии, распространяется "КАК ЕСТЬ", БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ И УСЛОВИЙ, явных или подразумеваемых.
-     Определения используемых в Лицензии понятий, с помощью которых оговариваются разрешения и ограничения, приводятся в тексте Лицензии.
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
 -->
 
-#<a name="amp-layout"></a> `amp-layout`
+# <a name="amp-layout"></a> `amp-layout`
 
 <table>
   <tr>
@@ -32,7 +38,7 @@ $title: amp-layout
   </tr>
 </table>
 
-##Обзор
+## Обзор
 
 Компонент `amp-layout` позволяет применять адаптивные макеты на основе соотношения сторон к любому элементу. Этот компонент похож по принципу действия на атрибут [layout](https://www.ampproject.org/docs/guides/responsive/control_layout#the-layout-attribute) в имеющихся компонентах AMP, но в качестве дочерних элементов поддерживает любую разметку HTML. С компонентом `amp-layout` совместимы все поддерживаемые макеты, например fixed-height, fixed и т. д.
 
@@ -49,10 +55,10 @@ $title: amp-layout
   </amp-layout>
 ```
 
-##Атрибуты
+## Атрибуты
 
 Этот элемент содержит [распространенные атрибуты](https://www.ampproject.org/docs/reference/common_attributes), расширенные до компонентов AMP.
 
-##Проверка
+## Проверка
 
 О правилах для amp-layout читайте в [спецификации валидатора AMP](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii).

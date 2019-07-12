@@ -8,21 +8,25 @@ teaser:
   text: Autoriser l'affichage de modèles Mustache.js.
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2015 The AMP HTML Authors. Tous droits réservés.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Autorisation sous licence Apache, version 2.0 (la "Licence") ;
-       n'utilisez ce fichier que dans le cadre de la Licence.
-       Vous pouvez obtenir une copie de la Licence à l'adresse suivante :
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-       Sauf dispositions légales applicables ou accord écrit préalable, le logiciel distribué dans le cadre de la Licence est fourni "EN L'ÉTAT", À L'EXCLUSION DE TOUTE GARANTIE OU CONDITION DE QUELQUE NATURE QUE CE SOIT, expresse ou implicite.
-       Consultez la Licence correspondant à la langue spécifique qui régit les autorisations et limitations applicables.
-  -->
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 
-#amp-mustache
+# amp-mustache
 
 Ce composant autorise l'affichage de modèle [Mustache.js](https://github.com/janl/mustache.js/).
 
@@ -42,14 +46,14 @@ Ce composant autorise l'affichage de modèle [Mustache.js](https://github.com/ja
 </table>
 
 
-##Remarques relatives à la version
+## Remarques relatives à la version
 
 | Version | Description |
 |-------|-----|
 | 0.2 | Compatibilité avec les éléments `<svg>` et réduction de la taille du paquet (12,2 Ko contre 20,5 Ko, compressé avec gzip).<br><br>Migration vers une bibliothèque de désinfection HTML plus récente (de Caja vers DOMPurify). Cela peut entraîner de légères modifications, compte tenu des différences au niveau de la mise sur liste blanche des balises et des attributs. Nous vous recommandons de commencer par tester vos pages avant de passer en production pour vous assurer que les modifications apportées au balisage généré n'ont pas d'incidence sur la fonctionnalité. |
 | 0.1 | Mise en œuvre initiale. |
 
-##Syntaxe
+## Syntaxe
 
 Mustache est une syntaxe de modèle sans logique. Pour plus d'informations, consultez les [documents relatifs à Mustache.js](https://github.com/janl/mustache.js/). Voici quelques-unes des principales balises de Mustache :
 
@@ -58,7 +62,7 @@ Mustache est une syntaxe de modèle sans logique. Pour plus d'informations, cons
 * {% raw %}`{{^section}}`{% endraw %}{% raw %}`{{/section}}`{% endraw %}: : balise inversée. Permet de vérifier qu'une variable n'existe pas.
 * {% raw %}`{{{unescaped}}}`{% endraw %} : balise HTML sans échappement. Elle est limitée dans le balisage qu'elle peut générer (voir la section "Restrictions" ci-dessous).
 
-##Utilisation
+## Utilisation
 
 Le modèle `amp-mustache` doit être défini et utilisé conformément aux [spécifications du modèle AMP](../../spec/amp-html-templates.md).
 
@@ -90,8 +94,8 @@ Dans la mesure du possible, utilisez la balise `template`, car la validation AMP
 
 Le mode de détection des modèles, le moment où ils sont affichés et la manière dont les données sont fournies sont autant d'informations déterminées par l'élément AMP cible qui utilise ce modèle pour afficher son contenu (par exemple, dans un composant [amp-list](../amp-list/amp-list.md), [amp-form](../amp-form/amp-form.md), etc.).
 
-##Restrictions
-###Validation
+## Restrictions
+### Validation
 
 À l'instar de tous les modèles AMP, les modèles `amp-mustache` doivent être des fragments DOM correctement formatés. Cela signifie notamment que vous ne pouvez pas utiliser `amp-mustache` pour les tâches suivantes :
 
@@ -100,13 +104,13 @@ Le mode de détection des modèles, le moment où ils sont affichés et la mani�
 
 La sortie de "triple mustache" est expurgée afin de n'autoriser que les balises suivantes : `a`, `b`, `br`, `caption`, `colgroup`, `code`, `del`, `div`, `em`, `i`, `ins`, `li`, `mark`, `ol`, `p`, `q`, `s`, `small`, `span`, `strong`, `sub`, `sup`, `table`, `tbody`, `time`, `td`, `th`, `thead`, `tfoot`, `tr`, `u`, `ul`.
 
-###Désinfection
+### Désinfection
 
 La sortie de Mustache est désinfectée pour des raisons de sécurité, mais aussi pour maintenir la conformité avec AMP. Cela peut entraîner la suppression discrète de certains éléments et attributs.
 
-##Pièges
+## Pièges
 
-###Modèles imbriqués
+### Modèles imbriqués
 
 Conformément à la validation AMP, les éléments `<template>` ne peuvent pas être des enfants d'autres éléments `<template>`. Cela peut se produire lors de l'imbrication de deux composants qui utilisent des modèles ; `amp-list` et `amp-form`, par exemple.
 
@@ -132,7 +136,7 @@ Peut également être représenté sous la forme :
 </amp-list>
 {% endraw %}[/sourcecode]
 
-###Tables
+### Tables
 
 Étant donné que les chaînes de modèle AMP doivent être spécifiées dans des éléments `<template>`, cela peut entraîner un comportement inattendu en raison de l'analyse du navigateur. Par exemple, les éléments `<table>` peuvent se traduire par l'adoption du texte (concept de [foster parenting](https://www.w3.org/TR/html5/syntax.html#unexpected-markup-in-tables) en anglais). Dans l'exemple suivant :
 
@@ -172,7 +176,7 @@ Pour remédier au problème, vous pouvez encapsuler les sections Mustache dans l
 {% endraw %}[/sourcecode]
 
 
-###Échappement de guillemets simples ou doubles
+### Échappement de guillemets simples ou doubles
 
 Lorsque vous utilisez `amp-mustache` pour calculer des valeurs d'attribut, l'échappement de guillemets simples ou doubles peut poser problème. Par exemple :
 
@@ -192,7 +196,7 @@ L'utilisation de codes de caractères HTML dans les variables {% raw %}`{{foo}}`
 
 Il existe une [proposition ouverte](https://github.com/ampproject/amphtml/issues/8395) pour effectuer plutôt cette substitution dans le composant `amp-mustache`. N'hésitez pas à commenter le problème si vous souhaitez apporter votre aide.
 
-###Entités HTML
+### Entités HTML
 
 Les entités HTML ne sont pas conservées dans les éléments `<template>`.
 
@@ -200,6 +204,6 @@ Cela peut poser problème si vous souhaitez effectuer un rendu côté serveur d'
 
 Pour remédier à ce problème, vous pouvez remplacer des chaînes telles que {% raw %}`{{`{% endraw %} par des caractères différents ou les supprimer purement et simplement du contenu généré par l'utilisateur.
 
-##Validation
+## Validation
 
 Consultez les [règles relatives à amp-mustache](https://github.com/ampproject/amphtml/blob/master/extensions/amp-mustache/validator-amp-mustache.protoascii) dans les spécifications du validateur AMP.

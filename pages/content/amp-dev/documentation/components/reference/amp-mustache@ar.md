@@ -8,20 +8,25 @@ teaser:
   text: Allows rendering of Mustache.js templates.
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-حقوق الطبع والنشر 2015 لصالح "مؤلفو رمز HTML لصفحات AMP". جميع الحقوق محفوظة.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-تم الترخيص بموجب ترخيص Apache، الإصدار 2.0 (المشار إليه لاحقًا باسم "الترخيص")؛ ولا يحق لك استخدام هذا الملف إلا بما يتوافق مع الترخيص.
-ويمكنك الحصول على نسخة من الترخيص على الصفحة
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-ما لم يكن مطلوبًا بموجب القانون الساري أو تمت الموافقة عليه كتابةً، يتم توزيع البرنامج الذي يتم توزيعه بموجب الترخيص "كما هو"، وبدون أية ضمانات أو شروط من أي نوع، سواء كانت صريحة أو ضمنية.
-راجِع الترخيص للاطّلاع على اللغة المحددة التي تحكم الأذونات والقيود بموجب الترخيص.
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
 -->
 
-#amp-mustache
+# amp-mustache
 
 يسمح بعرض [Moustache.js](https://github.com/janl/mustache.js/).
 
@@ -42,14 +47,14 @@ teaser:
 
 [جدول المحتويات]
 
-##ملاحظات عن الإصدارات
+## ملاحظات عن الإصدارات
 
 | الإصدار | الوصف |
 |-------|-----|
 | 0.2 | يتيح عناصر `<svg>` ويقلل حجم الحزمة (12.2 كيلو بايت مقابل 20.5 كيلو بايت، مضغوط بتنسيق gzip).ينقل البيانات إلى مكتبة HTML أحدث وأنظف (Caja إلى DOMPurify). قد يحدِث هذا تغييرات قد تؤدي إلى عطل بسبب الاختلافات في القائمة البيضاء للعلامات والسمات. ننصح باختبار صفحاتك أولاً قبل الدفع بها إلى الإنتاج للتأكد من عدم تأثير التغييرات التي أُجريت على الترميز الذي تم إنشاؤه في الوظائف. |
 | 0.1 | تنفيذ مبدئي |
 
-##البنية
+## البنية
 
 Moustache هو بنية نموذج بمنطق أقل. راجِع [مستندات Moustache.js](https://github.com/janl/mustache.js/) للحصول على المزيد من التفاصيل. في ما يلي بعض علامات Mustache الأساسية:
 
@@ -58,7 +63,7 @@ Moustache هو بنية نموذج بمنطق أقل. راجِع [مستندات
 * {% raw %}`{{^section}}`{% endraw %}{% raw %}`{{/section}}`{% endraw %}: علامة مقلوبة يمكنها اختبار عدم وجود متغير.
 * {% raw %}`{{{unescaped}}}`{% endraw %}: HTML لا تتضمن حروف إلغاء ومقيدة من حيث الترميز الذي قد تعطيه (انظر "القيود" أدناه).
 
-##الاستخدام
+## الاستخدام
 
 يجب تعريف نموذج `amp-mustache` واستخدامه وفقًا [لمواصفات نماذج AMP](../../spec/amp-html-templates.md).
 
@@ -92,9 +97,9 @@ Moustache هو بنية نموذج بمنطق أقل. راجِع [مستندات
 
 يتم تحديد أسلوب اكتشاف النموذج وموعد عرضه وكيفية توفير البيانات من قبِل عنصر AMP الهدف الذي يستخدم هذا النموذج لعرض محتواه (في شكل [amp-list](../amp-list/amp-list.md) مثلاً أو [amp-form](../amp-form/amp-form.md) أو غيره).
 
-##القيود
+## القيود
 
-###التحقق
+### التحقق
 
 مثل جميع نماذج AMP ، يجب أن تكون نماذج `amp-mustache` أجزاء DOM جيدة التنظيم. ويعني هذا، من بين أمور أخرى، أنه لا يمكنك استخدام `amp-mustache` في ما يلي:
 
@@ -103,13 +108,13 @@ Moustache هو بنية نموذج بمنطق أقل. راجِع [مستندات
 
 تم تنظيف مخرجات "triple-mustache" لتسمح فقط بالعلامات التالية: `a`, `b`, `br`, `caption`, `colgroup`, `code`, `del`, `div`, `em`, `i`, `ins`, `li`, `mark`, `ol`, `p`, `q`, `s`, `small`, `span`, `strong`, `sub`, `sup`, `table`, `tbody`, `time`, `td`, `th`, `thead`, `tfoot`, `tr`, `u`, `ul`.
 
-###التنظيف
+### التنظيف
 
 يتم تنظيف مخرجات Mustache لدواعي الأمان وللحفاظ على صلاحية AMP. قد يؤدي هذا إلى إزالة بعض العناصر والسمات في صمت.
 
-##المخاطر
+## المخاطر
 
-###النماذج المدمجة
+### النماذج المدمجة
 
 وفقًا "للتحقق من صحة AMP"، يجب ألا تكون عناصر `<template>` عناصر ثانوية لعناصر `<template>` أخرى. يمكن أن يحدث هذا عند دمج مكونَين يستخدمان النماذج، مثل `amp-list` و`amp-form`.
 
@@ -137,7 +142,7 @@ Moustache هو بنية نموذج بمنطق أقل. راجِع [مستندات
 {% endraw %}
 ```
 
-###الجداول
+### الجداول
 
 يجب تحديد سلاسل نماذج AMP في عناصر `<template>` وهو ما قد يؤدي إلى حدوث سلوك غير متوقع بسبب تحليل المتصفح. يمكن مثلاً أن تتسبب عناصر `<table>` في [إعادة ترتيب العلامات التي بها خلل في الدمج](https://www.w3.org/TR/html5/syntax.html#unexpected-markup-in-tables) في النص. في المثال التالي:
 
@@ -178,7 +183,7 @@ Moustache هو بنية نموذج بمنطق أقل. راجِع [مستندات
 {% endraw %}
 ```
 
-###حروف إلغاء علامات الاقتباس
+### حروف إلغاء علامات الاقتباس
 
 عند استخدام `amp-mustache` لحساب قيم السمات، يمكن أن تمثل حروف إلغاء علامات الاقتباس مشكلة. مثال:
 
@@ -197,7 +202,7 @@ Moustache هو بنية نموذج بمنطق أقل. راجِع [مستندات
 
 هناك [اقتراح مفتوح للنقاش](https://github.com/ampproject/amphtml/issues/8395) بإجراء هذا الاستبدال في `amp-mustache` بدلاً من ذلك. يرجى التعليق على المشكلة إذا أردت دعمها.
 
-###كيانات HTML
+### كيانات HTML
 
 لا يتم حفظ كيانات HTML في عناصر `<template>`.
 
@@ -205,6 +210,6 @@ Moustache هو بنية نموذج بمنطق أقل. راجِع [مستندات
 
 وتشمل الحلول البديلة استبدال السلاسل مثل {% raw %} `{{` {% endraw %} بأحرف مختلفة أو تجريدها مباشرة من المحتوى الذي أنشأه المستخدِمون.
 
-##التحقق
+## التحقق
 
 اطِّلع على [قواعد amp-mustache](https://github.com/ampproject/amphtml/blob/master/extensions/amp-mustache/validator-amp-mustache.protoascii) في مواصفات مدقق AMP.

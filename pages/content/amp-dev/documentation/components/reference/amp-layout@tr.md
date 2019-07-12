@@ -7,20 +7,25 @@ teaser:
     layout.
 $title: amp-layout
 ---
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2016 The AMP HTML Authors. Tüm Hakları Saklıdır.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Apache Lisansı, Sürüm 2.0 ("Lisans") ile lisanslıdır; bu dosyayı Lisans koşulları dışında kullanamazsınız.
-       Lisansın bir kopyasını şu adresten edinebilirsiniz:
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-       Geçerli yasa tarafından gerekli görülmediği veya yazılı olarak bir sözleşme yapılmadığı sürece, Lisanslı olarak dağıtılan yazılım açıkça veya zımni olarak HİÇBİR GARANTİ VEYA KOŞUL SUNULMADAN "OLDUĞU GİBİ" dağıtılır.
-       Lisans kapsamında belirli bir dilde sağlanan izinleri ve uygulanan kısıtlamaları öğrenmek için söz konusu dille ilgili Lisans'a bakın.
-  -->
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 
-#<a name="amp-layout"></a> `amp-layout`
+# <a name="amp-layout"></a> `amp-layout`
 
 <table>
   <tr>
@@ -33,7 +38,7 @@ $title: amp-layout
   </tr>
 </table>
 
-##Genel Bakış
+## Genel Bakış
 
 `amp-layout` bileşeni, herhangi bir öğeye en boy oranına dayanan duyarlı düzenler uygulamanıza olanak tanır. `amp-layout` bileşeni, mevcut AMP bileşenlerinde [düzen](https://www.ampproject.org/docs/guides/responsive/control_layout#the-layout-attribute) özelliğine benzer şekilde çalışır ancak HTML işaretlemelerini alt öğe olarak destekler. Desteklenen diğer düzenlerin tümü `amp-layout` ile çalışır (ör. fixed-height, fixed vb.).
 
@@ -50,11 +55,11 @@ Bu örnekte, satır içi SVG ile çizilmiş bir dairenin çevresinde duyarlı bi
   </amp-layout>
 ```
 
-##Özellikler
+## Özellikler
 
 Bu öğe, AMP bileşenlerine genişletilmiş [ortak özellikleri](https://www.ampproject.org/docs/reference/common_attributes) içerir.
 
-##Doğrulama
+## Doğrulama
 
 AMP doğrulayıcı spesifikasyonunda [amp-layout kurallarına](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii) bakın.
 ,false,false

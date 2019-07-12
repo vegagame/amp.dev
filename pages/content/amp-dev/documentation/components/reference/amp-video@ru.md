@@ -8,19 +8,25 @@ teaser:
   text: Заменяет тег HTML5 video.
 ---
 
-<!--© Авторы AMPHTML, 2015. Все права защищены.
 
-       Лицензия Apache версии 2.0 (далее – Лицензия);
-     этот файл можно использовать только в соответствии с Лицензией.
-     Чтобы получить текст Лицензии, перейдите по ссылке:
+<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+<!---
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
+
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
      http://www.apache.org/licenses/LICENSE-2.0
 
-     Если иное не требуется действующим законодательством или не оговорено в письменном виде, программное обеспечение, распространяемое по Лицензии, распространяется "КАК ЕСТЬ", БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ И УСЛОВИЙ, явных или подразумеваемых.
-     Определения используемых в Лицензии понятий, с помощью которых оговариваются разрешения и ограничения, приводятся в тексте Лицензии.
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
 -->
 
-#amp-video
+# amp-video
 
 Замена тега HTML5 `video`, предназначенная только для добавления видео непосредственно на страницу с помощью кода HTML5.
 
@@ -41,7 +47,7 @@ teaser:
     </tr>
   </table>
 
-##Принципы работы
+## Принципы работы
 
 Компонент `amp-video` по мере воспроизведения ролика выполняет отложенную загрузку видеоресурса, указанного в атрибуте `src`. Настройка компонента `amp-video` почти не отличается от настройки обычного элемента HTML5 `<video>`.
 
@@ -52,7 +58,7 @@ teaser:
 * Изображение, которое будет показываться до начала воспроизведения ролика.
 * Резервный контент на случай, если браузер пользователя не поддерживает видео HTML5. Максимум в один дочерний узел можно добавить атрибут `fallback`, при наличии которого контент этого узла и его дочерних элементов будет демонстрироваться в определенных браузерах вместо видео.
 
-####Пример
+#### Пример
 
 <!--embedded example - displays in ampproject.org -->
 
@@ -64,11 +70,11 @@ teaser:
 
 </div>
 
-##Статистика
+## Статистика
 
 Компонент `amp-video` по умолчанию поддерживает сбор статистики. [Подробнее…](https://github.com/ampproject/amphtml/blob/master/extensions/amp-analytics/amp-video-analytics.md)
 
-##Атрибуты
+## Атрибуты
 
 <table>
   <tr>
@@ -128,7 +134,7 @@ teaser:
         </tr>
       </table>
 
-##Атрибуты Media Session API
+## Атрибуты Media Session API
 
 Компонент `amp-video` работает с применением [Media Session API](https://developers.google.com/web/updates/2017/02/media-session). Это позволяет разработчикам указывать дополнительную информацию о видеофайле, которая будет отображаться в центре уведомлений на устройстве пользователя (вместе с кнопками запуска и приостановки воспроизведения).
 
@@ -165,12 +171,12 @@ teaser:
 </amp-video>
 ```
 
-##Оверлей для запуска видео по клику
+## Оверлей для запуска видео по клику
 
 Чтобы повысить удобство просмотра, в видеопроигрыватели на сайтах часто вставляют оверлеи, позволяющие запускать воспроизведение по клику.  Например, можно включить в такой оверлей собственный значок воспроизведения, на который будут нажимать пользователи, а также добавить название ролика, изображения-обложки разных размеров и т. д.  Поскольку компонент `amp-video` поддерживает стандартное AMP-действие `play`, внедрить функцию запуска видео по клику не составит труда.
 
 Подробно разобранный пример оверлея вы найдете [на сайте AMP By Example](https://ampbyexample.com/advanced/click-to-play_overlay_for_amp-video/).
 
-##Валидация
+## Валидация
 
 С [правилами для компонента amp-video](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii) можно ознакомиться в спецификации валидатора AMP.

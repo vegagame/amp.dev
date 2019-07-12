@@ -8,20 +8,25 @@ teaser:
   text: Displays elements in a full-viewport “lightbox” modal.
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-حقوق الطبع والنشر 2015 لصالح "مؤلفو شفرة HTML لصفحات AMP". جميع الحقوق محفوظة.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-تم الترخيص بموجب ترخيص Apache، الإصدار 2.0 (المشار إليه لاحقًا باسم "الترخيص")؛ ولا يحق لك استخدام هذا الملف إلا بما يتوافق مع الترخيص.
-ويمكنك الحصول على نسخة من الترخيص على الصفحة
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-ما لم يكن مطلوبًا بموجب القانون الساري أو تمت الموافقة عليه كتابةً، يتم توزيع البرنامج الذي يتم توزيعه بموجب الترخيص "كما هو"، وبدون أية ضمانات أو شروط من أي نوع، سواء كانت صريحة أو ضمنية.
-راجِع الترخيص للاطّلاع على اللغة المحددة التي تحكم الأذونات والقيود بموجب الترخيص.
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
 -->
 
-#amp-lightbox
+# amp-lightbox
 
 <table>
   <tr>
@@ -45,7 +50,7 @@ teaser:
 
 [جدول المحتويات]
 
-##السُلوك
+## السُلوك
 
 يحدد المكوِّن `amp-lightbox` العناصر الثانوية التي يتم عرضها في تراكب/شكل إطار العرض الكامل. عندما ينقر المستخدِم على عنصر (مثل زر)، فإن معرّف `amp-lightbox` المُشَار إليه في السمة `on` للعنصر يؤدي إلى ظهور العرض المبسط بحيث يأخذ حجم كامل الإطار ويعرض عناصر `amp-lightbox` الثانوية.
 
@@ -63,7 +68,7 @@ teaser:
 يوجد أيضًا المكوِّن [`<amp-image-lightbox>`](https://www.ampproject.org/docs/reference/components/amp-image-lightbox) لعرض الصور في العرض المبسط.
 [/tip]
 
-##السمات
+## السمات
 
 <table>
   <tr>
@@ -97,11 +102,11 @@ teaser:
 </table>
 
 
-##التصميم
+## التصميم
 
 يمكنك تصميم `amp-lightbox` باستخدام CSS القياسي.
 
-##الإجراءات
+## الإجراءات
 
 يعرض `amp-lightbox` الإجراءات التالية التي يمكنك استخدام [بنية on في AMP لتشغيلها](https://www.ampproject.org/docs/reference/amp-actions-and-events):
 
@@ -121,7 +126,7 @@ teaser:
 </table>
 
 
-##<a id="a4a"></a> استخدام `amp-lightbox` في إعلانات AMPHTML
+## <a id="a4a"></a> استخدام `amp-lightbox` في إعلانات AMPHTML
 
 [tip type="note"]
 
@@ -131,7 +136,7 @@ teaser:
 
 هناك بعض الاختلافات بين استخدام `amp-lightbox` في مستندات AMP العادية و[الإعلانات المكتوبة باللغة AMPHTML](../amp-a4a/amp-a4a-format.md):
 
-###السمة close-button مطلوبة
+### السمة close-button مطلوبة
 
 تكون السمة `close-button` مطلوبة بالنسبة إلى إعلانات AMPHTML. تؤدي هذه السمة إلى عرض رأس أعلى العرض المبسط. ويحتوي الرأس على زر الإغلاق وتصنيف مكتوب عليه "إعلان". ترجع أسباب طلب هذا الرأس إلى ما يلي:
 
@@ -140,21 +145,21 @@ teaser:
 
 السمة `close-button` مطلوبة ولا يُسمح بها إلا في إعلانات AMPHTML. في مستندات AMP العادية، يمكنك تقديم زر الإغلاق في أي مكان تحتاج إليه كجزء من محتوى `<amp-lightbox>`.
 
-###غير مسموح بإعلانات العرض المبسط القابلة للتمرير
+### غير مسموح بإعلانات العرض المبسط القابلة للتمرير
 
 بالنسبة إلى إعلانات AMPHTML، لا يُسمح باستخدام إعلانات العرض المبسط القابلة للتمرير.
 
-###الخلفية شفافة
+### الخلفية شفافة
 
 عندما تستخدم `<amp-lightbox>` في إعلانات AMPHTML، تصبح خلفية العنصر `<body>` شفافة لأن وقت تشغيل AMP يغيّر حجم محتوى تصميم الإعلان ويعيد تنظيمه قبل توسيع العرض المبسط. يتم ذلك لمنع حدوث "قفزة" بصرية في التصميم أثناء فتح الإعلان. إذا كان تصميم إعلانك يحتاج إلى خلفية، عيّنها على حاوية متوسطة (مثل `<div>` بالحجم الكامل) بدلاً من `<body>`.
 
 عند تشغيل إعلان AMPHTML في بيئة خارجية (في مستند غير AMP مثلاً)، يتوسط التصميم في إطار العرض ثم يتم توسيعه. ويحدث هذا لأن إطارات iframe الخارجية تحتاج إلى الاعتماد على واجهة برمجة تطبيقات postMessage لتفعيل ميزات مثل تغيير حجم الإطار، وهو ما يحدث بشكل غير متزامن، لذا فإن توسيط التصميم أولاً يتيح انتقالاً سلسًا بدون حدوث قفزات مرئية.
 
-###أمثلة على الانتقال في العرض المبسط لإعلانات AMPHTML
+### أمثلة على الانتقال في العرض المبسط لإعلانات AMPHTML
 
 في الأمثلة أدناه، نوضح شكل الانتقال لإعلان AMPHTML يحتوي على السمة `animate-in="fly-in-bottom"` وقد تم تعيينها على عنصر العرض المبسط لإعلان AMPHTML في إطار iframe صديق وإعلان AMPHTML في iframe خارجي.
 
-#####إطارات iframe صديقة (من ذاكرة التخزين المؤقت لصفحات AMP مثلاً)
+##### إطارات iframe صديقة (من ذاكرة التخزين المؤقت لصفحات AMP مثلاً)
 
 <amp-img alt="إعلان العرض المبسط في إطار iframe صديق" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/master/spec/img/lightbox-ad-fie.gif" layout="fixed">
 <noscript>
@@ -162,7 +167,7 @@ teaser:
 </noscript>
 </amp-img>
 
-#####إطارات iframe خارجية (من خارج ذاكرة التخزين المؤقت لصفحات AMP مثلاً)
+##### إطارات iframe خارجية (من خارج ذاكرة التخزين المؤقت لصفحات AMP مثلاً)
 
 <amp-img alt="إعلان العرض المبسط في إطار iframe خارجي" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/master/spec/img/lightbox-ad-3p.gif" layout="fixed">
 <noscript>
@@ -170,6 +175,6 @@ teaser:
 </noscript>
 </amp-img>
 
-##التحقق
+## التحقق
 
 اطِّلع على [قواعد amp-lightbox](https://github.com/ampproject/amphtml/blob/master/extensions/amp-lightbox/validator-amp-lightbox.protoascii) في مواصفات مدقق AMP.

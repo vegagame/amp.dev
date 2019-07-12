@@ -8,20 +8,25 @@ teaser:
   text: Substitui a tag de vídeo HTML5.
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2015 The AMP HTML Authors. Todos os direitos reservados.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Licenciado sob a Licença Apache, Versão 2.0 (a "Licença"). O uso deste arquivo só é permitido em conformidade com a Licença.
-       Uma cópia da Licença está disponível em
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-       A menos que exigido pela legislação aplicável ou acordado por escrito, o software fornecido de acordo com a Licença é distribuído "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIAS OU CONDIÇÕES DE QUALQUER TIPO, expressas ou implícitas.
-       Consulte a Licença para ver informações sobre permissões e limitações para o idioma específico.
-  -->
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 
-#amp-video
+# amp-video
 
 Um substituto para a tag `video` de HTML5; para ser usado apenas em incorporações diretas de arquivos de vídeo HTML5.
 
@@ -42,7 +47,7 @@ Um substituto para a tag `video` de HTML5; para ser usado apenas em incorporaç�
     </tr>
   </table>
 
-##Comportamento
+## Comportamento
 
 O componente `amp-video` carrega o recurso de vídeo especificado pelo atributo `src` de forma lenta, em um horário determinado pelo ambiente de tempo de execução. Você pode controlar um componente `amp-video` da mesma forma que uma tag `<video>` padrão de HTML5.
 
@@ -53,7 +58,7 @@ O componente `amp-video` aceita até quatro tipos exclusivos de nós HTML como f
 * Um marcador antes do início do vídeo.
 * Um substituto caso o navegador não seja compatível com vídeo HTML5: um ou zero nós filhos imediatos podem ter o atributo `fallback`. Se presente, esse nó e os filhos dele formam o conteúdo exibido caso o vídeo HTML5 não seja compatível com o navegador do usuário.
 
-####Exemplo
+#### Exemplo
 
 <!--embedded example - displays in ampproject.org -->
 
@@ -65,11 +70,11 @@ O componente `amp-video` aceita até quatro tipos exclusivos de nós HTML como f
 
 </div>
 
-##Análise
+## Análise
 
 O `amp-video` é compatível com análises prontas. Consulte a seção [análise de vídeos](https://github.com/ampproject/amphtml/blob/master/extensions/amp-analytics/amp-video-analytics.md) (link em inglês) para ver mais informações.
 
-##Atributos
+## Atributos
 
 <table>
   <tr>
@@ -129,7 +134,7 @@ O `amp-video` é compatível com análises prontas. Consulte a seção [análise
         </tr>
       </table>
 
-##Atributos da API Media Session
+## Atributos da API Media Session
 
 O componente `amp-video` implementa a [API Media Session](https://developers.google.com/web/updates/2017/02/media-session), que permite aos desenvolvedores especificar mais informações sobre o arquivo de vídeo. As outras informações do vídeo são exibidas na central de notificações do dispositivo do usuário (junto com os controles de reprodução/pausa).
 
@@ -166,12 +171,12 @@ Este exemplo contém os atributos `poster` e `artwork`. O `poster` atua como a i
 </amp-video>
 ```
 
-##Sobreposição de reprodução com um clique
+## Sobreposição de reprodução com um clique
 
 O fornecimento de uma sobreposição de reprodução com um clique é um recurso comum de UX para players de vídeo na Web.  Por exemplo, você pode exibir um ícone de reprodução personalizado em que o usuário pode clicar, bem como incluir o título do vídeo, imagens de pôster de diferentes tamanhos etc.  Como o componente `amp-video` é compatível com a ação padrão de AMP `play`, é possível implementar facilmente a reprodução com um clique.
 
 Para um exemplo detalhado, acesse [Sobreposição de reprodução com um clique para amp-video](https://ampbyexample.com/advanced/click-to-play_overlay_for_amp-video/) no site AMP By Example.
 
-##Validação
+## Validação
 
 Consulte as [regras do amp-video](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii) (link em inglês) na especificação do validador de AMP.

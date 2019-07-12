@@ -8,24 +8,25 @@ teaser:
   text: Sostituisce il tag video HTML5.
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2015 The AMP HTML Authors. Tutti i diritti riservati.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Rilasciato ai sensi della Licenza Apache, versione 2.0 (la "Licenza");
-     è possibile utilizzare questo file esclusivamente in conformità con la Licenza.
-     Una copia della Licenza è disponibile all'indirizzo
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
      http://www.apache.org/licenses/LICENSE-2.0
 
-     Se non diversamente imposto dalla legge vigente o concordato per iscritto,
-     il software rilasciato ai sensi della Licenza viene distribuito "COSÌ COM'È",
-     SENZA GARANZIE O CONDIZIONI DI ALCUN TIPO, esplicite o implicite.
-     Leggi la Licenza per conoscere le autorizzazioni e le limitazioni in vigore
-     specifiche della lingua previste dalla Licenza.
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
 -->
 
-#amp-video
+# amp-video
 
 Sostituisce il tag `video` HTML5. Deve essere utilizzato esclusivamente per gli incorporamenti di file video HTML5 diretti.
 
@@ -46,7 +47,7 @@ Sostituisce il tag `video` HTML5. Deve essere utilizzato esclusivamente per gli 
     </tr>
   </table>
 
-##Comportamento
+## Comportamento
 
 Il componente `amp-video` carica in un momento determinato dal tempo di esecuzione la risorsa video specificata dall'attributo `src`. Puoi controllare un componente `amp-video` in modo molto simile a un tag `<video>` HTML5 standard.
 
@@ -57,7 +58,7 @@ Il componente `amp-video` accetta fino a quattro tipi unici di nodi HTML come se
 * Un segnaposto che verrà visualizzato prima che inizi la riproduzione del video.
 * Un fallback nel caso in cui il browser non supporti video HTML5: uno o zero nodi secondari immediati possono avere l'attributo `fallback`. Se presente, questo nodo e i suoi nodi secondari formano il contenuto visualizzato nel caso in cui il video HTML5 non sia supportato dal browser dell'utente.
 
-####Esempio
+#### Esempio
 
 <!--embedded example - displays in ampproject.org -->
 
@@ -69,11 +70,11 @@ Il componente `amp-video` accetta fino a quattro tipi unici di nodi HTML come se
 
 </div>
 
-##Analisi dei dati
+## Analisi dei dati
 
 `amp-video` supporta l'analisi dei dati per impostazione predefinita. Per ulteriori informazioni, consulta la sezione [Analisi dei dati video](https://github.com/ampproject/amphtml/blob/master/extensions/amp-analytics/amp-video-analytics.md).
 
-##Attributi
+## Attributi
 
 <table>
   <tr>
@@ -136,7 +137,7 @@ Il componente `amp-video` accetta fino a quattro tipi unici di nodi HTML come se
             </tr>
           </table>
 
-##Attributi dell'API Media Session
+## Attributi dell'API Media Session
 
 Il componente `amp-video` implementa l'[API Media Session](https://developers.google.com/web/updates/2017/02/media-session), che permette agli sviluppatori di specificare più informazioni sul file video. Queste informazioni aggiuntive vengono visualizzate nel centro notifiche del dispositivo dell'utente insieme ai controlli di riproduzione/pausa.
 
@@ -173,12 +174,12 @@ Questo esempio contiene gli attributi `poster` e `artwork`. L'attributo `poster`
 </amp-video>
 ```
 
-##Overlay click-to-play
+## Overlay click-to-play
 
 La presenza di un overlay click-to-play è una funzione comune di UX per i lettori video disponibili sul Web.  Ad esempio, potresti mostrare un'icona di riproduzione personalizzata sulla quale l'utente può fare clic, includere il titolo del video, immagini di poster di varie dimensioni e così via.  Poiché il componente `amp-video` supporta l'azione AMP `play` standard, implementare il click-to-play è facile.
 
 Per un esempio dettagliato, visita la sezione [Overlay click-to-play per amp-video](https://ampbyexample.com/advanced/click-to-play_overlay_for_amp-video/) del sito AMP By Example.
 
-##Convalida
+## Convalida
 
 Consulta le [regole amp-video](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii) nella specifica dello strumento di convalida AMP.

@@ -8,18 +8,23 @@ teaser:
   text: Sayfa görüntülemelerini saymak için bir izleme pikseli.
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2015 The AMP HTML Authors. Tüm Hakları Saklıdır.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Apache Lisansı, Sürüm 2.0 ("Lisans") ile lisanslıdır; bu dosyayı Lisans koşulları dışında kullanamazsınız.
-       Lisansın bir kopyasını şu adresten edinebilirsiniz:
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-       Geçerli yasa tarafından gerekli görülmediği veya yazılı olarak bir sözleşme yapılmadığı sürece, Lisanslı olarak dağıtılan yazılım açıkça veya zımni olarak HİÇBİR GARANTİ VEYA KOŞUL SUNULMADAN "OLDUĞU GİBİ" dağıtılır.
-       Lisans kapsamında belirli bir dilde sağlanan izinleri ve uygulanan kısıtlamaları öğrenmek için söz konusu dille ilgili Lisans'a bakın.
-  -->
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 
 # amp-pixel
 
@@ -39,7 +44,7 @@ teaser:
   </tr>
 </table>
 
-##Davranış
+## Davranış
 
 `amp-pixel` bileşeni, basit bir `img` izleme pikseli gibi davranır. Tek bir URL alır ancak istekte bulunulurken URL dizesindeki bileşenle değiştirilebilen değişkenler sağlar. Daha ayrıntılı bilgi için [değişiklikler](#substitutions) bölümüne bakın.
 
@@ -54,13 +59,13 @@ Bu temel örnekte `amp-pixel`, belirtilen URL'ye basit bir GET isteği gönderir
 Analiz isteklerinin yönlendirme üstbilgisindeki AMP URL'leri işlenirken `usqp` parametresini çıkarın veya yoksayın. Bu parametre, Google tarafından Google AMP Önbelleği denemelerinin tetiklenmesi amacıyla kullanılır.
 [/tip]
 
-##Özellikler
+## Özellikler
 
-#####src (gerekli)
+##### src (gerekli)
 
 `https` protokolü olması gereken bir uzak uç nokta basit URL'si.
 
-#####referrerpolicy (isteğe bağlı)
+##### referrerpolicy (isteğe bağlı)
 
 Bu özellik, `<img>` öğesindeki `referrerpolicy` özelliğine benzer ancak yalnızca `no-referrer` değeri kabul edilir. `referrerpolicy=no-referrer` belirtilirse `referrer` üstbilgisi, HTTP isteğinden kaldırılır.
 
@@ -70,16 +75,16 @@ Bu özellik, `<img>` öğesindeki `referrerpolicy` özelliğine benzer ancak yal
     referrerpolicy="no-referrer"></amp-pixel>
 ```
 
-#####allow-ssr-img (isteğe bağlı)
+##### allow-ssr-img (isteğe bağlı)
 
 AMP4ADS reklam öğelerinde kullanılan bu özellik, doğrulama sonrası dönüşümün parçası olarak, bir img öğesinin doğrudan amp-pixel öğesine yerleştirilmesiyle ping komutunun AMP çalışma zamanı getirme/yürütme işlemine paralel olarak gönderilmesine olanak tanınabileceğini belirtir.
 Bunun, URL içindeki makroların GENİŞLETİLMEYECEĞİ anlamına gelir. Bu nedenle, yalnızca src'de mevcut değillerse kullanın.
 
-#####common attributes
+##### common attributes
 
 Bu öğe, genişletilmiş [ortak özellikleri](https://www.ampproject.org/docs/reference/common_attributes) AMP bileşenlerine ekler.
 
-##Değişiklikler
+## Değişiklikler
 
 `amp-pixel`, tüm standart URL değişkeni değişikliklerine izin verir.
 Daha fazla bilgi için [Değişiklik Kılavuzu](../spec/amp-var-substitutions.md) dokümanına bakın.
@@ -91,10 +96,10 @@ Aşağıdaki örnekte, `https://foo.com/pixel?0.8390278471201` gibi bir istekte 
     layout="nodisplay"></amp-pixel>
 ```
 
-##Stil
+## Stil
 
 `amp-pixel` şekillendirilmemelidir.
 
-##Doğrulama
+## Doğrulama
 
 AMP doğrulayıcı spesifikasyonundaki [amp-pixel kurallarına](https://github.com/ampproject/amphtml/blob/master/validator/validator-main.protoascii) bakın.

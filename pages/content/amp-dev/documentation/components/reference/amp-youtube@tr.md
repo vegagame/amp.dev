@@ -7,20 +7,25 @@ teaser:
   text: Bir YouTube videosu görüntüler.
 ---
 
+
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
 <!---
-       Copyright 2015 The AMP HTML Authors. Tüm Hakları Saklıdır.
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
-       Apache Lisansı, Sürüm 2.0 ("Lisans") ile lisanslıdır; bu dosyayı Lisans koşulları dışında kullanamazsınız.
-       Lisansın bir kopyasını şu adresten edinebilirsiniz:
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
-       Geçerli yasa tarafından gerekli görülmediği veya yazılı olarak bir sözleşme yapılmadığı sürece, Lisanslı olarak dağıtılan yazılım açıkça veya zımni olarak HİÇBİR GARANTİ VEYA KOŞUL SUNULMADAN "OLDUĞU GİBİ" dağıtılır.
-       Lisans kapsamında belirli bir dilde sağlanan izinleri ve uygulanan kısıtlamaları öğrenmek için söz konusu dille ilgili Lisans'a bakın.
-  -->
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 
-#amp-youtube
+# amp-youtube
 
 Bir [YouTube](https://www.youtube.com/) videosu görüntüler.
 
@@ -41,7 +46,7 @@ Bir [YouTube](https://www.youtube.com/) videosu görüntüler.
 
 [İçindekiler]
 
-##Örnek
+## Örnek
 
 Duyarlı düzenle, örnekteki genişlik ve yükseklik, 16:9 en boy oranlı videolar için doğru düzenler sağlamalıdır:
 
@@ -67,7 +72,7 @@ Duyarlı düzenle, örnekteki genişlik ve yükseklik, 16:9 en boy oranlı video
   </amp-youtube>
   [/sourcecode]
 
-##Özellikler
+## Özellikler
 
 <table>
   <tr>
@@ -126,6 +131,6 @@ Duyarlı düzenle, örnekteki genişlik ve yükseklik, 16:9 en boy oranlı video
             </tr>
           </table>
 
-##Doğrulama
+## Doğrulama
 
 AMP doğrulayıcı spesifikasyonundaki [amp-youtube kurallarına](https://github.com/ampproject/amphtml/blob/master/extensions/amp-youtube/validator-amp-youtube.protoascii) bakın.

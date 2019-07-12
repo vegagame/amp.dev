@@ -7,19 +7,25 @@ teaser:
   text: Показ видеоролика YouTube
 ---
 
-<!--© Авторы AMPHTML, 2015. Все права защищены.
 
-       Лицензия Apache версии 2.0 (далее – "Лицензия");
-     этот файл можно использовать только в соответствии с Лицензией.
-     Чтобы получить текст Лицензии, перейдите по ссылке:
+<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+<!---
+       Copyright 2016 The AMP HTML Authors. All Rights Reserved.
+
+       Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
      http://www.apache.org/licenses/LICENSE-2.0
 
-     Если иное не требуется действующим законодательством или не оговорено в письменном виде, программное обеспечение, распространяемое по Лицензии, распространяется "КАК ЕСТЬ", БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ И УСЛОВИЙ, явных или подразумеваемых.
-     Определения используемых в Лицензии понятий, с помощью которых оговариваются разрешения и ограничения, приводятся в тексте Лицензии.
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS-IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
 -->
 
-#amp-youtube
+# amp-youtube
 
 Показывает видео, размещенное на [YouTube](https://www.youtube.com/).
 
@@ -38,7 +44,7 @@ teaser:
   </tr>
 </table>
 
-##Пример
+## Пример
 
 Если использовать адаптивный макет (layout="responsive") и значения ширины и высоты, указанные в примере ниже, вы получите макет для видео с соотношением сторон 16:9.
 
@@ -64,7 +70,7 @@ teaser:
   </amp-youtube>
   [/sourcecode]
 
-##Атрибуты
+## Атрибуты
 
 <table>
   <tr>
@@ -123,6 +129,6 @@ teaser:
           </tr>
         </table>
 
-##Проверка
+## Проверка
 
 О правилах для amp-youtube читайте в [спецификации валидатора AMP](https://github.com/ampproject/amphtml/blob/master/extensions/amp-youtube/validator-amp-youtube.protoascii).
