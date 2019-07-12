@@ -4,9 +4,8 @@ formats:
 - websites
 - email
 - ads
-티저:
-
-##  텍스트: Mustache.js 템플릿의 렌더링을 허용합니다.
+teaser:
+    text:  Mustache.js 템플릿의 렌더링을 허용합니다.
 ---
 
 <!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
