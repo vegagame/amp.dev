@@ -6,7 +6,7 @@ teaser:
   text: 通过使用远程提供的配置文件，向 AMP 网页中动态投放广告。
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 

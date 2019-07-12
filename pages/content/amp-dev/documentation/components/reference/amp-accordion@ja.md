@@ -8,7 +8,7 @@ teaser:
   text: 閲覧者がコンテンツの概要を一目で把握し、選択した任意のセクションにジャンプできるようにします。
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
        Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 

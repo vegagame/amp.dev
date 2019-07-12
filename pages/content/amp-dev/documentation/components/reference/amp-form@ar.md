@@ -8,7 +8,7 @@ teaser:
   text: Allows you to create forms to submit input fields in an AMP document.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 

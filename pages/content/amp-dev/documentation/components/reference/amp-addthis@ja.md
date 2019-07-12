@@ -6,7 +6,7 @@ teaser:
   text: AddThis の埋め込みウェブサイト ツールを表示します。
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2018 The AMP HTML Authors. All Rights Reserved.
 

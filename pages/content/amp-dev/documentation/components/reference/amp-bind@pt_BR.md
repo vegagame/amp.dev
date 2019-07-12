@@ -12,7 +12,7 @@ teaser:
 
 Adiciona interatividade personalizada com expressões e vinculação de dados.
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 

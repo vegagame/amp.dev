@@ -9,7 +9,7 @@ teaser:
   text:: HTML5 이미지 태그를 대체합니다.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 

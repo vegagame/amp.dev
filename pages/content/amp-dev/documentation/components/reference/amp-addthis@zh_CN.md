@@ -6,7 +6,7 @@ teaser:
   text: 显示嵌入的 AddThis 网站工具。
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2018 The AMP HTML Authors. All Rights Reserved.
 

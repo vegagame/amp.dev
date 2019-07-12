@@ -6,7 +6,7 @@ teaser:
   text: Mostra un incorporamento degli strumenti del sito web AddThis.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2018 The AMP HTML Authors. All Rights Reserved.
 

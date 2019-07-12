@@ -8,7 +8,7 @@ teaser:
   text: 沿着一条横轴显示多个相似的内容片段。
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 

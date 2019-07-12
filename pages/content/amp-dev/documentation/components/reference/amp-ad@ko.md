@@ -17,7 +17,7 @@ teaser:
 `amp-ad`/`amp-embed` 사양은 시간이 지남에 따라 크게 개선될 가능성이 높습니다. 현재 접근 방식은 형식을 부트스트랩하여 광고를 게재할 수 있도록 설계되었습니다.
 [/tip]
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 

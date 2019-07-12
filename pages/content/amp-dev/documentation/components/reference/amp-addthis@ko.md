@@ -6,7 +6,7 @@ teaser:
   text: AddThis 웹사이트 도구 삽입을 표시합니다.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2018 The AMP HTML Authors. All Rights Reserved.
 

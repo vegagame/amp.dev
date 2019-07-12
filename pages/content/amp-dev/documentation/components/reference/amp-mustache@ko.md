@@ -8,7 +8,7 @@ teaser:
     text:  Mustache.js 템플릿의 렌더링을 허용합니다.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
        Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 

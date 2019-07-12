@@ -8,7 +8,7 @@ teaser:
   text: Permette ai visualizzatori di dare un'occhiata alla struttura dei contenuti e passare a una sezione a loro scelta.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 

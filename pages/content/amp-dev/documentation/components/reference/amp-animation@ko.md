@@ -7,7 +7,7 @@ teaser:
   text: 애니메이션을 정의하고 표시합니다.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 

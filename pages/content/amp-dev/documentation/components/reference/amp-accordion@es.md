@@ -8,7 +8,7 @@ teaser:
   text: Permite a los usuarios echar un vistazo al esquema del contenido e ir directos a la sección que quieran cuando lo deseen.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 

@@ -7,7 +7,7 @@ formats:
       text:  사용자가 선택할 수 있는 옵션 메뉴를 표시하는 컨트롤을 나타냅니다.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
        Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 

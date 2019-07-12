@@ -17,7 +17,7 @@ teaser:
 as especificações do `amp-ad` / `amp-embed` provavelmente evoluirão significativamente com o passar do tempo. A abordagem atual foi desenvolvida para inicializar o formato, para poder exibir anúncios.
 [/tip]
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 

@@ -8,7 +8,7 @@ teaser:
   text: Bir AMP dokümanındaki analiz verilerini yakalar.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2019 The AMP HTML Authors. All Rights Reserved.
 

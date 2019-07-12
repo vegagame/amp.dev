@@ -17,7 +17,7 @@ teaser:
 `amp-ad`/`amp-embed` 的规范很可能会随着时间推移发生重大变化。当前的方法旨在规范格式，以便能够展示广告。
 [/tip]
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 

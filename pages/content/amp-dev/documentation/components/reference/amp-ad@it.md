@@ -17,7 +17,7 @@ Un contenitore per la visualizzazione di un annuncio. `amp-embed` è un alias de
 È probabile che la specifica di `amp-ad`/`amp-embed` subirà modifiche significative nel corso del tempo. L'approccio attuale è progettato per eseguire il bootstrap del formato in modo da pubblicare gli annunci.
 [/tip]
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 

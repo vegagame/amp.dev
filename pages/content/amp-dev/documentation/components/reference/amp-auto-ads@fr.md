@@ -6,7 +6,7 @@ teaser:
   text: Injecter des annonces de manière dynamique dans une page AMP en utilisant un fichier de configuration diffusé à distance.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 

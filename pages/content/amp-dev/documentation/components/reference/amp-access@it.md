@@ -13,7 +13,7 @@ L'Accesso AMP o il "supporto per l'abbonamento e il paywall AMP" offrono ai publ
 # amp-access
 
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2015 The AMP HTML Authors. All Rights Reserved.
 

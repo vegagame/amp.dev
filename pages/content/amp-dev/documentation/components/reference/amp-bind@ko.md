@@ -11,7 +11,7 @@ teaser:
 ---
 데이터 결합 및 식과 함께 맞춤형 상호작용을 추가합니다.
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 

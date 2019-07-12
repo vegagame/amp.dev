@@ -8,7 +8,7 @@ teaser:
   text: 从 AMP 文档获取分析数据。
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2019 The AMP HTML Authors. All Rights Reserved.
 

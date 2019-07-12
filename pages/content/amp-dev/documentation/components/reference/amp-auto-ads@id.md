@@ -6,7 +6,7 @@ teaser:
   text: Dynamically injects ads into an AMP page by using a remotely-served configuration file.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2017 The AMP HTML Authors. All Rights Reserved.
 

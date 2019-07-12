@@ -8,7 +8,7 @@ teaser:
   text: AMP 문서에서 애널리틱스 데이터를 캡처합니다.
 ---
 
-<!--- Reformatted by Reftar! for AMP (go/reftar) on 2019-06-13 -->
+
 <!---
 Copyright 2019 The AMP HTML Authors. All Rights Reserved.
 
