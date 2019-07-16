@@ -140,51 +140,51 @@ limitations under the License.
 يتم تحديد الخصائص التالية في هذه التهيئة:
 
 <table>
-<tr>
-<th>الخاصية</th>
-<th>القيم</th>
-<th>الوصف</th>
-</tr>
-<tr>
-<td class="col-fourty"><code>authorization</code></td>
-<td>&lt;URL&gt;</td>
-<td>عبارة عن عنوان HTTPS URL لنقطة نهاية التفويض.</td>
-</tr>
-<tr>
-<td class="col-fourty"><code>pingback</code></td>
-<td>&lt;URL&gt;</td>
-<td>عبارة عن عنوان HTTPS URL لنقطة نهاية الرد على فحص الاتصال.</td>
-</tr>
-<tr>
-<td class="col-fourty"><code>noPingback</code></td>
-<td>true/false</td>
-<td>عندما تكون القيمة true، يتم إيقاف الرد على فحص الاتصال.</td>
-</tr>
-<tr>
-<td class="col-fourty"><code>login</code></td>
-<td class="col-twenty">&lt;URL&gt; أو<br>&lt;Map[string، URL]&gt;</td>
-<td>عنوان HTTPS URL "لصفحة تسجيل الدخول" أو مجموعة من عناوين URL لأنواع مختلفة من صفحات تسجيل الدخول.</td>
-</tr>
-<tr>
-<td class="col-fourty"><code>authorizationFallbackResponse</code></td>
-<td>&lt;object&gt;</td>
-<td>عبارة عن كائن JSON يُستخدَم بدلاً من استجابة التفويض في حال تعذُّر الحصول عليها.</td>
-</tr>
-<tr>
-<td class="col-fourty"><code>authorizationTimeout</code></td>
-<td>&lt;number&gt;</td>
-<td>عبارة عن المهلة (بالملي ثانية) التي يُعتبر بعدها طلب التفويض متعذر الحصول عليه. القيمة التلقائية هي 3000. يُسمح بالقيم الأكبر من 3000 في بيئة تطوير البرامج فقط. </td>
-</tr>
-<tr>
-<td class="col-fourty"><code>type</code></td>
-<td>"client" أو "server"</td>
-<td>القيمة التلقائية هي “client”. لا يزال الخيار "server" محل نقاش بشأن تصميمه، وسيتم تعديل هذه المستندات عندما يصبح جاهزًا.</td>
-</tr>
-<tr>
-<td class="col-fourty"><code>namespace</code></td>
-<td>string</td>
-<td>القيمة التلقائية أن يكون فارغًا. ويكون Namespace مطلوبًا في حال تحديد عدة موفري خدمات للوصول.</td>
-</tr>
+  <tr>
+    <th>الخاصية</th>
+    <th>القيم</th>
+    <th>الوصف</th>
+  </tr>
+  <tr>
+    <td class="col-fourty"><code>authorization</code></td>
+    <td>&lt;URL&gt;</td>
+    <td>عبارة عن عنوان HTTPS URL لنقطة نهاية التفويض.</td>
+  </tr>
+  <tr>
+    <td class="col-fourty"><code>pingback</code></td>
+    <td>&lt;URL&gt;</td>
+    <td>عبارة عن عنوان HTTPS URL لنقطة نهاية الرد على فحص الاتصال.</td>
+  </tr>
+  <tr>
+    <td class="col-fourty"><code>noPingback</code></td>
+    <td>true/false</td>
+    <td>عندما تكون القيمة true، يتم إيقاف الرد على فحص الاتصال.</td>
+  </tr>
+  <tr>
+    <td class="col-fourty"><code>login</code></td>
+    <td class="col-twenty">&lt;URL&gt; أو<br>&lt;Map[string، URL]&gt;</td>
+    <td>عنوان HTTPS URL "لصفحة تسجيل الدخول" أو مجموعة من عناوين URL لأنواع مختلفة من صفحات تسجيل الدخول.</td>
+  </tr>
+  <tr>
+    <td class="col-fourty"><code>authorizationFallbackResponse</code></td>
+    <td>&lt;object&gt;</td>
+    <td>عبارة عن كائن JSON يُستخدَم بدلاً من استجابة التفويض في حال تعذُّر الحصول عليها.</td>
+  </tr>
+  <tr>
+    <td class="col-fourty"><code>authorizationTimeout</code></td>
+    <td>&lt;number&gt;</td>
+    <td>عبارة عن المهلة (بالملي ثانية) التي يُعتبر بعدها طلب التفويض متعذر الحصول عليه. القيمة التلقائية هي 3000. يُسمح بالقيم الأكبر من 3000 في بيئة تطوير البرامج فقط. </td>
+  </tr>
+  <tr>
+    <td class="col-fourty"><code>type</code></td>
+    <td>"client" أو "server"</td>
+    <td>القيمة التلقائية هي “client”. لا يزال الخيار "server" محل نقاش بشأن تصميمه، وسيتم تعديل هذه المستندات عندما يصبح جاهزًا.</td>
+  </tr>
+  <tr>
+    <td class="col-fourty"><code>namespace</code></td>
+    <td>string</td>
+    <td>القيمة التلقائية أن يكون فارغًا. ويكون Namespace مطلوبًا في حال تحديد عدة موفري خدمات للوصول.</td>
+  </tr>
 </table>
 
 تحدد القيم *&lt;URL&gt;* عناوين HTTPS URL مع متغيرات الاستبدال. يتم تناول هذه المتغيرات بمزيد من التفصيل في القسم [متغيرات عناوين URL للوصول](#access-url-variables) أدناه.
@@ -231,46 +231,46 @@ limitations under the License.
 عند تهيئة عناوين URL لنقاط النهاية المختلفة، يمكن للناشر استخدام متغيرات الاستبدال. يمكن العثور على قائمة كاملة بتعريفات هذه المتغيرات في [مواصفات متغيرات AMP](https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md). بالإضافة إلى هذا، تزيد هذه المواصفات متغيرات خاصة بالوصول، مثل `READER_ID` و`AUTHDATA`. يوضّح الجدول أدناه بعضًا من أكثر المتغيرات صلة:
 
 <table>
-<tr>
-<th>المتغير</th>
-<th>الوصف</th>
-</tr>
-<tr>
-<td class="col-thirty"><code>READER_ID</code></td>
-<td>عبارة عن معرف قارئ AMP.</td>
-</tr>
-<tr>
-<td class="col-thirty"><code>AUTHDATA(field)</code></td>
-<td>عبارة عن قيمة الحقل في استجابة التفويض.</td>
-</tr>
-<tr>
-<td class="col-thirty"><code>RETURN_URL</code></td>
-<td>عبارة عن عنصر نائب لعنوان URL للعرض يحدده "وقت تشغيل AMP" لمربع حوار تسجيل الدخول لعرضه.</td>
-</tr>
-<tr>
-<td class="col-thirty"><code>SOURCE_URL</code></td>
-<td>عبارة عن عنوان URL المصدر لمستند AMP هذا. إذا تم عرض المستند من CDN، سيكون AMPDOC_URL عبارة عن عنوان CDN URL في حين سيكون SOURCE_URL هو عنوان URL للمصدر الأصلي.</td>
-</tr>
-<tr>
-<td class="col-thirty"><code>AMPDOC_URL</code></td>
-<td>عبارة عن عنوان URL لمستند AMP هذا.</td>
-</tr>
-<tr>
-<td class="col-thirty"><code>CANONICAL_URL</code></td>
-<td>عبارة عن عنوان URL الأساسي لمستند AMP هذا.</td>
-</tr>
-<tr>
-<td class="col-thirty"><code>DOCUMENT_REFERRER</code></td>
-<td>عبارة عن عنوان URL للمُحيل.</td>
-</tr>
-<tr>
-<td class="col-thirty"><code>VIEWER</code></td>
-<td>عبارة عن عنوان URL لعارِض صفحات AMP.</td>
-</tr>
-<tr>
-<td class="col-thirty"><code>RANDOM</code></td>
-<td>عبارة عن عدد عشوائي. ويفيد في تجنب التخزين المؤقت للمتصفح.</td>
-</tr>
+  <tr>
+    <th>المتغير</th>
+    <th>الوصف</th>
+  </tr>
+  <tr>
+    <td class="col-thirty"><code>READER_ID</code></td>
+    <td>عبارة عن معرف قارئ AMP.</td>
+  </tr>
+  <tr>
+    <td class="col-thirty"><code>AUTHDATA(field)</code></td>
+    <td>عبارة عن قيمة الحقل في استجابة التفويض.</td>
+  </tr>
+  <tr>
+    <td class="col-thirty"><code>RETURN_URL</code></td>
+    <td>عبارة عن عنصر نائب لعنوان URL للعرض يحدده "وقت تشغيل AMP" لمربع حوار تسجيل الدخول لعرضه.</td>
+  </tr>
+  <tr>
+    <td class="col-thirty"><code>SOURCE_URL</code></td>
+    <td>عبارة عن عنوان URL المصدر لمستند AMP هذا. إذا تم عرض المستند من CDN، سيكون AMPDOC_URL عبارة عن عنوان CDN URL في حين سيكون SOURCE_URL هو عنوان URL للمصدر الأصلي.</td>
+  </tr>
+  <tr>
+    <td class="col-thirty"><code>AMPDOC_URL</code></td>
+    <td>عبارة عن عنوان URL لمستند AMP هذا.</td>
+  </tr>
+  <tr>
+    <td class="col-thirty"><code>CANONICAL_URL</code></td>
+    <td>عبارة عن عنوان URL الأساسي لمستند AMP هذا.</td>
+  </tr>
+  <tr>
+    <td class="col-thirty"><code>DOCUMENT_REFERRER</code></td>
+    <td>عبارة عن عنوان URL للمُحيل.</td>
+  </tr>
+  <tr>
+    <td class="col-thirty"><code>VIEWER</code></td>
+    <td>عبارة عن عنوان URL لعارِض صفحات AMP.</td>
+  </tr>
+  <tr>
+    <td class="col-thirty"><code>RANDOM</code></td>
+    <td>عبارة عن عدد عشوائي. ويفيد في تجنب التخزين المؤقت للمتصفح.</td>
+  </tr>
 </table>
 
 في ما يلي مثال لعنوان URL مضاف إليه "معرّف القارئ" و"عنوان URL الأساسي" و"معلومات عن المصدر" وcachebuster عشوائي:

@@ -2,9 +2,8 @@
 $category@: layout
 formats:
 - websites
-티저:
-
-##  텍스트: iframe을 표시합니다.
+teaser:
+  text: iframe을 표시합니다.
 ---
 
 <!---
