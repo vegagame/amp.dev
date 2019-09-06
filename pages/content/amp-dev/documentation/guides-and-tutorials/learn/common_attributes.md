@@ -122,6 +122,38 @@ Example:
 
 For more information, see  [Actions and Events in AMP](amp-actions-and-events.md).
 
+## overflow
+Use the AMP `overflow` attribute to resize AMP components that fetch content, such as [`amp-list`](../../../documentation/components/amp-list) or [`amp-ad`](../../../documentation/components/amp-ad), if the AMP framework is unable to size the component as requested. An element inside of the AMP component with the `overflow` attribute will appear if one of the following conditions are met:
+
+- The bottom of the [`overflow` element or is it AMP component] is below the viewport
+
+- If the bottom of the [`overflow` element or is it AMP component]  is within 15% of the height of the entire page and within 1000px of the end of the page.
+
+Example:
+
+[example preview="inline" playground="true" imports="amp-list" template="amp-mustache"]
+```html
+<amp-list width="auto"
+  height="140"
+  layout="fixed-height"
+  src="{{server_for_email}}/static/inline-examples/data/amp-list-data.json">
+  <template type="amp-mustache">{% raw %}
+    <div class="image-entry">
+      <amp-img src="{{imageUrl}}"
+        width="100"
+        height="75"></amp-img>
+      <span class="image-title">{{title}}</span>
+    </div>
+  {% endraw %}</template>
+  <div overflow
+    class="list-overflow"
+    style="background-color:red;">
+    See more
+  </div>
+</amp-list>
+```
+[/example]
+
 ## placeholder
 
 The `placeholder` attribute indicates that the element marked with this attribute acts as a placeholder for the parent AMP element. The attribute can be placed on any HTML element that is a direct child of an AMP element that supports placeholders. By default, the placeholder is immediately shown for the AMP element, even if the AMP element's resources have not been downloaded or initialized. Once ready, the AMP element typically hides its placeholder and shows the content. The exact behavior with respect to the placeholder is up to the element's implementation.
