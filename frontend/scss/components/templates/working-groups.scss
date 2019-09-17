@@ -24,6 +24,23 @@
 .#{template('working-groups')} {
   background: color('whisper');
 
+  .#{molecule('working-groups-button')} {
+    height: 34px;
+    border-radius: 4px;
+    padding: 7px;
+    color: color('white');
+
+    &-github {
+      background-color: black;
+    }
+    &-slack {
+      background-color: purple;
+    }
+    &-google {
+      background-color: green;
+    }
+  }
+
   .#{utility('stage')} {
     .#{organism('stage')} {
       margin-bottom: 50px;
@@ -102,19 +119,79 @@
         }
       }
       &-container {
+        background: color('white');
         grid-column: 7/22;
         box-shadow: 0 25px 40px 0 rgba(0,0,0,.05);
 
         display: grid;
         grid-gap: 30px;
-        grid-template-columns: repeat(20,1fr);
+        grid-template-columns: repeat(14,1fr);
         padding: 0;
       }
     }
     &-related {
-      grid-column: 10/22;
+      grid-column: 9/21;
     }
   }
+  .#{organism('group-content')} {
+    grid-column: 2/14;
+    padding: 2.5em 0;
+
+    &-description {
+      &-connect {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    &-issues {
+      &-container {
+        border-radius: 4px;
+        background: color('gallery');
+      }
+    }
+    &-members {
+      &-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      &-member {
+        width: 49%;
+        background: color('gallery');
+        border-radius: 4px;
+        margin-bottom: 2%;
+        padding: 10px;
+
+        &.active {
+          background: color('mirage');
+          color: white;
+        }
+      }
+    }
+    &-channels {
+      &-item {
+        display: flex;
+        background: color('gallery');
+        margin-bottom: 1.4em;
+        padding: 15px;
+        border-radius: 4px;
+
+        &-icon {
+          height: 85px;
+          width: 85px;
+          margin-right: 15px;
+          border-radius: 50%;
+          background: green;
+        }
+        &-text {
+              width: calc(100% - 100px);
+        }
+      }
+    }
+  }
+
+
 
   .#{utility('content')} {
     @include content;
