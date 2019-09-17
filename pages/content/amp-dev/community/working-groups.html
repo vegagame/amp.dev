@@ -1,0 +1,95 @@
+---
+$title: Working Groups
+$order: 4
+$view: /views/custom.j2
+
+topics:
+- Access and Subs
+- Ads
+- AMP4Email
+- Analytics
+- Approvers
+- Code of Conduct
+- Infrastructure
+- Outreach
+- Performance
+- Runtime
+- Stories
+- UI & Accessibility
+- Validation & caching
+- Viewers
+
+---
+{% do doc.styles.addCssFile('css/components/templates/working-groups.css') %}
+
+<!-- {% do doc.amp_dependencies.add('amp-bind', '0.1') %} -->
+
+<main class="ap--main ap-t-working-groups">
+
+  <section class="ap--stage ap--container-fluid">
+    {% do doc.styles.addCssFile('css/components/organisms/stage.css') %}
+
+    <div class="ap-o-stage">
+      <div class="ap--container-fluid">
+        <div class="ap-o-stage-content">
+          <h1 class="ap-o-stage-content-headline">Working Groups</h1>
+          <h2 class="ap-o-stage-content-subline">Encouraging More Voices in AMP</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ap-o-working-groups">
+    <section class="ap-o-working-groups-description">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <h4>AMP's Working Groups are:</h4>
+    </section>
+
+    <section class="ap-o-working-groups-content">
+      <div class="ap-o-working-groups-content-filter">
+        <ul>
+          {% for topic in doc.topics %}
+          <li class="ap-o-working-groups-content-filter-bubble">
+            <a href="{{ g.doc('/content/amp-dev/community/working-groups.html', locale=doc.locale).url.path }}">{{ topic }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="ap-o-working-groups-content-container">
+        <div class="ap-o-group-content">
+          <section class="ap-o-group-content-section ap-o-group-content-description">
+            <p>Working Group</p>
+            <h2>Code of Conduct</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>The facilitator of bla bla is: <a href="#">@nainar</a></p>
+          </section>
+          <section class="ap-o-group-content-section ap-o-group-content-issue">
+
+          </section>
+          <section class="ap-o-group-content-section ap-o-group-content-members">
+
+          </section>
+          <section class="ap-o-group-content-section ap-o-group-content-channels">
+
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="ap-o-working-groups-related">
+      <h2>Other ways to get involved with AMP</h2>
+      <div class="ap-o-working-groups-related-item">
+        <h3>Contribute to AMP</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="ap-o-working-groups-related-item">
+        <h3>Governance Body</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </section>
+
+
+
+  </div>
+</main>

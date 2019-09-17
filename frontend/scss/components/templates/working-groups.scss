@@ -1,0 +1,124 @@
+/*
+
+###########################
+### TEMPLATE: roadmap ###
+###########################
+
+### INFO:
+
+*/
+@import '_extends.scss';
+@import '_functions.scss';
+@import '_mixins.scss';
+@import '_variables.scss';
+
+@import 'components/atoms/_text.scss';
+@import 'components/atoms/_color.scss';
+@import 'components/atoms/_headline.scss';
+
+@import 'components/templates/_default.scss';
+
+
+
+
+.#{template('working-groups')} {
+  background: color('whisper');
+
+  .#{utility('stage')} {
+    .#{organism('stage')} {
+      margin-bottom: 50px;
+      // height: 450px;
+
+      &-content {
+        margin: 15em 0 2em;
+
+        @media (min-width: 768px) {
+          margin: 7vw 0 11vw;
+        }
+      }
+    }
+
+    & + .#{utility('content')} {
+      @media (min-width: 768px) {
+        margin-top: -15%;
+      }
+
+      h1 {
+        @include hl-xxlrg;
+      }
+    }
+  }
+
+  .#{utility('container-fluid')} {
+    @include container-fluid;
+  }
+
+  .#{organism('working-groups')} {
+    display: grid;
+    grid-template-columns: repeat(24,1fr);
+    grid-gap: 30px;
+    padding: 0 25px;
+
+    @media (min-width: 768px) {
+      padding: 0 2.5em;
+    }
+
+    &-description {
+      grid-column: 8/20;
+    }
+    &-content {
+      grid-column: 2/22;
+      display: grid;
+      grid-gap: 30px;
+      grid-template-columns: repeat(20,1fr);
+      padding: 0;
+
+      &-filter {
+        grid-column: 1/6;
+
+        & ul {
+          list-style: none;
+        }
+        &-bubble {
+          display: flex;
+          align-items: center;
+          margin: 10px 0;
+          border-radius: 19px;
+          height: 38px;
+          width: 100%;
+          padding: 0 15px;
+
+          &:first-child {
+            background-color: color('blue-ribbon');
+            a {
+              font-weight: bold;
+              color: color('white');
+            }
+          }
+
+          &.active {
+            // Move first child here
+          }
+        }
+      }
+      &-container {
+        grid-column: 7/22;
+        box-shadow: 0 25px 40px 0 rgba(0,0,0,.05);
+
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: repeat(20,1fr);
+        padding: 0;
+      }
+    }
+    &-related {
+      grid-column: 10/22;
+    }
+  }
+
+  .#{utility('content')} {
+    @include content;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
