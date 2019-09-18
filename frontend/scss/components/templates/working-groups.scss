@@ -29,6 +29,13 @@
     border-radius: 4px;
     padding: 7px;
     color: color('white');
+    margin: 0 15px;
+
+    .#{atom('ico')} {
+      margin-bottom: 0;
+      padding: 0;
+      fill: white;
+    }
 
     &-github {
       background-color: black;
@@ -36,7 +43,7 @@
     &-slack {
       background-color: purple;
     }
-    &-google {
+    &-hangout {
       background-color: green;
     }
   }
@@ -71,44 +78,64 @@
   }
 
   .#{organism('working-groups')} {
-    display: grid;
-    grid-template-columns: repeat(24,1fr);
-    grid-gap: 30px;
-    padding: 0 25px;
+    padding: 0 15px;
 
     @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(24,1fr);
+      grid-gap: 30px;
       padding: 0 2.5em;
     }
 
-    &-description {
-      grid-column: 8/20;
+    &-intro {
+      @media (min-width: 768px) {
+        grid-column: 8/20;
+      }
     }
     &-content {
-      grid-column: 2/22;
-      display: grid;
-      grid-gap: 30px;
-      grid-template-columns: repeat(20,1fr);
+      grid-column: 3/25;
+      display: flex;
+      flex-direction: column;
       padding: 0;
 
+      @media (min-width: 768px) {
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: repeat(22,1fr);
+      }
+
       &-filter {
-        grid-column: 1/6;
+        @media (min-width: 768px) {
+          grid-column: 1/5;
+        }
 
         & ul {
+          display: flex;
+          padding: 0;
           list-style: none;
+          overflow-x: scroll;
+          -webkit-overflow-scrolling: touch;
+
+          @media (min-width: 768px) {
+            display: block;
+            overflow-x: inherit;
+          }
+
         }
         &-bubble {
           display: flex;
           align-items: center;
-          margin: 10px 0;
-          border-radius: 19px;
           height: 38px;
-          width: 100%;
+          margin: 10px 0;
           padding: 0 15px;
+          border-radius: 19px;
 
           &:first-child {
             background-color: color('blue-ribbon');
+
             a {
               font-weight: bold;
+              white-space: nowrap;
               color: color('white');
             }
           }
@@ -119,28 +146,40 @@
         }
       }
       &-container {
+        padding: 0 15px;
         background: color('white');
-        grid-column: 7/22;
         box-shadow: 0 25px 40px 0 rgba(0,0,0,.05);
 
-        display: grid;
-        grid-gap: 30px;
-        grid-template-columns: repeat(14,1fr);
-        padding: 0;
+        @media (min-width: 768px) {
+          grid-column: 6/22;
+          display: grid;
+          grid-template-columns: repeat(16,1fr);
+          grid-gap: 30px;
+          padding: 0;
+        }
       }
     }
     &-related {
-      grid-column: 9/21;
+      padding: 0 15px;
+
+      @media (min-width: 768px) {
+        grid-column: 9/22;
+        padding: 0;
+      }
     }
   }
   .#{organism('group-content')} {
-    grid-column: 2/14;
+    grid-column: 2/16;
     padding: 2.5em 0;
 
     &-description {
       &-connect {
         display: flex;
-        justify-content: center;
+        align-items: center;
+
+        h4 {
+          margin: 0;
+        }
       }
     }
     &-issues {
@@ -171,11 +210,14 @@
     }
     &-channels {
       &-item {
-        display: flex;
         background: color('gallery');
         margin-bottom: 1.4em;
         padding: 15px;
         border-radius: 4px;
+
+        @media (min-width: 768px) {
+          display: flex;
+        }
 
         &-icon {
           height: 85px;
@@ -184,14 +226,13 @@
           border-radius: 50%;
           background: green;
         }
+
         &-text {
-              width: calc(100% - 100px);
+          width: calc(100% - 100px);
         }
       }
     }
   }
-
-
 
   .#{utility('content')} {
     @include content;
