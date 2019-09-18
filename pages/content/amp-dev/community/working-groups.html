@@ -57,72 +57,97 @@ topics:
         </ul>
       </div>
       <div class="ap-o-working-groups-content-container">
-        <div class="ap-o-group-content">
-          <section class="ap-o-group-content-section ap-o-group-content-description">
-            <p>Working Group</p>
+        <div class="ap-o-group">
+          <section class="ap-o-group-section ap-o-group-description">
+            <h5>Working Group</h5>
             <h2>Code of Conduct</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <p>The facilitator of bla bla is: <a href="#">@nainar</a></p>
-            <div class="ap-o-group-content-description-connect">
+            <div class="ap-o-group-description-connect">
               <h4>Get in touch:</h4>
-              <a class="ap-m-lnk ap-m-working-groups-button ap-m-working-groups-button-github" href="#">
-                <div class="ap-a-ico ap-m-lnk-icon">
-                  {% do doc.icons.useIcon('icons/internal.svg') %}
-                  <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#internal"></use></svg>
-                </div>
-                <span>GitHub</span>
-              </a>
+              <div class="ap-m-working-groups-button ap-m-working-groups-button-github">
+                <a class="ap-m-lnk" href="#">
+                  <div class="ap-a-ico ap-m-lnk-icon">
+                    {% do doc.icons.useIcon('icons/internal.svg') %}
+                    <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#internal"></use></svg>
+                  </div>
+                  <span>GitHub</span>
+                </a>
+              </div>
             </div>
           </section>
-          <section class="ap-o-group-content-section ap-o-group-content-issues">
+          <section class="ap-o-group-section ap-o-group-issues">
             <h3>Current Issue</h3>
-            <div class="ap-o-group-content-issue-container">
-              <h4>Lorem ipsum dolor sit amet, consectetur</h4>
-              <p># opened on Jan 16 by <a href="#">nainar</a></p>
+            <div class="ap-o-group-issues-issue">
+              <div class="ap-o-group-issues-issue-icon"></div>
+              <div class="ap-o-group-issues-issue-text">
+                <h4>Lorem ipsum dolor sit amet, consectetur</h4>
+                <p># opened on Jan 16 by <a href="#">nainar</a></p>
+              </div>
             </div>
           </section>
-          <section class="ap-o-group-content-section ap-o-group-content-members">
+          <section class="ap-o-group-section ap-o-group-members">
             <h3>Members</h3>
-            <div class="ap-o-group-content-members-wrapper">
-              <div class="ap-o-group-content-members-member active">
+            <div class="ap-o-group-members-wrapper">
+              <div class="ap-o-group-members-member active">
+                <h4>Naina Raisinghani</h4>
+                <a href="#">@nainar</a>
+                <p>Facilitator</p>
+              </div>
+              <div class="ap-o-group-members-member">
                 <h4>Naina Raisinghani</h4>
                 <a href="#">@nainar</a>
               </div>
-              <div class="ap-o-group-content-members-member">
+              <div class="ap-o-group-members-member">
                 <h4>Naina Raisinghani</h4>
                 <a href="#">@nainar</a>
               </div>
-              <div class="ap-o-group-content-members-member">
-                <h4>Naina Raisinghani</h4>
-                <a href="#">@nainar</a>
-              </div>
-              <div class="ap-o-group-content-members-member">
+              <div class="ap-o-group-members-member">
                 <h4>Naina Raisinghani</h4>
                 <a href="#">@nainar</a>
               </div>
             </div>
             <p><a href="#">The GitHub Team</a> lorem ipsum dolor sit amet, consectetur</p>
           </section>
-          <section class="ap-o-group-content-section ap-o-group-content-channels">
+          <section class="ap-o-group-section ap-o-group-channels">
             <h2>Communication Channels</h2>
-            <div class="ap-o-group-content-channels-item">
-              <div class="ap-o-group-content-channels-item-icon">
+            <div class="ap-o-group-channels-item ap-o-group-channels-item-slack">
+              <div class="ap-o-group-channels-item-icon ap-o-group-channels-item-slack-icon">
               </div>
-              <div class="ap-o-group-content-channels-item-text">
+              <div class="ap-o-group-channels-item-text">
                 <h4>Public Slack Channel</h4>
+                <p><code>#wg-codeofconduct</code></p>
+                <div class="ap-m-working-groups-button ap-m-working-groups-button-slack">
+                  <a class="ap-m-lnk" href="#">
+                    <div class="ap-a-ico ap-m-lnk-icon">
+                      {% do doc.icons.useIcon('icons/internal.svg') %}
+                      <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#internal"></use></svg>
+                    </div>
+                    <span>Add to Slack</span>
+                  </a>
+                </div>
               </div>
             </div>
-            <div class="ap-o-group-content-channels-item">
-              <div class="ap-o-group-content-channels-item-icon">
+            <div class="ap-o-group-channels-item ap-o-group-channels-item-hangout">
+              <div class="ap-o-group-channels-item-icon ap-o-group-channels-item-hangout-icon">
               </div>
-              <div class="ap-o-group-content-channels-item-text">
+              <div class="ap-o-group-channels-item-text">
                 <h4>Google Hangout</h4>
+                <div class="ap-m-working-groups-button ap-m-working-groups-button-hangout">
+                  <a class="ap-m-lnk" href="#">
+                    <div class="ap-a-ico ap-m-lnk-icon">
+                      {% do doc.icons.useIcon('icons/internal.svg') %}
+                      <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#internal"></use></svg>
+                    </div>
+                    <span>Join Hangout</span>
+                  </a>
+                </div>
               </div>
             </div>
-            <div class="ap-o-group-content-channels-item">
-              <div class="ap-o-group-content-channels-item-icon">
+            <div class="ap-o-group-channels-item ap-o-group-channels-item-email">
+              <div class="ap-o-group-channels-item-icon ap-o-group-channels-item-email-icon">
               </div>
-              <div class="ap-o-group-content-channels-item-text">
+              <div class="ap-o-group-channels-item-text">
                 <h4>Email</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 <ul>

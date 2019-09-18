@@ -25,11 +25,15 @@
   background: color('whisper');
 
   .#{molecule('working-groups-button')} {
+    display: inline-block;
     height: 34px;
-    border-radius: 4px;
     padding: 7px;
-    color: color('white');
-    margin: 0 15px;
+    border-radius: 4px;
+
+    .#{molecule('lnk')} {
+      display: flex;
+      color: color('white');
+    }
 
     .#{atom('ico')} {
       margin-bottom: 0;
@@ -141,7 +145,7 @@
           }
 
           &.active {
-            // Move first child here
+            // Move first child bla bla here..
           }
         }
       }
@@ -168,24 +172,48 @@
       }
     }
   }
-  .#{organism('group-content')} {
+  .#{organism('group')} {
     grid-column: 2/16;
     padding: 2.5em 0;
 
+    &-section {
+      margin: 3.5em 0;
+    }
+
     &-description {
+      h2 {
+        margin: 0;
+      }
       &-connect {
         display: flex;
         align-items: center;
+        margin-top: 2em;
 
         h4 {
-          margin: 0;
+          margin: 0 15px 0 0;
         }
       }
     }
     &-issues {
-      &-container {
+      &-issue {
+        display: flex;
+        padding: 20px;
         border-radius: 4px;
         background: color('gallery');
+
+        &-icon {
+          height: 30px;
+          width: 30px;
+          margin-right: 12px;
+          border-radius: 50%;
+          background: color('malachite');
+        }
+
+        &-text {
+          h4, p {
+            margin: 3px;
+          }
+        }
       }
     }
     &-members {
@@ -200,17 +228,31 @@
         background: color('gallery');
         border-radius: 4px;
         margin-bottom: 2%;
-        padding: 10px;
+        padding: 20px;
+
+        h4 {
+          margin: 2px 0;
+        }
 
         &.active {
-          background: color('mirage');
-          color: white;
+          background: color('ebony-clay');
+
+          h4, a {
+            color: color('white');
+          }
+          a {
+            text-decoration: underline;
+          }
+          p {
+            font-weight: bold;
+            margin: 0;
+          }
         }
       }
     }
     &-channels {
       &-item {
-        background: color('gallery');
+        background: color('concrete');
         margin-bottom: 1.4em;
         padding: 15px;
         border-radius: 4px;
@@ -224,11 +266,21 @@
           width: 85px;
           margin-right: 15px;
           border-radius: 50%;
-          background: green;
         }
 
         &-text {
           width: calc(100% - 100px);
+        }
+
+        // Variations
+        &-slack {
+          &-icon { background-color: purple; }
+        }
+        &-hangout {
+          &-icon { background-color: green; }
+        }
+        &-email {
+          &-icon { background-color: blue; }
         }
       }
     }
