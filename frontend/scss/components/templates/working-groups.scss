@@ -19,8 +19,6 @@
 @import 'components/templates/_default.scss';
 
 
-
-
 .#{template('working-groups')} {
   background: color('whisper');
 
@@ -34,6 +32,8 @@
     .#{molecule('lnk')} {
       display: flex;
       color: color('white');
+      height: 100%;
+      padding: 0;
     }
 
     .#{atom('ico')} {
@@ -46,10 +46,10 @@
       background-color: black;
     }
     &-slack {
-      background-color: purple;
+      background-color: color('slack');;
     }
     &-hangout {
-      background-color: green;
+      background-color: color('fruit-salad');
     }
   }
 
@@ -93,55 +93,79 @@
     }
 
     &-intro {
+      margin-bottom: 0em;
+
       @media (min-width: 768px) {
+        grid-column: 3/22;
+      }
+      @media (min-width: 1024px) {
         grid-column: 8/20;
+        margin-bottom: 7em;
       }
     }
     &-content {
-      grid-column: 3/25;
+      grid-column: 1/24;
       display: flex;
       flex-direction: column;
       padding: 0;
 
-      @media (min-width: 768px) {
+      @media (min-width: 1024px) {
+        grid-column: 1/24;
         display: grid;
         grid-gap: 30px;
-        grid-template-columns: repeat(22,1fr);
+        grid-template-columns: repeat(23,1fr);
+        margin-bottom: 4em;
       }
 
       &-filter {
-        @media (min-width: 768px) {
-          grid-column: 1/5;
+        @media (min-width: 1024px) {
+          grid-column: 1/7;
+        }
+        @media (min-width: 1280px) {
+          grid-column: 3/8;
         }
 
         & ul {
           display: flex;
+          flex-direction: row;
           padding: 0;
           list-style: none;
           overflow-x: scroll;
           -webkit-overflow-scrolling: touch;
 
-          @media (min-width: 768px) {
-            display: block;
+          @media (min-width: 1024px) {
+            position: sticky;
+            top: 75px;
+            flex-direction: column;
+            max-height: calc(100vh - 75px);
             overflow-x: inherit;
+            overflow-y: scroll;
+            padding: 0 20px;
           }
-
         }
         &-bubble {
           display: flex;
           align-items: center;
-          height: 38px;
-          margin: 10px 0;
+          width: fit-content;
+          margin: 13px 0;
           padding: 0 15px;
           border-radius: 19px;
 
-          &:first-child {
+          a {
+            @include txt;
+            white-space: nowrap;
+          }
+
+          &:first-child, &.active {
+            box-shadow: 0 5px 25px 0 rgba(0,0,0,.25);
             background-color: color('blue-ribbon');
 
             a {
               font-weight: bold;
-              white-space: nowrap;
+              height: 38px;
+              line-height: 38px;
               color: color('white');
+
             }
           }
 
@@ -155,30 +179,66 @@
         background: color('white');
         box-shadow: 0 25px 40px 0 rgba(0,0,0,.05);
 
-        @media (min-width: 768px) {
-          grid-column: 6/22;
+        @media (min-width: 1024px) {
+          grid-column: 7/24;
           display: grid;
-          grid-template-columns: repeat(16,1fr);
+          grid-template-columns: repeat(15,1fr);
           grid-gap: 30px;
           padding: 0;
+        }
+        @media (min-width: 1280px) {
+          grid-column: 8/23;
         }
       }
     }
     &-related {
+      margin-bottom: 8em;
       padding: 0 15px;
 
       @media (min-width: 768px) {
+        grid-column: 3/22;
+        padding: 0;
+      }
+      @media (min-width: 1024px) {
         grid-column: 9/22;
         padding: 0;
       }
     }
   }
   .#{organism('group')} {
-    grid-column: 2/16;
+    grid-column: 2/15;
     padding: 2.5em 0;
 
+    &-icon {
+      height: 5em;
+      width: 5em;
+      margin: auto;
+      padding: 1.5em;
+      border-radius: 50%;
+      background-color: color('blue-ribbon');
+
+      @media (min-width: 768px) {
+        height: 7em;
+        width: 7em;
+        padding: 2em;
+      }
+
+      @media (min-width: 1024px) {
+        height: 10em;
+        width: 10em;
+        margin: -7.5em auto 0 auto;
+        padding: 2.5em;
+      }
+
+      .#{atom('ico')} {
+        height: 100%;
+        width: 100%;
+        fill: color('white');
+      }
+    }
     &-section {
       margin: 3.5em 0;
+      margin: 1.5em 0 3.5em 0;
     }
 
     &-description {
@@ -192,6 +252,11 @@
 
         h4 {
           margin: 0 15px 0 0;
+        }
+
+        .#{molecule('working-groups-button')}
+        .#{atom('ico')} {
+          width: 105px;
         }
       }
     }
@@ -208,9 +273,16 @@
           margin-right: 12px;
           border-radius: 50%;
           background: color('malachite');
+
+          .#{atom('ico')} {
+            height: 100%;
+            width: 100%;
+          }
         }
 
         &-text {
+          width: calc(100% - 30px);
+
           h4, p {
             margin: 3px;
           }
@@ -225,11 +297,26 @@
       }
 
       &-member {
-        width: 49%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
         background: color('gallery');
         border-radius: 4px;
-        margin-bottom: 2%;
+        margin-bottom: 1em;
         padding: 20px;
+
+        @media (min-width: 768px) {
+          width: 49%;
+          margin-bottom: 2%;
+        }
+
+        &-img {
+          height: 65px;
+          width: 65px;
+          margin-right: 15px;
+          border-radius: 50%
+        }
 
         h4 {
           margin: 2px 0;
@@ -246,7 +333,7 @@
           }
           p {
             font-weight: bold;
-            margin: 0;
+            margin: 2px 0;
           }
         }
       }
@@ -263,25 +350,36 @@
         }
 
         &-icon {
-          height: 85px;
-          width: 85px;
+          height: 5em;
+          width: 5em;
           margin-right: 15px;
+          padding: 1.2em;
           border-radius: 50%;
+
+          .#{atom('ico')} {
+            height: 100%;
+            width: 100%;
+            margin: auto;
+            padding: 0;
+            fill: color('white');
+          }
         }
 
-        &-text {
-          width: calc(100% - 100px);
+        @media (min-width: 768px) {
+          &-text {
+            width: calc(100% - 100px);
+          }
         }
 
         // Variations
         &-slack {
-          &-icon { background-color: purple; }
+          &-icon { background-color: color('slack'); }
         }
         &-hangout {
-          &-icon { background-color: green; }
+          &-icon { background-color: color('fruit-salad'); }
         }
         &-email {
-          &-icon { background-color: blue; }
+          &-icon { background-color: color('blue-ribbon'); }
         }
       }
     }

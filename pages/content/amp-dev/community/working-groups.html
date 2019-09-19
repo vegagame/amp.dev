@@ -45,7 +45,6 @@ topics:
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       <h4>AMP's Working Groups are:</h4>
     </section>
-
     <section class="ap-o-working-groups-content">
       <div class="ap-o-working-groups-content-filter">
         <ul>
@@ -58,6 +57,12 @@ topics:
       </div>
       <div class="ap-o-working-groups-content-container">
         <div class="ap-o-group">
+          <div class="ap-o-group-icon">
+            <div class="ap-a-ico">
+              {% do doc.icons.useIcon('icons/wrench.svg') %}
+              <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wrench"></use></svg>
+            </div>
+          </div>
           <section class="ap-o-group-section ap-o-group-description">
             <h5>Working Group</h5>
             <h2>Code of Conduct</h2>
@@ -67,20 +72,18 @@ topics:
               <h4>Get in touch:</h4>
               <div class="ap-m-working-groups-button ap-m-working-groups-button-slack">
                 <a class="ap-m-lnk" href="#">
-                  <div class="ap-a-ico ap-m-lnk-icon">
+                  <div class="ap-a-ico">
                     {% do doc.icons.useIcon('icons/slack-logo.svg') %}
                     <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#slack-logo"></use></svg>
                   </div>
-                  <span>GitHub</span>
                 </a>
               </div>
               <div class="ap-m-working-groups-button ap-m-working-groups-button-github">
                 <a class="ap-m-lnk" href="#">
-                  <div class="ap-a-ico ap-m-lnk-icon">
+                  <div class="ap-a-ico">
                     {% do doc.icons.useIcon('icons/github.svg') %}
                     <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#github"></use></svg>
                   </div>
-                  <span>GitHub</span>
                 </a>
               </div>
             </div>
@@ -88,7 +91,12 @@ topics:
           <section class="ap-o-group-section ap-o-group-issues">
             <h3>Current Issue</h3>
             <div class="ap-o-group-issues-issue">
-              <div class="ap-o-group-issues-issue-icon"></div>
+              <div class="ap-o-group-issues-issue-icon">
+                <div class="ap-a-ico">
+                  {% do doc.icons.useIcon('icons/exclamation.svg') %}
+                  <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#exclamation"></use></svg>
+                </div>
+              </div>
               <div class="ap-o-group-issues-issue-text">
                 <h4>Lorem ipsum dolor sit amet, consectetur</h4>
                 <p># opened on Jan 16 by <a href="#">nainar</a></p>
@@ -99,21 +107,37 @@ topics:
             <h3>Members</h3>
             <div class="ap-o-group-members-wrapper">
               <div class="ap-o-group-members-member active">
-                <h4>Naina Raisinghani</h4>
-                <a href="#">@nainar</a>
-                <p>Facilitator</p>
+                <amp-img class="ap-o-group-members-member-img"
+                    src="https://github.com/Nainar.png?size=65" width="65" height="65" layout="responsive"></amp-img>
+                <div class="ap-o-group-members-member-text">
+                  <h4>Naina Raisinghani</h4>
+                  <a href="#">@nainar</a>
+                  <p>Facilitator</p>
+                </div>
               </div>
               <div class="ap-o-group-members-member">
-                <h4>Naina Raisinghani</h4>
-                <a href="#">@nainar</a>
+                <amp-img class="ap-o-group-members-member-img"
+                    src="https://github.com/CrystalOnScript.png?size=60" width="60" height="60" layout="responsive"></amp-img>
+                <div class="ap-o-group-members-member-text">
+                  <h4>Naina Raisinghani</h4>
+                  <a href="#">@nainar</a>
+                </div>
               </div>
               <div class="ap-o-group-members-member">
-                <h4>Naina Raisinghani</h4>
-                <a href="#">@nainar</a>
+                <amp-img class="ap-o-group-members-member-img"
+                    src="https://github.com/CrystalOnScript.png?size=60" width="60" height="60" layout="responsive"></amp-img>
+                <div class="ap-o-group-members-member-text">
+                  <h4>Naina Raisinghani</h4>
+                  <a href="#">@nainar</a>
+                </div>
               </div>
               <div class="ap-o-group-members-member">
-                <h4>Naina Raisinghani</h4>
-                <a href="#">@nainar</a>
+                <amp-img class="ap-o-group-members-member-img"
+                    src="https://github.com/CrystalOnScript.png?size=60" width="60" height="60" layout="responsive"></amp-img>
+                <div class="ap-o-group-members-member-text">
+                  <h4>Naina Raisinghani</h4>
+                  <a href="#">@nainar</a>
+                </div>
               </div>
             </div>
             <p><a href="#">The GitHub Team</a> lorem ipsum dolor sit amet, consectetur</p>
@@ -122,6 +146,10 @@ topics:
             <h2>Communication Channels</h2>
             <div class="ap-o-group-channels-item ap-o-group-channels-item-slack">
               <div class="ap-o-group-channels-item-icon ap-o-group-channels-item-slack-icon">
+                <div class="ap-a-ico ap-m-lnk-icon">
+                  {% do doc.icons.useIcon('icons/slack.svg') %}
+                  <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#slack"></use></svg>
+                </div>
               </div>
               <div class="ap-o-group-channels-item-text">
                 <h4>Public Slack Channel</h4>
@@ -129,8 +157,8 @@ topics:
                 <div class="ap-m-working-groups-button ap-m-working-groups-button-slack">
                   <a class="ap-m-lnk" href="#">
                     <div class="ap-a-ico ap-m-lnk-icon">
-                      {% do doc.icons.useIcon('icons/slack-logo.svg') %}
-                      <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#slack-logo"></use></svg>
+                      {% do doc.icons.useIcon('icons/slack.svg') %}
+                      <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#slack"></use></svg>
                     </div>
                     <span>Add to Slack</span>
                   </a>
@@ -139,6 +167,10 @@ topics:
             </div>
             <div class="ap-o-group-channels-item ap-o-group-channels-item-hangout">
               <div class="ap-o-group-channels-item-icon ap-o-group-channels-item-hangout-icon">
+                <div class="ap-a-ico">
+                  {% do doc.icons.useIcon('icons/bitmap.svg') %}
+                  <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#bitmap"></use></svg>
+                </div>
               </div>
               <div class="ap-o-group-channels-item-text">
                 <h4>Google Hangout</h4>
@@ -155,6 +187,10 @@ topics:
             </div>
             <div class="ap-o-group-channels-item ap-o-group-channels-item-email">
               <div class="ap-o-group-channels-item-icon ap-o-group-channels-item-email-icon">
+                <div class="ap-a-ico">
+                  {% do doc.icons.useIcon('icons/amp-email.svg') %}
+                  <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#amp-email"></use></svg>
+                </div>
               </div>
               <div class="ap-o-group-channels-item-text">
                 <h4>Email</h4>
@@ -171,7 +207,6 @@ topics:
         </div>
       </div>
     </section>
-
     <section class="ap-o-working-groups-related">
       <h2>Other ways to get involved with AMP</h2>
       <div class="ap-o-working-groups-related-item">
