@@ -17,32 +17,82 @@
 'use strict';
 
 const gulp = require('gulp');
+const fs = require('fs');
 const yaml = require('js-yaml');
 const writeFile = require('write');
 const { GitHubImporter } = require('@lib/pipeline/gitHubImporter');
 
+const WG_DIRECTORY_PATH = 'pages/content/amp-dev/community/working-groups';
+
+
 
 async function importWorkingGroups() {
+  console.log('Importing... ');
+
   const data = await loadData();
-  let workingGroups = [];
+  const workingGroups = await getWorkingGroups(data);
 
-  data[0].forEach((group) => {
-    if (group.name.includes("wg-")) {
-      console.log(group.name);
-      workingGroups.push(group);
-    }
-  });
-
-  console.log(workingGroups.length);
-
+  writeYamlFiles(workingGroups);
 }
-
 
 async function loadData() {
   const client = new GitHubImporter();
-  const wgGroups = await client._github.org('ampproject').reposAsync();
+  const wgRepos = await client._github.org('ampproject').reposAsync();
 
-  return wgGroups;
+  return wgRepos;
 }
+
+async function getWorkingGroups(data) {
+  let wgRepos = data[0].filter(item => item.name.includes('wg-'));
+  let workingGroups = [];
+
+  wgRepos.forEach(async (wg) => {
+    const issues = await getIssuesForGroup(wg);
+
+    workingGroups.push(
+      {
+          'name': wg.name,
+          'description': wg.description,
+          'issues': issues,
+      }
+    )
+  });
+
+  return workingGroups;
+}
+
+
+async function getIssuesForGroup(group) {
+  const client = new GitHubImporter();
+  const test = await client._github.org('ampproject').reposAsync();
+
+
+  const issues = [{'issue': 'name 1'}, {'issue': 'name 2'}];
+  return issues;
+}
+
+function writeYamlFiles(workingGroups) {
+  console.log('Writing files..');
+
+  workingGroups.forEach((group) => {
+    const fileName = `${group.name}.yaml`
+    const dir = `${WG_DIRECTORY_PATH}/${fileName}`;
+
+    fs.writeFile(dir, yaml.safeDump(group), () => {
+      console.log('- ', fileName);
+    });
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
 
 exports.importWorkingGroups = importWorkingGroups
