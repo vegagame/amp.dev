@@ -16,14 +16,11 @@
 
 'use strict';
 
-const gulp = require('gulp');
 const fs = require('fs');
 const yaml = require('js-yaml');
-const writeFile = require('write');
-const { GitHubImporter } = require('@lib/pipeline/gitHubImporter');
+const {GitHubImporter} = require('@lib/pipeline/gitHubImporter');
 
 const WG_DIRECTORY_PATH = 'pages/content/amp-dev/community/working-groups';
-
 
 
 async function importWorkingGroups() {
@@ -43,59 +40,59 @@ async function loadData() {
 }
 
 async function getWorkingGroups(data) {
-  let repos = data[0].filter(item => item.name.includes('wg-'));
-  let workingGroups = [];
+  const repos = data[0].filter((item) => item.name.includes('wg-'));
+  const workingGroups = [];
 
   for (const wg of repos) {
     const issues = await getIssuesForGroup(wg);
     const members = await getMembersForGroup(wg);
 
     workingGroups.push(
-      {
+        {
           'url': wg.html_url,
           'name': wg.name,
           'description': wg.description,
           'issues': issues,
           'members': members,
-      }
-    )
+        }
+    );
   }
 
   return workingGroups;
 }
 
 async function getIssuesForGroup(wg) {
-  let issues = [];
+  const issues = [];
   const client = new GitHubImporter();
   const issuesData = await client._github.repo(`ampproject/${wg.name}`).issuesAsync();
 
   for (const issue of issuesData[0]) {
     issues.push(
-      {
-        'title': issue.title,
-        'created_at': issue.created_at,
-        'facilitator': issue.user.login,
-        'labels': issue.labels,
-      }
-    )
+        {
+          'title': issue.title,
+          'created_at': issue.created_at,
+          'facilitator': issue.user.login,
+          'labels': issue.labels,
+        }
+    );
   }
 
   return issues;
 }
 
 async function getMembersForGroup(wg) {
-  let members = [];
+  const members = [];
 
   const client = new GitHubImporter();
   const data = await client._github.repo(`ampproject/${wg.name}`).contributorsAsync();
 
   for (const member of data[0]) {
     members.push(
-      {
-        'login': member.login,
-        'url': member.html_url,
-      }
-    )
+        {
+          'login': member.login,
+          'url': member.html_url,
+        }
+    );
   }
 
   return members;
@@ -105,7 +102,7 @@ function writeYamlFiles(workingGroups) {
   console.log('Writing files..');
 
   workingGroups.forEach((group) => {
-    const fileName = `${group.name}.yaml`
+    const fileName = `${group.name}.yaml`;
     const dir = `${WG_DIRECTORY_PATH}/${fileName}`;
 
     fs.writeFile(dir, yaml.safeDump(group), () => {
@@ -115,18 +112,4 @@ function writeYamlFiles(workingGroups) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-exports.importWorkingGroups = importWorkingGroups
+exports.importWorkingGroups = importWorkingGroups;
