@@ -44,12 +44,13 @@ async function getWorkingGroups(data) {
   const workingGroups = [];
 
   for (const wg of repos) {
-    const issues = await getIssuesForGroup(wg);
-    const members = await getMembersForGroup(wg);
+    const issues = await getGroupIssues(wg);
+    const members = await getGroupMembers(wg);
 
     workingGroups.push(
         {
-          'url': wg.html_url,
+          '$title': `Working Group: ${wg.name}`,
+          'html_url': wg.html_url,
           'name': wg.name,
           'description': wg.description,
           'issues': issues,
@@ -61,26 +62,7 @@ async function getWorkingGroups(data) {
   return workingGroups;
 }
 
-async function getIssuesForGroup(wg) {
-  const issues = [];
-  const client = new GitHubImporter();
-  const issuesData = await client._github.repo(`ampproject/${wg.name}`).issuesAsync();
-
-  for (const issue of issuesData[0]) {
-    issues.push(
-        {
-          'title': issue.title,
-          'created_at': issue.created_at,
-          'facilitator': issue.user.login,
-          'labels': issue.labels,
-        }
-    );
-  }
-
-  return issues;
-}
-
-async function getMembersForGroup(wg) {
+async function getGroupMembers(wg) {
   const members = [];
 
   const client = new GitHubImporter();
@@ -90,12 +72,54 @@ async function getMembersForGroup(wg) {
     members.push(
         {
           'login': member.login,
-          'url': member.html_url,
+          'html_url': member.html_url,
+          'img_url': `https://github.com/${member.login}.png?size=60`,
         }
     );
   }
 
   return members;
+}
+
+async function getGroupIssues(wg) {
+  const issues = [];
+  const client = new GitHubImporter();
+  const issuesData = await client._github.repo(`ampproject/${wg.name}`).issuesAsync();
+
+  for (const issue of issuesData[0]) {
+    const date = new Date(issue.created_at).toDateString();
+    const labels = getIssueLabels(issue.labels);
+
+    issues.push(
+        {
+          'title': issue.title,
+          'created_at': date,
+          'facilitator': issue.user.login,
+          'number': issue.number,
+          'labels': labels,
+        }
+    );
+  }
+
+  return issues;
+}
+
+function getIssueLabels(labels) {
+  const issueLabels = [];
+
+  for (const label of labels) {
+    const hexVal = parseInt(`0x${label.color}`);
+    const txtColor = ((hexVal < 7500000) ? 'fff' : '000');
+
+    issueLabels.push(
+        {
+          'name': label.name,
+          'background_color': label.color,
+          'txt_color': txtColor,
+        }
+    );
+  }
+  return issueLabels;
 }
 
 function writeYamlFiles(workingGroups) {
