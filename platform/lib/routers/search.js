@@ -61,8 +61,20 @@ function buildAutosuggestComponentResult() {
   const components = Object.keys(componentVersions)
       .concat(BUILD_IN_COMPONENTS, IMPORTANT_INCLUDED_ELEMENTS);
   components.sort();
+
+  const results = [];
+
+  for (let i = 0; i < components.length; i++) {
+    results.push({
+      name: components[i],
+      url: 'https://www.google.com/',
+      exampleUrl: 'https://www.google.com/',
+      playgroundUrl: 'https://www.google.com/'
+    })
+  }
+
   return ({
-    items: components,
+    items: results,
   });
 }
 
