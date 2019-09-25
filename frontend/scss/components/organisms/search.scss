@@ -148,12 +148,30 @@
     }
 
     div[role="option"] {
+      display: flex;
       padding: 14px 60px;
       @include txt-font-accent;
       color: color('charade');
 
       @media (max-width: 1023px) {
         padding: 14px 40px;
+      }
+
+      & > span {
+        margin-right: auto;
+      }
+
+      & > a {
+        display: block;
+        position: relative;
+        z-index: 1;
+        padding: 0;
+        margin: 0 0 0 .5em;
+
+        .#{atom('ico')} {
+          width: 1.5em;
+          height: 1.5em;
+        }
       }
     }
 
