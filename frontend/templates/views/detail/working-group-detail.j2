@@ -1,30 +1,14 @@
----
-$title: Working Groups
-$order: 4
-$view: /views/custom.j2
+{% extends '/layouts/default.j2' %}
 
-topics:
-- Access and Subs
-- Ads
-- AMP4Email
-- Analytics
-- Approvers
-- Code of Conduct
-- Infrastructure
-- Outreach
-- Performance
-- Runtime
-- Stories
-- UI & Accessibility
-- Validation & caching
-- Viewers
+{% block styles %}
+{{ super() }}
 
----
-{% do doc.styles.addCssFile('css/components/templates/working-groups.css') %}
+{% do doc.styles.addCssFile('css/components/templates/working-group.css') %}
+{% endblock %}
 
-<!-- {% do doc.amp_dependencies.add('amp-bind', '0.1') %} -->
+{% block main %}
 
-<main class="ap--main ap-t-working-groups">
+  <main class="ap--main ap-t-working-groups">
 
   <section class="ap--stage ap--container-fluid">
     {% do doc.styles.addCssFile('css/components/organisms/stage.css') %}
@@ -48,11 +32,11 @@ topics:
     <section class="ap-o-working-groups-content">
       <div class="ap-o-working-groups-content-filter">
         <ul>
-          {% for topic in doc.topics %}
+          <!-- {% for topic in doc.topics %}
           <li class="ap-o-working-groups-content-filter-bubble">
             <a href="{{ g.doc('/content/amp-dev/community/working-groups.html', locale=doc.locale).url.path }}">{{ topic }}</a>
           </li>
-          {% endfor %}
+          {% endfor %} -->
         </ul>
       </div>
       <div class="ap-o-working-groups-content-container">
@@ -63,11 +47,12 @@ topics:
               <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wrench"></use></svg>
             </div>
           </div>
+
           <section class="ap-o-group-section ap-o-group-description">
-            <h5>Working Group</h5>
-            <h2>Code of Conduct</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <p>The facilitator of bla bla is: <a href="#">@nainar</a></p>
+            <p>Working Group</p>
+            <h2>{{ doc.name }}</h2>
+            <p>{{ doc.description }}</p>
+            <p>The facilitator of {{ doc.name }} is: <a href="#">@nainar</a></p>
             <div class="ap-o-group-description-connect">
               <h4>Get in touch:</h4>
               <div class="ap-m-working-groups-button ap-m-working-groups-button-slack">
@@ -88,8 +73,11 @@ topics:
               </div>
             </div>
           </section>
+
           <section class="ap-o-group-section ap-o-group-issues">
-            <h3>Current Issue</h3>
+            {% if doc.issues %}
+            <h3>Current Issues</h3>
+            {% for issue in doc.issues %}
             <div class="ap-o-group-issues-issue">
               <div class="ap-o-group-issues-issue-icon">
                 <div class="ap-a-ico">
@@ -98,50 +86,39 @@ topics:
                 </div>
               </div>
               <div class="ap-o-group-issues-issue-text">
-                <h4>Lorem ipsum dolor sit amet, consectetur</h4>
-                <p># opened on Jan 16 by <a href="#">nainar</a></p>
+                <div class="ap-o-group-issues-issue-text-title">
+                  <h4>{{ issue.title }}</h4>
+                  {% for label in issue.labels %}
+                  <div class="ap-a-github-label"
+                      style="color: #{{ label.txt_color }}; background-color: #{{ label.background_color }};">
+                    {{ label.name }}
+                  </div>
+                  {% endfor %}
+                </div>
+                <p>#{{ issue.number }} opened on {{ issue.created_at }} by <a href="#">@{{ issue.facilitator }}</a></p>
               </div>
             </div>
+            {% endfor %}
+            {% endif %}
           </section>
+
           <section class="ap-o-group-section ap-o-group-members">
             <h3>Members</h3>
             <div class="ap-o-group-members-wrapper">
-              <div class="ap-o-group-members-member active">
-                <amp-img class="ap-o-group-members-member-img"
-                    src="https://github.com/Nainar.png?size=65" width="65" height="65" layout="responsive"></amp-img>
-                <div class="ap-o-group-members-member-text">
-                  <h4>Naina Raisinghani</h4>
-                  <a href="#">@nainar</a>
-                  <p>Facilitator</p>
-                </div>
-              </div>
+              {% for member in doc.members %}
               <div class="ap-o-group-members-member">
                 <amp-img class="ap-o-group-members-member-img"
-                    src="https://github.com/CrystalOnScript.png?size=60" width="60" height="60" layout="responsive"></amp-img>
+                    src={{ member.img_url }} width="60" height="60" layout="responsive"></amp-img>
                 <div class="ap-o-group-members-member-text">
                   <h4>Naina Raisinghani</h4>
-                  <a href="#">@nainar</a>
+                  <a href="#">@{{ member.login }}</a>
                 </div>
               </div>
-              <div class="ap-o-group-members-member">
-                <amp-img class="ap-o-group-members-member-img"
-                    src="https://github.com/CrystalOnScript.png?size=60" width="60" height="60" layout="responsive"></amp-img>
-                <div class="ap-o-group-members-member-text">
-                  <h4>Naina Raisinghani</h4>
-                  <a href="#">@nainar</a>
-                </div>
-              </div>
-              <div class="ap-o-group-members-member">
-                <amp-img class="ap-o-group-members-member-img"
-                    src="https://github.com/CrystalOnScript.png?size=60" width="60" height="60" layout="responsive"></amp-img>
-                <div class="ap-o-group-members-member-text">
-                  <h4>Naina Raisinghani</h4>
-                  <a href="#">@nainar</a>
-                </div>
-              </div>
+              {% endfor %}
             </div>
-            <p><a href="#">The GitHub Team</a> lorem ipsum dolor sit amet, consectetur</p>
+            <p><a href={{ doc.html_url }}>The GitHub Team</a> lorem ipsum dolor sit amet, consectetur</p>
           </section>
+
           <section class="ap-o-group-section ap-o-group-channels">
             <h2>Communication Channels</h2>
             <div class="ap-o-group-channels-item ap-o-group-channels-item-slack">
@@ -236,3 +213,4 @@ topics:
     </section>
   </div>
 </main>
+{% endblock %}
