@@ -3,6 +3,9 @@
 {% do doc.icons.useIcon('/icons/search.svg') %}
 {% do doc.icons.useIcon('icons/internal.svg') %}
 {% do doc.icons.useIcon('/icons/close.svg') %}
+{% do doc.icons.useIcon('/icons/components-flyout.svg') %}
+{% do doc.icons.useIcon('/icons/examples-flyout.svg') %}
+{% do doc.icons.useIcon('/icons/start.svg') %}
 
 {% do doc.amp_dependencies.add('amp-autocomplete', '0.1') %}
 {% do doc.amp_dependencies.add('amp-form', '0.1') %}
@@ -35,6 +38,7 @@
             target="_top">
         <amp-autocomplete class="ap-o-search-autocomplete"
                           filter="substring"
+                          filter-value="name"
                           min-characters="1"
                           on="select:
                                 AMP.setState({ query: event.value }),
@@ -52,6 +56,26 @@
                  on="change:AMP.setState({ query: event.value })"
                  required
           >
+          <template type="amp-mustache">
+            <div data-value="{{ '{{name}}' }}">
+              <span>{{ '{{name}}' }}</span>
+              <a href="{{ '{{url}}' }}">
+                <div class="ap-a-ico">
+                  <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#components-flyout"></use></svg>
+                </div>
+              </a>
+              <a href="{{ '{{exampleUrl}}' }}">
+                <div class="ap-a-ico">
+                  <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#examples-flyout"></use></svg>
+                </div>
+              </a>
+              <a href="{{ '{{playgroundUrl}}' }}">
+                <div class="ap-a-ico">
+                  <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#start"></use></svg>
+                </div>
+              </a>
+            </div>
+          </template>
         </amp-autocomplete>
       </form>
 
