@@ -64,6 +64,19 @@
           margin: 7vw 0 11vw;
         }
       }
+      &-image {
+        position: absolute;
+        top: 0;
+        right: 8%;
+        height: 100%;
+        width: 90%;
+
+        @media (min-width: 768px) {
+          right: 8%;
+          height: 100%;
+          width: 45%;
+        }
+      }
     }
 
     & + .#{utility('content')} {
