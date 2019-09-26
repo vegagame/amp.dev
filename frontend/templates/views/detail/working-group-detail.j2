@@ -113,12 +113,10 @@
               {% endfor %}
             </div>
             {% if doc.issues|length > 3 %}
-            <div class="ap-o-group-issues-load-button">
-              <label class="ap-a-btn" for="load-more-checkbox">
-                <span class="unloaded">View all</span>
-                <span class="loaded">View less</span>
-              </label>
-            </div>
+            <label class="ap-a-btn" for="load-more-checkbox">
+              <span class="unloaded">View all</span>
+              <span class="loaded">View less</span>
+            </label>
             {% endif %}
           </section>
           {% endif %}

@@ -334,27 +334,29 @@
         }
       }
 
-      &-load-button {
+
+      .#{atom('btn')} {
         display: flex;
+        align-self: center;
         justify-content: center;
+        max-width: 147px;
 
-        .#{atom('btn')} {
-          padding: 0.5rem 2rem;
-          font-size: 0.875rem;
-          color: color('blue-ribbon');
-          border: 2px solid color('blue-ribbon');
-          background: transparent;
-          box-shadow: none;
-          opacity: 0.6;
+        margin: auto;
+        padding: 0.5rem 2rem;
+        font-size: 0.875rem;
+        color: color('blue-ribbon');
+        border: 2px solid color('blue-ribbon');
+        background: transparent;
+        box-shadow: none;
+        opacity: 0.6;
 
-          .loaded {
-            display: none;
-          }
+        .loaded {
+          display: none;
+        }
 
-          &:hover {
-            transform: none;
-            opacity: 1;
-          }
+        &:hover {
+          transform: none;
+          opacity: 1;
         }
       }
 
@@ -365,7 +367,7 @@
           display: flex;
         }
 
-        &:checked ~ .load-more-btn {
+        &:checked ~ .ap-a-btn {
           .loaded {
             display: block;
           }
