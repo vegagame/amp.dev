@@ -32,11 +32,11 @@
     <section class="ap-o-working-groups-content">
       <div class="ap-o-working-groups-content-filter">
         <ul>
-          <!-- {% for topic in doc.topics %}
-          <li class="ap-o-working-groups-content-filter-bubble">
-            <a href="{{ g.doc('/content/amp-dev/community/working-groups.html', locale=doc.locale).url.path }}">{{ topic }}</a>
+          {% for group in g.collection('/content/amp-dev/community/working-groups').list_docs(locale=doc.locale) %}
+          <li class="ap-o-working-groups-content-filter-bubble {% if group.name in request.path %} active {% endif %}">
+            <a href="{{ g.doc('/content/amp-dev/community/working-groups/' + group.name, locale=doc.locale).url.path }}">{{ group.name }}</a>
           </li>
-          {% endfor %} -->
+          {% endfor %}
         </ul>
       </div>
       <div class="ap-o-working-groups-content-container">
