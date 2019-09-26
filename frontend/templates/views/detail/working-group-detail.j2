@@ -90,26 +90,27 @@
             {% endif %}
             <div class="ap-o-group-issues-container">
               {% for issue in doc.issues %}
-              <div class="ap-o-group-issues-container-issue">
-                <div class="ap-o-group-issues-container-issue-icon">
+              <a href={{ issue.html_url }} class="ap-o-issue" target="_blank" rel="noopener">
+                <div class="ap-o-issue-icon">
                   <div class="ap-a-ico">
                     {% do doc.icons.useIcon('icons/exclamation.svg') %}
                     <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#exclamation"></use></svg>
                   </div>
                 </div>
-                <div class="ap-o-group-issues-container-issue-text">
-                  <div class="ap-o-group-issues-container-issue-text-title">
+                <div class="ap-o-issue-text">
+                  <div class="ap-o-issue-text-title">
                     <h4>{{ issue.title }}</h4>
                     {% for label in issue.labels %}
-                    <div class="ap-a-github-label"
-                    style="color: #{{ label.txt_color }}; background-color: #{{ label.background_color }};">
-                    {{ label.name }}
+                    <div class="ap-a-github-label" style="color: #{{ label.txt_color }}; background-color: #{{ label.background_color }};">
+                      {{ label.name }}
+                    </div>
+                    {% endfor %}
                   </div>
-                  {% endfor %}
+                  <p class="ap-o-issue-text-body">
+                    #{{ issue.number }} opened on {{ issue.created_at }} by @{{ issue.facilitator }}
+                  </p>
                 </div>
-                <p>#{{ issue.number }} opened on {{ issue.created_at }} by <a href="#">@{{ issue.facilitator }}</a></p>
-              </div>
-              </div>
+              </a>
               {% endfor %}
             </div>
             {% if doc.issues|length > 3 %}

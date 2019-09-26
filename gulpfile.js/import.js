@@ -93,6 +93,7 @@ async function getGroupIssues(wg) {
     issues.push(
         {
           'title': issue.title,
+          'html_url': issue.html_url,
           'created_at': date,
           'facilitator': issue.user.login,
           'number': issue.number,
