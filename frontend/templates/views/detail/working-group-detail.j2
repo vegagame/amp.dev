@@ -82,33 +82,46 @@
             </div>
           </section>
 
+          {% if doc.issues %}
           <section class="ap-o-group-section ap-o-group-issues">
-            {% if doc.issues %}
             <h3>Current Issues</h3>
-            {% for issue in doc.issues %}
-            <div class="ap-o-group-issues-issue">
-              <div class="ap-o-group-issues-issue-icon">
-                <div class="ap-a-ico">
-                  {% do doc.icons.useIcon('icons/exclamation.svg') %}
-                  <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#exclamation"></use></svg>
+            {% if doc.issues|length > 3 %}
+            <input type="checkbox" id="load-more-checkbox"/>
+            {% endif %}
+            <div class="ap-o-group-issues-container">
+              {% for issue in doc.issues %}
+              <div class="ap-o-group-issues-container-issue">
+                <div class="ap-o-group-issues-container-issue-icon">
+                  <div class="ap-a-ico">
+                    {% do doc.icons.useIcon('icons/exclamation.svg') %}
+                    <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#exclamation"></use></svg>
+                  </div>
                 </div>
-              </div>
-              <div class="ap-o-group-issues-issue-text">
-                <div class="ap-o-group-issues-issue-text-title">
-                  <h4>{{ issue.title }}</h4>
-                  {% for label in issue.labels %}
-                  <div class="ap-a-github-label"
-                      style="color: #{{ label.txt_color }}; background-color: #{{ label.background_color }};">
+                <div class="ap-o-group-issues-container-issue-text">
+                  <div class="ap-o-group-issues-container-issue-text-title">
+                    <h4>{{ issue.title }}</h4>
+                    {% for label in issue.labels %}
+                    <div class="ap-a-github-label"
+                    style="color: #{{ label.txt_color }}; background-color: #{{ label.background_color }};">
                     {{ label.name }}
                   </div>
                   {% endfor %}
                 </div>
                 <p>#{{ issue.number }} opened on {{ issue.created_at }} by <a href="#">@{{ issue.facilitator }}</a></p>
               </div>
+              </div>
+              {% endfor %}
             </div>
-            {% endfor %}
+            {% if doc.issues|length > 3 %}
+            <div class="ap-o-group-issues-load-button">
+              <label class="ap-a-btn" for="load-more-checkbox">
+                <span class="unloaded">View all</span>
+                <span class="loaded">View less</span>
+              </label>
+            </div>
             {% endif %}
           </section>
+          {% endif %}
 
           <section class="ap-o-group-section ap-o-group-members">
             <h3>Members</h3>

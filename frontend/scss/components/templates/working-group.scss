@@ -11,13 +11,10 @@
 @import '_functions.scss';
 @import '_mixins.scss';
 @import '_variables.scss';
-
 @import 'components/atoms/_text.scss';
 @import 'components/atoms/_color.scss';
 @import 'components/atoms/_headline.scss';
-
 @import 'components/templates/_default.scss';
-
 
 .#{template('working-groups')} {
   background: color('whisper');
@@ -45,9 +42,11 @@
     &-github {
       background-color: black;
     }
+
     &-slack {
-      background-color: color('slack');;
+      background-color: color('slack');
     }
+
     &-hangout {
       background-color: color('fruit-salad');
     }
@@ -59,18 +58,17 @@
 
       &-content {
         margin: 15em 0 2em;
-
         @media (min-width: 768px) {
           margin: 7vw 0 11vw;
         }
       }
+
       &-image {
         position: absolute;
         top: 0;
         right: 8%;
         height: 100%;
         width: 90%;
-
         @media (min-width: 768px) {
           right: 8%;
           height: 100%;
@@ -96,7 +94,6 @@
 
   .#{organism('working-groups')} {
     padding: 0 15px;
-
     @media (min-width: 768px) {
       display: grid;
       grid-template-columns: repeat(24,1fr);
@@ -106,7 +103,6 @@
 
     &-intro {
       margin-bottom: 0;
-
       @media (min-width: 768px) {
         grid-column: 3/22;
       }
@@ -115,12 +111,12 @@
         margin-bottom: 7em;
       }
     }
+
     &-content {
       grid-column: 1/24;
       display: flex;
       flex-direction: column;
       padding: 0;
-
       @media (min-width: 1024px) {
         grid-column: 1/24;
         display: grid;
@@ -145,7 +141,6 @@
           padding: 7px 0;
           margin-top: 0;
           list-style: none;
-
           @media (min-width: 1024px) {
             position: sticky;
             top: 75px;
@@ -156,6 +151,7 @@
             margin-top: -10px;
           }
         }
+
         &-bubble {
           display: flex;
           align-items: center;
@@ -169,7 +165,8 @@
             white-space: nowrap;
           }
 
-          &.active, &:hover {
+          &.active,
+          &:hover {
             margin: 6.5px 5px;
             box-shadow: 0 5px 15px -5px rgba(0,0,0,0.25);
             background-color: color('blue-ribbon');
@@ -183,11 +180,11 @@
           }
         }
       }
+
       &-container {
         padding: 0 15px;
         background: color('white');
         box-shadow: 0 25px 40px 0 rgba(0,0,0,.05);
-
         @media (min-width: 1024px) {
           grid-column: 7/24;
           display: grid;
@@ -200,10 +197,10 @@
         }
       }
     }
+
     &-related {
       margin-bottom: 8em;
       padding: 0 15px;
-
       @media (min-width: 768px) {
         grid-column: 3/22;
         padding: 0;
@@ -214,6 +211,7 @@
       }
     }
   }
+
   .#{organism('group')} {
     grid-column: 2/15;
     padding: 2.5em 0;
@@ -225,17 +223,15 @@
       padding: 1.5em;
       border-radius: 50%;
       background-color: color('blue-ribbon');
-
       @media (min-width: 768px) {
         height: 7em;
         width: 7em;
         padding: 2em;
       }
-
       @media (min-width: 1024px) {
         height: 10em;
         width: 10em;
-        margin: -7.5em auto 0 auto;
+        margin: -7.5em auto 0;
         padding: 2.5em;
       }
 
@@ -245,19 +241,21 @@
         fill: color('white');
       }
     }
+
     &-section {
-      margin: 3.5em 0;
-      margin: 1.5em 0 3.5em 0;
+      margin: 1.5em 0 3.5em;
     }
 
     &-description {
       h5 {
         @include txt;
       }
+
       h2 {
         @include hl-h1;
         margin: 0;
       }
+
       &-connect {
         display: flex;
         align-items: center;
@@ -267,60 +265,118 @@
           margin: 0 15px 0 0;
         }
 
-        .#{molecule('working-groups-button')}
-        .#{atom('ico')} {
+        .#{molecule('working-groups-button')} .#{atom('ico')} {
           width: 105px;
         }
       }
     }
+
     &-issues {
-      &-issue {
-        display: flex;
-        margin-bottom: 15px;
-        padding: 20px;
-        border-radius: 4px;
-        background: color('gallery');
+      &-container {
+        width: 100%;
 
-        &-icon {
-          height: 30px;
-          width: 30px;
-          margin-right: 12px;
-          border-radius: 50%;
-          background: color('malachite');
-
-          .#{atom('ico')} {
-            height: 100%;
-            width: 100%;
-          }
+        &:after {
+          content: "";
+          display: table;
+          clear: both;
         }
 
-        &-text {
-          width: calc(100% - 30px);
+        &-issue {
+          display: flex;
+          margin-bottom: 15px;
+          padding: 20px;
+          border-radius: 4px;
+          background: color('gallery');
 
-          h4, p {
-            margin: 3px;
+          &:nth-child(1n + 4) {
+            display: none;
           }
 
-          &-title {
-            display: flex;
-            flex-wrap: wrap;
+          &-icon {
+            height: 30px;
+            width: 30px;
+            margin-right: 12px;
+            border-radius: 50%;
+            background: color('malachite');
 
-            .#{atom('github-label')} {
-              display: inline-block;
-              height: 20px;
+            .#{atom('ico')} {
+              height: 100%;
+              width: 100%;
+            }
+          }
+
+          &-text {
+            width: calc(100% - 30px);
+
+            h4,
+            p {
               margin: 3px;
-              padding: .15em 4px;
-              font-size: 12px;
-              font-weight: 600;
-              line-height: 15px;
-              border-radius: 2px;
-              color: color('white');
-              box-shadow: inset 0 -1px 0 rgba(27,31,35,.12);
+            }
+
+            &-title {
+              display: flex;
+              flex-wrap: wrap;
+
+              .#{atom('github-label')} {
+                display: inline-block;
+                height: 20px;
+                margin: 3px;
+                padding: 0.15em 4px;
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 15px;
+                border-radius: 2px;
+                color: color('white');
+                box-shadow: inset 0 -1px 0 rgba(27,31,35,.12);
+              }
             }
           }
         }
       }
+
+      &-load-button {
+        display: flex;
+        justify-content: center;
+
+        .#{atom('btn')} {
+          padding: 0.5rem 2rem;
+          font-size: 0.875rem;
+          color: color('blue-ribbon');
+          border: 2px solid color('blue-ribbon');
+          background: transparent;
+          box-shadow: none;
+          opacity: 0.6;
+
+          .loaded {
+            display: none;
+          }
+
+          &:hover {
+            transform: none;
+            opacity: 1;
+          }
+        }
+      }
+
+      #load-more-checkbox {
+        display: none;
+
+        &:checked ~ .ap-o-group-issues-container .ap-o-group-issues-container-issue:nth-child(1n + 4) {
+          display: flex;
+        }
+
+        &:checked ~ .load-more-btn {
+          .loaded {
+            display: block;
+          }
+
+          .unloaded {
+            display: none;
+          }
+        }
+      }
     }
+
     &-members {
       &-wrapper {
         display: flex;
@@ -337,7 +393,6 @@
         border-radius: 4px;
         margin-bottom: 1em;
         padding: 20px;
-
         @media (min-width: 768px) {
           width: 49%;
           margin-bottom: 2%;
@@ -347,7 +402,7 @@
           height: 65px;
           width: 65px;
           margin-right: 15px;
-          border-radius: 50%
+          border-radius: 50%;
         }
 
         h4 {
@@ -357,12 +412,15 @@
         &.active {
           background: color('ebony-clay');
 
-          h4, a {
+          a,
+          h4 {
             color: color('white');
           }
+
           a {
             text-decoration: underline;
           }
+
           p {
             font-weight: bold;
             margin: 2px 0;
@@ -370,13 +428,13 @@
         }
       }
     }
+
     &-channels {
       &-item {
         background: color('concrete');
         margin-bottom: 1.4em;
         padding: 15px;
         border-radius: 4px;
-
         @media (min-width: 768px) {
           display: flex;
         }
@@ -396,7 +454,6 @@
             fill: color('white');
           }
         }
-
         @media (min-width: 768px) {
           &-text {
             width: calc(100% - 100px);
@@ -404,13 +461,21 @@
         }
 
         &-slack {
-          &-icon { background-color: color('slack'); }
+          &-icon {
+            background-color: color('slack');
+          }
         }
+
         &-hangout {
-          &-icon { background-color: color('fruit-salad'); }
+          &-icon {
+            background-color: color('fruit-salad');
+          }
         }
+
         &-email {
-          &-icon { background-color: color('blue-ribbon'); }
+          &-icon {
+            background-color: color('blue-ribbon');
+          }
         }
       }
     }
