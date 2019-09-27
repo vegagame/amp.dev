@@ -44,6 +44,7 @@ async function getWorkingGroups(data) {
   const workingGroups = [];
 
   for (const wg of repos) {
+    const meta = await getGroupMetadata(wg);
     const issues = await getGroupIssues(wg);
     const members = await getGroupMembers(wg);
 
@@ -60,6 +61,13 @@ async function getWorkingGroups(data) {
   }
 
   return workingGroups;
+}
+
+async function getGroupMetadata(wg) {
+  // const client = new GitHubImporter();
+  // const data = await client._github.repo(`ampproject/${wg.name}`).contentsAsync('meta.yaml');
+  //
+  // console.log(data);
 }
 
 async function getGroupMembers(wg) {
