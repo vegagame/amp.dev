@@ -379,13 +379,7 @@
         }
 
         &:checked ~ .ap-a-btn {
-          .loaded {
-            display: block;
-          }
-
-          .unloaded {
-            display: none;
-          }
+          display: none;
         }
       }
     }
