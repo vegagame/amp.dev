@@ -33,8 +33,8 @@
 
   <div class="ap-o-working-groups">
     <section class="ap-o-working-groups-intro">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>An AMP Working Group is a segment of the community with knowledge/interest in specific area pf AMP. Working Groups are created by AMPS's Technical Steering Committee.</p>
+      <p>Most Working Groups provide bi-weekly status updates and present quarterly high-level updates in round-robin fashion at Design Reviews.</p>
       <h4>AMP's Working Groups are:</h4>
     </section>
     <section class="ap-o-working-groups-content">
@@ -125,17 +125,17 @@
             <h3>Members</h3>
             <div class="ap-o-group-members-wrapper">
               {% for member in doc.members %}
-              <div class="ap-o-group-members-member">
+              <a href="{{ member.html_url }}" target="_blank" rel="noopener" class="ap-o-group-members-member">
                 <amp-img class="ap-o-group-members-member-img"
                     src={{ member.img_url }} width="60" height="60" layout="responsive"></amp-img>
                 <div class="ap-o-group-members-member-text">
-                  <h4>Naina Raisinghani</h4>
-                  <a href="#">@{{ member.login }}</a>
+                  <h4>Name Placeholder</h4>
+                  <span>@{{ member.login }}</span>
                 </div>
-              </div>
+              </a>
               {% endfor %}
             </div>
-            <p><a href={{ doc.html_url }}>The GitHub Team</a> lorem ipsum dolor sit amet, consectetur</p>
+            <p><a href={{ doc.html_url }} target="_blank" rel="noopener">The GitHub Team</a> also includes {{ doc.name }} WG members.</p>
           </section>
 
           <section class="ap-o-group-section ap-o-group-channels">
@@ -152,7 +152,7 @@
                 <p><code>#wg-codeofconduct</code></p>
                 <div class="ap-m-working-groups-button ap-m-working-groups-button-slack">
                   <a class="ap-m-lnk" href="#">
-                    <div class="ap-a-ico ap-m-lnk-icon">
+                    <div class="ap-a-ico">
                       {% do doc.icons.useIcon('icons/slack.svg') %}
                       <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#slack"></use></svg>
                     </div>
@@ -172,7 +172,7 @@
                 <h4>Google Hangout</h4>
                 <div class="ap-m-working-groups-button ap-m-working-groups-button-hangout">
                   <a class="ap-m-lnk" href="#">
-                    <div class="ap-a-ico ap-m-lnk-icon">
+                    <div class="ap-a-ico">
                       {% do doc.icons.useIcon('icons/camera.svg') %}
                       <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#camera"></use></svg>
                     </div>
@@ -207,26 +207,26 @@
       <h2>Other ways to get involved with AMP</h2>
       <div class="ap-o-working-groups-related-item">
         <h3>Contribute to AMP</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>The AMP Project would not be possible without help from all members of the community whether you are a developer, content creator or provider of services relevant to AMP There are many ways for you to contribute.</p>
         <div class="ap-o-benefits-overview-link">
-          <a href="../documentation/guides-and-tutorials/learn/intro-to-amphtml-ads.md" class="ap-m-lnk ap-m-lnk-square">
+          <a href="{{ g.doc('/content/amp-dev/documentation/guides-and-tutorials/contribute/index.md', locale=doc.locale).url.path }}" class="ap-m-lnk ap-m-lnk-square">
             <div class="ap-a-ico ap-m-lnk-icon">
               {% do doc.icons.useIcon('icons/internal.svg') %}
               <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#internal"></use></svg>
             </div>
-            <span class="ap-m-lnk-text">Read on about AMP ads</span>
+            <span class="ap-m-lnk-text">Contribute</span>
           </a>
         </div>
       </div>
       <div class="ap-o-working-groups-related-item">
         <h3>Governance Body</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="#" class="ap-m-lnk ap-m-lnk-square">
+        <p>Learn more about the Advisory Committee and Technical Steering Committee.</p>
+          <a href="{{ g.doc('/content/amp-dev/community/governance.md', locale=doc.locale).url.path }}" class="ap-m-lnk ap-m-lnk-square">
             <div class="ap-a-ico ap-m-lnk-icon">
               {% do doc.icons.useIcon('icons/internal.svg') %}
               <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#internal"></use></svg>
             </div>
-            <span class="ap-m-lnk-text">Read on about AMP ads</span>
+            <span class="ap-m-lnk-text">Governance</span>
           </a>
         </div>
     </section>

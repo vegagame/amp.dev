@@ -297,9 +297,15 @@
           padding: 20px;
           border-radius: 4px;
           background: color('gallery');
+          transition: transform 0.2s cubic-bezier(.25,.1,.25,1), box-shadow 0.3s cubic-bezier(.25,.1,.25,1);
 
           &:nth-child(1n + 4) {
             display: none;
+          }
+
+          &:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 9px 10px -8px rgba(0, 0, 0, 0.30);
           }
 
           &-icon {
@@ -400,6 +406,13 @@
         border-radius: 4px;
         margin-bottom: 1em;
         padding: 20px;
+        transition: transform 0.2s cubic-bezier(.25,.1,.25,1), box-shadow 0.3s cubic-bezier(.25,.1,.25,1);
+
+        &:hover {
+          transform: translateY(-1px);
+          box-shadow: 0 9px 10px -8px rgba(0, 0, 0, 0.30);
+        }
+
         @media (min-width: 768px) {
           width: 49%;
           margin-bottom: 2%;
