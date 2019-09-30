@@ -31,49 +31,49 @@
     </div>
   </section>
 
-  <div class="ap-o-working-groups">
-    <section class="ap-o-working-groups-intro">
+  <div class="ap-o-wg">
+    <section class="ap-o-wg-intro">
       <p>An AMP Working Group is a segment of the community with knowledge/interest in specific area pf AMP. Working Groups are created by AMPS's Technical Steering Committee.</p>
       <p>Most Working Groups provide bi-weekly status updates and present quarterly high-level updates in round-robin fashion at Design Reviews.</p>
       <h4>AMP's Working Groups are:</h4>
     </section>
-    <section class="ap-o-working-groups-content">
-      <div class="ap-o-working-groups-content-filter">
+    <section class="ap-o-wg-content">
+      <div class="ap-o-wg-filter">
         <ul>
           {% for group in g.collection('/content/amp-dev/community/working-groups').list_docs(locale=doc.locale) %}
-          <li class="ap-o-working-groups-content-filter-bubble {% if group.name in request.path %} active {% endif %}">
+          <li class="ap-o-wg-filter-bubble {% if group.name in request.path %} active {% endif %}">
             <a href="{{ g.doc('/content/amp-dev/community/working-groups/' + group.name, locale=doc.locale).url.path }}">{{ group.name }}</a>
           </li>
           {% endfor %}
         </ul>
       </div>
-      <div class="ap-o-working-groups-content-container">
-        <div class="ap-o-group">
-          <div class="ap-o-group-icon">
+      <div class="ap-o-wg-content-container">
+        <div class="ap-o-wg-group">
+          <div class="ap-o-wg-group-icon">
             <div class="ap-a-ico">
               {% do doc.icons.useIcon('icons/wrench.svg') %}
               <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wrench"></use></svg>
             </div>
           </div>
 
-          <section class="ap-o-group-section ap-o-group-description">
+          <section class="ap-o-wg-group-section ap-o-wg-group-description">
             <p>Working Group</p>
             <h2>{{ doc.name }}</h2>
             <p>{{ doc.description }}</p>
             <p>The facilitator of {{ doc.name }} is: <a href="#">@nainar</a></p>
-            <div class="ap-o-group-description-connect">
+            <div class="ap-o-wg-group-description-connect">
               <h4>Get in touch:</h4>
-              <div class="ap-m-working-groups-button ap-m-working-groups-button-slack">
-                <a class="ap-m-lnk" href="#">
-                  <div class="ap-a-ico">
+              <div class="ap-a-wg-btn ap-a-wg-btn-slack">
+                <a class="ap-m-lnk" href="https://docs.google.com/forms/d/e/1FAIpQLSd83J2IZA6cdR6jPwABGsJE8YL4pkypAbKMGgUZZriU7Qu6Tg/viewform?fbzx=4406980310789882877" target="_blank" rel="noopener">
+                  <div class="ap-a-ico ap-a-ico-full-width">
                     {% do doc.icons.useIcon('icons/slack-logo.svg') %}
                     <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#slack-logo"></use></svg>
                   </div>
                 </a>
               </div>
-              <div class="ap-m-working-groups-button ap-m-working-groups-button-github">
-                <a class="ap-m-lnk" href="#">
-                  <div class="ap-a-ico">
+              <div class="ap-a-wg-btn ap-a-wg-btn-github">
+                <a class="ap-m-lnk" href={{ doc.html_url }} target="_blank" rel="noopener">
+                  <div class="ap-a-ico ap-a-ico-full-width">
                     {% do doc.icons.useIcon('icons/github-logo.svg') %}
                     <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#github-logo"></use></svg>
                   </div>
@@ -83,52 +83,50 @@
           </section>
 
           {% if doc.issues %}
-          <section class="ap-o-group-section ap-o-group-issues">
+          <section class="ap-o-wg-group-section">
             <h3>Current Issues</h3>
             {% if doc.issues|length > 3 %}
             <input type="checkbox" id="load-more-checkbox"/>
             {% endif %}
-            <div class="ap-o-group-issues-container">
+            <div class=" ap-o-wg-group-issues">
               {% for issue in doc.issues %}
-              <a href={{ issue.html_url }} class="ap-o-issue" target="_blank" rel="noopener">
-                <div class="ap-o-issue-icon">
+              <a href={{ issue.html_url }} class="ap-o-wg-issue" target="_blank" rel="noopener">
+                <div class="ap-o-wg-issue-icon">
                   <div class="ap-a-ico">
                     {% do doc.icons.useIcon('icons/exclamation.svg') %}
                     <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#exclamation"></use></svg>
                   </div>
                 </div>
-                <div class="ap-o-issue-text">
-                  <div class="ap-o-issue-text-title">
+                <div class="ap-o-wg-issue-text">
+                  <div class="ap-o-wg-issue-text-title">
                     <h4>{{ issue.title }}</h4>
                     {% for label in issue.labels %}
-                    <div class="ap-a-github-label" style="color: #{{ label.txt_color }}; background-color: #{{ label.background_color }};">
+                    <div class="ap-o-wg-gh-label" style="color: #{{ label.txt_color }}; background-color: #{{ label.background_color }};">
                       {{ label.name }}
                     </div>
                     {% endfor %}
                   </div>
-                  <p class="ap-o-issue-text-body">
-                    #{{ issue.number }} opened on {{ issue.created_at }} by @{{ issue.facilitator }}
-                  </p>
+                  <p>#{{ issue.number }} opened on {{ issue.created_at }} by @{{ issue.facilitator }}</p>
                 </div>
               </a>
               {% endfor %}
             </div>
             {% if doc.issues|length > 3 %}
-            <label class="ap-a-btn" for="load-more-checkbox">
+            <label class="ap-a-btn ap-o-wg-load-btn" for="load-more-checkbox">
               <span>View all</span>
             </label>
             {% endif %}
           </section>
           {% endif %}
 
-          <section class="ap-o-group-section ap-o-group-members">
+          <section class="ap-o-wg-group-section">
             <h3>Members</h3>
-            <div class="ap-o-group-members-wrapper">
+            <div class="ap-o-wg-group-members">
               {% for member in doc.members %}
-              <a href="{{ member.html_url }}" target="_blank" rel="noopener" class="ap-o-group-members-member">
-                <amp-img class="ap-o-group-members-member-img"
+              <a href="{{ member.html_url }}" target="_blank" rel="noopener" class="ap-o-wg-group-member">
+                <amp-img class="ap-o-wg-group-member-img"
                     src={{ member.img_url }} width="60" height="60" layout="responsive"></amp-img>
-                <div class="ap-o-group-members-member-text">
+                <div class="ap-o-wg-group-member-text">
                   <h4>Name Placeholder</h4>
                   <span>@{{ member.login }}</span>
                 </div>
@@ -138,57 +136,57 @@
             <p><a href={{ doc.html_url }} target="_blank" rel="noopener">The GitHub Team</a> also includes {{ doc.name }} WG members.</p>
           </section>
 
-          <section class="ap-o-group-section ap-o-group-channels">
+          <section class="ap-o-wg-group-section">
             <h2>Communication Channels</h2>
-            <div class="ap-o-group-channels-item ap-o-group-channels-item-slack">
-              <div class="ap-o-group-channels-item-icon ap-o-group-channels-item-slack-icon">
-                <div class="ap-a-ico ap-m-lnk-icon">
-                  {% do doc.icons.useIcon('icons/slack.svg') %}
-                  <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#slack"></use></svg>
+              <div class="ap-o-wg-group-channel ap-o-wg-group-channel-slack">
+                <div class="ap-o-wg-group-channel-icon ap-o-wg-group-channel-slack-icon">
+                  <div class="ap-a-ico ap-m-lnk-icon">
+                    {% do doc.icons.useIcon('icons/slack.svg') %}
+                    <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#slack"></use></svg>
+                  </div>
+                </div>
+                <div class="ap-o-wg-group-channel-text">
+                  <h4>Public Slack Channel</h4>
+                  <p><code>#wg-codeofconduct</code></p>
+                  <div class="ap-a-wg-btn ap-a-wg-btn-slack">
+                    <a class="ap-m-lnk" href="https://docs.google.com/forms/d/e/1FAIpQLSd83J2IZA6cdR6jPwABGsJE8YL4pkypAbKMGgUZZriU7Qu6Tg/viewform?fbzx=4406980310789882877" target="_blank" rel="noopener">
+                      <div class="ap-a-ico">
+                        {% do doc.icons.useIcon('icons/slack.svg') %}
+                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#slack"></use></svg>
+                      </div>
+                      <span>Add to Slack</span>
+                    </a>
+                  </div>
                 </div>
               </div>
-              <div class="ap-o-group-channels-item-text">
-                <h4>Public Slack Channel</h4>
-                <p><code>#wg-codeofconduct</code></p>
-                <div class="ap-m-working-groups-button ap-m-working-groups-button-slack">
-                  <a class="ap-m-lnk" href="#">
-                    <div class="ap-a-ico">
-                      {% do doc.icons.useIcon('icons/slack.svg') %}
-                      <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#slack"></use></svg>
-                    </div>
-                    <span>Add to Slack</span>
-                  </a>
+              <div class="ap-o-wg-group-channel ap-o-wg-group-channel-hangout">
+                <div class="ap-o-wg-group-channel-icon ap-o-wg-group-channel-hangout-icon">
+                  <div class="ap-a-ico">
+                    {% do doc.icons.useIcon('icons/bitmap.svg') %}
+                    <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#bitmap"></use></svg>
+                  </div>
+                </div>
+                <div class="ap-o-wg-group-channel-text">
+                  <h4>Google Hangout</h4>
+                  <div class="ap-a-wg-btn ap-a-wg-btn-hangout">
+                    <a class="ap-m-lnk" href="#">
+                      <div class="ap-a-ico">
+                        {% do doc.icons.useIcon('icons/camera.svg') %}
+                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#camera"></use></svg>
+                      </div>
+                      <span>Join Hangout</span>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="ap-o-group-channels-item ap-o-group-channels-item-hangout">
-              <div class="ap-o-group-channels-item-icon ap-o-group-channels-item-hangout-icon">
-                <div class="ap-a-ico">
-                  {% do doc.icons.useIcon('icons/bitmap.svg') %}
-                  <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#bitmap"></use></svg>
-                </div>
-              </div>
-              <div class="ap-o-group-channels-item-text">
-                <h4>Google Hangout</h4>
-                <div class="ap-m-working-groups-button ap-m-working-groups-button-hangout">
-                  <a class="ap-m-lnk" href="#">
-                    <div class="ap-a-ico">
-                      {% do doc.icons.useIcon('icons/camera.svg') %}
-                      <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#camera"></use></svg>
-                    </div>
-                    <span>Join Hangout</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="ap-o-group-channels-item ap-o-group-channels-item-email">
-              <div class="ap-o-group-channels-item-icon ap-o-group-channels-item-email-icon">
+              <div class="ap-o-wg-group-channel ap-o-wg-group-channel-email">
+              <div class="ap-o-wg-group-channel-icon ap-o-wg-group-channel-email-icon">
                 <div class="ap-a-ico">
                   {% do doc.icons.useIcon('icons/amp-email.svg') %}
                   <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#amp-email"></use></svg>
                 </div>
               </div>
-              <div class="ap-o-group-channels-item-text">
+              <div class="ap-o-wg-group-channel-text">
                 <h4>Email</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 <ul>
@@ -203,9 +201,9 @@
         </div>
       </div>
     </section>
-    <section class="ap-o-working-groups-related">
+    <section class="ap-o-wg-related">
       <h2>Other ways to get involved with AMP</h2>
-      <div class="ap-o-working-groups-related-item">
+      <div class="ap-o-wg-related-item">
         <h3>Contribute to AMP</h3>
         <p>The AMP Project would not be possible without help from all members of the community whether you are a developer, content creator or provider of services relevant to AMP There are many ways for you to contribute.</p>
         <div class="ap-o-benefits-overview-link">
@@ -218,7 +216,7 @@
           </a>
         </div>
       </div>
-      <div class="ap-o-working-groups-related-item">
+      <div class="ap-o-wg-related-item">
         <h3>Governance Body</h3>
         <p>Learn more about the Advisory Committee and Technical Steering Committee.</p>
           <a href="{{ g.doc('/content/amp-dev/community/governance.md', locale=doc.locale).url.path }}" class="ap-m-lnk ap-m-lnk-square">

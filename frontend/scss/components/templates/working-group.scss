@@ -19,10 +19,10 @@
 .#{template('working-groups')} {
   background: color('whisper');
 
-  .#{molecule('working-groups-button')} {
+  .#{atom('wg-btn')} {
     display: inline-block;
     height: 34px;
-    padding: 7px;
+    padding: 7px 10px;
     margin-right: 10px;
     border-radius: 4px;
 
@@ -36,11 +36,16 @@
     .#{atom('ico')} {
       margin-bottom: 0;
       padding: 0;
-      fill: white;
+      margin-right: 5px;
+      fill: color('white');
+
+      &-full-width {
+        width: 105px;
+      }
     }
 
     &-github {
-      background-color: black;
+      background-color: color('black');
     }
 
     &-slack {
@@ -92,13 +97,26 @@
     @include container-fluid;
   }
 
-  .#{organism('working-groups')} {
+  .#{organism('wg')} {
     padding: 0 15px;
     @media (min-width: 768px) {
       display: grid;
       grid-template-columns: repeat(24,1fr);
       grid-gap: 30px;
       padding: 0 2.5em;
+    }
+
+    &-gh-label {
+      display: inline-block;
+      height: 20px;
+      margin: 3px;
+      padding: 0.15em 4px;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 15px;
+      border-radius: 2px;
+      color: color('white');
+      box-shadow: inset 0 -1px 0 rgba(27,31,35,.12);
     }
 
     &-intro {
@@ -109,6 +127,72 @@
       @media (min-width: 1024px) {
         grid-column: 8/20;
         margin-bottom: 7em;
+      }
+    }
+
+    &-filter {
+      margin: 0 -15px;
+      @media (min-width: 1024px) {
+        grid-column: 1/7;
+      }
+      @media (min-width: 1280px) {
+        grid-column: 3/8;
+      }
+
+      & ul {
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        padding: 7px 0;
+        margin-top: 0;
+        list-style: none;
+        @media (min-width: 1024px) {
+          position: sticky;
+          top: 75px;
+          flex-direction: column;
+          max-height: calc(100vh - 75px);
+          overflow-x: inherit;
+          overflow-y: scroll;
+          margin-top: -10px;
+        }
+      }
+
+      &-bubble {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        margin: 13px 8px;
+        padding: 0 15px;
+        border-radius: 19px;
+
+        a {
+          @include txt;
+          white-space: nowrap;
+        }
+
+        &.active,
+        &:hover {
+          margin: 6.5px 5px;
+          box-shadow: 0 5px 15px -5px rgba(0,0,0,0.25);
+          background-color: color('blue-ribbon');
+
+          a {
+            font-weight: bold;
+            height: 38px;
+            line-height: 38px;
+            color: color('white');
+          }
+        }
+
+        &:first-child {
+          margin-left: 15px;
+        }
+        @media (min-width: 1024px) {
+          &:first-child {
+            margin-left: 8px;
+          }
+        }
       }
     }
 
@@ -123,72 +207,6 @@
         grid-gap: 30px;
         grid-template-columns: repeat(23,1fr);
         margin-bottom: 4em;
-      }
-
-      &-filter {
-        margin: 0 -15px;
-        @media (min-width: 1024px) {
-          grid-column: 1/7;
-        }
-        @media (min-width: 1280px) {
-          grid-column: 3/8;
-        }
-
-        & ul {
-          display: flex;
-          flex-direction: row;
-          overflow-x: scroll;
-          -webkit-overflow-scrolling: touch;
-          padding: 7px 0;
-          margin-top: 0;
-          list-style: none;
-          @media (min-width: 1024px) {
-            position: sticky;
-            top: 75px;
-            flex-direction: column;
-            max-height: calc(100vh - 75px);
-            overflow-x: inherit;
-            overflow-y: scroll;
-            margin-top: -10px;
-          }
-        }
-
-        &-bubble {
-          display: flex;
-          align-items: center;
-          width: fit-content;
-          margin: 13px 8px;
-          padding: 0 15px;
-          border-radius: 19px;
-
-          a {
-            @include txt;
-            white-space: nowrap;
-          }
-
-          &.active,
-          &:hover {
-            margin: 6.5px 5px;
-            box-shadow: 0 5px 15px -5px rgba(0,0,0,0.25);
-            background-color: color('blue-ribbon');
-
-            a {
-              font-weight: bold;
-              height: 38px;
-              line-height: 38px;
-              color: color('white');
-            }
-          }
-
-          &:first-child {
-            margin-left: 15px;
-          }
-          @media (min-width: 1024px) {
-            &:first-child {
-              margin-left: 8px;
-            }
-          }
-        }
       }
 
       &-container {
@@ -208,81 +226,58 @@
       }
     }
 
-    &-related {
-      margin-bottom: 8em;
-      padding: 0 15px;
-      @media (min-width: 768px) {
-        grid-column: 3/22;
-        padding: 0;
-      }
-      @media (min-width: 1024px) {
-        grid-column: 9/22;
-        padding: 0;
-      }
-    }
-  }
+    &-group {
+      grid-column: 2/15;
+      padding: 2.5em 0;
 
-  .#{organism('group')} {
-    grid-column: 2/15;
-    padding: 2.5em 0;
-
-    &-icon {
-      height: 5em;
-      width: 5em;
-      margin: auto;
-      padding: 1.5em;
-      border-radius: 50%;
-      background-color: color('blue-ribbon');
-      @media (min-width: 768px) {
-        height: 7em;
-        width: 7em;
-        padding: 2em;
-      }
-      @media (min-width: 1024px) {
-        height: 10em;
-        width: 10em;
-        margin: -7.5em auto 0;
-        padding: 2.5em;
-      }
-
-      .#{atom('ico')} {
-        height: 100%;
-        width: 100%;
-        fill: color('white');
-      }
-    }
-
-    &-section {
-      margin: 1.5em 0 3.5em;
-    }
-
-    &-description {
-      h5 {
-        @include txt;
-      }
-
-      h2 {
-        @include hl-h1;
-        margin: 0;
-      }
-
-      &-connect {
-        display: flex;
-        align-items: center;
-        margin-top: 2em;
-
-        h4 {
-          margin: 0 15px 0 0;
+      &-icon {
+        height: 5em;
+        width: 5em;
+        margin: auto;
+        padding: 1.5em;
+        border-radius: 50%;
+        background-color: color('blue-ribbon');
+        @media (min-width: 768px) {
+          height: 7em;
+          width: 7em;
+          padding: 2em;
+        }
+        @media (min-width: 1024px) {
+          height: 10em;
+          width: 10em;
+          margin: -7.5em auto 0;
+          padding: 2.5em;
         }
 
-        .#{molecule('working-groups-button')} .#{atom('ico')} {
-          width: 105px;
+        .#{atom('ico')} {
+          height: 100%;
+          width: 100%;
+          fill: color('white');
         }
       }
-    }
 
-    &-issues {
-      &-container {
+      &-section {
+        margin: 1.5em 0 3.5em;
+      }
+
+      &-description {
+        h2 {
+          @include hl-h1;
+          margin: 0;
+        }
+
+        &-connect {
+          display: flex;
+          align-items: center;
+          margin-top: 2em;
+
+          h4 {
+            margin: 0 15px 0 0;
+          }
+        }
+      }
+
+      &-issues {
         width: 100%;
 
         &:after {
@@ -290,108 +285,9 @@
           display: table;
           clear: both;
         }
-
-        .#{organism('issue')} {
-          display: flex;
-          margin-bottom: 15px;
-          padding: 20px;
-          border-radius: 4px;
-          background: color('gallery');
-          transition: transform 0.2s cubic-bezier(.25,.1,.25,1), box-shadow 0.3s cubic-bezier(.25,.1,.25,1);
-
-          &:nth-child(1n + 4) {
-            display: none;
-          }
-
-          &:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 9px 10px -8px rgba(0, 0, 0, 0.30);
-          }
-
-          &-icon {
-            height: 30px;
-            width: 30px;
-            margin-right: 12px;
-            border-radius: 50%;
-            background: color('malachite');
-
-            .#{atom('ico')} {
-              height: 100%;
-              width: 100%;
-            }
-          }
-
-          &-text {
-            width: calc(100% - 30px);
-
-            &-title {
-              display: flex;
-              flex-wrap: wrap;
-
-              .#{atom('github-label')} {
-                display: inline-block;
-                height: 20px;
-                margin: 3px;
-                padding: 0.15em 4px;
-                font-size: 12px;
-                font-weight: 600;
-                line-height: 15px;
-                border-radius: 2px;
-                color: color('white');
-                box-shadow: inset 0 -1px 0 rgba(27,31,35,.12);
-              }
-            }
-
-            h4,
-            p {
-              margin: 3px;
-            }
-            p {
-              @include txt;
-            }
-          }
-        }
       }
 
-      .#{atom('btn')} {
-        display: flex;
-        align-self: center;
-        justify-content: center;
-        max-width: 147px;
-        margin: auto;
-        padding: 0.5rem 2rem;
-        font-size: 0.875rem;
-        color: color('blue-ribbon');
-        border: 2px solid color('blue-ribbon');
-        background: transparent;
-        box-shadow: none;
-        opacity: 0.6;
-
-        .loaded {
-          display: none;
-        }
-
-        &:hover {
-          transform: none;
-          opacity: 1;
-        }
-      }
-
-      #load-more-checkbox {
-        display: none;
-
-        &:checked ~ .ap-o-group-issues-container .ap-o-issue:nth-child(1n + 4) {
-          display: flex;
-        }
-
-        &:checked ~ .ap-a-btn {
-          display: none;
-        }
-      }
-    }
-
-    &-members {
-      &-wrapper {
+      &-members {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -412,7 +308,6 @@
           transform: translateY(-1px);
           box-shadow: 0 9px 10px -8px rgba(0, 0, 0, 0.30);
         }
-
         @media (min-width: 768px) {
           width: 49%;
           margin-bottom: 2%;
@@ -425,16 +320,16 @@
           border-radius: 50%;
         }
 
-        h4 {
-          margin: 2px 0;
-        }
-
         &.active {
           background: color('ebony-clay');
 
           a,
           h4 {
             color: color('white');
+          }
+
+          h4 {
+            margin: 2px 0;
           }
 
           a {
@@ -447,10 +342,8 @@
           }
         }
       }
-    }
 
-    &-channels {
-      &-item {
+      &-channel {
         background: color('concrete');
         margin-bottom: 1.4em;
         padding: 15px;
@@ -497,6 +390,104 @@
             background-color: color('blue-ribbon');
           }
         }
+      }
+    }
+
+    &-load-btn {
+      display: flex;
+      align-self: center;
+      justify-content: center;
+      max-width: 147px;
+      margin: auto;
+      padding: 0.5rem 2rem;
+      font-size: 0.875rem;
+      color: color('blue-ribbon');
+      border: 2px solid color('blue-ribbon');
+      background: transparent;
+      box-shadow: none;
+      opacity: 0.6;
+
+      .loaded {
+        display: none;
+      }
+
+      &:hover {
+        transform: none;
+        opacity: 1;
+      }
+    }
+
+    #load-more-checkbox {
+      display: none;
+
+      &:checked ~ .ap-o-wg-group-issues .ap-o-wg-issue:nth-child(1n + 4) {
+        display: flex;
+      }
+
+      &:checked ~ .ap-a-btn {
+        display: none;
+      }
+    }
+
+    &-issue {
+      display: flex;
+      margin-bottom: 15px;
+      padding: 20px;
+      border-radius: 4px;
+      background: color('gallery');
+      transition: transform 0.2s cubic-bezier(.25,.1,.25,1), box-shadow 0.3s cubic-bezier(.25,.1,.25,1);
+
+      &:nth-child(1n + 4) {
+        display: none;
+      }
+
+      &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 9px 10px -8px rgba(0, 0, 0, 0.30);
+      }
+
+      &-icon {
+        height: 30px;
+        width: 30px;
+        margin-right: 12px;
+        border-radius: 50%;
+        background: color('malachite');
+
+        .#{atom('ico')} {
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      &-text {
+        width: calc(100% - 30px);
+
+        &-title {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        h4,
+        p {
+          margin: 3px;
+        }
+
+        p {
+          @include txt;
+        }
+      }
+    }
+
+    &-related {
+      margin-bottom: 8em;
+      padding: 0 15px;
+      @media (min-width: 768px) {
+        grid-column: 3/22;
+        padding: 0;
+      }
+      @media (min-width: 1024px) {
+        grid-column: 9/22;
+        padding: 0;
       }
     }
   }
