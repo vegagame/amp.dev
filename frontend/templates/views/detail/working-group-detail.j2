@@ -60,10 +60,10 @@
             <p>Working Group</p>
             <h2>{{ doc.name }}</h2>
             <p>{{ doc.description }}</p>
-            <p>The facilitator of {{ doc.name }} is: <a href="#">@nainar</a></p>
+            <p>The facilitator of {{ doc.name }} is: <a href="#">@placeholder</a></p>
             <div class="ap-o-wg-group-description-connect">
               <h4>Get in touch:</h4>
-              <div class="ap-a-wg-btn ap-a-wg-btn-slack">
+              <div class="ap-o-wg-btn ap-o-wg-btn-slack">
                 <a class="ap-m-lnk" href="https://docs.google.com/forms/d/e/1FAIpQLSd83J2IZA6cdR6jPwABGsJE8YL4pkypAbKMGgUZZriU7Qu6Tg/viewform?fbzx=4406980310789882877" target="_blank" rel="noopener">
                   <div class="ap-a-ico ap-a-ico-full-width">
                     {% do doc.icons.useIcon('icons/slack-logo.svg') %}
@@ -71,7 +71,7 @@
                   </div>
                 </a>
               </div>
-              <div class="ap-a-wg-btn ap-a-wg-btn-github">
+              <div class="ap-o-wg-btn ap-o-wg-btn-github">
                 <a class="ap-m-lnk" href={{ doc.html_url }} target="_blank" rel="noopener">
                   <div class="ap-a-ico ap-a-ico-full-width">
                     {% do doc.icons.useIcon('icons/github-logo.svg') %}
@@ -86,7 +86,7 @@
           <section class="ap-o-wg-group-section">
             <h3>Current Issues</h3>
             {% if doc.issues|length > 3 %}
-            <input type="checkbox" id="load-more-checkbox"/>
+            <input type="checkbox" id="load-issues-checkbox"/>
             {% endif %}
             <div class=" ap-o-wg-group-issues">
               {% for issue in doc.issues %}
@@ -112,7 +112,7 @@
               {% endfor %}
             </div>
             {% if doc.issues|length > 3 %}
-            <label class="ap-a-btn ap-o-wg-load-btn" for="load-more-checkbox">
+            <label class="ap-a-btn ap-o-wg-load-btn" for="load-issues-checkbox">
               <span>View all</span>
             </label>
             {% endif %}
@@ -121,18 +121,24 @@
 
           <section class="ap-o-wg-group-section">
             <h3>Members</h3>
-            <div class="ap-o-wg-group-members">
+            {% if doc.issues|length > 4 %}
+            <input type="checkbox" id="load-members-checkbox"/>
+            {% endif %}
+            <div class="ap-o-wg-group-card-grid">
               {% for member in doc.members %}
-              <a href="{{ member.html_url }}" target="_blank" rel="noopener" class="ap-o-wg-group-member">
-                <amp-img class="ap-o-wg-group-member-img"
+              <a href="{{ member.html_url }}" target="_blank" rel="noopener" class="ap-o-wg-member">
+                <amp-img class="ap-o-wg-member-img"
                     src={{ member.img_url }} width="60" height="60" layout="responsive"></amp-img>
-                <div class="ap-o-wg-group-member-text">
+                <div class="ap-o-wg-member-text">
                   <h4>Name Placeholder</h4>
                   <span>@{{ member.login }}</span>
                 </div>
               </a>
               {% endfor %}
             </div>
+            <label class="ap-a-btn ap-o-wg-load-btn" for="load-members-checkbox">
+              <span>View all</span>
+            </label>
             <p><a href={{ doc.html_url }} target="_blank" rel="noopener">The GitHub Team</a> also includes {{ doc.name }} WG members.</p>
           </section>
 
@@ -148,7 +154,7 @@
                 <div class="ap-o-wg-group-channel-text">
                   <h4>Public Slack Channel</h4>
                   <p><code>#wg-codeofconduct</code></p>
-                  <div class="ap-a-wg-btn ap-a-wg-btn-slack">
+                  <div class="ap-o-wg-btn ap-o-wg-btn-slack">
                     <a class="ap-m-lnk" href="https://docs.google.com/forms/d/e/1FAIpQLSd83J2IZA6cdR6jPwABGsJE8YL4pkypAbKMGgUZZriU7Qu6Tg/viewform?fbzx=4406980310789882877" target="_blank" rel="noopener">
                       <div class="ap-a-ico">
                         {% do doc.icons.useIcon('icons/slack.svg') %}
@@ -168,7 +174,7 @@
                 </div>
                 <div class="ap-o-wg-group-channel-text">
                   <h4>Google Hangout</h4>
-                  <div class="ap-a-wg-btn ap-a-wg-btn-hangout">
+                  <div class="ap-o-wg-btn ap-o-wg-btn-hangout">
                     <a class="ap-m-lnk" href="#">
                       <div class="ap-a-ico">
                         {% do doc.icons.useIcon('icons/camera.svg') %}

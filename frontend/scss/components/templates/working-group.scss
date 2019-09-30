@@ -7,10 +7,6 @@
 ### INFO:
 
 */
-@import '_extends.scss';
-@import '_functions.scss';
-@import '_mixins.scss';
-@import '_variables.scss';
 @import 'components/atoms/_text.scss';
 @import 'components/atoms/_color.scss';
 @import 'components/atoms/_headline.scss';
@@ -18,44 +14,6 @@
 
 .#{template('working-groups')} {
   background: color('whisper');
-
-  .#{atom('wg-btn')} {
-    display: inline-block;
-    height: 34px;
-    padding: 7px 10px;
-    margin-right: 10px;
-    border-radius: 4px;
-
-    .#{molecule('lnk')} {
-      display: flex;
-      color: color('white');
-      height: 100%;
-      padding: 0;
-    }
-
-    .#{atom('ico')} {
-      margin-bottom: 0;
-      padding: 0;
-      margin-right: 5px;
-      fill: color('white');
-
-      &-full-width {
-        width: 105px;
-      }
-    }
-
-    &-github {
-      background-color: color('black');
-    }
-
-    &-slack {
-      background-color: color('slack');
-    }
-
-    &-hangout {
-      background-color: color('fruit-salad');
-    }
-  }
 
   .#{utility('stage')} {
     .#{organism('stage')} {
@@ -97,6 +55,12 @@
     @include container-fluid;
   }
 
+  .#{utility('content')} {
+    @include content;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
   .#{organism('wg')} {
     padding: 0 15px;
     @media (min-width: 768px) {
@@ -104,6 +68,87 @@
       grid-template-columns: repeat(24,1fr);
       grid-gap: 30px;
       padding: 0 2.5em;
+    }
+
+    &-btn {
+      display: inline-block;
+      height: 34px;
+      padding: 7px 10px;
+      margin-right: 10px;
+      border-radius: 4px;
+
+      .#{molecule('lnk')} {
+        display: flex;
+        color: color('white');
+        height: 100%;
+        padding: 0;
+      }
+
+      .#{atom('ico')} {
+        margin-bottom: 0;
+        padding: 0;
+        margin-right: 5px;
+        fill: color('white');
+
+        &-full-width {
+          width: 105px;
+        }
+      }
+
+      &-github {
+        background-color: color('black');
+      }
+
+      &-slack {
+        background-color: color('slack');
+      }
+
+      &-hangout {
+        background-color: color('fruit-salad');
+      }
+    }
+
+    &-load-btn {
+      display: flex;
+      align-self: center;
+      justify-content: center;
+      max-width: 147px;
+      margin: auto;
+      padding: 0.5rem 2rem;
+      font-size: 0.875rem;
+      color: color('blue-ribbon');
+      border: 2px solid color('blue-ribbon');
+      background: transparent;
+      box-shadow: none;
+      opacity: 0.6;
+
+      .loaded {
+        display: none;
+      }
+
+      &:hover {
+        transform: none;
+        opacity: 1;
+      }
+    }
+
+    #load-issues-checkbox, #load-members-checkbox {
+      display: none;
+
+      &:checked ~ .ap-a-btn {
+        display: none;
+      }
+    }
+
+    #load-issues-checkbox {
+      &:checked ~ .ap-o-wg-group-issues .ap-o-wg-issue:nth-child(1n + 4) {
+        display: flex;
+      }
+    }
+    #load-members-checkbox {
+      &:checked ~ .ap-o-wg-group-card-grid .ap-o-wg-member:nth-child(1n + 5) {
+        display: flex;
+      }
     }
 
     &-gh-label {
@@ -268,11 +313,16 @@
 
         &-connect {
           display: flex;
+          flex-wrap: wrap;
           align-items: center;
           margin-top: 2em;
 
           h4 {
+            width: 100%;
             margin: 0 15px 0 0;
+            @media (min-width: 600px) {
+              width: auto;
+            }
           }
         }
       }
@@ -287,60 +337,10 @@
         }
       }
 
-      &-members {
+      &-card-grid {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-      }
-
-      &-member {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        width: 100%;
-        background: color('gallery');
-        border-radius: 4px;
-        margin-bottom: 1em;
-        padding: 20px;
-        transition: transform 0.2s cubic-bezier(.25,.1,.25,1), box-shadow 0.3s cubic-bezier(.25,.1,.25,1);
-
-        &:hover {
-          transform: translateY(-1px);
-          box-shadow: 0 9px 10px -8px rgba(0, 0, 0, 0.30);
-        }
-        @media (min-width: 768px) {
-          width: 49%;
-          margin-bottom: 2%;
-        }
-
-        &-img {
-          height: 65px;
-          width: 65px;
-          margin-right: 15px;
-          border-radius: 50%;
-        }
-
-        &.active {
-          background: color('ebony-clay');
-
-          a,
-          h4 {
-            color: color('white');
-          }
-
-          h4 {
-            margin: 2px 0;
-          }
-
-          a {
-            text-decoration: underline;
-          }
-
-          p {
-            font-weight: bold;
-            margin: 2px 0;
-          }
-        }
       }
 
       &-channel {
@@ -393,39 +393,62 @@
       }
     }
 
-    &-load-btn {
+    &-member {
       display: flex;
-      align-self: center;
-      justify-content: center;
-      max-width: 147px;
-      margin: auto;
-      padding: 0.5rem 2rem;
-      font-size: 0.875rem;
-      color: color('blue-ribbon');
-      border: 2px solid color('blue-ribbon');
-      background: transparent;
-      box-shadow: none;
-      opacity: 0.6;
-
-      .loaded {
-        display: none;
-      }
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      background: color('gallery');
+      border-radius: 4px;
+      margin-bottom: 1em;
+      padding: 20px;
+      transition: transform 0.2s cubic-bezier(.25,.1,.25,1), box-shadow 0.3s cubic-bezier(.25,.1,.25,1);
 
       &:hover {
-        transform: none;
-        opacity: 1;
-      }
-    }
-
-    #load-more-checkbox {
-      display: none;
-
-      &:checked ~ .ap-o-wg-group-issues .ap-o-wg-issue:nth-child(1n + 4) {
-        display: flex;
+        transform: translateY(-1px);
+        box-shadow: 0 9px 10px -8px rgba(0, 0, 0, 0.30);
       }
 
-      &:checked ~ .ap-a-btn {
+      &:nth-child(1n + 5) {
         display: none;
+      }
+
+      @media (min-width: 768px) {
+        width: 49%;
+        margin-bottom: 2%;
+      }
+
+      &-img {
+        height: 65px;
+        width: 65px;
+        margin-right: 15px;
+        border-radius: 50%;
+      }
+
+      h4 {
+        margin: 3px 0;
+      }
+
+      &.active {
+        background: color('ebony-clay');
+
+        a,
+        h4 {
+          color: color('white');
+        }
+
+        h4 {
+          margin: 2px 0;
+        }
+
+        a {
+          text-decoration: underline;
+        }
+
+        p {
+          font-weight: bold;
+          margin: 2px 0;
+        }
       }
     }
 
@@ -490,11 +513,5 @@
         padding: 0;
       }
     }
-  }
-
-  .#{utility('content')} {
-    @include content;
-    max-width: 600px;
-    margin: 0 auto;
   }
 }
