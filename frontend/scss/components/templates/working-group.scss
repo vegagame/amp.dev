@@ -29,12 +29,13 @@
       &-image {
         position: absolute;
         top: 0;
-        right: 8%;
-        height: 100%;
-        width: 90%;
+        right: 0;
+        width: 60%;
         @media (min-width: 768px) {
           right: 8%;
-          height: 100%;
+          width: 56%;
+        }
+        @media (min-width: 1024px) {
           width: 45%;
         }
       }
@@ -132,21 +133,14 @@
       }
     }
 
-    #load-issues-checkbox, #load-members-checkbox {
+    #load-issues-checkbox {
       display: none;
 
-      &:checked ~ .ap-a-btn {
+      &:checked ~ .ap-o-wg-load-btn {
         display: none;
       }
-    }
 
-    #load-issues-checkbox {
       &:checked ~ .ap-o-wg-group-issues .ap-o-wg-issue:nth-child(1n + 4) {
-        display: flex;
-      }
-    }
-    #load-members-checkbox {
-      &:checked ~ .ap-o-wg-group-card-grid .ap-o-wg-member:nth-child(1n + 5) {
         display: flex;
       }
     }
@@ -241,6 +235,12 @@
       }
     }
 
+    &-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
     &-content {
       grid-column: 1/24;
       display: flex;
@@ -273,7 +273,11 @@
 
     &-group {
       grid-column: 2/15;
-      padding: 2.5em 0;
+      padding: 2.5em 0 0;
+
+      &-section {
+        margin: 1.5em 0 3.5em;
+      }
 
       &-icon {
         height: 5em;
@@ -301,10 +305,6 @@
         }
       }
 
-      &-section {
-        margin: 1.5em 0 3.5em;
-      }
-
       &-description {
         h2 {
           @include hl-h1;
@@ -315,147 +315,25 @@
           display: flex;
           flex-wrap: wrap;
           align-items: center;
-          margin-top: 2em;
+          @media (min-width: 600px) {
+            margin-top: 2em;
+          }
 
           h4 {
             width: 100%;
-            margin: 0 15px 0 0;
             @media (min-width: 600px) {
+              margin: 0 1em 0 0;
               width: auto;
             }
           }
-        }
-      }
-
-      &-issues {
-        width: 100%;
-
-        &:after {
-          content: "";
-          display: table;
-          clear: both;
-        }
-      }
-
-      &-card-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-
-      &-channel {
-        background: color('concrete');
-        margin-bottom: 1.4em;
-        padding: 15px;
-        border-radius: 4px;
-        @media (min-width: 768px) {
-          display: flex;
-        }
-
-        &-icon {
-          height: 5em;
-          width: 5em;
-          margin-right: 15px;
-          padding: 1.2em;
-          border-radius: 50%;
-
-          .#{atom('ico')} {
-            height: 100%;
-            width: 100%;
-            margin: auto;
-            padding: 0;
-            fill: color('white');
-          }
-        }
-        @media (min-width: 768px) {
-          &-text {
-            width: calc(100% - 100px);
-          }
-        }
-
-        &-slack {
-          &-icon {
-            background-color: color('slack');
-          }
-        }
-
-        &-hangout {
-          &-icon {
-            background-color: color('fruit-salad');
-          }
-        }
-
-        &-email {
-          &-icon {
-            background-color: color('blue-ribbon');
-          }
-        }
-      }
-    }
-
-    &-member {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      width: 100%;
-      background: color('gallery');
-      border-radius: 4px;
-      margin-bottom: 1em;
-      padding: 20px;
-      transition: transform 0.2s cubic-bezier(.25,.1,.25,1), box-shadow 0.3s cubic-bezier(.25,.1,.25,1);
-
-      &:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 9px 10px -8px rgba(0, 0, 0, 0.30);
-      }
-
-      &:nth-child(1n + 5) {
-        display: none;
-      }
-
-      @media (min-width: 768px) {
-        width: 49%;
-        margin-bottom: 2%;
-      }
-
-      &-img {
-        height: 65px;
-        width: 65px;
-        margin-right: 15px;
-        border-radius: 50%;
-      }
-
-      h4 {
-        margin: 3px 0;
-      }
-
-      &.active {
-        background: color('ebony-clay');
-
-        a,
-        h4 {
-          color: color('white');
-        }
-
-        h4 {
-          margin: 2px 0;
-        }
-
-        a {
-          text-decoration: underline;
-        }
-
-        p {
-          font-weight: bold;
-          margin: 2px 0;
         }
       }
     }
 
     &-issue {
       display: flex;
-      margin-bottom: 15px;
-      padding: 20px;
+      margin-bottom: 1em;
+      padding: 1em;
       border-radius: 4px;
       background: color('gallery');
       transition: transform 0.2s cubic-bezier(.25,.1,.25,1), box-shadow 0.3s cubic-bezier(.25,.1,.25,1);
@@ -501,9 +379,107 @@
       }
     }
 
+    &-member {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      background: color('gallery');
+      border-radius: 4px;
+      margin-bottom: 1em;
+      padding: 1em;
+      transition: transform 0.2s cubic-bezier(.25,.1,.25,1), box-shadow 0.3s cubic-bezier(.25,.1,.25,1);
+      @media (min-width: 768px) {
+        width: 49%;
+        margin-bottom: 2%;
+      }
+
+      &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 9px 10px -8px rgba(0, 0, 0, 0.30);
+      }
+
+      &-img {
+        height: 65px;
+        width: 65px;
+        margin-right: 1em;
+        border-radius: 50%;
+      }
+
+      h4 {
+        margin: 3px 0;
+      }
+
+      &.active {
+        background: color('ebony-clay');
+
+        a,
+        h4 {
+          color: color('white');
+        }
+
+        h4 {
+          margin: 2px 0;
+        }
+
+        a {
+          text-decoration: underline;
+        }
+
+        p {
+          font-weight: bold;
+          margin: 2px 0;
+        }
+      }
+    }
+
+    &-channel {
+      background: color('concrete');
+      margin-bottom: 1em;
+      padding: 1em;
+      border-radius: 4px;
+      @media (min-width: 768px) {
+        display: flex;
+      }
+
+      &-icon {
+        height: 5em;
+        width: 5em;
+        margin-right: 1em;
+        padding: 1.2em;
+        border-radius: 50%;
+
+        .#{atom('ico')} {
+          height: 100%;
+          width: 100%;
+          margin: auto;
+          padding: 0;
+          fill: color('white');
+        }
+
+        &-slack {
+          background-color: color('slack');
+        }
+
+        &-hangout {
+          background-color: color('fruit-salad');
+        }
+
+        &-email {
+          background-color: color('blue-ribbon');
+        }
+      }
+
+      &-text {
+        @media (min-width: 768px) {
+          width: calc(100% - 100px);
+        }
+      }
+    }
+
     &-related {
       margin-bottom: 8em;
-      padding: 0 15px;
+      padding: 0 1em;
       @media (min-width: 768px) {
         grid-column: 3/22;
         padding: 0;
