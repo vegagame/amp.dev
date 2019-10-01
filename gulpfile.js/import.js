@@ -50,12 +50,15 @@ async function getWorkingGroups(data) {
 
     workingGroups.push(
         {
-          '$title': `Working Group: ${wg.name}`,
+          '$title': `Working Group: ${meta.title}`,
           'html_url': wg.html_url,
           'name': wg.name,
-          'description': wg.description,
+          'full_name': meta.title,
+          'facilitator': meta.facilitator,
+          'description': meta.description,
           'issues': issues,
-          'members': members,
+          'members': meta.members,
+          'communication': meta.communication,
         }
     );
   }
@@ -64,10 +67,11 @@ async function getWorkingGroups(data) {
 }
 
 async function getGroupMetadata(wg) {
-  // const client = new GitHubImporter();
-  // const data = await client._github.repo(`ampproject/${wg.name}`).contentsAsync('meta.yaml');
-  //
-  // console.log(data);
+  const client = new GitHubImporter();
+  const rawData = await client._github.repo(`robinvanopstal/${wg.name}`).contentsAsync('METADATA.yaml');
+  const data = yaml.safeLoad(Buffer.from(rawData[0].content, 'base64').toString());
+
+  return data;
 }
 
 async function getGroupMembers(wg) {

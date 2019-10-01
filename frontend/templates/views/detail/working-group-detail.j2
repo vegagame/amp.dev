@@ -131,7 +131,7 @@
             <h3>Members</h3>
             <div class="ap-o-wg-grid">
               {% for member in doc.members %}
-              <a href="{{ member.html_url }}" target="_blank" rel="noopener" class="ap-o-wg-member">
+              <a href="{{ member.html_url }}" target="_blank" rel="noopener" class="ap-o-wg-member {% if member.login == doc.facilitator.login %} active {% endif %}">
                 <amp-img class="ap-o-wg-member-img"
                     src={{ member.img_url }} width="60" height="60" layout="responsive"></amp-img>
                 <div class="ap-o-wg-member-text">
@@ -146,65 +146,13 @@
 
           <section class="ap-o-wg-group-section">
             <h2>Communication Channels</h2>
+            {% for item in doc.communication %}
             <div class="ap-o-wg-channel">
-              <div class="ap-o-wg-channel-icon ap-o-wg-channel-icon-slack">
-                <div class="ap-a-ico ap-m-lnk-icon">
-                  {% do doc.icons.useIcon('icons/slack.svg') %}
-                  <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#slack"></use></svg>
-                </div>
-              </div>
               <div class="ap-o-wg-channel-text">
-                <h4>Public Slack Channel</h4>
-                <p><code>#wg-codeofconduct</code></p>
-                <div class="ap-o-wg-btn ap-o-wg-btn-slack">
-                  <a class="ap-m-lnk" href="https://docs.google.com/forms/d/e/1FAIpQLSd83J2IZA6cdR6jPwABGsJE8YL4pkypAbKMGgUZZriU7Qu6Tg/viewform?fbzx=4406980310789882877" target="_blank" rel="noopener">
-                    <div class="ap-a-ico">
-                      {% do doc.icons.useIcon('icons/slack.svg') %}
-                      <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#slack"></use></svg>
-                    </div>
-                    <span>Add to Slack</span>
-                  </a>
-                </div>
+                <h4>{{ item.name }}</h4>
               </div>
             </div>
-            <div class="ap-o-wg-channel">
-              <div class="ap-o-wg-channel-icon ap-o-wg-channel-icon-hangout">
-                <div class="ap-a-ico">
-                  {% do doc.icons.useIcon('icons/bitmap.svg') %}
-                  <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#bitmap"></use></svg>
-                </div>
-              </div>
-              <div class="ap-o-wg-channel-text">
-                <h4>Google Hangout</h4>
-                <div class="ap-o-wg-btn ap-o-wg-btn-hangout">
-                  <a class="ap-m-lnk" href="#">
-                    <div class="ap-a-ico">
-                      {% do doc.icons.useIcon('icons/camera.svg') %}
-                      <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#camera"></use></svg>
-                    </div>
-                    <span>Join Hangout</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="ap-o-wg-channel">
-              <div class="ap-o-wg-channel-icon ap-o-wg-channel-icon-email">
-                <div class="ap-a-ico">
-                  {% do doc.icons.useIcon('icons/amp-email.svg') %}
-                  <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#amp-email"></use></svg>
-                </div>
-              </div>
-              <div class="ap-o-wg-channel-text">
-                <h4>Email</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <ul>
-                  <li>Lorem ipsum dolor sit amet, consectetur</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur ipsum dolor sit amet, consectetur</li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit ipsum dolor sit amet, consectetur ipsum dolor sit amet, consectetur.</p>
-              </div>
-            </div>
+            {% endfor %}
           </section>
         </div>
       </div>
