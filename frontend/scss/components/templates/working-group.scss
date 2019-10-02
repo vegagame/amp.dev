@@ -103,10 +103,6 @@
       &-slack {
         background-color: color('slack');
       }
-
-      &-hangout {
-        background-color: color('fruit-salad');
-      }
     }
 
     &-load-btn {
@@ -143,6 +139,12 @@
       &:checked ~ .ap-o-wg-group-issues .ap-o-wg-issue:nth-child(1n + 4) {
         display: flex;
       }
+    }
+
+    code {
+      @include txt-mono;
+      padding: 2px 4px;
+      background-color: color('gallery');
     }
 
     &-gh-label {
@@ -337,6 +339,9 @@
       border-radius: 4px;
       background: color('gallery');
       transition: transform 0.2s cubic-bezier(.25,.1,.25,1), box-shadow 0.3s cubic-bezier(.25,.1,.25,1);
+      @media (min-width: 768px) {
+        padding: 1.5em;
+      }
 
       &:nth-child(1n + 4) {
         display: none;
@@ -392,6 +397,7 @@
       @media (min-width: 768px) {
         width: 49%;
         margin-bottom: 2%;
+        padding: 1.2em;
       }
 
       &:hover {
@@ -400,8 +406,8 @@
       }
 
       &-img {
-        height: 65px;
-        width: 65px;
+        height: 72px;
+        width: 72px;
         margin-right: 1em;
         border-radius: 50%;
       }
@@ -418,17 +424,24 @@
           margin: 2px 0;
         }
 
+        span {
+          color: color('white');
+          font-size: 0.9em;
+          text-decoration: underline;
+        }
+
         p {
-          font-weight: bold;
           margin: 2px 0;
+          color: color('oslo-gray');
+          font-size: 0.9em;
         }
       }
     }
 
     &-channel {
-      background: color('concrete');
+      background: color('wild-sand');
       margin-bottom: 1em;
-      padding: 1em;
+      padding: 1.5em 1em;
       border-radius: 4px;
       @media (min-width: 768px) {
         display: flex;
@@ -453,8 +466,8 @@
           background-color: color('slack');
         }
 
-        &-hangout {
-          background-color: color('fruit-salad');
+        &-github {
+          background-color: color('black');
         }
 
         &-email {
