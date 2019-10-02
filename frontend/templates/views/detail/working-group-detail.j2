@@ -67,8 +67,8 @@
           <section class="ap-o-wg-group-section ap-o-wg-group-description">
             <p>Working Group</p>
             <h2>{{ doc.full_name }}</h2>
-            <p>{{ doc.description }}</p>
-            <p>The facilitator of {{ doc.name }} is: <a href="#">@placeholder</a></p>
+            <p>{{ doc.description|markdown|safe }}</p>
+            <p>The facilitator of {{ doc.full_name }} is: <a href="#">@{{ doc.facilitator.login }}</a></p>
             <div class="ap-o-wg-group-description-connect">
               <h4>Get in touch:</h4>
               <div class="ap-o-wg-btn ap-o-wg-btn-slack">
@@ -130,12 +130,26 @@
           <section class="ap-o-wg-group-section">
             <h3>Members</h3>
             <div class="ap-o-wg-grid">
+              <a href="https://github.com/{{ doc.facilitator.login }}" target="_blank" rel="noopener" class="ap-o-wg-member active">
+                <amp-img class="ap-o-wg-member-img"
+                    src="https://github.com/{{ doc.facilitator.login }}.png"
+                    width="72"
+                    height="72"
+                    layout="responsive">
+                </amp-img>
+                <div class="ap-o-wg-member-text">
+                  <h4>{{ doc.facilitator.name }}</h4>
+                  <span>@{{ doc.facilitator.login }}</span>
+                  <p>Facilitator</p>
+                </div>
+              </a>
+              {% if doc.member %}
               {% for member in doc.members %}
-              <a href="https://github.com/{{ member.login }}" target="_blank" rel="noopener" class="ap-o-wg-member {% if member.login == doc.facilitator.login %} active {% endif %}">
+              <a href="https://github.com/{{ member.login }}" target="_blank" rel="noopener" class="ap-o-wg-member">
                 <amp-img class="ap-o-wg-member-img"
                     src="https://github.com/{{ member.login }}.png"
-                    width="60"
-                    height="60"
+                    width="72"
+                    height="72"
                     layout="responsive">
                 </amp-img>
                 <div class="ap-o-wg-member-text">
@@ -144,13 +158,14 @@
                 </div>
               </a>
               {% endfor %}
+              {% endif %}
             </div>
             <p><a href={{ doc.html_url }} target="_blank" rel="noopener">The GitHub Team</a> also includes {{ doc.full_name }} WG members.</p>
           </section>
 
           {% if doc.communication %}
           <section class="ap-o-wg-group-section">
-            <h2>Communication Channels</h2>
+            <h3>Communication Channels</h3>
             {% for item in doc.communication %}
             <div class="ap-o-wg-channel">
               <div class="ap-o-wg-channel-icon ap-o-wg-channel-icon-{{ item.channel }}">
@@ -161,7 +176,21 @@
               </div>
               <div class="ap-o-wg-channel-text">
                 <h4>{{ item.name }}</h4>
-                <p>{{ item.content|markdown|safe }}</p>
+                {% for el in item.content %}
+                <p>{{ el.item|markdown|safe }}</p>
+                {% endfor %}
+
+                {% if (item.channel == 'slack' or item.channel == 'github') %}
+                <div class="ap-o-wg-btn ap-o-wg-btn-{{ item.channel }}">
+                  <a class="ap-m-lnk" href={% if item.channel == 'slack' %}https://docs.google.com/forms/d/e/1FAIpQLSd83J2IZA6cdR6jPwABGsJE8YL4pkypAbKMGgUZZriU7Qu6Tg/viewform?fbzx=4406980310789882877{% else %}{{ doc.html_url }}{% endif %} target="_blank" rel="noopener">
+                    <div class="ap-a-ico">
+                      {% do doc.icons.useIcon('icons/' + item.channel + '.svg') %}
+                      <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#{{ item.channel }}"></use></svg>
+                    </div>
+                    <span>{% if item.channel == 'slack' %}Add to Slack{% else %}Go to Github{% endif %}</span>
+                  </a>
+                </div>
+                {% endif %}
               </div>
             </div>
             {% endfor %}
