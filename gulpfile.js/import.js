@@ -18,135 +18,69 @@
 
 const fs = require('fs');
 const yaml = require('js-yaml');
+const gulp = require('gulp');
+const emojiStrip = require('emoji-strip');
+const {promisify} = require('util');
+const writeFileAsync = promisify(fs.writeFile);
 const {GitHubImporter} = require('@lib/pipeline/gitHubImporter');
 
+const WG_GH_REPOSITORY_PATH = 'ampproject';
 const WG_DIRECTORY_PATH = 'pages/content/amp-dev/community/working-groups';
-
+/*
+Mid HEX Value to set github-label color to either black or white - corresponding to the given background color.
+ */
+const WG_LABEL_COLOR_THRESHOLD = 7500000;
 
 async function importWorkingGroups() {
-  console.log('Importing... ');
-
-  const data = await loadData();
-  const workingGroups = await getWorkingGroups(data);
-
-  writeYamlFiles(workingGroups);
-}
-
-async function loadData() {
   const client = new GitHubImporter();
-  const repos = await client._github.org('ampproject').reposAsync();
-
-  return repos;
-}
-
-async function getWorkingGroups(data) {
-  const repos = data[0].filter((item) => item.name.includes('wg-'));
-  const workingGroups = [];
+  const repos = (await client._github.org(WG_GH_REPOSITORY_PATH).reposAsync())[0];
 
   for (const wg of repos) {
-    const meta = await getGroupMetadata(wg);
-    const issues = await getGroupIssues(wg);
-    const members = await getGroupMembers(wg);
+    if (!wg.name.includes('wg-')) {
+      continue;
+    }
 
-    workingGroups.push(
-        {
-          '$title': `Working Group: ${meta.title}`,
-          'html_url': wg.html_url,
-          'name': wg.name,
-          'full_name': meta.title,
-          'facilitator': meta.facilitator,
-          'description': meta.description,
-          'issues': issues,
-          'members': meta.members,
-          'communication': meta.communication,
-        }
-    );
-  }
+    let meta = await client._github.repo(`${WG_GH_REPOSITORY_PATH}/${wg.name}`, 'meta').contentsAsync('METADATA.yaml');
+    meta = yaml.safeLoad(Buffer.from(meta[0].content, 'base64').toString());
 
-  return workingGroups;
-}
+    let issues = (await client._github.repo(`${WG_GH_REPOSITORY_PATH}/${wg.name}`).issuesAsync())[0];
+    issues = issues.map((issue) => {
+      const date = new Date(issue.created_at).toDateString();
+      const title = emojiStrip(issue.title);
 
-async function getGroupMetadata(wg) {
-  const client = new GitHubImporter();
-  const rawData = await client._github.repo(`robinvanopstal/${wg.name}`).contentsAsync('METADATA.yaml');
-  const data = yaml.safeLoad(Buffer.from(rawData[0].content, 'base64').toString());
+      issue.labels = issue.labels.map((label) => {
+        const txtColor = ((parseInt(`0x${label.color}`) < IMPORT_WGS_LABEL_COLOR_THRESHOLD) ? 'fff' : '000');
 
-  return data;
-}
-
-async function getGroupMembers(wg) {
-  const members = [];
-
-  const client = new GitHubImporter();
-  const data = await client._github.repo(`ampproject/${wg.name}`).contributorsAsync();
-
-  for (const member of data[0]) {
-    members.push(
-        {
-          'login': member.login,
-          'html_url': member.html_url,
-          'img_url': `https://github.com/${member.login}.png?size=60`,
-        }
-    );
-  }
-
-  return members;
-}
-
-async function getGroupIssues(wg) {
-  const issues = [];
-  const client = new GitHubImporter();
-  const issuesData = await client._github.repo(`ampproject/${wg.name}`).issuesAsync();
-
-  for (const issue of issuesData[0]) {
-    const date = new Date(issue.created_at).toDateString();
-    const labels = getIssueLabels(issue.labels);
-
-    issues.push(
-        {
-          'title': issue.title,
-          'html_url': issue.html_url,
-          'created_at': date,
-          'facilitator': issue.user.login,
-          'number': issue.number,
-          'labels': labels,
-        }
-    );
-  }
-
-  return issues;
-}
-
-function getIssueLabels(labels) {
-  const issueLabels = [];
-
-  for (const label of labels) {
-    const hexVal = parseInt(`0x${label.color}`);
-    const txtColor = ((hexVal < 7500000) ? 'fff' : '000');
-
-    issueLabels.push(
-        {
+        return {
           'name': label.name,
           'background_color': label.color,
           'txt_color': txtColor,
-        }
-    );
-  }
-  return issueLabels;
-}
+        };
+      });
 
-function writeYamlFiles(workingGroups) {
-  console.log('Writing files..');
-
-  workingGroups.forEach((group) => {
-    const fileName = `${group.name}.yaml`;
-    const dir = `${WG_DIRECTORY_PATH}/${fileName}`;
-
-    fs.writeFile(dir, yaml.safeDump(group), () => {
-      console.log('- ', fileName);
+      return {
+        'title': title,
+        'html_url': issue.html_url,
+        'created_at': date,
+        'author': issue.user.login,
+        'number': issue.number,
+        'labels': issue.labels,
+      };
     });
-  });
-}
 
+    await writeFileAsync(`${WG_DIRECTORY_PATH}/${wg.name}.yaml`, yaml.dump({
+      '$title': `Working Group: ${meta.title}`,
+      'html_url': wg.html_url,
+      'name': wg.name,
+      'full_name': meta.title,
+      'facilitator': meta.facilitator,
+      'description': meta.description,
+      'issues': issues,
+      'members': meta.members,
+      'communication': meta.communication,
+    }));
+    console.log('Imported Working Group: ', wg.name);
+  }
+}
 
 exports.importWorkingGroups = importWorkingGroups;
