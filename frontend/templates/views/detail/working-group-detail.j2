@@ -96,7 +96,7 @@
             {% if doc.issues|length > 3 %}
             <input type="checkbox" id="load-issues-checkbox"/>
             {% endif %}
-            <div>
+            <div class="ap-o-wg-group-issues">
               {% for issue in doc.issues %}
               <a href={{ issue.html_url }} class="ap-o-wg-issue" target="_blank" rel="noopener">
                 <div class="ap-o-wg-issue-icon">
@@ -114,7 +114,7 @@
                     </div>
                     {% endfor %}
                   </div>
-                  <p>#{{ issue.number }} opened on {{ issue.created_at }} by @{{ issue.facilitator }}</p>
+                  <p>#{{ issue.number }} opened on {{ issue.created_at }} by @{{ issue.author }}</p>
                 </div>
               </a>
               {% endfor %}
@@ -132,7 +132,7 @@
             <div class="ap-o-wg-grid">
               <a href="https://github.com/{{ doc.facilitator.login }}" target="_blank" rel="noopener" class="ap-o-wg-member active">
                 <amp-img class="ap-o-wg-member-img"
-                    src="https://github.com/{{ doc.facilitator.login }}.png"
+                    src="https://github.com/{{ doc.facilitator.login }}.png?size=72"
                     width="72"
                     height="72"
                     layout="responsive">
@@ -143,7 +143,7 @@
                   <p>Facilitator</p>
                 </div>
               </a>
-              {% if doc.member %}
+              {% if doc.members %}
               {% for member in doc.members %}
               <a href="https://github.com/{{ member.login }}" target="_blank" rel="noopener" class="ap-o-wg-member">
                 <amp-img class="ap-o-wg-member-img"
@@ -187,7 +187,7 @@
                       {% do doc.icons.useIcon('icons/' + item.channel + '.svg') %}
                       <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#{{ item.channel }}"></use></svg>
                     </div>
-                    <span>{% if item.channel == 'slack' %}Add to Slack{% else %}Go to Github{% endif %}</span>
+                    <span>{% if item.channel == 'slack' %}Add to Slack{% else %}Go to GitHub{% endif %}</span>
                   </a>
                 </div>
                 {% endif %}
