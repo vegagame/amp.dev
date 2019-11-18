@@ -262,7 +262,7 @@ class SamplesBuilder {
 
     // parsedSample.filePath is absolute but needs to be relative in order
     // to use it to build a URL to GitHub
-    parsedSample.filePath = parsedSample.filePath.replace(path.join(__dirname, '../../../'), '');
+    parsedSample.filePath = samplePath.replace(path.join(__dirname, '../../../'), '');
 
     // Add the delivery path of the manual for preview rendering
     parsedSample.route = this._getDocumentationRoute(sample);
