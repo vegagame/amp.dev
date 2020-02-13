@@ -68,12 +68,13 @@
 {% block body %}
 {% set body_tag = doc.example.document.body %}
 {% set available_formats = ' '.join(doc.formats or doc.collection.formats or ['websites', 'stories', 'ads', 'email']) %}
-{{ (body_tag.replace('>', ' data-available-formats="' + available_formats + '">'))|safe }}
+{{ (body_tag.replace('>', ' data-available-formats="' + available_formats + '" class="[= \'ap--\' + format if format =]">'))|safe }}
 {{ doc.example.document.elementsAfterBody|safe }}
 {% endblock %}
 
 {% block main %}
 {% include 'views/partials/sidebar-toggle-observer.j2' %}
+{% include 'views/partials/format-filter-hint.j2' %}
 <main class="ap--main ap-t-examples-manual">
   <div class="ap--container">
     {% include 'views/partials/sidebar-toggle.j2' %}
@@ -222,7 +223,9 @@
     {% include 'views/partials/author.j2' %}
   </div>
 </main>
-{% include 'views/partials/example-sidebar.j2' %}
+{% with type = 'example' %}
+{% include 'views/partials/sidebar.j2' %}
+{% endwith %}
 {% endblock %}
 
 {% block serviceWorker %}

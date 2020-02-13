@@ -17,7 +17,8 @@ import CodeMirror from 'codemirror';
 
 const ENGINE_MAP = {
   'amphtml engine v0.js script': '"https://cdn.ampproject.org/v0.js"',
-  'amp4ads engine amp4ads-v0.js script': '"https://cdn.ampproject.org/amp4ads-v0.js"',
+  'amp4ads engine amp4ads-v0.js script':
+    '"https://cdn.ampproject.org/amp4ads-v0.js"',
 };
 const ENGINE_SET = new Set();
 
@@ -41,7 +42,7 @@ class AutoImporter {
   constructor(componentsProvider, editor) {
     this.componentsProvider = componentsProvider;
     this.editor = editor;
-    Object.keys(ENGINE_MAP).forEach((k) => ENGINE_SET.add(ENGINE_MAP[k]));
+    Object.keys(ENGINE_MAP).forEach(k => ENGINE_SET.add(ENGINE_MAP[k]));
   }
 
   update(validationResult) {
@@ -56,11 +57,13 @@ class AutoImporter {
     if (currentTag.type === 'tag') {
       return;
     }
-    this.componentsProvider.get().then((components) => {
+    this.componentsProvider.get().then(components => {
       const missing = this._parseMissingElements(validationResult, components);
 
-      if (Object.keys(missing.missingTags).length ||
-          missing.missingBaseScriptTag) {
+      if (
+        Object.keys(missing.missingTags).length ||
+        missing.missingBaseScriptTag
+      ) {
         const existing = this._parseHeadTag();
         // The action taken to insert any elements to fix the report of missing
         // tags is determined by both a combination of looking at the list of
@@ -85,17 +88,17 @@ class AutoImporter {
       return;
     }
     const toAdd = Object.keys(missing.missingTags)
-        // Verify that all components to insert don't already exist: In some
-        // circumstances the validator has reported tags missing when in fact
-        // they are present.
-        .filter((e) => !existing.tags[e])
-        .map((e) => this._createAmpComponentElement(e, components));
+      // Verify that all components to insert don't already exist: In some
+      // circumstances the validator has reported tags missing when in fact
+      // they are present.
+      .filter(e => !existing.tags[e])
+      .map(e => this._createAmpComponentElement(e, components));
     if (missing.missingBaseScriptTag && !existing.baseScriptTagEnd) {
       const t = `<script async src=${missing.missingBaseScriptTag}></script>`;
       toAdd.unshift(t);
     }
     if (toAdd.length) {
-      const indented = toAdd.map((e) => ' '.repeat(existing.indent || 0) + e);
+      const indented = toAdd.map(e => ' '.repeat(existing.indent || 0) + e);
       const cur = this.editor.getCursor();
       this.editor.replaceRange('\n' + indented.join('\n'), pos, pos);
       this.editor.setCursor(cur.line + indented.length, cur.ch);
@@ -125,27 +128,25 @@ class AutoImporter {
 
     // eslint-disable-next-line no-unused-vars
     for (const error of validationResult.errors) {
-      if (error.category === 'MANDATORY_AMP_TAG_MISSING_OR_INCORRECT') {
-        switch (error.code) {
-          case 'MANDATORY_TAG_MISSING':
-            if (error.params && ENGINE_MAP[error.params[0]]) {
-              missingElements.missingBaseScriptTag = ENGINE_MAP[error.params[0]];
+      switch (error.code) {
+        case 'MANDATORY_TAG_MISSING':
+          if (error.params && ENGINE_MAP[error.params[0]]) {
+            missingElements.missingBaseScriptTag = ENGINE_MAP[error.params[0]];
+          }
+          break;
+        case 'MISSING_REQUIRED_EXTENSION':
+        case 'ATTR_MISSING_REQUIRED_EXTENSION':
+          if (error.params && error.params.length > 1) {
+            const tagName = error.params[1];
+            if (components[tagName]) {
+              missingElements.missingTags[tagName] = 1;
+            } else {
+              console.log(`Warning: Unknown AMP component : ${tagName}`);
             }
-            break;
-          case 'MISSING_REQUIRED_EXTENSION':
-          case 'ATTR_MISSING_REQUIRED_EXTENSION':
-            if (error.params && error.params.length > 1) {
-              const tagName = error.params[1];
-              if (components[tagName]) {
-                missingElements.missingTags[tagName] = 1;
-              } else {
-                console.log(`Warning: Unknown AMP component : ${tagName}`);
-              }
-            }
-            break;
-          default:
-            // no default
-        }
+          }
+          break;
+        default:
+        // no default
       }
     }
     return missingElements;
@@ -208,8 +209,11 @@ class AutoImporter {
             } else if (tok.type === 'string' && ENGINE_SET.has(tok.string)) {
               inBaseScriptTag = true;
             }
-          } else if (htmlState.context.tagName === 'head' && tok.string === '>' &&
-              tok.type === 'tag bracket') {
+          } else if (
+            htmlState.context.tagName === 'head' &&
+            tok.string === '>' &&
+            tok.type === 'tag bracket'
+          ) {
             if (tagStart) {
               // Closing a <script> tag in <head>
               const pos = {start: tagStart, end: CodeMirror.Pos(i, tok.end)};
@@ -229,8 +233,11 @@ class AutoImporter {
               lastTag = CodeMirror.Pos(i, tok.end);
               result.indent = result.indent || htmlState.indented;
             }
-          } else if (tok.string === '</' && htmlState.context.tagName === 'head' &&
-              tok.type === 'tag bracket') {
+          } else if (
+            tok.string === '</' &&
+            htmlState.context.tagName === 'head' &&
+            tok.type === 'tag bracket'
+          ) {
             // Leaving <head>, record the final tag position within <head> for
             // inserting after.
             result.lastTag = lastTag;
@@ -246,7 +253,9 @@ class AutoImporter {
   _createAmpComponentElement(tagName, components) {
     const scriptType = AMP_SCRIPT_TYPE_MAP[tagName] || 'custom-element';
     const ver = components[tagName];
-    return `<script async ${scriptType}="${tagName}" ` +
-        `src="https://cdn.ampproject.org/v0/${tagName}-${ver}.js"></script>`;
+    return (
+      `<script async ${scriptType}="${tagName}" ` +
+      `src="https://cdn.ampproject.org/v0/${tagName}-${ver}.js"></script>`
+    );
   }
 }

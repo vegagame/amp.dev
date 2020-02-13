@@ -149,7 +149,7 @@ format version: 1b3
 
 (Note that the `-verify` switch will not work at this point because the required certificates are not on the `https://example.com/` server.)
 
-Verify that the response *always* include the `Vary` header with the value `Accept,AMP-Cache-Transform` (irrespective of whether the MIME type is `text/html`, `application/signed-exchange`, or something else:
+Verify that the response *always* include the `Vary` header with the value `Accept,AMP-Cache-Transform` (irrespective of whether the MIME type is `text/html`, `application/signed-exchange`, or something else):
 
 ```sh
 $ curl -si https://staging.example.com/ | less
@@ -189,7 +189,7 @@ Under the `Network` tab, click on your domain name and check that `Signed HTTP e
 
 Confirm that the signed exchanges are compatible with the Google AMP cache. This related to their discoverability on search engines such as Google Search.
 
-To test signed echanges in the Google AMP cache, open the network tab in DevTools, enable `Preserve log`, and visit a URL such as `https://example-com.cdn.ampproject.org/wp/s/example.com/`.
+To test signed exchanges in the Google AMP cache, open the network tab in DevTools, enable `Preserve log`, and visit a URL such as `https://example-com.cdn.ampproject.org/wp/s/example.com/`.
 
 DevTools will show a `200` with a `signed-exchange` row, and a `from signed-exchange` row, if the request was successful.
 
