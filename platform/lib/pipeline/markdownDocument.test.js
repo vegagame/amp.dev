@@ -1,4 +1,9 @@
+const {dirname} = require('path');
+const {resolve} = require('url');
 const MarkdownDocument = require('./markdownDocument.js');
+
+const RELATIVE_PATH_BASE = 'https://github.com/ampproject/amphtml/blob/master/';
+
 
 test('Test frontmatter extraction', async done => {
   const doc = new MarkdownDocument(
@@ -165,5 +170,19 @@ test('Test anchor generation', () => {
       '## test anchor <a name="test-anchor-1"></a>\n' +
       '# with [link](#anchor) <a name="with-link"></a>\n' +
       '# test `<code>` &lt;html&gt;<a>foo</a> <a name="test-code-htmlfoo"></a>'
+  );
+});
+
+test('Test relative GitHub links', () => {
+  const doc = new MarkdownDocument(
+    '/tmp/test.md',
+    '[`amp-access`](../amp-access/amp-access.md)'
+  );
+  doc.addExplicitAnchors();
+  doc.rewriteRelativePaths(
+    resolve(RELATIVE_PATH_BASE, dirname('extensions/amp-subscriptions/amp-subscriptions.md'))
+  );
+  expect(doc.contents).toBe(
+    '[`amp-access`](https://github.com/ampproject/amphtml/blob/master/extensions/amp-subscriptions/../amp-access/amp-access.md)'
   );
 });
