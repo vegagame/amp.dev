@@ -13,19 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-const {execSync} = require('child_process');
 
-module.exports.version = execSync('git log -1 --pretty=format:%h ')
-  .toString()
-  .trim();
-module.exports.message = execSync('git log -1 --pretty=%B --no-merges')
-  .toString()
-  .trim();
-module.exports.user = execSync('git config user.name')
-  .toString()
-  .trim();
+require('module-alias/register');
+const {sh} = require('@lib/utils/sh.js');
+
+module.exports.version = git('log -1 --pretty=format:%h');
+module.exports.message = git('log -1 --pretty=%B --no-merges');
+module.exports.user = git('config user.name');
 module.exports.committerDate = path => {
-  return execSync(`git log --format=%ai ${path} | tail -1`)
-    .toString()
-    .trim();
+  return git(`log --format=%ai ${path} | tail -1`)
 };
+
+async function git(args) {
+  let result;
+  try {
+    result = await sh(`git ${args}`, {
+      quiet: true
+    }).trim();
+  } catch (e) {
+    console.log(e);
+  }
+  return result;
+}
