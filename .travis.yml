@@ -14,11 +14,8 @@ cache:
 install:
 - npm ci
 before_install:
-- |
-  if [ $TRAVIS_BRANCH == "future" ] && [ $TRAVIS_PULL_REQUEST == "false" ]; then
-    openssl aes-256-cbc -K $encrypted_d4a09416a845_key -iv $encrypted_d4a09416a845_iv -in .staging.key.json.enc -out .staging.key.json -d
-    gcloud auth activate-service-account --key-file=.staging.key.json
-  fi
+- openssl aes-256-cbc -K $encrypted_d4a09416a845_key -iv $encrypted_d4a09416a845_iv -in .staging.key.json.enc -out .staging.key.json -d
+- gcloud auth activate-service-account --key-file=.staging.key.json
 stages:
 - preparation
 - build
