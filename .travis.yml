@@ -35,7 +35,7 @@ jobs:
     env: APP_ENV=staging
     install: &1
     - npm ci
-    - pip install --ignore-install pyyaml --upgrade --force-reinstall pyyaml
+    - pip install --ignore-install pyyaml --upgrade --force-reinstall pyyaml --user
     - pip install grow==0.8.19 --user
     name: Build Pages (EN)
     script: scripts/unbuffer.sh gulp buildPages --locales en --travis-build 8808
